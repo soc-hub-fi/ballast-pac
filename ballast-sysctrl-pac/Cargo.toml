@@ -4,7 +4,7 @@ categories = ["embedded", "hardware-support", "no-std"]
 description = "Peripheral access API for System Control CPU subsystem of Ballast SoC"
 edition = "2018"
 keywords = ["ballast", "ibex", "register", "peripheral", "generated"]
-name = "sysctrl-pac"
+name = "ballast-sysctrl-pac"
 version = "0.2.0"
 
 [dependencies]
