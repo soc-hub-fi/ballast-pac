@@ -250,6 +250,8 @@ pub struct Peripherals {
     pub HPC: HPC,
     #[doc = "SYSCTRL"]
     pub SYSCTRL: SYSCTRL,
+    #[doc = "CPU_SUBSYS"]
+    pub CPU_SUBSYS: CPU_SUBSYS,
 }
 impl Peripherals {
     #[doc = r"Returns all the peripherals *once*"]
@@ -287,6 +289,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             SYSCTRL: SYSCTRL {
+                _marker: PhantomData,
+            },
+            CPU_SUBSYS: CPU_SUBSYS {
                 _marker: PhantomData,
             },
         }
