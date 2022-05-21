@@ -292,3 +292,7 @@ impl Peripherals {
         }
     }
 }
+/// Re-export the local processor subsystem with a special name. This allows us to refer to
+/// the current processor from all distinct cores.
+#[allow(unused_imports)]
+pub use crate::{sysctrl as cpu_subsys, SYSCTRL as CPU_SUBSYS};
