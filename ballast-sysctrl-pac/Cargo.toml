@@ -1,0 +1,20 @@
+[package]
+authors = ["Henri Lunnikivi <henri.lunnikivi@tuni.fi>, Esko Pekkarinen <esko.pekkarinen@tuni.fi>"]
+categories = ["embedded", "hardware-support", "no-std"]
+description = "Peripheral access API for System Control CPU subsystem of Ballast SoC"
+edition = "2018"
+keywords = ["ballast", "ibex", "register", "peripheral", "generated"]
+name = "sysctrl-pac"
+version = "0.2.0"
+
+[dependencies]
+bare-metal = "1.0"
+riscv = "0.6"
+vcell = "0.1"
+
+[dependencies.riscv-rt]
+optional = true
+version = "0.8"
+
+[features]
+rt = ["riscv-rt"]
