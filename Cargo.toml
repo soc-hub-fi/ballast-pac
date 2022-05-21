@@ -1,4 +1,5 @@
 [workspace]
 members = [
   "ballast-sysctrl-pac",
+  "ballast-sysctrl-mpc",
 ]
