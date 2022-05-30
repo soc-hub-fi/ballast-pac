@@ -32,7 +32,7 @@ for instructions on how to use the peripheral APIs.
 
 ### Pre-requirements
 
-- `cargo install svd2rust --version="^0.22"`
+- `cargo install svd2rust --version="^0.23"`
 - `cargo install form --version="^0.8"`
 - `pip3 install --upgrade --user svdtools`
 
@@ -41,8 +41,8 @@ for instructions on how to use the peripheral APIs.
 - Use `./update.sh` to re-generate Rust peripheral API from `SysCtrl.svd`.
 - `cargo check` to verify that the generated API compiles.
 
-The `SysCtrl.svd` represents the latest System View Description (SVD) of Ballast SoC for the
-System Control CPU. This SVD is used to generate a Rust peripheral API using svd2rust. That code is
+`SysCtrl.svd` represents the latest System View Description (SVD) of Ballast SoC for the System
+Control CPU. This SVD is used to generate a Rust peripheral API using svd2rust. That code is
 formatted and split into files using `form`. Finally, code is formatted to default Rust convention
 using `cargo fmt`.
 
