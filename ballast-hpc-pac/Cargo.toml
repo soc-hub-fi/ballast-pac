@@ -1,7 +1,7 @@
 [package]
 authors = ["Henri Lunnikivi <henri.lunnikivi@tuni.fi>, Esko Pekkarinen <esko.pekkarinen@tuni.fi>"]
 categories = ["embedded", "hardware-support", "no-std"]
-description = "Peripheral access API for System Control CPU subsystem of Ballast SoC"
+description = "Peripheral access API for HPC subsystem of Ballast SoC"
 edition = "2018"
 keywords = ["ballast", "ibex", "register", "peripheral", "generated"]
 name = "ballast-hpc-pac"
