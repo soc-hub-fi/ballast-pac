@@ -2,4 +2,5 @@
 members = [
   "ballast-sysctrl-pac",
   "ballast-mpc-pac",
+  "ballast-hpc-pac",
 ]
