@@ -13,8 +13,8 @@ set -e
 
 rm -rf src
 mkdir src
-svd patch patches/ballast_CV32E40P.yaml
-svd2rust --target riscv -i ballast_CV32E40P.svd.patched
+svd patch patches/MPC.yaml
+svd2rust --target riscv -i MPC.svd.patched
 form -i lib.rs -o src
 rm lib.rs
 cargo fmt

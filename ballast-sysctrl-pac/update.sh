@@ -13,8 +13,8 @@ set -e
 
 rm -rf src
 mkdir src
-svd patch patches/Ibex_RV32EC.yaml
-svd2rust --target riscv -i Ibex_RV32EC.svd.patched
+svd patch patches/SysCtrl.yaml
+svd2rust --target riscv -i SysCtrl.svd.patched
 form -i lib.rs -o src
 rm lib.rs
 cargo fmt

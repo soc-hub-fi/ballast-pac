@@ -38,10 +38,10 @@ for instructions on how to use the peripheral APIs.
 
 ### Run generate
 
-- Use `./update.sh` to re-generate Rust peripheral API from `Ibex_RV32EC.svd`.
+- Use `./update.sh` to re-generate Rust peripheral API from `SysCtrl.svd`.
 - `cargo check` to verify that the generated API compiles.
 
-The `Ibex_RV32EC.svd` represents the latest System View Description (SVD) of Ballast SoC for the
+The `SysCtrl.svd` represents the latest System View Description (SVD) of Ballast SoC for the
 System Control CPU. This SVD is used to generate a Rust peripheral API using svd2rust. That code is
 formatted and split into files using `form`. Finally, code is formatted to default Rust convention
 using `cargo fmt`.
