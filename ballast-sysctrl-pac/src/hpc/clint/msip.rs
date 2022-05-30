@@ -35,7 +35,7 @@ impl From<crate::W<MSIP_SPEC>> for W {
     }
 }
 #[doc = "Field `msip_0` reader - "]
-pub struct MSIP_0_R(crate::FieldReader<bool, bool>);
+pub struct MSIP_0_R(crate::FieldReader<bool>);
 impl MSIP_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl MSIP_0_R {
     }
 }
 impl core::ops::Deref for MSIP_0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> MSIP_0_W<'a> {
     }
 }
 #[doc = "Field `msip_1` reader - "]
-pub struct MSIP_1_R(crate::FieldReader<bool, bool>);
+pub struct MSIP_1_R(crate::FieldReader<bool>);
 impl MSIP_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl MSIP_1_R {
     }
 }
 impl core::ops::Deref for MSIP_1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

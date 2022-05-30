@@ -52,7 +52,7 @@ impl From<POOLING_METHOD_A> for u8 {
     }
 }
 #[doc = "Field `POOLING_METHOD` reader - "]
-pub struct POOLING_METHOD_R(crate::FieldReader<u8, POOLING_METHOD_A>);
+pub struct POOLING_METHOD_R(crate::FieldReader<u8>);
 impl POOLING_METHOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -85,7 +85,7 @@ impl POOLING_METHOD_R {
     }
 }
 impl core::ops::Deref for POOLING_METHOD_R {
-    type Target = crate::FieldReader<u8, POOLING_METHOD_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -124,7 +124,7 @@ impl<'a> POOLING_METHOD_W<'a> {
     }
 }
 #[doc = "Field `FLYING_MODE` reader - "]
-pub struct FLYING_MODE_R(crate::FieldReader<bool, bool>);
+pub struct FLYING_MODE_R(crate::FieldReader<bool>);
 impl FLYING_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -132,7 +132,7 @@ impl FLYING_MODE_R {
     }
 }
 impl core::ops::Deref for FLYING_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -161,7 +161,7 @@ impl<'a> FLYING_MODE_W<'a> {
     }
 }
 #[doc = "Field `SPLIT_NUM` reader - "]
-pub struct SPLIT_NUM_R(crate::FieldReader<u8, u8>);
+pub struct SPLIT_NUM_R(crate::FieldReader<u8>);
 impl SPLIT_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -169,7 +169,7 @@ impl SPLIT_NUM_R {
     }
 }
 impl core::ops::Deref for SPLIT_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

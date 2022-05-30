@@ -49,7 +49,7 @@ impl From<FLYING_MODE_A> for bool {
     }
 }
 #[doc = "Field `FLYING_MODE` reader - "]
-pub struct FLYING_MODE_R(crate::FieldReader<bool, FLYING_MODE_A>);
+pub struct FLYING_MODE_R(crate::FieldReader<bool>);
 impl FLYING_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -75,7 +75,7 @@ impl FLYING_MODE_R {
     }
 }
 impl core::ops::Deref for FLYING_MODE_R {
-    type Target = crate::FieldReader<bool, FLYING_MODE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

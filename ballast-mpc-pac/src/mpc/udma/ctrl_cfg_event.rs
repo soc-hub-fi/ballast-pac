@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_CFG_EVENT_SPEC>> for W {
     }
 }
 #[doc = "Field `CMP_EVT0` reader - Forward event with ID matching CMP_EVT0 to peripherals as event0"]
-pub struct CMP_EVT0_R(crate::FieldReader<u8, u8>);
+pub struct CMP_EVT0_R(crate::FieldReader<u8>);
 impl CMP_EVT0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CMP_EVT0_R {
     }
 }
 impl core::ops::Deref for CMP_EVT0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CMP_EVT0_W<'a> {
     }
 }
 #[doc = "Field `CMP_EVT1` reader - Forward event with ID matching CMP_EVT1 to peripherals as event1"]
-pub struct CMP_EVT1_R(crate::FieldReader<u8, u8>);
+pub struct CMP_EVT1_R(crate::FieldReader<u8>);
 impl CMP_EVT1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CMP_EVT1_R {
     }
 }
 impl core::ops::Deref for CMP_EVT1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CMP_EVT1_W<'a> {
     }
 }
 #[doc = "Field `CMP_EVT2` reader - Forward event with ID matching CMP_EVT2 to peripherals as event2"]
-pub struct CMP_EVT2_R(crate::FieldReader<u8, u8>);
+pub struct CMP_EVT2_R(crate::FieldReader<u8>);
 impl CMP_EVT2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl CMP_EVT2_R {
     }
 }
 impl core::ops::Deref for CMP_EVT2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> CMP_EVT2_W<'a> {
     }
 }
 #[doc = "Field `CMP_EVT3` reader - Forward event with ID matching CMP_EVT3 to peripherals as event3"]
-pub struct CMP_EVT3_R(crate::FieldReader<u8, u8>);
+pub struct CMP_EVT3_R(crate::FieldReader<u8>);
 impl CMP_EVT3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl CMP_EVT3_R {
     }
 }
 impl core::ops::Deref for CMP_EVT3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

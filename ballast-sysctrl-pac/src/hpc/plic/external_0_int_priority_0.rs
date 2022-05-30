@@ -35,7 +35,7 @@ impl From<crate::W<EXTERNAL_0_INT_PRIORITY_0_SPEC>> for W {
     }
 }
 #[doc = "Field `external_0_int_priority_0` reader - "]
-pub struct EXTERNAL_0_INT_PRIORITY_0_R(crate::FieldReader<u32, u32>);
+pub struct EXTERNAL_0_INT_PRIORITY_0_R(crate::FieldReader<u32>);
 impl EXTERNAL_0_INT_PRIORITY_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl EXTERNAL_0_INT_PRIORITY_0_R {
     }
 }
 impl core::ops::Deref for EXTERNAL_0_INT_PRIORITY_0_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

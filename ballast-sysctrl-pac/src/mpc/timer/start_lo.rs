@@ -35,7 +35,7 @@ impl From<crate::W<START_LO_SPEC>> for W {
     }
 }
 #[doc = "Field `START_LO` reader - Timer high start command (sets EN in CFG_LO)"]
-pub struct START_LO_R(crate::FieldReader<bool, bool>);
+pub struct START_LO_R(crate::FieldReader<bool>);
 impl START_LO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl START_LO_R {
     }
 }
 impl core::ops::Deref for START_LO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

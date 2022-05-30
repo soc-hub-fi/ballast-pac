@@ -49,7 +49,7 @@ impl From<SIGNED_A> for bool {
     }
 }
 #[doc = "Field `SIGNED` reader - Arithmetic Unit result signed or not. -1'b0: not signed -1'b1: signed"]
-pub struct SIGNED_R(crate::FieldReader<bool, SIGNED_A>);
+pub struct SIGNED_R(crate::FieldReader<bool>);
 impl SIGNED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -75,7 +75,7 @@ impl SIGNED_R {
     }
 }
 impl core::ops::Deref for SIGNED_R {
-    type Target = crate::FieldReader<bool, SIGNED_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -119,7 +119,7 @@ impl<'a> SIGNED_W<'a> {
     }
 }
 #[doc = "Field `BYPASS` reader - Arithmetic Unit bypass or not. -1'b0: not bypass AU -1'b1: bypass AU"]
-pub struct BYPASS_R(crate::FieldReader<bool, bool>);
+pub struct BYPASS_R(crate::FieldReader<bool>);
 impl BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,7 +127,7 @@ impl BYPASS_R {
     }
 }
 impl core::ops::Deref for BYPASS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -199,7 +199,7 @@ impl From<MODE_A> for u8 {
     }
 }
 #[doc = "Field `MODE` reader - Arithmetic Unit mode: -4'b0000: AU_MODE_AxB -4'b0001: AU_MODE_AxB+REG0 -4'b0010: AU_MODE_AxB accumulation -4'b0011: AU_MODE_AxA -4'b0100: AU_MODE_AxA+B -4'b0101: AU_MODE_AxA-B -4'b0110: AU_MODE_AxA accumulation -4'b0111: AU_MODE_AxA+REG0 -4'b1000: AU_MODE_AxREG1 -4'b1001: AU_MODE_AxREG1+B -4'b1010: AU_MODE_AxREG1-B -4'b1011: AU_MODE_AxREG1+REG0 -4'b1100: AU_MODE_AxREG1 accumulation -4'b1101: AU_MODE_A+B -4'b1110: AU_MODE_A-B -4'b1111: AU_MODE_A+REG0"]
-pub struct MODE_R(crate::FieldReader<u8, MODE_A>);
+pub struct MODE_R(crate::FieldReader<u8>);
 impl MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -310,7 +310,7 @@ impl MODE_R {
     }
 }
 impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<u8, MODE_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -414,7 +414,7 @@ impl<'a> MODE_W<'a> {
     }
 }
 #[doc = "Field `SHIFT` reader - Arithmetic Unit shift window size, (0 – 31)."]
-pub struct SHIFT_R(crate::FieldReader<u8, u8>);
+pub struct SHIFT_R(crate::FieldReader<u8>);
 impl SHIFT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -422,7 +422,7 @@ impl SHIFT_R {
     }
 }
 impl core::ops::Deref for SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

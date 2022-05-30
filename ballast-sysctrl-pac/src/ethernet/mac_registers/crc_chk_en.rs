@@ -35,7 +35,7 @@ impl From<crate::W<CRC_CHK_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `CRC_chk_en` reader - By default, the receive logic will drop any packet with FCS checksum error. By setting CRC_chk_en register to zero, you can disable received packet FCS checking."]
-pub struct CRC_CHK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CRC_CHK_EN_R(crate::FieldReader<bool>);
 impl CRC_CHK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CRC_CHK_EN_R {
     }
 }
 impl core::ops::Deref for CRC_CHK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

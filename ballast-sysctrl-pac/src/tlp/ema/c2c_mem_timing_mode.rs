@@ -35,7 +35,7 @@ impl From<crate::W<C2C_MEM_TIMING_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `c2c_mem_timing_mode` reader - "]
-pub struct C2C_MEM_TIMING_MODE_R(crate::FieldReader<u16, u16>);
+pub struct C2C_MEM_TIMING_MODE_R(crate::FieldReader<u16>);
 impl C2C_MEM_TIMING_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl C2C_MEM_TIMING_MODE_R {
     }
 }
 impl core::ops::Deref for C2C_MEM_TIMING_MODE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<MAC_TX_ADD_PROM_DATA_SPEC>> for W {
     }
 }
 #[doc = "Field `MAC_tx_add_prom_data` reader - Those registers are used to set mac address which will replace the target mac address of transmit packet. This function will be enable one when register MAC_tx_add_en set to “1”. At the rising edge of signal MAC_tx_add_prom_wr, the value of MAC_tx_add_prom_data will be write to prom address MAC_tx_add_prom_add. You need repeat six times to write six bytes length target mac to prom."]
-pub struct MAC_TX_ADD_PROM_DATA_R(crate::FieldReader<u8, u8>);
+pub struct MAC_TX_ADD_PROM_DATA_R(crate::FieldReader<u8>);
 impl MAC_TX_ADD_PROM_DATA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl MAC_TX_ADD_PROM_DATA_R {
     }
 }
 impl core::ops::Deref for MAC_TX_ADD_PROM_DATA_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

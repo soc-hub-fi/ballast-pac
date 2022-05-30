@@ -35,7 +35,7 @@ impl From<crate::W<REG_SS_CLK_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `mpc_sel_cka` reader - Select CKA"]
-pub struct MPC_SEL_CKA_R(crate::FieldReader<bool, bool>);
+pub struct MPC_SEL_CKA_R(crate::FieldReader<bool>);
 impl MPC_SEL_CKA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl MPC_SEL_CKA_R {
     }
 }
 impl core::ops::Deref for MPC_SEL_CKA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> MPC_SEL_CKA_W<'a> {
     }
 }
 #[doc = "Field `mpc_force_cka` reader - Force CKA"]
-pub struct MPC_FORCE_CKA_R(crate::FieldReader<bool, bool>);
+pub struct MPC_FORCE_CKA_R(crate::FieldReader<bool>);
 impl MPC_FORCE_CKA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl MPC_FORCE_CKA_R {
     }
 }
 impl core::ops::Deref for MPC_FORCE_CKA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> MPC_FORCE_CKA_W<'a> {
     }
 }
 #[doc = "Field `mpc_force_ckb` reader - Force CKB"]
-pub struct MPC_FORCE_CKB_R(crate::FieldReader<bool, bool>);
+pub struct MPC_FORCE_CKB_R(crate::FieldReader<bool>);
 impl MPC_FORCE_CKB_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl MPC_FORCE_CKB_R {
     }
 }
 impl core::ops::Deref for MPC_FORCE_CKB_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> MPC_FORCE_CKB_W<'a> {
     }
 }
 #[doc = "Field `mpc_subsys_clkena` reader - Subsystem clock enable"]
-pub struct MPC_SUBSYS_CLKENA_R(crate::FieldReader<bool, bool>);
+pub struct MPC_SUBSYS_CLKENA_R(crate::FieldReader<bool>);
 impl MPC_SUBSYS_CLKENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl MPC_SUBSYS_CLKENA_R {
     }
 }
 impl core::ops::Deref for MPC_SUBSYS_CLKENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> MPC_SUBSYS_CLKENA_W<'a> {
     }
 }
 #[doc = "Field `mpc_pll_ctrl_valid` reader - PLL Control valid"]
-pub struct MPC_PLL_CTRL_VALID_R(crate::FieldReader<bool, bool>);
+pub struct MPC_PLL_CTRL_VALID_R(crate::FieldReader<bool>);
 impl MPC_PLL_CTRL_VALID_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl MPC_PLL_CTRL_VALID_R {
     }
 }
 impl core::ops::Deref for MPC_PLL_CTRL_VALID_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> MPC_PLL_CTRL_VALID_W<'a> {
     }
 }
 #[doc = "Field `interconnect_sel_cka` reader - Select CKA"]
-pub struct INTERCONNECT_SEL_CKA_R(crate::FieldReader<bool, bool>);
+pub struct INTERCONNECT_SEL_CKA_R(crate::FieldReader<bool>);
 impl INTERCONNECT_SEL_CKA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl INTERCONNECT_SEL_CKA_R {
     }
 }
 impl core::ops::Deref for INTERCONNECT_SEL_CKA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> INTERCONNECT_SEL_CKA_W<'a> {
     }
 }
 #[doc = "Field `interconnect_force_cka` reader - Force CKA"]
-pub struct INTERCONNECT_FORCE_CKA_R(crate::FieldReader<bool, bool>);
+pub struct INTERCONNECT_FORCE_CKA_R(crate::FieldReader<bool>);
 impl INTERCONNECT_FORCE_CKA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl INTERCONNECT_FORCE_CKA_R {
     }
 }
 impl core::ops::Deref for INTERCONNECT_FORCE_CKA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> INTERCONNECT_FORCE_CKA_W<'a> {
     }
 }
 #[doc = "Field `interconnect_force_ckb` reader - Force CKB"]
-pub struct INTERCONNECT_FORCE_CKB_R(crate::FieldReader<bool, bool>);
+pub struct INTERCONNECT_FORCE_CKB_R(crate::FieldReader<bool>);
 impl INTERCONNECT_FORCE_CKB_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl INTERCONNECT_FORCE_CKB_R {
     }
 }
 impl core::ops::Deref for INTERCONNECT_FORCE_CKB_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> INTERCONNECT_FORCE_CKB_W<'a> {
     }
 }
 #[doc = "Field `interconnect_subsys_clkena` reader - Subsystem clock enable"]
-pub struct INTERCONNECT_SUBSYS_CLKENA_R(crate::FieldReader<bool, bool>);
+pub struct INTERCONNECT_SUBSYS_CLKENA_R(crate::FieldReader<bool>);
 impl INTERCONNECT_SUBSYS_CLKENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl INTERCONNECT_SUBSYS_CLKENA_R {
     }
 }
 impl core::ops::Deref for INTERCONNECT_SUBSYS_CLKENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> INTERCONNECT_SUBSYS_CLKENA_W<'a> {
     }
 }
 #[doc = "Field `interconnect_pll_ctrl_valid` reader - PLL Control valid"]
-pub struct INTERCONNECT_PLL_CTRL_VALID_R(crate::FieldReader<bool, bool>);
+pub struct INTERCONNECT_PLL_CTRL_VALID_R(crate::FieldReader<bool>);
 impl INTERCONNECT_PLL_CTRL_VALID_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl INTERCONNECT_PLL_CTRL_VALID_R {
     }
 }
 impl core::ops::Deref for INTERCONNECT_PLL_CTRL_VALID_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> INTERCONNECT_PLL_CTRL_VALID_W<'a> {
     }
 }
 #[doc = "Field `c2c_sel_cka` reader - Select CKA"]
-pub struct C2C_SEL_CKA_R(crate::FieldReader<bool, bool>);
+pub struct C2C_SEL_CKA_R(crate::FieldReader<bool>);
 impl C2C_SEL_CKA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl C2C_SEL_CKA_R {
     }
 }
 impl core::ops::Deref for C2C_SEL_CKA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> C2C_SEL_CKA_W<'a> {
     }
 }
 #[doc = "Field `c2c_force_cka` reader - Force CKA"]
-pub struct C2C_FORCE_CKA_R(crate::FieldReader<bool, bool>);
+pub struct C2C_FORCE_CKA_R(crate::FieldReader<bool>);
 impl C2C_FORCE_CKA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl C2C_FORCE_CKA_R {
     }
 }
 impl core::ops::Deref for C2C_FORCE_CKA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> C2C_FORCE_CKA_W<'a> {
     }
 }
 #[doc = "Field `c2c_force_ckb` reader - Force CKB"]
-pub struct C2C_FORCE_CKB_R(crate::FieldReader<bool, bool>);
+pub struct C2C_FORCE_CKB_R(crate::FieldReader<bool>);
 impl C2C_FORCE_CKB_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl C2C_FORCE_CKB_R {
     }
 }
 impl core::ops::Deref for C2C_FORCE_CKB_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> C2C_FORCE_CKB_W<'a> {
     }
 }
 #[doc = "Field `c2c_subsys_clkena` reader - Subsystem clock enable"]
-pub struct C2C_SUBSYS_CLKENA_R(crate::FieldReader<bool, bool>);
+pub struct C2C_SUBSYS_CLKENA_R(crate::FieldReader<bool>);
 impl C2C_SUBSYS_CLKENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl C2C_SUBSYS_CLKENA_R {
     }
 }
 impl core::ops::Deref for C2C_SUBSYS_CLKENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> C2C_SUBSYS_CLKENA_W<'a> {
     }
 }
 #[doc = "Field `c2c_pll_ctrl_valid` reader - PLL Control valid"]
-pub struct C2C_PLL_CTRL_VALID_R(crate::FieldReader<bool, bool>);
+pub struct C2C_PLL_CTRL_VALID_R(crate::FieldReader<bool>);
 impl C2C_PLL_CTRL_VALID_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl C2C_PLL_CTRL_VALID_R {
     }
 }
 impl core::ops::Deref for C2C_PLL_CTRL_VALID_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> C2C_PLL_CTRL_VALID_W<'a> {
     }
 }
 #[doc = "Field `corehw_sel_cka` reader - Select CKA"]
-pub struct COREHW_SEL_CKA_R(crate::FieldReader<bool, bool>);
+pub struct COREHW_SEL_CKA_R(crate::FieldReader<bool>);
 impl COREHW_SEL_CKA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl COREHW_SEL_CKA_R {
     }
 }
 impl core::ops::Deref for COREHW_SEL_CKA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> COREHW_SEL_CKA_W<'a> {
     }
 }
 #[doc = "Field `corehw_force_cka` reader - Force CKA"]
-pub struct COREHW_FORCE_CKA_R(crate::FieldReader<bool, bool>);
+pub struct COREHW_FORCE_CKA_R(crate::FieldReader<bool>);
 impl COREHW_FORCE_CKA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl COREHW_FORCE_CKA_R {
     }
 }
 impl core::ops::Deref for COREHW_FORCE_CKA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> COREHW_FORCE_CKA_W<'a> {
     }
 }
 #[doc = "Field `corehw_force_ckb` reader - Force CKB"]
-pub struct COREHW_FORCE_CKB_R(crate::FieldReader<bool, bool>);
+pub struct COREHW_FORCE_CKB_R(crate::FieldReader<bool>);
 impl COREHW_FORCE_CKB_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl COREHW_FORCE_CKB_R {
     }
 }
 impl core::ops::Deref for COREHW_FORCE_CKB_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -701,7 +701,7 @@ impl<'a> COREHW_FORCE_CKB_W<'a> {
     }
 }
 #[doc = "Field `corehw_subsys_clkena` reader - Subsystem clock enable"]
-pub struct COREHW_SUBSYS_CLKENA_R(crate::FieldReader<bool, bool>);
+pub struct COREHW_SUBSYS_CLKENA_R(crate::FieldReader<bool>);
 impl COREHW_SUBSYS_CLKENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -709,7 +709,7 @@ impl COREHW_SUBSYS_CLKENA_R {
     }
 }
 impl core::ops::Deref for COREHW_SUBSYS_CLKENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -738,7 +738,7 @@ impl<'a> COREHW_SUBSYS_CLKENA_W<'a> {
     }
 }
 #[doc = "Field `corehw_pll_ctrl_valid` reader - PLL Control valid"]
-pub struct COREHW_PLL_CTRL_VALID_R(crate::FieldReader<bool, bool>);
+pub struct COREHW_PLL_CTRL_VALID_R(crate::FieldReader<bool>);
 impl COREHW_PLL_CTRL_VALID_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -746,7 +746,7 @@ impl COREHW_PLL_CTRL_VALID_R {
     }
 }
 impl core::ops::Deref for COREHW_PLL_CTRL_VALID_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

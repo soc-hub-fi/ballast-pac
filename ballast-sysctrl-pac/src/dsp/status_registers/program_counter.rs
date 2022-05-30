@@ -14,7 +14,7 @@ impl From<crate::R<PROGRAM_COUNTER_SPEC>> for R {
     }
 }
 #[doc = "Field `program_counter` reader - "]
-pub struct PROGRAM_COUNTER_R(crate::FieldReader<u32, u32>);
+pub struct PROGRAM_COUNTER_R(crate::FieldReader<u32>);
 impl PROGRAM_COUNTER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl PROGRAM_COUNTER_R {
     }
 }
 impl core::ops::Deref for PROGRAM_COUNTER_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

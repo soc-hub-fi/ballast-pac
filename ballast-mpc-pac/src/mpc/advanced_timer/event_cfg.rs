@@ -35,7 +35,7 @@ impl From<crate::W<EVENT_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `EVENT_CFG` reader - "]
-pub struct EVENT_CFG_R(crate::FieldReader<u32, u32>);
+pub struct EVENT_CFG_R(crate::FieldReader<u32>);
 impl EVENT_CFG_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl EVENT_CFG_R {
     }
 }
 impl core::ops::Deref for EVENT_CFG_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

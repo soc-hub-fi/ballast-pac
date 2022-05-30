@@ -14,7 +14,7 @@ impl From<crate::R<D_CVT_OFFSET_SPEC>> for R {
     }
 }
 #[doc = "Field `CVT_OFFSET` reader - "]
-pub struct CVT_OFFSET_R(crate::FieldReader<u32, u32>);
+pub struct CVT_OFFSET_R(crate::FieldReader<u32>);
 impl CVT_OFFSET_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl CVT_OFFSET_R {
     }
 }
 impl core::ops::Deref for CVT_OFFSET_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

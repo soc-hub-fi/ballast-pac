@@ -14,7 +14,7 @@ impl From<crate::R<INTR_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `SDP_DONE_STATUS0` reader - "]
-pub struct SDP_DONE_STATUS0_R(crate::FieldReader<bool, bool>);
+pub struct SDP_DONE_STATUS0_R(crate::FieldReader<bool>);
 impl SDP_DONE_STATUS0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl SDP_DONE_STATUS0_R {
     }
 }
 impl core::ops::Deref for SDP_DONE_STATUS0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SDP_DONE_STATUS1` reader - "]
-pub struct SDP_DONE_STATUS1_R(crate::FieldReader<bool, bool>);
+pub struct SDP_DONE_STATUS1_R(crate::FieldReader<bool>);
 impl SDP_DONE_STATUS1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl SDP_DONE_STATUS1_R {
     }
 }
 impl core::ops::Deref for SDP_DONE_STATUS1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CDP_DONE_STATUS0` reader - "]
-pub struct CDP_DONE_STATUS0_R(crate::FieldReader<bool, bool>);
+pub struct CDP_DONE_STATUS0_R(crate::FieldReader<bool>);
 impl CDP_DONE_STATUS0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl CDP_DONE_STATUS0_R {
     }
 }
 impl core::ops::Deref for CDP_DONE_STATUS0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CDP_DONE_STATUS1` reader - "]
-pub struct CDP_DONE_STATUS1_R(crate::FieldReader<bool, bool>);
+pub struct CDP_DONE_STATUS1_R(crate::FieldReader<bool>);
 impl CDP_DONE_STATUS1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl CDP_DONE_STATUS1_R {
     }
 }
 impl core::ops::Deref for CDP_DONE_STATUS1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `PDP_DONE_STATUS0` reader - "]
-pub struct PDP_DONE_STATUS0_R(crate::FieldReader<bool, bool>);
+pub struct PDP_DONE_STATUS0_R(crate::FieldReader<bool>);
 impl PDP_DONE_STATUS0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl PDP_DONE_STATUS0_R {
     }
 }
 impl core::ops::Deref for PDP_DONE_STATUS0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `PDP_DONE_STATUS1` reader - "]
-pub struct PDP_DONE_STATUS1_R(crate::FieldReader<bool, bool>);
+pub struct PDP_DONE_STATUS1_R(crate::FieldReader<bool>);
 impl PDP_DONE_STATUS1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl PDP_DONE_STATUS1_R {
     }
 }
 impl core::ops::Deref for PDP_DONE_STATUS1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `BDMA_DONE_STATUS0` reader - "]
-pub struct BDMA_DONE_STATUS0_R(crate::FieldReader<bool, bool>);
+pub struct BDMA_DONE_STATUS0_R(crate::FieldReader<bool>);
 impl BDMA_DONE_STATUS0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl BDMA_DONE_STATUS0_R {
     }
 }
 impl core::ops::Deref for BDMA_DONE_STATUS0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `BDMA_DONE_STATUS1` reader - "]
-pub struct BDMA_DONE_STATUS1_R(crate::FieldReader<bool, bool>);
+pub struct BDMA_DONE_STATUS1_R(crate::FieldReader<bool>);
 impl BDMA_DONE_STATUS1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,14 +127,14 @@ impl BDMA_DONE_STATUS1_R {
     }
 }
 impl core::ops::Deref for BDMA_DONE_STATUS1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RUBIK_DONE_STATUS0` reader - "]
-pub struct RUBIK_DONE_STATUS0_R(crate::FieldReader<bool, bool>);
+pub struct RUBIK_DONE_STATUS0_R(crate::FieldReader<bool>);
 impl RUBIK_DONE_STATUS0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -142,14 +142,14 @@ impl RUBIK_DONE_STATUS0_R {
     }
 }
 impl core::ops::Deref for RUBIK_DONE_STATUS0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RUBIK_DONE_STATUS1` reader - "]
-pub struct RUBIK_DONE_STATUS1_R(crate::FieldReader<bool, bool>);
+pub struct RUBIK_DONE_STATUS1_R(crate::FieldReader<bool>);
 impl RUBIK_DONE_STATUS1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -157,14 +157,14 @@ impl RUBIK_DONE_STATUS1_R {
     }
 }
 impl core::ops::Deref for RUBIK_DONE_STATUS1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CDMA_DAT_DONE_STATUS0` reader - "]
-pub struct CDMA_DAT_DONE_STATUS0_R(crate::FieldReader<bool, bool>);
+pub struct CDMA_DAT_DONE_STATUS0_R(crate::FieldReader<bool>);
 impl CDMA_DAT_DONE_STATUS0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -172,14 +172,14 @@ impl CDMA_DAT_DONE_STATUS0_R {
     }
 }
 impl core::ops::Deref for CDMA_DAT_DONE_STATUS0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CDMA_DAT_DONE_STATUS1` reader - "]
-pub struct CDMA_DAT_DONE_STATUS1_R(crate::FieldReader<bool, bool>);
+pub struct CDMA_DAT_DONE_STATUS1_R(crate::FieldReader<bool>);
 impl CDMA_DAT_DONE_STATUS1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -187,14 +187,14 @@ impl CDMA_DAT_DONE_STATUS1_R {
     }
 }
 impl core::ops::Deref for CDMA_DAT_DONE_STATUS1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CDMA_WT_DONE_STATUS0` reader - "]
-pub struct CDMA_WT_DONE_STATUS0_R(crate::FieldReader<bool, bool>);
+pub struct CDMA_WT_DONE_STATUS0_R(crate::FieldReader<bool>);
 impl CDMA_WT_DONE_STATUS0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -202,14 +202,14 @@ impl CDMA_WT_DONE_STATUS0_R {
     }
 }
 impl core::ops::Deref for CDMA_WT_DONE_STATUS0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CDMA_WT_DONE_STATUS1` reader - "]
-pub struct CDMA_WT_DONE_STATUS1_R(crate::FieldReader<bool, bool>);
+pub struct CDMA_WT_DONE_STATUS1_R(crate::FieldReader<bool>);
 impl CDMA_WT_DONE_STATUS1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -217,14 +217,14 @@ impl CDMA_WT_DONE_STATUS1_R {
     }
 }
 impl core::ops::Deref for CDMA_WT_DONE_STATUS1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CACC_DONE_STATUS0` reader - "]
-pub struct CACC_DONE_STATUS0_R(crate::FieldReader<bool, bool>);
+pub struct CACC_DONE_STATUS0_R(crate::FieldReader<bool>);
 impl CACC_DONE_STATUS0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -232,14 +232,14 @@ impl CACC_DONE_STATUS0_R {
     }
 }
 impl core::ops::Deref for CACC_DONE_STATUS0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CACC_DONE_STATUS1` reader - "]
-pub struct CACC_DONE_STATUS1_R(crate::FieldReader<bool, bool>);
+pub struct CACC_DONE_STATUS1_R(crate::FieldReader<bool>);
 impl CACC_DONE_STATUS1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -247,7 +247,7 @@ impl CACC_DONE_STATUS1_R {
     }
 }
 impl core::ops::Deref for CACC_DONE_STATUS1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

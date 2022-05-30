@@ -35,7 +35,7 @@ impl From<crate::W<PAD_CFG_4_SPEC>> for W {
     }
 }
 #[doc = "Field `PAD_12_drive_strength` reader - "]
-pub struct PAD_12_DRIVE_STRENGTH_R(crate::FieldReader<u8, u8>);
+pub struct PAD_12_DRIVE_STRENGTH_R(crate::FieldReader<u8>);
 impl PAD_12_DRIVE_STRENGTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PAD_12_DRIVE_STRENGTH_R {
     }
 }
 impl core::ops::Deref for PAD_12_DRIVE_STRENGTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PAD_12_DRIVE_STRENGTH_W<'a> {
     }
 }
 #[doc = "Field `PAD_12_trigger` reader - "]
-pub struct PAD_12_TRIGGER_R(crate::FieldReader<u8, u8>);
+pub struct PAD_12_TRIGGER_R(crate::FieldReader<u8>);
 impl PAD_12_TRIGGER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl PAD_12_TRIGGER_R {
     }
 }
 impl core::ops::Deref for PAD_12_TRIGGER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> PAD_12_TRIGGER_W<'a> {
     }
 }
 #[doc = "Field `PAD_12_rate` reader - "]
-pub struct PAD_12_RATE_R(crate::FieldReader<bool, bool>);
+pub struct PAD_12_RATE_R(crate::FieldReader<bool>);
 impl PAD_12_RATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl PAD_12_RATE_R {
     }
 }
 impl core::ops::Deref for PAD_12_RATE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> PAD_12_RATE_W<'a> {
     }
 }
 #[doc = "Field `PAD_12_output_en` reader - 0: Enable"]
-pub struct PAD_12_OUTPUT_EN_R(crate::FieldReader<bool, bool>);
+pub struct PAD_12_OUTPUT_EN_R(crate::FieldReader<bool>);
 impl PAD_12_OUTPUT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl PAD_12_OUTPUT_EN_R {
     }
 }
 impl core::ops::Deref for PAD_12_OUTPUT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> PAD_12_OUTPUT_EN_W<'a> {
     }
 }
 #[doc = "Field `PAD_12_hold` reader - "]
-pub struct PAD_12_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct PAD_12_HOLD_R(crate::FieldReader<bool>);
 impl PAD_12_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl PAD_12_HOLD_R {
     }
 }
 impl core::ops::Deref for PAD_12_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> PAD_12_HOLD_W<'a> {
     }
 }
 #[doc = "Field `PAD_12_pull_enable` reader - "]
-pub struct PAD_12_PULL_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct PAD_12_PULL_ENABLE_R(crate::FieldReader<bool>);
 impl PAD_12_PULL_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -208,7 +208,7 @@ impl PAD_12_PULL_ENABLE_R {
     }
 }
 impl core::ops::Deref for PAD_12_PULL_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> PAD_12_PULL_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `PAD_12_pd_pu` reader - Pull down or pull up register, default pull down 0: pull down 1: pull up"]
-pub struct PAD_12_PD_PU_R(crate::FieldReader<bool, bool>);
+pub struct PAD_12_PD_PU_R(crate::FieldReader<bool>);
 impl PAD_12_PD_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -245,7 +245,7 @@ impl PAD_12_PD_PU_R {
     }
 }
 impl core::ops::Deref for PAD_12_PD_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -274,7 +274,7 @@ impl<'a> PAD_12_PD_PU_W<'a> {
     }
 }
 #[doc = "Field `PAD_12_input_en` reader - "]
-pub struct PAD_12_INPUT_EN_R(crate::FieldReader<bool, bool>);
+pub struct PAD_12_INPUT_EN_R(crate::FieldReader<bool>);
 impl PAD_12_INPUT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -282,7 +282,7 @@ impl PAD_12_INPUT_EN_R {
     }
 }
 impl core::ops::Deref for PAD_12_INPUT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> PAD_12_INPUT_EN_W<'a> {
     }
 }
 #[doc = "Field `PAD_13_drive_strength` reader - "]
-pub struct PAD_13_DRIVE_STRENGTH_R(crate::FieldReader<u8, u8>);
+pub struct PAD_13_DRIVE_STRENGTH_R(crate::FieldReader<u8>);
 impl PAD_13_DRIVE_STRENGTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -319,7 +319,7 @@ impl PAD_13_DRIVE_STRENGTH_R {
     }
 }
 impl core::ops::Deref for PAD_13_DRIVE_STRENGTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -338,7 +338,7 @@ impl<'a> PAD_13_DRIVE_STRENGTH_W<'a> {
     }
 }
 #[doc = "Field `PAD_13_trigger` reader - "]
-pub struct PAD_13_TRIGGER_R(crate::FieldReader<u8, u8>);
+pub struct PAD_13_TRIGGER_R(crate::FieldReader<u8>);
 impl PAD_13_TRIGGER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -346,7 +346,7 @@ impl PAD_13_TRIGGER_R {
     }
 }
 impl core::ops::Deref for PAD_13_TRIGGER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -365,7 +365,7 @@ impl<'a> PAD_13_TRIGGER_W<'a> {
     }
 }
 #[doc = "Field `PAD_13_rate` reader - "]
-pub struct PAD_13_RATE_R(crate::FieldReader<bool, bool>);
+pub struct PAD_13_RATE_R(crate::FieldReader<bool>);
 impl PAD_13_RATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -373,7 +373,7 @@ impl PAD_13_RATE_R {
     }
 }
 impl core::ops::Deref for PAD_13_RATE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -402,7 +402,7 @@ impl<'a> PAD_13_RATE_W<'a> {
     }
 }
 #[doc = "Field `PAD_13_output_en` reader - 0: Enable"]
-pub struct PAD_13_OUTPUT_EN_R(crate::FieldReader<bool, bool>);
+pub struct PAD_13_OUTPUT_EN_R(crate::FieldReader<bool>);
 impl PAD_13_OUTPUT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -410,7 +410,7 @@ impl PAD_13_OUTPUT_EN_R {
     }
 }
 impl core::ops::Deref for PAD_13_OUTPUT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -439,7 +439,7 @@ impl<'a> PAD_13_OUTPUT_EN_W<'a> {
     }
 }
 #[doc = "Field `PAD_13_hold` reader - "]
-pub struct PAD_13_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct PAD_13_HOLD_R(crate::FieldReader<bool>);
 impl PAD_13_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -447,7 +447,7 @@ impl PAD_13_HOLD_R {
     }
 }
 impl core::ops::Deref for PAD_13_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -476,7 +476,7 @@ impl<'a> PAD_13_HOLD_W<'a> {
     }
 }
 #[doc = "Field `PAD_13_pull_enable` reader - "]
-pub struct PAD_13_PULL_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct PAD_13_PULL_ENABLE_R(crate::FieldReader<bool>);
 impl PAD_13_PULL_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -484,7 +484,7 @@ impl PAD_13_PULL_ENABLE_R {
     }
 }
 impl core::ops::Deref for PAD_13_PULL_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -513,7 +513,7 @@ impl<'a> PAD_13_PULL_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `PAD_13_pd_pu` reader - Pull down or pull up register, default pull down 0: pull down 1: pull up"]
-pub struct PAD_13_PD_PU_R(crate::FieldReader<bool, bool>);
+pub struct PAD_13_PD_PU_R(crate::FieldReader<bool>);
 impl PAD_13_PD_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -521,7 +521,7 @@ impl PAD_13_PD_PU_R {
     }
 }
 impl core::ops::Deref for PAD_13_PD_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -550,7 +550,7 @@ impl<'a> PAD_13_PD_PU_W<'a> {
     }
 }
 #[doc = "Field `PAD_13_input_en` reader - "]
-pub struct PAD_13_INPUT_EN_R(crate::FieldReader<bool, bool>);
+pub struct PAD_13_INPUT_EN_R(crate::FieldReader<bool>);
 impl PAD_13_INPUT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -558,7 +558,7 @@ impl PAD_13_INPUT_EN_R {
     }
 }
 impl core::ops::Deref for PAD_13_INPUT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -587,7 +587,7 @@ impl<'a> PAD_13_INPUT_EN_W<'a> {
     }
 }
 #[doc = "Field `PAD_14_drive_strength` reader - "]
-pub struct PAD_14_DRIVE_STRENGTH_R(crate::FieldReader<u8, u8>);
+pub struct PAD_14_DRIVE_STRENGTH_R(crate::FieldReader<u8>);
 impl PAD_14_DRIVE_STRENGTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -595,7 +595,7 @@ impl PAD_14_DRIVE_STRENGTH_R {
     }
 }
 impl core::ops::Deref for PAD_14_DRIVE_STRENGTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -614,7 +614,7 @@ impl<'a> PAD_14_DRIVE_STRENGTH_W<'a> {
     }
 }
 #[doc = "Field `PAD_14_trigger` reader - "]
-pub struct PAD_14_TRIGGER_R(crate::FieldReader<u8, u8>);
+pub struct PAD_14_TRIGGER_R(crate::FieldReader<u8>);
 impl PAD_14_TRIGGER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -622,7 +622,7 @@ impl PAD_14_TRIGGER_R {
     }
 }
 impl core::ops::Deref for PAD_14_TRIGGER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -641,7 +641,7 @@ impl<'a> PAD_14_TRIGGER_W<'a> {
     }
 }
 #[doc = "Field `PAD_14_rate` reader - "]
-pub struct PAD_14_RATE_R(crate::FieldReader<bool, bool>);
+pub struct PAD_14_RATE_R(crate::FieldReader<bool>);
 impl PAD_14_RATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -649,7 +649,7 @@ impl PAD_14_RATE_R {
     }
 }
 impl core::ops::Deref for PAD_14_RATE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -678,7 +678,7 @@ impl<'a> PAD_14_RATE_W<'a> {
     }
 }
 #[doc = "Field `PAD_14_output_en` reader - 0: Enable"]
-pub struct PAD_14_OUTPUT_EN_R(crate::FieldReader<bool, bool>);
+pub struct PAD_14_OUTPUT_EN_R(crate::FieldReader<bool>);
 impl PAD_14_OUTPUT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -686,7 +686,7 @@ impl PAD_14_OUTPUT_EN_R {
     }
 }
 impl core::ops::Deref for PAD_14_OUTPUT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -715,7 +715,7 @@ impl<'a> PAD_14_OUTPUT_EN_W<'a> {
     }
 }
 #[doc = "Field `PAD_14_hold` reader - "]
-pub struct PAD_14_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct PAD_14_HOLD_R(crate::FieldReader<bool>);
 impl PAD_14_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -723,7 +723,7 @@ impl PAD_14_HOLD_R {
     }
 }
 impl core::ops::Deref for PAD_14_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -752,7 +752,7 @@ impl<'a> PAD_14_HOLD_W<'a> {
     }
 }
 #[doc = "Field `PAD_14_pull_enable` reader - "]
-pub struct PAD_14_PULL_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct PAD_14_PULL_ENABLE_R(crate::FieldReader<bool>);
 impl PAD_14_PULL_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -760,7 +760,7 @@ impl PAD_14_PULL_ENABLE_R {
     }
 }
 impl core::ops::Deref for PAD_14_PULL_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -789,7 +789,7 @@ impl<'a> PAD_14_PULL_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `PAD_14_pd_pu` reader - Pull down or pull up register, default pull down 0: pull down 1: pull up"]
-pub struct PAD_14_PD_PU_R(crate::FieldReader<bool, bool>);
+pub struct PAD_14_PD_PU_R(crate::FieldReader<bool>);
 impl PAD_14_PD_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -797,7 +797,7 @@ impl PAD_14_PD_PU_R {
     }
 }
 impl core::ops::Deref for PAD_14_PD_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -826,7 +826,7 @@ impl<'a> PAD_14_PD_PU_W<'a> {
     }
 }
 #[doc = "Field `PAD_14_input_en` reader - "]
-pub struct PAD_14_INPUT_EN_R(crate::FieldReader<bool, bool>);
+pub struct PAD_14_INPUT_EN_R(crate::FieldReader<bool>);
 impl PAD_14_INPUT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -834,7 +834,7 @@ impl PAD_14_INPUT_EN_R {
     }
 }
 impl core::ops::Deref for PAD_14_INPUT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

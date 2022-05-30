@@ -35,7 +35,7 @@ impl From<crate::W<NR_CACHED_REGION_RULES_SPEC>> for W {
     }
 }
 #[doc = "Field `nr_cached_region_rules` reader - "]
-pub struct NR_CACHED_REGION_RULES_R(crate::FieldReader<u64, u64>);
+pub struct NR_CACHED_REGION_RULES_R(crate::FieldReader<u64>);
 impl NR_CACHED_REGION_RULES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u64) -> Self {
@@ -43,7 +43,7 @@ impl NR_CACHED_REGION_RULES_R {
     }
 }
 impl core::ops::Deref for NR_CACHED_REGION_RULES_R {
-    type Target = crate::FieldReader<u64, u64>;
+    type Target = crate::FieldReader<u64>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

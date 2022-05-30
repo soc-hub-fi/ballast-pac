@@ -14,7 +14,7 @@ impl From<crate::R<STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `single_stepping_breakpoint` reader - "]
-pub struct SINGLE_STEPPING_BREAKPOINT_R(crate::FieldReader<bool, bool>);
+pub struct SINGLE_STEPPING_BREAKPOINT_R(crate::FieldReader<bool>);
 impl SINGLE_STEPPING_BREAKPOINT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl SINGLE_STEPPING_BREAKPOINT_R {
     }
 }
 impl core::ops::Deref for SINGLE_STEPPING_BREAKPOINT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `breakpoint_1` reader - "]
-pub struct BREAKPOINT_1_R(crate::FieldReader<bool, bool>);
+pub struct BREAKPOINT_1_R(crate::FieldReader<bool>);
 impl BREAKPOINT_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl BREAKPOINT_1_R {
     }
 }
 impl core::ops::Deref for BREAKPOINT_1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `manual_breakpoint` reader - "]
-pub struct MANUAL_BREAKPOINT_R(crate::FieldReader<bool, bool>);
+pub struct MANUAL_BREAKPOINT_R(crate::FieldReader<bool>);
 impl MANUAL_BREAKPOINT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl MANUAL_BREAKPOINT_R {
     }
 }
 impl core::ops::Deref for MANUAL_BREAKPOINT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `breakpoint_2` reader - "]
-pub struct BREAKPOINT_2_R(crate::FieldReader<bool, bool>);
+pub struct BREAKPOINT_2_R(crate::FieldReader<bool>);
 impl BREAKPOINT_2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,7 +67,7 @@ impl BREAKPOINT_2_R {
     }
 }
 impl core::ops::Deref for BREAKPOINT_2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -14,7 +14,7 @@ impl From<crate::R<FLL_CLOCK_SELECT_SPEC>> for R {
     }
 }
 #[doc = "Field `S` reader - "]
-pub struct S_R(crate::FieldReader<bool, bool>);
+pub struct S_R(crate::FieldReader<bool>);
 impl S_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,7 +22,7 @@ impl S_R {
     }
 }
 impl core::ops::Deref for S_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

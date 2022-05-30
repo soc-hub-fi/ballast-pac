@@ -14,7 +14,7 @@ impl From<crate::R<D_CVT_SHIFT_SPEC>> for R {
     }
 }
 #[doc = "Field `CVT_SHIFT` reader - "]
-pub struct CVT_SHIFT_R(crate::FieldReader<u8, u8>);
+pub struct CVT_SHIFT_R(crate::FieldReader<u8>);
 impl CVT_SHIFT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,7 +22,7 @@ impl CVT_SHIFT_R {
     }
 }
 impl core::ops::Deref for CVT_SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

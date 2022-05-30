@@ -35,7 +35,7 @@ impl From<crate::W<PR_MASK0_SPEC>> for W {
     }
 }
 #[doc = "Field `PR_MASK0` reader - "]
-pub struct PR_MASK0_R(crate::FieldReader<u32, u32>);
+pub struct PR_MASK0_R(crate::FieldReader<u32>);
 impl PR_MASK0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl PR_MASK0_R {
     }
 }
 impl core::ops::Deref for PR_MASK0_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

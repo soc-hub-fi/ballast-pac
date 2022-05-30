@@ -14,7 +14,7 @@ impl From<crate::R<UART_ERROR_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_ERR_OVERFLOW` reader - RX overflow error status flag: - 1'b0: no error - 1'b1: RX overflow error occurred"]
-pub struct RX_ERR_OVERFLOW_R(crate::FieldReader<bool, bool>);
+pub struct RX_ERR_OVERFLOW_R(crate::FieldReader<bool>);
 impl RX_ERR_OVERFLOW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl RX_ERR_OVERFLOW_R {
     }
 }
 impl core::ops::Deref for RX_ERR_OVERFLOW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RX_ERR_PARITY` reader - RX parity error status flag: - 1'b0: no error - 1'b1: RX parity error occurred"]
-pub struct RX_ERR_PARITY_R(crate::FieldReader<bool, bool>);
+pub struct RX_ERR_PARITY_R(crate::FieldReader<bool>);
 impl RX_ERR_PARITY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,7 +37,7 @@ impl RX_ERR_PARITY_R {
     }
 }
 impl core::ops::Deref for RX_ERR_PARITY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

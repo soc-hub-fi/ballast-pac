@@ -35,7 +35,7 @@ impl From<crate::W<XOFF_CPU_SPEC>> for W {
     }
 }
 #[doc = "Field `xoff_cpu` reader - The rising pulse of xoff_cpu signal is used to start transmit one PAUSE frame when the transmit in idle state with quanta zero, asking remote ethernet controller jump out from pause state."]
-pub struct XOFF_CPU_R(crate::FieldReader<bool, bool>);
+pub struct XOFF_CPU_R(crate::FieldReader<bool>);
 impl XOFF_CPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl XOFF_CPU_R {
     }
 }
 impl core::ops::Deref for XOFF_CPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -14,7 +14,7 @@ impl From<crate::R<D_DATAOUT_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `DATAOUT_ADDR` reader - "]
-pub struct DATAOUT_ADDR_R(crate::FieldReader<u32, u32>);
+pub struct DATAOUT_ADDR_R(crate::FieldReader<u32>);
 impl DATAOUT_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl DATAOUT_ADDR_R {
     }
 }
 impl core::ops::Deref for DATAOUT_ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

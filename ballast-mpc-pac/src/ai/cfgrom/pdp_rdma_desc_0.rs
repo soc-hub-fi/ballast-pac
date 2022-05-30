@@ -14,7 +14,7 @@ impl From<crate::R<PDP_RDMA_DESC_0_SPEC>> for R {
     }
 }
 #[doc = "Field `PDP_RDMA_DESC` reader - "]
-pub struct PDP_RDMA_DESC_R(crate::FieldReader<u32, u32>);
+pub struct PDP_RDMA_DESC_R(crate::FieldReader<u32>);
 impl PDP_RDMA_DESC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl PDP_RDMA_DESC_R {
     }
 }
 impl core::ops::Deref for PDP_RDMA_DESC_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

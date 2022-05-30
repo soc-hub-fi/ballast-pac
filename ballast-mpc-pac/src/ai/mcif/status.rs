@@ -28,7 +28,7 @@ impl From<IDLE_A> for bool {
     }
 }
 #[doc = "Field `IDLE` reader - "]
-pub struct IDLE_R(crate::FieldReader<bool, IDLE_A>);
+pub struct IDLE_R(crate::FieldReader<bool>);
 impl IDLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -54,7 +54,7 @@ impl IDLE_R {
     }
 }
 impl core::ops::Deref for IDLE_R {
-    type Target = crate::FieldReader<bool, IDLE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

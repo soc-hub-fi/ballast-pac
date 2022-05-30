@@ -14,7 +14,7 @@ impl From<crate::R<S_LUT_LE_SLOPE_SCALE_SPEC>> for R {
     }
 }
 #[doc = "Field `LUT_LE_SLOPE_UFLOW_SCALE` reader - "]
-pub struct LUT_LE_SLOPE_UFLOW_SCALE_R(crate::FieldReader<u16, u16>);
+pub struct LUT_LE_SLOPE_UFLOW_SCALE_R(crate::FieldReader<u16>);
 impl LUT_LE_SLOPE_UFLOW_SCALE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,14 +22,14 @@ impl LUT_LE_SLOPE_UFLOW_SCALE_R {
     }
 }
 impl core::ops::Deref for LUT_LE_SLOPE_UFLOW_SCALE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `LUT_LE_SLOPE_OFLOW_SCALE` reader - "]
-pub struct LUT_LE_SLOPE_OFLOW_SCALE_R(crate::FieldReader<u16, u16>);
+pub struct LUT_LE_SLOPE_OFLOW_SCALE_R(crate::FieldReader<u16>);
 impl LUT_LE_SLOPE_OFLOW_SCALE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -37,7 +37,7 @@ impl LUT_LE_SLOPE_OFLOW_SCALE_R {
     }
 }
 impl core::ops::Deref for LUT_LE_SLOPE_OFLOW_SCALE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<CAM_CFG_UR_SPEC>> for W {
     }
 }
 #[doc = "Field `FRAMESLICE_URX` reader - Y coordinate of upper right corner of slice"]
-pub struct FRAMESLICE_URX_R(crate::FieldReader<u16, u16>);
+pub struct FRAMESLICE_URX_R(crate::FieldReader<u16>);
 impl FRAMESLICE_URX_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl FRAMESLICE_URX_R {
     }
 }
 impl core::ops::Deref for FRAMESLICE_URX_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> FRAMESLICE_URX_W<'a> {
     }
 }
 #[doc = "Field `FRAMESLICE_URY` reader - X coordinate of upper right corner of slice"]
-pub struct FRAMESLICE_URY_R(crate::FieldReader<u16, u16>);
+pub struct FRAMESLICE_URY_R(crate::FieldReader<u16>);
 impl FRAMESLICE_URY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl FRAMESLICE_URY_R {
     }
 }
 impl core::ops::Deref for FRAMESLICE_URY_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

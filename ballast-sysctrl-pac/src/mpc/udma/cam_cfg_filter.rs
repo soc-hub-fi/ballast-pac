@@ -35,7 +35,7 @@ impl From<crate::W<CAM_CFG_FILTER_SPEC>> for W {
     }
 }
 #[doc = "Field `B_COEFF` reader - Coefficient that multiplies the B component NOTE: not used if FORMAT == BYPASS"]
-pub struct B_COEFF_R(crate::FieldReader<u8, u8>);
+pub struct B_COEFF_R(crate::FieldReader<u8>);
 impl B_COEFF_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl B_COEFF_R {
     }
 }
 impl core::ops::Deref for B_COEFF_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> B_COEFF_W<'a> {
     }
 }
 #[doc = "Field `G_COEFF` reader - Coefficient that multiplies the G component NOTE: not used if FORMAT == BYPASS"]
-pub struct G_COEFF_R(crate::FieldReader<u8, u8>);
+pub struct G_COEFF_R(crate::FieldReader<u8>);
 impl G_COEFF_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl G_COEFF_R {
     }
 }
 impl core::ops::Deref for G_COEFF_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> G_COEFF_W<'a> {
     }
 }
 #[doc = "Field `R_COEFF` reader - Coefficient that multiplies the R component NOTE: not used if FORMAT == BYPASS"]
-pub struct R_COEFF_R(crate::FieldReader<u8, u8>);
+pub struct R_COEFF_R(crate::FieldReader<u8>);
 impl R_COEFF_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl R_COEFF_R {
     }
 }
 impl core::ops::Deref for R_COEFF_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

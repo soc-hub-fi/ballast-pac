@@ -35,7 +35,7 @@ impl From<crate::W<REG_ETH_PLL_SPARE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `spare_ctrl` reader - "]
-pub struct SPARE_CTRL_R(crate::FieldReader<u32, u32>);
+pub struct SPARE_CTRL_R(crate::FieldReader<u32>);
 impl SPARE_CTRL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl SPARE_CTRL_R {
     }
 }
 impl core::ops::Deref for SPARE_CTRL_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

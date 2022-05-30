@@ -35,7 +35,7 @@ impl From<crate::W<S_LUT_LE_START_SPEC>> for W {
     }
 }
 #[doc = "Field `LUT_LE_START` reader - "]
-pub struct LUT_LE_START_R(crate::FieldReader<u32, u32>);
+pub struct LUT_LE_START_R(crate::FieldReader<u32>);
 impl LUT_LE_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl LUT_LE_START_R {
     }
 }
 impl core::ops::Deref for LUT_LE_START_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

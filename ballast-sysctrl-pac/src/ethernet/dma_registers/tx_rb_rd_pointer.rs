@@ -14,7 +14,7 @@ impl From<crate::R<TX_RB_RD_POINTER_SPEC>> for R {
     }
 }
 #[doc = "Field `tx_rb_rd_pointer` reader - "]
-pub struct TX_RB_RD_POINTER_R(crate::FieldReader<u32, u32>);
+pub struct TX_RB_RD_POINTER_R(crate::FieldReader<u32>);
 impl TX_RB_RD_POINTER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl TX_RB_RD_POINTER_R {
     }
 }
 impl core::ops::Deref for TX_RB_RD_POINTER_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

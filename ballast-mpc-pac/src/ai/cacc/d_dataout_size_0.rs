@@ -14,7 +14,7 @@ impl From<crate::R<D_DATAOUT_SIZE_0_SPEC>> for R {
     }
 }
 #[doc = "Field `DATAOUT_WIDTH` reader - "]
-pub struct DATAOUT_WIDTH_R(crate::FieldReader<u16, u16>);
+pub struct DATAOUT_WIDTH_R(crate::FieldReader<u16>);
 impl DATAOUT_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,14 +22,14 @@ impl DATAOUT_WIDTH_R {
     }
 }
 impl core::ops::Deref for DATAOUT_WIDTH_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DATAOUT_HEIGHT` reader - "]
-pub struct DATAOUT_HEIGHT_R(crate::FieldReader<u16, u16>);
+pub struct DATAOUT_HEIGHT_R(crate::FieldReader<u16>);
 impl DATAOUT_HEIGHT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -37,7 +37,7 @@ impl DATAOUT_HEIGHT_R {
     }
 }
 impl core::ops::Deref for DATAOUT_HEIGHT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

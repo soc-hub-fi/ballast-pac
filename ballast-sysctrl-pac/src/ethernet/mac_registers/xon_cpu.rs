@@ -35,7 +35,7 @@ impl From<crate::W<XON_CPU_SPEC>> for W {
     }
 }
 #[doc = "Field `xon_cpu` reader - The rising pulse of xon_cpu signal is used to start transmit one PAUSE frame with quanta value of pause_quanta_set when the transmit in idle state."]
-pub struct XON_CPU_R(crate::FieldReader<bool, bool>);
+pub struct XON_CPU_R(crate::FieldReader<bool>);
 impl XON_CPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl XON_CPU_R {
     }
 }
 impl core::ops::Deref for XON_CPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

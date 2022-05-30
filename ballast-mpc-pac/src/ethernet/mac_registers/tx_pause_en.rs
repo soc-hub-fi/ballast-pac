@@ -35,7 +35,7 @@ impl From<crate::W<TX_PAUSE_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_pause_en` reader - When this register is “1”, this core will respond to received pause frame.The transmit state machine will enter PAUSE state according to quanta value in received packet . One quanta time is equal to the time of transmit 512bit data."]
-pub struct TX_PAUSE_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_PAUSE_EN_R(crate::FieldReader<bool>);
 impl TX_PAUSE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TX_PAUSE_EN_R {
     }
 }
 impl core::ops::Deref for TX_PAUSE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

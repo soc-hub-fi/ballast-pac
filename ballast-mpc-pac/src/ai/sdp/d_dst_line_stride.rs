@@ -14,7 +14,7 @@ impl From<crate::R<D_DST_LINE_STRIDE_SPEC>> for R {
     }
 }
 #[doc = "Field `DST_LINE_STRIDE` reader - "]
-pub struct DST_LINE_STRIDE_R(crate::FieldReader<u32, u32>);
+pub struct DST_LINE_STRIDE_R(crate::FieldReader<u32>);
 impl DST_LINE_STRIDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl DST_LINE_STRIDE_R {
     }
 }
 impl core::ops::Deref for DST_LINE_STRIDE_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

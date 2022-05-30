@@ -35,7 +35,7 @@ impl From<crate::W<MTIMECMP_1_SPEC>> for W {
     }
 }
 #[doc = "Field `mtimecmp` reader - "]
-pub struct MTIMECMP_R(crate::FieldReader<u64, u64>);
+pub struct MTIMECMP_R(crate::FieldReader<u64>);
 impl MTIMECMP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u64) -> Self {
@@ -43,7 +43,7 @@ impl MTIMECMP_R {
     }
 }
 impl core::ops::Deref for MTIMECMP_R {
-    type Target = crate::FieldReader<u64, u64>;
+    type Target = crate::FieldReader<u64>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

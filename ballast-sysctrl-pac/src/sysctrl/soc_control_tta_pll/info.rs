@@ -35,7 +35,7 @@ impl From<crate::W<INFO_SPEC>> for W {
     }
 }
 #[doc = "Field `cluster_count` reader - Number of Clusters"]
-pub struct CLUSTER_COUNT_R(crate::FieldReader<u16, u16>);
+pub struct CLUSTER_COUNT_R(crate::FieldReader<u16>);
 impl CLUSTER_COUNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl CLUSTER_COUNT_R {
     }
 }
 impl core::ops::Deref for CLUSTER_COUNT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CLUSTER_COUNT_W<'a> {
     }
 }
 #[doc = "Field `core_count` reader - Number of Cores"]
-pub struct CORE_COUNT_R(crate::FieldReader<u16, u16>);
+pub struct CORE_COUNT_R(crate::FieldReader<u16>);
 impl CORE_COUNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl CORE_COUNT_R {
     }
 }
 impl core::ops::Deref for CORE_COUNT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

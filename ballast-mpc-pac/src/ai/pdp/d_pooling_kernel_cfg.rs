@@ -41,7 +41,7 @@ impl From<KERNEL_WIDTH_A> for u8 {
     }
 }
 #[doc = "Field `KERNEL_WIDTH` reader - "]
-pub struct KERNEL_WIDTH_R(crate::FieldReader<u8, KERNEL_WIDTH_A>);
+pub struct KERNEL_WIDTH_R(crate::FieldReader<u8>);
 impl KERNEL_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -104,7 +104,7 @@ impl KERNEL_WIDTH_R {
     }
 }
 impl core::ops::Deref for KERNEL_WIDTH_R {
-    type Target = crate::FieldReader<u8, KERNEL_WIDTH_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,7 +138,7 @@ impl From<KERNEL_HEIGHT_A> for u8 {
     }
 }
 #[doc = "Field `KERNEL_HEIGHT` reader - "]
-pub struct KERNEL_HEIGHT_R(crate::FieldReader<u8, KERNEL_HEIGHT_A>);
+pub struct KERNEL_HEIGHT_R(crate::FieldReader<u8>);
 impl KERNEL_HEIGHT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -201,14 +201,14 @@ impl KERNEL_HEIGHT_R {
     }
 }
 impl core::ops::Deref for KERNEL_HEIGHT_R {
-    type Target = crate::FieldReader<u8, KERNEL_HEIGHT_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KERNEL_STRIDE_WIDTH` reader - "]
-pub struct KERNEL_STRIDE_WIDTH_R(crate::FieldReader<u8, u8>);
+pub struct KERNEL_STRIDE_WIDTH_R(crate::FieldReader<u8>);
 impl KERNEL_STRIDE_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -216,14 +216,14 @@ impl KERNEL_STRIDE_WIDTH_R {
     }
 }
 impl core::ops::Deref for KERNEL_STRIDE_WIDTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KERNEL_STRIDE_HEIGHT` reader - "]
-pub struct KERNEL_STRIDE_HEIGHT_R(crate::FieldReader<u8, u8>);
+pub struct KERNEL_STRIDE_HEIGHT_R(crate::FieldReader<u8>);
 impl KERNEL_STRIDE_HEIGHT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -231,7 +231,7 @@ impl KERNEL_STRIDE_HEIGHT_R {
     }
 }
 impl core::ops::Deref for KERNEL_STRIDE_HEIGHT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

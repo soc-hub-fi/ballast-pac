@@ -35,7 +35,7 @@ impl From<crate::W<BROADCAST_FILTER_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `broadcast_filter_en` reader - The broadcast packet filter will enable only when broadcast_filter_en is set"]
-pub struct BROADCAST_FILTER_EN_R(crate::FieldReader<bool, bool>);
+pub struct BROADCAST_FILTER_EN_R(crate::FieldReader<bool>);
 impl BROADCAST_FILTER_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl BROADCAST_FILTER_EN_R {
     }
 }
 impl core::ops::Deref for BROADCAST_FILTER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

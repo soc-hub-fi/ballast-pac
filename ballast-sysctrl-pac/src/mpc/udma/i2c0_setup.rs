@@ -35,7 +35,7 @@ impl From<crate::W<I2C0_SETUP_SPEC>> for W {
     }
 }
 #[doc = "Field `DO_RST` reader - Reset command used to abort the on-going transfer and clear busy and arbitration lost status flags."]
-pub struct DO_RST_R(crate::FieldReader<bool, bool>);
+pub struct DO_RST_R(crate::FieldReader<bool>);
 impl DO_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DO_RST_R {
     }
 }
 impl core::ops::Deref for DO_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

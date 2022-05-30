@@ -35,7 +35,7 @@ impl From<crate::W<CAM_VSYNC_POLARITY_SPEC>> for W {
     }
 }
 #[doc = "Field `VSYNC_POLARITY` reader - Set vsync polarity of CPI. - 1'b0: Active 0 - 1'b1: Active 1"]
-pub struct VSYNC_POLARITY_R(crate::FieldReader<bool, bool>);
+pub struct VSYNC_POLARITY_R(crate::FieldReader<bool>);
 impl VSYNC_POLARITY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl VSYNC_POLARITY_R {
     }
 }
 impl core::ops::Deref for VSYNC_POLARITY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -14,7 +14,7 @@ impl From<crate::R<CIF_BASE_LATENCY_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CIF_BASE_LATENCY` reader - "]
-pub struct CIF_BASE_LATENCY_R(crate::FieldReader<u32, u32>);
+pub struct CIF_BASE_LATENCY_R(crate::FieldReader<u32>);
 impl CIF_BASE_LATENCY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl CIF_BASE_LATENCY_R {
     }
 }
 impl core::ops::Deref for CIF_BASE_LATENCY_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

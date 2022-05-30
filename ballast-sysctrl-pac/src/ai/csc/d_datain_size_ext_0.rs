@@ -35,7 +35,7 @@ impl From<crate::W<D_DATAIN_SIZE_EXT_0_SPEC>> for W {
     }
 }
 #[doc = "Field `DATAIN_WIDTH_EXT` reader - "]
-pub struct DATAIN_WIDTH_EXT_R(crate::FieldReader<u16, u16>);
+pub struct DATAIN_WIDTH_EXT_R(crate::FieldReader<u16>);
 impl DATAIN_WIDTH_EXT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl DATAIN_WIDTH_EXT_R {
     }
 }
 impl core::ops::Deref for DATAIN_WIDTH_EXT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DATAIN_WIDTH_EXT_W<'a> {
     }
 }
 #[doc = "Field `DATAIN_HEIGHT_EXT` reader - "]
-pub struct DATAIN_HEIGHT_EXT_R(crate::FieldReader<u16, u16>);
+pub struct DATAIN_HEIGHT_EXT_R(crate::FieldReader<u16>);
 impl DATAIN_HEIGHT_EXT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl DATAIN_HEIGHT_EXT_R {
     }
 }
 impl core::ops::Deref for DATAIN_HEIGHT_EXT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

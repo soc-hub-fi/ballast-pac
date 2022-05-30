@@ -35,7 +35,7 @@ impl From<crate::W<D_DAIN_ADDR_LOW_1_SPEC>> for W {
     }
 }
 #[doc = "Field `DATAIN_ADDR_LOW_1` reader - "]
-pub struct DATAIN_ADDR_LOW_1_R(crate::FieldReader<u32, u32>);
+pub struct DATAIN_ADDR_LOW_1_R(crate::FieldReader<u32>);
 impl DATAIN_ADDR_LOW_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl DATAIN_ADDR_LOW_1_R {
     }
 }
 impl core::ops::Deref for DATAIN_ADDR_LOW_1_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

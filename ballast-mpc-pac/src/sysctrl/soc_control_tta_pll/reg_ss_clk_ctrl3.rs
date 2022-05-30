@@ -35,7 +35,7 @@ impl From<crate::W<REG_SS_CLK_CTRL3_SPEC>> for W {
     }
 }
 #[doc = "Field `Top_Periph_CLK_CTRL` reader - "]
-pub struct TOP_PERIPH_CLK_CTRL_R(crate::FieldReader<u8, u8>);
+pub struct TOP_PERIPH_CLK_CTRL_R(crate::FieldReader<u8>);
 impl TOP_PERIPH_CLK_CTRL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TOP_PERIPH_CLK_CTRL_R {
     }
 }
 impl core::ops::Deref for TOP_PERIPH_CLK_CTRL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

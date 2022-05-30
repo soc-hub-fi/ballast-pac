@@ -14,7 +14,7 @@ impl From<crate::R<D_POST_Y_EXTENSION_SPEC>> for R {
     }
 }
 #[doc = "Field `Y_EXTENSION` reader - "]
-pub struct Y_EXTENSION_R(crate::FieldReader<u8, u8>);
+pub struct Y_EXTENSION_R(crate::FieldReader<u8>);
 impl Y_EXTENSION_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,7 +22,7 @@ impl Y_EXTENSION_R {
     }
 }
 impl core::ops::Deref for Y_EXTENSION_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

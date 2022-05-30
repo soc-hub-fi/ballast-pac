@@ -35,7 +35,7 @@ impl From<crate::W<CLK_DIV_0_SPEC>> for W {
     }
 }
 #[doc = "Field `Div_count` reader - "]
-pub struct DIV_COUNT_R(crate::FieldReader<u8, u8>);
+pub struct DIV_COUNT_R(crate::FieldReader<u8>);
 impl DIV_COUNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DIV_COUNT_R {
     }
 }
 impl core::ops::Deref for DIV_COUNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DIV_COUNT_W<'a> {
     }
 }
 #[doc = "Field `Valid` reader - "]
-pub struct VALID_R(crate::FieldReader<bool, bool>);
+pub struct VALID_R(crate::FieldReader<bool>);
 impl VALID_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl VALID_R {
     }
 }
 impl core::ops::Deref for VALID_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

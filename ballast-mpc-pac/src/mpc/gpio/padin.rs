@@ -35,7 +35,7 @@ impl From<crate::W<PADIN_SPEC>> for W {
     }
 }
 #[doc = "Field `PADIN` reader - "]
-pub struct PADIN_R(crate::FieldReader<u32, u32>);
+pub struct PADIN_R(crate::FieldReader<u32>);
 impl PADIN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl PADIN_R {
     }
 }
 impl core::ops::Deref for PADIN_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

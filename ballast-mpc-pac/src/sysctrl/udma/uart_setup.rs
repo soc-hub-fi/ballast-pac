@@ -35,7 +35,7 @@ impl From<crate::W<UART_SETUP_SPEC>> for W {
     }
 }
 #[doc = "Field `PARITY_ENA` reader - Parity bit generation and check configuration bitfield: - 1'b0: disabled - 1'b1: enabled"]
-pub struct PARITY_ENA_R(crate::FieldReader<bool, bool>);
+pub struct PARITY_ENA_R(crate::FieldReader<bool>);
 impl PARITY_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PARITY_ENA_R {
     }
 }
 impl core::ops::Deref for PARITY_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PARITY_ENA_W<'a> {
     }
 }
 #[doc = "Field `BIT_LENGTH` reader - Character length bitfield: - 2'b00: 5 bits - 2'b01: 6 bits - 2'b10: 7 bits - 2'b11: 8 bits"]
-pub struct BIT_LENGTH_R(crate::FieldReader<u8, u8>);
+pub struct BIT_LENGTH_R(crate::FieldReader<u8>);
 impl BIT_LENGTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl BIT_LENGTH_R {
     }
 }
 impl core::ops::Deref for BIT_LENGTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> BIT_LENGTH_W<'a> {
     }
 }
 #[doc = "Field `STOP_BITS` reader - Stop bits length bitfield: - 1'b0: 1 stop bit - 1'b1: 2 stop bits"]
-pub struct STOP_BITS_R(crate::FieldReader<bool, bool>);
+pub struct STOP_BITS_R(crate::FieldReader<bool>);
 impl STOP_BITS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl STOP_BITS_R {
     }
 }
 impl core::ops::Deref for STOP_BITS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> STOP_BITS_W<'a> {
     }
 }
 #[doc = "Field `POLLING_EN` reader - When in uart read, use polling method to read the data, read interrupt enable flag will be ignored: - 1'b0: Do not using polling method to read data. - 1'b1: Using polling method to read data. Interrupt enable flag will be ignored."]
-pub struct POLLING_EN_R(crate::FieldReader<bool, bool>);
+pub struct POLLING_EN_R(crate::FieldReader<bool>);
 impl POLLING_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl POLLING_EN_R {
     }
 }
 impl core::ops::Deref for POLLING_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> POLLING_EN_W<'a> {
     }
 }
 #[doc = "Field `CLEAN_FIFO` reader - In all mode clean the RX fifo, set 1 then set 0 to realize a reset fifo: - 1'b0: Stop Clean the RX FIFO. - 1'b1: Clean the RX FIFO."]
-pub struct CLEAN_FIFO_R(crate::FieldReader<bool, bool>);
+pub struct CLEAN_FIFO_R(crate::FieldReader<bool>);
 impl CLEAN_FIFO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl CLEAN_FIFO_R {
     }
 }
 impl core::ops::Deref for CLEAN_FIFO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> CLEAN_FIFO_W<'a> {
     }
 }
 #[doc = "Field `TX_ENA` reader - TX transceiver configuration bitfield: - 1'b0: disabled - 1'b1: enabled"]
-pub struct TX_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TX_ENA_R(crate::FieldReader<bool>);
 impl TX_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl TX_ENA_R {
     }
 }
 impl core::ops::Deref for TX_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> TX_ENA_W<'a> {
     }
 }
 #[doc = "Field `RX_ENA` reader - RX transceiver configuration bitfield: - 1'b0: disabled - 1'b1: enabled"]
-pub struct RX_ENA_R(crate::FieldReader<bool, bool>);
+pub struct RX_ENA_R(crate::FieldReader<bool>);
 impl RX_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl RX_ENA_R {
     }
 }
 impl core::ops::Deref for RX_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> RX_ENA_W<'a> {
     }
 }
 #[doc = "Field `CLKDIV` reader - UART Clock divider configuration bitfield. The baudrate is equal to SOC_FREQ/CLKDIV."]
-pub struct CLKDIV_R(crate::FieldReader<u16, u16>);
+pub struct CLKDIV_R(crate::FieldReader<u16>);
 impl CLKDIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -292,7 +292,7 @@ impl CLKDIV_R {
     }
 }
 impl core::ops::Deref for CLKDIV_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

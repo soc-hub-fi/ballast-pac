@@ -49,7 +49,7 @@ impl From<DATAIN_FORMAT_A> for bool {
     }
 }
 #[doc = "Field `DATAIN_FORMAT` reader - "]
-pub struct DATAIN_FORMAT_R(crate::FieldReader<bool, DATAIN_FORMAT_A>);
+pub struct DATAIN_FORMAT_R(crate::FieldReader<bool>);
 impl DATAIN_FORMAT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -75,7 +75,7 @@ impl DATAIN_FORMAT_R {
     }
 }
 impl core::ops::Deref for DATAIN_FORMAT_R {
-    type Target = crate::FieldReader<bool, DATAIN_FORMAT_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -202,7 +202,7 @@ impl From<PIXEL_FORMAT_A> for u8 {
     }
 }
 #[doc = "Field `PIXEL_FORMAT` reader - "]
-pub struct PIXEL_FORMAT_R(crate::FieldReader<u8, PIXEL_FORMAT_A>);
+pub struct PIXEL_FORMAT_R(crate::FieldReader<u8>);
 impl PIXEL_FORMAT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -433,7 +433,7 @@ impl PIXEL_FORMAT_R {
     }
 }
 impl core::ops::Deref for PIXEL_FORMAT_R {
-    type Target = crate::FieldReader<u8, PIXEL_FORMAT_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -651,7 +651,7 @@ impl From<PIXEL_MAPPING_A> for bool {
     }
 }
 #[doc = "Field `PIXEL_MAPPING` reader - "]
-pub struct PIXEL_MAPPING_R(crate::FieldReader<bool, PIXEL_MAPPING_A>);
+pub struct PIXEL_MAPPING_R(crate::FieldReader<bool>);
 impl PIXEL_MAPPING_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -677,7 +677,7 @@ impl PIXEL_MAPPING_R {
     }
 }
 impl core::ops::Deref for PIXEL_MAPPING_R {
-    type Target = crate::FieldReader<bool, PIXEL_MAPPING_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -735,7 +735,7 @@ impl From<PIXEL_SIGN_OVERRIDE_A> for bool {
     }
 }
 #[doc = "Field `PIXEL_SIGN_OVERRIDE` reader - "]
-pub struct PIXEL_SIGN_OVERRIDE_R(crate::FieldReader<bool, PIXEL_SIGN_OVERRIDE_A>);
+pub struct PIXEL_SIGN_OVERRIDE_R(crate::FieldReader<bool>);
 impl PIXEL_SIGN_OVERRIDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -761,7 +761,7 @@ impl PIXEL_SIGN_OVERRIDE_R {
     }
 }
 impl core::ops::Deref for PIXEL_SIGN_OVERRIDE_R {
-    type Target = crate::FieldReader<bool, PIXEL_SIGN_OVERRIDE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

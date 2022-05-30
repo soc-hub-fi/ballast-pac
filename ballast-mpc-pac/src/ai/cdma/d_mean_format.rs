@@ -28,7 +28,7 @@ impl From<MEAN_FORMAT_A> for bool {
     }
 }
 #[doc = "Field `MEAN_FORMAT` reader - "]
-pub struct MEAN_FORMAT_R(crate::FieldReader<bool, MEAN_FORMAT_A>);
+pub struct MEAN_FORMAT_R(crate::FieldReader<bool>);
 impl MEAN_FORMAT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -54,7 +54,7 @@ impl MEAN_FORMAT_R {
     }
 }
 impl core::ops::Deref for MEAN_FORMAT_R {
-    type Target = crate::FieldReader<bool, MEAN_FORMAT_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -14,7 +14,7 @@ impl From<crate::R<S_LUT_INFO_SPEC>> for R {
     }
 }
 #[doc = "Field `LUT_LE_INDEX_OFFSET` reader - "]
-pub struct LUT_LE_INDEX_OFFSET_R(crate::FieldReader<u8, u8>);
+pub struct LUT_LE_INDEX_OFFSET_R(crate::FieldReader<u8>);
 impl LUT_LE_INDEX_OFFSET_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,14 +22,14 @@ impl LUT_LE_INDEX_OFFSET_R {
     }
 }
 impl core::ops::Deref for LUT_LE_INDEX_OFFSET_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `LUT_LE_INDEX_SELECT` reader - "]
-pub struct LUT_LE_INDEX_SELECT_R(crate::FieldReader<u8, u8>);
+pub struct LUT_LE_INDEX_SELECT_R(crate::FieldReader<u8>);
 impl LUT_LE_INDEX_SELECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,14 +37,14 @@ impl LUT_LE_INDEX_SELECT_R {
     }
 }
 impl core::ops::Deref for LUT_LE_INDEX_SELECT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `LUT_LO_INDEX_SELECT` reader - "]
-pub struct LUT_LO_INDEX_SELECT_R(crate::FieldReader<u8, u8>);
+pub struct LUT_LO_INDEX_SELECT_R(crate::FieldReader<u8>);
 impl LUT_LO_INDEX_SELECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -52,7 +52,7 @@ impl LUT_LO_INDEX_SELECT_R {
     }
 }
 impl core::ops::Deref for LUT_LO_INDEX_SELECT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

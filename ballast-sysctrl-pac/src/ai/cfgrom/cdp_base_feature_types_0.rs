@@ -14,7 +14,7 @@ impl From<crate::R<CDP_BASE_FEATURE_TYPES_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CDP_BASE_FEATURE_TYPES` reader - "]
-pub struct CDP_BASE_FEATURE_TYPES_R(crate::FieldReader<u16, u16>);
+pub struct CDP_BASE_FEATURE_TYPES_R(crate::FieldReader<u16>);
 impl CDP_BASE_FEATURE_TYPES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,7 +22,7 @@ impl CDP_BASE_FEATURE_TYPES_R {
     }
 }
 impl core::ops::Deref for CDP_BASE_FEATURE_TYPES_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

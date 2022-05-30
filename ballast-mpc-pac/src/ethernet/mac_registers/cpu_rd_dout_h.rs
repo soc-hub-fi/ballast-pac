@@ -14,7 +14,7 @@ impl From<crate::R<CPU_RD_DOUT_H_SPEC>> for R {
     }
 }
 #[doc = "Field `CPU_rd_dout_h` reader - All statistic counters are stored in a blockram. When you read a counter,you need to write the corresponding address to CPU_rd_addr register and assert CPU_rd_apply signal. When the counter data register CPU_rd_dout is available , the signal CPU_rd_grant will be “1”."]
-pub struct CPU_RD_DOUT_H_R(crate::FieldReader<u16, u16>);
+pub struct CPU_RD_DOUT_H_R(crate::FieldReader<u16>);
 impl CPU_RD_DOUT_H_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,7 +22,7 @@ impl CPU_RD_DOUT_H_R {
     }
 }
 impl core::ops::Deref for CPU_RD_DOUT_H_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<REG_SS_RESET_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `REG_SS_RESET_EN` reader - "]
-pub struct REG_SS_RESET_EN_R(crate::FieldReader<u32, u32>);
+pub struct REG_SS_RESET_EN_R(crate::FieldReader<u32>);
 impl REG_SS_RESET_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl REG_SS_RESET_EN_R {
     }
 }
 impl core::ops::Deref for REG_SS_RESET_EN_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

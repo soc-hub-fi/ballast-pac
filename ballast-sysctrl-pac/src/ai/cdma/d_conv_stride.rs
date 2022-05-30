@@ -35,7 +35,7 @@ impl From<crate::W<D_CONV_STRIDE_SPEC>> for W {
     }
 }
 #[doc = "Field `CONV_X_STRIDE` reader - "]
-pub struct CONV_X_STRIDE_R(crate::FieldReader<u8, u8>);
+pub struct CONV_X_STRIDE_R(crate::FieldReader<u8>);
 impl CONV_X_STRIDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CONV_X_STRIDE_R {
     }
 }
 impl core::ops::Deref for CONV_X_STRIDE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CONV_X_STRIDE_W<'a> {
     }
 }
 #[doc = "Field `CONV_Y_STRIDE` reader - "]
-pub struct CONV_Y_STRIDE_R(crate::FieldReader<u8, u8>);
+pub struct CONV_Y_STRIDE_R(crate::FieldReader<u8>);
 impl CONV_Y_STRIDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CONV_Y_STRIDE_R {
     }
 }
 impl core::ops::Deref for CONV_Y_STRIDE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

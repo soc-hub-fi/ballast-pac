@@ -14,7 +14,7 @@ impl From<crate::R<D_PERF_WRITE_STALL_SPEC>> for R {
     }
 }
 #[doc = "Field `PERF_WRITE_STALL` reader - "]
-pub struct PERF_WRITE_STALL_R(crate::FieldReader<u32, u32>);
+pub struct PERF_WRITE_STALL_R(crate::FieldReader<u32>);
 impl PERF_WRITE_STALL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl PERF_WRITE_STALL_R {
     }
 }
 impl core::ops::Deref for PERF_WRITE_STALL_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

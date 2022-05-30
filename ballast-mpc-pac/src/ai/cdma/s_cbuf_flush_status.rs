@@ -14,7 +14,7 @@ impl From<crate::R<S_CBUF_FLUSH_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `FLUSH_DONE` reader - "]
-pub struct FLUSH_DONE_R(crate::FieldReader<bool, bool>);
+pub struct FLUSH_DONE_R(crate::FieldReader<bool>);
 impl FLUSH_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,7 +22,7 @@ impl FLUSH_DONE_R {
     }
 }
 impl core::ops::Deref for FLUSH_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

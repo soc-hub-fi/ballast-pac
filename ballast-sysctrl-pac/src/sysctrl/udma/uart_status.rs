@@ -14,7 +14,7 @@ impl From<crate::R<UART_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `TX_BUSY` reader - TX busy status flag: - 1'b0: no TX transfer on-going - 1'b1: TX transfer on-going"]
-pub struct TX_BUSY_R(crate::FieldReader<bool, bool>);
+pub struct TX_BUSY_R(crate::FieldReader<bool>);
 impl TX_BUSY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl TX_BUSY_R {
     }
 }
 impl core::ops::Deref for TX_BUSY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RX_BUSY` reader - RX busy status flag: - 1'b0: no RX transfer on-going - 1'b1: RX transfer on-going"]
-pub struct RX_BUSY_R(crate::FieldReader<bool, bool>);
+pub struct RX_BUSY_R(crate::FieldReader<bool>);
 impl RX_BUSY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,7 +37,7 @@ impl RX_BUSY_R {
     }
 }
 impl core::ops::Deref for RX_BUSY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

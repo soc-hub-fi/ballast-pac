@@ -35,7 +35,7 @@ impl From<crate::W<EXECUTE_REGION_LENGTH4_SPEC>> for W {
     }
 }
 #[doc = "Field `execute_region_length4` reader - "]
-pub struct EXECUTE_REGION_LENGTH4_R(crate::FieldReader<u64, u64>);
+pub struct EXECUTE_REGION_LENGTH4_R(crate::FieldReader<u64>);
 impl EXECUTE_REGION_LENGTH4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u64) -> Self {
@@ -43,7 +43,7 @@ impl EXECUTE_REGION_LENGTH4_R {
     }
 }
 impl core::ops::Deref for EXECUTE_REGION_LENGTH4_R {
-    type Target = crate::FieldReader<u64, u64>;
+    type Target = crate::FieldReader<u64>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

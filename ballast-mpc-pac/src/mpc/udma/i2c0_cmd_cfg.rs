@@ -35,7 +35,7 @@ impl From<crate::W<I2C0_CMD_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CONTINOUS` reader - CMD channel continuous mode bitfield: -1'b0: disabled -1'b1: enabled At the end of the buffer transfer, the uDMA reloads the address / buffer size and starts a new transfer."]
-pub struct CONTINOUS_R(crate::FieldReader<bool, bool>);
+pub struct CONTINOUS_R(crate::FieldReader<bool>);
 impl CONTINOUS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CONTINOUS_R {
     }
 }
 impl core::ops::Deref for CONTINOUS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CONTINOUS_W<'a> {
     }
 }
 #[doc = "Field `EN` reader - CMD channel enable and start transfer bitfield: -1'b0: disabled -1'b1: enable and start the transfer This signal is used also to queue a transfer if one is already ongoing."]
-pub struct EN_R(crate::FieldReader<bool, bool>);
+pub struct EN_R(crate::FieldReader<bool>);
 impl EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl EN_R {
     }
 }
 impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> EN_W<'a> {
     }
 }
 #[doc = "Field `PENDING` reader - CMD transfer pending in queue status flag: -1'b0: no pending transfer in the queue -1'b1: pending transfer in the queue"]
-pub struct PENDING_R(crate::FieldReader<bool, bool>);
+pub struct PENDING_R(crate::FieldReader<bool>);
 impl PENDING_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PENDING_R {
     }
 }
 impl core::ops::Deref for PENDING_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

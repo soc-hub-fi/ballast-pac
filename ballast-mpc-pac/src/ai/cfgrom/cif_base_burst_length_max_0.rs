@@ -14,7 +14,7 @@ impl From<crate::R<CIF_BASE_BURST_LENGTH_MAX_0_SPEC>> for R {
     }
 }
 #[doc = "Field `BASE_BURST_LENGTH_MAX` reader - "]
-pub struct BASE_BURST_LENGTH_MAX_R(crate::FieldReader<u32, u32>);
+pub struct BASE_BURST_LENGTH_MAX_R(crate::FieldReader<u32>);
 impl BASE_BURST_LENGTH_MAX_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl BASE_BURST_LENGTH_MAX_R {
     }
 }
 impl core::ops::Deref for BASE_BURST_LENGTH_MAX_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

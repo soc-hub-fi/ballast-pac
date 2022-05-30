@@ -14,7 +14,7 @@ impl From<crate::R<D_POOLING_PADDING_CFG_SPEC>> for R {
     }
 }
 #[doc = "Field `PAD_WIDTH` reader - "]
-pub struct PAD_WIDTH_R(crate::FieldReader<u8, u8>);
+pub struct PAD_WIDTH_R(crate::FieldReader<u8>);
 impl PAD_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,7 +22,7 @@ impl PAD_WIDTH_R {
     }
 }
 impl core::ops::Deref for PAD_WIDTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

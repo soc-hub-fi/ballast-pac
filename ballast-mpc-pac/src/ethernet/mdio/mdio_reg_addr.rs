@@ -35,7 +35,7 @@ impl From<crate::W<MDIO_REGADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `MDIO_RegAddr` reader - "]
-pub struct MDIO_REGADDR_R(crate::FieldReader<u8, u8>);
+pub struct MDIO_REGADDR_R(crate::FieldReader<u8>);
 impl MDIO_REGADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl MDIO_REGADDR_R {
     }
 }
 impl core::ops::Deref for MDIO_REGADDR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

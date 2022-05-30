@@ -35,7 +35,7 @@ impl From<crate::W<REG_ETH_PLL_DEBUG_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `Debug_Ctrl` reader - "]
-pub struct DEBUG_CTRL_R(crate::FieldReader<u8, u8>);
+pub struct DEBUG_CTRL_R(crate::FieldReader<u8>);
 impl DEBUG_CTRL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DEBUG_CTRL_R {
     }
 }
 impl core::ops::Deref for DEBUG_CTRL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

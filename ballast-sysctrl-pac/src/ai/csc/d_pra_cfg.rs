@@ -35,7 +35,7 @@ impl From<crate::W<D_PRA_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `PRA_TRUNCATE` reader - "]
-pub struct PRA_TRUNCATE_R(crate::FieldReader<u8, u8>);
+pub struct PRA_TRUNCATE_R(crate::FieldReader<u8>);
 impl PRA_TRUNCATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PRA_TRUNCATE_R {
     }
 }
 impl core::ops::Deref for PRA_TRUNCATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

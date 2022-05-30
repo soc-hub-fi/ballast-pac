@@ -35,7 +35,7 @@ impl From<crate::W<TIMER_LO_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_LO_EVENT` reader - Trigger and start APB Timer LO by the event with id that equals TIMER_LO_EVENT"]
-pub struct TIMER_LO_EVENT_R(crate::FieldReader<u8, u8>);
+pub struct TIMER_LO_EVENT_R(crate::FieldReader<u8>);
 impl TIMER_LO_EVENT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TIMER_LO_EVENT_R {
     }
 }
 impl core::ops::Deref for TIMER_LO_EVENT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -28,7 +28,7 @@ impl From<SRC_RAM_TYPE_A> for bool {
     }
 }
 #[doc = "Field `SRC_RAM_TYPE` reader - "]
-pub struct SRC_RAM_TYPE_R(crate::FieldReader<bool, SRC_RAM_TYPE_A>);
+pub struct SRC_RAM_TYPE_R(crate::FieldReader<bool>);
 impl SRC_RAM_TYPE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -54,7 +54,7 @@ impl SRC_RAM_TYPE_R {
     }
 }
 impl core::ops::Deref for SRC_RAM_TYPE_R {
-    type Target = crate::FieldReader<bool, SRC_RAM_TYPE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

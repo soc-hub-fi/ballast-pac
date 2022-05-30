@@ -35,7 +35,7 @@ impl From<crate::W<REG_SS_CLK_CTRL3_SPEC>> for W {
     }
 }
 #[doc = "Field `top_periph_sel_cka` reader - Select CKA"]
-pub struct TOP_PERIPH_SEL_CKA_R(crate::FieldReader<bool, bool>);
+pub struct TOP_PERIPH_SEL_CKA_R(crate::FieldReader<bool>);
 impl TOP_PERIPH_SEL_CKA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TOP_PERIPH_SEL_CKA_R {
     }
 }
 impl core::ops::Deref for TOP_PERIPH_SEL_CKA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TOP_PERIPH_SEL_CKA_W<'a> {
     }
 }
 #[doc = "Field `top_periph_force_cka` reader - Force CKA"]
-pub struct TOP_PERIPH_FORCE_CKA_R(crate::FieldReader<bool, bool>);
+pub struct TOP_PERIPH_FORCE_CKA_R(crate::FieldReader<bool>);
 impl TOP_PERIPH_FORCE_CKA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TOP_PERIPH_FORCE_CKA_R {
     }
 }
 impl core::ops::Deref for TOP_PERIPH_FORCE_CKA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TOP_PERIPH_FORCE_CKA_W<'a> {
     }
 }
 #[doc = "Field `top_periph_force_ckb` reader - Force CKB"]
-pub struct TOP_PERIPH_FORCE_CKB_R(crate::FieldReader<bool, bool>);
+pub struct TOP_PERIPH_FORCE_CKB_R(crate::FieldReader<bool>);
 impl TOP_PERIPH_FORCE_CKB_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TOP_PERIPH_FORCE_CKB_R {
     }
 }
 impl core::ops::Deref for TOP_PERIPH_FORCE_CKB_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> TOP_PERIPH_FORCE_CKB_W<'a> {
     }
 }
 #[doc = "Field `top_periph_subsys_clkena` reader - Subsystem clock enable"]
-pub struct TOP_PERIPH_SUBSYS_CLKENA_R(crate::FieldReader<bool, bool>);
+pub struct TOP_PERIPH_SUBSYS_CLKENA_R(crate::FieldReader<bool>);
 impl TOP_PERIPH_SUBSYS_CLKENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl TOP_PERIPH_SUBSYS_CLKENA_R {
     }
 }
 impl core::ops::Deref for TOP_PERIPH_SUBSYS_CLKENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> TOP_PERIPH_SUBSYS_CLKENA_W<'a> {
     }
 }
 #[doc = "Field `top_periph_pll_ctrl_valid` reader - PLL Control valid"]
-pub struct TOP_PERIPH_PLL_CTRL_VALID_R(crate::FieldReader<bool, bool>);
+pub struct TOP_PERIPH_PLL_CTRL_VALID_R(crate::FieldReader<bool>);
 impl TOP_PERIPH_PLL_CTRL_VALID_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl TOP_PERIPH_PLL_CTRL_VALID_R {
     }
 }
 impl core::ops::Deref for TOP_PERIPH_PLL_CTRL_VALID_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

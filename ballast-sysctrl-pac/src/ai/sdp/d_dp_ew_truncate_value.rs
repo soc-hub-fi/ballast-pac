@@ -35,7 +35,7 @@ impl From<crate::W<D_DP_EW_TRUNCATE_VALUE_SPEC>> for W {
     }
 }
 #[doc = "Field `EW_TRUNCATE` reader - "]
-pub struct EW_TRUNCATE_R(crate::FieldReader<u16, u16>);
+pub struct EW_TRUNCATE_R(crate::FieldReader<u16>);
 impl EW_TRUNCATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl EW_TRUNCATE_R {
     }
 }
 impl core::ops::Deref for EW_TRUNCATE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

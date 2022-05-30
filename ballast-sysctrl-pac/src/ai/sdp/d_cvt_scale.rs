@@ -35,7 +35,7 @@ impl From<crate::W<D_CVT_SCALE_SPEC>> for W {
     }
 }
 #[doc = "Field `CVT_SCALE` reader - "]
-pub struct CVT_SCALE_R(crate::FieldReader<u16, u16>);
+pub struct CVT_SCALE_R(crate::FieldReader<u16>);
 impl CVT_SCALE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl CVT_SCALE_R {
     }
 }
 impl core::ops::Deref for CVT_SCALE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

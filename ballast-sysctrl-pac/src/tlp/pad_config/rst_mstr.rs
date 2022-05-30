@@ -35,7 +35,7 @@ impl From<crate::W<RST_MSTR_SPEC>> for W {
     }
 }
 #[doc = "Field `drive_strength` reader - "]
-pub struct DRIVE_STRENGTH_R(crate::FieldReader<u8, u8>);
+pub struct DRIVE_STRENGTH_R(crate::FieldReader<u8>);
 impl DRIVE_STRENGTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DRIVE_STRENGTH_R {
     }
 }
 impl core::ops::Deref for DRIVE_STRENGTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DRIVE_STRENGTH_W<'a> {
     }
 }
 #[doc = "Field `output_enable` reader - "]
-pub struct OUTPUT_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct OUTPUT_ENABLE_R(crate::FieldReader<bool>);
 impl OUTPUT_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,14 +70,14 @@ impl OUTPUT_ENABLE_R {
     }
 }
 impl core::ops::Deref for OUTPUT_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `pull_enable` reader - "]
-pub struct PULL_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct PULL_ENABLE_R(crate::FieldReader<bool>);
 impl PULL_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -85,7 +85,7 @@ impl PULL_ENABLE_R {
     }
 }
 impl core::ops::Deref for PULL_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -114,7 +114,7 @@ impl<'a> PULL_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `pull_down_up` reader - Pull down 0 Pull up 1"]
-pub struct PULL_DOWN_UP_R(crate::FieldReader<bool, bool>);
+pub struct PULL_DOWN_UP_R(crate::FieldReader<bool>);
 impl PULL_DOWN_UP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -122,7 +122,7 @@ impl PULL_DOWN_UP_R {
     }
 }
 impl core::ops::Deref for PULL_DOWN_UP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -151,7 +151,7 @@ impl<'a> PULL_DOWN_UP_W<'a> {
     }
 }
 #[doc = "Field `input_enable` reader - "]
-pub struct INPUT_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct INPUT_ENABLE_R(crate::FieldReader<bool>);
 impl INPUT_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -159,7 +159,7 @@ impl INPUT_ENABLE_R {
     }
 }
 impl core::ops::Deref for INPUT_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -14,7 +14,7 @@ impl From<crate::R<D_DATA_CUBE_WIDTH_SPEC>> for R {
     }
 }
 #[doc = "Field `WIDTH` reader - "]
-pub struct WIDTH_R(crate::FieldReader<u16, u16>);
+pub struct WIDTH_R(crate::FieldReader<u16>);
 impl WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,7 +22,7 @@ impl WIDTH_R {
     }
 }
 impl core::ops::Deref for WIDTH_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -28,7 +28,7 @@ impl From<EW_MUL_SRC_A> for bool {
     }
 }
 #[doc = "Field `EW_MUL_SRC` reader - "]
-pub struct EW_MUL_SRC_R(crate::FieldReader<bool, EW_MUL_SRC_A>);
+pub struct EW_MUL_SRC_R(crate::FieldReader<bool>);
 impl EW_MUL_SRC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -54,7 +54,7 @@ impl EW_MUL_SRC_R {
     }
 }
 impl core::ops::Deref for EW_MUL_SRC_R {
-    type Target = crate::FieldReader<bool, EW_MUL_SRC_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -75,7 +75,7 @@ impl From<EW_MUL_CVT_BYPASS_A> for bool {
     }
 }
 #[doc = "Field `EW_MUL_CVT_BYPASS` reader - "]
-pub struct EW_MUL_CVT_BYPASS_R(crate::FieldReader<bool, EW_MUL_CVT_BYPASS_A>);
+pub struct EW_MUL_CVT_BYPASS_R(crate::FieldReader<bool>);
 impl EW_MUL_CVT_BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -101,7 +101,7 @@ impl EW_MUL_CVT_BYPASS_R {
     }
 }
 impl core::ops::Deref for EW_MUL_CVT_BYPASS_R {
-    type Target = crate::FieldReader<bool, EW_MUL_CVT_BYPASS_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

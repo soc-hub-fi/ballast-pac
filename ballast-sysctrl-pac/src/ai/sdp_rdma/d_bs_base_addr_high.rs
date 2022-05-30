@@ -35,7 +35,7 @@ impl From<crate::W<D_BS_BASE_ADDR_HIGH_SPEC>> for W {
     }
 }
 #[doc = "Field `BS_BASE_ADDR_HIGH` reader - "]
-pub struct BS_BASE_ADDR_HIGH_R(crate::FieldReader<u32, u32>);
+pub struct BS_BASE_ADDR_HIGH_R(crate::FieldReader<u32>);
 impl BS_BASE_ADDR_HIGH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl BS_BASE_ADDR_HIGH_R {
     }
 }
 impl core::ops::Deref for BS_BASE_ADDR_HIGH_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

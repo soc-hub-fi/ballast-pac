@@ -35,7 +35,7 @@ impl From<crate::W<REG_TOPPERIPH_PLL_TMUX_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `Tmux_1` reader - "]
-pub struct TMUX_1_R(crate::FieldReader<u8, u8>);
+pub struct TMUX_1_R(crate::FieldReader<u8>);
 impl TMUX_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TMUX_1_R {
     }
 }
 impl core::ops::Deref for TMUX_1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TMUX_1_W<'a> {
     }
 }
 #[doc = "Field `Tmux_2` reader - "]
-pub struct TMUX_2_R(crate::FieldReader<u8, u8>);
+pub struct TMUX_2_R(crate::FieldReader<u8>);
 impl TMUX_2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl TMUX_2_R {
     }
 }
 impl core::ops::Deref for TMUX_2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

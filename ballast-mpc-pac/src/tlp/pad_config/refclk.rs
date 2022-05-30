@@ -35,7 +35,7 @@ impl From<crate::W<REFCLK_SPEC>> for W {
     }
 }
 #[doc = "Field `drive_strength` reader - "]
-pub struct DRIVE_STRENGTH_R(crate::FieldReader<u8, u8>);
+pub struct DRIVE_STRENGTH_R(crate::FieldReader<u8>);
 impl DRIVE_STRENGTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DRIVE_STRENGTH_R {
     }
 }
 impl core::ops::Deref for DRIVE_STRENGTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DRIVE_STRENGTH_W<'a> {
     }
 }
 #[doc = "Field `enable` reader - "]
-pub struct ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct ENABLE_R(crate::FieldReader<bool>);
 impl ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl ENABLE_R {
     }
 }
 impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

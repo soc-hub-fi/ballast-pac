@@ -14,7 +14,7 @@ impl From<crate::R<D_PERF_NRDMA_READ_STALL_SPEC>> for R {
     }
 }
 #[doc = "Field `NRDMA_STALL` reader - "]
-pub struct NRDMA_STALL_R(crate::FieldReader<u32, u32>);
+pub struct NRDMA_STALL_R(crate::FieldReader<u32>);
 impl NRDMA_STALL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl NRDMA_STALL_R {
     }
 }
 impl core::ops::Deref for NRDMA_STALL_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

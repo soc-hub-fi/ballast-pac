@@ -35,7 +35,7 @@ impl From<crate::W<PADOUT_32_63_SPEC>> for W {
     }
 }
 #[doc = "Field `DATA_OUT` reader - "]
-pub struct DATA_OUT_R(crate::FieldReader<u32, u32>);
+pub struct DATA_OUT_R(crate::FieldReader<u32>);
 impl DATA_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl DATA_OUT_R {
     }
 }
 impl core::ops::Deref for DATA_OUT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

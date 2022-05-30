@@ -35,7 +35,7 @@ impl From<crate::W<LINE_LOOP_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `Line_loop_en` reader - If Line_loop_en =1 , the packet transmited to Phy will loopback to receive side. This function is used for test purpose."]
-pub struct LINE_LOOP_EN_R(crate::FieldReader<bool, bool>);
+pub struct LINE_LOOP_EN_R(crate::FieldReader<bool>);
 impl LINE_LOOP_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl LINE_LOOP_EN_R {
     }
 }
 impl core::ops::Deref for LINE_LOOP_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

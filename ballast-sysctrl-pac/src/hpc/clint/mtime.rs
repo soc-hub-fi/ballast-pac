@@ -35,7 +35,7 @@ impl From<crate::W<MTIME_SPEC>> for W {
     }
 }
 #[doc = "Field `mtime` reader - "]
-pub struct MTIME_R(crate::FieldReader<u64, u64>);
+pub struct MTIME_R(crate::FieldReader<u64>);
 impl MTIME_R {
     #[inline(always)]
     pub(crate) fn new(bits: u64) -> Self {
@@ -43,7 +43,7 @@ impl MTIME_R {
     }
 }
 impl core::ops::Deref for MTIME_R {
-    type Target = crate::FieldReader<u64, u64>;
+    type Target = crate::FieldReader<u64>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

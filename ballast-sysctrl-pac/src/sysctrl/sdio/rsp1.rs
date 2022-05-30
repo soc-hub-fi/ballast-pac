@@ -14,7 +14,7 @@ impl From<crate::R<RSP1_SPEC>> for R {
     }
 }
 #[doc = "Field `RESPONSE_WORD1` reader - "]
-pub struct RESPONSE_WORD1_R(crate::FieldReader<u32, u32>);
+pub struct RESPONSE_WORD1_R(crate::FieldReader<u32>);
 impl RESPONSE_WORD1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl RESPONSE_WORD1_R {
     }
 }
 impl core::ops::Deref for RESPONSE_WORD1_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

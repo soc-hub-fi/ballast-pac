@@ -14,7 +14,7 @@ impl From<crate::R<D_RECIP_KERNEL_WIDTH_SPEC>> for R {
     }
 }
 #[doc = "Field `RECIP_KERNEL_WIDTH` reader - "]
-pub struct RECIP_KERNEL_WIDTH_R(crate::FieldReader<u32, u32>);
+pub struct RECIP_KERNEL_WIDTH_R(crate::FieldReader<u32>);
 impl RECIP_KERNEL_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl RECIP_KERNEL_WIDTH_R {
     }
 }
 impl core::ops::Deref for RECIP_KERNEL_WIDTH_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

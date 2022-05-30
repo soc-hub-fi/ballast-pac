@@ -35,7 +35,7 @@ impl From<crate::W<TIMER_ADDR_LENGTH_SPEC>> for W {
     }
 }
 #[doc = "Field `timer_addr_length` reader - "]
-pub struct TIMER_ADDR_LENGTH_R(crate::FieldReader<u64, u64>);
+pub struct TIMER_ADDR_LENGTH_R(crate::FieldReader<u64>);
 impl TIMER_ADDR_LENGTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u64) -> Self {
@@ -43,7 +43,7 @@ impl TIMER_ADDR_LENGTH_R {
     }
 }
 impl core::ops::Deref for TIMER_ADDR_LENGTH_R {
-    type Target = crate::FieldReader<u64, u64>;
+    type Target = crate::FieldReader<u64>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

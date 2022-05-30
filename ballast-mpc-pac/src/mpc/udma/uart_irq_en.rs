@@ -35,7 +35,7 @@ impl From<crate::W<UART_IRQ_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `RX` reader - Rx interrupt in enable flag: - 1'b0: RX IRQ disable - 1'b1: RX IRQ enable"]
-pub struct RX_R(crate::FieldReader<bool, bool>);
+pub struct RX_R(crate::FieldReader<bool>);
 impl RX_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RX_R {
     }
 }
 impl core::ops::Deref for RX_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> RX_W<'a> {
     }
 }
 #[doc = "Field `ERROR` reader - Error interrupt in enable flag: - 1'b0: Error IRQ disable - 1'b1: Error IRQ enable"]
-pub struct ERROR_R(crate::FieldReader<bool, bool>);
+pub struct ERROR_R(crate::FieldReader<bool>);
 impl ERROR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ERROR_R {
     }
 }
 impl core::ops::Deref for ERROR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

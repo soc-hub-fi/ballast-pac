@@ -37,7 +37,7 @@ impl From<crate::W<FC_MASK3_SPEC>> for W {
 #[doc = "Field `FC_MASK3` reader - Event Mask to enable/disable event dispatch to FC interrupt controller. Setting bit\\[i\\]
 to 0b1 disables dispatching event to FC interrupt controller. Setting bit\\[i\\]
 to 0b0 enables dispatching event to FC interrupt controller."]
-pub struct FC_MASK3_R(crate::FieldReader<u32, u32>);
+pub struct FC_MASK3_R(crate::FieldReader<u32>);
 impl FC_MASK3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -45,7 +45,7 @@ impl FC_MASK3_R {
     }
 }
 impl core::ops::Deref for FC_MASK3_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

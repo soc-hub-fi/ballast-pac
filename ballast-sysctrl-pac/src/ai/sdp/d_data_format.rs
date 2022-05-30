@@ -52,7 +52,7 @@ impl From<PROC_PRECISION_A> for u8 {
     }
 }
 #[doc = "Field `PROC_PRECISION` reader - "]
-pub struct PROC_PRECISION_R(crate::FieldReader<u8, PROC_PRECISION_A>);
+pub struct PROC_PRECISION_R(crate::FieldReader<u8>);
 impl PROC_PRECISION_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -85,7 +85,7 @@ impl PROC_PRECISION_R {
     }
 }
 impl core::ops::Deref for PROC_PRECISION_R {
-    type Target = crate::FieldReader<u8, PROC_PRECISION_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -141,7 +141,7 @@ impl From<OUT_PRECISION_A> for u8 {
     }
 }
 #[doc = "Field `OUT_PRECISION` reader - "]
-pub struct OUT_PRECISION_R(crate::FieldReader<u8, OUT_PRECISION_A>);
+pub struct OUT_PRECISION_R(crate::FieldReader<u8>);
 impl OUT_PRECISION_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -174,7 +174,7 @@ impl OUT_PRECISION_R {
     }
 }
 impl core::ops::Deref for OUT_PRECISION_R {
-    type Target = crate::FieldReader<u8, OUT_PRECISION_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<SPIM_RX_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CONTINOUS` reader - Channel continuous mode: -1'b0: disable -1'b1: enable At the end of the buffer the uDMA reloads the address and size and starts a new transfer."]
-pub struct CONTINOUS_R(crate::FieldReader<bool, bool>);
+pub struct CONTINOUS_R(crate::FieldReader<bool>);
 impl CONTINOUS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CONTINOUS_R {
     }
 }
 impl core::ops::Deref for CONTINOUS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl From<DATASIZE_A> for u8 {
     }
 }
 #[doc = "Field `DATASIZE` reader - Channel transfer size used to increment uDMA buffer address pointer: - 2'b00: +1 (8 bits) - 2'b01: +2 (16 bits) - 2'b10: +4 ("]
-pub struct DATASIZE_R(crate::FieldReader<u8, DATASIZE_A>);
+pub struct DATASIZE_R(crate::FieldReader<u8>);
 impl DATASIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -122,7 +122,7 @@ impl DATASIZE_R {
     }
 }
 impl core::ops::Deref for DATASIZE_R {
-    type Target = crate::FieldReader<u8, DATASIZE_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -161,7 +161,7 @@ impl<'a> DATASIZE_W<'a> {
     }
 }
 #[doc = "Field `EN` reader - Channel enable and start transfer: -1'b0: disable -1'b1: enable This signal is used also to queue a transfer if one is already ongoing"]
-pub struct EN_R(crate::FieldReader<bool, bool>);
+pub struct EN_R(crate::FieldReader<bool>);
 impl EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -169,7 +169,7 @@ impl EN_R {
     }
 }
 impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -198,7 +198,7 @@ impl<'a> EN_W<'a> {
     }
 }
 #[doc = "Field `PENDING` reader - Transfer pending in queue status flag: -1'b0: free -1'b1: pending"]
-pub struct PENDING_R(crate::FieldReader<bool, bool>);
+pub struct PENDING_R(crate::FieldReader<bool>);
 impl PENDING_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -206,7 +206,7 @@ impl PENDING_R {
     }
 }
 impl core::ops::Deref for PENDING_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

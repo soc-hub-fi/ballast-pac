@@ -49,7 +49,7 @@ impl From<FLYING_MODE_A> for bool {
     }
 }
 #[doc = "Field `FLYING_MODE` reader - "]
-pub struct FLYING_MODE_R(crate::FieldReader<bool, FLYING_MODE_A>);
+pub struct FLYING_MODE_R(crate::FieldReader<bool>);
 impl FLYING_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -75,7 +75,7 @@ impl FLYING_MODE_R {
     }
 }
 impl core::ops::Deref for FLYING_MODE_R {
-    type Target = crate::FieldReader<bool, FLYING_MODE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -133,7 +133,7 @@ impl From<OUTPUT_DST_A> for bool {
     }
 }
 #[doc = "Field `OUTPUT_DST` reader - "]
-pub struct OUTPUT_DST_R(crate::FieldReader<bool, OUTPUT_DST_A>);
+pub struct OUTPUT_DST_R(crate::FieldReader<bool>);
 impl OUTPUT_DST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -159,7 +159,7 @@ impl OUTPUT_DST_R {
     }
 }
 impl core::ops::Deref for OUTPUT_DST_R {
-    type Target = crate::FieldReader<bool, OUTPUT_DST_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -217,7 +217,7 @@ impl From<WINOGRAD_A> for bool {
     }
 }
 #[doc = "Field `WINOGRAD` reader - "]
-pub struct WINOGRAD_R(crate::FieldReader<bool, WINOGRAD_A>);
+pub struct WINOGRAD_R(crate::FieldReader<bool>);
 impl WINOGRAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -243,7 +243,7 @@ impl WINOGRAD_R {
     }
 }
 impl core::ops::Deref for WINOGRAD_R {
-    type Target = crate::FieldReader<bool, WINOGRAD_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -301,7 +301,7 @@ impl From<NAN_TO_ZERO_A> for bool {
     }
 }
 #[doc = "Field `NAN_TO_ZERO` reader - "]
-pub struct NAN_TO_ZERO_R(crate::FieldReader<bool, NAN_TO_ZERO_A>);
+pub struct NAN_TO_ZERO_R(crate::FieldReader<bool>);
 impl NAN_TO_ZERO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -327,7 +327,7 @@ impl NAN_TO_ZERO_R {
     }
 }
 impl core::ops::Deref for NAN_TO_ZERO_R {
-    type Target = crate::FieldReader<bool, NAN_TO_ZERO_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -371,7 +371,7 @@ impl<'a> NAN_TO_ZERO_W<'a> {
     }
 }
 #[doc = "Field `BATCH_NUMBER` reader - "]
-pub struct BATCH_NUMBER_R(crate::FieldReader<u8, u8>);
+pub struct BATCH_NUMBER_R(crate::FieldReader<u8>);
 impl BATCH_NUMBER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -379,7 +379,7 @@ impl BATCH_NUMBER_R {
     }
 }
 impl core::ops::Deref for BATCH_NUMBER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

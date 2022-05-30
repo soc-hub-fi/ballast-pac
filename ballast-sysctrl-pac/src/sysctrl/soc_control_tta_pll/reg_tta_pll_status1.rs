@@ -14,7 +14,7 @@ impl From<crate::R<REG_TTA_PLL_STATUS1_SPEC>> for R {
     }
 }
 #[doc = "Field `status1` reader - "]
-pub struct STATUS1_R(crate::FieldReader<u32, u32>);
+pub struct STATUS1_R(crate::FieldReader<u32>);
 impl STATUS1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl STATUS1_R {
     }
 }
 impl core::ops::Deref for STATUS1_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

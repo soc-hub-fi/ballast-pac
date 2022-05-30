@@ -14,7 +14,7 @@ impl From<crate::R<DEVICE_CLASS_SPEC>> for R {
     }
 }
 #[doc = "Field `device_class` reader - "]
-pub struct DEVICE_CLASS_R(crate::FieldReader<u32, u32>);
+pub struct DEVICE_CLASS_R(crate::FieldReader<u32>);
 impl DEVICE_CLASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl DEVICE_CLASS_R {
     }
 }
 impl core::ops::Deref for DEVICE_CLASS_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

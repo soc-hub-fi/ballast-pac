@@ -35,7 +35,7 @@ impl From<crate::W<D_DILATION_EXT_SPEC>> for W {
     }
 }
 #[doc = "Field `X_DILATION_EXT` reader - "]
-pub struct X_DILATION_EXT_R(crate::FieldReader<u8, u8>);
+pub struct X_DILATION_EXT_R(crate::FieldReader<u8>);
 impl X_DILATION_EXT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl X_DILATION_EXT_R {
     }
 }
 impl core::ops::Deref for X_DILATION_EXT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> X_DILATION_EXT_W<'a> {
     }
 }
 #[doc = "Field `Y_DILATION_EXT` reader - "]
-pub struct Y_DILATION_EXT_R(crate::FieldReader<u8, u8>);
+pub struct Y_DILATION_EXT_R(crate::FieldReader<u8>);
 impl Y_DILATION_EXT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl Y_DILATION_EXT_R {
     }
 }
 impl core::ops::Deref for Y_DILATION_EXT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

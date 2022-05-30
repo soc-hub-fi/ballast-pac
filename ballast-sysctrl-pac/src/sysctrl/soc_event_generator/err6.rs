@@ -15,7 +15,7 @@ impl From<crate::R<ERR6_SPEC>> for R {
 }
 #[doc = "Field `ERR6` reader - Event queue overflow. Clear after read. Reading 0b1 at ERR\\[i\\]
 means the event queue of event with id i overflowed."]
-pub struct ERR6_R(crate::FieldReader<u32, u32>);
+pub struct ERR6_R(crate::FieldReader<u32>);
 impl ERR6_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -23,7 +23,7 @@ impl ERR6_R {
     }
 }
 impl core::ops::Deref for ERR6_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

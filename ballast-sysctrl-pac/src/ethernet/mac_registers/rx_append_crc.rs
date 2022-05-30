@@ -35,7 +35,7 @@ impl From<crate::W<RX_APPEND_CRC_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_APPEND_CRC` reader - In some condition, the user application need MAC to retain FCS of ethernet frame. When RX_APPEND_CRC signal is equal “1” , the FCS of ethernet frame will transmit to user application."]
-pub struct RX_APPEND_CRC_R(crate::FieldReader<bool, bool>);
+pub struct RX_APPEND_CRC_R(crate::FieldReader<bool>);
 impl RX_APPEND_CRC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RX_APPEND_CRC_R {
     }
 }
 impl core::ops::Deref for RX_APPEND_CRC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

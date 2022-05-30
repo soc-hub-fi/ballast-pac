@@ -35,7 +35,7 @@ impl From<crate::W<T1_TH_CHANNEL2_SPEC>> for W {
     }
 }
 #[doc = "Field `TH` reader - ADV_TIMER2 channel 1 threshold configuration bitfield"]
-pub struct TH_R(crate::FieldReader<u16, u16>);
+pub struct TH_R(crate::FieldReader<u16>);
 impl TH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl TH_R {
     }
 }
 impl core::ops::Deref for TH_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -87,7 +87,7 @@ impl From<MODE_A> for u8 {
     }
 }
 #[doc = "Field `MODE` reader - ADV_TIMER2 channel 1 threshold match action on channel output signal configuration bitfield: - 3'h0: set. - 3'h1: toggle then next threshold match action is clear. - 3'h2: set then next threshold match action is clear. - 3'h3: toggle. - 3'h4: clear. - 3'h5: toggle then next threshold match action is set. - 3'h6: clear then next threshold match action is set."]
-pub struct MODE_R(crate::FieldReader<u8, MODE_A>);
+pub struct MODE_R(crate::FieldReader<u8>);
 impl MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -144,7 +144,7 @@ impl MODE_R {
     }
 }
 impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<u8, MODE_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

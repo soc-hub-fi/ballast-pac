@@ -35,7 +35,7 @@ impl From<crate::W<STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `EOT` reader - "]
-pub struct EOT_R(crate::FieldReader<bool, bool>);
+pub struct EOT_R(crate::FieldReader<bool>);
 impl EOT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl EOT_R {
     }
 }
 impl core::ops::Deref for EOT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> EOT_W<'a> {
     }
 }
 #[doc = "Field `ERR` reader - "]
-pub struct ERR_R(crate::FieldReader<bool, bool>);
+pub struct ERR_R(crate::FieldReader<bool>);
 impl ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ERR_R {
     }
 }
 impl core::ops::Deref for ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ERR_W<'a> {
     }
 }
 #[doc = "Field `CARD_ERR` reader - "]
-pub struct CARD_ERR_R(crate::FieldReader<u16, u16>);
+pub struct CARD_ERR_R(crate::FieldReader<u16>);
 impl CARD_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -117,7 +117,7 @@ impl CARD_ERR_R {
     }
 }
 impl core::ops::Deref for CARD_ERR_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> CARD_ERR_W<'a> {
     }
 }
 #[doc = "Field `VHS` reader - Note: Is reset value correct?"]
-pub struct VHS_R(crate::FieldReader<u8, u8>);
+pub struct VHS_R(crate::FieldReader<u8>);
 impl VHS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -144,7 +144,7 @@ impl VHS_R {
     }
 }
 impl core::ops::Deref for VHS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> VHS_W<'a> {
     }
 }
 #[doc = "Field `Status` reader - "]
-pub struct STATUS_R(crate::FieldReader<u16, u16>);
+pub struct STATUS_R(crate::FieldReader<u16>);
 impl STATUS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -171,7 +171,7 @@ impl STATUS_R {
     }
 }
 impl core::ops::Deref for STATUS_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<FULLDUPLEX_SPEC>> for W {
     }
 }
 #[doc = "Field `FullDuplex` reader - This config register is only used in 100Mbps and 10Mbps. When FullDuplex register is equal to “1” , the transmit state machine will be FullDuplex mode. Otherwise, the transmit state machine will detect collision ,perform random slot time back off , retransmit collision packet and some other half-duplex operations."]
-pub struct FULLDUPLEX_R(crate::FieldReader<bool, bool>);
+pub struct FULLDUPLEX_R(crate::FieldReader<bool>);
 impl FULLDUPLEX_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl FULLDUPLEX_R {
     }
 }
 impl core::ops::Deref for FULLDUPLEX_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

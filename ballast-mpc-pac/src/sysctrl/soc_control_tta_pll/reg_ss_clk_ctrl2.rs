@@ -35,7 +35,7 @@ impl From<crate::W<REG_SS_CLK_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `MPC_CLK_CTRL` reader - "]
-pub struct MPC_CLK_CTRL_R(crate::FieldReader<u8, u8>);
+pub struct MPC_CLK_CTRL_R(crate::FieldReader<u8>);
 impl MPC_CLK_CTRL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl MPC_CLK_CTRL_R {
     }
 }
 impl core::ops::Deref for MPC_CLK_CTRL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> MPC_CLK_CTRL_W<'a> {
     }
 }
 #[doc = "Field `ICN_CLK_CTRL` reader - "]
-pub struct ICN_CLK_CTRL_R(crate::FieldReader<u8, u8>);
+pub struct ICN_CLK_CTRL_R(crate::FieldReader<u8>);
 impl ICN_CLK_CTRL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl ICN_CLK_CTRL_R {
     }
 }
 impl core::ops::Deref for ICN_CLK_CTRL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> ICN_CLK_CTRL_W<'a> {
     }
 }
 #[doc = "Field `C2C_CLK_CTRL` reader - "]
-pub struct C2C_CLK_CTRL_R(crate::FieldReader<u8, u8>);
+pub struct C2C_CLK_CTRL_R(crate::FieldReader<u8>);
 impl C2C_CLK_CTRL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl C2C_CLK_CTRL_R {
     }
 }
 impl core::ops::Deref for C2C_CLK_CTRL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

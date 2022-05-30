@@ -35,7 +35,7 @@ impl From<crate::W<CG_SPEC>> for W {
     }
 }
 #[doc = "Field `ENA` reader - ADV_TIMER clock gating configuration bitfield. - ENA\\[i\\]=0: clock gate ADV_TIMERi. - ENA\\[i\\]=1: enable ADV_TIMERi."]
-pub struct ENA_R(crate::FieldReader<u16, u16>);
+pub struct ENA_R(crate::FieldReader<u16>);
 impl ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl ENA_R {
     }
 }
 impl core::ops::Deref for ENA_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

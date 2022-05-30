@@ -35,7 +35,7 @@ impl From<crate::W<BOOT_ADR_SPEC>> for W {
     }
 }
 #[doc = "Field `BOOT_ADR` reader - Note! Reset value"]
-pub struct BOOT_ADR_R(crate::FieldReader<u32, u32>);
+pub struct BOOT_ADR_R(crate::FieldReader<u32>);
 impl BOOT_ADR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl BOOT_ADR_R {
     }
 }
 impl core::ops::Deref for BOOT_ADR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

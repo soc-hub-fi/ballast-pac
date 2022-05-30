@@ -28,7 +28,7 @@ impl From<DATAIN_FORMAT_A> for bool {
     }
 }
 #[doc = "Field `DATAIN_FORMAT` reader - "]
-pub struct DATAIN_FORMAT_R(crate::FieldReader<bool, DATAIN_FORMAT_A>);
+pub struct DATAIN_FORMAT_R(crate::FieldReader<bool>);
 impl DATAIN_FORMAT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -54,7 +54,7 @@ impl DATAIN_FORMAT_R {
     }
 }
 impl core::ops::Deref for DATAIN_FORMAT_R {
-    type Target = crate::FieldReader<bool, DATAIN_FORMAT_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

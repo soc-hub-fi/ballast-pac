@@ -35,7 +35,7 @@ impl From<crate::W<CAM_RX_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_SIZE` reader - Buffer size in bytes. (128kBytes maximum) - Read: buffer size left - Write: set buffer size NOTE: Careful with size in byte. If you use uncompressed pixel data mapped on 16 bits, you have to declare buffer size in bytes even if buffer type is short."]
-pub struct RX_SIZE_R(crate::FieldReader<u32, u32>);
+pub struct RX_SIZE_R(crate::FieldReader<u32>);
 impl RX_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl RX_SIZE_R {
     }
 }
 impl core::ops::Deref for RX_SIZE_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<D_WGS_ADDR_LOW_SPEC>> for W {
     }
 }
 #[doc = "Field `WGS_ADDR_LOW` reader - "]
-pub struct WGS_ADDR_LOW_R(crate::FieldReader<u32, u32>);
+pub struct WGS_ADDR_LOW_R(crate::FieldReader<u32>);
 impl WGS_ADDR_LOW_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl WGS_ADDR_LOW_R {
     }
 }
 impl core::ops::Deref for WGS_ADDR_LOW_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -49,7 +49,7 @@ impl From<PRODUCER_A> for bool {
     }
 }
 #[doc = "Field `PRODUCER` reader - "]
-pub struct PRODUCER_R(crate::FieldReader<bool, PRODUCER_A>);
+pub struct PRODUCER_R(crate::FieldReader<bool>);
 impl PRODUCER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -75,7 +75,7 @@ impl PRODUCER_R {
     }
 }
 impl core::ops::Deref for PRODUCER_R {
-    type Target = crate::FieldReader<bool, PRODUCER_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -133,7 +133,7 @@ impl From<CONSUMER_A> for bool {
     }
 }
 #[doc = "Field `CONSUMER` reader - "]
-pub struct CONSUMER_R(crate::FieldReader<bool, CONSUMER_A>);
+pub struct CONSUMER_R(crate::FieldReader<bool>);
 impl CONSUMER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -159,7 +159,7 @@ impl CONSUMER_R {
     }
 }
 impl core::ops::Deref for CONSUMER_R {
-    type Target = crate::FieldReader<bool, CONSUMER_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

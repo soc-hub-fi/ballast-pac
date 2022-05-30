@@ -35,7 +35,7 @@ impl From<crate::W<CLINT_ADDR_LENGTH_SPEC>> for W {
     }
 }
 #[doc = "Field `clint_addr_length` reader - "]
-pub struct CLINT_ADDR_LENGTH_R(crate::FieldReader<u64, u64>);
+pub struct CLINT_ADDR_LENGTH_R(crate::FieldReader<u64>);
 impl CLINT_ADDR_LENGTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u64) -> Self {
@@ -43,7 +43,7 @@ impl CLINT_ADDR_LENGTH_R {
     }
 }
 impl core::ops::Deref for CLINT_ADDR_LENGTH_R {
-    type Target = crate::FieldReader<u64, u64>;
+    type Target = crate::FieldReader<u64>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

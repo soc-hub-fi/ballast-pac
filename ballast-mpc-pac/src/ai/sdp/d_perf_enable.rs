@@ -28,7 +28,7 @@ impl From<PERF_DMA_EN_A> for bool {
     }
 }
 #[doc = "Field `PERF_DMA_EN` reader - "]
-pub struct PERF_DMA_EN_R(crate::FieldReader<bool, PERF_DMA_EN_A>);
+pub struct PERF_DMA_EN_R(crate::FieldReader<bool>);
 impl PERF_DMA_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -54,7 +54,7 @@ impl PERF_DMA_EN_R {
     }
 }
 impl core::ops::Deref for PERF_DMA_EN_R {
-    type Target = crate::FieldReader<bool, PERF_DMA_EN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -75,7 +75,7 @@ impl From<PERF_LUT_EN_A> for bool {
     }
 }
 #[doc = "Field `PERF_LUT_EN` reader - "]
-pub struct PERF_LUT_EN_R(crate::FieldReader<bool, PERF_LUT_EN_A>);
+pub struct PERF_LUT_EN_R(crate::FieldReader<bool>);
 impl PERF_LUT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -101,7 +101,7 @@ impl PERF_LUT_EN_R {
     }
 }
 impl core::ops::Deref for PERF_LUT_EN_R {
-    type Target = crate::FieldReader<bool, PERF_LUT_EN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -122,7 +122,7 @@ impl From<PERF_SAT_EN_A> for bool {
     }
 }
 #[doc = "Field `PERF_SAT_EN` reader - "]
-pub struct PERF_SAT_EN_R(crate::FieldReader<bool, PERF_SAT_EN_A>);
+pub struct PERF_SAT_EN_R(crate::FieldReader<bool>);
 impl PERF_SAT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -148,7 +148,7 @@ impl PERF_SAT_EN_R {
     }
 }
 impl core::ops::Deref for PERF_SAT_EN_R {
-    type Target = crate::FieldReader<bool, PERF_SAT_EN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -169,7 +169,7 @@ impl From<PERF_NAN_INF_COUNT_EN_A> for bool {
     }
 }
 #[doc = "Field `PERF_NAN_INF_COUNT_EN` reader - "]
-pub struct PERF_NAN_INF_COUNT_EN_R(crate::FieldReader<bool, PERF_NAN_INF_COUNT_EN_A>);
+pub struct PERF_NAN_INF_COUNT_EN_R(crate::FieldReader<bool>);
 impl PERF_NAN_INF_COUNT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -195,7 +195,7 @@ impl PERF_NAN_INF_COUNT_EN_R {
     }
 }
 impl core::ops::Deref for PERF_NAN_INF_COUNT_EN_R {
-    type Target = crate::FieldReader<bool, PERF_NAN_INF_COUNT_EN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

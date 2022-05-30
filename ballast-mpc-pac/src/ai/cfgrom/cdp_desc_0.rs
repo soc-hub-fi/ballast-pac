@@ -14,7 +14,7 @@ impl From<crate::R<CDP_DESC_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CDP_DESC` reader - "]
-pub struct CDP_DESC_R(crate::FieldReader<u32, u32>);
+pub struct CDP_DESC_R(crate::FieldReader<u32>);
 impl CDP_DESC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl CDP_DESC_R {
     }
 }
 impl core::ops::Deref for CDP_DESC_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

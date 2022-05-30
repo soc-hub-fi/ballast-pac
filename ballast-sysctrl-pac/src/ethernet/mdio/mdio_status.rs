@@ -14,7 +14,7 @@ impl From<crate::R<MDIO_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `MDIO_Status` reader - "]
-pub struct MDIO_STATUS_R(crate::FieldReader<bool, bool>);
+pub struct MDIO_STATUS_R(crate::FieldReader<bool>);
 impl MDIO_STATUS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,7 +22,7 @@ impl MDIO_STATUS_R {
     }
 }
 impl core::ops::Deref for MDIO_STATUS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

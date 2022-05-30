@@ -49,7 +49,7 @@ impl From<LUT_LE_FUNCTION_A> for bool {
     }
 }
 #[doc = "Field `LUT_LE_FUNCTION` reader - "]
-pub struct LUT_LE_FUNCTION_R(crate::FieldReader<bool, LUT_LE_FUNCTION_A>);
+pub struct LUT_LE_FUNCTION_R(crate::FieldReader<bool>);
 impl LUT_LE_FUNCTION_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -75,7 +75,7 @@ impl LUT_LE_FUNCTION_R {
     }
 }
 impl core::ops::Deref for LUT_LE_FUNCTION_R {
-    type Target = crate::FieldReader<bool, LUT_LE_FUNCTION_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -133,7 +133,7 @@ impl From<LUT_UFLOW_PRIORITY_A> for bool {
     }
 }
 #[doc = "Field `LUT_UFLOW_PRIORITY` reader - "]
-pub struct LUT_UFLOW_PRIORITY_R(crate::FieldReader<bool, LUT_UFLOW_PRIORITY_A>);
+pub struct LUT_UFLOW_PRIORITY_R(crate::FieldReader<bool>);
 impl LUT_UFLOW_PRIORITY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -159,7 +159,7 @@ impl LUT_UFLOW_PRIORITY_R {
     }
 }
 impl core::ops::Deref for LUT_UFLOW_PRIORITY_R {
-    type Target = crate::FieldReader<bool, LUT_UFLOW_PRIORITY_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -217,7 +217,7 @@ impl From<LUT_OFLOW_PRIORITY_A> for bool {
     }
 }
 #[doc = "Field `LUT_OFLOW_PRIORITY` reader - "]
-pub struct LUT_OFLOW_PRIORITY_R(crate::FieldReader<bool, LUT_OFLOW_PRIORITY_A>);
+pub struct LUT_OFLOW_PRIORITY_R(crate::FieldReader<bool>);
 impl LUT_OFLOW_PRIORITY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -243,7 +243,7 @@ impl LUT_OFLOW_PRIORITY_R {
     }
 }
 impl core::ops::Deref for LUT_OFLOW_PRIORITY_R {
-    type Target = crate::FieldReader<bool, LUT_OFLOW_PRIORITY_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -301,7 +301,7 @@ impl From<LUT_HYBRID_PRIORITY_A> for bool {
     }
 }
 #[doc = "Field `LUT_HYBRID_PRIORITY` reader - "]
-pub struct LUT_HYBRID_PRIORITY_R(crate::FieldReader<bool, LUT_HYBRID_PRIORITY_A>);
+pub struct LUT_HYBRID_PRIORITY_R(crate::FieldReader<bool>);
 impl LUT_HYBRID_PRIORITY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -327,7 +327,7 @@ impl LUT_HYBRID_PRIORITY_R {
     }
 }
 impl core::ops::Deref for LUT_HYBRID_PRIORITY_R {
-    type Target = crate::FieldReader<bool, LUT_HYBRID_PRIORITY_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

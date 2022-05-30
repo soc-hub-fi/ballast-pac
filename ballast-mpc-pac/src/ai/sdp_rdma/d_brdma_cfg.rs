@@ -28,7 +28,7 @@ impl From<BRDMA_DISABLE_A> for bool {
     }
 }
 #[doc = "Field `BRDMA_DISABLE` reader - "]
-pub struct BRDMA_DISABLE_R(crate::FieldReader<bool, BRDMA_DISABLE_A>);
+pub struct BRDMA_DISABLE_R(crate::FieldReader<bool>);
 impl BRDMA_DISABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -54,7 +54,7 @@ impl BRDMA_DISABLE_R {
     }
 }
 impl core::ops::Deref for BRDMA_DISABLE_R {
-    type Target = crate::FieldReader<bool, BRDMA_DISABLE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -78,7 +78,7 @@ impl From<BRDMA_DATA_USE_A> for u8 {
     }
 }
 #[doc = "Field `BRDMA_DATA_USE` reader - "]
-pub struct BRDMA_DATA_USE_R(crate::FieldReader<u8, BRDMA_DATA_USE_A>);
+pub struct BRDMA_DATA_USE_R(crate::FieldReader<u8>);
 impl BRDMA_DATA_USE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -111,7 +111,7 @@ impl BRDMA_DATA_USE_R {
     }
 }
 impl core::ops::Deref for BRDMA_DATA_USE_R {
-    type Target = crate::FieldReader<u8, BRDMA_DATA_USE_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -132,7 +132,7 @@ impl From<BRDMA_DATA_SIZE_A> for bool {
     }
 }
 #[doc = "Field `BRDMA_DATA_SIZE` reader - "]
-pub struct BRDMA_DATA_SIZE_R(crate::FieldReader<bool, BRDMA_DATA_SIZE_A>);
+pub struct BRDMA_DATA_SIZE_R(crate::FieldReader<bool>);
 impl BRDMA_DATA_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -158,7 +158,7 @@ impl BRDMA_DATA_SIZE_R {
     }
 }
 impl core::ops::Deref for BRDMA_DATA_SIZE_R {
-    type Target = crate::FieldReader<bool, BRDMA_DATA_SIZE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -179,7 +179,7 @@ impl From<BRDMA_DATA_MODE_A> for bool {
     }
 }
 #[doc = "Field `BRDMA_DATA_MODE` reader - "]
-pub struct BRDMA_DATA_MODE_R(crate::FieldReader<bool, BRDMA_DATA_MODE_A>);
+pub struct BRDMA_DATA_MODE_R(crate::FieldReader<bool>);
 impl BRDMA_DATA_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -205,7 +205,7 @@ impl BRDMA_DATA_MODE_R {
     }
 }
 impl core::ops::Deref for BRDMA_DATA_MODE_R {
-    type Target = crate::FieldReader<bool, BRDMA_DATA_MODE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -226,7 +226,7 @@ impl From<BRDMA_RAM_TYPE_A> for bool {
     }
 }
 #[doc = "Field `BRDMA_RAM_TYPE` reader - "]
-pub struct BRDMA_RAM_TYPE_R(crate::FieldReader<bool, BRDMA_RAM_TYPE_A>);
+pub struct BRDMA_RAM_TYPE_R(crate::FieldReader<bool>);
 impl BRDMA_RAM_TYPE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -252,7 +252,7 @@ impl BRDMA_RAM_TYPE_R {
     }
 }
 impl core::ops::Deref for BRDMA_RAM_TYPE_R {
-    type Target = crate::FieldReader<bool, BRDMA_RAM_TYPE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

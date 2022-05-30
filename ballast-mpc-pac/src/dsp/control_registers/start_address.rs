@@ -35,7 +35,7 @@ impl From<crate::W<START_ADDRESS_SPEC>> for W {
     }
 }
 #[doc = "Field `start_address` reader - star"]
-pub struct START_ADDRESS_R(crate::FieldReader<u32, u32>);
+pub struct START_ADDRESS_R(crate::FieldReader<u32>);
 impl START_ADDRESS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl START_ADDRESS_R {
     }
 }
 impl core::ops::Deref for START_ADDRESS_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<IFGSET_SPEC>> for W {
     }
 }
 #[doc = "Field `IFGset` reader - RX_IFG_SET is used to set received frame gap. If the gap between two received packets is less than RX_IFG_SET,the second packet will be drop as an invalid frame."]
-pub struct IFGSET_R(crate::FieldReader<u8, u8>);
+pub struct IFGSET_R(crate::FieldReader<u8>);
 impl IFGSET_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl IFGSET_R {
     }
 }
 impl core::ops::Deref for IFGSET_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

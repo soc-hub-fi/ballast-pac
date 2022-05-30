@@ -14,7 +14,7 @@ impl From<crate::R<D_DP_EW_ALU_CVT_SCALE_VALUE_SPEC>> for R {
     }
 }
 #[doc = "Field `EW_ALU_CVT_SCALE` reader - "]
-pub struct EW_ALU_CVT_SCALE_R(crate::FieldReader<u16, u16>);
+pub struct EW_ALU_CVT_SCALE_R(crate::FieldReader<u16>);
 impl EW_ALU_CVT_SCALE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,7 +22,7 @@ impl EW_ALU_CVT_SCALE_R {
     }
 }
 impl core::ops::Deref for EW_ALU_CVT_SCALE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

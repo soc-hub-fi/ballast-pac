@@ -35,7 +35,7 @@ impl From<crate::W<PAD_CFG_7_SPEC>> for W {
     }
 }
 #[doc = "Field `pad_cfg_28` reader - "]
-pub struct PAD_CFG_28_R(crate::FieldReader<u8, u8>);
+pub struct PAD_CFG_28_R(crate::FieldReader<u8>);
 impl PAD_CFG_28_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PAD_CFG_28_R {
     }
 }
 impl core::ops::Deref for PAD_CFG_28_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PAD_CFG_28_W<'a> {
     }
 }
 #[doc = "Field `pad_cfg_29` reader - "]
-pub struct PAD_CFG_29_R(crate::FieldReader<u8, u8>);
+pub struct PAD_CFG_29_R(crate::FieldReader<u8>);
 impl PAD_CFG_29_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl PAD_CFG_29_R {
     }
 }
 impl core::ops::Deref for PAD_CFG_29_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> PAD_CFG_29_W<'a> {
     }
 }
 #[doc = "Field `pad_cfg_30` reader - "]
-pub struct PAD_CFG_30_R(crate::FieldReader<u8, u8>);
+pub struct PAD_CFG_30_R(crate::FieldReader<u8>);
 impl PAD_CFG_30_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl PAD_CFG_30_R {
     }
 }
 impl core::ops::Deref for PAD_CFG_30_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> PAD_CFG_30_W<'a> {
     }
 }
 #[doc = "Field `pad_cfg_31` reader - "]
-pub struct PAD_CFG_31_R(crate::FieldReader<u8, u8>);
+pub struct PAD_CFG_31_R(crate::FieldReader<u8>);
 impl PAD_CFG_31_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl PAD_CFG_31_R {
     }
 }
 impl core::ops::Deref for PAD_CFG_31_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

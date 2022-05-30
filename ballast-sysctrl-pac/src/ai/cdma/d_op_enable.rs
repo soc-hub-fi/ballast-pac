@@ -49,7 +49,7 @@ impl From<OP_EN_A> for bool {
     }
 }
 #[doc = "Field `OP_EN` reader - "]
-pub struct OP_EN_R(crate::FieldReader<bool, OP_EN_A>);
+pub struct OP_EN_R(crate::FieldReader<bool>);
 impl OP_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -75,7 +75,7 @@ impl OP_EN_R {
     }
 }
 impl core::ops::Deref for OP_EN_R {
-    type Target = crate::FieldReader<bool, OP_EN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

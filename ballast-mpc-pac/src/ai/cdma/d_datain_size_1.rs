@@ -14,7 +14,7 @@ impl From<crate::R<D_DATAIN_SIZE_1_SPEC>> for R {
     }
 }
 #[doc = "Field `DATAIN_CHANNEL` reader - "]
-pub struct DATAIN_CHANNEL_R(crate::FieldReader<u16, u16>);
+pub struct DATAIN_CHANNEL_R(crate::FieldReader<u16>);
 impl DATAIN_CHANNEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,7 +22,7 @@ impl DATAIN_CHANNEL_R {
     }
 }
 impl core::ops::Deref for DATAIN_CHANNEL_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

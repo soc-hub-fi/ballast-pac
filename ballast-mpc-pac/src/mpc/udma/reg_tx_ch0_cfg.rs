@@ -52,7 +52,7 @@ impl From<SIZE_A> for u8 {
     }
 }
 #[doc = "Field `SIZE` reader - Data transfer format: - 2'b00: 8-bit - 2'b01:16-bit - 2;b10:32-bit"]
-pub struct SIZE_R(crate::FieldReader<u8, SIZE_A>);
+pub struct SIZE_R(crate::FieldReader<u8>);
 impl SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -85,7 +85,7 @@ impl SIZE_R {
     }
 }
 impl core::ops::Deref for SIZE_R {
-    type Target = crate::FieldReader<u8, SIZE_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl From<MODE_A> for u8 {
     }
 }
 #[doc = "Field `MODE` reader - Data transfer mode: - 2'b00: Linear - 2'b01: Sliding - 2;b10:Circular - 2;b11:2D"]
-pub struct MODE_R(crate::FieldReader<u8, MODE_A>);
+pub struct MODE_R(crate::FieldReader<u8>);
 impl MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -182,7 +182,7 @@ impl MODE_R {
     }
 }
 impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<u8, MODE_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

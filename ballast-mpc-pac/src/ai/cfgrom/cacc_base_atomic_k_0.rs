@@ -14,7 +14,7 @@ impl From<crate::R<CACC_BASE_ATOMIC_K_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CACC_BASE_ATOMIC_K` reader - "]
-pub struct CACC_BASE_ATOMIC_K_R(crate::FieldReader<u32, u32>);
+pub struct CACC_BASE_ATOMIC_K_R(crate::FieldReader<u32>);
 impl CACC_BASE_ATOMIC_K_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl CACC_BASE_ATOMIC_K_R {
     }
 }
 impl core::ops::Deref for CACC_BASE_ATOMIC_K_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

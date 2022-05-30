@@ -49,7 +49,7 @@ impl From<WEIGHT_FORMAT_A> for bool {
     }
 }
 #[doc = "Field `WEIGHT_FORMAT` reader - "]
-pub struct WEIGHT_FORMAT_R(crate::FieldReader<bool, WEIGHT_FORMAT_A>);
+pub struct WEIGHT_FORMAT_R(crate::FieldReader<bool>);
 impl WEIGHT_FORMAT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -75,7 +75,7 @@ impl WEIGHT_FORMAT_R {
     }
 }
 impl core::ops::Deref for WEIGHT_FORMAT_R {
-    type Target = crate::FieldReader<bool, WEIGHT_FORMAT_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

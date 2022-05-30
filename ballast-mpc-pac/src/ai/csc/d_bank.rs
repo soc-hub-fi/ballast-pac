@@ -14,7 +14,7 @@ impl From<crate::R<D_BANK_SPEC>> for R {
     }
 }
 #[doc = "Field `DATA_BANK` reader - "]
-pub struct DATA_BANK_R(crate::FieldReader<u8, u8>);
+pub struct DATA_BANK_R(crate::FieldReader<u8>);
 impl DATA_BANK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,14 +22,14 @@ impl DATA_BANK_R {
     }
 }
 impl core::ops::Deref for DATA_BANK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `WEIGHT_BANK` reader - "]
-pub struct WEIGHT_BANK_R(crate::FieldReader<u8, u8>);
+pub struct WEIGHT_BANK_R(crate::FieldReader<u8>);
 impl WEIGHT_BANK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,7 +37,7 @@ impl WEIGHT_BANK_R {
     }
 }
 impl core::ops::Deref for WEIGHT_BANK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

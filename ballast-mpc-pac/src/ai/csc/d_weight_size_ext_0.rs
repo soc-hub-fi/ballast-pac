@@ -14,7 +14,7 @@ impl From<crate::R<D_WEIGHT_SIZE_EXT_0_SPEC>> for R {
     }
 }
 #[doc = "Field `WEIGHT_WIDTH_EXT` reader - "]
-pub struct WEIGHT_WIDTH_EXT_R(crate::FieldReader<u8, u8>);
+pub struct WEIGHT_WIDTH_EXT_R(crate::FieldReader<u8>);
 impl WEIGHT_WIDTH_EXT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,14 +22,14 @@ impl WEIGHT_WIDTH_EXT_R {
     }
 }
 impl core::ops::Deref for WEIGHT_WIDTH_EXT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `WEIGHT_HEIGHT_EXT` reader - "]
-pub struct WEIGHT_HEIGHT_EXT_R(crate::FieldReader<u8, u8>);
+pub struct WEIGHT_HEIGHT_EXT_R(crate::FieldReader<u8>);
 impl WEIGHT_HEIGHT_EXT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,7 +37,7 @@ impl WEIGHT_HEIGHT_EXT_R {
     }
 }
 impl core::ops::Deref for WEIGHT_HEIGHT_EXT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

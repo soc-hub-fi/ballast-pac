@@ -14,7 +14,7 @@ impl From<crate::R<CS_RO_SPEC>> for R {
     }
 }
 #[doc = "Field `CS_RO` reader - "]
-pub struct CS_RO_R(crate::FieldReader<u32, u32>);
+pub struct CS_RO_R(crate::FieldReader<u32>);
 impl CS_RO_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl CS_RO_R {
     }
 }
 impl core::ops::Deref for CS_RO_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

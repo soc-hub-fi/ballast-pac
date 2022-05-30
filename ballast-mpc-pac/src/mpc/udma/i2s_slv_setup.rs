@@ -35,7 +35,7 @@ impl From<crate::W<I2S_SLV_SETUP_SPEC>> for W {
     }
 }
 #[doc = "Field `SLAVE_WORDS` reader - Sets how many words for each I2S phase"]
-pub struct SLAVE_WORDS_R(crate::FieldReader<u8, u8>);
+pub struct SLAVE_WORDS_R(crate::FieldReader<u8>);
 impl SLAVE_WORDS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SLAVE_WORDS_R {
     }
 }
 impl core::ops::Deref for SLAVE_WORDS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SLAVE_WORDS_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_BITS` reader - Sets how many bits per word"]
-pub struct SLAVE_BITS_R(crate::FieldReader<u8, u8>);
+pub struct SLAVE_BITS_R(crate::FieldReader<u8>);
 impl SLAVE_BITS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl SLAVE_BITS_R {
     }
 }
 impl core::ops::Deref for SLAVE_BITS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> SLAVE_BITS_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_LSB` reader - Enables LSB shifting"]
-pub struct SLAVE_LSB_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_LSB_R(crate::FieldReader<bool>);
 impl SLAVE_LSB_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl SLAVE_LSB_R {
     }
 }
 impl core::ops::Deref for SLAVE_LSB_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> SLAVE_LSB_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_2CH` reader - Enables both channels"]
-pub struct SLAVE_2CH_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_2CH_R(crate::FieldReader<bool>);
 impl SLAVE_2CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl SLAVE_2CH_R {
     }
 }
 impl core::ops::Deref for SLAVE_2CH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> SLAVE_2CH_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_EN` reader - Enables the Slave"]
-pub struct SLAVE_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_EN_R(crate::FieldReader<bool>);
 impl SLAVE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl SLAVE_EN_R {
     }
 }
 impl core::ops::Deref for SLAVE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<RX_MIN_LENGTH_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_MIN_LENGTH` reader - The length of Received packet beyond minimal length and maximal length will be droped in receive Fifo. if the packet is already trasmitting in user interface , a error flag will enclosed at end of packet ."]
-pub struct RX_MIN_LENGTH_R(crate::FieldReader<u8, u8>);
+pub struct RX_MIN_LENGTH_R(crate::FieldReader<u8>);
 impl RX_MIN_LENGTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl RX_MIN_LENGTH_R {
     }
 }
 impl core::ops::Deref for RX_MIN_LENGTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

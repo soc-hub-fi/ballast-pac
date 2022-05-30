@@ -37,7 +37,7 @@ impl From<crate::W<PR_MASK2_SPEC>> for W {
 #[doc = "Field `PR_MASK2` reader - Event Mask to enable/disable event dispatch to peripherals. Setting bit\\[i\\]
 to 0b1 disables dispatching event to peripherals. Setting bit\\[i\\]
 to 0b0 enables dispatching event to peripherals."]
-pub struct PR_MASK2_R(crate::FieldReader<u32, u32>);
+pub struct PR_MASK2_R(crate::FieldReader<u32>);
 impl PR_MASK2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -45,7 +45,7 @@ impl PR_MASK2_R {
     }
 }
 impl core::ops::Deref for PR_MASK2_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

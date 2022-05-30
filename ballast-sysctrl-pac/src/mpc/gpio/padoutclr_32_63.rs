@@ -35,7 +35,7 @@ impl From<crate::W<PADOUTCLR_32_63_SPEC>> for W {
     }
 }
 #[doc = "Field `PADOUTCLR` reader - "]
-pub struct PADOUTCLR_R(crate::FieldReader<u32, u32>);
+pub struct PADOUTCLR_R(crate::FieldReader<u32>);
 impl PADOUTCLR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl PADOUTCLR_R {
     }
 }
 impl core::ops::Deref for PADOUTCLR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<D_PIXEL_OFFSET_SPEC>> for W {
     }
 }
 #[doc = "Field `PIXEL_X_OFFSET` reader - "]
-pub struct PIXEL_X_OFFSET_R(crate::FieldReader<u8, u8>);
+pub struct PIXEL_X_OFFSET_R(crate::FieldReader<u8>);
 impl PIXEL_X_OFFSET_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PIXEL_X_OFFSET_R {
     }
 }
 impl core::ops::Deref for PIXEL_X_OFFSET_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PIXEL_X_OFFSET_W<'a> {
     }
 }
 #[doc = "Field `PIXEL_Y_OFFSET` reader - "]
-pub struct PIXEL_Y_OFFSET_R(crate::FieldReader<u8, u8>);
+pub struct PIXEL_Y_OFFSET_R(crate::FieldReader<u8>);
 impl PIXEL_Y_OFFSET_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl PIXEL_Y_OFFSET_R {
     }
 }
 impl core::ops::Deref for PIXEL_Y_OFFSET_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

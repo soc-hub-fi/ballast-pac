@@ -35,7 +35,7 @@ impl From<crate::W<ACK_READ_SPEC>> for W {
     }
 }
 #[doc = "Field `ACK_read` reader - "]
-pub struct ACK_READ_R(crate::FieldReader<u32, u32>);
+pub struct ACK_READ_R(crate::FieldReader<u32>);
 impl ACK_READ_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl ACK_READ_R {
     }
 }
 impl core::ops::Deref for ACK_READ_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

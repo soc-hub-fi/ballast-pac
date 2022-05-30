@@ -35,7 +35,7 @@ impl From<crate::W<MAC_RX_ADD_PROM_DATA_SPEC>> for W {
     }
 }
 #[doc = "Field `MAC_rx_add_prom_data` reader - "]
-pub struct MAC_RX_ADD_PROM_DATA_R(crate::FieldReader<u8, u8>);
+pub struct MAC_RX_ADD_PROM_DATA_R(crate::FieldReader<u8>);
 impl MAC_RX_ADD_PROM_DATA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl MAC_RX_ADD_PROM_DATA_R {
     }
 }
 impl core::ops::Deref for MAC_RX_ADD_PROM_DATA_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

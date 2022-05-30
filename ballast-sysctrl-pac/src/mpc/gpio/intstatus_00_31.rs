@@ -14,7 +14,7 @@ impl From<crate::R<INTSTATUS_00_31_SPEC>> for R {
     }
 }
 #[doc = "Field `INTSTATUS` reader - "]
-pub struct INTSTATUS_R(crate::FieldReader<u32, u32>);
+pub struct INTSTATUS_R(crate::FieldReader<u32>);
 impl INTSTATUS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl INTSTATUS_R {
     }
 }
 impl core::ops::Deref for INTSTATUS_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

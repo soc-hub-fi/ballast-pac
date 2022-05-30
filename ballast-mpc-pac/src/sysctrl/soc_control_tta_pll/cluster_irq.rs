@@ -35,7 +35,7 @@ impl From<crate::W<CLUSTER_IRQ_SPEC>> for W {
     }
 }
 #[doc = "Field `Cluster_IRQ` reader - "]
-pub struct CLUSTER_IRQ_R(crate::FieldReader<bool, bool>);
+pub struct CLUSTER_IRQ_R(crate::FieldReader<bool>);
 impl CLUSTER_IRQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CLUSTER_IRQ_R {
     }
 }
 impl core::ops::Deref for CLUSTER_IRQ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

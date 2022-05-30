@@ -35,7 +35,7 @@ impl From<crate::W<D_ZERO_PADDING_VALUE_SPEC>> for W {
     }
 }
 #[doc = "Field `PAD_VALUE` reader - "]
-pub struct PAD_VALUE_R(crate::FieldReader<u16, u16>);
+pub struct PAD_VALUE_R(crate::FieldReader<u16>);
 impl PAD_VALUE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl PAD_VALUE_R {
     }
 }
 impl core::ops::Deref for PAD_VALUE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

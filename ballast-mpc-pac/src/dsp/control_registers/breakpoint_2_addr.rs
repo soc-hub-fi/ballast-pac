@@ -35,7 +35,7 @@ impl From<crate::W<BREAKPOINT_2_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `breakpoint_2_addr` reader - "]
-pub struct BREAKPOINT_2_ADDR_R(crate::FieldReader<u32, u32>);
+pub struct BREAKPOINT_2_ADDR_R(crate::FieldReader<u32>);
 impl BREAKPOINT_2_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl BREAKPOINT_2_ADDR_R {
     }
 }
 impl core::ops::Deref for BREAKPOINT_2_ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

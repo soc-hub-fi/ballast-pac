@@ -35,7 +35,7 @@ impl From<crate::W<PRIORITY_THRESHOLD_CONTEXT_1_SPEC>> for W {
     }
 }
 #[doc = "Field `priority_threshold_context_0` reader - "]
-pub struct PRIORITY_THRESHOLD_CONTEXT_0_R(crate::FieldReader<u32, u32>);
+pub struct PRIORITY_THRESHOLD_CONTEXT_0_R(crate::FieldReader<u32>);
 impl PRIORITY_THRESHOLD_CONTEXT_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl PRIORITY_THRESHOLD_CONTEXT_0_R {
     }
 }
 impl core::ops::Deref for PRIORITY_THRESHOLD_CONTEXT_0_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

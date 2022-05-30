@@ -35,7 +35,7 @@ impl From<crate::W<REG_TTA_PLL_DIV_SPEC>> for W {
     }
 }
 #[doc = "Field `r_div` reader - "]
-pub struct R_DIV_R(crate::FieldReader<u8, u8>);
+pub struct R_DIV_R(crate::FieldReader<u8>);
 impl R_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl R_DIV_R {
     }
 }
 impl core::ops::Deref for R_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> R_DIV_W<'a> {
     }
 }
 #[doc = "Field `n_div` reader - "]
-pub struct N_DIV_R(crate::FieldReader<u16, u16>);
+pub struct N_DIV_R(crate::FieldReader<u16>);
 impl N_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl N_DIV_R {
     }
 }
 impl core::ops::Deref for N_DIV_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> N_DIV_W<'a> {
     }
 }
 #[doc = "Field `m_div` reader - "]
-pub struct M_DIV_R(crate::FieldReader<u8, u8>);
+pub struct M_DIV_R(crate::FieldReader<u8>);
 impl M_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl M_DIV_R {
     }
 }
 impl core::ops::Deref for M_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

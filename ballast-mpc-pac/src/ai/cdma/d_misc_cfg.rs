@@ -28,7 +28,7 @@ impl From<CONV_MODE_A> for bool {
     }
 }
 #[doc = "Field `CONV_MODE` reader - "]
-pub struct CONV_MODE_R(crate::FieldReader<bool, CONV_MODE_A>);
+pub struct CONV_MODE_R(crate::FieldReader<bool>);
 impl CONV_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -54,7 +54,7 @@ impl CONV_MODE_R {
     }
 }
 impl core::ops::Deref for CONV_MODE_R {
-    type Target = crate::FieldReader<bool, CONV_MODE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -78,7 +78,7 @@ impl From<IN_PRECISION_A> for u8 {
     }
 }
 #[doc = "Field `IN_PRECISION` reader - "]
-pub struct IN_PRECISION_R(crate::FieldReader<u8, IN_PRECISION_A>);
+pub struct IN_PRECISION_R(crate::FieldReader<u8>);
 impl IN_PRECISION_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -111,7 +111,7 @@ impl IN_PRECISION_R {
     }
 }
 impl core::ops::Deref for IN_PRECISION_R {
-    type Target = crate::FieldReader<u8, IN_PRECISION_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -135,7 +135,7 @@ impl From<PROC_PRECISION_A> for u8 {
     }
 }
 #[doc = "Field `PROC_PRECISION` reader - "]
-pub struct PROC_PRECISION_R(crate::FieldReader<u8, PROC_PRECISION_A>);
+pub struct PROC_PRECISION_R(crate::FieldReader<u8>);
 impl PROC_PRECISION_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -168,7 +168,7 @@ impl PROC_PRECISION_R {
     }
 }
 impl core::ops::Deref for PROC_PRECISION_R {
-    type Target = crate::FieldReader<u8, PROC_PRECISION_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -189,7 +189,7 @@ impl From<DATA_REUSE_A> for bool {
     }
 }
 #[doc = "Field `DATA_REUSE` reader - "]
-pub struct DATA_REUSE_R(crate::FieldReader<bool, DATA_REUSE_A>);
+pub struct DATA_REUSE_R(crate::FieldReader<bool>);
 impl DATA_REUSE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -215,7 +215,7 @@ impl DATA_REUSE_R {
     }
 }
 impl core::ops::Deref for DATA_REUSE_R {
-    type Target = crate::FieldReader<bool, DATA_REUSE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -236,7 +236,7 @@ impl From<WEIGHT_REUSE_A> for bool {
     }
 }
 #[doc = "Field `WEIGHT_REUSE` reader - "]
-pub struct WEIGHT_REUSE_R(crate::FieldReader<bool, WEIGHT_REUSE_A>);
+pub struct WEIGHT_REUSE_R(crate::FieldReader<bool>);
 impl WEIGHT_REUSE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -262,7 +262,7 @@ impl WEIGHT_REUSE_R {
     }
 }
 impl core::ops::Deref for WEIGHT_REUSE_R {
-    type Target = crate::FieldReader<bool, WEIGHT_REUSE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -283,7 +283,7 @@ impl From<SKIP_DATA_RLS_A> for bool {
     }
 }
 #[doc = "Field `SKIP_DATA_RLS` reader - "]
-pub struct SKIP_DATA_RLS_R(crate::FieldReader<bool, SKIP_DATA_RLS_A>);
+pub struct SKIP_DATA_RLS_R(crate::FieldReader<bool>);
 impl SKIP_DATA_RLS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -309,7 +309,7 @@ impl SKIP_DATA_RLS_R {
     }
 }
 impl core::ops::Deref for SKIP_DATA_RLS_R {
-    type Target = crate::FieldReader<bool, SKIP_DATA_RLS_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -330,7 +330,7 @@ impl From<SKIP_WEIGHT_RLS_A> for bool {
     }
 }
 #[doc = "Field `SKIP_WEIGHT_RLS` reader - "]
-pub struct SKIP_WEIGHT_RLS_R(crate::FieldReader<bool, SKIP_WEIGHT_RLS_A>);
+pub struct SKIP_WEIGHT_RLS_R(crate::FieldReader<bool>);
 impl SKIP_WEIGHT_RLS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -356,7 +356,7 @@ impl SKIP_WEIGHT_RLS_R {
     }
 }
 impl core::ops::Deref for SKIP_WEIGHT_RLS_R {
-    type Target = crate::FieldReader<bool, SKIP_WEIGHT_RLS_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

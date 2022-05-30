@@ -35,7 +35,7 @@ impl From<crate::W<I2S_RX_SADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_SADDR` reader - Configure pointer to memory buffer: - Read: value of the pointer until transfer is over. Else returns 0 - Write: set Address Pointer to memory buffer start address"]
-pub struct RX_SADDR_R(crate::FieldReader<u16, u16>);
+pub struct RX_SADDR_R(crate::FieldReader<u16>);
 impl RX_SADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl RX_SADDR_R {
     }
 }
 impl core::ops::Deref for RX_SADDR_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

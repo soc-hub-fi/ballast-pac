@@ -35,7 +35,7 @@ impl From<crate::W<D_DP_BN_ALU_SRC_VALUE_SPEC>> for W {
     }
 }
 #[doc = "Field `BN_ALU_OPERAND` reader - "]
-pub struct BN_ALU_OPERAND_R(crate::FieldReader<u16, u16>);
+pub struct BN_ALU_OPERAND_R(crate::FieldReader<u16>);
 impl BN_ALU_OPERAND_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl BN_ALU_OPERAND_R {
     }
 }
 impl core::ops::Deref for BN_ALU_OPERAND_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

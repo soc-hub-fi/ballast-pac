@@ -35,7 +35,7 @@ impl From<crate::W<T3_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `START` reader - ADV_TIMER3 start command bitfield"]
-pub struct START_R(crate::FieldReader<bool, bool>);
+pub struct START_R(crate::FieldReader<bool>);
 impl START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl START_R {
     }
 }
 impl core::ops::Deref for START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> START_W<'a> {
     }
 }
 #[doc = "Field `STOP` reader - ADV_TIMER3 stop command bitfield."]
-pub struct STOP_R(crate::FieldReader<bool, bool>);
+pub struct STOP_R(crate::FieldReader<bool>);
 impl STOP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl STOP_R {
     }
 }
 impl core::ops::Deref for STOP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> STOP_W<'a> {
     }
 }
 #[doc = "Field `UPDATE` reader - ADV_TIMER3 update command bitfield."]
-pub struct UPDATE_R(crate::FieldReader<bool, bool>);
+pub struct UPDATE_R(crate::FieldReader<bool>);
 impl UPDATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl UPDATE_R {
     }
 }
 impl core::ops::Deref for UPDATE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> UPDATE_W<'a> {
     }
 }
 #[doc = "Field `RESET` reader - ADV_TIMER3 reset command bitfield"]
-pub struct RESET_R(crate::FieldReader<bool, bool>);
+pub struct RESET_R(crate::FieldReader<bool>);
 impl RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl RESET_R {
     }
 }
 impl core::ops::Deref for RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> RESET_W<'a> {
     }
 }
 #[doc = "Field `ARM` reader - ADV_TIMER3 arm command bitfield."]
-pub struct ARM_R(crate::FieldReader<bool, bool>);
+pub struct ARM_R(crate::FieldReader<bool>);
 impl ARM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl ARM_R {
     }
 }
 impl core::ops::Deref for ARM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

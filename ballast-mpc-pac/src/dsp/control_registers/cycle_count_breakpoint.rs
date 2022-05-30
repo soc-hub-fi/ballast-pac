@@ -35,7 +35,7 @@ impl From<crate::W<CYCLE_COUNT_BREAKPOINT_SPEC>> for W {
     }
 }
 #[doc = "Field `cycle_count_breakpoint` reader - "]
-pub struct CYCLE_COUNT_BREAKPOINT_R(crate::FieldReader<u32, u32>);
+pub struct CYCLE_COUNT_BREAKPOINT_R(crate::FieldReader<u32>);
 impl CYCLE_COUNT_BREAKPOINT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl CYCLE_COUNT_BREAKPOINT_R {
     }
 }
 impl core::ops::Deref for CYCLE_COUNT_BREAKPOINT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

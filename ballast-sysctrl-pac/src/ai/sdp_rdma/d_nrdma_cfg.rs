@@ -49,7 +49,7 @@ impl From<NRDMA_DISABLE_A> for bool {
     }
 }
 #[doc = "Field `NRDMA_DISABLE` reader - "]
-pub struct NRDMA_DISABLE_R(crate::FieldReader<bool, NRDMA_DISABLE_A>);
+pub struct NRDMA_DISABLE_R(crate::FieldReader<bool>);
 impl NRDMA_DISABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -75,7 +75,7 @@ impl NRDMA_DISABLE_R {
     }
 }
 impl core::ops::Deref for NRDMA_DISABLE_R {
-    type Target = crate::FieldReader<bool, NRDMA_DISABLE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl From<NRDMA_DATA_USE_A> for u8 {
     }
 }
 #[doc = "Field `NRDMA_DATA_USE` reader - "]
-pub struct NRDMA_DATA_USE_R(crate::FieldReader<u8, NRDMA_DATA_USE_A>);
+pub struct NRDMA_DATA_USE_R(crate::FieldReader<u8>);
 impl NRDMA_DATA_USE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -169,7 +169,7 @@ impl NRDMA_DATA_USE_R {
     }
 }
 impl core::ops::Deref for NRDMA_DATA_USE_R {
-    type Target = crate::FieldReader<u8, NRDMA_DATA_USE_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -222,7 +222,7 @@ impl From<NRDMA_DATA_SIZE_A> for bool {
     }
 }
 #[doc = "Field `NRDMA_DATA_SIZE` reader - "]
-pub struct NRDMA_DATA_SIZE_R(crate::FieldReader<bool, NRDMA_DATA_SIZE_A>);
+pub struct NRDMA_DATA_SIZE_R(crate::FieldReader<bool>);
 impl NRDMA_DATA_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -248,7 +248,7 @@ impl NRDMA_DATA_SIZE_R {
     }
 }
 impl core::ops::Deref for NRDMA_DATA_SIZE_R {
-    type Target = crate::FieldReader<bool, NRDMA_DATA_SIZE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -306,7 +306,7 @@ impl From<NRDMA_DATA_MODE_A> for bool {
     }
 }
 #[doc = "Field `NRDMA_DATA_MODE` reader - "]
-pub struct NRDMA_DATA_MODE_R(crate::FieldReader<bool, NRDMA_DATA_MODE_A>);
+pub struct NRDMA_DATA_MODE_R(crate::FieldReader<bool>);
 impl NRDMA_DATA_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -332,7 +332,7 @@ impl NRDMA_DATA_MODE_R {
     }
 }
 impl core::ops::Deref for NRDMA_DATA_MODE_R {
-    type Target = crate::FieldReader<bool, NRDMA_DATA_MODE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -390,7 +390,7 @@ impl From<NRDMA_RAM_TYPE_A> for bool {
     }
 }
 #[doc = "Field `NRDMA_RAM_TYPE` reader - "]
-pub struct NRDMA_RAM_TYPE_R(crate::FieldReader<bool, NRDMA_RAM_TYPE_A>);
+pub struct NRDMA_RAM_TYPE_R(crate::FieldReader<bool>);
 impl NRDMA_RAM_TYPE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -416,7 +416,7 @@ impl NRDMA_RAM_TYPE_R {
     }
 }
 impl core::ops::Deref for NRDMA_RAM_TYPE_R {
-    type Target = crate::FieldReader<bool, NRDMA_RAM_TYPE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<PAUSE_FRAME_SEND_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `pause_frame_send_en` reader - pause_frame_send_en register is used to enable transmit logic to send PAUSE frame."]
-pub struct PAUSE_FRAME_SEND_EN_R(crate::FieldReader<bool, bool>);
+pub struct PAUSE_FRAME_SEND_EN_R(crate::FieldReader<bool>);
 impl PAUSE_FRAME_SEND_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PAUSE_FRAME_SEND_EN_R {
     }
 }
 impl core::ops::Deref for PAUSE_FRAME_SEND_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

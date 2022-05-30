@@ -35,7 +35,7 @@ impl From<crate::W<D_LINE_UV_STRIDE_SPEC>> for W {
     }
 }
 #[doc = "Field `UV_LINE_STRIDE` reader - "]
-pub struct UV_LINE_STRIDE_R(crate::FieldReader<u32, u32>);
+pub struct UV_LINE_STRIDE_R(crate::FieldReader<u32>);
 impl UV_LINE_STRIDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl UV_LINE_STRIDE_R {
     }
 }
 impl core::ops::Deref for UV_LINE_STRIDE_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

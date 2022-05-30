@@ -35,7 +35,7 @@ impl From<crate::W<BREAKPOINT_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `single_step_breakpoint_enable` reader - "]
-pub struct SINGLE_STEP_BREAKPOINT_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct SINGLE_STEP_BREAKPOINT_ENABLE_R(crate::FieldReader<bool>);
 impl SINGLE_STEP_BREAKPOINT_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SINGLE_STEP_BREAKPOINT_ENABLE_R {
     }
 }
 impl core::ops::Deref for SINGLE_STEP_BREAKPOINT_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SINGLE_STEP_BREAKPOINT_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `enable_breakpoint_1` reader - "]
-pub struct ENABLE_BREAKPOINT_1_R(crate::FieldReader<bool, bool>);
+pub struct ENABLE_BREAKPOINT_1_R(crate::FieldReader<bool>);
 impl ENABLE_BREAKPOINT_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ENABLE_BREAKPOINT_1_R {
     }
 }
 impl core::ops::Deref for ENABLE_BREAKPOINT_1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ENABLE_BREAKPOINT_1_W<'a> {
     }
 }
 #[doc = "Field `enable_breakpoint_2` reader - "]
-pub struct ENABLE_BREAKPOINT_2_R(crate::FieldReader<bool, bool>);
+pub struct ENABLE_BREAKPOINT_2_R(crate::FieldReader<bool>);
 impl ENABLE_BREAKPOINT_2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl ENABLE_BREAKPOINT_2_R {
     }
 }
 impl core::ops::Deref for ENABLE_BREAKPOINT_2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

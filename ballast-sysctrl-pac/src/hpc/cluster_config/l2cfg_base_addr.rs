@@ -35,7 +35,7 @@ impl From<crate::W<L2CFG_BASE_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `l2cfg_base_addr` reader - "]
-pub struct L2CFG_BASE_ADDR_R(crate::FieldReader<u64, u64>);
+pub struct L2CFG_BASE_ADDR_R(crate::FieldReader<u64>);
 impl L2CFG_BASE_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u64) -> Self {
@@ -43,7 +43,7 @@ impl L2CFG_BASE_ADDR_R {
     }
 }
 impl core::ops::Deref for L2CFG_BASE_ADDR_R {
-    type Target = crate::FieldReader<u64, u64>;
+    type Target = crate::FieldReader<u64>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

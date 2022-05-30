@@ -35,7 +35,7 @@ impl From<crate::W<PAD_MUX_3_SPEC>> for W {
     }
 }
 #[doc = "Field `PAD_MUX_3` reader - "]
-pub struct PAD_MUX_3_R(crate::FieldReader<u32, u32>);
+pub struct PAD_MUX_3_R(crate::FieldReader<u32>);
 impl PAD_MUX_3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl PAD_MUX_3_R {
     }
 }
 impl core::ops::Deref for PAD_MUX_3_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

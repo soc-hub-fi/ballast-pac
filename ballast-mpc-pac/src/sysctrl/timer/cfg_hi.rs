@@ -35,7 +35,7 @@ impl From<crate::W<CFG_HI_SPEC>> for W {
     }
 }
 #[doc = "Field `EN` reader - Timer enable (starts couting) bit"]
-pub struct EN_R(crate::FieldReader<bool, bool>);
+pub struct EN_R(crate::FieldReader<bool>);
 impl EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl EN_R {
     }
 }
 impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> EN_W<'a> {
     }
 }
 #[doc = "Field `RST` reader - Timer high reset, cleared after the reset happened"]
-pub struct RST_R(crate::FieldReader<bool, bool>);
+pub struct RST_R(crate::FieldReader<bool>);
 impl RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl RST_R {
     }
 }
 impl core::ops::Deref for RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> RST_W<'a> {
     }
 }
 #[doc = "Field `IRQEN` reader - Timer hi interrupt generation on compare match enable"]
-pub struct IRQEN_R(crate::FieldReader<bool, bool>);
+pub struct IRQEN_R(crate::FieldReader<bool>);
 impl IRQEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl IRQEN_R {
     }
 }
 impl core::ops::Deref for IRQEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> IRQEN_W<'a> {
     }
 }
 #[doc = "Field `MODE` reader - Timer hi continuous mode configuration 0b0: Continue incrementing timer hi counter after a compare match with CMP_HI 0b1: Reset timer to after a compare match with CMP_HI"]
-pub struct MODE_R(crate::FieldReader<bool, bool>);
+pub struct MODE_R(crate::FieldReader<bool>);
 impl MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl MODE_R {
     }
 }
 impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> MODE_W<'a> {
     }
 }
 #[doc = "Field `ONES` reader - Timer hi one shot configuration"]
-pub struct ONES_R(crate::FieldReader<bool, bool>);
+pub struct ONES_R(crate::FieldReader<bool>);
 impl ONES_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl ONES_R {
     }
 }
 impl core::ops::Deref for ONES_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> ONES_W<'a> {
     }
 }
 #[doc = "Field `PEN` reader - Timer hi prescaler enable bit"]
-pub struct PEN_R(crate::FieldReader<bool, bool>);
+pub struct PEN_R(crate::FieldReader<bool>);
 impl PEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl PEN_R {
     }
 }
 impl core::ops::Deref for PEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> PEN_W<'a> {
     }
 }
 #[doc = "Field `CCFG` reader - Timer hi clock source configuration 0b0: FLL or FLL plus Prescaler 0b1: 32 kHz reference clock"]
-pub struct CCFG_R(crate::FieldReader<bool, bool>);
+pub struct CCFG_R(crate::FieldReader<bool>);
 impl CCFG_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl CCFG_R {
     }
 }
 impl core::ops::Deref for CCFG_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> CCFG_W<'a> {
     }
 }
 #[doc = "Field `PVAL` reader - Timer hi prescaler value. ftimer = fclk/(1 + PVAL)"]
-pub struct PVAL_R(crate::FieldReader<u8, u8>);
+pub struct PVAL_R(crate::FieldReader<u8>);
 impl PVAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -302,7 +302,7 @@ impl PVAL_R {
     }
 }
 impl core::ops::Deref for PVAL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -14,7 +14,7 @@ impl From<crate::R<D_CLIP_CFG_SPEC>> for R {
     }
 }
 #[doc = "Field `CLIP_TRUNCATE` reader - "]
-pub struct CLIP_TRUNCATE_R(crate::FieldReader<u8, u8>);
+pub struct CLIP_TRUNCATE_R(crate::FieldReader<u8>);
 impl CLIP_TRUNCATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,7 +22,7 @@ impl CLIP_TRUNCATE_R {
     }
 }
 impl core::ops::Deref for CLIP_TRUNCATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

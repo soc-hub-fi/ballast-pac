@@ -35,7 +35,7 @@ impl From<crate::W<D_BATCH_NUMBER_SPEC>> for W {
     }
 }
 #[doc = "Field `BATCHES` reader - "]
-pub struct BATCHES_R(crate::FieldReader<u8, u8>);
+pub struct BATCHES_R(crate::FieldReader<u8>);
 impl BATCHES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl BATCHES_R {
     }
 }
 impl core::ops::Deref for BATCHES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

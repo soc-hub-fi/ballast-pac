@@ -14,7 +14,7 @@ impl From<crate::R<D_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `STATUS_UNEQUAL` reader - "]
-pub struct STATUS_UNEQUAL_R(crate::FieldReader<bool, bool>);
+pub struct STATUS_UNEQUAL_R(crate::FieldReader<bool>);
 impl STATUS_UNEQUAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,7 +22,7 @@ impl STATUS_UNEQUAL_R {
     }
 }
 impl core::ops::Deref for STATUS_UNEQUAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<FCBOOT_SPEC>> for W {
     }
 }
 #[doc = "Field `FCBOOT` reader - Boot Start address"]
-pub struct FCBOOT_R(crate::FieldReader<u32, u32>);
+pub struct FCBOOT_R(crate::FieldReader<u32>);
 impl FCBOOT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl FCBOOT_R {
     }
 }
 impl core::ops::Deref for FCBOOT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

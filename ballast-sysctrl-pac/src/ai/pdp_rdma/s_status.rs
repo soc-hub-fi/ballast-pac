@@ -31,7 +31,7 @@ impl From<STATUS_0_A> for u8 {
     }
 }
 #[doc = "Field `STATUS_0` reader - "]
-pub struct STATUS_0_R(crate::FieldReader<u8, STATUS_0_A>);
+pub struct STATUS_0_R(crate::FieldReader<u8>);
 impl STATUS_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -64,7 +64,7 @@ impl STATUS_0_R {
     }
 }
 impl core::ops::Deref for STATUS_0_R {
-    type Target = crate::FieldReader<u8, STATUS_0_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -88,7 +88,7 @@ impl From<STATUS_1_A> for u8 {
     }
 }
 #[doc = "Field `STATUS_1` reader - "]
-pub struct STATUS_1_R(crate::FieldReader<u8, STATUS_1_A>);
+pub struct STATUS_1_R(crate::FieldReader<u8>);
 impl STATUS_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -121,7 +121,7 @@ impl STATUS_1_R {
     }
 }
 impl core::ops::Deref for STATUS_1_R {
-    type Target = crate::FieldReader<u8, STATUS_1_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

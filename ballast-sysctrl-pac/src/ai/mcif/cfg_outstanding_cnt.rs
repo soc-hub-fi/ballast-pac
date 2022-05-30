@@ -35,7 +35,7 @@ impl From<crate::W<CFG_OUTSTANDING_CNT_SPEC>> for W {
     }
 }
 #[doc = "Field `RD_OS_CNT` reader - "]
-pub struct RD_OS_CNT_R(crate::FieldReader<u8, u8>);
+pub struct RD_OS_CNT_R(crate::FieldReader<u8>);
 impl RD_OS_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,14 +43,14 @@ impl RD_OS_CNT_R {
     }
 }
 impl core::ops::Deref for RD_OS_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `WR_OS_CNT` reader - "]
-pub struct WR_OS_CNT_R(crate::FieldReader<u8, u8>);
+pub struct WR_OS_CNT_R(crate::FieldReader<u8>);
 impl WR_OS_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -58,7 +58,7 @@ impl WR_OS_CNT_R {
     }
 }
 impl core::ops::Deref for WR_OS_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

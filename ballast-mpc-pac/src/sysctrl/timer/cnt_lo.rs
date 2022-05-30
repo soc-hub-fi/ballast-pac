@@ -35,7 +35,7 @@ impl From<crate::W<CNT_LO_SPEC>> for W {
     }
 }
 #[doc = "Field `CNT_LO` reader - "]
-pub struct CNT_LO_R(crate::FieldReader<u32, u32>);
+pub struct CNT_LO_R(crate::FieldReader<u32>);
 impl CNT_LO_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl CNT_LO_R {
     }
 }
 impl core::ops::Deref for CNT_LO_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

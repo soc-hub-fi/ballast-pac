@@ -35,7 +35,7 @@ impl From<crate::W<D_CYA_SPEC>> for W {
     }
 }
 #[doc = "Field `D_CYA` reader - CYA register"]
-pub struct D_CYA_R(crate::FieldReader<u32, u32>);
+pub struct D_CYA_R(crate::FieldReader<u32>);
 impl D_CYA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl D_CYA_R {
     }
 }
 impl core::ops::Deref for D_CYA_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

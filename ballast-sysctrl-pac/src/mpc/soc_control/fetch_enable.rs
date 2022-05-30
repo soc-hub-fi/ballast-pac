@@ -35,7 +35,7 @@ impl From<crate::W<FETCH_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `E` reader - Enable Fetch"]
-pub struct E_R(crate::FieldReader<bool, bool>);
+pub struct E_R(crate::FieldReader<bool>);
 impl E_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl E_R {
     }
 }
 impl core::ops::Deref for E_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

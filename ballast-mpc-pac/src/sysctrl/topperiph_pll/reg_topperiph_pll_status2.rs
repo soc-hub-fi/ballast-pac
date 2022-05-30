@@ -14,7 +14,7 @@ impl From<crate::R<REG_TOPPERIPH_PLL_STATUS2_SPEC>> for R {
     }
 }
 #[doc = "Field `status2` reader - "]
-pub struct STATUS2_R(crate::FieldReader<u32, u32>);
+pub struct STATUS2_R(crate::FieldReader<u32>);
 impl STATUS2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl STATUS2_R {
     }
 }
 impl core::ops::Deref for STATUS2_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

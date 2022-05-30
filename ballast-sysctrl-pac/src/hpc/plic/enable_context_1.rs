@@ -35,7 +35,7 @@ impl From<crate::W<ENABLE_CONTEXT_1_SPEC>> for W {
     }
 }
 #[doc = "Field `timer0_int0_enable` reader - "]
-pub struct TIMER0_INT0_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct TIMER0_INT0_ENABLE_R(crate::FieldReader<bool>);
 impl TIMER0_INT0_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TIMER0_INT0_ENABLE_R {
     }
 }
 impl core::ops::Deref for TIMER0_INT0_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TIMER0_INT0_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `timer0_int1_enable` reader - "]
-pub struct TIMER0_INT1_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct TIMER0_INT1_ENABLE_R(crate::FieldReader<bool>);
 impl TIMER0_INT1_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TIMER0_INT1_ENABLE_R {
     }
 }
 impl core::ops::Deref for TIMER0_INT1_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TIMER0_INT1_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `timer1_int0_enable` reader - "]
-pub struct TIMER1_INT0_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct TIMER1_INT0_ENABLE_R(crate::FieldReader<bool>);
 impl TIMER1_INT0_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TIMER1_INT0_ENABLE_R {
     }
 }
 impl core::ops::Deref for TIMER1_INT0_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> TIMER1_INT0_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `timer1_int1_enable` reader - "]
-pub struct TIMER1_INT1_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct TIMER1_INT1_ENABLE_R(crate::FieldReader<bool>);
 impl TIMER1_INT1_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl TIMER1_INT1_ENABLE_R {
     }
 }
 impl core::ops::Deref for TIMER1_INT1_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> TIMER1_INT1_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `external_int0_enable` reader - "]
-pub struct EXTERNAL_INT0_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct EXTERNAL_INT0_ENABLE_R(crate::FieldReader<bool>);
 impl EXTERNAL_INT0_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl EXTERNAL_INT0_ENABLE_R {
     }
 }
 impl core::ops::Deref for EXTERNAL_INT0_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> EXTERNAL_INT0_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `external_int1_enable` reader - "]
-pub struct EXTERNAL_INT1_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct EXTERNAL_INT1_ENABLE_R(crate::FieldReader<bool>);
 impl EXTERNAL_INT1_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl EXTERNAL_INT1_ENABLE_R {
     }
 }
 impl core::ops::Deref for EXTERNAL_INT1_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

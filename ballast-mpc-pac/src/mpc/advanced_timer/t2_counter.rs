@@ -35,7 +35,7 @@ impl From<crate::W<T2_COUNTER_SPEC>> for W {
     }
 }
 #[doc = "Field `T2_COUNTER` reader - "]
-pub struct T2_COUNTER_R(crate::FieldReader<u32, u32>);
+pub struct T2_COUNTER_R(crate::FieldReader<u32>);
 impl T2_COUNTER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl T2_COUNTER_R {
     }
 }
 impl core::ops::Deref for T2_COUNTER_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

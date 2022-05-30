@@ -14,7 +14,7 @@ impl From<crate::R<CACC_CAP_INCOMPAT_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CACC_CAP_INCOMPAT` reader - "]
-pub struct CACC_CAP_INCOMPAT_R(crate::FieldReader<u32, u32>);
+pub struct CACC_CAP_INCOMPAT_R(crate::FieldReader<u32>);
 impl CACC_CAP_INCOMPAT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl CACC_CAP_INCOMPAT_R {
     }
 }
 impl core::ops::Deref for CACC_CAP_INCOMPAT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

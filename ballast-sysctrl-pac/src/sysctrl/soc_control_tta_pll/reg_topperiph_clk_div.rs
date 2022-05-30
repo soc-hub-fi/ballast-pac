@@ -35,7 +35,7 @@ impl From<crate::W<REG_TOPPERIPH_CLK_DIV_SPEC>> for W {
     }
 }
 #[doc = "Field `REG_TOPPERIPH_CLK_DIV` reader - Clock divider ratio for Top peripheral module"]
-pub struct REG_TOPPERIPH_CLK_DIV_R(crate::FieldReader<u16, u16>);
+pub struct REG_TOPPERIPH_CLK_DIV_R(crate::FieldReader<u16>);
 impl REG_TOPPERIPH_CLK_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl REG_TOPPERIPH_CLK_DIV_R {
     }
 }
 impl core::ops::Deref for REG_TOPPERIPH_CLK_DIV_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

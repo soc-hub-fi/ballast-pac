@@ -35,7 +35,7 @@ impl From<crate::W<DEBUG_ADDR_LENGTH_SPEC>> for W {
     }
 }
 #[doc = "Field `debug_addr_length` reader - "]
-pub struct DEBUG_ADDR_LENGTH_R(crate::FieldReader<u64, u64>);
+pub struct DEBUG_ADDR_LENGTH_R(crate::FieldReader<u64>);
 impl DEBUG_ADDR_LENGTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u64) -> Self {
@@ -43,7 +43,7 @@ impl DEBUG_ADDR_LENGTH_R {
     }
 }
 impl core::ops::Deref for DEBUG_ADDR_LENGTH_R {
-    type Target = crate::FieldReader<u64, u64>;
+    type Target = crate::FieldReader<u64>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

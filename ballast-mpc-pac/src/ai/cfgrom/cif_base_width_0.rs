@@ -14,7 +14,7 @@ impl From<crate::R<CIF_BASE_WIDTH_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CIF_BASE_WIDTH` reader - "]
-pub struct CIF_BASE_WIDTH_R(crate::FieldReader<u8, u8>);
+pub struct CIF_BASE_WIDTH_R(crate::FieldReader<u8>);
 impl CIF_BASE_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,7 +22,7 @@ impl CIF_BASE_WIDTH_R {
     }
 }
 impl core::ops::Deref for CIF_BASE_WIDTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

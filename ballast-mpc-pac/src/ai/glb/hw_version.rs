@@ -14,7 +14,7 @@ impl From<crate::R<HW_VERSION_SPEC>> for R {
     }
 }
 #[doc = "Field `MAJOR` reader - "]
-pub struct MAJOR_R(crate::FieldReader<u8, u8>);
+pub struct MAJOR_R(crate::FieldReader<u8>);
 impl MAJOR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,14 +22,14 @@ impl MAJOR_R {
     }
 }
 impl core::ops::Deref for MAJOR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `MINOR` reader - "]
-pub struct MINOR_R(crate::FieldReader<u16, u16>);
+pub struct MINOR_R(crate::FieldReader<u16>);
 impl MINOR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -37,7 +37,7 @@ impl MINOR_R {
     }
 }
 impl core::ops::Deref for MINOR_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

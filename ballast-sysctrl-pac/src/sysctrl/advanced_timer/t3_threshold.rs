@@ -35,7 +35,7 @@ impl From<crate::W<T3_THRESHOLD_SPEC>> for W {
     }
 }
 #[doc = "Field `TH_LO` reader - ADV_TIMER3 threshold low part configuration bitfield. It defines start counter value"]
-pub struct TH_LO_R(crate::FieldReader<u16, u16>);
+pub struct TH_LO_R(crate::FieldReader<u16>);
 impl TH_LO_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl TH_LO_R {
     }
 }
 impl core::ops::Deref for TH_LO_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TH_LO_W<'a> {
     }
 }
 #[doc = "Field `TH_HI` reader - ADV_TIMER3 threshold high part configuration bitfield. It defines end counter value."]
-pub struct TH_HI_R(crate::FieldReader<u16, u16>);
+pub struct TH_HI_R(crate::FieldReader<u16>);
 impl TH_HI_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl TH_HI_R {
     }
 }
 impl core::ops::Deref for TH_HI_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

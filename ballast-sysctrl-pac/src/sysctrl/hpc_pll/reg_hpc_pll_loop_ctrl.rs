@@ -35,7 +35,7 @@ impl From<crate::W<REG_HPC_PLL_LOOP_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `LOOP_CTRL` reader - "]
-pub struct LOOP_CTRL_R(crate::FieldReader<u32, u32>);
+pub struct LOOP_CTRL_R(crate::FieldReader<u32>);
 impl LOOP_CTRL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl LOOP_CTRL_R {
     }
 }
 impl core::ops::Deref for LOOP_CTRL_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

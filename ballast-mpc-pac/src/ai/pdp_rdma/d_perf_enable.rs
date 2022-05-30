@@ -28,7 +28,7 @@ impl From<DMA_EN_A> for bool {
     }
 }
 #[doc = "Field `DMA_EN` reader - "]
-pub struct DMA_EN_R(crate::FieldReader<bool, DMA_EN_A>);
+pub struct DMA_EN_R(crate::FieldReader<bool>);
 impl DMA_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -54,7 +54,7 @@ impl DMA_EN_R {
     }
 }
 impl core::ops::Deref for DMA_EN_R {
-    type Target = crate::FieldReader<bool, DMA_EN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

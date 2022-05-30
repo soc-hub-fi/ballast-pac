@@ -14,7 +14,7 @@ impl From<crate::R<D_INF_INPUT_WEIGHT_NUM_SPEC>> for R {
     }
 }
 #[doc = "Field `INF_WEIGHT_NUM` reader - "]
-pub struct INF_WEIGHT_NUM_R(crate::FieldReader<u32, u32>);
+pub struct INF_WEIGHT_NUM_R(crate::FieldReader<u32>);
 impl INF_WEIGHT_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl INF_WEIGHT_NUM_R {
     }
 }
 impl core::ops::Deref for INF_WEIGHT_NUM_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

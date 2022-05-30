@@ -35,7 +35,7 @@ impl From<crate::W<D_BN_SURFACE_STRIDE_SPEC>> for W {
     }
 }
 #[doc = "Field `BN_SURFACE_STRIDE` reader - "]
-pub struct BN_SURFACE_STRIDE_R(crate::FieldReader<u32, u32>);
+pub struct BN_SURFACE_STRIDE_R(crate::FieldReader<u32>);
 impl BN_SURFACE_STRIDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl BN_SURFACE_STRIDE_R {
     }
 }
 impl core::ops::Deref for BN_SURFACE_STRIDE_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

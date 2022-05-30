@@ -28,7 +28,7 @@ impl From<LINE_PACKED_A> for bool {
     }
 }
 #[doc = "Field `LINE_PACKED` reader - "]
-pub struct LINE_PACKED_R(crate::FieldReader<bool, LINE_PACKED_A>);
+pub struct LINE_PACKED_R(crate::FieldReader<bool>);
 impl LINE_PACKED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -54,7 +54,7 @@ impl LINE_PACKED_R {
     }
 }
 impl core::ops::Deref for LINE_PACKED_R {
-    type Target = crate::FieldReader<bool, LINE_PACKED_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -75,7 +75,7 @@ impl From<SURF_PACKED_A> for bool {
     }
 }
 #[doc = "Field `SURF_PACKED` reader - "]
-pub struct SURF_PACKED_R(crate::FieldReader<bool, SURF_PACKED_A>);
+pub struct SURF_PACKED_R(crate::FieldReader<bool>);
 impl SURF_PACKED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -101,7 +101,7 @@ impl SURF_PACKED_R {
     }
 }
 impl core::ops::Deref for SURF_PACKED_R {
-    type Target = crate::FieldReader<bool, SURF_PACKED_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

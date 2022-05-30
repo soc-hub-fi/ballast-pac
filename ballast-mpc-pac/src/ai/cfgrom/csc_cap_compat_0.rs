@@ -14,7 +14,7 @@ impl From<crate::R<CSC_CAP_COMPAT_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CSC_CAP_COMPAT` reader - "]
-pub struct CSC_CAP_COMPAT_R(crate::FieldReader<u32, u32>);
+pub struct CSC_CAP_COMPAT_R(crate::FieldReader<u32>);
 impl CSC_CAP_COMPAT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl CSC_CAP_COMPAT_R {
     }
 }
 impl core::ops::Deref for CSC_CAP_COMPAT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

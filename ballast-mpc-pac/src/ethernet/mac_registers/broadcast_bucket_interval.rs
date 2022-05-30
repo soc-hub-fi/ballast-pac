@@ -35,7 +35,7 @@ impl From<crate::W<BROADCAST_BUCKET_INTERVAL_SPEC>> for W {
     }
 }
 #[doc = "Field `broadcast_bucket_interval` reader - The bucket wil be periodically refilled after broadcast_bucket_interval time"]
-pub struct BROADCAST_BUCKET_INTERVAL_R(crate::FieldReader<u16, u16>);
+pub struct BROADCAST_BUCKET_INTERVAL_R(crate::FieldReader<u16>);
 impl BROADCAST_BUCKET_INTERVAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl BROADCAST_BUCKET_INTERVAL_R {
     }
 }
 impl core::ops::Deref for BROADCAST_BUCKET_INTERVAL_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

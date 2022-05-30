@@ -35,7 +35,7 @@ impl From<crate::W<D_OPERATION_MODE_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `SPLIT_NUM` reader - "]
-pub struct SPLIT_NUM_R(crate::FieldReader<u8, u8>);
+pub struct SPLIT_NUM_R(crate::FieldReader<u8>);
 impl SPLIT_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SPLIT_NUM_R {
     }
 }
 impl core::ops::Deref for SPLIT_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -16,7 +16,7 @@ impl From<crate::R<PADIN_32_63_SPEC>> for R {
 #[doc = "Field `DATA_IN` reader - Bit 31 - 0 DATA_IN (R) GPIO\\[63:32\\]
 input data read bitfield. DATA_IN\\[i\\]
 corresponds to input data of GPIO\\[i\\]."]
-pub struct DATA_IN_R(crate::FieldReader<u32, u32>);
+pub struct DATA_IN_R(crate::FieldReader<u32>);
 impl DATA_IN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -24,7 +24,7 @@ impl DATA_IN_R {
     }
 }
 impl core::ops::Deref for DATA_IN_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

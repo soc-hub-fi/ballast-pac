@@ -14,7 +14,7 @@ impl From<crate::R<D_WEIGHT_SIZE_0_SPEC>> for R {
     }
 }
 #[doc = "Field `BYTE_PER_KERNEL` reader - "]
-pub struct BYTE_PER_KERNEL_R(crate::FieldReader<u32, u32>);
+pub struct BYTE_PER_KERNEL_R(crate::FieldReader<u32>);
 impl BYTE_PER_KERNEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl BYTE_PER_KERNEL_R {
     }
 }
 impl core::ops::Deref for BYTE_PER_KERNEL_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

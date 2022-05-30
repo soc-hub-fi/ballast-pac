@@ -14,7 +14,7 @@ impl From<crate::R<UART_DATA_SPEC>> for R {
     }
 }
 #[doc = "Field `BYTE` reader - "]
-pub struct BYTE_R(crate::FieldReader<u8, u8>);
+pub struct BYTE_R(crate::FieldReader<u8>);
 impl BYTE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,7 +22,7 @@ impl BYTE_R {
     }
 }
 impl core::ops::Deref for BYTE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

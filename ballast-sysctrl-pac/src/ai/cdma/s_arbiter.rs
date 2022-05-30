@@ -35,7 +35,7 @@ impl From<crate::W<S_ARBITER_SPEC>> for W {
     }
 }
 #[doc = "Field `ARB_WEIGHT` reader - "]
-pub struct ARB_WEIGHT_R(crate::FieldReader<u8, u8>);
+pub struct ARB_WEIGHT_R(crate::FieldReader<u8>);
 impl ARB_WEIGHT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl ARB_WEIGHT_R {
     }
 }
 impl core::ops::Deref for ARB_WEIGHT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> ARB_WEIGHT_W<'a> {
     }
 }
 #[doc = "Field `ARB_WMB` reader - "]
-pub struct ARB_WMB_R(crate::FieldReader<u8, u8>);
+pub struct ARB_WMB_R(crate::FieldReader<u8>);
 impl ARB_WMB_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl ARB_WMB_R {
     }
 }
 impl core::ops::Deref for ARB_WMB_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<D_DST_BATCH_STRIDE_SPEC>> for W {
     }
 }
 #[doc = "Field `DST_BATCH_STRIDE` reader - "]
-pub struct DST_BATCH_STRIDE_R(crate::FieldReader<u32, u32>);
+pub struct DST_BATCH_STRIDE_R(crate::FieldReader<u32>);
 impl DST_BATCH_STRIDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl DST_BATCH_STRIDE_R {
     }
 }
 impl core::ops::Deref for DST_BATCH_STRIDE_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -14,7 +14,7 @@ impl From<crate::R<END_OF_LIST_0_SPEC>> for R {
     }
 }
 #[doc = "Field `END_OF_LIST` reader - "]
-pub struct END_OF_LIST_R(crate::FieldReader<u32, u32>);
+pub struct END_OF_LIST_R(crate::FieldReader<u32>);
 impl END_OF_LIST_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl END_OF_LIST_R {
     }
 }
 impl core::ops::Deref for END_OF_LIST_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

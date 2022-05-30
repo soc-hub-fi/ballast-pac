@@ -14,7 +14,7 @@ impl From<crate::R<D_SRC_BASE_ADDR_LOW_SPEC>> for R {
     }
 }
 #[doc = "Field `SRC_BASE_ADDR_LOW` reader - "]
-pub struct SRC_BASE_ADDR_LOW_R(crate::FieldReader<u32, u32>);
+pub struct SRC_BASE_ADDR_LOW_R(crate::FieldReader<u32>);
 impl SRC_BASE_ADDR_LOW_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl SRC_BASE_ADDR_LOW_R {
     }
 }
 impl core::ops::Deref for SRC_BASE_ADDR_LOW_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

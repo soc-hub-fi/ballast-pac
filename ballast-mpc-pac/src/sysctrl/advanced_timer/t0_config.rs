@@ -37,7 +37,7 @@ impl From<crate::W<T0_CONFIG_SPEC>> for W {
 #[doc = "Field `INSEL` reader - ADV_TIMER0 input source configuration bitfield: - 0-31: GPIO\\[0\\]
 to GPIO\\[31\\]
 - 32-35: Channel 0 to 3 of ADV_TIMER0 - 36-39: Channel 0 to 3 of ADV_TIMER1 - 40-43: Channel 0 to 3 of ADV_TIMER2 - 44-47: Channel 0 to 3 of ADV_TIMER3"]
-pub struct INSEL_R(crate::FieldReader<u8, u8>);
+pub struct INSEL_R(crate::FieldReader<u8>);
 impl INSEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -45,7 +45,7 @@ impl INSEL_R {
     }
 }
 impl core::ops::Deref for INSEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,7 +66,7 @@ impl<'a> INSEL_W<'a> {
     }
 }
 #[doc = "Field `MODE` reader - ADV_TIMER0 trigger mode configuration bitfield: - 3'h0: trigger event at each clock cycle. - 3'h1: trigger event if input source is 0 - 3'h2: trigger event if input source is 1 - 3'h3: trigger event on input source rising edge - 3'h4: trigger event on input source falling edge - 3'h5: trigger event on input source falling or rising edge - 3'h6: trigger event on input source rising edge when armed - 3'h7: trigger event on input source falling edge when armed"]
-pub struct MODE_R(crate::FieldReader<u8, u8>);
+pub struct MODE_R(crate::FieldReader<u8>);
 impl MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -74,7 +74,7 @@ impl MODE_R {
     }
 }
 impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -93,7 +93,7 @@ impl<'a> MODE_W<'a> {
     }
 }
 #[doc = "Field `CLKSEL` reader - ADV_TIMER0 clock source configuration bitfield: - 1'b0: FLL - 1'b1: reference clock at 32kHz"]
-pub struct CLKSEL_R(crate::FieldReader<bool, bool>);
+pub struct CLKSEL_R(crate::FieldReader<bool>);
 impl CLKSEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -101,7 +101,7 @@ impl CLKSEL_R {
     }
 }
 impl core::ops::Deref for CLKSEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -130,7 +130,7 @@ impl<'a> CLKSEL_W<'a> {
     }
 }
 #[doc = "Field `UPDOWNSEL` reader - ADV_TIMER0 center-aligned mode configuration bitfield: - 1'b0: The counter counts up and down alternatively. - 1'b1: The counter counts up and resets to 0 when reach threshold."]
-pub struct UPDOWNSEL_R(crate::FieldReader<bool, bool>);
+pub struct UPDOWNSEL_R(crate::FieldReader<bool>);
 impl UPDOWNSEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -138,7 +138,7 @@ impl UPDOWNSEL_R {
     }
 }
 impl core::ops::Deref for UPDOWNSEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -167,7 +167,7 @@ impl<'a> UPDOWNSEL_W<'a> {
     }
 }
 #[doc = "Field `PRESC` reader - ADV_TIMER0 prescaler value configuration bitfield."]
-pub struct PRESC_R(crate::FieldReader<u8, u8>);
+pub struct PRESC_R(crate::FieldReader<u8>);
 impl PRESC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -175,7 +175,7 @@ impl PRESC_R {
     }
 }
 impl core::ops::Deref for PRESC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<I2S_PDM_SETUP_SPEC>> for W {
     }
 }
 #[doc = "Field `PDM_SHIFT` reader - Shifts the output of the filter"]
-pub struct PDM_SHIFT_R(crate::FieldReader<u8, u8>);
+pub struct PDM_SHIFT_R(crate::FieldReader<u8>);
 impl PDM_SHIFT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PDM_SHIFT_R {
     }
 }
 impl core::ops::Deref for PDM_SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PDM_SHIFT_W<'a> {
     }
 }
 #[doc = "Field `PDM_DECIMATION` reader - Sets the decimation ratio of the filter"]
-pub struct PDM_DECIMATION_R(crate::FieldReader<u16, u16>);
+pub struct PDM_DECIMATION_R(crate::FieldReader<u16>);
 impl PDM_DECIMATION_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl PDM_DECIMATION_R {
     }
 }
 impl core::ops::Deref for PDM_DECIMATION_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

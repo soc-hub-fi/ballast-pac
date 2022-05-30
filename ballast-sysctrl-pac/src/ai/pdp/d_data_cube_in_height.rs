@@ -35,7 +35,7 @@ impl From<crate::W<D_DATA_CUBE_IN_HEIGHT_SPEC>> for W {
     }
 }
 #[doc = "Field `CUBE_IN_HEIGHT` reader - "]
-pub struct CUBE_IN_HEIGHT_R(crate::FieldReader<u16, u16>);
+pub struct CUBE_IN_HEIGHT_R(crate::FieldReader<u16>);
 impl CUBE_IN_HEIGHT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl CUBE_IN_HEIGHT_R {
     }
 }
 impl core::ops::Deref for CUBE_IN_HEIGHT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

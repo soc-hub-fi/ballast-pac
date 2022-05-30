@@ -14,7 +14,7 @@ impl From<crate::R<D_NAN_OUTPUT_NUM_SPEC>> for R {
     }
 }
 #[doc = "Field `NAN_OUTPUT_NUM` reader - "]
-pub struct NAN_OUTPUT_NUM_R(crate::FieldReader<u32, u32>);
+pub struct NAN_OUTPUT_NUM_R(crate::FieldReader<u32>);
 impl NAN_OUTPUT_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl NAN_OUTPUT_NUM_R {
     }
 }
 impl core::ops::Deref for NAN_OUTPUT_NUM_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

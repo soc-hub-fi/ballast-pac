@@ -35,7 +35,7 @@ impl From<crate::W<CACHED_REGION_ADDR_BASE3_SPEC>> for W {
     }
 }
 #[doc = "Field `cached_region_addr_base3` reader - "]
-pub struct CACHED_REGION_ADDR_BASE3_R(crate::FieldReader<u64, u64>);
+pub struct CACHED_REGION_ADDR_BASE3_R(crate::FieldReader<u64>);
 impl CACHED_REGION_ADDR_BASE3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u64) -> Self {
@@ -43,7 +43,7 @@ impl CACHED_REGION_ADDR_BASE3_R {
     }
 }
 impl core::ops::Deref for CACHED_REGION_ADDR_BASE3_R {
-    type Target = crate::FieldReader<u64, u64>;
+    type Target = crate::FieldReader<u64>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

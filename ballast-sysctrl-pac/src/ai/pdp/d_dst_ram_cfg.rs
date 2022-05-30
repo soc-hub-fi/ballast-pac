@@ -49,7 +49,7 @@ impl From<DST_RAM_TYPE_A> for bool {
     }
 }
 #[doc = "Field `DST_RAM_TYPE` reader - "]
-pub struct DST_RAM_TYPE_R(crate::FieldReader<bool, DST_RAM_TYPE_A>);
+pub struct DST_RAM_TYPE_R(crate::FieldReader<bool>);
 impl DST_RAM_TYPE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -75,7 +75,7 @@ impl DST_RAM_TYPE_R {
     }
 }
 impl core::ops::Deref for DST_RAM_TYPE_R {
-    type Target = crate::FieldReader<bool, DST_RAM_TYPE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

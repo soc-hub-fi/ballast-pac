@@ -35,7 +35,7 @@ impl From<crate::W<CLUSTER_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `bypass` reader - "]
-pub struct BYPASS_R(crate::FieldReader<bool, bool>);
+pub struct BYPASS_R(crate::FieldReader<bool>);
 impl BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl BYPASS_R {
     }
 }
 impl core::ops::Deref for BYPASS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> BYPASS_W<'a> {
     }
 }
 #[doc = "Field `POW` reader - "]
-pub struct POW_R(crate::FieldReader<bool, bool>);
+pub struct POW_R(crate::FieldReader<bool>);
 impl POW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl POW_R {
     }
 }
 impl core::ops::Deref for POW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> POW_W<'a> {
     }
 }
 #[doc = "Field `fetch_enable` reader - "]
-pub struct FETCH_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct FETCH_ENABLE_R(crate::FieldReader<bool>);
 impl FETCH_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl FETCH_ENABLE_R {
     }
 }
 impl core::ops::Deref for FETCH_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> FETCH_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `rstn` reader - "]
-pub struct RSTN_R(crate::FieldReader<bool, bool>);
+pub struct RSTN_R(crate::FieldReader<bool>);
 impl RSTN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl RSTN_R {
     }
 }
 impl core::ops::Deref for RSTN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

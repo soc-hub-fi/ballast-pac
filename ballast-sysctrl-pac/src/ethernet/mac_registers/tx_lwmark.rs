@@ -35,7 +35,7 @@ impl From<crate::W<TX_LWMARK_SPEC>> for W {
     }
 }
 #[doc = "Field `Tx_Lwmark` reader - used to set transmit Fifo low water mark"]
-pub struct TX_LWMARK_R(crate::FieldReader<u8, u8>);
+pub struct TX_LWMARK_R(crate::FieldReader<u8>);
 impl TX_LWMARK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TX_LWMARK_R {
     }
 }
 impl core::ops::Deref for TX_LWMARK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

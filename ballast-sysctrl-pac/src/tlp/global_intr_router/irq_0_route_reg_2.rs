@@ -35,7 +35,7 @@ impl From<crate::W<IRQ_0_ROUTE_REG_2_SPEC>> for W {
     }
 }
 #[doc = "Field `irq_0_route_reg_2` reader - "]
-pub struct IRQ_0_ROUTE_REG_2_R(crate::FieldReader<u8, u8>);
+pub struct IRQ_0_ROUTE_REG_2_R(crate::FieldReader<u8>);
 impl IRQ_0_ROUTE_REG_2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl IRQ_0_ROUTE_REG_2_R {
     }
 }
 impl core::ops::Deref for IRQ_0_ROUTE_REG_2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<S_LUT_ACCESS_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `LUT_ADDR` reader - "]
-pub struct LUT_ADDR_R(crate::FieldReader<u16, u16>);
+pub struct LUT_ADDR_R(crate::FieldReader<u16>);
 impl LUT_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl LUT_ADDR_R {
     }
 }
 impl core::ops::Deref for LUT_ADDR_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -76,7 +76,7 @@ impl From<LUT_TABLE_ID_A> for bool {
     }
 }
 #[doc = "Field `LUT_TABLE_ID` reader - "]
-pub struct LUT_TABLE_ID_R(crate::FieldReader<bool, LUT_TABLE_ID_A>);
+pub struct LUT_TABLE_ID_R(crate::FieldReader<bool>);
 impl LUT_TABLE_ID_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -102,7 +102,7 @@ impl LUT_TABLE_ID_R {
     }
 }
 impl core::ops::Deref for LUT_TABLE_ID_R {
-    type Target = crate::FieldReader<bool, LUT_TABLE_ID_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -160,7 +160,7 @@ impl From<LUT_ACCESS_TYPE_A> for bool {
     }
 }
 #[doc = "Field `LUT_ACCESS_TYPE` reader - "]
-pub struct LUT_ACCESS_TYPE_R(crate::FieldReader<bool, LUT_ACCESS_TYPE_A>);
+pub struct LUT_ACCESS_TYPE_R(crate::FieldReader<bool>);
 impl LUT_ACCESS_TYPE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -186,7 +186,7 @@ impl LUT_ACCESS_TYPE_R {
     }
 }
 impl core::ops::Deref for LUT_ACCESS_TYPE_R {
-    type Target = crate::FieldReader<bool, LUT_ACCESS_TYPE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

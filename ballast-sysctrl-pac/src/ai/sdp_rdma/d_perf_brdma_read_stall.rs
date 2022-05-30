@@ -14,7 +14,7 @@ impl From<crate::R<D_PERF_BRDMA_READ_STALL_SPEC>> for R {
     }
 }
 #[doc = "Field `BRDMA_STALL` reader - "]
-pub struct BRDMA_STALL_R(crate::FieldReader<u32, u32>);
+pub struct BRDMA_STALL_R(crate::FieldReader<u32>);
 impl BRDMA_STALL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl BRDMA_STALL_R {
     }
 }
 impl core::ops::Deref for BRDMA_STALL_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

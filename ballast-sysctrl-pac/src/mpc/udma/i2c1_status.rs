@@ -35,7 +35,7 @@ impl From<crate::W<I2C1_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `BUSY` reader - I2C bus busy status flag: - 1'b0: no transfer on-going - 1'b1: transfer on-going"]
-pub struct BUSY_R(crate::FieldReader<bool, bool>);
+pub struct BUSY_R(crate::FieldReader<bool>);
 impl BUSY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl BUSY_R {
     }
 }
 impl core::ops::Deref for BUSY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> BUSY_W<'a> {
     }
 }
 #[doc = "Field `ARB_LOST` reader - I2C arbitration lost status flag: - 1'b0: no error - 1'b1: arbitration lost error"]
-pub struct ARB_LOST_R(crate::FieldReader<bool, bool>);
+pub struct ARB_LOST_R(crate::FieldReader<bool>);
 impl ARB_LOST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ARB_LOST_R {
     }
 }
 impl core::ops::Deref for ARB_LOST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ARB_LOST_W<'a> {
     }
 }
 #[doc = "Field `ACK` reader - I2C ack flag, can be polling for busy: - 1'b0: ACK - 1'b1: NAK"]
-pub struct ACK_R(crate::FieldReader<bool, bool>);
+pub struct ACK_R(crate::FieldReader<bool>);
 impl ACK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl ACK_R {
     }
 }
 impl core::ops::Deref for ACK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

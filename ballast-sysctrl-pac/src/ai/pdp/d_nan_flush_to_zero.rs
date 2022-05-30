@@ -49,7 +49,7 @@ impl From<NAN_TO_ZERO_A> for bool {
     }
 }
 #[doc = "Field `NAN_TO_ZERO` reader - "]
-pub struct NAN_TO_ZERO_R(crate::FieldReader<bool, NAN_TO_ZERO_A>);
+pub struct NAN_TO_ZERO_R(crate::FieldReader<bool>);
 impl NAN_TO_ZERO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -75,7 +75,7 @@ impl NAN_TO_ZERO_R {
     }
 }
 impl core::ops::Deref for NAN_TO_ZERO_R {
-    type Target = crate::FieldReader<bool, NAN_TO_ZERO_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

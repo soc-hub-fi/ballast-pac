@@ -35,7 +35,7 @@ impl From<crate::W<CORESTATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_STATUS` reader - "]
-pub struct CORE_STATUS_R(crate::FieldReader<u8, u8>);
+pub struct CORE_STATUS_R(crate::FieldReader<u8>);
 impl CORE_STATUS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CORE_STATUS_R {
     }
 }
 impl core::ops::Deref for CORE_STATUS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

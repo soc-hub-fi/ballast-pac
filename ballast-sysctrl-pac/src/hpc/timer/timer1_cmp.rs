@@ -35,7 +35,7 @@ impl From<crate::W<TIMER1_CMP_SPEC>> for W {
     }
 }
 #[doc = "Field `timer1_cmp` reader - "]
-pub struct TIMER1_CMP_R(crate::FieldReader<u32, u32>);
+pub struct TIMER1_CMP_R(crate::FieldReader<u32>);
 impl TIMER1_CMP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl TIMER1_CMP_R {
     }
 }
 impl core::ops::Deref for TIMER1_CMP_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

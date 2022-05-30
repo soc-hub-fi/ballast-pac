@@ -14,7 +14,7 @@ impl From<crate::R<D_OUT_SATURATION_SPEC>> for R {
     }
 }
 #[doc = "Field `SAT_COUNT` reader - "]
-pub struct SAT_COUNT_R(crate::FieldReader<u32, u32>);
+pub struct SAT_COUNT_R(crate::FieldReader<u32>);
 impl SAT_COUNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl SAT_COUNT_R {
     }
 }
 impl core::ops::Deref for SAT_COUNT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

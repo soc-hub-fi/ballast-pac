@@ -35,7 +35,7 @@ impl From<crate::W<INTR_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `SDP_DONE_MASK0` reader - "]
-pub struct SDP_DONE_MASK0_R(crate::FieldReader<bool, bool>);
+pub struct SDP_DONE_MASK0_R(crate::FieldReader<bool>);
 impl SDP_DONE_MASK0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SDP_DONE_MASK0_R {
     }
 }
 impl core::ops::Deref for SDP_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SDP_DONE_MASK0_W<'a> {
     }
 }
 #[doc = "Field `SDP_DONE_MASK1` reader - "]
-pub struct SDP_DONE_MASK1_R(crate::FieldReader<bool, bool>);
+pub struct SDP_DONE_MASK1_R(crate::FieldReader<bool>);
 impl SDP_DONE_MASK1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SDP_DONE_MASK1_R {
     }
 }
 impl core::ops::Deref for SDP_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SDP_DONE_MASK1_W<'a> {
     }
 }
 #[doc = "Field `CDP_DONE_MASK0` reader - "]
-pub struct CDP_DONE_MASK0_R(crate::FieldReader<bool, bool>);
+pub struct CDP_DONE_MASK0_R(crate::FieldReader<bool>);
 impl CDP_DONE_MASK0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CDP_DONE_MASK0_R {
     }
 }
 impl core::ops::Deref for CDP_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CDP_DONE_MASK0_W<'a> {
     }
 }
 #[doc = "Field `CDP_DONE_MASK1` reader - "]
-pub struct CDP_DONE_MASK1_R(crate::FieldReader<bool, bool>);
+pub struct CDP_DONE_MASK1_R(crate::FieldReader<bool>);
 impl CDP_DONE_MASK1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CDP_DONE_MASK1_R {
     }
 }
 impl core::ops::Deref for CDP_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> CDP_DONE_MASK1_W<'a> {
     }
 }
 #[doc = "Field `PDP_DONE_MASK0` reader - "]
-pub struct PDP_DONE_MASK0_R(crate::FieldReader<bool, bool>);
+pub struct PDP_DONE_MASK0_R(crate::FieldReader<bool>);
 impl PDP_DONE_MASK0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl PDP_DONE_MASK0_R {
     }
 }
 impl core::ops::Deref for PDP_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> PDP_DONE_MASK0_W<'a> {
     }
 }
 #[doc = "Field `PDP_DONE_MASK1` reader - "]
-pub struct PDP_DONE_MASK1_R(crate::FieldReader<bool, bool>);
+pub struct PDP_DONE_MASK1_R(crate::FieldReader<bool>);
 impl PDP_DONE_MASK1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl PDP_DONE_MASK1_R {
     }
 }
 impl core::ops::Deref for PDP_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> PDP_DONE_MASK1_W<'a> {
     }
 }
 #[doc = "Field `BDMA_DONE_MASK0` reader - "]
-pub struct BDMA_DONE_MASK0_R(crate::FieldReader<bool, bool>);
+pub struct BDMA_DONE_MASK0_R(crate::FieldReader<bool>);
 impl BDMA_DONE_MASK0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl BDMA_DONE_MASK0_R {
     }
 }
 impl core::ops::Deref for BDMA_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> BDMA_DONE_MASK0_W<'a> {
     }
 }
 #[doc = "Field `BDMA_DONE_MASK1` reader - "]
-pub struct BDMA_DONE_MASK1_R(crate::FieldReader<bool, bool>);
+pub struct BDMA_DONE_MASK1_R(crate::FieldReader<bool>);
 impl BDMA_DONE_MASK1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl BDMA_DONE_MASK1_R {
     }
 }
 impl core::ops::Deref for BDMA_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> BDMA_DONE_MASK1_W<'a> {
     }
 }
 #[doc = "Field `RUBIK_DONE_MASK0` reader - "]
-pub struct RUBIK_DONE_MASK0_R(crate::FieldReader<bool, bool>);
+pub struct RUBIK_DONE_MASK0_R(crate::FieldReader<bool>);
 impl RUBIK_DONE_MASK0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl RUBIK_DONE_MASK0_R {
     }
 }
 impl core::ops::Deref for RUBIK_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> RUBIK_DONE_MASK0_W<'a> {
     }
 }
 #[doc = "Field `RUBIK_DONE_MASK1` reader - "]
-pub struct RUBIK_DONE_MASK1_R(crate::FieldReader<bool, bool>);
+pub struct RUBIK_DONE_MASK1_R(crate::FieldReader<bool>);
 impl RUBIK_DONE_MASK1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl RUBIK_DONE_MASK1_R {
     }
 }
 impl core::ops::Deref for RUBIK_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> RUBIK_DONE_MASK1_W<'a> {
     }
 }
 #[doc = "Field `CDMA_DAT_DONE_MASK0` reader - "]
-pub struct CDMA_DAT_DONE_MASK0_R(crate::FieldReader<bool, bool>);
+pub struct CDMA_DAT_DONE_MASK0_R(crate::FieldReader<bool>);
 impl CDMA_DAT_DONE_MASK0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl CDMA_DAT_DONE_MASK0_R {
     }
 }
 impl core::ops::Deref for CDMA_DAT_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> CDMA_DAT_DONE_MASK0_W<'a> {
     }
 }
 #[doc = "Field `CDMA_DAT_DONE_MASK1` reader - "]
-pub struct CDMA_DAT_DONE_MASK1_R(crate::FieldReader<bool, bool>);
+pub struct CDMA_DAT_DONE_MASK1_R(crate::FieldReader<bool>);
 impl CDMA_DAT_DONE_MASK1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl CDMA_DAT_DONE_MASK1_R {
     }
 }
 impl core::ops::Deref for CDMA_DAT_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> CDMA_DAT_DONE_MASK1_W<'a> {
     }
 }
 #[doc = "Field `CDMA_WT_DONE_MASK0` reader - "]
-pub struct CDMA_WT_DONE_MASK0_R(crate::FieldReader<bool, bool>);
+pub struct CDMA_WT_DONE_MASK0_R(crate::FieldReader<bool>);
 impl CDMA_WT_DONE_MASK0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl CDMA_WT_DONE_MASK0_R {
     }
 }
 impl core::ops::Deref for CDMA_WT_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> CDMA_WT_DONE_MASK0_W<'a> {
     }
 }
 #[doc = "Field `CDMA_WT_DONE_MASK1` reader - "]
-pub struct CDMA_WT_DONE_MASK1_R(crate::FieldReader<bool, bool>);
+pub struct CDMA_WT_DONE_MASK1_R(crate::FieldReader<bool>);
 impl CDMA_WT_DONE_MASK1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl CDMA_WT_DONE_MASK1_R {
     }
 }
 impl core::ops::Deref for CDMA_WT_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> CDMA_WT_DONE_MASK1_W<'a> {
     }
 }
 #[doc = "Field `CACC_DONE_MASK0` reader - "]
-pub struct CACC_DONE_MASK0_R(crate::FieldReader<bool, bool>);
+pub struct CACC_DONE_MASK0_R(crate::FieldReader<bool>);
 impl CACC_DONE_MASK0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl CACC_DONE_MASK0_R {
     }
 }
 impl core::ops::Deref for CACC_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> CACC_DONE_MASK0_W<'a> {
     }
 }
 #[doc = "Field `CACC_DONE_MASK1` reader - "]
-pub struct CACC_DONE_MASK1_R(crate::FieldReader<bool, bool>);
+pub struct CACC_DONE_MASK1_R(crate::FieldReader<bool>);
 impl CACC_DONE_MASK1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl CACC_DONE_MASK1_R {
     }
 }
 impl core::ops::Deref for CACC_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

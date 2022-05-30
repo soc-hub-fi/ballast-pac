@@ -35,7 +35,7 @@ impl From<crate::W<NON_IDEMPOTENT_REGION_LENGTH1_SPEC>> for W {
     }
 }
 #[doc = "Field `non_idempotent_region_length1` reader - "]
-pub struct NON_IDEMPOTENT_REGION_LENGTH1_R(crate::FieldReader<u64, u64>);
+pub struct NON_IDEMPOTENT_REGION_LENGTH1_R(crate::FieldReader<u64>);
 impl NON_IDEMPOTENT_REGION_LENGTH1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u64) -> Self {
@@ -43,7 +43,7 @@ impl NON_IDEMPOTENT_REGION_LENGTH1_R {
     }
 }
 impl core::ops::Deref for NON_IDEMPOTENT_REGION_LENGTH1_R {
-    type Target = crate::FieldReader<u64, u64>;
+    type Target = crate::FieldReader<u64>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

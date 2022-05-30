@@ -14,7 +14,7 @@ impl From<crate::R<CBUF_BASE_CBUF_BANK_DEPTH_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CBUF_BASE_CBUF_BANK_DEPTH` reader - "]
-pub struct CBUF_BASE_CBUF_BANK_DEPTH_R(crate::FieldReader<u32, u32>);
+pub struct CBUF_BASE_CBUF_BANK_DEPTH_R(crate::FieldReader<u32>);
 impl CBUF_BASE_CBUF_BANK_DEPTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl CBUF_BASE_CBUF_BANK_DEPTH_R {
     }
 }
 impl core::ops::Deref for CBUF_BASE_CBUF_BANK_DEPTH_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

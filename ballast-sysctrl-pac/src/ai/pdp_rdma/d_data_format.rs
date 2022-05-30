@@ -52,7 +52,7 @@ impl From<INPUT_DATA_A> for u8 {
     }
 }
 #[doc = "Field `INPUT_DATA` reader - "]
-pub struct INPUT_DATA_R(crate::FieldReader<u8, INPUT_DATA_A>);
+pub struct INPUT_DATA_R(crate::FieldReader<u8>);
 impl INPUT_DATA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -85,7 +85,7 @@ impl INPUT_DATA_R {
     }
 }
 impl core::ops::Deref for INPUT_DATA_R {
-    type Target = crate::FieldReader<u8, INPUT_DATA_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<REG_INTER_CLK_DIV_SPEC>> for W {
     }
 }
 #[doc = "Field `CFGICN_DIV` reader - "]
-pub struct CFGICN_DIV_R(crate::FieldReader<u8, u8>);
+pub struct CFGICN_DIV_R(crate::FieldReader<u8>);
 impl CFGICN_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CFGICN_DIV_R {
     }
 }
 impl core::ops::Deref for CFGICN_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CFGICN_DIV_W<'a> {
     }
 }
 #[doc = "Field `LPICN_DIV` reader - "]
-pub struct LPICN_DIV_R(crate::FieldReader<u8, u8>);
+pub struct LPICN_DIV_R(crate::FieldReader<u8>);
 impl LPICN_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl LPICN_DIV_R {
     }
 }
 impl core::ops::Deref for LPICN_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> LPICN_DIV_W<'a> {
     }
 }
 #[doc = "Field `HPICN_DIV` reader - "]
-pub struct HPICN_DIV_R(crate::FieldReader<u8, u8>);
+pub struct HPICN_DIV_R(crate::FieldReader<u8>);
 impl HPICN_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl HPICN_DIV_R {
     }
 }
 impl core::ops::Deref for HPICN_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

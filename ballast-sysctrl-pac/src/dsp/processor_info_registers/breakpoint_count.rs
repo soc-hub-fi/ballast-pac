@@ -14,7 +14,7 @@ impl From<crate::R<BREAKPOINT_COUNT_SPEC>> for R {
     }
 }
 #[doc = "Field `breakpoint_count` reader - "]
-pub struct BREAKPOINT_COUNT_R(crate::FieldReader<u32, u32>);
+pub struct BREAKPOINT_COUNT_R(crate::FieldReader<u32>);
 impl BREAKPOINT_COUNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl BREAKPOINT_COUNT_R {
     }
 }
 impl core::ops::Deref for BREAKPOINT_COUNT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

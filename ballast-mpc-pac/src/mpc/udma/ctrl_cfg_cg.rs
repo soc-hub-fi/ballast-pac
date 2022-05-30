@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_CFG_CG_SPEC>> for W {
     }
 }
 #[doc = "Field `CG_UART` reader - "]
-pub struct CG_UART_R(crate::FieldReader<bool, bool>);
+pub struct CG_UART_R(crate::FieldReader<bool>);
 impl CG_UART_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CG_UART_R {
     }
 }
 impl core::ops::Deref for CG_UART_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CG_UART_W<'a> {
     }
 }
 #[doc = "Field `CG_SPIM` reader - "]
-pub struct CG_SPIM_R(crate::FieldReader<bool, bool>);
+pub struct CG_SPIM_R(crate::FieldReader<bool>);
 impl CG_SPIM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CG_SPIM_R {
     }
 }
 impl core::ops::Deref for CG_SPIM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CG_SPIM_W<'a> {
     }
 }
 #[doc = "Field `CG_I2C0` reader - "]
-pub struct CG_I2C0_R(crate::FieldReader<bool, bool>);
+pub struct CG_I2C0_R(crate::FieldReader<bool>);
 impl CG_I2C0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CG_I2C0_R {
     }
 }
 impl core::ops::Deref for CG_I2C0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CG_I2C0_W<'a> {
     }
 }
 #[doc = "Field `CG_I2C1` reader - "]
-pub struct CG_I2C1_R(crate::FieldReader<bool, bool>);
+pub struct CG_I2C1_R(crate::FieldReader<bool>);
 impl CG_I2C1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CG_I2C1_R {
     }
 }
 impl core::ops::Deref for CG_I2C1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> CG_I2C1_W<'a> {
     }
 }
 #[doc = "Field `CG_SDIO` reader - "]
-pub struct CG_SDIO_R(crate::FieldReader<bool, bool>);
+pub struct CG_SDIO_R(crate::FieldReader<bool>);
 impl CG_SDIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl CG_SDIO_R {
     }
 }
 impl core::ops::Deref for CG_SDIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> CG_SDIO_W<'a> {
     }
 }
 #[doc = "Field `CG_I2S` reader - "]
-pub struct CG_I2S_R(crate::FieldReader<bool, bool>);
+pub struct CG_I2S_R(crate::FieldReader<bool>);
 impl CG_I2S_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl CG_I2S_R {
     }
 }
 impl core::ops::Deref for CG_I2S_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> CG_I2S_W<'a> {
     }
 }
 #[doc = "Field `CG_CAM` reader - "]
-pub struct CG_CAM_R(crate::FieldReader<bool, bool>);
+pub struct CG_CAM_R(crate::FieldReader<bool>);
 impl CG_CAM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl CG_CAM_R {
     }
 }
 impl core::ops::Deref for CG_CAM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> CG_CAM_W<'a> {
     }
 }
 #[doc = "Field `CG_FILTER` reader - "]
-pub struct CG_FILTER_R(crate::FieldReader<bool, bool>);
+pub struct CG_FILTER_R(crate::FieldReader<bool>);
 impl CG_FILTER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl CG_FILTER_R {
     }
 }
 impl core::ops::Deref for CG_FILTER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

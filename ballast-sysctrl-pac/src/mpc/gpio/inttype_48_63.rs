@@ -35,7 +35,7 @@ impl From<crate::W<INTTYPE_48_63_SPEC>> for W {
     }
 }
 #[doc = "Field `INTTYPE1` reader - "]
-pub struct INTTYPE1_R(crate::FieldReader<u32, u32>);
+pub struct INTTYPE1_R(crate::FieldReader<u32>);
 impl INTTYPE1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl INTTYPE1_R {
     }
 }
 impl core::ops::Deref for INTTYPE1_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -14,7 +14,7 @@ impl From<crate::R<D_PARTIAL_WIDTH_IN_SPEC>> for R {
     }
 }
 #[doc = "Field `PARTIAL_WIDTH_IN_FIRST` reader - "]
-pub struct PARTIAL_WIDTH_IN_FIRST_R(crate::FieldReader<u16, u16>);
+pub struct PARTIAL_WIDTH_IN_FIRST_R(crate::FieldReader<u16>);
 impl PARTIAL_WIDTH_IN_FIRST_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,14 +22,14 @@ impl PARTIAL_WIDTH_IN_FIRST_R {
     }
 }
 impl core::ops::Deref for PARTIAL_WIDTH_IN_FIRST_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `PARTIAL_WIDTH_IN_LAST` reader - "]
-pub struct PARTIAL_WIDTH_IN_LAST_R(crate::FieldReader<u16, u16>);
+pub struct PARTIAL_WIDTH_IN_LAST_R(crate::FieldReader<u16>);
 impl PARTIAL_WIDTH_IN_LAST_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -37,14 +37,14 @@ impl PARTIAL_WIDTH_IN_LAST_R {
     }
 }
 impl core::ops::Deref for PARTIAL_WIDTH_IN_LAST_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `PARTIAL_WIDTH_IN_MID` reader - "]
-pub struct PARTIAL_WIDTH_IN_MID_R(crate::FieldReader<u16, u16>);
+pub struct PARTIAL_WIDTH_IN_MID_R(crate::FieldReader<u16>);
 impl PARTIAL_WIDTH_IN_MID_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -52,7 +52,7 @@ impl PARTIAL_WIDTH_IN_MID_R {
     }
 }
 impl core::ops::Deref for PARTIAL_WIDTH_IN_MID_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

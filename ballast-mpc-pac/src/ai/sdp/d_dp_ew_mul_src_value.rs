@@ -14,7 +14,7 @@ impl From<crate::R<D_DP_EW_MUL_SRC_VALUE_SPEC>> for R {
     }
 }
 #[doc = "Field `EW_MUL_OPERAND` reader - "]
-pub struct EW_MUL_OPERAND_R(crate::FieldReader<u32, u32>);
+pub struct EW_MUL_OPERAND_R(crate::FieldReader<u32>);
 impl EW_MUL_OPERAND_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl EW_MUL_OPERAND_R {
     }
 }
 impl core::ops::Deref for EW_MUL_OPERAND_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

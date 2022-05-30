@@ -14,7 +14,7 @@ impl From<crate::R<BOOTSEL_SPEC>> for R {
     }
 }
 #[doc = "Field `bootsel_pad` reader - "]
-pub struct BOOTSEL_PAD_R(crate::FieldReader<u32, u32>);
+pub struct BOOTSEL_PAD_R(crate::FieldReader<u32>);
 impl BOOTSEL_PAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl BOOTSEL_PAD_R {
     }
 }
 impl core::ops::Deref for BOOTSEL_PAD_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<REG_SS_CLK_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `TTA_CLK_CTRL` reader - "]
-pub struct TTA_CLK_CTRL_R(crate::FieldReader<u8, u8>);
+pub struct TTA_CLK_CTRL_R(crate::FieldReader<u8>);
 impl TTA_CLK_CTRL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TTA_CLK_CTRL_R {
     }
 }
 impl core::ops::Deref for TTA_CLK_CTRL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TTA_CLK_CTRL_W<'a> {
     }
 }
 #[doc = "Field `Ethernet_CLK_CTRL` reader - "]
-pub struct ETHERNET_CLK_CTRL_R(crate::FieldReader<u8, u8>);
+pub struct ETHERNET_CLK_CTRL_R(crate::FieldReader<u8>);
 impl ETHERNET_CLK_CTRL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl ETHERNET_CLK_CTRL_R {
     }
 }
 impl core::ops::Deref for ETHERNET_CLK_CTRL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> ETHERNET_CLK_CTRL_W<'a> {
     }
 }
 #[doc = "Field `AI_CLK_CTRL` reader - "]
-pub struct AI_CLK_CTRL_R(crate::FieldReader<u8, u8>);
+pub struct AI_CLK_CTRL_R(crate::FieldReader<u8>);
 impl AI_CLK_CTRL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl AI_CLK_CTRL_R {
     }
 }
 impl core::ops::Deref for AI_CLK_CTRL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> AI_CLK_CTRL_W<'a> {
     }
 }
 #[doc = "Field `HPC_CLK_CTRL` reader - "]
-pub struct HPC_CLK_CTRL_R(crate::FieldReader<u8, u8>);
+pub struct HPC_CLK_CTRL_R(crate::FieldReader<u8>);
 impl HPC_CLK_CTRL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl HPC_CLK_CTRL_R {
     }
 }
 impl core::ops::Deref for HPC_CLK_CTRL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

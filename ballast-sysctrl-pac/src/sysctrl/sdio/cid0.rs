@@ -14,7 +14,7 @@ impl From<crate::R<CID0_SPEC>> for R {
     }
 }
 #[doc = "Field `card_id_word0` reader - "]
-pub struct CARD_ID_WORD0_R(crate::FieldReader<u32, u32>);
+pub struct CARD_ID_WORD0_R(crate::FieldReader<u32>);
 impl CARD_ID_WORD0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl CARD_ID_WORD0_R {
     }
 }
 impl core::ops::Deref for CARD_ID_WORD0_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

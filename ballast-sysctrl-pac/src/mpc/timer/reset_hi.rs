@@ -35,7 +35,7 @@ impl From<crate::W<RESET_HI_SPEC>> for W {
     }
 }
 #[doc = "Field `RESET_HI` reader - "]
-pub struct RESET_HI_R(crate::FieldReader<bool, bool>);
+pub struct RESET_HI_R(crate::FieldReader<bool>);
 impl RESET_HI_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RESET_HI_R {
     }
 }
 impl core::ops::Deref for RESET_HI_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

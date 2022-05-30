@@ -14,7 +14,7 @@ impl From<crate::R<D_PERF_LUT_HYBRID_SPEC>> for R {
     }
 }
 #[doc = "Field `LUT_HYBRID` reader - "]
-pub struct LUT_HYBRID_R(crate::FieldReader<u32, u32>);
+pub struct LUT_HYBRID_R(crate::FieldReader<u32>);
 impl LUT_HYBRID_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl LUT_HYBRID_R {
     }
 }
 impl core::ops::Deref for LUT_HYBRID_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

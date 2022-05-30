@@ -14,7 +14,7 @@ impl From<crate::R<CTRL_SIZE_SPEC>> for R {
     }
 }
 #[doc = "Field `ctrl_size` reader - "]
-pub struct CTRL_SIZE_R(crate::FieldReader<u32, u32>);
+pub struct CTRL_SIZE_R(crate::FieldReader<u32>);
 impl CTRL_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl CTRL_SIZE_R {
     }
 }
 impl core::ops::Deref for CTRL_SIZE_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

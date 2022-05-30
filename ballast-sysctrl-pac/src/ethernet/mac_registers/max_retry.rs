@@ -35,7 +35,7 @@ impl From<crate::W<MAXRETRY_SPEC>> for W {
     }
 }
 #[doc = "Field `MaxRetry` reader - When collision occurred in half duplex mode, the transmit state machine will try to transmit this collision packet again. If one packet collide MaxRetry times, this packet will be drop and never try again."]
-pub struct MAXRETRY_R(crate::FieldReader<u8, u8>);
+pub struct MAXRETRY_R(crate::FieldReader<u8>);
 impl MAXRETRY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl MAXRETRY_R {
     }
 }
 impl core::ops::Deref for MAXRETRY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

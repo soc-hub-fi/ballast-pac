@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_PER_SPEC>> for W {
     }
 }
 #[doc = "Field `Sel_hyper_axi` reader - "]
-pub struct SEL_HYPER_AXI_R(crate::FieldReader<bool, bool>);
+pub struct SEL_HYPER_AXI_R(crate::FieldReader<bool>);
 impl SEL_HYPER_AXI_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SEL_HYPER_AXI_R {
     }
 }
 impl core::ops::Deref for SEL_HYPER_AXI_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

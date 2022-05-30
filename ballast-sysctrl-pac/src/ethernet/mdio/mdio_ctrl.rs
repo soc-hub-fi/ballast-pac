@@ -35,7 +35,7 @@ impl From<crate::W<MDIO_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `no_preample` reader - Bit 0 - No Preamble: When this bit is unset, read or write operations start with a 32-bit preamble. When it is set, preamble is not used."]
-pub struct NO_PREAMPLE_R(crate::FieldReader<bool, bool>);
+pub struct NO_PREAMPLE_R(crate::FieldReader<bool>);
 impl NO_PREAMPLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl NO_PREAMPLE_R {
     }
 }
 impl core::ops::Deref for NO_PREAMPLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> NO_PREAMPLE_W<'a> {
     }
 }
 #[doc = "Field `start_write` reader - Bit 1 - Start Write: When this bit is set, MDIO logic starts a write operation with above write data, PHY and register addresses. This bit is automatically unset when the operation starts."]
-pub struct START_WRITE_R(crate::FieldReader<bool, bool>);
+pub struct START_WRITE_R(crate::FieldReader<bool>);
 impl START_WRITE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl START_WRITE_R {
     }
 }
 impl core::ops::Deref for START_WRITE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> START_WRITE_W<'a> {
     }
 }
 #[doc = "Field `start_read` reader - Bit 2 - Start Read: When this bit is set, MDIO logic starts a read operations with above PHY and register addresses. This bit is automatically unset when the operation starts."]
-pub struct START_READ_R(crate::FieldReader<bool, bool>);
+pub struct START_READ_R(crate::FieldReader<bool>);
 impl START_READ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl START_READ_R {
     }
 }
 impl core::ops::Deref for START_READ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

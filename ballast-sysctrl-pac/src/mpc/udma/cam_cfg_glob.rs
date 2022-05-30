@@ -35,7 +35,7 @@ impl From<crate::W<CAM_CFG_GLOB_SPEC>> for W {
     }
 }
 #[doc = "Field `FRAMEDROP_EN` reader - Frame dropping:"]
-pub struct FRAMEDROP_EN_R(crate::FieldReader<bool, bool>);
+pub struct FRAMEDROP_EN_R(crate::FieldReader<bool>);
 impl FRAMEDROP_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl FRAMEDROP_EN_R {
     }
 }
 impl core::ops::Deref for FRAMEDROP_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> FRAMEDROP_EN_W<'a> {
     }
 }
 #[doc = "Field `FRAMEDROP_VAL` reader - ) Sets how many frames should be dropped after each received"]
-pub struct FRAMEDROP_VAL_R(crate::FieldReader<u8, u8>);
+pub struct FRAMEDROP_VAL_R(crate::FieldReader<u8>);
 impl FRAMEDROP_VAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl FRAMEDROP_VAL_R {
     }
 }
 impl core::ops::Deref for FRAMEDROP_VAL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> FRAMEDROP_VAL_W<'a> {
     }
 }
 #[doc = "Field `FRAMESLICE_EN` reader - nput frame slicing: - 1'b0: disable - 1'b1: enabl"]
-pub struct FRAMESLICE_EN_R(crate::FieldReader<bool, bool>);
+pub struct FRAMESLICE_EN_R(crate::FieldReader<bool>);
 impl FRAMESLICE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl FRAMESLICE_EN_R {
     }
 }
 impl core::ops::Deref for FRAMESLICE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -157,7 +157,7 @@ impl From<FORMAT_A> for u8 {
     }
 }
 #[doc = "Field `FORMAT` reader - Input frame format: - 3'b000: RGB565 - 3'b001: RGB555 - 3'b010: RGB444 - 3'b100: BYPASS_LITEND - 3'b101: BYPASS_BIGEND"]
-pub struct FORMAT_R(crate::FieldReader<u8, FORMAT_A>);
+pub struct FORMAT_R(crate::FieldReader<u8>);
 impl FORMAT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -202,7 +202,7 @@ impl FORMAT_R {
     }
 }
 impl core::ops::Deref for FORMAT_R {
-    type Target = crate::FieldReader<u8, FORMAT_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -251,7 +251,7 @@ impl<'a> FORMAT_W<'a> {
     }
 }
 #[doc = "Field `SHIFT` reader - Right shift of final pixel value (DivFactor) NOTE: not used if FORMAT == BYPASS"]
-pub struct SHIFT_R(crate::FieldReader<u8, u8>);
+pub struct SHIFT_R(crate::FieldReader<u8>);
 impl SHIFT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -259,7 +259,7 @@ impl SHIFT_R {
     }
 }
 impl core::ops::Deref for SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -278,7 +278,7 @@ impl<'a> SHIFT_W<'a> {
     }
 }
 #[doc = "Field `EN` reader - Enable data rx from camera interface. The enable/disable happens only at the start of a frame. - 1'b0: disable - 1'b1: enable"]
-pub struct EN_R(crate::FieldReader<bool, bool>);
+pub struct EN_R(crate::FieldReader<bool>);
 impl EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -286,7 +286,7 @@ impl EN_R {
     }
 }
 impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

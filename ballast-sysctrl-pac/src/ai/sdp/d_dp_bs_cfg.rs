@@ -49,7 +49,7 @@ impl From<BS_BYPASS_A> for bool {
     }
 }
 #[doc = "Field `BS_BYPASS` reader - "]
-pub struct BS_BYPASS_R(crate::FieldReader<bool, BS_BYPASS_A>);
+pub struct BS_BYPASS_R(crate::FieldReader<bool>);
 impl BS_BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -75,7 +75,7 @@ impl BS_BYPASS_R {
     }
 }
 impl core::ops::Deref for BS_BYPASS_R {
-    type Target = crate::FieldReader<bool, BS_BYPASS_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -133,7 +133,7 @@ impl From<BS_ALU_BYPASS_A> for bool {
     }
 }
 #[doc = "Field `BS_ALU_BYPASS` reader - "]
-pub struct BS_ALU_BYPASS_R(crate::FieldReader<bool, BS_ALU_BYPASS_A>);
+pub struct BS_ALU_BYPASS_R(crate::FieldReader<bool>);
 impl BS_ALU_BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -159,7 +159,7 @@ impl BS_ALU_BYPASS_R {
     }
 }
 impl core::ops::Deref for BS_ALU_BYPASS_R {
-    type Target = crate::FieldReader<bool, BS_ALU_BYPASS_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl From<BS_ALU_ALGO_A> for u8 {
     }
 }
 #[doc = "Field `BS_ALU_ALGO` reader - "]
-pub struct BS_ALU_ALGO_R(crate::FieldReader<u8, BS_ALU_ALGO_A>);
+pub struct BS_ALU_ALGO_R(crate::FieldReader<u8>);
 impl BS_ALU_ALGO_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -253,7 +253,7 @@ impl BS_ALU_ALGO_R {
     }
 }
 impl core::ops::Deref for BS_ALU_ALGO_R {
-    type Target = crate::FieldReader<u8, BS_ALU_ALGO_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -306,7 +306,7 @@ impl From<BS_MUL_BYPASS_A> for bool {
     }
 }
 #[doc = "Field `BS_MUL_BYPASS` reader - "]
-pub struct BS_MUL_BYPASS_R(crate::FieldReader<bool, BS_MUL_BYPASS_A>);
+pub struct BS_MUL_BYPASS_R(crate::FieldReader<bool>);
 impl BS_MUL_BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -332,7 +332,7 @@ impl BS_MUL_BYPASS_R {
     }
 }
 impl core::ops::Deref for BS_MUL_BYPASS_R {
-    type Target = crate::FieldReader<bool, BS_MUL_BYPASS_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -390,7 +390,7 @@ impl From<BS_MUL_PRELU_A> for bool {
     }
 }
 #[doc = "Field `BS_MUL_PRELU` reader - "]
-pub struct BS_MUL_PRELU_R(crate::FieldReader<bool, BS_MUL_PRELU_A>);
+pub struct BS_MUL_PRELU_R(crate::FieldReader<bool>);
 impl BS_MUL_PRELU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -416,7 +416,7 @@ impl BS_MUL_PRELU_R {
     }
 }
 impl core::ops::Deref for BS_MUL_PRELU_R {
-    type Target = crate::FieldReader<bool, BS_MUL_PRELU_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -474,7 +474,7 @@ impl From<BS_RELU_BYPASS_A> for bool {
     }
 }
 #[doc = "Field `BS_RELU_BYPASS` reader - "]
-pub struct BS_RELU_BYPASS_R(crate::FieldReader<bool, BS_RELU_BYPASS_A>);
+pub struct BS_RELU_BYPASS_R(crate::FieldReader<bool>);
 impl BS_RELU_BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -500,7 +500,7 @@ impl BS_RELU_BYPASS_R {
     }
 }
 impl core::ops::Deref for BS_RELU_BYPASS_R {
-    type Target = crate::FieldReader<bool, BS_RELU_BYPASS_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

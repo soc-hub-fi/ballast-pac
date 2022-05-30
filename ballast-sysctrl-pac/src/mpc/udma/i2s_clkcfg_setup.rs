@@ -35,7 +35,7 @@ impl From<crate::W<I2S_CLKCFG_SETUP_SPEC>> for W {
     }
 }
 #[doc = "Field `MASTER_CLK_DIV` reader - LSB of master clock divider"]
-pub struct MASTER_CLK_DIV_R(crate::FieldReader<u8, u8>);
+pub struct MASTER_CLK_DIV_R(crate::FieldReader<u8>);
 impl MASTER_CLK_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl MASTER_CLK_DIV_R {
     }
 }
 impl core::ops::Deref for MASTER_CLK_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> MASTER_CLK_DIV_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_CLK_DIV` reader - LSB of slave clock divider"]
-pub struct SLAVE_CLK_DIV_R(crate::FieldReader<u8, u8>);
+pub struct SLAVE_CLK_DIV_R(crate::FieldReader<u8>);
 impl SLAVE_CLK_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl SLAVE_CLK_DIV_R {
     }
 }
 impl core::ops::Deref for SLAVE_CLK_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> SLAVE_CLK_DIV_W<'a> {
     }
 }
 #[doc = "Field `COMMON_CLK_DIV` reader - MSBs of both master and slave clock divider"]
-pub struct COMMON_CLK_DIV_R(crate::FieldReader<u8, u8>);
+pub struct COMMON_CLK_DIV_R(crate::FieldReader<u8>);
 impl COMMON_CLK_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl COMMON_CLK_DIV_R {
     }
 }
 impl core::ops::Deref for COMMON_CLK_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> COMMON_CLK_DIV_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_CLK_EN` reader - Enables Slave clock"]
-pub struct SLAVE_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_CLK_EN_R(crate::FieldReader<bool>);
 impl SLAVE_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -124,7 +124,7 @@ impl SLAVE_CLK_EN_R {
     }
 }
 impl core::ops::Deref for SLAVE_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> SLAVE_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `MASTER_CLK_EN` reader - Enables Master clock"]
-pub struct MASTER_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct MASTER_CLK_EN_R(crate::FieldReader<bool>);
 impl MASTER_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -161,7 +161,7 @@ impl MASTER_CLK_EN_R {
     }
 }
 impl core::ops::Deref for MASTER_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -190,7 +190,7 @@ impl<'a> MASTER_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `PDM_CLK_EN` reader - When enabled slave output clock is taken from PDM module."]
-pub struct PDM_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct PDM_CLK_EN_R(crate::FieldReader<bool>);
 impl PDM_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -198,7 +198,7 @@ impl PDM_CLK_EN_R {
     }
 }
 impl core::ops::Deref for PDM_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -227,7 +227,7 @@ impl<'a> PDM_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_EXT` reader - When set uses external clock for slave"]
-pub struct SLAVE_EXT_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_EXT_R(crate::FieldReader<bool>);
 impl SLAVE_EXT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -235,7 +235,7 @@ impl SLAVE_EXT_R {
     }
 }
 impl core::ops::Deref for SLAVE_EXT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -264,7 +264,7 @@ impl<'a> SLAVE_EXT_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_NUM` reader - Selects slave clock source(either ext or generated): -1'b0:selects master -1'b1:selects slave"]
-pub struct SLAVE_NUM_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_NUM_R(crate::FieldReader<bool>);
 impl SLAVE_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -272,7 +272,7 @@ impl SLAVE_NUM_R {
     }
 }
 impl core::ops::Deref for SLAVE_NUM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -301,7 +301,7 @@ impl<'a> SLAVE_NUM_W<'a> {
     }
 }
 #[doc = "Field `MASTER_EXT` reader - When set uses external clock for master"]
-pub struct MASTER_EXT_R(crate::FieldReader<bool, bool>);
+pub struct MASTER_EXT_R(crate::FieldReader<bool>);
 impl MASTER_EXT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -309,7 +309,7 @@ impl MASTER_EXT_R {
     }
 }
 impl core::ops::Deref for MASTER_EXT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -338,7 +338,7 @@ impl<'a> MASTER_EXT_W<'a> {
     }
 }
 #[doc = "Field `MASTER_NUM` reader - Selects master clock source(either ext or generated): -1'b0:selects master -1'b1:selects slave"]
-pub struct MASTER_NUM_R(crate::FieldReader<bool, bool>);
+pub struct MASTER_NUM_R(crate::FieldReader<bool>);
 impl MASTER_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -346,7 +346,7 @@ impl MASTER_NUM_R {
     }
 }
 impl core::ops::Deref for MASTER_NUM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<REG_SS_CLK_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `pulpissimo` reader - Pulpissimo subsystem clock enable"]
-pub struct PULPISSIMO_R(crate::FieldReader<bool, bool>);
+pub struct PULPISSIMO_R(crate::FieldReader<bool>);
 impl PULPISSIMO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PULPISSIMO_R {
     }
 }
 impl core::ops::Deref for PULPISSIMO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PULPISSIMO_W<'a> {
     }
 }
 #[doc = "Field `interconnect` reader - interconnect subsystem clock enable"]
-pub struct INTERCONNECT_R(crate::FieldReader<bool, bool>);
+pub struct INTERCONNECT_R(crate::FieldReader<bool>);
 impl INTERCONNECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl INTERCONNECT_R {
     }
 }
 impl core::ops::Deref for INTERCONNECT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> INTERCONNECT_W<'a> {
     }
 }
 #[doc = "Field `top_peripheral` reader - Top Peripheral subsystem clock enable"]
-pub struct TOP_PERIPHERAL_R(crate::FieldReader<bool, bool>);
+pub struct TOP_PERIPHERAL_R(crate::FieldReader<bool>);
 impl TOP_PERIPHERAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TOP_PERIPHERAL_R {
     }
 }
 impl core::ops::Deref for TOP_PERIPHERAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> TOP_PERIPHERAL_W<'a> {
     }
 }
 #[doc = "Field `c2c` reader - C2C clock enable"]
-pub struct C2C_R(crate::FieldReader<bool, bool>);
+pub struct C2C_R(crate::FieldReader<bool>);
 impl C2C_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl C2C_R {
     }
 }
 impl core::ops::Deref for C2C_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> C2C_W<'a> {
     }
 }
 #[doc = "Field `coreHW` reader - coreHW subsystem clock enable"]
-pub struct COREHW_R(crate::FieldReader<bool, bool>);
+pub struct COREHW_R(crate::FieldReader<bool>);
 impl COREHW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl COREHW_R {
     }
 }
 impl core::ops::Deref for COREHW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> COREHW_W<'a> {
     }
 }
 #[doc = "Field `TTA` reader - TTA subsystem clock enable"]
-pub struct TTA_R(crate::FieldReader<bool, bool>);
+pub struct TTA_R(crate::FieldReader<bool>);
 impl TTA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl TTA_R {
     }
 }
 impl core::ops::Deref for TTA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> TTA_W<'a> {
     }
 }
 #[doc = "Field `ethernet` reader - Ethernet subsystem clock enable"]
-pub struct ETHERNET_R(crate::FieldReader<bool, bool>);
+pub struct ETHERNET_R(crate::FieldReader<bool>);
 impl ETHERNET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl ETHERNET_R {
     }
 }
 impl core::ops::Deref for ETHERNET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> ETHERNET_W<'a> {
     }
 }
 #[doc = "Field `AI` reader - AI subsystem clock enable"]
-pub struct AI_R(crate::FieldReader<bool, bool>);
+pub struct AI_R(crate::FieldReader<bool>);
 impl AI_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl AI_R {
     }
 }
 impl core::ops::Deref for AI_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> AI_W<'a> {
     }
 }
 #[doc = "Field `HPC` reader - HPC subsystem clock enable"]
-pub struct HPC_R(crate::FieldReader<bool, bool>);
+pub struct HPC_R(crate::FieldReader<bool>);
 impl HPC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl HPC_R {
     }
 }
 impl core::ops::Deref for HPC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,7 +35,7 @@ impl From<crate::W<CPU_RD_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_rd_addr` reader - All statistic counters are stored in a blockram. When you read a counter,you need to write the corresponding address to CPU_rd_addr register and assert CPU_rd_apply signal. When the counter data register CPU_rd_dout is available , the signal CPU_rd_grant will be “1”."]
-pub struct CPU_RD_ADDR_R(crate::FieldReader<u8, u8>);
+pub struct CPU_RD_ADDR_R(crate::FieldReader<u8>);
 impl CPU_RD_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CPU_RD_ADDR_R {
     }
 }
 impl core::ops::Deref for CPU_RD_ADDR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

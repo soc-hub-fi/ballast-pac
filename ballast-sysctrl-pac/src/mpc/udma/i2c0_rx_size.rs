@@ -35,7 +35,7 @@ impl From<crate::W<I2C0_RX_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_SIZE` reader - RX buffer size bitfield in bytes. (128kBytes maximum) - Read: returns remaining buffer size to transfer. - Write: sets buffer size."]
-pub struct RX_SIZE_R(crate::FieldReader<u32, u32>);
+pub struct RX_SIZE_R(crate::FieldReader<u32>);
 impl RX_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl RX_SIZE_R {
     }
 }
 impl core::ops::Deref for RX_SIZE_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

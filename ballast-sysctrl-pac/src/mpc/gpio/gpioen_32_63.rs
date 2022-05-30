@@ -35,7 +35,7 @@ impl From<crate::W<GPIOEN_32_63_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIOEN_32_63` reader - "]
-pub struct GPIOEN_32_63_R(crate::FieldReader<u32, u32>);
+pub struct GPIOEN_32_63_R(crate::FieldReader<u32>);
 impl GPIOEN_32_63_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl GPIOEN_32_63_R {
     }
 }
 impl core::ops::Deref for GPIOEN_32_63_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

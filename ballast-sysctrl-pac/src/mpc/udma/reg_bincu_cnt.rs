@@ -35,7 +35,7 @@ impl From<crate::W<REG_BINCU_CNT_SPEC>> for W {
     }
 }
 #[doc = "Field `COUNT` reader - Binarization and counting unit count value set."]
-pub struct COUNT_R(crate::FieldReader<u32, u32>);
+pub struct COUNT_R(crate::FieldReader<u32>);
 impl COUNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl COUNT_R {
     }
 }
 impl core::ops::Deref for COUNT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> COUNT_W<'a> {
     }
 }
 #[doc = "Field `EN` reader - Binarization and counting unit enable: -1'b0: not enable -1'b1: enable"]
-pub struct EN_R(crate::FieldReader<bool, bool>);
+pub struct EN_R(crate::FieldReader<bool>);
 impl EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl EN_R {
     }
 }
 impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

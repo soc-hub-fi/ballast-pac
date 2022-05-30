@@ -35,7 +35,7 @@ impl From<crate::W<REG_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `DONE` reader - Filter done flag, write 1 to clear the flag : -1'b0: Filter process is not finished -1'b1: Filter process is finished"]
-pub struct DONE_R(crate::FieldReader<bool, bool>);
+pub struct DONE_R(crate::FieldReader<bool>);
 impl DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DONE_R {
     }
 }
 impl core::ops::Deref for DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

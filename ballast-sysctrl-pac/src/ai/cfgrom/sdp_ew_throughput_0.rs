@@ -14,7 +14,7 @@ impl From<crate::R<SDP_EW_THROUGHPUT_0_SPEC>> for R {
     }
 }
 #[doc = "Field `SDP_EW_THROUGHPUT` reader - "]
-pub struct SDP_EW_THROUGHPUT_R(crate::FieldReader<u32, u32>);
+pub struct SDP_EW_THROUGHPUT_R(crate::FieldReader<u32>);
 impl SDP_EW_THROUGHPUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl SDP_EW_THROUGHPUT_R {
     }
 }
 impl core::ops::Deref for SDP_EW_THROUGHPUT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

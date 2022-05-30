@@ -49,7 +49,7 @@ impl From<BN_ALU_SRC_A> for bool {
     }
 }
 #[doc = "Field `BN_ALU_SRC` reader - "]
-pub struct BN_ALU_SRC_R(crate::FieldReader<bool, BN_ALU_SRC_A>);
+pub struct BN_ALU_SRC_R(crate::FieldReader<bool>);
 impl BN_ALU_SRC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -75,7 +75,7 @@ impl BN_ALU_SRC_R {
     }
 }
 impl core::ops::Deref for BN_ALU_SRC_R {
-    type Target = crate::FieldReader<bool, BN_ALU_SRC_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -119,7 +119,7 @@ impl<'a> BN_ALU_SRC_W<'a> {
     }
 }
 #[doc = "Field `BN_ALU_SHIFT_VALUE` reader - "]
-pub struct BN_ALU_SHIFT_VALUE_R(crate::FieldReader<u8, u8>);
+pub struct BN_ALU_SHIFT_VALUE_R(crate::FieldReader<u8>);
 impl BN_ALU_SHIFT_VALUE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -127,7 +127,7 @@ impl BN_ALU_SHIFT_VALUE_R {
     }
 }
 impl core::ops::Deref for BN_ALU_SHIFT_VALUE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

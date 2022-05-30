@@ -14,7 +14,7 @@ impl From<crate::R<D_WMB_BYTES_SPEC>> for R {
     }
 }
 #[doc = "Field `WMB_BYTES` reader - "]
-pub struct WMB_BYTES_R(crate::FieldReader<u32, u32>);
+pub struct WMB_BYTES_R(crate::FieldReader<u32>);
 impl WMB_BYTES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl WMB_BYTES_R {
     }
 }
 impl core::ops::Deref for WMB_BYTES_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

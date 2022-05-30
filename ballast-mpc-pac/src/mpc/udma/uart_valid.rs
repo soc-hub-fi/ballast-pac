@@ -14,7 +14,7 @@ impl From<crate::R<UART_VALID_SPEC>> for R {
     }
 }
 #[doc = "Field `READY` reader - Used only in RX polling method to indicate data is ready for read: - 1'b0: Data is not ready to read - 1'b1: Data is ready to read"]
-pub struct READY_R(crate::FieldReader<bool, bool>);
+pub struct READY_R(crate::FieldReader<bool>);
 impl READY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,7 +22,7 @@ impl READY_R {
     }
 }
 impl core::ops::Deref for READY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

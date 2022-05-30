@@ -35,7 +35,7 @@ impl From<crate::W<ADDR_VALID_RULE_SPEC>> for W {
     }
 }
 #[doc = "Field `addr_valid_rule` reader - "]
-pub struct ADDR_VALID_RULE_R(crate::FieldReader<u64, u64>);
+pub struct ADDR_VALID_RULE_R(crate::FieldReader<u64>);
 impl ADDR_VALID_RULE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u64) -> Self {
@@ -43,7 +43,7 @@ impl ADDR_VALID_RULE_R {
     }
 }
 impl core::ops::Deref for ADDR_VALID_RULE_R {
-    type Target = crate::FieldReader<u64, u64>;
+    type Target = crate::FieldReader<u64>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

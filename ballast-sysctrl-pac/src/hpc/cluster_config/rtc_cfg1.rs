@@ -35,7 +35,7 @@ impl From<crate::W<RTC_CFG1_SPEC>> for W {
     }
 }
 #[doc = "Field `rtc_cfg1` reader - "]
-pub struct RTC_CFG1_R(crate::FieldReader<u64, u64>);
+pub struct RTC_CFG1_R(crate::FieldReader<u64>);
 impl RTC_CFG1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u64) -> Self {
@@ -43,7 +43,7 @@ impl RTC_CFG1_R {
     }
 }
 impl core::ops::Deref for RTC_CFG1_R {
-    type Target = crate::FieldReader<u64, u64>;
+    type Target = crate::FieldReader<u64>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

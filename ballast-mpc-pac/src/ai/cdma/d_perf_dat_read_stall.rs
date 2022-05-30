@@ -14,7 +14,7 @@ impl From<crate::R<D_PERF_DAT_READ_STALL_SPEC>> for R {
     }
 }
 #[doc = "Field `DAT_RD_STALL` reader - "]
-pub struct DAT_RD_STALL_R(crate::FieldReader<u32, u32>);
+pub struct DAT_RD_STALL_R(crate::FieldReader<u32>);
 impl DAT_RD_STALL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl DAT_RD_STALL_R {
     }
 }
 impl core::ops::Deref for DAT_RD_STALL_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

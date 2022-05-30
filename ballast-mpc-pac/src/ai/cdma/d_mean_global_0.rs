@@ -14,7 +14,7 @@ impl From<crate::R<D_MEAN_GLOBAL_0_SPEC>> for R {
     }
 }
 #[doc = "Field `MEAN_RY` reader - "]
-pub struct MEAN_RY_R(crate::FieldReader<u16, u16>);
+pub struct MEAN_RY_R(crate::FieldReader<u16>);
 impl MEAN_RY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,14 +22,14 @@ impl MEAN_RY_R {
     }
 }
 impl core::ops::Deref for MEAN_RY_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `MEAN_GU` reader - "]
-pub struct MEAN_GU_R(crate::FieldReader<u16, u16>);
+pub struct MEAN_GU_R(crate::FieldReader<u16>);
 impl MEAN_GU_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -37,7 +37,7 @@ impl MEAN_GU_R {
     }
 }
 impl core::ops::Deref for MEAN_GU_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

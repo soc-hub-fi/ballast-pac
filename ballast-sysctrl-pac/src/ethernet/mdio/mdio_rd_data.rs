@@ -14,7 +14,7 @@ impl From<crate::R<MDIO_RDDATA_SPEC>> for R {
     }
 }
 #[doc = "Field `MDIO_RdData` reader - "]
-pub struct MDIO_RDDATA_R(crate::FieldReader<u16, u16>);
+pub struct MDIO_RDDATA_R(crate::FieldReader<u16>);
 impl MDIO_RDDATA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,7 +22,7 @@ impl MDIO_RDDATA_R {
     }
 }
 impl core::ops::Deref for MDIO_RDDATA_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

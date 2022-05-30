@@ -35,7 +35,7 @@ impl From<crate::W<RESET_LO_SPEC>> for W {
     }
 }
 #[doc = "Field `RESET_LO` reader - "]
-pub struct RESET_LO_R(crate::FieldReader<bool, bool>);
+pub struct RESET_LO_R(crate::FieldReader<bool>);
 impl RESET_LO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RESET_LO_R {
     }
 }
 impl core::ops::Deref for RESET_LO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

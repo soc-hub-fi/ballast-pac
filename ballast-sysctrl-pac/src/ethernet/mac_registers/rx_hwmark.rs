@@ -35,7 +35,7 @@ impl From<crate::W<RX_HWMARK_SPEC>> for W {
     }
 }
 #[doc = "Field `Rx_Hwmark` reader - used to set receive Fifo high water mark"]
-pub struct RX_HWMARK_R(crate::FieldReader<u8, u8>);
+pub struct RX_HWMARK_R(crate::FieldReader<u8>);
 impl RX_HWMARK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl RX_HWMARK_R {
     }
 }
 impl core::ops::Deref for RX_HWMARK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

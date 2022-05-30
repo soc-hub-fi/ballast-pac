@@ -35,7 +35,7 @@ impl From<crate::W<JTAG_REG_SPEC>> for W {
     }
 }
 #[doc = "Field `JTAG_REG_OUT` reader - "]
-pub struct JTAG_REG_OUT_R(crate::FieldReader<u8, u8>);
+pub struct JTAG_REG_OUT_R(crate::FieldReader<u8>);
 impl JTAG_REG_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl JTAG_REG_OUT_R {
     }
 }
 impl core::ops::Deref for JTAG_REG_OUT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> JTAG_REG_OUT_W<'a> {
     }
 }
 #[doc = "Field `JTAG_REG_IN` reader - "]
-pub struct JTAG_REG_IN_R(crate::FieldReader<u8, u8>);
+pub struct JTAG_REG_IN_R(crate::FieldReader<u8>);
 impl JTAG_REG_IN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl JTAG_REG_IN_R {
     }
 }
 impl core::ops::Deref for JTAG_REG_IN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

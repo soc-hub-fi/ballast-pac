@@ -35,7 +35,7 @@ impl From<crate::W<PAD_CFG_2_SPEC>> for W {
     }
 }
 #[doc = "Field `PAD_6` reader - "]
-pub struct PAD_6_R(crate::FieldReader<u16, u16>);
+pub struct PAD_6_R(crate::FieldReader<u16>);
 impl PAD_6_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl PAD_6_R {
     }
 }
 impl core::ops::Deref for PAD_6_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PAD_6_W<'a> {
     }
 }
 #[doc = "Field `PAD_7` reader - "]
-pub struct PAD_7_R(crate::FieldReader<u16, u16>);
+pub struct PAD_7_R(crate::FieldReader<u16>);
 impl PAD_7_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl PAD_7_R {
     }
 }
 impl core::ops::Deref for PAD_7_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> PAD_7_W<'a> {
     }
 }
 #[doc = "Field `PAD_8` reader - "]
-pub struct PAD_8_R(crate::FieldReader<u16, u16>);
+pub struct PAD_8_R(crate::FieldReader<u16>);
 impl PAD_8_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -97,7 +97,7 @@ impl PAD_8_R {
     }
 }
 impl core::ops::Deref for PAD_8_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -14,7 +14,7 @@ impl From<crate::R<REG_BINCU_VAL_SPEC>> for R {
     }
 }
 #[doc = "Field `REG_BINCU_VAL` reader - "]
-pub struct REG_BINCU_VAL_R(crate::FieldReader<u32, u32>);
+pub struct REG_BINCU_VAL_R(crate::FieldReader<u32>);
 impl REG_BINCU_VAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl REG_BINCU_VAL_R {
     }
 }
 impl core::ops::Deref for REG_BINCU_VAL_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

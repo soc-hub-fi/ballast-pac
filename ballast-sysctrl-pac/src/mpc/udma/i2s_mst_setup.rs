@@ -35,7 +35,7 @@ impl From<crate::W<I2S_MST_SETUP_SPEC>> for W {
     }
 }
 #[doc = "Field `MASTER_WORDS` reader - Sets how many words for each I2S phase"]
-pub struct MASTER_WORDS_R(crate::FieldReader<u8, u8>);
+pub struct MASTER_WORDS_R(crate::FieldReader<u8>);
 impl MASTER_WORDS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl MASTER_WORDS_R {
     }
 }
 impl core::ops::Deref for MASTER_WORDS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> MASTER_WORDS_W<'a> {
     }
 }
 #[doc = "Field `MASTER_BITS` reader - Sets how many bits per word"]
-pub struct MASTER_BITS_R(crate::FieldReader<u8, u8>);
+pub struct MASTER_BITS_R(crate::FieldReader<u8>);
 impl MASTER_BITS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl MASTER_BITS_R {
     }
 }
 impl core::ops::Deref for MASTER_BITS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> MASTER_BITS_W<'a> {
     }
 }
 #[doc = "Field `MASTER_LSB` reader - Enables LSB shifting"]
-pub struct MASTER_LSB_R(crate::FieldReader<bool, bool>);
+pub struct MASTER_LSB_R(crate::FieldReader<bool>);
 impl MASTER_LSB_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl MASTER_LSB_R {
     }
 }
 impl core::ops::Deref for MASTER_LSB_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> MASTER_LSB_W<'a> {
     }
 }
 #[doc = "Field `MASTER_2CH` reader - Enables both channels"]
-pub struct MASTER_2CH_R(crate::FieldReader<bool, bool>);
+pub struct MASTER_2CH_R(crate::FieldReader<bool>);
 impl MASTER_2CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl MASTER_2CH_R {
     }
 }
 impl core::ops::Deref for MASTER_2CH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> MASTER_2CH_W<'a> {
     }
 }
 #[doc = "Field `MASTER_EN` reader - Enables the Master"]
-pub struct MASTER_EN_R(crate::FieldReader<bool, bool>);
+pub struct MASTER_EN_R(crate::FieldReader<bool>);
 impl MASTER_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl MASTER_EN_R {
     }
 }
 impl core::ops::Deref for MASTER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
