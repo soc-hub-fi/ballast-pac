@@ -4,7 +4,7 @@ Peripheral access API for System Control CPU of Ballast SoC. This file provides 
 
 A figure for context, the PAC is in red:
 
-![PAC in context](doc/render/ballast-bsp-architecture-pac.drawio.png)
+![PAC in context](../doc/render/ballast-bsp-architecture-pac.drawio.png)
 
 ## Usage (users & CI)
 

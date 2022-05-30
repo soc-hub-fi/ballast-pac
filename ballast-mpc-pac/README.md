@@ -4,7 +4,7 @@ Peripheral access API for MPC of Ballast SoC. This file provides a guide for 1. 
 
 A figure for context, the PAC is in red:
 
-![PAC in context](doc/render/ballast-bsp-architecture-pac.drawio.png)
+![PAC in context](../doc/render/ballast-bsp-architecture-pac.drawio.png)
 
 ## Usage (users & CI)
 
