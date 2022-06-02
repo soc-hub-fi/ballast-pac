@@ -11,7 +11,7 @@
 		<mpuPresent>false</mpuPresent>
 		<fpuPresent>false</fpuPresent>
 		<nvicPrioBits>3</nvicPrioBits>
-		<vendorSystickConfig>true</vendorSystickConfig>
+		<vendorSystickConfig>false</vendorSystickConfig>
 	</cpu>
 	<addressUnitBits>8</addressUnitBits>
 	<width>32</width>
@@ -100,7 +100,7 @@
 						</fields>
 					</register>
 					<register>
-						<name>GPIOEN_00_31</name>
+						<name>EN_00_31</name>
 						<description>Bit 31 - 0 GPIOEN (R/W) GPIO[31:0] clock enable configuration bitfield:
 - bit[i]=1’b0: disable clock for GPIO[i]
 - bit[i]=1’b1: enable clock for GPIO[i]
@@ -114,7 +114,7 @@ Clock must be enabled for a GPIO if it’s direction is configured in input mode
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>GPIOEN</name>
+								<name>EN</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
@@ -472,7 +472,13 @@ input data of GPIO[i].
 						</fields>
 					</register>
 					<register>
-						<name>GPIOEN_32_63</name>
+						<name>EN_32_63</name>
+						<description>GPIOEN (R/W) GPIO[63:32] clock enable configuration bitfield:
+- bit[i]=1’b0: disable clock for GPIO[i]
+- bit[i]=1’b1: enable clock for GPIO[i]
+GPIOs are gathered by groups of 4. The clock gating of one group is done only if
+all 4 GPIOs are disabled.
+Clock must be enabled for a GPIO if it’s direction is configured in input mode.</description>
 						<addressOffset>0x003C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -480,7 +486,7 @@ input data of GPIO[i].
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>GPIOEN_32_63</name>
+								<name>EN</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
@@ -20735,7 +20741,7 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH0_LEN1</name>
+						<name>TX_CH0_LEN1</name>
 						<description>FILTER tx channel  length2 register</description>
 						<addressOffset>0x040C</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -20750,7 +20756,7 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH0_CFG</name>
+						<name>TX_CH0_CFG</name>
 						<description>FILTER tx channel  configuration register</description>
 						<addressOffset>0x0404</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -20812,7 +20818,7 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH0_LEN2</name>
+						<name>TX_CH0_LEN2</name>
 						<description>FILTER tx channel 0 length2 register</description>
 						<addressOffset>0x0410</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -20827,7 +20833,7 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH0_LEN0</name>
+						<name>TX_CH0_LEN0</name>
 						<description>FILTER tx channel length1 register</description>
 						<addressOffset>0x0408</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -20842,7 +20848,7 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH0_ADD</name>
+						<name>TX_CH0_ADD</name>
 						<description>FILTER tx channel address register</description>
 						<addressOffset>0x0400</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -20858,7 +20864,7 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH1_ADD</name>
+						<name>TX_CH1_ADD</name>
 						<description>FILTER tx channel address register</description>
 						<addressOffset>0x0414</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -20874,7 +20880,7 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH1_CFG</name>
+						<name>TX_CH1_CFG</name>
 						<description>FILTER tx channel  configuration register</description>
 						<addressOffset>0x0418</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -20936,7 +20942,7 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH1_LEN0</name>
+						<name>TX_CH1_LEN0</name>
 						<description>FILTER tx channel length1 register</description>
 						<addressOffset>0x041C</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -20951,7 +20957,7 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH1_LEN1</name>
+						<name>TX_CH1_LEN1</name>
 						<description>FILTER tx channel  length2 register</description>
 						<addressOffset>0x0420</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -20966,7 +20972,7 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						</fields>
 					</register>
 					<register>
-						<name>REG_FILT_CMD</name>
+						<name>FILT_CMD</name>
 						<description>FILTER start register</description>
 						<addressOffset>0x045C</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -20983,7 +20989,7 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						</fields>
 					</register>
 					<register>
-						<name>REG_BINCU_VAL</name>
+						<name>BINCU_VAL</name>
 						<description>FILTER binarization result
 count register</description>
 						<addressOffset>0x0454</addressOffset>
@@ -20999,7 +21005,7 @@ count register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_BINCU_CNT</name>
+						<name>BINCU_CNT</name>
 						<description>FILTER binarization count register</description>
 						<addressOffset>0x044C</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -21024,7 +21030,7 @@ count register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_AU_REG1</name>
+						<name>AU_REG1</name>
 						<description>FILTER arithmetic unit 1 register</description>
 						<addressOffset>0x0444</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -21039,7 +21045,7 @@ count register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_AU_CFG</name>
+						<name>AU_CFG</name>
 						<description>FILTER arithmetic unit configuration register</description>
 						<addressOffset>0x043C</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -21168,7 +21174,7 @@ count register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_RX_CH_LEN1</name>
+						<name>RX_CH_LEN1</name>
 						<description>FILTER RX channel length1 register</description>
 						<addressOffset>0x0434</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -21183,7 +21189,7 @@ count register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_RX_CH_CFG</name>
+						<name>RX_CH_CFG</name>
 						<description>FILTER RX channel configuration register</description>
 						<addressOffset>0x042C</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -21246,7 +21252,7 @@ count register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH1_LEN2</name>
+						<name>TX_CH1_LEN2</name>
 						<description>FILTER RX channel configuration register</description>
 						<addressOffset>0x0424</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -21261,7 +21267,7 @@ count register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_STATUS</name>
+						<name>STATUS</name>
 						<description>FILTER status register</description>
 						<addressOffset>0x0460</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -21280,7 +21286,7 @@ count register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_FILT</name>
+						<name>FILT</name>
 						<description>FILTER control
 mode register</description>
 						<addressOffset>0x0458</addressOffset>
@@ -21296,7 +21302,7 @@ mode register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_BINCU_SETUP</name>
+						<name>BINCU_SETUP</name>
 						<description>FILTER binarization result count register</description>
 						<addressOffset>0x0450</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -21311,7 +21317,7 @@ mode register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_BINCU_TH</name>
+						<name>BINCU_TH</name>
 						<description>FILTER binarization threshold register</description>
 						<addressOffset>0x0448</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -21326,7 +21332,7 @@ mode register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_AU_REG0</name>
+						<name>AU_REG0</name>
 						<description>FILTER arithmetic unit 0 register</description>
 						<addressOffset>0x0440</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -21341,7 +21347,7 @@ mode register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_RX_CH_LEN2</name>
+						<name>RX_CH_LEN2</name>
 						<description>FILTER RX channel length2 register</description>
 						<addressOffset>0x0438</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -21356,7 +21362,7 @@ mode register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_RX_CH_LEN0</name>
+						<name>RX_CH_LEN0</name>
 						<description>FILTER RX channel configuration register</description>
 						<addressOffset>0x0430</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -21371,7 +21377,7 @@ mode register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_RX_CH_ADD</name>
+						<name>RX_CH_ADD</name>
 						<description>FILTER RX channel address register</description>
 						<addressOffset>0x0428</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -24184,7 +24190,7 @@ Is reset value correct?</description>
 					</register>
 				</cluster>
 				<cluster>
-					<name>SocControl_TTA_PLL</name>
+					<name>SocControl</name>
 					<addressOffset>0x00104000</addressOffset>
 					<register>
 						<name>INFO</name>
@@ -24603,7 +24609,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TTA_PLL_LOOP_CTRL</name>
+						<name>TTA_PLL_LOOP_CTRL</name>
 						<addressOffset>0x0060</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -24617,7 +24623,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TTA_PLL_DIV</name>
+						<name>TTA_PLL_DIV</name>
 						<addressOffset>0x0064</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -24639,7 +24645,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TTA_PLL_DEBUG_CTRL</name>
+						<name>TTA_PLL_DEBUG_CTRL</name>
 						<addressOffset>0x0068</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -24653,7 +24659,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TTA_PLL_ENABLE</name>
+						<name>TTA_PLL_ENABLE</name>
 						<addressOffset>0x006C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -24671,7 +24677,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TTA_PLL_SPARE_CTRL</name>
+						<name>TTA_PLL_SPARE_CTRL</name>
 						<addressOffset>0x0088</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -24685,7 +24691,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TTA_PLL_TMUX_SEL</name>
+						<name>TTA_PLL_TMUX_SEL</name>
 						<addressOffset>0x008C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -24703,7 +24709,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TTA_PLL_STATUS1</name>
+						<name>TTA_PLL_STATUS1</name>
 						<addressOffset>0x0090</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -24841,7 +24847,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_INTER_CLK_DIV</name>
+						<name>INTER_CLK_DIV</name>
 						<description>Clock divider ratio for the 3 Interconnect modules
 </description>
 						<addressOffset>0x00CC</addressOffset>
@@ -24865,7 +24871,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_PERIPH_CLK_DIV</name>
+						<name>PERIPH_CLK_DIV</name>
 						<addressOffset>0x00A8</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -24879,7 +24885,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TTA_PLL_STATUS2</name>
+						<name>TTA_PLL_STATUS2</name>
 						<addressOffset>0x00BC</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -24894,7 +24900,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TOPPERIPH_CLK_DIV</name>
+						<name>TOPPERIPH_CLK_DIV</name>
 						<addressOffset>0x0094</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -24910,7 +24916,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_SS_CLK_CTRL1</name>
+						<name>CLK_CTRL1</name>
 						<description>Subsystem Clock selection. Bit definition for TTA, Ethernet, AI, HPC subsystems
 
 *_CLK_CTRL Bitfield definitions
@@ -25053,7 +25059,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_SS_CLK_CTRL2</name>
+						<name>CLK_CTRL2</name>
 						<description>Subsystem Clock selection. Bit definition for MPC, Interconnect, C2C and CoreHW subsystems
 
 *_CLK_CTRL Bitfield definitions
@@ -25196,7 +25202,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_SS_RESET_EN</name>
+						<name>SS_RESET_EN</name>
 						<description>Assertion of the Subsystem bit, deasserts the reset to the corresponding subsystem. Bit definition is mentioned in adjoining table
 </description>
 						<addressOffset>0x00B0</addressOffset>
@@ -25230,7 +25236,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 								<access>read-write</access>
 							</field>
 							<field>
-								<name>corewHW</name>
+								<name>core_hw</name>
 								<description>coreHW reset enable</description>
 								<bitRange>[12:12]</bitRange>
 								<access>read-write</access>
@@ -25262,7 +25268,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_SS_CLK_EN</name>
+						<name>SS_CLK_EN</name>
 						<description>Subsystem clock enable register</description>
 						<addressOffset>0x00B4</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -25295,7 +25301,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 								<access>read-write</access>
 							</field>
 							<field>
-								<name>coreHW</name>
+								<name>core_hw</name>
 								<description>coreHW subsystem clock enable</description>
 								<bitRange>[12:12]</bitRange>
 								<access>read-write</access>
@@ -25327,7 +25333,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_SS_CLK_CTRL3</name>
+						<name>CLK_CTRL3</name>
 						<description>Subsystem Clock selection. Bit definition for Top peripheral subsystem.
 
 *_CLK_CTRL Bitfield definitions
@@ -25380,7 +25386,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_SLOW_PULSE_DIV</name>
+						<name>SLOW_PULSE_DIV</name>
 						<addressOffset>0x00A4</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -25794,7 +25800,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 					<name>ETH_PLL</name>
 					<addressOffset>0x001040D0</addressOffset>
 					<register>
-						<name>REG_ETH_PLL_LOOP_CTRL</name>
+						<name>ETH_PLL_LOOP_CTRL</name>
 						<addressOffset>0x0000</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -25808,7 +25814,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_ETH_PLL_DIV</name>
+						<name>ETH_PLL_DIV</name>
 						<addressOffset>0x0004</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -25830,7 +25836,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_ETH_PLL_DEBUG_CTRL</name>
+						<name>ETH_PLL_DEBUG_CTRL</name>
 						<addressOffset>0x0008</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -25844,7 +25850,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_ETH_PLL_ENABLE</name>
+						<name>ETH_PLL_ENABLE</name>
 						<addressOffset>0x000C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -25858,7 +25864,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_ETH_PLL_SPARE_CTRL</name>
+						<name>ETH_PLL_SPARE_CTRL</name>
 						<addressOffset>0x0010</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -25872,7 +25878,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_ETH_PLL_TMUX_SEL</name>
+						<name>ETH_PLL_TMUX_SEL</name>
 						<addressOffset>0x0014</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -25890,7 +25896,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_ETH_PLL_STATUS1</name>
+						<name>ETH_PLL_STATUS1</name>
 						<addressOffset>0x0018</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -25904,7 +25910,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_ETH_PLL_STATUS2</name>
+						<name>ETH_PLL_STATUS2</name>
 						<addressOffset>0x001C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -25922,7 +25928,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 					<name>AI_PLL</name>
 					<addressOffset>0x001040F0</addressOffset>
 					<register>
-						<name>REG_AI_PLL_LOOP_CTRL</name>
+						<name>AI_PLL_LOOP_CTRL</name>
 						<addressOffset>0x0000</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -25936,7 +25942,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_AI_PLL_DIV</name>
+						<name>AI_PLL_DIV</name>
 						<addressOffset>0x0004</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -25958,7 +25964,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_AI_PLL_DEBUG_CTRL</name>
+						<name>AI_PLL_DEBUG_CTRL</name>
 						<addressOffset>0x0008</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -25972,7 +25978,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_AI_PLL_ENABLE</name>
+						<name>AI_PLL_ENABLE</name>
 						<addressOffset>0x000C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -25986,7 +25992,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_AI_PLL_SPARE_CTRL</name>
+						<name>AI_PLL_SPARE_CTRL</name>
 						<addressOffset>0x0010</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26000,7 +26006,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_AI_PLL_TMUX_SEL</name>
+						<name>AI_PLL_TMUX_SEL</name>
 						<addressOffset>0x0014</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26018,7 +26024,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_AI_PLL_STATUS1</name>
+						<name>AI_PLL_STATUS1</name>
 						<addressOffset>0x0018</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26032,7 +26038,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_AI_PLL_STATUS2</name>
+						<name>AI_PLL_STATUS2</name>
 						<addressOffset>0x001C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26050,7 +26056,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 					<name>HPC_PLL</name>
 					<addressOffset>0x00104110</addressOffset>
 					<register>
-						<name>REG_HPC_PLL_LOOP_CTRL</name>
+						<name>HPC_PLL_LOOP_CTRL</name>
 						<addressOffset>0x0000</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26064,7 +26070,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_HPC_PLL_DIV</name>
+						<name>HPC_PLL_DIV</name>
 						<addressOffset>0x0004</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26086,7 +26092,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_HPC_PLL_DEBUG_CTRL</name>
+						<name>HPC_PLL_DEBUG_CTRL</name>
 						<addressOffset>0x0008</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26100,7 +26106,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_HPC_PLL_ENABLE</name>
+						<name>HPC_PLL_ENABLE</name>
 						<addressOffset>0x000C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26114,7 +26120,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_HPC_PLL_SPARE_CTRL</name>
+						<name>HPC_PLL_SPARE_CTRL</name>
 						<addressOffset>0x0010</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26128,7 +26134,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_HPC_PLL_TMUX_SEL</name>
+						<name>HPC_PLL_TMUX_SEL</name>
 						<addressOffset>0x0014</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26146,7 +26152,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_HPC_PLL_STATUS1</name>
+						<name>HPC_PLL_STATUS1</name>
 						<addressOffset>0x0018</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26160,7 +26166,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_HPC_PLL_STATUS2</name>
+						<name>HPC_PLL_STATUS2</name>
 						<addressOffset>0x001C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26178,7 +26184,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 					<name>PULP_PLL</name>
 					<addressOffset>0x00104130</addressOffset>
 					<register>
-						<name>REG_PULP_PLL_LOOP_CTRL</name>
+						<name>PULP_PLL_LOOP_CTRL</name>
 						<addressOffset>0x0000</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26192,7 +26198,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_PULP_PLL_DIV</name>
+						<name>PULP_PLL_DIV</name>
 						<addressOffset>0x0004</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26214,7 +26220,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_PULP_PLL_DEBUG_CTRL</name>
+						<name>PULP_PLL_DEBUG_CTRL</name>
 						<addressOffset>0x0008</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26228,7 +26234,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_PULP_PLL_ENABLE</name>
+						<name>PULP_PLL_ENABLE</name>
 						<addressOffset>0x000C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26242,7 +26248,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_PULP_PLL_SPARE_CTRL</name>
+						<name>PULP_PLL_SPARE_CTRL</name>
 						<addressOffset>0x0010</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26256,7 +26262,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_PULP_PLL_TMUX_SEL</name>
+						<name>PULP_PLL_TMUX_SEL</name>
 						<addressOffset>0x0014</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26274,7 +26280,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_PULP_PLL_STATUS1</name>
+						<name>PULP_PLL_STATUS1</name>
 						<addressOffset>0x0018</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26288,7 +26294,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_PULP_PLL_STATUS2</name>
+						<name>PULP_PLL_STATUS2</name>
 						<addressOffset>0x001C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26306,7 +26312,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 					<name>INTER_PLL</name>
 					<addressOffset>0x00104150</addressOffset>
 					<register>
-						<name>REG_INTER_PLL_LOOP_CTRL</name>
+						<name>INTER_PLL_LOOP_CTRL</name>
 						<addressOffset>0x0000</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26320,7 +26326,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_INTER_PLL_DIV</name>
+						<name>INTER_PLL_DIV</name>
 						<addressOffset>0x0004</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26342,7 +26348,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_INTER_PLL_DEBUG_CTRL</name>
+						<name>INTER_PLL_DEBUG_CTRL</name>
 						<addressOffset>0x0008</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26356,7 +26362,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_INTER_PLL_ENABLE</name>
+						<name>INTER_PLL_ENABLE</name>
 						<addressOffset>0x000C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26370,7 +26376,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_INTER_PLL_SPARE_CTRL</name>
+						<name>INTER_PLL_SPARE_CTRL</name>
 						<addressOffset>0x0010</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26384,7 +26390,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_INTER_PLL_TMUX_SEL</name>
+						<name>INTER_PLL_TMUX_SEL</name>
 						<addressOffset>0x0014</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26402,7 +26408,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_INTER_PLL_STATUS1</name>
+						<name>INTER_PLL_STATUS1</name>
 						<addressOffset>0x0018</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26416,7 +26422,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_INTER_PLL_STATUS2</name>
+						<name>INTER_PLL_STATUS2</name>
 						<addressOffset>0x001C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26434,7 +26440,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 					<name>C2C_PLL</name>
 					<addressOffset>0x00104170</addressOffset>
 					<register>
-						<name>REG_C2C_PLL_LOOP_CTRL</name>
+						<name>C2C_PLL_LOOP_CTRL</name>
 						<addressOffset>0x0000</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26448,7 +26454,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_C2C_PLL_DIV</name>
+						<name>C2C_PLL_DIV</name>
 						<addressOffset>0x0004</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26470,7 +26476,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_C2C_PLL_DEBUG_CTRL</name>
+						<name>C2C_PLL_DEBUG_CTRL</name>
 						<addressOffset>0x0008</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26484,7 +26490,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_C2C_PLL_ENABLE</name>
+						<name>C2C_PLL_ENABLE</name>
 						<addressOffset>0x000C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26498,7 +26504,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_C2C_PLL_SPARE_CTRL</name>
+						<name>C2C_PLL_SPARE_CTRL</name>
 						<addressOffset>0x0010</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26512,7 +26518,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_C2C_PLL_TMUX_SEL</name>
+						<name>C2C_PLL_TMUX_SEL</name>
 						<addressOffset>0x0014</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26530,7 +26536,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_C2C_PLL_STATUS1</name>
+						<name>C2C_PLL_STATUS1</name>
 						<addressOffset>0x0018</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26544,7 +26550,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_C2C_PLL_STATUS2</name>
+						<name>C2C_PLL_STATUS2</name>
 						<addressOffset>0x001C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26562,7 +26568,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 					<name>TOPPERIPH_PLL</name>
 					<addressOffset>0x001041B0</addressOffset>
 					<register>
-						<name>REG_TOPPERIPH_PLL_LOOP_CTRL</name>
+						<name>TOPPERIPH_PLL_LOOP_CTRL</name>
 						<addressOffset>0x0000</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26576,7 +26582,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TOPPERIPH_PLL_DIV</name>
+						<name>TOPPERIPH_PLL_DIV</name>
 						<addressOffset>0x0004</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26598,7 +26604,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TOPPERIPH_PLL_DEBUG_CTRL</name>
+						<name>TOPPERIPH_PLL_DEBUG_CTRL</name>
 						<addressOffset>0x0008</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26612,7 +26618,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TOPPERIPH_PLL_ENABLE</name>
+						<name>TOPPERIPH_PLL_ENABLE</name>
 						<addressOffset>0x000C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26626,7 +26632,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TOPPERIPH_PLL_SPARE_CTRL</name>
+						<name>TOPPERIPH_PLL_SPARE_CTRL</name>
 						<addressOffset>0x0010</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26640,7 +26646,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TOPPERIPH_PLL_TMUX_SEL</name>
+						<name>TOPPERIPH_PLL_TMUX_SEL</name>
 						<addressOffset>0x0014</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26658,7 +26664,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TOPPERIPH_PLL_STATUS1</name>
+						<name>TOPPERIPH_PLL_STATUS1</name>
 						<addressOffset>0x0018</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26672,7 +26678,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TOPPERIPH_PLL_STATUS2</name>
+						<name>TOPPERIPH_PLL_STATUS2</name>
 						<addressOffset>0x001C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26690,7 +26696,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 					<name>BootConfig</name>
 					<addressOffset>0x001041D0</addressOffset>
 					<register>
-						<name>REG_BOOT_CFG</name>
+						<name>BOOT_CFG</name>
 						<addressOffset>0x0000</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -26704,7 +26710,7 @@ select) from pin 0 (bits [1:0]) to 15 (bits [31:30]).</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_BOOT_STATUS</name>
+						<name>BOOT_STATUS</name>
 						<addressOffset>0x0004</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
