@@ -8,8 +8,8 @@ pub struct RegisterBlock {
     #[doc = "0x102000..0x102464 - UDMA"]
     pub udma: UDMA,
     _reserved2: [u8; 0x1b9c],
-    #[doc = "0x104000..0x1040d0 - SocControl_TTA_PLL"]
-    pub soc_control_tta_pll: SOCCONTROL_TTA_PLL,
+    #[doc = "0x104000..0x1040d0 - SocControl"]
+    pub soc_control: SOCCONTROL,
     #[doc = "0x1040d0..0x1040f0 - ETH_PLL"]
     pub eth_pll: ETH_PLL,
     #[doc = "0x1040f0..0x104110 - AI_PLL"]
@@ -134,55 +134,55 @@ pub struct UDMA {
     pub spim_cmd_cfg: crate::Reg<self::udma::spim_cmd_cfg::SPIM_CMD_CFG_SPEC>,
     _reserved24: [u8; 0x02d4],
     #[doc = "0x400 - FILTER tx channel address register"]
-    pub reg_tx_ch0_add: crate::Reg<self::udma::reg_tx_ch0_add::REG_TX_CH0_ADD_SPEC>,
+    pub tx_ch0_add: crate::Reg<self::udma::tx_ch0_add::TX_CH0_ADD_SPEC>,
     #[doc = "0x404 - FILTER tx channel configuration register"]
-    pub reg_tx_ch0_cfg: crate::Reg<self::udma::reg_tx_ch0_cfg::REG_TX_CH0_CFG_SPEC>,
+    pub tx_ch0_cfg: crate::Reg<self::udma::tx_ch0_cfg::TX_CH0_CFG_SPEC>,
     #[doc = "0x408 - FILTER tx channel length1 register"]
-    pub reg_tx_ch0_len0: crate::Reg<self::udma::reg_tx_ch0_len0::REG_TX_CH0_LEN0_SPEC>,
+    pub tx_ch0_len0: crate::Reg<self::udma::tx_ch0_len0::TX_CH0_LEN0_SPEC>,
     #[doc = "0x40c - FILTER tx channel length2 register"]
-    pub reg_tx_ch0_len1: crate::Reg<self::udma::reg_tx_ch0_len1::REG_TX_CH0_LEN1_SPEC>,
+    pub tx_ch0_len1: crate::Reg<self::udma::tx_ch0_len1::TX_CH0_LEN1_SPEC>,
     #[doc = "0x410 - FILTER tx channel 0 length2 register"]
-    pub reg_tx_ch0_len2: crate::Reg<self::udma::reg_tx_ch0_len2::REG_TX_CH0_LEN2_SPEC>,
+    pub tx_ch0_len2: crate::Reg<self::udma::tx_ch0_len2::TX_CH0_LEN2_SPEC>,
     #[doc = "0x414 - FILTER tx channel address register"]
-    pub reg_tx_ch1_add: crate::Reg<self::udma::reg_tx_ch1_add::REG_TX_CH1_ADD_SPEC>,
+    pub tx_ch1_add: crate::Reg<self::udma::tx_ch1_add::TX_CH1_ADD_SPEC>,
     #[doc = "0x418 - FILTER tx channel configuration register"]
-    pub reg_tx_ch1_cfg: crate::Reg<self::udma::reg_tx_ch1_cfg::REG_TX_CH1_CFG_SPEC>,
+    pub tx_ch1_cfg: crate::Reg<self::udma::tx_ch1_cfg::TX_CH1_CFG_SPEC>,
     #[doc = "0x41c - FILTER tx channel length1 register"]
-    pub reg_tx_ch1_len0: crate::Reg<self::udma::reg_tx_ch1_len0::REG_TX_CH1_LEN0_SPEC>,
+    pub tx_ch1_len0: crate::Reg<self::udma::tx_ch1_len0::TX_CH1_LEN0_SPEC>,
     #[doc = "0x420 - FILTER tx channel length2 register"]
-    pub reg_tx_ch1_len1: crate::Reg<self::udma::reg_tx_ch1_len1::REG_TX_CH1_LEN1_SPEC>,
+    pub tx_ch1_len1: crate::Reg<self::udma::tx_ch1_len1::TX_CH1_LEN1_SPEC>,
     #[doc = "0x424 - FILTER RX channel configuration register"]
-    pub reg_tx_ch1_len2: crate::Reg<self::udma::reg_tx_ch1_len2::REG_TX_CH1_LEN2_SPEC>,
+    pub tx_ch1_len2: crate::Reg<self::udma::tx_ch1_len2::TX_CH1_LEN2_SPEC>,
     #[doc = "0x428 - FILTER RX channel address register"]
-    pub reg_rx_ch_add: crate::Reg<self::udma::reg_rx_ch_add::REG_RX_CH_ADD_SPEC>,
+    pub rx_ch_add: crate::Reg<self::udma::rx_ch_add::RX_CH_ADD_SPEC>,
     #[doc = "0x42c - FILTER RX channel configuration register"]
-    pub reg_rx_ch_cfg: crate::Reg<self::udma::reg_rx_ch_cfg::REG_RX_CH_CFG_SPEC>,
+    pub rx_ch_cfg: crate::Reg<self::udma::rx_ch_cfg::RX_CH_CFG_SPEC>,
     #[doc = "0x430 - FILTER RX channel configuration register"]
-    pub reg_rx_ch_len0: crate::Reg<self::udma::reg_rx_ch_len0::REG_RX_CH_LEN0_SPEC>,
+    pub rx_ch_len0: crate::Reg<self::udma::rx_ch_len0::RX_CH_LEN0_SPEC>,
     #[doc = "0x434 - FILTER RX channel length1 register"]
-    pub reg_rx_ch_len1: crate::Reg<self::udma::reg_rx_ch_len1::REG_RX_CH_LEN1_SPEC>,
+    pub rx_ch_len1: crate::Reg<self::udma::rx_ch_len1::RX_CH_LEN1_SPEC>,
     #[doc = "0x438 - FILTER RX channel length2 register"]
-    pub reg_rx_ch_len2: crate::Reg<self::udma::reg_rx_ch_len2::REG_RX_CH_LEN2_SPEC>,
+    pub rx_ch_len2: crate::Reg<self::udma::rx_ch_len2::RX_CH_LEN2_SPEC>,
     #[doc = "0x43c - FILTER arithmetic unit configuration register"]
-    pub reg_au_cfg: crate::Reg<self::udma::reg_au_cfg::REG_AU_CFG_SPEC>,
+    pub au_cfg: crate::Reg<self::udma::au_cfg::AU_CFG_SPEC>,
     #[doc = "0x440 - FILTER arithmetic unit 0 register"]
-    pub reg_au_reg0: crate::Reg<self::udma::reg_au_reg0::REG_AU_REG0_SPEC>,
+    pub au_reg0: crate::Reg<self::udma::au_reg0::AU_REG0_SPEC>,
     #[doc = "0x444 - FILTER arithmetic unit 1 register"]
-    pub reg_au_reg1: crate::Reg<self::udma::reg_au_reg1::REG_AU_REG1_SPEC>,
+    pub au_reg1: crate::Reg<self::udma::au_reg1::AU_REG1_SPEC>,
     #[doc = "0x448 - FILTER binarization threshold register"]
-    pub reg_bincu_th: crate::Reg<self::udma::reg_bincu_th::REG_BINCU_TH_SPEC>,
+    pub bincu_th: crate::Reg<self::udma::bincu_th::BINCU_TH_SPEC>,
     #[doc = "0x44c - FILTER binarization count register"]
-    pub reg_bincu_cnt: crate::Reg<self::udma::reg_bincu_cnt::REG_BINCU_CNT_SPEC>,
+    pub bincu_cnt: crate::Reg<self::udma::bincu_cnt::BINCU_CNT_SPEC>,
     #[doc = "0x450 - FILTER binarization result count register"]
-    pub reg_bincu_setup: crate::Reg<self::udma::reg_bincu_setup::REG_BINCU_SETUP_SPEC>,
+    pub bincu_setup: crate::Reg<self::udma::bincu_setup::BINCU_SETUP_SPEC>,
     #[doc = "0x454 - FILTER binarization result count register"]
-    pub reg_bincu_val: crate::Reg<self::udma::reg_bincu_val::REG_BINCU_VAL_SPEC>,
+    pub bincu_val: crate::Reg<self::udma::bincu_val::BINCU_VAL_SPEC>,
     #[doc = "0x458 - FILTER control mode register"]
-    pub reg_filt: crate::Reg<self::udma::reg_filt::REG_FILT_SPEC>,
+    pub filt: crate::Reg<self::udma::filt::FILT_SPEC>,
     #[doc = "0x45c - FILTER start register"]
-    pub reg_filt_cmd: crate::Reg<self::udma::reg_filt_cmd::REG_FILT_CMD_SPEC>,
+    pub filt_cmd: crate::Reg<self::udma::filt_cmd::FILT_CMD_SPEC>,
     #[doc = "0x460 - FILTER status register"]
-    pub reg_status: crate::Reg<self::udma::reg_status::REG_STATUS_SPEC>,
+    pub status: crate::Reg<self::udma::status::STATUS_SPEC>,
 }
 #[doc = r"Register block"]
 #[doc = "UDMA"]
@@ -428,135 +428,115 @@ pub struct SDIO {
 pub mod sdio;
 #[doc = r"Register block"]
 #[repr(C)]
-pub struct SOCCONTROL_TTA_PLL {
+pub struct SOCCONTROL {
     #[doc = "0x00 - This register holds the number of clusters and the number of cores in the each cluster. It is a read-only register."]
-    pub info: crate::Reg<self::soc_control_tta_pll::info::INFO_SPEC>,
+    pub info: crate::Reg<self::soc_control::info::INFO_SPEC>,
     #[doc = "0x04 - This register holds the boot address."]
-    pub fcboot: crate::Reg<self::soc_control_tta_pll::fcboot::FCBOOT_SPEC>,
+    pub fcboot: crate::Reg<self::soc_control::fcboot::FCBOOT_SPEC>,
     #[doc = "0x08 - This register contains the value of the fetch enable signal of the core."]
-    pub fcfetch: crate::Reg<self::soc_control_tta_pll::fcfetch::FCFETCH_SPEC>,
+    pub fcfetch: crate::Reg<self::soc_control::fcfetch::FCFETCH_SPEC>,
     _reserved3: [u8; 0x04],
     #[doc = "0x10 - The content of these registers can be used to multiplex pads when targeting an ASIC. The first register (0x1A10_4010) can be used to set the mux (2 bit select) from pin 0 (bits \\[1:0\\]) to 15 (bits \\[31:30\\])."]
-    pub pad_mux_0: crate::Reg<self::soc_control_tta_pll::pad_mux_0::PAD_MUX_0_SPEC>,
+    pub pad_mux_0: crate::Reg<self::soc_control::pad_mux_0::PAD_MUX_0_SPEC>,
     _reserved4: [u8; 0x0c],
     #[doc = "0x20 - All 10 bit fields have reset value of 10'b10_0011_0100: 0 drive strenght 1 drive strenght 2 trigger 3 trigger 4 rate 5 output en(0) 6 hold 7 pull enable 8 pd(0)/pu(1) 9 input en(1)"]
-    pub pad_cfg_0: crate::Reg<self::soc_control_tta_pll::pad_cfg_0::PAD_CFG_0_SPEC>,
+    pub pad_cfg_0: crate::Reg<self::soc_control::pad_cfg_0::PAD_CFG_0_SPEC>,
     #[doc = "0x24 - "]
-    pub pad_cfg_1: crate::Reg<self::soc_control_tta_pll::pad_cfg_1::PAD_CFG_1_SPEC>,
+    pub pad_cfg_1: crate::Reg<self::soc_control::pad_cfg_1::PAD_CFG_1_SPEC>,
     #[doc = "0x28 - "]
-    pub pad_cfg_2: crate::Reg<self::soc_control_tta_pll::pad_cfg_2::PAD_CFG_2_SPEC>,
+    pub pad_cfg_2: crate::Reg<self::soc_control::pad_cfg_2::PAD_CFG_2_SPEC>,
     #[doc = "0x2c - "]
-    pub pad_cfg_3: crate::Reg<self::soc_control_tta_pll::pad_cfg_3::PAD_CFG_3_SPEC>,
+    pub pad_cfg_3: crate::Reg<self::soc_control::pad_cfg_3::PAD_CFG_3_SPEC>,
     #[doc = "0x30 - "]
-    pub pad_cfg_4: crate::Reg<self::soc_control_tta_pll::pad_cfg_4::PAD_CFG_4_SPEC>,
+    pub pad_cfg_4: crate::Reg<self::soc_control::pad_cfg_4::PAD_CFG_4_SPEC>,
     #[doc = "0x34 - "]
-    pub pad_cfg_5: crate::Reg<self::soc_control_tta_pll::pad_cfg_5::PAD_CFG_5_SPEC>,
+    pub pad_cfg_5: crate::Reg<self::soc_control::pad_cfg_5::PAD_CFG_5_SPEC>,
     _reserved10: [u8; 0x28],
     #[doc = "0x60 - "]
-    pub reg_tta_pll_loop_ctrl:
-        crate::Reg<self::soc_control_tta_pll::reg_tta_pll_loop_ctrl::REG_TTA_PLL_LOOP_CTRL_SPEC>,
+    pub tta_pll_loop_ctrl: crate::Reg<self::soc_control::tta_pll_loop_ctrl::TTA_PLL_LOOP_CTRL_SPEC>,
     #[doc = "0x64 - "]
-    pub reg_tta_pll_div:
-        crate::Reg<self::soc_control_tta_pll::reg_tta_pll_div::REG_TTA_PLL_DIV_SPEC>,
+    pub tta_pll_div: crate::Reg<self::soc_control::tta_pll_div::TTA_PLL_DIV_SPEC>,
     #[doc = "0x68 - "]
-    pub reg_tta_pll_debug_ctrl:
-        crate::Reg<self::soc_control_tta_pll::reg_tta_pll_debug_ctrl::REG_TTA_PLL_DEBUG_CTRL_SPEC>,
+    pub tta_pll_debug_ctrl:
+        crate::Reg<self::soc_control::tta_pll_debug_ctrl::TTA_PLL_DEBUG_CTRL_SPEC>,
     #[doc = "0x6c - "]
-    pub reg_tta_pll_enable:
-        crate::Reg<self::soc_control_tta_pll::reg_tta_pll_enable::REG_TTA_PLL_ENABLE_SPEC>,
+    pub tta_pll_enable: crate::Reg<self::soc_control::tta_pll_enable::TTA_PLL_ENABLE_SPEC>,
     #[doc = "0x70 - "]
-    pub cluster_ctrl: crate::Reg<self::soc_control_tta_pll::cluster_ctrl::CLUSTER_CTRL_SPEC>,
+    pub cluster_ctrl: crate::Reg<self::soc_control::cluster_ctrl::CLUSTER_CTRL_SPEC>,
     #[doc = "0x74 - Register to read or write from JTAG"]
-    pub jtagreg: crate::Reg<self::soc_control_tta_pll::jtagreg::JTAGREG_SPEC>,
+    pub jtagreg: crate::Reg<self::soc_control::jtagreg::JTAGREG_SPEC>,
     #[doc = "0x78 - "]
-    pub ctrl_per: crate::Reg<self::soc_control_tta_pll::ctrl_per::CTRL_PER_SPEC>,
+    pub ctrl_per: crate::Reg<self::soc_control::ctrl_per::CTRL_PER_SPEC>,
     #[doc = "0x7c - "]
-    pub cluster_irq: crate::Reg<self::soc_control_tta_pll::cluster_irq::CLUSTER_IRQ_SPEC>,
+    pub cluster_irq: crate::Reg<self::soc_control::cluster_irq::CLUSTER_IRQ_SPEC>,
     #[doc = "0x80 - "]
     pub cluster_boot_addr0:
-        crate::Reg<self::soc_control_tta_pll::cluster_boot_addr0::CLUSTER_BOOT_ADDR0_SPEC>,
+        crate::Reg<self::soc_control::cluster_boot_addr0::CLUSTER_BOOT_ADDR0_SPEC>,
     #[doc = "0x84 - "]
     pub cluster_boot_addr1:
-        crate::Reg<self::soc_control_tta_pll::cluster_boot_addr1::CLUSTER_BOOT_ADDR1_SPEC>,
+        crate::Reg<self::soc_control::cluster_boot_addr1::CLUSTER_BOOT_ADDR1_SPEC>,
     #[doc = "0x88 - "]
-    pub reg_tta_pll_spare_ctrl:
-        crate::Reg<self::soc_control_tta_pll::reg_tta_pll_spare_ctrl::REG_TTA_PLL_SPARE_CTRL_SPEC>,
+    pub tta_pll_spare_ctrl:
+        crate::Reg<self::soc_control::tta_pll_spare_ctrl::TTA_PLL_SPARE_CTRL_SPEC>,
     #[doc = "0x8c - "]
-    pub reg_tta_pll_tmux_sel:
-        crate::Reg<self::soc_control_tta_pll::reg_tta_pll_tmux_sel::REG_TTA_PLL_TMUX_SEL_SPEC>,
+    pub tta_pll_tmux_sel: crate::Reg<self::soc_control::tta_pll_tmux_sel::TTA_PLL_TMUX_SEL_SPEC>,
     #[doc = "0x90 - "]
-    pub reg_tta_pll_status1:
-        crate::Reg<self::soc_control_tta_pll::reg_tta_pll_status1::REG_TTA_PLL_STATUS1_SPEC>,
+    pub tta_pll_status1: crate::Reg<self::soc_control::tta_pll_status1::TTA_PLL_STATUS1_SPEC>,
     #[doc = "0x94 - "]
-    pub reg_topperiph_clk_div:
-        crate::Reg<self::soc_control_tta_pll::reg_topperiph_clk_div::REG_TOPPERIPH_CLK_DIV_SPEC>,
+    pub topperiph_clk_div: crate::Reg<self::soc_control::topperiph_clk_div::TOPPERIPH_CLK_DIV_SPEC>,
     #[doc = "0x98 - Subsystem Clock selection. Bit definition for TTA, Ethernet, AI, HPC subsystems *_CLK_CTRL Bitfield definitions \\[bit\\]:\\[field\\]
 0: sel_cka 1: force_cka 2: force_ckb 3: subsys_clkena 4: - 5: - 6: - 7: pll_ctrl_valid"]
-    pub reg_ss_clk_ctrl1:
-        crate::Reg<self::soc_control_tta_pll::reg_ss_clk_ctrl1::REG_SS_CLK_CTRL1_SPEC>,
+    pub clk_ctrl1: crate::Reg<self::soc_control::clk_ctrl1::CLK_CTRL1_SPEC>,
     #[doc = "0x9c - Subsystem Clock selection. Bit definition for MPC, Interconnect, C2C and CoreHW subsystems *_CLK_CTRL Bitfield definitions \\[bit\\]:\\[field\\]
 0: sel_cka 1: force_cka 2: force_ckb 3: subsys_clkena 4: - 5: - 6: - 7: pll_ctrl_valid"]
-    pub reg_ss_clk_ctrl2:
-        crate::Reg<self::soc_control_tta_pll::reg_ss_clk_ctrl2::REG_SS_CLK_CTRL2_SPEC>,
+    pub clk_ctrl2: crate::Reg<self::soc_control::clk_ctrl2::CLK_CTRL2_SPEC>,
     #[doc = "0xa0 - These 2 registers (CORESTATUS, CS_RO) contain the status of the system for testing/verification purposes like End Of Computation. The 0x1A10_40C0 register is read-only."]
-    pub corestatus: crate::Reg<self::soc_control_tta_pll::corestatus::CORESTATUS_SPEC>,
+    pub corestatus: crate::Reg<self::soc_control::corestatus::CORESTATUS_SPEC>,
     #[doc = "0xa4 - "]
-    pub reg_slow_pulse_div:
-        crate::Reg<self::soc_control_tta_pll::reg_slow_pulse_div::REG_SLOW_PULSE_DIV_SPEC>,
+    pub slow_pulse_div: crate::Reg<self::soc_control::slow_pulse_div::SLOW_PULSE_DIV_SPEC>,
     #[doc = "0xa8 - "]
-    pub reg_periph_clk_div:
-        crate::Reg<self::soc_control_tta_pll::reg_periph_clk_div::REG_PERIPH_CLK_DIV_SPEC>,
+    pub periph_clk_div: crate::Reg<self::soc_control::periph_clk_div::PERIPH_CLK_DIV_SPEC>,
     _reserved29: [u8; 0x04],
     #[doc = "0xb0 - Assertion of the Subsystem bit, deasserts the reset to the corresponding subsystem. Bit definition is mentioned in adjoining table"]
-    pub reg_ss_reset_en:
-        crate::Reg<self::soc_control_tta_pll::reg_ss_reset_en::REG_SS_RESET_EN_SPEC>,
+    pub ss_reset_en: crate::Reg<self::soc_control::ss_reset_en::SS_RESET_EN_SPEC>,
     #[doc = "0xb4 - Subsystem clock enable register"]
-    pub reg_ss_clk_en: crate::Reg<self::soc_control_tta_pll::reg_ss_clk_en::REG_SS_CLK_EN_SPEC>,
+    pub ss_clk_en: crate::Reg<self::soc_control::ss_clk_en::SS_CLK_EN_SPEC>,
     #[doc = "0xb8 - Subsystem Clock selection. Bit definition for Top peripheral subsystem. *_CLK_CTRL Bitfield definitions \\[bit\\]:\\[field\\]
 0: sel_cka 1: force_cka 2: force_ckb 3: subsys_clkena 4: - 5: - 6: - 7: pll_ctrl_valid"]
-    pub reg_ss_clk_ctrl3:
-        crate::Reg<self::soc_control_tta_pll::reg_ss_clk_ctrl3::REG_SS_CLK_CTRL3_SPEC>,
+    pub clk_ctrl3: crate::Reg<self::soc_control::clk_ctrl3::CLK_CTRL3_SPEC>,
     #[doc = "0xbc - "]
-    pub reg_tta_pll_status2:
-        crate::Reg<self::soc_control_tta_pll::reg_tta_pll_status2::REG_TTA_PLL_STATUS2_SPEC>,
+    pub tta_pll_status2: crate::Reg<self::soc_control::tta_pll_status2::TTA_PLL_STATUS2_SPEC>,
     #[doc = "0xc0 - "]
-    pub cs_ro: crate::Reg<self::soc_control_tta_pll::cs_ro::CS_RO_SPEC>,
+    pub cs_ro: crate::Reg<self::soc_control::cs_ro::CS_RO_SPEC>,
     #[doc = "0xc4 - Boot Sel value"]
-    pub bootsel: crate::Reg<self::soc_control_tta_pll::bootsel::BOOTSEL_SPEC>,
+    pub bootsel: crate::Reg<self::soc_control::bootsel::BOOTSEL_SPEC>,
     #[doc = "0xc8 - "]
-    pub clksel: crate::Reg<self::soc_control_tta_pll::clksel::CLKSEL_SPEC>,
+    pub clksel: crate::Reg<self::soc_control::clksel::CLKSEL_SPEC>,
     #[doc = "0xcc - Clock divider ratio for the 3 Interconnect modules"]
-    pub reg_inter_clk_div:
-        crate::Reg<self::soc_control_tta_pll::reg_inter_clk_div::REG_INTER_CLK_DIV_SPEC>,
+    pub inter_clk_div: crate::Reg<self::soc_control::inter_clk_div::INTER_CLK_DIV_SPEC>,
 }
 #[doc = r"Register block"]
-#[doc = "SocControl_TTA_PLL"]
-pub mod soc_control_tta_pll;
+#[doc = "SocControl"]
+pub mod soc_control;
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct ETH_PLL {
     #[doc = "0x00 - "]
-    pub reg_eth_pll_loop_ctrl:
-        crate::Reg<self::eth_pll::reg_eth_pll_loop_ctrl::REG_ETH_PLL_LOOP_CTRL_SPEC>,
+    pub eth_pll_loop_ctrl: crate::Reg<self::eth_pll::eth_pll_loop_ctrl::ETH_PLL_LOOP_CTRL_SPEC>,
     #[doc = "0x04 - "]
-    pub reg_eth_pll_div: crate::Reg<self::eth_pll::reg_eth_pll_div::REG_ETH_PLL_DIV_SPEC>,
+    pub eth_pll_div: crate::Reg<self::eth_pll::eth_pll_div::ETH_PLL_DIV_SPEC>,
     #[doc = "0x08 - "]
-    pub reg_eth_pll_debug_ctrl:
-        crate::Reg<self::eth_pll::reg_eth_pll_debug_ctrl::REG_ETH_PLL_DEBUG_CTRL_SPEC>,
+    pub eth_pll_debug_ctrl: crate::Reg<self::eth_pll::eth_pll_debug_ctrl::ETH_PLL_DEBUG_CTRL_SPEC>,
     #[doc = "0x0c - "]
-    pub reg_eth_pll_enable: crate::Reg<self::eth_pll::reg_eth_pll_enable::REG_ETH_PLL_ENABLE_SPEC>,
+    pub eth_pll_enable: crate::Reg<self::eth_pll::eth_pll_enable::ETH_PLL_ENABLE_SPEC>,
     #[doc = "0x10 - "]
-    pub reg_eth_pll_spare_ctrl:
-        crate::Reg<self::eth_pll::reg_eth_pll_spare_ctrl::REG_ETH_PLL_SPARE_CTRL_SPEC>,
+    pub eth_pll_spare_ctrl: crate::Reg<self::eth_pll::eth_pll_spare_ctrl::ETH_PLL_SPARE_CTRL_SPEC>,
     #[doc = "0x14 - "]
-    pub reg_eth_pll_tmux_sel:
-        crate::Reg<self::eth_pll::reg_eth_pll_tmux_sel::REG_ETH_PLL_TMUX_SEL_SPEC>,
+    pub eth_pll_tmux_sel: crate::Reg<self::eth_pll::eth_pll_tmux_sel::ETH_PLL_TMUX_SEL_SPEC>,
     #[doc = "0x18 - "]
-    pub reg_eth_pll_status1:
-        crate::Reg<self::eth_pll::reg_eth_pll_status1::REG_ETH_PLL_STATUS1_SPEC>,
+    pub eth_pll_status1: crate::Reg<self::eth_pll::eth_pll_status1::ETH_PLL_STATUS1_SPEC>,
     #[doc = "0x1c - "]
-    pub reg_eth_pll_status2:
-        crate::Reg<self::eth_pll::reg_eth_pll_status2::REG_ETH_PLL_STATUS2_SPEC>,
+    pub eth_pll_status2: crate::Reg<self::eth_pll::eth_pll_status2::ETH_PLL_STATUS2_SPEC>,
 }
 #[doc = r"Register block"]
 #[doc = "ETH_PLL"]
@@ -565,25 +545,21 @@ pub mod eth_pll;
 #[repr(C)]
 pub struct AI_PLL {
     #[doc = "0x00 - "]
-    pub reg_ai_pll_loop_ctrl:
-        crate::Reg<self::ai_pll::reg_ai_pll_loop_ctrl::REG_AI_PLL_LOOP_CTRL_SPEC>,
+    pub ai_pll_loop_ctrl: crate::Reg<self::ai_pll::ai_pll_loop_ctrl::AI_PLL_LOOP_CTRL_SPEC>,
     #[doc = "0x04 - "]
-    pub reg_ai_pll_div: crate::Reg<self::ai_pll::reg_ai_pll_div::REG_AI_PLL_DIV_SPEC>,
+    pub ai_pll_div: crate::Reg<self::ai_pll::ai_pll_div::AI_PLL_DIV_SPEC>,
     #[doc = "0x08 - "]
-    pub reg_ai_pll_debug_ctrl:
-        crate::Reg<self::ai_pll::reg_ai_pll_debug_ctrl::REG_AI_PLL_DEBUG_CTRL_SPEC>,
+    pub ai_pll_debug_ctrl: crate::Reg<self::ai_pll::ai_pll_debug_ctrl::AI_PLL_DEBUG_CTRL_SPEC>,
     #[doc = "0x0c - "]
-    pub reg_ai_pll_enable: crate::Reg<self::ai_pll::reg_ai_pll_enable::REG_AI_PLL_ENABLE_SPEC>,
+    pub ai_pll_enable: crate::Reg<self::ai_pll::ai_pll_enable::AI_PLL_ENABLE_SPEC>,
     #[doc = "0x10 - "]
-    pub reg_ai_pll_spare_ctrl:
-        crate::Reg<self::ai_pll::reg_ai_pll_spare_ctrl::REG_AI_PLL_SPARE_CTRL_SPEC>,
+    pub ai_pll_spare_ctrl: crate::Reg<self::ai_pll::ai_pll_spare_ctrl::AI_PLL_SPARE_CTRL_SPEC>,
     #[doc = "0x14 - "]
-    pub reg_ai_pll_tmux_sel:
-        crate::Reg<self::ai_pll::reg_ai_pll_tmux_sel::REG_AI_PLL_TMUX_SEL_SPEC>,
+    pub ai_pll_tmux_sel: crate::Reg<self::ai_pll::ai_pll_tmux_sel::AI_PLL_TMUX_SEL_SPEC>,
     #[doc = "0x18 - "]
-    pub reg_ai_pll_status1: crate::Reg<self::ai_pll::reg_ai_pll_status1::REG_AI_PLL_STATUS1_SPEC>,
+    pub ai_pll_status1: crate::Reg<self::ai_pll::ai_pll_status1::AI_PLL_STATUS1_SPEC>,
     #[doc = "0x1c - "]
-    pub reg_ai_pll_status2: crate::Reg<self::ai_pll::reg_ai_pll_status2::REG_AI_PLL_STATUS2_SPEC>,
+    pub ai_pll_status2: crate::Reg<self::ai_pll::ai_pll_status2::AI_PLL_STATUS2_SPEC>,
 }
 #[doc = r"Register block"]
 #[doc = "AI_PLL"]
@@ -592,27 +568,21 @@ pub mod ai_pll;
 #[repr(C)]
 pub struct HPC_PLL {
     #[doc = "0x00 - "]
-    pub reg_hpc_pll_loop_ctrl:
-        crate::Reg<self::hpc_pll::reg_hpc_pll_loop_ctrl::REG_HPC_PLL_LOOP_CTRL_SPEC>,
+    pub hpc_pll_loop_ctrl: crate::Reg<self::hpc_pll::hpc_pll_loop_ctrl::HPC_PLL_LOOP_CTRL_SPEC>,
     #[doc = "0x04 - "]
-    pub reg_hpc_pll_div: crate::Reg<self::hpc_pll::reg_hpc_pll_div::REG_HPC_PLL_DIV_SPEC>,
+    pub hpc_pll_div: crate::Reg<self::hpc_pll::hpc_pll_div::HPC_PLL_DIV_SPEC>,
     #[doc = "0x08 - "]
-    pub reg_hpc_pll_debug_ctrl:
-        crate::Reg<self::hpc_pll::reg_hpc_pll_debug_ctrl::REG_HPC_PLL_DEBUG_CTRL_SPEC>,
+    pub hpc_pll_debug_ctrl: crate::Reg<self::hpc_pll::hpc_pll_debug_ctrl::HPC_PLL_DEBUG_CTRL_SPEC>,
     #[doc = "0x0c - "]
-    pub reg_hpc_pll_enable: crate::Reg<self::hpc_pll::reg_hpc_pll_enable::REG_HPC_PLL_ENABLE_SPEC>,
+    pub hpc_pll_enable: crate::Reg<self::hpc_pll::hpc_pll_enable::HPC_PLL_ENABLE_SPEC>,
     #[doc = "0x10 - "]
-    pub reg_hpc_pll_spare_ctrl:
-        crate::Reg<self::hpc_pll::reg_hpc_pll_spare_ctrl::REG_HPC_PLL_SPARE_CTRL_SPEC>,
+    pub hpc_pll_spare_ctrl: crate::Reg<self::hpc_pll::hpc_pll_spare_ctrl::HPC_PLL_SPARE_CTRL_SPEC>,
     #[doc = "0x14 - "]
-    pub reg_hpc_pll_tmux_sel:
-        crate::Reg<self::hpc_pll::reg_hpc_pll_tmux_sel::REG_HPC_PLL_TMUX_SEL_SPEC>,
+    pub hpc_pll_tmux_sel: crate::Reg<self::hpc_pll::hpc_pll_tmux_sel::HPC_PLL_TMUX_SEL_SPEC>,
     #[doc = "0x18 - "]
-    pub reg_hpc_pll_status1:
-        crate::Reg<self::hpc_pll::reg_hpc_pll_status1::REG_HPC_PLL_STATUS1_SPEC>,
+    pub hpc_pll_status1: crate::Reg<self::hpc_pll::hpc_pll_status1::HPC_PLL_STATUS1_SPEC>,
     #[doc = "0x1c - "]
-    pub reg_hpc_pll_status2:
-        crate::Reg<self::hpc_pll::reg_hpc_pll_status2::REG_HPC_PLL_STATUS2_SPEC>,
+    pub hpc_pll_status2: crate::Reg<self::hpc_pll::hpc_pll_status2::HPC_PLL_STATUS2_SPEC>,
 }
 #[doc = r"Register block"]
 #[doc = "HPC_PLL"]
@@ -621,28 +591,23 @@ pub mod hpc_pll;
 #[repr(C)]
 pub struct PULP_PLL {
     #[doc = "0x00 - "]
-    pub reg_pulp_pll_loop_ctrl:
-        crate::Reg<self::pulp_pll::reg_pulp_pll_loop_ctrl::REG_PULP_PLL_LOOP_CTRL_SPEC>,
+    pub pulp_pll_loop_ctrl: crate::Reg<self::pulp_pll::pulp_pll_loop_ctrl::PULP_PLL_LOOP_CTRL_SPEC>,
     #[doc = "0x04 - "]
-    pub reg_pulp_pll_div: crate::Reg<self::pulp_pll::reg_pulp_pll_div::REG_PULP_PLL_DIV_SPEC>,
+    pub pulp_pll_div: crate::Reg<self::pulp_pll::pulp_pll_div::PULP_PLL_DIV_SPEC>,
     #[doc = "0x08 - "]
-    pub reg_pulp_pll_debug_ctrl:
-        crate::Reg<self::pulp_pll::reg_pulp_pll_debug_ctrl::REG_PULP_PLL_DEBUG_CTRL_SPEC>,
+    pub pulp_pll_debug_ctrl:
+        crate::Reg<self::pulp_pll::pulp_pll_debug_ctrl::PULP_PLL_DEBUG_CTRL_SPEC>,
     #[doc = "0x0c - "]
-    pub reg_pulp_pll_enable:
-        crate::Reg<self::pulp_pll::reg_pulp_pll_enable::REG_PULP_PLL_ENABLE_SPEC>,
+    pub pulp_pll_enable: crate::Reg<self::pulp_pll::pulp_pll_enable::PULP_PLL_ENABLE_SPEC>,
     #[doc = "0x10 - "]
-    pub reg_pulp_pll_spare_ctrl:
-        crate::Reg<self::pulp_pll::reg_pulp_pll_spare_ctrl::REG_PULP_PLL_SPARE_CTRL_SPEC>,
+    pub pulp_pll_spare_ctrl:
+        crate::Reg<self::pulp_pll::pulp_pll_spare_ctrl::PULP_PLL_SPARE_CTRL_SPEC>,
     #[doc = "0x14 - "]
-    pub reg_pulp_pll_tmux_sel:
-        crate::Reg<self::pulp_pll::reg_pulp_pll_tmux_sel::REG_PULP_PLL_TMUX_SEL_SPEC>,
+    pub pulp_pll_tmux_sel: crate::Reg<self::pulp_pll::pulp_pll_tmux_sel::PULP_PLL_TMUX_SEL_SPEC>,
     #[doc = "0x18 - "]
-    pub reg_pulp_pll_status1:
-        crate::Reg<self::pulp_pll::reg_pulp_pll_status1::REG_PULP_PLL_STATUS1_SPEC>,
+    pub pulp_pll_status1: crate::Reg<self::pulp_pll::pulp_pll_status1::PULP_PLL_STATUS1_SPEC>,
     #[doc = "0x1c - "]
-    pub reg_pulp_pll_status2:
-        crate::Reg<self::pulp_pll::reg_pulp_pll_status2::REG_PULP_PLL_STATUS2_SPEC>,
+    pub pulp_pll_status2: crate::Reg<self::pulp_pll::pulp_pll_status2::PULP_PLL_STATUS2_SPEC>,
 }
 #[doc = r"Register block"]
 #[doc = "PULP_PLL"]
@@ -651,28 +616,25 @@ pub mod pulp_pll;
 #[repr(C)]
 pub struct INTER_PLL {
     #[doc = "0x00 - "]
-    pub reg_inter_pll_loop_ctrl:
-        crate::Reg<self::inter_pll::reg_inter_pll_loop_ctrl::REG_INTER_PLL_LOOP_CTRL_SPEC>,
+    pub inter_pll_loop_ctrl:
+        crate::Reg<self::inter_pll::inter_pll_loop_ctrl::INTER_PLL_LOOP_CTRL_SPEC>,
     #[doc = "0x04 - "]
-    pub reg_inter_pll_div: crate::Reg<self::inter_pll::reg_inter_pll_div::REG_INTER_PLL_DIV_SPEC>,
+    pub inter_pll_div: crate::Reg<self::inter_pll::inter_pll_div::INTER_PLL_DIV_SPEC>,
     #[doc = "0x08 - "]
-    pub reg_inter_pll_debug_ctrl:
-        crate::Reg<self::inter_pll::reg_inter_pll_debug_ctrl::REG_INTER_PLL_DEBUG_CTRL_SPEC>,
+    pub inter_pll_debug_ctrl:
+        crate::Reg<self::inter_pll::inter_pll_debug_ctrl::INTER_PLL_DEBUG_CTRL_SPEC>,
     #[doc = "0x0c - "]
-    pub reg_inter_pll_enable:
-        crate::Reg<self::inter_pll::reg_inter_pll_enable::REG_INTER_PLL_ENABLE_SPEC>,
+    pub inter_pll_enable: crate::Reg<self::inter_pll::inter_pll_enable::INTER_PLL_ENABLE_SPEC>,
     #[doc = "0x10 - "]
-    pub reg_inter_pll_spare_ctrl:
-        crate::Reg<self::inter_pll::reg_inter_pll_spare_ctrl::REG_INTER_PLL_SPARE_CTRL_SPEC>,
+    pub inter_pll_spare_ctrl:
+        crate::Reg<self::inter_pll::inter_pll_spare_ctrl::INTER_PLL_SPARE_CTRL_SPEC>,
     #[doc = "0x14 - "]
-    pub reg_inter_pll_tmux_sel:
-        crate::Reg<self::inter_pll::reg_inter_pll_tmux_sel::REG_INTER_PLL_TMUX_SEL_SPEC>,
+    pub inter_pll_tmux_sel:
+        crate::Reg<self::inter_pll::inter_pll_tmux_sel::INTER_PLL_TMUX_SEL_SPEC>,
     #[doc = "0x18 - "]
-    pub reg_inter_pll_status1:
-        crate::Reg<self::inter_pll::reg_inter_pll_status1::REG_INTER_PLL_STATUS1_SPEC>,
+    pub inter_pll_status1: crate::Reg<self::inter_pll::inter_pll_status1::INTER_PLL_STATUS1_SPEC>,
     #[doc = "0x1c - "]
-    pub reg_inter_pll_status2:
-        crate::Reg<self::inter_pll::reg_inter_pll_status2::REG_INTER_PLL_STATUS2_SPEC>,
+    pub inter_pll_status2: crate::Reg<self::inter_pll::inter_pll_status2::INTER_PLL_STATUS2_SPEC>,
 }
 #[doc = r"Register block"]
 #[doc = "INTER_PLL"]
@@ -681,27 +643,21 @@ pub mod inter_pll;
 #[repr(C)]
 pub struct C2C_PLL {
     #[doc = "0x00 - "]
-    pub reg_c2c_pll_loop_ctrl:
-        crate::Reg<self::c2c_pll::reg_c2c_pll_loop_ctrl::REG_C2C_PLL_LOOP_CTRL_SPEC>,
+    pub c2c_pll_loop_ctrl: crate::Reg<self::c2c_pll::c2c_pll_loop_ctrl::C2C_PLL_LOOP_CTRL_SPEC>,
     #[doc = "0x04 - "]
-    pub reg_c2c_pll_div: crate::Reg<self::c2c_pll::reg_c2c_pll_div::REG_C2C_PLL_DIV_SPEC>,
+    pub c2c_pll_div: crate::Reg<self::c2c_pll::c2c_pll_div::C2C_PLL_DIV_SPEC>,
     #[doc = "0x08 - "]
-    pub reg_c2c_pll_debug_ctrl:
-        crate::Reg<self::c2c_pll::reg_c2c_pll_debug_ctrl::REG_C2C_PLL_DEBUG_CTRL_SPEC>,
+    pub c2c_pll_debug_ctrl: crate::Reg<self::c2c_pll::c2c_pll_debug_ctrl::C2C_PLL_DEBUG_CTRL_SPEC>,
     #[doc = "0x0c - "]
-    pub reg_c2c_pll_enable: crate::Reg<self::c2c_pll::reg_c2c_pll_enable::REG_C2C_PLL_ENABLE_SPEC>,
+    pub c2c_pll_enable: crate::Reg<self::c2c_pll::c2c_pll_enable::C2C_PLL_ENABLE_SPEC>,
     #[doc = "0x10 - "]
-    pub reg_c2c_pll_spare_ctrl:
-        crate::Reg<self::c2c_pll::reg_c2c_pll_spare_ctrl::REG_C2C_PLL_SPARE_CTRL_SPEC>,
+    pub c2c_pll_spare_ctrl: crate::Reg<self::c2c_pll::c2c_pll_spare_ctrl::C2C_PLL_SPARE_CTRL_SPEC>,
     #[doc = "0x14 - "]
-    pub reg_c2c_pll_tmux_sel:
-        crate::Reg<self::c2c_pll::reg_c2c_pll_tmux_sel::REG_C2C_PLL_TMUX_SEL_SPEC>,
+    pub c2c_pll_tmux_sel: crate::Reg<self::c2c_pll::c2c_pll_tmux_sel::C2C_PLL_TMUX_SEL_SPEC>,
     #[doc = "0x18 - "]
-    pub reg_c2c_pll_status1:
-        crate::Reg<self::c2c_pll::reg_c2c_pll_status1::REG_C2C_PLL_STATUS1_SPEC>,
+    pub c2c_pll_status1: crate::Reg<self::c2c_pll::c2c_pll_status1::C2C_PLL_STATUS1_SPEC>,
     #[doc = "0x1c - "]
-    pub reg_c2c_pll_status2:
-        crate::Reg<self::c2c_pll::reg_c2c_pll_status2::REG_C2C_PLL_STATUS2_SPEC>,
+    pub c2c_pll_status2: crate::Reg<self::c2c_pll::c2c_pll_status2::C2C_PLL_STATUS2_SPEC>,
 }
 #[doc = r"Register block"]
 #[doc = "C2C_PLL"]
@@ -710,33 +666,29 @@ pub mod c2c_pll;
 #[repr(C)]
 pub struct TOPPERIPH_PLL {
     #[doc = "0x00 - "]
-    pub reg_topperiph_pll_loop_ctrl: crate::Reg<
-        self::topperiph_pll::reg_topperiph_pll_loop_ctrl::REG_TOPPERIPH_PLL_LOOP_CTRL_SPEC,
-    >,
+    pub topperiph_pll_loop_ctrl:
+        crate::Reg<self::topperiph_pll::topperiph_pll_loop_ctrl::TOPPERIPH_PLL_LOOP_CTRL_SPEC>,
     #[doc = "0x04 - "]
-    pub reg_topperiph_pll_div:
-        crate::Reg<self::topperiph_pll::reg_topperiph_pll_div::REG_TOPPERIPH_PLL_DIV_SPEC>,
+    pub topperiph_pll_div:
+        crate::Reg<self::topperiph_pll::topperiph_pll_div::TOPPERIPH_PLL_DIV_SPEC>,
     #[doc = "0x08 - "]
-    pub reg_topperiph_pll_debug_ctrl: crate::Reg<
-        self::topperiph_pll::reg_topperiph_pll_debug_ctrl::REG_TOPPERIPH_PLL_DEBUG_CTRL_SPEC,
-    >,
+    pub topperiph_pll_debug_ctrl:
+        crate::Reg<self::topperiph_pll::topperiph_pll_debug_ctrl::TOPPERIPH_PLL_DEBUG_CTRL_SPEC>,
     #[doc = "0x0c - "]
-    pub reg_topperiph_pll_enable:
-        crate::Reg<self::topperiph_pll::reg_topperiph_pll_enable::REG_TOPPERIPH_PLL_ENABLE_SPEC>,
+    pub topperiph_pll_enable:
+        crate::Reg<self::topperiph_pll::topperiph_pll_enable::TOPPERIPH_PLL_ENABLE_SPEC>,
     #[doc = "0x10 - "]
-    pub reg_topperiph_pll_spare_ctrl: crate::Reg<
-        self::topperiph_pll::reg_topperiph_pll_spare_ctrl::REG_TOPPERIPH_PLL_SPARE_CTRL_SPEC,
-    >,
+    pub topperiph_pll_spare_ctrl:
+        crate::Reg<self::topperiph_pll::topperiph_pll_spare_ctrl::TOPPERIPH_PLL_SPARE_CTRL_SPEC>,
     #[doc = "0x14 - "]
-    pub reg_topperiph_pll_tmux_sel: crate::Reg<
-        self::topperiph_pll::reg_topperiph_pll_tmux_sel::REG_TOPPERIPH_PLL_TMUX_SEL_SPEC,
-    >,
+    pub topperiph_pll_tmux_sel:
+        crate::Reg<self::topperiph_pll::topperiph_pll_tmux_sel::TOPPERIPH_PLL_TMUX_SEL_SPEC>,
     #[doc = "0x18 - "]
-    pub reg_topperiph_pll_status1:
-        crate::Reg<self::topperiph_pll::reg_topperiph_pll_status1::REG_TOPPERIPH_PLL_STATUS1_SPEC>,
+    pub topperiph_pll_status1:
+        crate::Reg<self::topperiph_pll::topperiph_pll_status1::TOPPERIPH_PLL_STATUS1_SPEC>,
     #[doc = "0x1c - "]
-    pub reg_topperiph_pll_status2:
-        crate::Reg<self::topperiph_pll::reg_topperiph_pll_status2::REG_TOPPERIPH_PLL_STATUS2_SPEC>,
+    pub topperiph_pll_status2:
+        crate::Reg<self::topperiph_pll::topperiph_pll_status2::TOPPERIPH_PLL_STATUS2_SPEC>,
 }
 #[doc = r"Register block"]
 #[doc = "TOPPERIPH_PLL"]
@@ -745,9 +697,9 @@ pub mod topperiph_pll;
 #[repr(C)]
 pub struct BOOTCONFIG {
     #[doc = "0x00 - "]
-    pub reg_boot_cfg: crate::Reg<self::boot_config::reg_boot_cfg::REG_BOOT_CFG_SPEC>,
+    pub boot_cfg: crate::Reg<self::boot_config::boot_cfg::BOOT_CFG_SPEC>,
     #[doc = "0x04 - "]
-    pub reg_boot_status: crate::Reg<self::boot_config::reg_boot_status::REG_BOOT_STATUS_SPEC>,
+    pub boot_status: crate::Reg<self::boot_config::boot_status::BOOT_STATUS_SPEC>,
 }
 #[doc = r"Register block"]
 #[doc = "BootConfig"]

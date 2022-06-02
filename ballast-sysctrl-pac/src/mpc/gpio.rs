@@ -4,13 +4,13 @@ pub type PADDIR_00_31 = crate::Reg<paddir_00_31::PADDIR_00_31_SPEC>;
 direction configuration bitfield: - bit\\[i\\]=1’b0: Input mode for GPIO\\[i\\]
 - bit\\[i\\]=1’b1: Output mode for GPIO\\[i\\]"]
 pub mod paddir_00_31;
-#[doc = "GPIOEN_00_31 register accessor: an alias for `Reg<GPIOEN_00_31_SPEC>`"]
-pub type GPIOEN_00_31 = crate::Reg<gpioen_00_31::GPIOEN_00_31_SPEC>;
+#[doc = "EN_00_31 register accessor: an alias for `Reg<EN_00_31_SPEC>`"]
+pub type EN_00_31 = crate::Reg<en_00_31::EN_00_31_SPEC>;
 #[doc = "Bit 31 - 0 GPIOEN (R/W) GPIO\\[31:0\\]
 clock enable configuration bitfield: - bit\\[i\\]=1’b0: disable clock for GPIO\\[i\\]
 - bit\\[i\\]=1’b1: enable clock for GPIO\\[i\\]
 GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if it’s direction is configured in input mode."]
-pub mod gpioen_00_31;
+pub mod en_00_31;
 #[doc = "PADIN_00_31 register accessor: an alias for `Reg<PADIN_00_31_SPEC>`"]
 pub type PADIN_00_31 = crate::Reg<padin_00_31::PADIN_00_31_SPEC>;
 #[doc = "Bit 31 - 0 DATA_IN (R) GPIO\\[31:0\\]
@@ -121,10 +121,13 @@ pub mod padout_32_63;
 pub type PADIN_32_63 = crate::Reg<padin_32_63::PADIN_32_63_SPEC>;
 #[doc = ""]
 pub mod padin_32_63;
-#[doc = "GPIOEN_32_63 register accessor: an alias for `Reg<GPIOEN_32_63_SPEC>`"]
-pub type GPIOEN_32_63 = crate::Reg<gpioen_32_63::GPIOEN_32_63_SPEC>;
-#[doc = ""]
-pub mod gpioen_32_63;
+#[doc = "EN_32_63 register accessor: an alias for `Reg<EN_32_63_SPEC>`"]
+pub type EN_32_63 = crate::Reg<en_32_63::EN_32_63_SPEC>;
+#[doc = "GPIOEN (R/W) GPIO\\[63:32\\]
+clock enable configuration bitfield: - bit\\[i\\]=1’b0: disable clock for GPIO\\[i\\]
+- bit\\[i\\]=1’b1: enable clock for GPIO\\[i\\]
+GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if it’s direction is configured in input mode."]
+pub mod en_32_63;
 #[doc = "PADDIR_32_63 register accessor: an alias for `Reg<PADDIR_32_63_SPEC>`"]
 pub type PADDIR_32_63 = crate::Reg<paddir_32_63::PADDIR_32_63_SPEC>;
 #[doc = "Bit 31 - 0 DIR (R/W) GPIO\\[63:32\\]

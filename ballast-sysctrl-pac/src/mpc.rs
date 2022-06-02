@@ -34,7 +34,7 @@ direction configuration bitfield: - bit\\[i\\]=1’b0: Input mode for GPIO\\[i\\
 clock enable configuration bitfield: - bit\\[i\\]=1’b0: disable clock for GPIO\\[i\\]
 - bit\\[i\\]=1’b1: enable clock for GPIO\\[i\\]
 GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if it’s direction is configured in input mode."]
-    pub gpioen_00_31: crate::Reg<self::gpio::gpioen_00_31::GPIOEN_00_31_SPEC>,
+    pub en_00_31: crate::Reg<self::gpio::en_00_31::EN_00_31_SPEC>,
     #[doc = "0x08 - Bit 31 - 0 DATA_IN (R) GPIO\\[31:0\\]
 input data read bitfield. DATA_IN\\[i\\]
 corresponds to input data of GPIO\\[i\\]."]
@@ -76,8 +76,11 @@ Interrupt status flags bitfield. INTSTATUS\\[i\\]=1 when interrupt received on G
 direction configuration bitfield: - bit\\[i\\]=1’b0: Input mode for GPIO\\[i\\]
 - bit\\[i\\]=1’b1: Output mode for GPIO\\[i\\]"]
     pub paddir_32_63: crate::Reg<self::gpio::paddir_32_63::PADDIR_32_63_SPEC>,
-    #[doc = "0x3c - "]
-    pub gpioen_32_63: crate::Reg<self::gpio::gpioen_32_63::GPIOEN_32_63_SPEC>,
+    #[doc = "0x3c - GPIOEN (R/W) GPIO\\[63:32\\]
+clock enable configuration bitfield: - bit\\[i\\]=1’b0: disable clock for GPIO\\[i\\]
+- bit\\[i\\]=1’b1: enable clock for GPIO\\[i\\]
+GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if it’s direction is configured in input mode."]
+    pub en_32_63: crate::Reg<self::gpio::en_32_63::EN_32_63_SPEC>,
     #[doc = "0x40 - "]
     pub padin_32_63: crate::Reg<self::gpio::padin_32_63::PADIN_32_63_SPEC>,
     #[doc = "0x44 - Bit 31 - 0 DATA_OUT (R/W) GPIO\\[63:32\\]
