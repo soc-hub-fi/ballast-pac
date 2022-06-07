@@ -13,6 +13,27 @@ impl From<crate::R<CFG_RD_WEIGHT_0_SPEC>> for R {
         R(reader)
     }
 }
+#[doc = "Register `CFG_RD_WEIGHT_0` writer"]
+pub struct W(crate::W<CFG_RD_WEIGHT_0_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CFG_RD_WEIGHT_0_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<CFG_RD_WEIGHT_0_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<CFG_RD_WEIGHT_0_SPEC>) -> Self {
+        W(writer)
+    }
+}
 #[doc = "Field `RD_WEIGHT_BDMA` reader - "]
 pub struct RD_WEIGHT_BDMA_R(crate::FieldReader<u8>);
 impl RD_WEIGHT_BDMA_R {
@@ -95,7 +116,15 @@ impl R {
         RD_WEIGHT_CDP_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
-#[doc = "Register0 to control the read weight of clients in MCIF\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cfg_rd_weight_0](index.html) module"]
+impl W {
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Register0 to control the read weight of clients in MCIF\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cfg_rd_weight_0](index.html) module"]
 pub struct CFG_RD_WEIGHT_0_SPEC;
 impl crate::RegisterSpec for CFG_RD_WEIGHT_0_SPEC {
     type Ux = u32;
@@ -103,6 +132,10 @@ impl crate::RegisterSpec for CFG_RD_WEIGHT_0_SPEC {
 #[doc = "`read()` method returns [cfg_rd_weight_0::R](R) reader structure"]
 impl crate::Readable for CFG_RD_WEIGHT_0_SPEC {
     type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [cfg_rd_weight_0::W](W) writer structure"]
+impl crate::Writable for CFG_RD_WEIGHT_0_SPEC {
+    type Writer = W;
 }
 #[doc = "`reset()` method sets CFG_RD_WEIGHT_0 to value 0x0100_0100"]
 impl crate::Resettable for CFG_RD_WEIGHT_0_SPEC {

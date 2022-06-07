@@ -154,7 +154,7 @@ pub struct TLP {
 unsafe impl Send for TLP {}
 impl TLP {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const tlp::RegisterBlock = 0 as *const _;
+    pub const PTR: *const tlp::RegisterBlock = 0x1000_0000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
     pub const fn ptr() -> *const tlp::RegisterBlock {
@@ -175,6 +175,34 @@ impl core::fmt::Debug for TLP {
 }
 #[doc = "TLP"]
 pub mod tlp;
+#[doc = "HPC"]
+pub struct HPC {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for HPC {}
+impl HPC {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const hpc::RegisterBlock = 0x1400_0000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const hpc::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for HPC {
+    type Target = hpc::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for HPC {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HPC").finish()
+    }
+}
+#[doc = "HPC"]
+pub mod hpc;
 #[doc = "SYSCTRL"]
 pub struct SYSCTRL {
     _marker: PhantomData<*const ()>,
@@ -218,6 +246,8 @@ pub struct Peripherals {
     pub AI: AI,
     #[doc = "TLP"]
     pub TLP: TLP,
+    #[doc = "HPC"]
+    pub HPC: HPC,
     #[doc = "SYSCTRL"]
     pub SYSCTRL: SYSCTRL,
 }
@@ -251,6 +281,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             TLP: TLP {
+                _marker: PhantomData,
+            },
+            HPC: HPC {
                 _marker: PhantomData,
             },
             SYSCTRL: SYSCTRL {

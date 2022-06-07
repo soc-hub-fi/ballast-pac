@@ -13,6 +13,27 @@ impl From<crate::R<D_OPERATION_MODE_CFG_SPEC>> for R {
         R(reader)
     }
 }
+#[doc = "Register `D_OPERATION_MODE_CFG` writer"]
+pub struct W(crate::W<D_OPERATION_MODE_CFG_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<D_OPERATION_MODE_CFG_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<D_OPERATION_MODE_CFG_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<D_OPERATION_MODE_CFG_SPEC>) -> Self {
+        W(writer)
+    }
+}
 #[doc = "\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
@@ -70,6 +91,38 @@ impl core::ops::Deref for POOLING_METHOD_R {
         &self.0
     }
 }
+#[doc = "Field `POOLING_METHOD` writer - "]
+pub struct POOLING_METHOD_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> POOLING_METHOD_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: POOLING_METHOD_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn average(self) -> &'a mut W {
+        self.variant(POOLING_METHOD_A::AVERAGE)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn max(self) -> &'a mut W {
+        self.variant(POOLING_METHOD_A::MAX)
+    }
+    #[doc = "`10`"]
+    #[inline(always)]
+    pub fn min(self) -> &'a mut W {
+        self.variant(POOLING_METHOD_A::MIN)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
+        self.w
+    }
+}
 #[doc = "Field `FLYING_MODE` reader - "]
 pub struct FLYING_MODE_R(crate::FieldReader<bool>);
 impl FLYING_MODE_R {
@@ -85,6 +138,28 @@ impl core::ops::Deref for FLYING_MODE_R {
         &self.0
     }
 }
+#[doc = "Field `FLYING_MODE` writer - "]
+pub struct FLYING_MODE_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> FLYING_MODE_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
+        self.w
+    }
+}
 #[doc = "Field `SPLIT_NUM` reader - "]
 pub struct SPLIT_NUM_R(crate::FieldReader<u8>);
 impl SPLIT_NUM_R {
@@ -98,6 +173,18 @@ impl core::ops::Deref for SPLIT_NUM_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
+    }
+}
+#[doc = "Field `SPLIT_NUM` writer - "]
+pub struct SPLIT_NUM_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> SPLIT_NUM_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
+        self.w
     }
 }
 impl R {
@@ -117,7 +204,30 @@ impl R {
         SPLIT_NUM_R::new(((self.bits >> 8) & 0xff) as u8)
     }
 }
-#[doc = "Split number\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [d_operation_mode_cfg](index.html) module"]
+impl W {
+    #[doc = "Bits 0:1"]
+    #[inline(always)]
+    pub fn pooling_method(&mut self) -> POOLING_METHOD_W {
+        POOLING_METHOD_W { w: self }
+    }
+    #[doc = "Bit 4"]
+    #[inline(always)]
+    pub fn flying_mode(&mut self) -> FLYING_MODE_W {
+        FLYING_MODE_W { w: self }
+    }
+    #[doc = "Bits 8:15"]
+    #[inline(always)]
+    pub fn split_num(&mut self) -> SPLIT_NUM_W {
+        SPLIT_NUM_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Split number\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [d_operation_mode_cfg](index.html) module"]
 pub struct D_OPERATION_MODE_CFG_SPEC;
 impl crate::RegisterSpec for D_OPERATION_MODE_CFG_SPEC {
     type Ux = u32;
@@ -125,6 +235,10 @@ impl crate::RegisterSpec for D_OPERATION_MODE_CFG_SPEC {
 #[doc = "`read()` method returns [d_operation_mode_cfg::R](R) reader structure"]
 impl crate::Readable for D_OPERATION_MODE_CFG_SPEC {
     type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [d_operation_mode_cfg::W](W) writer structure"]
+impl crate::Writable for D_OPERATION_MODE_CFG_SPEC {
+    type Writer = W;
 }
 #[doc = "`reset()` method sets D_OPERATION_MODE_CFG to value 0"]
 impl crate::Resettable for D_OPERATION_MODE_CFG_SPEC {

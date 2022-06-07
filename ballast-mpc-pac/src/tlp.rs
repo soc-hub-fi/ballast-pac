@@ -12,6 +12,9 @@ pub struct RegisterBlock {
     _reserved3: [u8; 0x01f0],
     #[doc = "0x600..0x640 - Pad_config"]
     pub pad_config: PAD_CONFIG,
+    _reserved4: [u8; 0x01bf],
+    #[doc = "0x800..0x81a - EMA"]
+    pub ema: EMA,
 }
 #[doc = r"Register block"]
 #[repr(C)]
@@ -34,59 +37,59 @@ pub mod apb_software_irq;
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct GLOBAL_INTR_ROUTER {
-    #[doc = "0x00 - "]
+    #[doc = "0x00 - SysCtrl route register 0"]
     pub irq_0_route_reg_0:
         crate::Reg<self::global_intr_router::irq_0_route_reg_0::IRQ_0_ROUTE_REG_0_SPEC>,
     _reserved1: [u8; 0x03],
-    #[doc = "0x04 - "]
+    #[doc = "0x04 - MPC route register 0"]
     pub irq_1_route_reg_0:
         crate::Reg<self::global_intr_router::irq_1_route_reg_0::IRQ_1_ROUTE_REG_0_SPEC>,
     _reserved2: [u8; 0x03],
-    #[doc = "0x08 - "]
+    #[doc = "0x08 - HPC route register 0"]
     pub irq_2_route_reg_0:
         crate::Reg<self::global_intr_router::irq_2_route_reg_0::IRQ_2_ROUTE_REG_0_SPEC>,
     _reserved3: [u8; 0x03],
-    #[doc = "0x0c - "]
+    #[doc = "0x0c - SysCtrl route register 1"]
     pub irq_0_route_reg_1:
         crate::Reg<self::global_intr_router::irq_0_route_reg_1::IRQ_0_ROUTE_REG_1_SPEC>,
     _reserved4: [u8; 0x03],
-    #[doc = "0x10 - "]
+    #[doc = "0x10 - MPC route register 1"]
     pub irq_1_route_reg_1:
         crate::Reg<self::global_intr_router::irq_1_route_reg_1::IRQ_1_ROUTE_REG_1_SPEC>,
     _reserved5: [u8; 0x03],
-    #[doc = "0x14 - "]
+    #[doc = "0x14 - HPC route register 1"]
     pub irq_2_route_reg_1:
         crate::Reg<self::global_intr_router::irq_2_route_reg_1::IRQ_2_ROUTE_REG_1_SPEC>,
     _reserved6: [u8; 0x03],
-    #[doc = "0x18 - "]
+    #[doc = "0x18 - SysCtrl route register 2"]
     pub irq_0_route_reg_2:
         crate::Reg<self::global_intr_router::irq_0_route_reg_2::IRQ_0_ROUTE_REG_2_SPEC>,
     _reserved7: [u8; 0x03],
-    #[doc = "0x1c - "]
+    #[doc = "0x1c - MPC route register 2"]
     pub irq_1_route_reg_2:
         crate::Reg<self::global_intr_router::irq_1_route_reg_2::IRQ_1_ROUTE_REG_2_SPEC>,
     _reserved8: [u8; 0x03],
-    #[doc = "0x20 - "]
+    #[doc = "0x20 - HPC route register 2"]
     pub irq_2_route_reg_2:
         crate::Reg<self::global_intr_router::irq_2_route_reg_2::IRQ_2_ROUTE_REG_2_SPEC>,
     _reserved9: [u8; 0x07],
-    #[doc = "0x28 - "]
+    #[doc = "0x28 - MPC route register 3"]
     pub irq_1_route_reg_3:
         crate::Reg<self::global_intr_router::irq_1_route_reg_3::IRQ_1_ROUTE_REG_3_SPEC>,
     _reserved10: [u8; 0x03],
-    #[doc = "0x2c - "]
+    #[doc = "0x2c - HPC route register 3"]
     pub irq_2_route_reg_3:
         crate::Reg<self::global_intr_router::irq_2_route_reg_3::IRQ_2_ROUTE_REG_3_SPEC>,
     _reserved11: [u8; 0x07],
-    #[doc = "0x34 - "]
+    #[doc = "0x34 - MPC route register 4"]
     pub irq_1_route_reg_4:
         crate::Reg<self::global_intr_router::irq_1_route_reg_4::IRQ_1_ROUTE_REG_4_SPEC>,
     _reserved12: [u8; 0x0b],
-    #[doc = "0x40 - "]
+    #[doc = "0x40 - MPC route register 5"]
     pub irq_1_route_reg_5:
         crate::Reg<self::global_intr_router::irq_1_route_reg_5::IRQ_1_ROUTE_REG_5_SPEC>,
     _reserved13: [u8; 0x0b],
-    #[doc = "0x4c - "]
+    #[doc = "0x4c - MPC route register 6"]
     pub irq_1_route_reg_6:
         crate::Reg<self::global_intr_router::irq_1_route_reg_6::IRQ_1_ROUTE_REG_6_SPEC>,
 }
@@ -165,3 +168,31 @@ pub struct PAD_CONFIG {
 #[doc = r"Register block"]
 #[doc = "Pad_config"]
 pub mod pad_config;
+#[doc = r"Register block"]
+#[repr(C)]
+pub struct EMA {
+    #[doc = "0x00 - "]
+    pub ai_mem_timing_mode: crate::Reg<self::ema::ai_mem_timing_mode::AI_MEM_TIMING_MODE_SPEC>,
+    _reserved1: [u8; 0x02],
+    #[doc = "0x04 - "]
+    pub c2c_mem_timing_mode: crate::Reg<self::ema::c2c_mem_timing_mode::C2C_MEM_TIMING_MODE_SPEC>,
+    _reserved2: [u8; 0x02],
+    #[doc = "0x08 - "]
+    pub dsp_mem_timing_mode: crate::Reg<self::ema::dsp_mem_timing_mode::DSP_MEM_TIMING_MODE_SPEC>,
+    _reserved3: [u8; 0x02],
+    #[doc = "0x0c - "]
+    pub eth_mem_timing_mode: crate::Reg<self::ema::eth_mem_timing_mode::ETH_MEM_TIMING_MODE_SPEC>,
+    _reserved4: [u8; 0x02],
+    #[doc = "0x10 - "]
+    pub hpc_mem_timing_mode: crate::Reg<self::ema::hpc_mem_timing_mode::HPC_MEM_TIMING_MODE_SPEC>,
+    _reserved5: [u8; 0x02],
+    #[doc = "0x14 - "]
+    pub mpc_mem_timing_mode: crate::Reg<self::ema::mpc_mem_timing_mode::MPC_MEM_TIMING_MODE_SPEC>,
+    _reserved6: [u8; 0x02],
+    #[doc = "0x18 - "]
+    pub sysctrl_mem_timing_mode:
+        crate::Reg<self::ema::sysctrl_mem_timing_mode::SYSCTRL_MEM_TIMING_MODE_SPEC>,
+}
+#[doc = r"Register block"]
+#[doc = "EMA"]
+pub mod ema;

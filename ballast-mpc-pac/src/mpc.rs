@@ -2,9 +2,9 @@
 #[repr(C)]
 pub struct RegisterBlock {
     _reserved0: [u8; 0x0010_1000],
-    #[doc = "0x101000..0x101040 - GPIO"]
+    #[doc = "0x101000..0x101070 - GPIO"]
     pub gpio: GPIO,
-    _reserved1: [u8; 0x0fc0],
+    _reserved1: [u8; 0x0f90],
     #[doc = "0x102000..0x102464 - UDMA"]
     pub udma: UDMA,
     _reserved2: [u8; 0x1b9c],
@@ -26,38 +26,98 @@ pub struct RegisterBlock {
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct GPIO {
-    #[doc = "0x00 - Control the direction of each of the GPIO pads. A value of 1 means it is configured as an output, while 0 configures it as an input."]
-    pub paddir: crate::Reg<self::gpio::paddir::PADDIR_SPEC>,
-    #[doc = "0x04 - Input Values"]
-    pub padin: crate::Reg<self::gpio::padin::PADIN_SPEC>,
-    #[doc = "0x08 - Output values."]
-    pub padout: crate::Reg<self::gpio::padout::PADOUT_SPEC>,
-    #[doc = "0x0c - Interrupt enable per input bit. INTTYPE0 and INTTYPE1 control the interrupt triggering behavior. There are four triggers available - INTTYPE0 = 0, INTTYPE1 = 0: Level 1 - INTTYPE0 = 1, INTTYPE1 = 0: Level 0 - INTTYPE0 = 0, INTTYPE1 = 1: Rise - INTTYPE0 = 1, INTTYPE1 = 1: Fall"]
-    pub inten: crate::Reg<self::gpio::inten::INTEN_SPEC>,
-    #[doc = "0x10 - Interrupt Type 0. Controls the interrupt trigger behavior together with INTTYPE1. Use INTEN to enable interrupts first."]
-    pub inttype0: crate::Reg<self::gpio::inttype0::INTTYPE0_SPEC>,
-    #[doc = "0x14 - Controls the interrupt trigger behavior together with INTTYPE0. Use INTEN to enable interrupts first."]
-    pub inttype1: crate::Reg<self::gpio::inttype1::INTTYPE1_SPEC>,
-    #[doc = "0x18 - Contains interrupt status per GPIO line. The status register is cleared when read. Similarly the interrupt line is high while a bit is set in interrupt status and will be deasserted when the status register is read."]
-    pub intstatus: crate::Reg<self::gpio::intstatus::INTSTATUS_SPEC>,
-    #[doc = "0x1c - Contains the enable bit per GPIO line."]
-    pub gpioen: crate::Reg<self::gpio::gpioen::GPIOEN_SPEC>,
-    #[doc = "0x20 - The pad configuration registers control various aspects of the pads that are typically used in ASICs, e.g. drive strength, Schmitt-Triggers, Slew Rate, etc. Since those configuration parameters depend on the exact pads used, each implementation is free to use the PADCFG0-7 registers in every way it wants and also leave them unconnected, if unneeded. 13 Writing to the PADOUTSET address (0x1A10_1040), the content of the PADOUT register is updated with its content \"ored\" with the write data. Writing to the PADOUTCLR address (0x1A10_1044), the content of the PADOUT register is updated with its content \"anded\" with the inverted write data."]
-    pub padcfg0: crate::Reg<self::gpio::padcfg0::PADCFG0_SPEC>,
-    #[doc = "0x24 - The pad configuration registers control various aspects of the pads that are typically used in ASICs, e.g. drive strength, Schmitt-Triggers, Slew Rate, etc. Since those configuration parameters depend on the exact pads used, each implementation is free to use the PADCFG0-7 registers in every way it wants and also leave them unconnected, if unneeded. 13 Writing to the PADOUTSET address (0x1A10_1040), the content of the PADOUT register is updated with its content \"ored\" with the write data. Writing to the PADOUTCLR address (0x1A10_1044), the content of the PADOUT register is updated with its content \"anded\" with the inverted write data."]
-    pub padcfg1: crate::Reg<self::gpio::padcfg1::PADCFG1_SPEC>,
-    #[doc = "0x28 - The pad configuration registers control various aspects of the pads that are typically used in ASICs, e.g. drive strength, Schmitt-Triggers, Slew Rate, etc. Since those configuration parameters depend on the exact pads used, each implementation is free to use the PADCFG0-7 registers in every way it wants and also leave them unconnected, if unneeded. 13 Writing to the PADOUTSET address (0x1A10_1040), the content of the PADOUT register is updated with its content \"ored\" with the write data. Writing to the PADOUTCLR address (0x1A10_1044), the content of the PADOUT register is updated with its content \"anded\" with the inverted write data."]
-    pub padcfg2: crate::Reg<self::gpio::padcfg2::PADCFG2_SPEC>,
-    #[doc = "0x2c - The pad configuration registers control various aspects of the pads that are typically used in ASICs, e.g. drive strength, Schmitt-Triggers, Slew Rate, etc. Since those configuration parameters depend on the exact pads used, each implementation is free to use the PADCFG0-7 registers in every way it wants and also leave them unconnected, if unneeded. 13 Writing to the PADOUTSET address (0x1A10_1040), the content of the PADOUT register is updated with its content \"ored\" with the write data. Writing to the PADOUTCLR address (0x1A10_1044), the content of the PADOUT register is updated with its content \"anded\" with the inverted write data."]
-    pub padcfg3: crate::Reg<self::gpio::padcfg3::PADCFG3_SPEC>,
-    #[doc = "0x30 - The pad configuration registers control various aspects of the pads that are typically used in ASICs, e.g. drive strength, Schmitt-Triggers, Slew Rate, etc. Since those configuration parameters depend on the exact pads used, each implementation is free to use the PADCFG0-7 registers in every way it wants and also leave them unconnected, if unneeded. 13 Writing to the PADOUTSET address (0x1A10_1040), the content of the PADOUT register is updated with its content \"ored\" with the write data. Writing to the PADOUTCLR address (0x1A10_1044), the content of the PADOUT register is updated with its content \"anded\" with the inverted write data."]
-    pub padcfg4: crate::Reg<self::gpio::padcfg4::PADCFG4_SPEC>,
-    #[doc = "0x34 - The pad configuration registers control various aspects of the pads that are typically used in ASICs, e.g. drive strength, Schmitt-Triggers, Slew Rate, etc. Since those configuration parameters depend on the exact pads used, each implementation is free to use the PADCFG0-7 registers in every way it wants and also leave them unconnected, if unneeded. 13 Writing to the PADOUTSET address (0x1A10_1040), the content of the PADOUT register is updated with its content \"ored\" with the write data. Writing to the PADOUTCLR address (0x1A10_1044), the content of the PADOUT register is updated with its content \"anded\" with the inverted write data."]
-    pub padcfg5: crate::Reg<self::gpio::padcfg5::PADCFG5_SPEC>,
-    #[doc = "0x38 - The pad configuration registers control various aspects of the pads that are typically used in ASICs, e.g. drive strength, Schmitt-Triggers, Slew Rate, etc. Since those configuration parameters depend on the exact pads used, each implementation is free to use the PADCFG0-7 registers in every way it wants and also leave them unconnected, if unneeded. 13 Writing to the PADOUTSET address (0x1A10_1040), the content of the PADOUT register is updated with its content \"ored\" with the write data. Writing to the PADOUTCLR address (0x1A10_1044), the content of the PADOUT register is updated with its content \"anded\" with the inverted write data."]
-    pub padcfg6: crate::Reg<self::gpio::padcfg6::PADCFG6_SPEC>,
-    #[doc = "0x3c - The pad configuration registers control various aspects of the pads that are typically used in ASICs, e.g. drive strength, Schmitt-Triggers, Slew Rate, etc. Since those configuration parameters depend on the exact pads used, each implementation is free to use the PADCFG0-7 registers in every way it wants and also leave them unconnected, if unneeded. 13 Writing to the PADOUTSET address (0x1A10_1040), the content of the PADOUT register is updated with its content \"ored\" with the write data. Writing to the PADOUTCLR address (0x1A10_1044), the content of the PADOUT register is updated with its content \"anded\" with the inverted write data."]
-    pub padcfg7: crate::Reg<self::gpio::padcfg7::PADCFG7_SPEC>,
+    #[doc = "0x00 - Bit 31 - 0 DIR (R/W) GPIO\\[31:0\\]
+direction configuration bitfield: - bit\\[i\\]=1’b0: Input mode for GPIO\\[i\\]
+- bit\\[i\\]=1’b1: Output mode for GPIO\\[i\\]"]
+    pub paddir_00_31: crate::Reg<self::gpio::paddir_00_31::PADDIR_00_31_SPEC>,
+    #[doc = "0x04 - Bit 31 - 0 GPIOEN (R/W) GPIO\\[31:0\\]
+clock enable configuration bitfield: - bit\\[i\\]=1’b0: disable clock for GPIO\\[i\\]
+- bit\\[i\\]=1’b1: enable clock for GPIO\\[i\\]
+GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if it’s direction is configured in input mode."]
+    pub en_00_31: crate::Reg<self::gpio::en_00_31::EN_00_31_SPEC>,
+    #[doc = "0x08 - Bit 31 - 0 DATA_IN (R) GPIO\\[31:0\\]
+input data read bitfield. DATA_IN\\[i\\]
+corresponds to input data of GPIO\\[i\\]."]
+    pub padin_00_31: crate::Reg<self::gpio::padin_00_31::PADIN_00_31_SPEC>,
+    #[doc = "0x0c - Bit 31 - 0 DATA_OUT (R/W) GPIO\\[31:0\\]
+output data read bitfield. DATA_OUT\\[i\\]
+corresponds to output data set on GPIO\\[i\\]."]
+    pub padout_00_31: crate::Reg<self::gpio::padout_00_31::PADOUT_00_31_SPEC>,
+    #[doc = "0x10 - GPIO pad output set register"]
+    pub padoutset_00_31: crate::Reg<self::gpio::padoutset_00_31::PADOUTSET_00_31_SPEC>,
+    #[doc = "0x14 - GPIO pad output clear register"]
+    pub padoutclr_00_31: crate::Reg<self::gpio::padoutclr_00_31::PADOUTCLR_00_31_SPEC>,
+    #[doc = "0x18 - "]
+    pub inten_00_31: crate::Reg<self::gpio::inten_00_31::INTEN_00_31_SPEC>,
+    #[doc = "0x1c - Bit 31 - 0 INTTYPE0 (R/W) GPIO\\[15:0\\]
+interrupt type configuration bitfield: - bit\\[2*i+1:2*i\\]=2’b00: interrupt on falling edge for GPIO\\[i\\]
+- bit\\[2*i+1:2*i\\]=2’b01: interrupt on rising edge for GPIO\\[i\\]
+- bit\\[2*i+1:2*i\\]=2’b10: interrupt on rising and falling edge for GPIO\\[i\\]
+- bit\\[2*i+1:2*i\\]=2’b11: RFU"]
+    pub inttype_00_15: crate::Reg<self::gpio::inttype_00_15::INTTYPE_00_15_SPEC>,
+    #[doc = "0x20 - Bit 31 - 0 INTTYPE1 (R/W) GPIO\\[31:16\\]
+interrupt type configuration bitfield: - bit\\[2*i+1:2*i\\]=2’b00: interrupt on falling edge for GPIO\\[16+i\\]
+- bit\\[2*i+1:2*i\\]=2’b01: interrupt on rising edge for GPIO\\[16+i\\]
+- bit\\[2*i+1:2*i\\]=2’b10: interrupt on rising and falling edge for GPIO\\[16+i\\]
+- bit\\[2*i+1:2*i\\]=2’b11: RFU"]
+    pub inttype_16_31: crate::Reg<self::gpio::inttype_16_31::INTTYPE_16_31_SPEC>,
+    #[doc = "0x24 - Bit 31 - 0 INTSTATUS (R) GPIO\\[31:0\\]
+Interrupt status flags bitfield. INTSTATUS\\[i\\]=1 when interrupt received on GPIO\\[i\\]. INTSTATUS is cleared when it is red. GPIO interrupt line is also cleared when INTSTATUS register is red"]
+    pub intstatus_00_31: crate::Reg<self::gpio::intstatus_00_31::INTSTATUS_00_31_SPEC>,
+    #[doc = "0x28 - supports configuration for 4 PADS"]
+    pub padcfg_00_07: crate::Reg<self::gpio::padcfg_00_07::PADCFG_00_07_SPEC>,
+    #[doc = "0x2c - "]
+    pub padcfg_08_15: crate::Reg<self::gpio::padcfg_08_15::PADCFG_08_15_SPEC>,
+    #[doc = "0x30 - "]
+    pub padcfg_16_23: crate::Reg<self::gpio::padcfg_16_23::PADCFG_16_23_SPEC>,
+    #[doc = "0x34 - "]
+    pub padcfg_24_31: crate::Reg<self::gpio::padcfg_24_31::PADCFG_24_31_SPEC>,
+    #[doc = "0x38 - Bit 31 - 0 DIR (R/W) GPIO\\[63:32\\]
+direction configuration bitfield: - bit\\[i\\]=1’b0: Input mode for GPIO\\[i\\]
+- bit\\[i\\]=1’b1: Output mode for GPIO\\[i\\]"]
+    pub paddir_32_63: crate::Reg<self::gpio::paddir_32_63::PADDIR_32_63_SPEC>,
+    #[doc = "0x3c - GPIOEN (R/W) GPIO\\[63:32\\]
+clock enable configuration bitfield: - bit\\[i\\]=1’b0: disable clock for GPIO\\[i\\]
+- bit\\[i\\]=1’b1: enable clock for GPIO\\[i\\]
+GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if it’s direction is configured in input mode."]
+    pub en_32_63: crate::Reg<self::gpio::en_32_63::EN_32_63_SPEC>,
+    #[doc = "0x40 - "]
+    pub padin_32_63: crate::Reg<self::gpio::padin_32_63::PADIN_32_63_SPEC>,
+    #[doc = "0x44 - Bit 31 - 0 DATA_OUT (R/W) GPIO\\[63:32\\]
+output data read bitfield. DATA_OUT\\[i\\]
+corresponds to output data set on GPIO\\[i\\]"]
+    pub padout_32_63: crate::Reg<self::gpio::padout_32_63::PADOUT_32_63_SPEC>,
+    #[doc = "0x48 - "]
+    pub padoutset_32_63: crate::Reg<self::gpio::padoutset_32_63::PADOUTSET_32_63_SPEC>,
+    #[doc = "0x4c - "]
+    pub padoutclr_32_63: crate::Reg<self::gpio::padoutclr_32_63::PADOUTCLR_32_63_SPEC>,
+    #[doc = "0x50 - Bit 31 - 0 INTEN (R/W) GPIO\\[63:32\\]
+interrupt enable configuration bitfield: - bit\\[i\\]=1’b0: disable interrupt for GPIO\\[i\\]
+- bit\\[i\\]=1’b1: enable interrupt for GPIO\\[i\\]"]
+    pub inten_32_63: crate::Reg<self::gpio::inten_32_63::INTEN_32_63_SPEC>,
+    #[doc = "0x54 - Bit 31 - 0 INTTYPE0 (R/W) GPIO\\[47:32\\]
+interrupt type configuration bitfield: - bit\\[2*i+1:2*i\\]=2’b00: interrupt on falling edge for GPIO\\[i\\]
+- bit\\[2*i+1:2*i\\]=2’b01: interrupt on rising edge for GPIO\\[i\\]
+- bit\\[2*i+1:2*i\\]=2’b10: interrupt on rising and falling edge for GPIO\\[i\\]
+- bit\\[2*i+1:2*i\\]=2’b11: RFU"]
+    pub inttype_32_47: crate::Reg<self::gpio::inttype_32_47::INTTYPE_32_47_SPEC>,
+    #[doc = "0x58 - Bit 31 - 0 INTTYPE1 (R/W) GPIO\\[63:48\\]
+interrupt type configuration bitfield: - bit\\[2*i+1:2*i\\]=2’b00: interrupt on falling edge for GPIO\\[16+i\\]
+- bit\\[2*i+1:2*i\\]=2’b01: interrupt on rising edge for GPIO\\[16+i\\]
+- bit\\[2*i+1:2*i\\]=2’b10: interrupt on rising and falling edge for GPIO\\[16+i\\]
+- bit\\[2*i+1:2*i\\]=2’b11: RFU"]
+    pub inttype_48_63: crate::Reg<self::gpio::inttype_48_63::INTTYPE_48_63_SPEC>,
+    #[doc = "0x5c - Bit 31 - 0 INTSTATUS (R) GPIO\\[63:32\\]
+Interrupt status flags bitfield. INTSTATUS\\[i\\]=1 when interrupt received on GPIO\\[i\\]. INTSTATUS is cleared when it is red. GPIO interrupt line is also cleared when INTSTATUS register is red."]
+    pub intstatus_32_63: crate::Reg<self::gpio::intstatus_32_63::INTSTATUS_32_63_SPEC>,
+    #[doc = "0x60 - "]
+    pub padcfg_32_39: crate::Reg<self::gpio::padcfg_32_39::PADCFG_32_39_SPEC>,
+    #[doc = "0x64 - "]
+    pub padcfg_40_47: crate::Reg<self::gpio::padcfg_40_47::PADCFG_40_47_SPEC>,
+    #[doc = "0x68 - "]
+    pub padcfg_48_55: crate::Reg<self::gpio::padcfg_48_55::PADCFG_48_55_SPEC>,
+    #[doc = "0x6c - "]
+    pub padcfg_56_63: crate::Reg<self::gpio::padcfg_56_63::PADCFG_56_63_SPEC>,
 }
 #[doc = r"Register block"]
 #[doc = "GPIO"]
@@ -481,55 +541,55 @@ pub struct UDMA {
     pub cam_vsync_polarity: crate::Reg<self::udma::cam_vsync_polarity::CAM_VSYNC_POLARITY_SPEC>,
     _reserved65: [u8; 0x48],
     #[doc = "0x400 - FILTER tx channel address register"]
-    pub reg_tx_ch0_add: crate::Reg<self::udma::reg_tx_ch0_add::REG_TX_CH0_ADD_SPEC>,
+    pub tx_ch0_add: crate::Reg<self::udma::tx_ch0_add::TX_CH0_ADD_SPEC>,
     #[doc = "0x404 - FILTER tx channel configuration register"]
-    pub reg_tx_ch0_cfg: crate::Reg<self::udma::reg_tx_ch0_cfg::REG_TX_CH0_CFG_SPEC>,
+    pub tx_ch0_cfg: crate::Reg<self::udma::tx_ch0_cfg::TX_CH0_CFG_SPEC>,
     #[doc = "0x408 - FILTER tx channel length1 register"]
-    pub reg_tx_ch0_len0: crate::Reg<self::udma::reg_tx_ch0_len0::REG_TX_CH0_LEN0_SPEC>,
+    pub tx_ch0_len0: crate::Reg<self::udma::tx_ch0_len0::TX_CH0_LEN0_SPEC>,
     #[doc = "0x40c - FILTER tx channel length2 register"]
-    pub reg_tx_ch0_len1: crate::Reg<self::udma::reg_tx_ch0_len1::REG_TX_CH0_LEN1_SPEC>,
+    pub tx_ch0_len1: crate::Reg<self::udma::tx_ch0_len1::TX_CH0_LEN1_SPEC>,
     #[doc = "0x410 - FILTER tx channel 0 length2 register"]
-    pub reg_tx_ch0_len2: crate::Reg<self::udma::reg_tx_ch0_len2::REG_TX_CH0_LEN2_SPEC>,
+    pub tx_ch0_len2: crate::Reg<self::udma::tx_ch0_len2::TX_CH0_LEN2_SPEC>,
     #[doc = "0x414 - FILTER tx channel address register"]
-    pub reg_tx_ch1_add: crate::Reg<self::udma::reg_tx_ch1_add::REG_TX_CH1_ADD_SPEC>,
+    pub tx_ch1_add: crate::Reg<self::udma::tx_ch1_add::TX_CH1_ADD_SPEC>,
     #[doc = "0x418 - FILTER tx channel configuration register"]
-    pub reg_tx_ch1_cfg: crate::Reg<self::udma::reg_tx_ch1_cfg::REG_TX_CH1_CFG_SPEC>,
+    pub tx_ch1_cfg: crate::Reg<self::udma::tx_ch1_cfg::TX_CH1_CFG_SPEC>,
     #[doc = "0x41c - FILTER tx channel length1 register"]
-    pub reg_tx_ch1_len0: crate::Reg<self::udma::reg_tx_ch1_len0::REG_TX_CH1_LEN0_SPEC>,
+    pub tx_ch1_len0: crate::Reg<self::udma::tx_ch1_len0::TX_CH1_LEN0_SPEC>,
     #[doc = "0x420 - FILTER tx channel length2 register"]
-    pub reg_tx_ch1_len1: crate::Reg<self::udma::reg_tx_ch1_len1::REG_TX_CH1_LEN1_SPEC>,
+    pub tx_ch1_len1: crate::Reg<self::udma::tx_ch1_len1::TX_CH1_LEN1_SPEC>,
     #[doc = "0x424 - FILTER RX channel configuration register"]
-    pub reg_tx_ch1_len2: crate::Reg<self::udma::reg_tx_ch1_len2::REG_TX_CH1_LEN2_SPEC>,
+    pub tx_ch1_len2: crate::Reg<self::udma::tx_ch1_len2::TX_CH1_LEN2_SPEC>,
     #[doc = "0x428 - FILTER RX channel address register"]
-    pub reg_rx_ch_add: crate::Reg<self::udma::reg_rx_ch_add::REG_RX_CH_ADD_SPEC>,
+    pub rx_ch_add: crate::Reg<self::udma::rx_ch_add::RX_CH_ADD_SPEC>,
     #[doc = "0x42c - FILTER RX channel configuration register"]
-    pub reg_rx_ch_cfg: crate::Reg<self::udma::reg_rx_ch_cfg::REG_RX_CH_CFG_SPEC>,
+    pub rx_ch_cfg: crate::Reg<self::udma::rx_ch_cfg::RX_CH_CFG_SPEC>,
     #[doc = "0x430 - FILTER RX channel configuration register"]
-    pub reg_rx_ch_len0: crate::Reg<self::udma::reg_rx_ch_len0::REG_RX_CH_LEN0_SPEC>,
+    pub rx_ch_len0: crate::Reg<self::udma::rx_ch_len0::RX_CH_LEN0_SPEC>,
     #[doc = "0x434 - FILTER RX channel length1 register"]
-    pub reg_rx_ch_len1: crate::Reg<self::udma::reg_rx_ch_len1::REG_RX_CH_LEN1_SPEC>,
+    pub rx_ch_len1: crate::Reg<self::udma::rx_ch_len1::RX_CH_LEN1_SPEC>,
     #[doc = "0x438 - FILTER RX channel length2 register"]
-    pub reg_rx_ch_len2: crate::Reg<self::udma::reg_rx_ch_len2::REG_RX_CH_LEN2_SPEC>,
+    pub rx_ch_len2: crate::Reg<self::udma::rx_ch_len2::RX_CH_LEN2_SPEC>,
     #[doc = "0x43c - FILTER arithmetic unit configuration register"]
-    pub reg_au_cfg: crate::Reg<self::udma::reg_au_cfg::REG_AU_CFG_SPEC>,
+    pub au_cfg: crate::Reg<self::udma::au_cfg::AU_CFG_SPEC>,
     #[doc = "0x440 - FILTER arithmetic unit 0 register"]
-    pub reg_au_reg0: crate::Reg<self::udma::reg_au_reg0::REG_AU_REG0_SPEC>,
+    pub au_reg0: crate::Reg<self::udma::au_reg0::AU_REG0_SPEC>,
     #[doc = "0x444 - FILTER arithmetic unit 1 register"]
-    pub reg_au_reg1: crate::Reg<self::udma::reg_au_reg1::REG_AU_REG1_SPEC>,
+    pub au_reg1: crate::Reg<self::udma::au_reg1::AU_REG1_SPEC>,
     #[doc = "0x448 - FILTER binarization threshold register"]
-    pub reg_bincu_th: crate::Reg<self::udma::reg_bincu_th::REG_BINCU_TH_SPEC>,
+    pub bincu_th: crate::Reg<self::udma::bincu_th::BINCU_TH_SPEC>,
     #[doc = "0x44c - FILTER binarization count register"]
-    pub reg_bincu_cnt: crate::Reg<self::udma::reg_bincu_cnt::REG_BINCU_CNT_SPEC>,
+    pub bincu_cnt: crate::Reg<self::udma::bincu_cnt::BINCU_CNT_SPEC>,
     #[doc = "0x450 - FILTER binarization result count register"]
-    pub reg_bincu_setup: crate::Reg<self::udma::reg_bincu_setup::REG_BINCU_SETUP_SPEC>,
+    pub bincu_setup: crate::Reg<self::udma::bincu_setup::BINCU_SETUP_SPEC>,
     #[doc = "0x454 - FILTER binarization result count register"]
-    pub reg_bincu_val: crate::Reg<self::udma::reg_bincu_val::REG_BINCU_VAL_SPEC>,
+    pub bincu_val: crate::Reg<self::udma::bincu_val::BINCU_VAL_SPEC>,
     #[doc = "0x458 - FILTER control mode register"]
-    pub reg_filt: crate::Reg<self::udma::reg_filt::REG_FILT_SPEC>,
+    pub filt: crate::Reg<self::udma::filt::FILT_SPEC>,
     #[doc = "0x45c - FILTER start register"]
-    pub reg_filt_cmd: crate::Reg<self::udma::reg_filt_cmd::REG_FILT_CMD_SPEC>,
+    pub filt_cmd: crate::Reg<self::udma::filt_cmd::FILT_CMD_SPEC>,
     #[doc = "0x460 - FILTER status register"]
-    pub reg_status: crate::Reg<self::udma::reg_status::REG_STATUS_SPEC>,
+    pub status: crate::Reg<self::udma::status::STATUS_SPEC>,
 }
 #[doc = r"Register block"]
 #[doc = "UDMA"]

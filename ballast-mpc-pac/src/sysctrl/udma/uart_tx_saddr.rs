@@ -35,15 +35,15 @@ impl From<crate::W<UART_TX_SADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_SADDR` reader - TX buffer base address bitfield: - Read: returns value of the buffer pointer until transfer is finished. Else returns 0. - Write: sets buffer base address"]
-pub struct TX_SADDR_R(crate::FieldReader<u16>);
+pub struct TX_SADDR_R(crate::FieldReader<u32>);
 impl TX_SADDR_R {
     #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
+    pub(crate) fn new(bits: u32) -> Self {
         TX_SADDR_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TX_SADDR_R {
-    type Target = crate::FieldReader<u16>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -56,20 +56,20 @@ pub struct TX_SADDR_W<'a> {
 impl<'a> TX_SADDR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
+    pub unsafe fn bits(self, value: u32) -> &'a mut W {
+        self.w.bits = value;
         self.w
     }
 }
 impl R {
-    #[doc = "Bits 0:15 - TX buffer base address bitfield: - Read: returns value of the buffer pointer until transfer is finished. Else returns 0. - Write: sets buffer base address"]
+    #[doc = "Bits 0:31 - TX buffer base address bitfield: - Read: returns value of the buffer pointer until transfer is finished. Else returns 0. - Write: sets buffer base address"]
     #[inline(always)]
     pub fn tx_saddr(&self) -> TX_SADDR_R {
-        TX_SADDR_R::new((self.bits & 0xffff) as u16)
+        TX_SADDR_R::new(self.bits)
     }
 }
 impl W {
-    #[doc = "Bits 0:15 - TX buffer base address bitfield: - Read: returns value of the buffer pointer until transfer is finished. Else returns 0. - Write: sets buffer base address"]
+    #[doc = "Bits 0:31 - TX buffer base address bitfield: - Read: returns value of the buffer pointer until transfer is finished. Else returns 0. - Write: sets buffer base address"]
     #[inline(always)]
     pub fn tx_saddr(&mut self) -> TX_SADDR_W {
         TX_SADDR_W { w: self }

@@ -14,6 +14,10 @@ pub mod data_setup;
 pub type START = crate::Reg<start::START_SPEC>;
 #[doc = ""]
 pub mod start;
+#[doc = "STOP register accessor: an alias for `Reg<STOP_SPEC>`"]
+pub type STOP = crate::Reg<stop::STOP_SPEC>;
+#[doc = ""]
+pub mod stop;
 #[doc = "RSP0 register accessor: an alias for `Reg<RSP0_SPEC>`"]
 pub type RSP0 = crate::Reg<rsp0::RSP0_SPEC>;
 #[doc = ""]

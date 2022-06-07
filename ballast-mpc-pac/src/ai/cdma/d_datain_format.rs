@@ -13,6 +13,27 @@ impl From<crate::R<D_DATAIN_FORMAT_SPEC>> for R {
         R(reader)
     }
 }
+#[doc = "Register `D_DATAIN_FORMAT` writer"]
+pub struct W(crate::W<D_DATAIN_FORMAT_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<D_DATAIN_FORMAT_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<D_DATAIN_FORMAT_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<D_DATAIN_FORMAT_SPEC>) -> Self {
+        W(writer)
+    }
+}
 #[doc = "\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum DATAIN_FORMAT_A {
@@ -58,6 +79,43 @@ impl core::ops::Deref for DATAIN_FORMAT_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
+    }
+}
+#[doc = "Field `DATAIN_FORMAT` writer - "]
+pub struct DATAIN_FORMAT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> DATAIN_FORMAT_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: DATAIN_FORMAT_A) -> &'a mut W {
+        self.bit(variant.into())
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn pixel(self) -> &'a mut W {
+        self.variant(DATAIN_FORMAT_A::PIXEL)
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn feature(self) -> &'a mut W {
+        self.variant(DATAIN_FORMAT_A::FEATURE)
+    }
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
+        self.w
     }
 }
 #[doc = "\n\nValue on reset: 32"]
@@ -381,6 +439,203 @@ impl core::ops::Deref for PIXEL_FORMAT_R {
         &self.0
     }
 }
+#[doc = "Field `PIXEL_FORMAT` writer - "]
+pub struct PIXEL_FORMAT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> PIXEL_FORMAT_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PIXEL_FORMAT_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn t_r8(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_R8)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn t_r10(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_R10)
+    }
+    #[doc = "`10`"]
+    #[inline(always)]
+    pub fn t_r12(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_R12)
+    }
+    #[doc = "`11`"]
+    #[inline(always)]
+    pub fn t_r16(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_R16)
+    }
+    #[doc = "`100`"]
+    #[inline(always)]
+    pub fn t_r16_i(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_R16_I)
+    }
+    #[doc = "`101`"]
+    #[inline(always)]
+    pub fn t_r16_f(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_R16_F)
+    }
+    #[doc = "`110`"]
+    #[inline(always)]
+    pub fn t_a16b16g16r16(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_A16B16G16R16)
+    }
+    #[doc = "`111`"]
+    #[inline(always)]
+    pub fn t_x16b16g16r16(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_X16B16G16R16)
+    }
+    #[doc = "`1000`"]
+    #[inline(always)]
+    pub fn t_a16b16g16r16_f(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_A16B16G16R16_F)
+    }
+    #[doc = "`1001`"]
+    #[inline(always)]
+    pub fn t_a16y16u16v16(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_A16Y16U16V16)
+    }
+    #[doc = "`1010`"]
+    #[inline(always)]
+    pub fn t_v16u16y16a16(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_V16U16Y16A16)
+    }
+    #[doc = "`1011`"]
+    #[inline(always)]
+    pub fn t_a16y16u16v16_f(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_A16Y16U16V16_F)
+    }
+    #[doc = "`1100`"]
+    #[inline(always)]
+    pub fn t_a8b8g8r8(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_A8B8G8R8)
+    }
+    #[doc = "`11111`"]
+    #[inline(always)]
+    pub fn t_y10___v10u10_n444(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_Y10___V10U10_N444)
+    }
+    #[doc = "`10011`"]
+    #[inline(always)]
+    pub fn t_r8g8b8x8(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_R8G8B8X8)
+    }
+    #[doc = "`1101`"]
+    #[inline(always)]
+    pub fn t_a8r8g8b8(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_A8R8G8B8)
+    }
+    #[doc = "`11010`"]
+    #[inline(always)]
+    pub fn t_a8y8u8v8(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_A8Y8U8V8)
+    }
+    #[doc = "`10010`"]
+    #[inline(always)]
+    pub fn t_b8g8r8x8(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_B8G8R8X8)
+    }
+    #[doc = "`100000`"]
+    #[inline(always)]
+    pub fn t_y12___u12v12_n444(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_Y12___U12V12_N444)
+    }
+    #[doc = "`10100`"]
+    #[inline(always)]
+    pub fn t_a2b10g10r10(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_A2B10G10R10)
+    }
+    #[doc = "`1110`"]
+    #[inline(always)]
+    pub fn t_b8g8r8a8(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_B8G8R8A8)
+    }
+    #[doc = "`100001`"]
+    #[inline(always)]
+    pub fn t_y12___v12u12_n444(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_Y12___V12U12_N444)
+    }
+    #[doc = "`10101`"]
+    #[inline(always)]
+    pub fn t_a2r10g10b10(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_A2R10G10B10)
+    }
+    #[doc = "`1111`"]
+    #[inline(always)]
+    pub fn t_r8g8b8a8(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_R8G8B8A8)
+    }
+    #[doc = "`100010`"]
+    #[inline(always)]
+    pub fn t_y16___u16v16_n444(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_Y16___U16V16_N444)
+    }
+    #[doc = "`10110`"]
+    #[inline(always)]
+    pub fn t_b10g10r10a2(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_B10G10R10A2)
+    }
+    #[doc = "`11011`"]
+    #[inline(always)]
+    pub fn t_v8u8y8a8(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_V8U8Y8A8)
+    }
+    #[doc = "`10000`"]
+    #[inline(always)]
+    pub fn t_x8b8g8r8(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_X8B8G8R8)
+    }
+    #[doc = "`100011`"]
+    #[inline(always)]
+    pub fn t_y16___v16u16_n444(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_Y16___V16U16_N444)
+    }
+    #[doc = "`10111`"]
+    #[inline(always)]
+    pub fn t_r10g10b10a2(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_R10G10B10A2)
+    }
+    #[doc = "`11100`"]
+    #[inline(always)]
+    pub fn t_y8___u8v8_n444(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_Y8___U8V8_N444)
+    }
+    #[doc = "`11101`"]
+    #[inline(always)]
+    pub fn t_y8___v8u8_n444(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_Y8___V8U8_N444)
+    }
+    #[doc = "`11110`"]
+    #[inline(always)]
+    pub fn t_y10___u10v10_n444(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_Y10___U10V10_N444)
+    }
+    #[doc = "`10001`"]
+    #[inline(always)]
+    pub fn t_x8r8g8b8(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_X8R8G8B8)
+    }
+    #[doc = "`11000`"]
+    #[inline(always)]
+    pub fn t_a2y10u10v10(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_A2Y10U10V10)
+    }
+    #[doc = "`11001`"]
+    #[inline(always)]
+    pub fn t_v10u10y10a2(self) -> &'a mut W {
+        self.variant(PIXEL_FORMAT_A::T_V10U10Y10A2)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x3f << 8)) | ((value as u32 & 0x3f) << 8);
+        self.w
+    }
+}
 #[doc = "\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PIXEL_MAPPING_A {
@@ -426,6 +681,43 @@ impl core::ops::Deref for PIXEL_MAPPING_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
+    }
+}
+#[doc = "Field `PIXEL_MAPPING` writer - "]
+pub struct PIXEL_MAPPING_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> PIXEL_MAPPING_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PIXEL_MAPPING_A) -> &'a mut W {
+        self.bit(variant.into())
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn pitch_linear(self) -> &'a mut W {
+        self.variant(PIXEL_MAPPING_A::PITCH_LINEAR)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn reserved_linear(self) -> &'a mut W {
+        self.variant(PIXEL_MAPPING_A::RESERVED_LINEAR)
+    }
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
+        self.w
     }
 }
 #[doc = "\n\nValue on reset: 0"]
@@ -475,6 +767,43 @@ impl core::ops::Deref for PIXEL_SIGN_OVERRIDE_R {
         &self.0
     }
 }
+#[doc = "Field `PIXEL_SIGN_OVERRIDE` writer - "]
+pub struct PIXEL_SIGN_OVERRIDE_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> PIXEL_SIGN_OVERRIDE_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: PIXEL_SIGN_OVERRIDE_A) -> &'a mut W {
+        self.bit(variant.into())
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn unsigned_int(self) -> &'a mut W {
+        self.variant(PIXEL_SIGN_OVERRIDE_A::UNSIGNED_INT)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn signed_int(self) -> &'a mut W {
+        self.variant(PIXEL_SIGN_OVERRIDE_A::SIGNED_INT)
+    }
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
+        self.w
+    }
+}
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -497,7 +826,35 @@ impl R {
         PIXEL_SIGN_OVERRIDE_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
-#[doc = "Input data format and pixel format\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [d_datain_format](index.html) module"]
+impl W {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    pub fn datain_format(&mut self) -> DATAIN_FORMAT_W {
+        DATAIN_FORMAT_W { w: self }
+    }
+    #[doc = "Bits 8:13"]
+    #[inline(always)]
+    pub fn pixel_format(&mut self) -> PIXEL_FORMAT_W {
+        PIXEL_FORMAT_W { w: self }
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    pub fn pixel_mapping(&mut self) -> PIXEL_MAPPING_W {
+        PIXEL_MAPPING_W { w: self }
+    }
+    #[doc = "Bit 20"]
+    #[inline(always)]
+    pub fn pixel_sign_override(&mut self) -> PIXEL_SIGN_OVERRIDE_W {
+        PIXEL_SIGN_OVERRIDE_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Input data format and pixel format\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [d_datain_format](index.html) module"]
 pub struct D_DATAIN_FORMAT_SPEC;
 impl crate::RegisterSpec for D_DATAIN_FORMAT_SPEC {
     type Ux = u32;
@@ -505,6 +862,10 @@ impl crate::RegisterSpec for D_DATAIN_FORMAT_SPEC {
 #[doc = "`read()` method returns [d_datain_format::R](R) reader structure"]
 impl crate::Readable for D_DATAIN_FORMAT_SPEC {
     type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [d_datain_format::W](W) writer structure"]
+impl crate::Writable for D_DATAIN_FORMAT_SPEC {
+    type Writer = W;
 }
 #[doc = "`reset()` method sets D_DATAIN_FORMAT to value 0x6000"]
 impl crate::Resettable for D_DATAIN_FORMAT_SPEC {

@@ -34,45 +34,119 @@ impl From<crate::W<PAD_CFG_10_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PAD_CFG` reader - "]
-pub struct PAD_CFG_R(crate::FieldReader<u32>);
-impl PAD_CFG_R {
+#[doc = "Field `PAD_30` reader - "]
+pub struct PAD_30_R(crate::FieldReader<u16>);
+impl PAD_30_R {
     #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PAD_CFG_R(crate::FieldReader::new(bits))
+    pub(crate) fn new(bits: u16) -> Self {
+        PAD_30_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for PAD_CFG_R {
-    type Target = crate::FieldReader<u32>;
+impl core::ops::Deref for PAD_30_R {
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `PAD_CFG` writer - "]
-pub struct PAD_CFG_W<'a> {
+#[doc = "Field `PAD_30` writer - "]
+pub struct PAD_30_W<'a> {
     w: &'a mut W,
 }
-impl<'a> PAD_CFG_W<'a> {
+impl<'a> PAD_30_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
+    pub unsafe fn bits(self, value: u16) -> &'a mut W {
+        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
+        self.w
+    }
+}
+#[doc = "Field `PAD_31` reader - "]
+pub struct PAD_31_R(crate::FieldReader<u16>);
+impl PAD_31_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: u16) -> Self {
+        PAD_31_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PAD_31_R {
+    type Target = crate::FieldReader<u16>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PAD_31` writer - "]
+pub struct PAD_31_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> PAD_31_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u16) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x03ff << 10)) | ((value as u32 & 0x03ff) << 10);
+        self.w
+    }
+}
+#[doc = "Field `PAD_32` reader - "]
+pub struct PAD_32_R(crate::FieldReader<u16>);
+impl PAD_32_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: u16) -> Self {
+        PAD_32_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PAD_32_R {
+    type Target = crate::FieldReader<u16>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PAD_32` writer - "]
+pub struct PAD_32_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> PAD_32_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u16) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x03ff << 20)) | ((value as u32 & 0x03ff) << 20);
         self.w
     }
 }
 impl R {
-    #[doc = "Bits 0:31"]
+    #[doc = "Bits 0:9"]
     #[inline(always)]
-    pub fn pad_cfg(&self) -> PAD_CFG_R {
-        PAD_CFG_R::new(self.bits)
+    pub fn pad_30(&self) -> PAD_30_R {
+        PAD_30_R::new((self.bits & 0x03ff) as u16)
+    }
+    #[doc = "Bits 10:19"]
+    #[inline(always)]
+    pub fn pad_31(&self) -> PAD_31_R {
+        PAD_31_R::new(((self.bits >> 10) & 0x03ff) as u16)
+    }
+    #[doc = "Bits 20:29"]
+    #[inline(always)]
+    pub fn pad_32(&self) -> PAD_32_R {
+        PAD_32_R::new(((self.bits >> 20) & 0x03ff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 0:31"]
+    #[doc = "Bits 0:9"]
     #[inline(always)]
-    pub fn pad_cfg(&mut self) -> PAD_CFG_W {
-        PAD_CFG_W { w: self }
+    pub fn pad_30(&mut self) -> PAD_30_W {
+        PAD_30_W { w: self }
+    }
+    #[doc = "Bits 10:19"]
+    #[inline(always)]
+    pub fn pad_31(&mut self) -> PAD_31_W {
+        PAD_31_W { w: self }
+    }
+    #[doc = "Bits 20:29"]
+    #[inline(always)]
+    pub fn pad_32(&mut self) -> PAD_32_W {
+        PAD_32_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

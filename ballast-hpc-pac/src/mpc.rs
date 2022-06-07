@@ -541,55 +541,55 @@ pub struct UDMA {
     pub cam_vsync_polarity: crate::Reg<self::udma::cam_vsync_polarity::CAM_VSYNC_POLARITY_SPEC>,
     _reserved65: [u8; 0x48],
     #[doc = "0x400 - FILTER tx channel address register"]
-    pub reg_tx_ch0_add: crate::Reg<self::udma::reg_tx_ch0_add::REG_TX_CH0_ADD_SPEC>,
+    pub tx_ch0_add: crate::Reg<self::udma::tx_ch0_add::TX_CH0_ADD_SPEC>,
     #[doc = "0x404 - FILTER tx channel configuration register"]
-    pub reg_tx_ch0_cfg: crate::Reg<self::udma::reg_tx_ch0_cfg::REG_TX_CH0_CFG_SPEC>,
+    pub tx_ch0_cfg: crate::Reg<self::udma::tx_ch0_cfg::TX_CH0_CFG_SPEC>,
     #[doc = "0x408 - FILTER tx channel length1 register"]
-    pub reg_tx_ch0_len0: crate::Reg<self::udma::reg_tx_ch0_len0::REG_TX_CH0_LEN0_SPEC>,
+    pub tx_ch0_len0: crate::Reg<self::udma::tx_ch0_len0::TX_CH0_LEN0_SPEC>,
     #[doc = "0x40c - FILTER tx channel length2 register"]
-    pub reg_tx_ch0_len1: crate::Reg<self::udma::reg_tx_ch0_len1::REG_TX_CH0_LEN1_SPEC>,
+    pub tx_ch0_len1: crate::Reg<self::udma::tx_ch0_len1::TX_CH0_LEN1_SPEC>,
     #[doc = "0x410 - FILTER tx channel 0 length2 register"]
-    pub reg_tx_ch0_len2: crate::Reg<self::udma::reg_tx_ch0_len2::REG_TX_CH0_LEN2_SPEC>,
+    pub tx_ch0_len2: crate::Reg<self::udma::tx_ch0_len2::TX_CH0_LEN2_SPEC>,
     #[doc = "0x414 - FILTER tx channel address register"]
-    pub reg_tx_ch1_add: crate::Reg<self::udma::reg_tx_ch1_add::REG_TX_CH1_ADD_SPEC>,
+    pub tx_ch1_add: crate::Reg<self::udma::tx_ch1_add::TX_CH1_ADD_SPEC>,
     #[doc = "0x418 - FILTER tx channel configuration register"]
-    pub reg_tx_ch1_cfg: crate::Reg<self::udma::reg_tx_ch1_cfg::REG_TX_CH1_CFG_SPEC>,
+    pub tx_ch1_cfg: crate::Reg<self::udma::tx_ch1_cfg::TX_CH1_CFG_SPEC>,
     #[doc = "0x41c - FILTER tx channel length1 register"]
-    pub reg_tx_ch1_len0: crate::Reg<self::udma::reg_tx_ch1_len0::REG_TX_CH1_LEN0_SPEC>,
+    pub tx_ch1_len0: crate::Reg<self::udma::tx_ch1_len0::TX_CH1_LEN0_SPEC>,
     #[doc = "0x420 - FILTER tx channel length2 register"]
-    pub reg_tx_ch1_len1: crate::Reg<self::udma::reg_tx_ch1_len1::REG_TX_CH1_LEN1_SPEC>,
+    pub tx_ch1_len1: crate::Reg<self::udma::tx_ch1_len1::TX_CH1_LEN1_SPEC>,
     #[doc = "0x424 - FILTER RX channel configuration register"]
-    pub reg_tx_ch1_len2: crate::Reg<self::udma::reg_tx_ch1_len2::REG_TX_CH1_LEN2_SPEC>,
+    pub tx_ch1_len2: crate::Reg<self::udma::tx_ch1_len2::TX_CH1_LEN2_SPEC>,
     #[doc = "0x428 - FILTER RX channel address register"]
-    pub reg_rx_ch_add: crate::Reg<self::udma::reg_rx_ch_add::REG_RX_CH_ADD_SPEC>,
+    pub rx_ch_add: crate::Reg<self::udma::rx_ch_add::RX_CH_ADD_SPEC>,
     #[doc = "0x42c - FILTER RX channel configuration register"]
-    pub reg_rx_ch_cfg: crate::Reg<self::udma::reg_rx_ch_cfg::REG_RX_CH_CFG_SPEC>,
+    pub rx_ch_cfg: crate::Reg<self::udma::rx_ch_cfg::RX_CH_CFG_SPEC>,
     #[doc = "0x430 - FILTER RX channel configuration register"]
-    pub reg_rx_ch_len0: crate::Reg<self::udma::reg_rx_ch_len0::REG_RX_CH_LEN0_SPEC>,
+    pub rx_ch_len0: crate::Reg<self::udma::rx_ch_len0::RX_CH_LEN0_SPEC>,
     #[doc = "0x434 - FILTER RX channel length1 register"]
-    pub reg_rx_ch_len1: crate::Reg<self::udma::reg_rx_ch_len1::REG_RX_CH_LEN1_SPEC>,
+    pub rx_ch_len1: crate::Reg<self::udma::rx_ch_len1::RX_CH_LEN1_SPEC>,
     #[doc = "0x438 - FILTER RX channel length2 register"]
-    pub reg_rx_ch_len2: crate::Reg<self::udma::reg_rx_ch_len2::REG_RX_CH_LEN2_SPEC>,
+    pub rx_ch_len2: crate::Reg<self::udma::rx_ch_len2::RX_CH_LEN2_SPEC>,
     #[doc = "0x43c - FILTER arithmetic unit configuration register"]
-    pub reg_au_cfg: crate::Reg<self::udma::reg_au_cfg::REG_AU_CFG_SPEC>,
+    pub au_cfg: crate::Reg<self::udma::au_cfg::AU_CFG_SPEC>,
     #[doc = "0x440 - FILTER arithmetic unit 0 register"]
-    pub reg_au_reg0: crate::Reg<self::udma::reg_au_reg0::REG_AU_REG0_SPEC>,
+    pub au_reg0: crate::Reg<self::udma::au_reg0::AU_REG0_SPEC>,
     #[doc = "0x444 - FILTER arithmetic unit 1 register"]
-    pub reg_au_reg1: crate::Reg<self::udma::reg_au_reg1::REG_AU_REG1_SPEC>,
+    pub au_reg1: crate::Reg<self::udma::au_reg1::AU_REG1_SPEC>,
     #[doc = "0x448 - FILTER binarization threshold register"]
-    pub reg_bincu_th: crate::Reg<self::udma::reg_bincu_th::REG_BINCU_TH_SPEC>,
+    pub bincu_th: crate::Reg<self::udma::bincu_th::BINCU_TH_SPEC>,
     #[doc = "0x44c - FILTER binarization count register"]
-    pub reg_bincu_cnt: crate::Reg<self::udma::reg_bincu_cnt::REG_BINCU_CNT_SPEC>,
+    pub bincu_cnt: crate::Reg<self::udma::bincu_cnt::BINCU_CNT_SPEC>,
     #[doc = "0x450 - FILTER binarization result count register"]
-    pub reg_bincu_setup: crate::Reg<self::udma::reg_bincu_setup::REG_BINCU_SETUP_SPEC>,
+    pub bincu_setup: crate::Reg<self::udma::bincu_setup::BINCU_SETUP_SPEC>,
     #[doc = "0x454 - FILTER binarization result count register"]
-    pub reg_bincu_val: crate::Reg<self::udma::reg_bincu_val::REG_BINCU_VAL_SPEC>,
+    pub bincu_val: crate::Reg<self::udma::bincu_val::BINCU_VAL_SPEC>,
     #[doc = "0x458 - FILTER control mode register"]
-    pub reg_filt: crate::Reg<self::udma::reg_filt::REG_FILT_SPEC>,
+    pub filt: crate::Reg<self::udma::filt::FILT_SPEC>,
     #[doc = "0x45c - FILTER start register"]
-    pub reg_filt_cmd: crate::Reg<self::udma::reg_filt_cmd::REG_FILT_CMD_SPEC>,
+    pub filt_cmd: crate::Reg<self::udma::filt_cmd::FILT_CMD_SPEC>,
     #[doc = "0x460 - FILTER status register"]
-    pub reg_status: crate::Reg<self::udma::reg_status::REG_STATUS_SPEC>,
+    pub status: crate::Reg<self::udma::status::STATUS_SPEC>,
 }
 #[doc = r"Register block"]
 #[doc = "UDMA"]

@@ -198,30 +198,30 @@ pub mod cam_rx_size;
 pub type I2S_PDM_SETUP = crate::Reg<i2s_pdm_setup::I2S_PDM_SETUP_SPEC>;
 #[doc = "Configuration of PDM module"]
 pub mod i2s_pdm_setup;
-#[doc = "REG_TX_CH0_LEN1 register accessor: an alias for `Reg<REG_TX_CH0_LEN1_SPEC>`"]
-pub type REG_TX_CH0_LEN1 = crate::Reg<reg_tx_ch0_len1::REG_TX_CH0_LEN1_SPEC>;
+#[doc = "TX_CH0_LEN1 register accessor: an alias for `Reg<TX_CH0_LEN1_SPEC>`"]
+pub type TX_CH0_LEN1 = crate::Reg<tx_ch0_len1::TX_CH0_LEN1_SPEC>;
 #[doc = "FILTER tx channel length2 register"]
-pub mod reg_tx_ch0_len1;
-#[doc = "REG_TX_CH0_CFG register accessor: an alias for `Reg<REG_TX_CH0_CFG_SPEC>`"]
-pub type REG_TX_CH0_CFG = crate::Reg<reg_tx_ch0_cfg::REG_TX_CH0_CFG_SPEC>;
+pub mod tx_ch0_len1;
+#[doc = "TX_CH0_CFG register accessor: an alias for `Reg<TX_CH0_CFG_SPEC>`"]
+pub type TX_CH0_CFG = crate::Reg<tx_ch0_cfg::TX_CH0_CFG_SPEC>;
 #[doc = "FILTER tx channel configuration register"]
-pub mod reg_tx_ch0_cfg;
+pub mod tx_ch0_cfg;
 #[doc = "CAM_VSYNC_POLARITY register accessor: an alias for `Reg<CAM_VSYNC_POLARITY_SPEC>`"]
 pub type CAM_VSYNC_POLARITY = crate::Reg<cam_vsync_polarity::CAM_VSYNC_POLARITY_SPEC>;
 #[doc = "VSYNC Polarity register"]
 pub mod cam_vsync_polarity;
-#[doc = "REG_TX_CH0_LEN2 register accessor: an alias for `Reg<REG_TX_CH0_LEN2_SPEC>`"]
-pub type REG_TX_CH0_LEN2 = crate::Reg<reg_tx_ch0_len2::REG_TX_CH0_LEN2_SPEC>;
+#[doc = "TX_CH0_LEN2 register accessor: an alias for `Reg<TX_CH0_LEN2_SPEC>`"]
+pub type TX_CH0_LEN2 = crate::Reg<tx_ch0_len2::TX_CH0_LEN2_SPEC>;
 #[doc = "FILTER tx channel 0 length2 register"]
-pub mod reg_tx_ch0_len2;
-#[doc = "REG_TX_CH0_LEN0 register accessor: an alias for `Reg<REG_TX_CH0_LEN0_SPEC>`"]
-pub type REG_TX_CH0_LEN0 = crate::Reg<reg_tx_ch0_len0::REG_TX_CH0_LEN0_SPEC>;
+pub mod tx_ch0_len2;
+#[doc = "TX_CH0_LEN0 register accessor: an alias for `Reg<TX_CH0_LEN0_SPEC>`"]
+pub type TX_CH0_LEN0 = crate::Reg<tx_ch0_len0::TX_CH0_LEN0_SPEC>;
 #[doc = "FILTER tx channel length1 register"]
-pub mod reg_tx_ch0_len0;
-#[doc = "REG_TX_CH0_ADD register accessor: an alias for `Reg<REG_TX_CH0_ADD_SPEC>`"]
-pub type REG_TX_CH0_ADD = crate::Reg<reg_tx_ch0_add::REG_TX_CH0_ADD_SPEC>;
+pub mod tx_ch0_len0;
+#[doc = "TX_CH0_ADD register accessor: an alias for `Reg<TX_CH0_ADD_SPEC>`"]
+pub type TX_CH0_ADD = crate::Reg<tx_ch0_add::TX_CH0_ADD_SPEC>;
 #[doc = "FILTER tx channel address register"]
-pub mod reg_tx_ch0_add;
+pub mod tx_ch0_add;
 #[doc = "CAM_CFG_SIZE register accessor: an alias for `Reg<CAM_CFG_SIZE_SPEC>`"]
 pub type CAM_CFG_SIZE = crate::Reg<cam_cfg_size::CAM_CFG_SIZE_SPEC>;
 #[doc = "Horizontal Resolution configuration register"]
@@ -278,83 +278,83 @@ pub mod i2s_rx_cfg;
 pub type I2S_RX_SADDR = crate::Reg<i2s_rx_saddr::I2S_RX_SADDR_SPEC>;
 #[doc = "RX Channel0 I2S uDMA transfer address of associated buffer"]
 pub mod i2s_rx_saddr;
-#[doc = "REG_TX_CH1_ADD register accessor: an alias for `Reg<REG_TX_CH1_ADD_SPEC>`"]
-pub type REG_TX_CH1_ADD = crate::Reg<reg_tx_ch1_add::REG_TX_CH1_ADD_SPEC>;
+#[doc = "TX_CH1_ADD register accessor: an alias for `Reg<TX_CH1_ADD_SPEC>`"]
+pub type TX_CH1_ADD = crate::Reg<tx_ch1_add::TX_CH1_ADD_SPEC>;
 #[doc = "FILTER tx channel address register"]
-pub mod reg_tx_ch1_add;
-#[doc = "REG_TX_CH1_CFG register accessor: an alias for `Reg<REG_TX_CH1_CFG_SPEC>`"]
-pub type REG_TX_CH1_CFG = crate::Reg<reg_tx_ch1_cfg::REG_TX_CH1_CFG_SPEC>;
+pub mod tx_ch1_add;
+#[doc = "TX_CH1_CFG register accessor: an alias for `Reg<TX_CH1_CFG_SPEC>`"]
+pub type TX_CH1_CFG = crate::Reg<tx_ch1_cfg::TX_CH1_CFG_SPEC>;
 #[doc = "FILTER tx channel configuration register"]
-pub mod reg_tx_ch1_cfg;
-#[doc = "REG_TX_CH1_LEN0 register accessor: an alias for `Reg<REG_TX_CH1_LEN0_SPEC>`"]
-pub type REG_TX_CH1_LEN0 = crate::Reg<reg_tx_ch1_len0::REG_TX_CH1_LEN0_SPEC>;
+pub mod tx_ch1_cfg;
+#[doc = "TX_CH1_LEN0 register accessor: an alias for `Reg<TX_CH1_LEN0_SPEC>`"]
+pub type TX_CH1_LEN0 = crate::Reg<tx_ch1_len0::TX_CH1_LEN0_SPEC>;
 #[doc = "FILTER tx channel length1 register"]
-pub mod reg_tx_ch1_len0;
-#[doc = "REG_TX_CH1_LEN1 register accessor: an alias for `Reg<REG_TX_CH1_LEN1_SPEC>`"]
-pub type REG_TX_CH1_LEN1 = crate::Reg<reg_tx_ch1_len1::REG_TX_CH1_LEN1_SPEC>;
+pub mod tx_ch1_len0;
+#[doc = "TX_CH1_LEN1 register accessor: an alias for `Reg<TX_CH1_LEN1_SPEC>`"]
+pub type TX_CH1_LEN1 = crate::Reg<tx_ch1_len1::TX_CH1_LEN1_SPEC>;
 #[doc = "FILTER tx channel length2 register"]
-pub mod reg_tx_ch1_len1;
-#[doc = "REG_FILT_CMD register accessor: an alias for `Reg<REG_FILT_CMD_SPEC>`"]
-pub type REG_FILT_CMD = crate::Reg<reg_filt_cmd::REG_FILT_CMD_SPEC>;
+pub mod tx_ch1_len1;
+#[doc = "FILT_CMD register accessor: an alias for `Reg<FILT_CMD_SPEC>`"]
+pub type FILT_CMD = crate::Reg<filt_cmd::FILT_CMD_SPEC>;
 #[doc = "FILTER start register"]
-pub mod reg_filt_cmd;
-#[doc = "REG_BINCU_VAL register accessor: an alias for `Reg<REG_BINCU_VAL_SPEC>`"]
-pub type REG_BINCU_VAL = crate::Reg<reg_bincu_val::REG_BINCU_VAL_SPEC>;
+pub mod filt_cmd;
+#[doc = "BINCU_VAL register accessor: an alias for `Reg<BINCU_VAL_SPEC>`"]
+pub type BINCU_VAL = crate::Reg<bincu_val::BINCU_VAL_SPEC>;
 #[doc = "FILTER binarization result count register"]
-pub mod reg_bincu_val;
-#[doc = "REG_BINCU_CNT register accessor: an alias for `Reg<REG_BINCU_CNT_SPEC>`"]
-pub type REG_BINCU_CNT = crate::Reg<reg_bincu_cnt::REG_BINCU_CNT_SPEC>;
+pub mod bincu_val;
+#[doc = "BINCU_CNT register accessor: an alias for `Reg<BINCU_CNT_SPEC>`"]
+pub type BINCU_CNT = crate::Reg<bincu_cnt::BINCU_CNT_SPEC>;
 #[doc = "FILTER binarization count register"]
-pub mod reg_bincu_cnt;
-#[doc = "REG_AU_REG1 register accessor: an alias for `Reg<REG_AU_REG1_SPEC>`"]
-pub type REG_AU_REG1 = crate::Reg<reg_au_reg1::REG_AU_REG1_SPEC>;
+pub mod bincu_cnt;
+#[doc = "AU_REG1 register accessor: an alias for `Reg<AU_REG1_SPEC>`"]
+pub type AU_REG1 = crate::Reg<au_reg1::AU_REG1_SPEC>;
 #[doc = "FILTER arithmetic unit 1 register"]
-pub mod reg_au_reg1;
-#[doc = "REG_AU_CFG register accessor: an alias for `Reg<REG_AU_CFG_SPEC>`"]
-pub type REG_AU_CFG = crate::Reg<reg_au_cfg::REG_AU_CFG_SPEC>;
+pub mod au_reg1;
+#[doc = "AU_CFG register accessor: an alias for `Reg<AU_CFG_SPEC>`"]
+pub type AU_CFG = crate::Reg<au_cfg::AU_CFG_SPEC>;
 #[doc = "FILTER arithmetic unit configuration register"]
-pub mod reg_au_cfg;
-#[doc = "REG_RX_CH_LEN1 register accessor: an alias for `Reg<REG_RX_CH_LEN1_SPEC>`"]
-pub type REG_RX_CH_LEN1 = crate::Reg<reg_rx_ch_len1::REG_RX_CH_LEN1_SPEC>;
+pub mod au_cfg;
+#[doc = "RX_CH_LEN1 register accessor: an alias for `Reg<RX_CH_LEN1_SPEC>`"]
+pub type RX_CH_LEN1 = crate::Reg<rx_ch_len1::RX_CH_LEN1_SPEC>;
 #[doc = "FILTER RX channel length1 register"]
-pub mod reg_rx_ch_len1;
-#[doc = "REG_RX_CH_CFG register accessor: an alias for `Reg<REG_RX_CH_CFG_SPEC>`"]
-pub type REG_RX_CH_CFG = crate::Reg<reg_rx_ch_cfg::REG_RX_CH_CFG_SPEC>;
+pub mod rx_ch_len1;
+#[doc = "RX_CH_CFG register accessor: an alias for `Reg<RX_CH_CFG_SPEC>`"]
+pub type RX_CH_CFG = crate::Reg<rx_ch_cfg::RX_CH_CFG_SPEC>;
 #[doc = "FILTER RX channel configuration register"]
-pub mod reg_rx_ch_cfg;
-#[doc = "REG_TX_CH1_LEN2 register accessor: an alias for `Reg<REG_TX_CH1_LEN2_SPEC>`"]
-pub type REG_TX_CH1_LEN2 = crate::Reg<reg_tx_ch1_len2::REG_TX_CH1_LEN2_SPEC>;
+pub mod rx_ch_cfg;
+#[doc = "TX_CH1_LEN2 register accessor: an alias for `Reg<TX_CH1_LEN2_SPEC>`"]
+pub type TX_CH1_LEN2 = crate::Reg<tx_ch1_len2::TX_CH1_LEN2_SPEC>;
 #[doc = "FILTER RX channel configuration register"]
-pub mod reg_tx_ch1_len2;
-#[doc = "REG_STATUS register accessor: an alias for `Reg<REG_STATUS_SPEC>`"]
-pub type REG_STATUS = crate::Reg<reg_status::REG_STATUS_SPEC>;
+pub mod tx_ch1_len2;
+#[doc = "STATUS register accessor: an alias for `Reg<STATUS_SPEC>`"]
+pub type STATUS = crate::Reg<status::STATUS_SPEC>;
 #[doc = "FILTER status register"]
-pub mod reg_status;
-#[doc = "REG_FILT register accessor: an alias for `Reg<REG_FILT_SPEC>`"]
-pub type REG_FILT = crate::Reg<reg_filt::REG_FILT_SPEC>;
+pub mod status;
+#[doc = "FILT register accessor: an alias for `Reg<FILT_SPEC>`"]
+pub type FILT = crate::Reg<filt::FILT_SPEC>;
 #[doc = "FILTER control mode register"]
-pub mod reg_filt;
-#[doc = "REG_BINCU_SETUP register accessor: an alias for `Reg<REG_BINCU_SETUP_SPEC>`"]
-pub type REG_BINCU_SETUP = crate::Reg<reg_bincu_setup::REG_BINCU_SETUP_SPEC>;
+pub mod filt;
+#[doc = "BINCU_SETUP register accessor: an alias for `Reg<BINCU_SETUP_SPEC>`"]
+pub type BINCU_SETUP = crate::Reg<bincu_setup::BINCU_SETUP_SPEC>;
 #[doc = "FILTER binarization result count register"]
-pub mod reg_bincu_setup;
-#[doc = "REG_BINCU_TH register accessor: an alias for `Reg<REG_BINCU_TH_SPEC>`"]
-pub type REG_BINCU_TH = crate::Reg<reg_bincu_th::REG_BINCU_TH_SPEC>;
+pub mod bincu_setup;
+#[doc = "BINCU_TH register accessor: an alias for `Reg<BINCU_TH_SPEC>`"]
+pub type BINCU_TH = crate::Reg<bincu_th::BINCU_TH_SPEC>;
 #[doc = "FILTER binarization threshold register"]
-pub mod reg_bincu_th;
-#[doc = "REG_AU_REG0 register accessor: an alias for `Reg<REG_AU_REG0_SPEC>`"]
-pub type REG_AU_REG0 = crate::Reg<reg_au_reg0::REG_AU_REG0_SPEC>;
+pub mod bincu_th;
+#[doc = "AU_REG0 register accessor: an alias for `Reg<AU_REG0_SPEC>`"]
+pub type AU_REG0 = crate::Reg<au_reg0::AU_REG0_SPEC>;
 #[doc = "FILTER arithmetic unit 0 register"]
-pub mod reg_au_reg0;
-#[doc = "REG_RX_CH_LEN2 register accessor: an alias for `Reg<REG_RX_CH_LEN2_SPEC>`"]
-pub type REG_RX_CH_LEN2 = crate::Reg<reg_rx_ch_len2::REG_RX_CH_LEN2_SPEC>;
+pub mod au_reg0;
+#[doc = "RX_CH_LEN2 register accessor: an alias for `Reg<RX_CH_LEN2_SPEC>`"]
+pub type RX_CH_LEN2 = crate::Reg<rx_ch_len2::RX_CH_LEN2_SPEC>;
 #[doc = "FILTER RX channel length2 register"]
-pub mod reg_rx_ch_len2;
-#[doc = "REG_RX_CH_LEN0 register accessor: an alias for `Reg<REG_RX_CH_LEN0_SPEC>`"]
-pub type REG_RX_CH_LEN0 = crate::Reg<reg_rx_ch_len0::REG_RX_CH_LEN0_SPEC>;
+pub mod rx_ch_len2;
+#[doc = "RX_CH_LEN0 register accessor: an alias for `Reg<RX_CH_LEN0_SPEC>`"]
+pub type RX_CH_LEN0 = crate::Reg<rx_ch_len0::RX_CH_LEN0_SPEC>;
 #[doc = "FILTER RX channel configuration register"]
-pub mod reg_rx_ch_len0;
-#[doc = "REG_RX_CH_ADD register accessor: an alias for `Reg<REG_RX_CH_ADD_SPEC>`"]
-pub type REG_RX_CH_ADD = crate::Reg<reg_rx_ch_add::REG_RX_CH_ADD_SPEC>;
+pub mod rx_ch_len0;
+#[doc = "RX_CH_ADD register accessor: an alias for `Reg<RX_CH_ADD_SPEC>`"]
+pub type RX_CH_ADD = crate::Reg<rx_ch_add::RX_CH_ADD_SPEC>;
 #[doc = "FILTER RX channel address register"]
-pub mod reg_rx_ch_add;
+pub mod rx_ch_add;
