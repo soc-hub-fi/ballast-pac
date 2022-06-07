@@ -5501,7 +5501,7 @@ you have to declare buffer size in bytes even if buffer type is short.
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH0_LEN1</name>
+						<name>TX_CH0_LEN1</name>
 						<description>FILTER tx channel  length2 register</description>
 						<addressOffset>0x040C</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -5516,7 +5516,7 @@ you have to declare buffer size in bytes even if buffer type is short.
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH0_CFG</name>
+						<name>TX_CH0_CFG</name>
 						<description>FILTER tx channel  configuration register</description>
 						<addressOffset>0x0404</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -5598,7 +5598,7 @@ you have to declare buffer size in bytes even if buffer type is short.
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH0_LEN2</name>
+						<name>TX_CH0_LEN2</name>
 						<description>FILTER tx channel 0 length2 register</description>
 						<addressOffset>0x0410</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -5607,13 +5607,13 @@ you have to declare buffer size in bytes even if buffer type is short.
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_TX_CH0_LEN2</name>
+								<name>TX_CH0_LEN2</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH0_LEN0</name>
+						<name>TX_CH0_LEN0</name>
 						<description>FILTER tx channel length1 register</description>
 						<addressOffset>0x0408</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -5622,13 +5622,13 @@ you have to declare buffer size in bytes even if buffer type is short.
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_TX_CH0_ADD</name>
+								<name>TX_CH0_ADD</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH0_ADD</name>
+						<name>TX_CH0_ADD</name>
 						<description>FILTER tx channel address register</description>
 						<addressOffset>0x0400</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -5637,7 +5637,9 @@ you have to declare buffer size in bytes even if buffer type is short.
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_TX_CH0_ADD</name>
+								<name>TX_CH0_ADD</name>
+								<description>FILTER tx channel 0 address register
+</description>
 								<bitRange>[31:0]</bitRange>
 								<access>read-write</access>
 							</field>
@@ -6177,7 +6179,7 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH1_ADD</name>
+						<name>TX_CH1_ADD</name>
 						<description>FILTER tx channel address register</description>
 						<addressOffset>0x0414</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6186,14 +6188,14 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_TX_CH1_ADD</name>
+								<name>TX_CH1_ADD</name>
 								<bitRange>[31:0]</bitRange>
 								<access>read-write</access>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH1_CFG</name>
+						<name>TX_CH1_CFG</name>
 						<description>FILTER tx channel  configuration register</description>
 						<addressOffset>0x0418</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6255,7 +6257,7 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH1_LEN0</name>
+						<name>TX_CH1_LEN0</name>
 						<description>FILTER tx channel length1 register</description>
 						<addressOffset>0x041C</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6264,13 +6266,13 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_TX_CH1_ADD</name>
+								<name>TX_CH1_ADD</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH1_LEN1</name>
+						<name>TX_CH1_LEN1</name>
 						<description>FILTER tx channel  length2 register</description>
 						<addressOffset>0x0420</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6279,13 +6281,13 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_TX_CH1_LEN1</name>
+								<name>TX_CH1_LEN1</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>REG_FILT_CMD</name>
+						<name>FILT_CMD</name>
 						<description>FILTER start register</description>
 						<addressOffset>0x045C</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6302,7 +6304,7 @@ This signal is used also to queue a transfer if one is already ongoing</descript
 						</fields>
 					</register>
 					<register>
-						<name>REG_BINCU_VAL</name>
+						<name>BINCU_VAL</name>
 						<description>FILTER binarization result
 count register</description>
 						<addressOffset>0x0454</addressOffset>
@@ -6312,13 +6314,13 @@ count register</description>
 						<access>read-only</access>
 						<fields>
 							<field>
-								<name>REG_BINCU_VAL</name>
+								<name>BINCU_VAL</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>REG_BINCU_CNT</name>
+						<name>BINCU_CNT</name>
 						<description>FILTER binarization count register</description>
 						<addressOffset>0x044C</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6343,7 +6345,7 @@ count register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_AU_REG1</name>
+						<name>AU_REG1</name>
 						<description>FILTER arithmetic unit 1 register</description>
 						<addressOffset>0x0444</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6352,13 +6354,13 @@ count register</description>
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_AU_REG1</name>
+								<name>AU_REG1</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>REG_AU_CFG</name>
+						<name>AU_CFG</name>
 						<description>FILTER arithmetic unit configuration register</description>
 						<addressOffset>0x043C</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6487,7 +6489,7 @@ count register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_RX_CH_LEN1</name>
+						<name>RX_CH_LEN1</name>
 						<description>FILTER RX channel length1 register</description>
 						<addressOffset>0x0434</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6496,13 +6498,13 @@ count register</description>
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_RX_CH_LEN1</name>
+								<name>RX_CH_LEN1</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>REG_RX_CH_CFG</name>
+						<name>RX_CH_CFG</name>
 						<description>FILTER RX channel configuration register</description>
 						<addressOffset>0x042C</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6565,7 +6567,7 @@ count register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_TX_CH1_LEN2</name>
+						<name>TX_CH1_LEN2</name>
 						<description>FILTER RX channel configuration register</description>
 						<addressOffset>0x0424</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6574,13 +6576,13 @@ count register</description>
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_TX_CH1_LEN2</name>
+								<name>TX_CH1_LEN2</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>REG_STATUS</name>
+						<name>STATUS</name>
 						<description>FILTER status register</description>
 						<addressOffset>0x0460</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6599,7 +6601,7 @@ count register</description>
 						</fields>
 					</register>
 					<register>
-						<name>REG_FILT</name>
+						<name>FILT</name>
 						<description>FILTER control
 mode register</description>
 						<addressOffset>0x0458</addressOffset>
@@ -6609,13 +6611,13 @@ mode register</description>
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_FILT</name>
+								<name>FILT</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>REG_BINCU_SETUP</name>
+						<name>BINCU_SETUP</name>
 						<description>FILTER binarization result count register</description>
 						<addressOffset>0x0450</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6624,13 +6626,13 @@ mode register</description>
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_BINCU_SETUP</name>
+								<name>BINCU_SETUP</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>REG_BINCU_TH</name>
+						<name>BINCU_TH</name>
 						<description>FILTER binarization threshold register</description>
 						<addressOffset>0x0448</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6639,13 +6641,13 @@ mode register</description>
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_BINCU_TH</name>
+								<name>BINCU_TH</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>REG_AU_REG0</name>
+						<name>AU_REG0</name>
 						<description>FILTER arithmetic unit 0 register</description>
 						<addressOffset>0x0440</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6654,13 +6656,13 @@ mode register</description>
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_AU_REG0</name>
+								<name>AU_REG0</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>REG_RX_CH_LEN2</name>
+						<name>RX_CH_LEN2</name>
 						<description>FILTER RX channel length2 register</description>
 						<addressOffset>0x0438</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6669,13 +6671,13 @@ mode register</description>
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_RX_CH_LEN2</name>
+								<name>RX_CH_LEN2</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>REG_RX_CH_LEN0</name>
+						<name>RX_CH_LEN0</name>
 						<description>FILTER RX channel configuration register</description>
 						<addressOffset>0x0430</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6684,13 +6686,13 @@ mode register</description>
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_RX_CH_LEN0</name>
+								<name>RX_CH_LEN0</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>REG_RX_CH_ADD</name>
+						<name>RX_CH_ADD</name>
 						<description>FILTER RX channel address register</description>
 						<addressOffset>0x0428</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -6699,7 +6701,7 @@ mode register</description>
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>REG_RX_CH_ADD</name>
+								<name>RX_CH_ADD</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
