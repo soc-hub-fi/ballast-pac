@@ -42,7 +42,7 @@ pub struct MPC {
 unsafe impl Send for MPC {}
 impl MPC {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const mpc::RegisterBlock = 0x2000_0000 as *const _;
+    pub const PTR: *const mpc::RegisterBlock = 0x2a00_0000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
     pub const fn ptr() -> *const mpc::RegisterBlock {
