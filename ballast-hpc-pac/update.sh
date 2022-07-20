@@ -30,3 +30,5 @@ grep -E 'feature = "rt"|extern crate riscv_rt' src/lib.rs | tee librs-patch
 grep -Ev 'feature = "rt"|extern crate riscv_rt' src/lib.rs > librs-temp && mv librs-temp src/lib.rs
 
 cargo check
+cargo test
+
