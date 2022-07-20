@@ -26,7 +26,7 @@
 		<peripheral>
 			<name>MPC</name>
 			<version>1.0</version>
-			<baseAddress>0x000120000000</baseAddress>
+			<baseAddress>0x00012a000000</baseAddress>
 			<addressBlock>
 				<offset>0x00101000</offset>
 				<size>0x1000</size>

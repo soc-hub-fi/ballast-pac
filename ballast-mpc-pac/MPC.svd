@@ -19655,7 +19655,7 @@ Pull up 1</description>
 		<peripheral>
 			<name>SYSCTRL</name>
 			<version>1.0</version>
-			<baseAddress>0x20000000</baseAddress>
+			<baseAddress>0x2a000000</baseAddress>
 			<addressBlock>
 				<offset>0x00101000</offset>
 				<size>0x1000</size>
