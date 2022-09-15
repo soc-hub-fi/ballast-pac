@@ -1,1 +1,4 @@
 _svd: ../HPC.svd
+
+_include:
+  - "../../patches/common.yaml"

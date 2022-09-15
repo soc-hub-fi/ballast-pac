@@ -1,0 +1,18 @@
+_modify:
+  cpu:
+    # The following fields cannot be empty, we choose them arbitrarily
+    revision: r1p0
+    endian: little
+    nvicPrioBits: 3
+
+"SYSCTRL":
+  "*":
+    _strip:
+      # Remove redundant REG_ prefix
+      - "REG_*"
+
+"MPC":
+  "*":
+    _strip:
+      # Remove redundant REG_ prefix
+      - "REG_*"

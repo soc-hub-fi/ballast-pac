@@ -1,1 +1,4 @@
 _svd: ../SysCtrl.svd
+
+_include:
+  - "../../patches/common.yaml"

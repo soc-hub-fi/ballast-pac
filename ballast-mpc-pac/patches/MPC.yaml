@@ -1,1 +1,4 @@
 _svd: ../MPC.svd
+
+_include:
+  - "../../patches/common.yaml"
