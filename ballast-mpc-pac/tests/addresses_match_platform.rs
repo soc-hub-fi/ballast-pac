@@ -2,7 +2,7 @@ use ballast_mpc_pac as pac;
 
 #[test]
 fn sysctrl() {
-    let ptr = unsafe { pac::SYSCTRL::ptr() } as *const u32;
+    let ptr = pac::SYSCTRL::ptr() as *const u32;
 
     let addr = ptr as u32;
     assert_eq!(
@@ -14,7 +14,7 @@ fn sysctrl() {
 
 #[test]
 fn mpc() {
-    let ptr = unsafe { pac::MPC::ptr() } as *const u32;
+    let ptr = pac::MPC::ptr() as *const u32;
 
     let addr = ptr as u32;
     assert_eq!(
