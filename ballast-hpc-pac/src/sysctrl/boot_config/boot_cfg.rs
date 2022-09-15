@@ -34,26 +34,26 @@ impl From<crate::W<BOOT_CFG_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `REG_BOOT_CFG` reader - "]
-pub struct REG_BOOT_CFG_R(crate::FieldReader<u32>);
-impl REG_BOOT_CFG_R {
+#[doc = "Field `BOOT_CFG` reader - "]
+pub struct BOOT_CFG_R(crate::FieldReader<u32>);
+impl BOOT_CFG_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
-        REG_BOOT_CFG_R(crate::FieldReader::new(bits))
+        BOOT_CFG_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for REG_BOOT_CFG_R {
+impl core::ops::Deref for BOOT_CFG_R {
     type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `REG_BOOT_CFG` writer - "]
-pub struct REG_BOOT_CFG_W<'a> {
+#[doc = "Field `BOOT_CFG` writer - "]
+pub struct BOOT_CFG_W<'a> {
     w: &'a mut W,
 }
-impl<'a> REG_BOOT_CFG_W<'a> {
+impl<'a> BOOT_CFG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
@@ -64,15 +64,15 @@ impl<'a> REG_BOOT_CFG_W<'a> {
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn reg_boot_cfg(&self) -> REG_BOOT_CFG_R {
-        REG_BOOT_CFG_R::new(self.bits)
+    pub fn boot_cfg(&self) -> BOOT_CFG_R {
+        BOOT_CFG_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn reg_boot_cfg(&mut self) -> REG_BOOT_CFG_W {
-        REG_BOOT_CFG_W { w: self }
+    pub fn boot_cfg(&mut self) -> BOOT_CFG_W {
+        BOOT_CFG_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

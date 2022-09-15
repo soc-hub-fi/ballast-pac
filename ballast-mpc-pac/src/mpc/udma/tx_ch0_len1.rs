@@ -34,26 +34,26 @@ impl From<crate::W<TX_CH0_LEN1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `REG_TX_CH0_LEN1` reader - "]
-pub struct REG_TX_CH0_LEN1_R(crate::FieldReader<u32>);
-impl REG_TX_CH0_LEN1_R {
+#[doc = "Field `TX_CH0_LEN1` reader - "]
+pub struct TX_CH0_LEN1_R(crate::FieldReader<u32>);
+impl TX_CH0_LEN1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
-        REG_TX_CH0_LEN1_R(crate::FieldReader::new(bits))
+        TX_CH0_LEN1_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for REG_TX_CH0_LEN1_R {
+impl core::ops::Deref for TX_CH0_LEN1_R {
     type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `REG_TX_CH0_LEN1` writer - "]
-pub struct REG_TX_CH0_LEN1_W<'a> {
+#[doc = "Field `TX_CH0_LEN1` writer - "]
+pub struct TX_CH0_LEN1_W<'a> {
     w: &'a mut W,
 }
-impl<'a> REG_TX_CH0_LEN1_W<'a> {
+impl<'a> TX_CH0_LEN1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
@@ -64,15 +64,15 @@ impl<'a> REG_TX_CH0_LEN1_W<'a> {
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn reg_tx_ch0_len1(&self) -> REG_TX_CH0_LEN1_R {
-        REG_TX_CH0_LEN1_R::new(self.bits)
+    pub fn tx_ch0_len1(&self) -> TX_CH0_LEN1_R {
+        TX_CH0_LEN1_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn reg_tx_ch0_len1(&mut self) -> REG_TX_CH0_LEN1_W {
-        REG_TX_CH0_LEN1_W { w: self }
+    pub fn tx_ch0_len1(&mut self) -> TX_CH0_LEN1_W {
+        TX_CH0_LEN1_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

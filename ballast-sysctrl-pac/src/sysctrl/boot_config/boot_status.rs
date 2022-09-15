@@ -34,26 +34,26 @@ impl From<crate::W<BOOT_STATUS_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `REG_BOOT_STATUS` reader - "]
-pub struct REG_BOOT_STATUS_R(crate::FieldReader<u32>);
-impl REG_BOOT_STATUS_R {
+#[doc = "Field `BOOT_STATUS` reader - "]
+pub struct BOOT_STATUS_R(crate::FieldReader<u32>);
+impl BOOT_STATUS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
-        REG_BOOT_STATUS_R(crate::FieldReader::new(bits))
+        BOOT_STATUS_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for REG_BOOT_STATUS_R {
+impl core::ops::Deref for BOOT_STATUS_R {
     type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `REG_BOOT_STATUS` writer - "]
-pub struct REG_BOOT_STATUS_W<'a> {
+#[doc = "Field `BOOT_STATUS` writer - "]
+pub struct BOOT_STATUS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> REG_BOOT_STATUS_W<'a> {
+impl<'a> BOOT_STATUS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
@@ -64,15 +64,15 @@ impl<'a> REG_BOOT_STATUS_W<'a> {
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn reg_boot_status(&self) -> REG_BOOT_STATUS_R {
-        REG_BOOT_STATUS_R::new(self.bits)
+    pub fn boot_status(&self) -> BOOT_STATUS_R {
+        BOOT_STATUS_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn reg_boot_status(&mut self) -> REG_BOOT_STATUS_W {
-        REG_BOOT_STATUS_W { w: self }
+    pub fn boot_status(&mut self) -> BOOT_STATUS_W {
+        BOOT_STATUS_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

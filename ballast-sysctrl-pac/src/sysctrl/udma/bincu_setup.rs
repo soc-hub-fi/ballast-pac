@@ -34,26 +34,26 @@ impl From<crate::W<BINCU_SETUP_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `REG_BINCU_SETUP` reader - "]
-pub struct REG_BINCU_SETUP_R(crate::FieldReader<u32>);
-impl REG_BINCU_SETUP_R {
+#[doc = "Field `BINCU_SETUP` reader - "]
+pub struct BINCU_SETUP_R(crate::FieldReader<u32>);
+impl BINCU_SETUP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
-        REG_BINCU_SETUP_R(crate::FieldReader::new(bits))
+        BINCU_SETUP_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for REG_BINCU_SETUP_R {
+impl core::ops::Deref for BINCU_SETUP_R {
     type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `REG_BINCU_SETUP` writer - "]
-pub struct REG_BINCU_SETUP_W<'a> {
+#[doc = "Field `BINCU_SETUP` writer - "]
+pub struct BINCU_SETUP_W<'a> {
     w: &'a mut W,
 }
-impl<'a> REG_BINCU_SETUP_W<'a> {
+impl<'a> BINCU_SETUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
@@ -64,15 +64,15 @@ impl<'a> REG_BINCU_SETUP_W<'a> {
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn reg_bincu_setup(&self) -> REG_BINCU_SETUP_R {
-        REG_BINCU_SETUP_R::new(self.bits)
+    pub fn bincu_setup(&self) -> BINCU_SETUP_R {
+        BINCU_SETUP_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn reg_bincu_setup(&mut self) -> REG_BINCU_SETUP_W {
-        REG_BINCU_SETUP_W { w: self }
+    pub fn bincu_setup(&mut self) -> BINCU_SETUP_W {
+        BINCU_SETUP_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

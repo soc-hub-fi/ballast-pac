@@ -34,26 +34,26 @@ impl From<crate::W<TOPPERIPH_CLK_DIV_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `REG_TOPPERIPH_CLK_DIV` reader - Clock divider ratio for Top peripheral module"]
-pub struct REG_TOPPERIPH_CLK_DIV_R(crate::FieldReader<u16>);
-impl REG_TOPPERIPH_CLK_DIV_R {
+#[doc = "Field `TOPPERIPH_CLK_DIV` reader - Clock divider ratio for Top peripheral module"]
+pub struct TOPPERIPH_CLK_DIV_R(crate::FieldReader<u16>);
+impl TOPPERIPH_CLK_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
-        REG_TOPPERIPH_CLK_DIV_R(crate::FieldReader::new(bits))
+        TOPPERIPH_CLK_DIV_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for REG_TOPPERIPH_CLK_DIV_R {
+impl core::ops::Deref for TOPPERIPH_CLK_DIV_R {
     type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `REG_TOPPERIPH_CLK_DIV` writer - Clock divider ratio for Top peripheral module"]
-pub struct REG_TOPPERIPH_CLK_DIV_W<'a> {
+#[doc = "Field `TOPPERIPH_CLK_DIV` writer - Clock divider ratio for Top peripheral module"]
+pub struct TOPPERIPH_CLK_DIV_W<'a> {
     w: &'a mut W,
 }
-impl<'a> REG_TOPPERIPH_CLK_DIV_W<'a> {
+impl<'a> TOPPERIPH_CLK_DIV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
@@ -64,15 +64,15 @@ impl<'a> REG_TOPPERIPH_CLK_DIV_W<'a> {
 impl R {
     #[doc = "Bits 0:15 - Clock divider ratio for Top peripheral module"]
     #[inline(always)]
-    pub fn reg_topperiph_clk_div(&self) -> REG_TOPPERIPH_CLK_DIV_R {
-        REG_TOPPERIPH_CLK_DIV_R::new((self.bits & 0xffff) as u16)
+    pub fn topperiph_clk_div(&self) -> TOPPERIPH_CLK_DIV_R {
+        TOPPERIPH_CLK_DIV_R::new((self.bits & 0xffff) as u16)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Clock divider ratio for Top peripheral module"]
     #[inline(always)]
-    pub fn reg_topperiph_clk_div(&mut self) -> REG_TOPPERIPH_CLK_DIV_W {
-        REG_TOPPERIPH_CLK_DIV_W { w: self }
+    pub fn topperiph_clk_div(&mut self) -> TOPPERIPH_CLK_DIV_W {
+        TOPPERIPH_CLK_DIV_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

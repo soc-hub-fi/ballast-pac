@@ -34,26 +34,26 @@ impl From<crate::W<FILT_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `REG_FILT` reader - "]
-pub struct REG_FILT_R(crate::FieldReader<u32>);
-impl REG_FILT_R {
+#[doc = "Field `FILT` reader - "]
+pub struct FILT_R(crate::FieldReader<u32>);
+impl FILT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
-        REG_FILT_R(crate::FieldReader::new(bits))
+        FILT_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for REG_FILT_R {
+impl core::ops::Deref for FILT_R {
     type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `REG_FILT` writer - "]
-pub struct REG_FILT_W<'a> {
+#[doc = "Field `FILT` writer - "]
+pub struct FILT_W<'a> {
     w: &'a mut W,
 }
-impl<'a> REG_FILT_W<'a> {
+impl<'a> FILT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
@@ -64,15 +64,15 @@ impl<'a> REG_FILT_W<'a> {
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn reg_filt(&self) -> REG_FILT_R {
-        REG_FILT_R::new(self.bits)
+    pub fn filt(&self) -> FILT_R {
+        FILT_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn reg_filt(&mut self) -> REG_FILT_W {
-        REG_FILT_W { w: self }
+    pub fn filt(&mut self) -> FILT_W {
+        FILT_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

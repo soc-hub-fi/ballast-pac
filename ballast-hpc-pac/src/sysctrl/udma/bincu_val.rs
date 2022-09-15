@@ -13,15 +13,15 @@ impl From<crate::R<BINCU_VAL_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `REG_BINCU_VAL` reader - "]
-pub struct REG_BINCU_VAL_R(crate::FieldReader<u32>);
-impl REG_BINCU_VAL_R {
+#[doc = "Field `BINCU_VAL` reader - "]
+pub struct BINCU_VAL_R(crate::FieldReader<u32>);
+impl BINCU_VAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
-        REG_BINCU_VAL_R(crate::FieldReader::new(bits))
+        BINCU_VAL_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for REG_BINCU_VAL_R {
+impl core::ops::Deref for BINCU_VAL_R {
     type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
@@ -31,8 +31,8 @@ impl core::ops::Deref for REG_BINCU_VAL_R {
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn reg_bincu_val(&self) -> REG_BINCU_VAL_R {
-        REG_BINCU_VAL_R::new(self.bits)
+    pub fn bincu_val(&self) -> BINCU_VAL_R {
+        BINCU_VAL_R::new(self.bits)
     }
 }
 #[doc = "FILTER binarization result count register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bincu_val](index.html) module"]
