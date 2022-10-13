@@ -4,3 +4,7 @@ _svd: ../HPC.svd
 
 _include:
   - "../../patches/common.yaml"
+
+_modify:
+  HPC:
+    baseAddress: 0x0000_0000_0000_0000

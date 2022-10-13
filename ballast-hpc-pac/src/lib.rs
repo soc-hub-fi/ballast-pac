@@ -182,7 +182,7 @@ pub struct HPC {
 unsafe impl Send for HPC {}
 impl HPC {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const hpc::RegisterBlock = 0x0001_1400_0000 as *const _;
+    pub const PTR: *const hpc::RegisterBlock = 0 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
     pub const fn ptr() -> *const hpc::RegisterBlock {
