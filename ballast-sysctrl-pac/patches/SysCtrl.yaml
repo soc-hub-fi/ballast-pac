@@ -1,3 +1,5 @@
+# More info on patch format: https://pypi.org/project/svdtools/
+
 _svd: ../SysCtrl.svd
 
 _include:
