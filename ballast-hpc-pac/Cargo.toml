@@ -9,12 +9,12 @@ version = "0.2.0"
 
 [dependencies]
 bare-metal = "1.0"
-riscv = "0.6"
+riscv = "0.9"
 vcell = "0.1"
 
 [dependencies.riscv-rt]
 optional = true
-version = "0.8"
+version = "0.9"
 
 [features]
 rt = ["riscv-rt"]
