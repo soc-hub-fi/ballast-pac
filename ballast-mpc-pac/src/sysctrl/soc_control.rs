@@ -10,10 +10,10 @@ pub mod fcboot;
 pub type FCFETCH = crate::Reg<fcfetch::FCFETCH_SPEC>;
 #[doc = "This register contains the value of the fetch enable signal of the core."]
 pub mod fcfetch;
-#[doc = "PAD_MUX_0 register accessor: an alias for `Reg<PAD_MUX_0_SPEC>`"]
-pub type PAD_MUX_0 = crate::Reg<pad_mux_0::PAD_MUX_0_SPEC>;
+#[doc = "PAD_MUX register accessor: an alias for `Reg<PAD_MUX_SPEC>`"]
+pub type PAD_MUX = crate::Reg<pad_mux::PAD_MUX_SPEC>;
 #[doc = "The content of these registers can be used to multiplex pads when targeting an ASIC. The first register (0x1A10_4010) can be used to set the mux (2 bit select) from pin 0 (bits \\[1:0\\]) to 15 (bits \\[31:30\\])."]
-pub mod pad_mux_0;
+pub mod pad_mux;
 #[doc = "CLUSTER_BOOT_ADDR0 register accessor: an alias for `Reg<CLUSTER_BOOT_ADDR0_SPEC>`"]
 pub type CLUSTER_BOOT_ADDR0 = crate::Reg<cluster_boot_addr0::CLUSTER_BOOT_ADDR0_SPEC>;
 #[doc = ""]

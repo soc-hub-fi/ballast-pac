@@ -81,7 +81,7 @@ impl W {
         self
     }
 }
-#[doc = "Output data cube’s width\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [d_data_cube_out_width](index.html) module"]
+#[doc = "Output data cubes width\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [d_data_cube_out_width](index.html) module"]
 pub struct D_DATA_CUBE_OUT_WIDTH_SPEC;
 impl crate::RegisterSpec for D_DATA_CUBE_OUT_WIDTH_SPEC {
     type Ux = u32;

@@ -16,11 +16,11 @@ pub type D_MISC_CFG = crate::Reg<d_misc_cfg::D_MISC_CFG_SPEC>;
 pub mod d_misc_cfg;
 #[doc = "D_DATAOUT_SIZE_0 register accessor: an alias for `Reg<D_DATAOUT_SIZE_0_SPEC>`"]
 pub type D_DATAOUT_SIZE_0 = crate::Reg<d_dataout_size_0::D_DATAOUT_SIZE_0_SPEC>;
-#[doc = "Input cube’s width and height after extension"]
+#[doc = "Input cubes width and height after extension"]
 pub mod d_dataout_size_0;
 #[doc = "D_DATAOUT_SIZE_1 register accessor: an alias for `Reg<D_DATAOUT_SIZE_1_SPEC>`"]
 pub type D_DATAOUT_SIZE_1 = crate::Reg<d_dataout_size_1::D_DATAOUT_SIZE_1_SPEC>;
-#[doc = "Input cube’s channel after extension"]
+#[doc = "Input cubes channel after extension"]
 pub mod d_dataout_size_1;
 #[doc = "D_DATAOUT_ADDR register accessor: an alias for `Reg<D_DATAOUT_ADDR_SPEC>`"]
 pub type D_DATAOUT_ADDR = crate::Reg<d_dataout_addr::D_DATAOUT_ADDR_SPEC>;

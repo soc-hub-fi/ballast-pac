@@ -118,7 +118,7 @@ impl W {
         self
     }
 }
-#[doc = "Weight’s width and height after extension\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [d_weight_size_ext_0](index.html) module"]
+#[doc = "Weights width and height after extension\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [d_weight_size_ext_0](index.html) module"]
 pub struct D_WEIGHT_SIZE_EXT_0_SPEC;
 impl crate::RegisterSpec for D_WEIGHT_SIZE_EXT_0_SPEC {
     type Ux = u32;

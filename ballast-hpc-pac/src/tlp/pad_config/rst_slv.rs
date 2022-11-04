@@ -228,10 +228,10 @@ impl crate::Readable for RST_SLV_SPEC {
 impl crate::Writable for RST_SLV_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets rst_slv to value 0x0200"]
+#[doc = "`reset()` method sets rst_slv to value 0x8008"]
 impl crate::Resettable for RST_SLV_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0x0200
+        0x8008
     }
 }

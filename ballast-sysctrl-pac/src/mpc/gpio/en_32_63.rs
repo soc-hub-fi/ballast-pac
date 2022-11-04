@@ -82,9 +82,9 @@ impl W {
     }
 }
 #[doc = "GPIOEN (R/W) GPIO\\[63:32\\]
-clock enable configuration bitfield: - bit\\[i\\]=1’b0: disable clock for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: enable clock for GPIO\\[i\\]
-GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if it’s direction is configured in input mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [en_32_63](index.html) module"]
+clock enable configuration bitfield: - bit\\[i\\]=1b0: disable clock for GPIO\\[i\\]
+- bit\\[i\\]=1b1: enable clock for GPIO\\[i\\]
+GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if its direction is configured in input mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [en_32_63](index.html) module"]
 pub struct EN_32_63_SPEC;
 impl crate::RegisterSpec for EN_32_63_SPEC {
     type Ux = u32;

@@ -1,15 +1,15 @@
 #[doc = "PADDIR_00_31 register accessor: an alias for `Reg<PADDIR_00_31_SPEC>`"]
 pub type PADDIR_00_31 = crate::Reg<paddir_00_31::PADDIR_00_31_SPEC>;
 #[doc = "Bit 31 - 0 DIR (R/W) GPIO\\[31:0\\]
-direction configuration bitfield: - bit\\[i\\]=1’b0: Input mode for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: Output mode for GPIO\\[i\\]"]
+direction configuration bitfield: - bit\\[i\\]=1b0: Input mode for GPIO\\[i\\]
+- bit\\[i\\]=1b1: Output mode for GPIO\\[i\\]"]
 pub mod paddir_00_31;
 #[doc = "EN_00_31 register accessor: an alias for `Reg<EN_00_31_SPEC>`"]
 pub type EN_00_31 = crate::Reg<en_00_31::EN_00_31_SPEC>;
 #[doc = "Bit 31 - 0 GPIOEN (R/W) GPIO\\[31:0\\]
-clock enable configuration bitfield: - bit\\[i\\]=1’b0: disable clock for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: enable clock for GPIO\\[i\\]
-GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if it’s direction is configured in input mode."]
+clock enable configuration bitfield: - bit\\[i\\]=1b0: disable clock for GPIO\\[i\\]
+- bit\\[i\\]=1b1: enable clock for GPIO\\[i\\]
+GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if its direction is configured in input mode."]
 pub mod en_00_31;
 #[doc = "PADIN_00_31 register accessor: an alias for `Reg<PADIN_00_31_SPEC>`"]
 pub type PADIN_00_31 = crate::Reg<padin_00_31::PADIN_00_31_SPEC>;
@@ -38,18 +38,18 @@ pub mod inten_00_31;
 #[doc = "INTTYPE_00_15 register accessor: an alias for `Reg<INTTYPE_00_15_SPEC>`"]
 pub type INTTYPE_00_15 = crate::Reg<inttype_00_15::INTTYPE_00_15_SPEC>;
 #[doc = "Bit 31 - 0 INTTYPE0 (R/W) GPIO\\[15:0\\]
-interrupt type configuration bitfield: - bit\\[2*i+1:2*i\\]=2’b00: interrupt on falling edge for GPIO\\[i\\]
-- bit\\[2*i+1:2*i\\]=2’b01: interrupt on rising edge for GPIO\\[i\\]
-- bit\\[2*i+1:2*i\\]=2’b10: interrupt on rising and falling edge for GPIO\\[i\\]
-- bit\\[2*i+1:2*i\\]=2’b11: RFU"]
+interrupt type configuration bitfield: - bit\\[2*i+1:2*i\\]=2b00: interrupt on falling edge for GPIO\\[i\\]
+- bit\\[2*i+1:2*i\\]=2b01: interrupt on rising edge for GPIO\\[i\\]
+- bit\\[2*i+1:2*i\\]=2b10: interrupt on rising and falling edge for GPIO\\[i\\]
+- bit\\[2*i+1:2*i\\]=2b11: RFU"]
 pub mod inttype_00_15;
 #[doc = "INTTYPE_16_31 register accessor: an alias for `Reg<INTTYPE_16_31_SPEC>`"]
 pub type INTTYPE_16_31 = crate::Reg<inttype_16_31::INTTYPE_16_31_SPEC>;
 #[doc = "Bit 31 - 0 INTTYPE1 (R/W) GPIO\\[31:16\\]
-interrupt type configuration bitfield: - bit\\[2*i+1:2*i\\]=2’b00: interrupt on falling edge for GPIO\\[16+i\\]
-- bit\\[2*i+1:2*i\\]=2’b01: interrupt on rising edge for GPIO\\[16+i\\]
-- bit\\[2*i+1:2*i\\]=2’b10: interrupt on rising and falling edge for GPIO\\[16+i\\]
-- bit\\[2*i+1:2*i\\]=2’b11: RFU"]
+interrupt type configuration bitfield: - bit\\[2*i+1:2*i\\]=2b00: interrupt on falling edge for GPIO\\[16+i\\]
+- bit\\[2*i+1:2*i\\]=2b01: interrupt on rising edge for GPIO\\[16+i\\]
+- bit\\[2*i+1:2*i\\]=2b10: interrupt on rising and falling edge for GPIO\\[16+i\\]
+- bit\\[2*i+1:2*i\\]=2b11: RFU"]
 pub mod inttype_16_31;
 #[doc = "INTSTATUS_00_31 register accessor: an alias for `Reg<INTSTATUS_00_31_SPEC>`"]
 pub type INTSTATUS_00_31 = crate::Reg<intstatus_00_31::INTSTATUS_00_31_SPEC>;
@@ -84,24 +84,24 @@ pub mod intstatus_32_63;
 #[doc = "INTTYPE_48_63 register accessor: an alias for `Reg<INTTYPE_48_63_SPEC>`"]
 pub type INTTYPE_48_63 = crate::Reg<inttype_48_63::INTTYPE_48_63_SPEC>;
 #[doc = "Bit 31 - 0 INTTYPE1 (R/W) GPIO\\[63:48\\]
-interrupt type configuration bitfield: - bit\\[2*i+1:2*i\\]=2’b00: interrupt on falling edge for GPIO\\[16+i\\]
-- bit\\[2*i+1:2*i\\]=2’b01: interrupt on rising edge for GPIO\\[16+i\\]
-- bit\\[2*i+1:2*i\\]=2’b10: interrupt on rising and falling edge for GPIO\\[16+i\\]
-- bit\\[2*i+1:2*i\\]=2’b11: RFU"]
+interrupt type configuration bitfield: - bit\\[2*i+1:2*i\\]=2b00: interrupt on falling edge for GPIO\\[16+i\\]
+- bit\\[2*i+1:2*i\\]=2b01: interrupt on rising edge for GPIO\\[16+i\\]
+- bit\\[2*i+1:2*i\\]=2b10: interrupt on rising and falling edge for GPIO\\[16+i\\]
+- bit\\[2*i+1:2*i\\]=2b11: RFU"]
 pub mod inttype_48_63;
 #[doc = "INTTYPE_32_47 register accessor: an alias for `Reg<INTTYPE_32_47_SPEC>`"]
 pub type INTTYPE_32_47 = crate::Reg<inttype_32_47::INTTYPE_32_47_SPEC>;
 #[doc = "Bit 31 - 0 INTTYPE0 (R/W) GPIO\\[47:32\\]
-interrupt type configuration bitfield: - bit\\[2*i+1:2*i\\]=2’b00: interrupt on falling edge for GPIO\\[i\\]
-- bit\\[2*i+1:2*i\\]=2’b01: interrupt on rising edge for GPIO\\[i\\]
-- bit\\[2*i+1:2*i\\]=2’b10: interrupt on rising and falling edge for GPIO\\[i\\]
-- bit\\[2*i+1:2*i\\]=2’b11: RFU"]
+interrupt type configuration bitfield: - bit\\[2*i+1:2*i\\]=2b00: interrupt on falling edge for GPIO\\[i\\]
+- bit\\[2*i+1:2*i\\]=2b01: interrupt on rising edge for GPIO\\[i\\]
+- bit\\[2*i+1:2*i\\]=2b10: interrupt on rising and falling edge for GPIO\\[i\\]
+- bit\\[2*i+1:2*i\\]=2b11: RFU"]
 pub mod inttype_32_47;
 #[doc = "INTEN_32_63 register accessor: an alias for `Reg<INTEN_32_63_SPEC>`"]
 pub type INTEN_32_63 = crate::Reg<inten_32_63::INTEN_32_63_SPEC>;
 #[doc = "Bit 31 - 0 INTEN (R/W) GPIO\\[63:32\\]
-interrupt enable configuration bitfield: - bit\\[i\\]=1’b0: disable interrupt for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: enable interrupt for GPIO\\[i\\]"]
+interrupt enable configuration bitfield: - bit\\[i\\]=1b0: disable interrupt for GPIO\\[i\\]
+- bit\\[i\\]=1b1: enable interrupt for GPIO\\[i\\]"]
 pub mod inten_32_63;
 #[doc = "PADOUTCLR_32_63 register accessor: an alias for `Reg<PADOUTCLR_32_63_SPEC>`"]
 pub type PADOUTCLR_32_63 = crate::Reg<padoutclr_32_63::PADOUTCLR_32_63_SPEC>;
@@ -124,15 +124,15 @@ pub mod padin_32_63;
 #[doc = "EN_32_63 register accessor: an alias for `Reg<EN_32_63_SPEC>`"]
 pub type EN_32_63 = crate::Reg<en_32_63::EN_32_63_SPEC>;
 #[doc = "GPIOEN (R/W) GPIO\\[63:32\\]
-clock enable configuration bitfield: - bit\\[i\\]=1’b0: disable clock for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: enable clock for GPIO\\[i\\]
-GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if it’s direction is configured in input mode."]
+clock enable configuration bitfield: - bit\\[i\\]=1b0: disable clock for GPIO\\[i\\]
+- bit\\[i\\]=1b1: enable clock for GPIO\\[i\\]
+GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if its direction is configured in input mode."]
 pub mod en_32_63;
 #[doc = "PADDIR_32_63 register accessor: an alias for `Reg<PADDIR_32_63_SPEC>`"]
 pub type PADDIR_32_63 = crate::Reg<paddir_32_63::PADDIR_32_63_SPEC>;
 #[doc = "Bit 31 - 0 DIR (R/W) GPIO\\[63:32\\]
-direction configuration bitfield: - bit\\[i\\]=1’b0: Input mode for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: Output mode for GPIO\\[i\\]"]
+direction configuration bitfield: - bit\\[i\\]=1b0: Input mode for GPIO\\[i\\]
+- bit\\[i\\]=1b1: Output mode for GPIO\\[i\\]"]
 pub mod paddir_32_63;
 #[doc = "PADCFG_08_15 register accessor: an alias for `Reg<PADCFG_08_15_SPEC>`"]
 pub type PADCFG_08_15 = crate::Reg<padcfg_08_15::PADCFG_08_15_SPEC>;

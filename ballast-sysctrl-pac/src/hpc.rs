@@ -14,7 +14,7 @@ pub struct RegisterBlock {
     #[doc = "0x230000..0x230228 - cluster_config"]
     pub cluster_config: CLUSTER_CONFIG,
     _reserved4: [u8; 0x00dc_fdd8],
-    #[doc = "0x1000000..0x1203008 - PLIC"]
+    #[doc = "0x1000000..0x1200020 - PLIC"]
     pub plic: PLIC,
 }
 #[doc = r"Register block"]
@@ -23,11 +23,9 @@ pub struct CLINT {
     #[doc = "0x00..0x08 - Machine mode software interrupt (IPI)"]
     pub msip: crate::Reg<self::clint::msip::MSIP_SPEC>,
     _reserved1: [u8; 0x3ff8],
-    #[doc = "0x4000..0x4008 - Machine mode timer compare register for Hart 0"]
-    pub mtimecmp_0: crate::Reg<self::clint::mtimecmp_0::MTIMECMP_0_SPEC>,
-    #[doc = "0x4008..0x4010 - Machine mode timer compare register for Hart 0"]
-    pub mtimecmp_1: crate::Reg<self::clint::mtimecmp_1::MTIMECMP_1_SPEC>,
-    _reserved3: [u8; 0x7fe8],
+    #[doc = "0x4000..0x4010 - Machine mode timer compare register for Hart 0"]
+    pub mtimecmp: [crate::Reg<self::clint::mtimecmp::MTIMECMP_SPEC>; 2],
+    _reserved2: [u8; 0x7fe8],
     #[doc = "0xbff8..0xc000 - Timer register"]
     pub mtime: crate::Reg<self::clint::mtime::MTIME_SPEC>,
 }
@@ -84,64 +82,25 @@ pub mod cluster_config;
 #[repr(C)]
 pub struct PLIC {
     _reserved0: [u8; 0x04],
-    #[doc = "0x04 - "]
-    pub timer_0_int_priority_0:
-        crate::Reg<self::plic::timer_0_int_priority_0::TIMER_0_INT_PRIORITY_0_SPEC>,
-    #[doc = "0x08 - "]
-    pub timer_0_int_priority_1:
-        crate::Reg<self::plic::timer_0_int_priority_1::TIMER_0_INT_PRIORITY_1_SPEC>,
-    #[doc = "0x0c - "]
-    pub timer_1_int_priority_0:
-        crate::Reg<self::plic::timer_1_int_priority_0::TIMER_1_INT_PRIORITY_0_SPEC>,
-    #[doc = "0x10 - "]
-    pub timer_1_int_priority_1:
-        crate::Reg<self::plic::timer_1_int_priority_1::TIMER_1_INT_PRIORITY_1_SPEC>,
-    #[doc = "0x14 - "]
-    pub external_0_int_priority_0:
-        crate::Reg<self::plic::external_0_int_priority_0::EXTERNAL_0_INT_PRIORITY_0_SPEC>,
-    #[doc = "0x18 - "]
-    pub external_0_int_priority_1:
-        crate::Reg<self::plic::external_0_int_priority_1::EXTERNAL_0_INT_PRIORITY_1_SPEC>,
-    _reserved6: [u8; 0x1fe4],
-    #[doc = "0x2000 - "]
-    pub enable_context_0: crate::Reg<self::plic::enable_context_0::ENABLE_CONTEXT_0_SPEC>,
-    _reserved7: [u8; 0x7c],
-    #[doc = "0x2080 - "]
-    pub enable_context_1: crate::Reg<self::plic::enable_context_1::ENABLE_CONTEXT_1_SPEC>,
-    _reserved8: [u8; 0x7c],
-    #[doc = "0x2100 - "]
-    pub enable_context_2: crate::Reg<self::plic::enable_context_2::ENABLE_CONTEXT_2_SPEC>,
-    _reserved9: [u8; 0x7c],
-    #[doc = "0x2180 - "]
-    pub enable_context_3: crate::Reg<self::plic::enable_context_3::ENABLE_CONTEXT_3_SPEC>,
-    _reserved10: [u8; 0x001f_de7c],
-    #[doc = "0x200000 - "]
-    pub priority_threshold_context_0:
-        crate::Reg<self::plic::priority_threshold_context_0::PRIORITY_THRESHOLD_CONTEXT_0_SPEC>,
-    #[doc = "0x200004 - "]
-    pub claim_complete_context_0:
-        crate::Reg<self::plic::claim_complete_context_0::CLAIM_COMPLETE_CONTEXT_0_SPEC>,
-    _reserved12: [u8; 0x0ff8],
-    #[doc = "0x201000 - "]
-    pub priority_threshold_context_1:
-        crate::Reg<self::plic::priority_threshold_context_1::PRIORITY_THRESHOLD_CONTEXT_1_SPEC>,
-    #[doc = "0x201004 - "]
-    pub claim_complete_context_1:
-        crate::Reg<self::plic::claim_complete_context_1::CLAIM_COMPLETE_CONTEXT_1_SPEC>,
-    _reserved14: [u8; 0x0ff8],
-    #[doc = "0x202000 - "]
-    pub priority_threshold_context_2:
-        crate::Reg<self::plic::priority_threshold_context_2::PRIORITY_THRESHOLD_CONTEXT_2_SPEC>,
-    #[doc = "0x202004 - "]
-    pub claim_complete_context_2:
-        crate::Reg<self::plic::claim_complete_context_2::CLAIM_COMPLETE_CONTEXT_2_SPEC>,
-    _reserved16: [u8; 0x0ff8],
-    #[doc = "0x203000 - "]
-    pub priority_threshold_context_3:
-        crate::Reg<self::plic::priority_threshold_context_3::PRIORITY_THRESHOLD_CONTEXT_3_SPEC>,
-    #[doc = "0x203004 - "]
-    pub claim_complete_context_3:
-        crate::Reg<self::plic::claim_complete_context_3::CLAIM_COMPLETE_CONTEXT_3_SPEC>,
+    #[doc = "0x04..0x0c - "]
+    pub timer_0_int_priority:
+        [crate::Reg<self::plic::timer_0_int_priority::TIMER_0_INT_PRIORITY_SPEC>; 2],
+    #[doc = "0x0c..0x14 - "]
+    pub timer_1_int_priority:
+        [crate::Reg<self::plic::timer_1_int_priority::TIMER_1_INT_PRIORITY_SPEC>; 2],
+    #[doc = "0x14..0x1c - "]
+    pub external_0_int_priority:
+        [crate::Reg<self::plic::external_0_int_priority::EXTERNAL_0_INT_PRIORITY_SPEC>; 2],
+    _reserved3: [u8; 0x1fe4],
+    #[doc = "0x2000..0x2010 - "]
+    pub enable_context: [crate::Reg<self::plic::enable_context::ENABLE_CONTEXT_SPEC>; 4],
+    _reserved4: [u8; 0x001f_dff0],
+    #[doc = "0x200000..0x200010 - "]
+    pub priority_threshold_context:
+        [crate::Reg<self::plic::priority_threshold_context::PRIORITY_THRESHOLD_CONTEXT_SPEC>; 4],
+    #[doc = "0x200010..0x200020 - "]
+    pub claim_complete_context:
+        [crate::Reg<self::plic::claim_complete_context::CLAIM_COMPLETE_CONTEXT_SPEC>; 4],
 }
 #[doc = r"Register block"]
 #[doc = "PLIC"]

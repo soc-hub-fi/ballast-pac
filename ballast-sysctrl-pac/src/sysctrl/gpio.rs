@@ -1,14 +1,14 @@
 #[doc = "DIR register accessor: an alias for `Reg<DIR_SPEC>`"]
 pub type DIR = crate::Reg<dir::DIR_SPEC>;
-#[doc = "GPIO direction configuration bitfield: - bit\\[i\\]=1’b0: Input mode for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: Output mode for GPIO\\[i\\]"]
+#[doc = "GPIO direction configuration bitfield: - bit\\[i\\]=1b0: Input mode for GPIO\\[i\\]
+- bit\\[i\\]=1b1: Output mode for GPIO\\[i\\]"]
 pub mod dir;
 #[doc = "EN register accessor: an alias for `Reg<EN_SPEC>`"]
 pub type EN = crate::Reg<en::EN_SPEC>;
 #[doc = "GPIO clock enable config register. Bit 31 - 0 GPIOEN (R/W) GPIO\\[31:0\\]
-clock enable configuration bitfield: - bit\\[i\\]=1’b0: disable clock for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: enable clock for GPIO\\[i\\]
-GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if it’s direction is configured in input mode."]
+clock enable configuration bitfield: - bit\\[i\\]=1b0: disable clock for GPIO\\[i\\]
+- bit\\[i\\]=1b1: enable clock for GPIO\\[i\\]
+GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if its direction is configured in input mode."]
 pub mod en;
 #[doc = "IN register accessor: an alias for `Reg<IN_SPEC>`"]
 pub type IN = crate::Reg<in_::IN_SPEC>;

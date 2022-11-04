@@ -326,10 +326,10 @@ pub mod rx_ch_cfg;
 pub type TX_CH1_LEN2 = crate::Reg<tx_ch1_len2::TX_CH1_LEN2_SPEC>;
 #[doc = "FILTER RX channel configuration register"]
 pub mod tx_ch1_len2;
-#[doc = "STATUS register accessor: an alias for `Reg<STATUS_SPEC>`"]
-pub type STATUS = crate::Reg<status::STATUS_SPEC>;
+#[doc = "FILT_STATUS register accessor: an alias for `Reg<FILT_STATUS_SPEC>`"]
+pub type FILT_STATUS = crate::Reg<filt_status::FILT_STATUS_SPEC>;
 #[doc = "FILTER status register"]
-pub mod status;
+pub mod filt_status;
 #[doc = "FILT register accessor: an alias for `Reg<FILT_SPEC>`"]
 pub type FILT = crate::Reg<filt::FILT_SPEC>;
 #[doc = "FILTER control mode register"]

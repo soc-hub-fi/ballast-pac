@@ -81,7 +81,7 @@ impl W {
         self
     }
 }
-#[doc = "Input data cube’s height\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [d_data_cube_in_height](index.html) module"]
+#[doc = "Input data cubes height\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [d_data_cube_in_height](index.html) module"]
 pub struct D_DATA_CUBE_IN_HEIGHT_SPEC;
 impl crate::RegisterSpec for D_DATA_CUBE_IN_HEIGHT_SPEC {
     type Ux = u32;

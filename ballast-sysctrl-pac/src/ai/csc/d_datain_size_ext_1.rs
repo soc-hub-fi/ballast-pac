@@ -81,7 +81,7 @@ impl W {
         self
     }
 }
-#[doc = "Input cube’s channel after extension\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [d_datain_size_ext_1](index.html) module"]
+#[doc = "Input cubes channel after extension\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [d_datain_size_ext_1](index.html) module"]
 pub struct D_DATAIN_SIZE_EXT_1_SPEC;
 impl crate::RegisterSpec for D_DATAIN_SIZE_EXT_1_SPEC {
     type Ux = u32;

@@ -82,10 +82,10 @@ impl W {
     }
 }
 #[doc = "Bit 31 - 0 INTTYPE1 (R/W) GPIO\\[31:16\\]
-interrupt type configuration bitfield: - bit\\[2*i+1:2*i\\]=2’b00: interrupt on falling edge for GPIO\\[16+i\\]
-- bit\\[2*i+1:2*i\\]=2’b01: interrupt on rising edge for GPIO\\[16+i\\]
-- bit\\[2*i+1:2*i\\]=2’b10: interrupt on rising and falling edge for GPIO\\[16+i\\]
-- bit\\[2*i+1:2*i\\]=2’b11: RFU\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [inttype_16_31](index.html) module"]
+interrupt type configuration bitfield: - bit\\[2*i+1:2*i\\]=2b00: interrupt on falling edge for GPIO\\[16+i\\]
+- bit\\[2*i+1:2*i\\]=2b01: interrupt on rising edge for GPIO\\[16+i\\]
+- bit\\[2*i+1:2*i\\]=2b10: interrupt on rising and falling edge for GPIO\\[16+i\\]
+- bit\\[2*i+1:2*i\\]=2b11: RFU\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [inttype_16_31](index.html) module"]
 pub struct INTTYPE_16_31_SPEC;
 impl crate::RegisterSpec for INTTYPE_16_31_SPEC {
     type Ux = u32;

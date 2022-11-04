@@ -35,8 +35,8 @@ impl From<crate::W<INTEN_00_31_SPEC>> for W {
     }
 }
 #[doc = "Field `INTEN` reader - Bit 31 - 0 INTEN (R/W) GPIO\\[31:0\\]
-interrupt enable configuration bitfield: - bit\\[i\\]=1’b0: disable interrupt for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: enable interrupt for GPIO\\[i\\]"]
+interrupt enable configuration bitfield: - bit\\[i\\]=1b0: disable interrupt for GPIO\\[i\\]
+- bit\\[i\\]=1b1: enable interrupt for GPIO\\[i\\]"]
 pub struct INTEN_R(crate::FieldReader<u32>);
 impl INTEN_R {
     #[inline(always)]
@@ -52,8 +52,8 @@ impl core::ops::Deref for INTEN_R {
     }
 }
 #[doc = "Field `INTEN` writer - Bit 31 - 0 INTEN (R/W) GPIO\\[31:0\\]
-interrupt enable configuration bitfield: - bit\\[i\\]=1’b0: disable interrupt for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: enable interrupt for GPIO\\[i\\]"]
+interrupt enable configuration bitfield: - bit\\[i\\]=1b0: disable interrupt for GPIO\\[i\\]
+- bit\\[i\\]=1b1: enable interrupt for GPIO\\[i\\]"]
 pub struct INTEN_W<'a> {
     w: &'a mut W,
 }
@@ -67,8 +67,8 @@ impl<'a> INTEN_W<'a> {
 }
 impl R {
     #[doc = "Bits 0:31 - Bit 31 - 0 INTEN (R/W) GPIO\\[31:0\\]
-interrupt enable configuration bitfield: - bit\\[i\\]=1’b0: disable interrupt for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: enable interrupt for GPIO\\[i\\]"]
+interrupt enable configuration bitfield: - bit\\[i\\]=1b0: disable interrupt for GPIO\\[i\\]
+- bit\\[i\\]=1b1: enable interrupt for GPIO\\[i\\]"]
     #[inline(always)]
     pub fn inten(&self) -> INTEN_R {
         INTEN_R::new(self.bits)
@@ -76,8 +76,8 @@ interrupt enable configuration bitfield: - bit\\[i\\]=1’b0: disable interrupt 
 }
 impl W {
     #[doc = "Bits 0:31 - Bit 31 - 0 INTEN (R/W) GPIO\\[31:0\\]
-interrupt enable configuration bitfield: - bit\\[i\\]=1’b0: disable interrupt for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: enable interrupt for GPIO\\[i\\]"]
+interrupt enable configuration bitfield: - bit\\[i\\]=1b0: disable interrupt for GPIO\\[i\\]
+- bit\\[i\\]=1b1: enable interrupt for GPIO\\[i\\]"]
     #[inline(always)]
     pub fn inten(&mut self) -> INTEN_W {
         INTEN_W { w: self }

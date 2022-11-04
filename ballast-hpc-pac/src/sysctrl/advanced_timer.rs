@@ -10,22 +10,10 @@ pub mod t0_config;
 pub type T0_THRESHOLD = crate::Reg<t0_threshold::T0_THRESHOLD_SPEC>;
 #[doc = "ADV_TIMER0 threshold configuration register."]
 pub mod t0_threshold;
-#[doc = "T0_TH_CHANNEL0 register accessor: an alias for `Reg<T0_TH_CHANNEL0_SPEC>`"]
-pub type T0_TH_CHANNEL0 = crate::Reg<t0_th_channel0::T0_TH_CHANNEL0_SPEC>;
+#[doc = "T0_TH_CHANNEL register accessor: an alias for `Reg<T0_TH_CHANNEL_SPEC>`"]
+pub type T0_TH_CHANNEL = crate::Reg<t0_th_channel::T0_TH_CHANNEL_SPEC>;
 #[doc = "ADV_TIMER0 channel 0 threshold configuration register"]
-pub mod t0_th_channel0;
-#[doc = "T0_TH_CHANNEL1 register accessor: an alias for `Reg<T0_TH_CHANNEL1_SPEC>`"]
-pub type T0_TH_CHANNEL1 = crate::Reg<t0_th_channel1::T0_TH_CHANNEL1_SPEC>;
-#[doc = "ADV_TIMER0 channel 1 threshold configuration register"]
-pub mod t0_th_channel1;
-#[doc = "T0_TH_CHANNEL2 register accessor: an alias for `Reg<T0_TH_CHANNEL2_SPEC>`"]
-pub type T0_TH_CHANNEL2 = crate::Reg<t0_th_channel2::T0_TH_CHANNEL2_SPEC>;
-#[doc = "ADV_TIMER0 channel 2 threshold configuration register"]
-pub mod t0_th_channel2;
-#[doc = "T0_TH_CHANNEL3 register accessor: an alias for `Reg<T0_TH_CHANNEL3_SPEC>`"]
-pub type T0_TH_CHANNEL3 = crate::Reg<t0_th_channel3::T0_TH_CHANNEL3_SPEC>;
-#[doc = "ADV_TIMER0 channel 3 threshold configuration register"]
-pub mod t0_th_channel3;
+pub mod t0_th_channel;
 #[doc = "T0_COUNTER register accessor: an alias for `Reg<T0_COUNTER_SPEC>`"]
 pub type T0_COUNTER = crate::Reg<t0_counter::T0_COUNTER_SPEC>;
 #[doc = "ADV_TIMER0 counter register"]
@@ -42,22 +30,10 @@ pub mod t1_config;
 pub type T1_THRESHOLD = crate::Reg<t1_threshold::T1_THRESHOLD_SPEC>;
 #[doc = "ADV_TIMER1 threshold configuration register"]
 pub mod t1_threshold;
-#[doc = "T1_TH_CHANNEL0 register accessor: an alias for `Reg<T1_TH_CHANNEL0_SPEC>`"]
-pub type T1_TH_CHANNEL0 = crate::Reg<t1_th_channel0::T1_TH_CHANNEL0_SPEC>;
+#[doc = "T1_TH_CHANNEL register accessor: an alias for `Reg<T1_TH_CHANNEL_SPEC>`"]
+pub type T1_TH_CHANNEL = crate::Reg<t1_th_channel::T1_TH_CHANNEL_SPEC>;
 #[doc = "ADV_TIMER1 channel 0 threshold configuration register"]
-pub mod t1_th_channel0;
-#[doc = "T1_TH_CHANNEL1 register accessor: an alias for `Reg<T1_TH_CHANNEL1_SPEC>`"]
-pub type T1_TH_CHANNEL1 = crate::Reg<t1_th_channel1::T1_TH_CHANNEL1_SPEC>;
-#[doc = "ADV_TIMER1 channel 1 threshold configuration register"]
-pub mod t1_th_channel1;
-#[doc = "T1_TH_CHANNEL2 register accessor: an alias for `Reg<T1_TH_CHANNEL2_SPEC>`"]
-pub type T1_TH_CHANNEL2 = crate::Reg<t1_th_channel2::T1_TH_CHANNEL2_SPEC>;
-#[doc = "ADV_TIMER1 channel 2 threshold configuration register"]
-pub mod t1_th_channel2;
-#[doc = "T1_TH_CHANNEL3 register accessor: an alias for `Reg<T1_TH_CHANNEL3_SPEC>`"]
-pub type T1_TH_CHANNEL3 = crate::Reg<t1_th_channel3::T1_TH_CHANNEL3_SPEC>;
-#[doc = "ADV_TIMER1 channel 3 threshold configuration register"]
-pub mod t1_th_channel3;
+pub mod t1_th_channel;
 #[doc = "T1_COUNTER register accessor: an alias for `Reg<T1_COUNTER_SPEC>`"]
 pub type T1_COUNTER = crate::Reg<t1_counter::T1_COUNTER_SPEC>;
 #[doc = "ADV_TIMER1 counter register"]
@@ -74,22 +50,10 @@ pub mod t2_config;
 pub type T2_THRESHOLD = crate::Reg<t2_threshold::T2_THRESHOLD_SPEC>;
 #[doc = "ADV_TIMER2 threshold configuration register"]
 pub mod t2_threshold;
-#[doc = "T2_TH_CHANNEL0 register accessor: an alias for `Reg<T2_TH_CHANNEL0_SPEC>`"]
-pub type T2_TH_CHANNEL0 = crate::Reg<t2_th_channel0::T2_TH_CHANNEL0_SPEC>;
+#[doc = "T2_TH_CHANNEL register accessor: an alias for `Reg<T2_TH_CHANNEL_SPEC>`"]
+pub type T2_TH_CHANNEL = crate::Reg<t2_th_channel::T2_TH_CHANNEL_SPEC>;
 #[doc = "ADV_TIMER2 channel 0 threshold configuration register"]
-pub mod t2_th_channel0;
-#[doc = "T2_TH_CHANNEL1 register accessor: an alias for `Reg<T2_TH_CHANNEL1_SPEC>`"]
-pub type T2_TH_CHANNEL1 = crate::Reg<t2_th_channel1::T2_TH_CHANNEL1_SPEC>;
-#[doc = "ADV_TIMER2 channel 1 threshold configuration register"]
-pub mod t2_th_channel1;
-#[doc = "T2_TH_CHANNEL2 register accessor: an alias for `Reg<T2_TH_CHANNEL2_SPEC>`"]
-pub type T2_TH_CHANNEL2 = crate::Reg<t2_th_channel2::T2_TH_CHANNEL2_SPEC>;
-#[doc = "ADV_TIMER2 channel 2 threshold configuration register"]
-pub mod t2_th_channel2;
-#[doc = "T2_TH_CHANNEL3 register accessor: an alias for `Reg<T2_TH_CHANNEL3_SPEC>`"]
-pub type T2_TH_CHANNEL3 = crate::Reg<t2_th_channel3::T2_TH_CHANNEL3_SPEC>;
-#[doc = "ADV_TIMER2 channel 3 threshold configuration register"]
-pub mod t2_th_channel3;
+pub mod t2_th_channel;
 #[doc = "T2_COUNTER register accessor: an alias for `Reg<T2_COUNTER_SPEC>`"]
 pub type T2_COUNTER = crate::Reg<t2_counter::T2_COUNTER_SPEC>;
 #[doc = "ADV_TIMER2 counter register"]
@@ -106,22 +70,10 @@ pub mod t3_config;
 pub type T3_THRESHOLD = crate::Reg<t3_threshold::T3_THRESHOLD_SPEC>;
 #[doc = "ADV_TIMER3 threshold configuration register"]
 pub mod t3_threshold;
-#[doc = "T3_TH_CHANNEL0 register accessor: an alias for `Reg<T3_TH_CHANNEL0_SPEC>`"]
-pub type T3_TH_CHANNEL0 = crate::Reg<t3_th_channel0::T3_TH_CHANNEL0_SPEC>;
+#[doc = "T3_TH_CHANNEL register accessor: an alias for `Reg<T3_TH_CHANNEL_SPEC>`"]
+pub type T3_TH_CHANNEL = crate::Reg<t3_th_channel::T3_TH_CHANNEL_SPEC>;
 #[doc = "ADV_TIMER3 channel 0 threshold configuration register"]
-pub mod t3_th_channel0;
-#[doc = "T3_TH_CHANNEL1 register accessor: an alias for `Reg<T3_TH_CHANNEL1_SPEC>`"]
-pub type T3_TH_CHANNEL1 = crate::Reg<t3_th_channel1::T3_TH_CHANNEL1_SPEC>;
-#[doc = "ADV_TIMER3 channel 1 threshold configuration register"]
-pub mod t3_th_channel1;
-#[doc = "T3_TH_CHANNEL2 register accessor: an alias for `Reg<T3_TH_CHANNEL2_SPEC>`"]
-pub type T3_TH_CHANNEL2 = crate::Reg<t3_th_channel2::T3_TH_CHANNEL2_SPEC>;
-#[doc = "ADV_TIMER3 channel 2 threshold configuration register"]
-pub mod t3_th_channel2;
-#[doc = "T3_TH_CHANNEL3 register accessor: an alias for `Reg<T3_TH_CHANNEL3_SPEC>`"]
-pub type T3_TH_CHANNEL3 = crate::Reg<t3_th_channel3::T3_TH_CHANNEL3_SPEC>;
-#[doc = "ADV_TIMER3 channel 3 threshold configuration register"]
-pub mod t3_th_channel3;
+pub mod t3_th_channel;
 #[doc = "CG register accessor: an alias for `Reg<CG_SPEC>`"]
 pub type CG = crate::Reg<cg::CG_SPEC>;
 #[doc = "ADV_TIMERS channels clock gating configuration register."]

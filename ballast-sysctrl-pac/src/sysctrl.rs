@@ -46,13 +46,13 @@ pub struct RegisterBlock {
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct GPIO {
-    #[doc = "0x00 - GPIO direction configuration bitfield: - bit\\[i\\]=1’b0: Input mode for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: Output mode for GPIO\\[i\\]"]
+    #[doc = "0x00 - GPIO direction configuration bitfield: - bit\\[i\\]=1b0: Input mode for GPIO\\[i\\]
+- bit\\[i\\]=1b1: Output mode for GPIO\\[i\\]"]
     pub dir: crate::Reg<self::gpio::dir::DIR_SPEC>,
     #[doc = "0x04 - GPIO clock enable config register. Bit 31 - 0 GPIOEN (R/W) GPIO\\[31:0\\]
-clock enable configuration bitfield: - bit\\[i\\]=1’b0: disable clock for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: enable clock for GPIO\\[i\\]
-GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if it’s direction is configured in input mode."]
+clock enable configuration bitfield: - bit\\[i\\]=1b0: disable clock for GPIO\\[i\\]
+- bit\\[i\\]=1b1: enable clock for GPIO\\[i\\]
+GPIOs are gathered by groups of 4. The clock gating of one group is done only if all 4 GPIOs are disabled. Clock must be enabled for a GPIO if its direction is configured in input mode."]
     pub en: crate::Reg<self::gpio::en::EN_SPEC>,
     #[doc = "0x08 - GPIO Data IN register. Bit 31 - 0 DATA_IN (R) GPIO\\[31:0\\]
 input data read bitfield. DATA_IN\\[i\\]
@@ -182,7 +182,7 @@ pub struct UDMA {
     #[doc = "0x45c - FILTER start register"]
     pub filt_cmd: crate::Reg<self::udma::filt_cmd::FILT_CMD_SPEC>,
     #[doc = "0x460 - FILTER status register"]
-    pub status: crate::Reg<self::udma::status::STATUS_SPEC>,
+    pub filt_status: crate::Reg<self::udma::filt_status::FILT_STATUS_SPEC>,
 }
 #[doc = r"Register block"]
 #[doc = "UDMA"]
@@ -196,72 +196,48 @@ pub struct ADVANCEDTIMER {
     pub t0_config: crate::Reg<self::advanced_timer::t0_config::T0_CONFIG_SPEC>,
     #[doc = "0x08 - ADV_TIMER0 threshold configuration register."]
     pub t0_threshold: crate::Reg<self::advanced_timer::t0_threshold::T0_THRESHOLD_SPEC>,
-    #[doc = "0x0c - ADV_TIMER0 channel 0 threshold configuration register"]
-    pub t0_th_channel0: crate::Reg<self::advanced_timer::t0_th_channel0::T0_TH_CHANNEL0_SPEC>,
-    #[doc = "0x10 - ADV_TIMER0 channel 1 threshold configuration register"]
-    pub t0_th_channel1: crate::Reg<self::advanced_timer::t0_th_channel1::T0_TH_CHANNEL1_SPEC>,
-    #[doc = "0x14 - ADV_TIMER0 channel 2 threshold configuration register"]
-    pub t0_th_channel2: crate::Reg<self::advanced_timer::t0_th_channel2::T0_TH_CHANNEL2_SPEC>,
-    #[doc = "0x18 - ADV_TIMER0 channel 3 threshold configuration register"]
-    pub t0_th_channel3: crate::Reg<self::advanced_timer::t0_th_channel3::T0_TH_CHANNEL3_SPEC>,
-    _reserved7: [u8; 0x10],
+    #[doc = "0x0c..0x1c - ADV_TIMER0 channel 0 threshold configuration register"]
+    pub t0_th_channel: [crate::Reg<self::advanced_timer::t0_th_channel::T0_TH_CHANNEL_SPEC>; 4],
+    _reserved4: [u8; 0x10],
     #[doc = "0x2c - ADV_TIMER0 counter register"]
     pub t0_counter: crate::Reg<self::advanced_timer::t0_counter::T0_COUNTER_SPEC>,
-    _reserved8: [u8; 0x10],
+    _reserved5: [u8; 0x10],
     #[doc = "0x40 - ADV_TIMER1 command register"]
     pub t1_cmd: crate::Reg<self::advanced_timer::t1_cmd::T1_CMD_SPEC>,
     #[doc = "0x44 - ADV_TIMER1 configuration register"]
     pub t1_config: crate::Reg<self::advanced_timer::t1_config::T1_CONFIG_SPEC>,
     #[doc = "0x48 - ADV_TIMER1 threshold configuration register"]
     pub t1_threshold: crate::Reg<self::advanced_timer::t1_threshold::T1_THRESHOLD_SPEC>,
-    #[doc = "0x4c - ADV_TIMER1 channel 0 threshold configuration register"]
-    pub t1_th_channel0: crate::Reg<self::advanced_timer::t1_th_channel0::T1_TH_CHANNEL0_SPEC>,
-    #[doc = "0x50 - ADV_TIMER1 channel 1 threshold configuration register"]
-    pub t1_th_channel1: crate::Reg<self::advanced_timer::t1_th_channel1::T1_TH_CHANNEL1_SPEC>,
-    #[doc = "0x54 - ADV_TIMER1 channel 2 threshold configuration register"]
-    pub t1_th_channel2: crate::Reg<self::advanced_timer::t1_th_channel2::T1_TH_CHANNEL2_SPEC>,
-    #[doc = "0x58 - ADV_TIMER1 channel 3 threshold configuration register"]
-    pub t1_th_channel3: crate::Reg<self::advanced_timer::t1_th_channel3::T1_TH_CHANNEL3_SPEC>,
-    _reserved15: [u8; 0x10],
+    #[doc = "0x4c..0x5c - ADV_TIMER1 channel 0 threshold configuration register"]
+    pub t1_th_channel: [crate::Reg<self::advanced_timer::t1_th_channel::T1_TH_CHANNEL_SPEC>; 4],
+    _reserved9: [u8; 0x10],
     #[doc = "0x6c - ADV_TIMER1 counter register"]
     pub t1_counter: crate::Reg<self::advanced_timer::t1_counter::T1_COUNTER_SPEC>,
-    _reserved16: [u8; 0x10],
+    _reserved10: [u8; 0x10],
     #[doc = "0x80 - ADV_TIMER2 command register"]
     pub t2_cmd: crate::Reg<self::advanced_timer::t2_cmd::T2_CMD_SPEC>,
     #[doc = "0x84 - ADV_TIMER2 configuration register"]
     pub t2_config: crate::Reg<self::advanced_timer::t2_config::T2_CONFIG_SPEC>,
     #[doc = "0x88 - ADV_TIMER2 threshold configuration register"]
     pub t2_threshold: crate::Reg<self::advanced_timer::t2_threshold::T2_THRESHOLD_SPEC>,
-    #[doc = "0x8c - ADV_TIMER2 channel 0 threshold configuration register"]
-    pub t2_th_channel0: crate::Reg<self::advanced_timer::t2_th_channel0::T2_TH_CHANNEL0_SPEC>,
-    #[doc = "0x90 - ADV_TIMER2 channel 1 threshold configuration register"]
-    pub t2_th_channel1: crate::Reg<self::advanced_timer::t2_th_channel1::T2_TH_CHANNEL1_SPEC>,
-    #[doc = "0x94 - ADV_TIMER2 channel 2 threshold configuration register"]
-    pub t2_th_channel2: crate::Reg<self::advanced_timer::t2_th_channel2::T2_TH_CHANNEL2_SPEC>,
-    #[doc = "0x98 - ADV_TIMER2 channel 3 threshold configuration register"]
-    pub t2_th_channel3: crate::Reg<self::advanced_timer::t2_th_channel3::T2_TH_CHANNEL3_SPEC>,
-    _reserved23: [u8; 0x10],
+    #[doc = "0x8c..0x9c - ADV_TIMER2 channel 0 threshold configuration register"]
+    pub t2_th_channel: [crate::Reg<self::advanced_timer::t2_th_channel::T2_TH_CHANNEL_SPEC>; 4],
+    _reserved14: [u8; 0x10],
     #[doc = "0xac - ADV_TIMER2 counter register"]
     pub t2_counter: crate::Reg<self::advanced_timer::t2_counter::T2_COUNTER_SPEC>,
-    _reserved24: [u8; 0x10],
+    _reserved15: [u8; 0x10],
     #[doc = "0xc0 - ADV_TIMER3 command register"]
     pub t3_cmd: crate::Reg<self::advanced_timer::t3_cmd::T3_CMD_SPEC>,
     #[doc = "0xc4 - ADV_TIMER3 configuration register"]
     pub t3_config: crate::Reg<self::advanced_timer::t3_config::T3_CONFIG_SPEC>,
     #[doc = "0xc8 - ADV_TIMER3 threshold configuration register"]
     pub t3_threshold: crate::Reg<self::advanced_timer::t3_threshold::T3_THRESHOLD_SPEC>,
-    #[doc = "0xcc - ADV_TIMER3 channel 0 threshold configuration register"]
-    pub t3_th_channel0: crate::Reg<self::advanced_timer::t3_th_channel0::T3_TH_CHANNEL0_SPEC>,
-    #[doc = "0xd0 - ADV_TIMER3 channel 1 threshold configuration register"]
-    pub t3_th_channel1: crate::Reg<self::advanced_timer::t3_th_channel1::T3_TH_CHANNEL1_SPEC>,
-    #[doc = "0xd4 - ADV_TIMER3 channel 2 threshold configuration register"]
-    pub t3_th_channel2: crate::Reg<self::advanced_timer::t3_th_channel2::T3_TH_CHANNEL2_SPEC>,
-    #[doc = "0xd8 - ADV_TIMER3 channel 3 threshold configuration register"]
-    pub t3_th_channel3: crate::Reg<self::advanced_timer::t3_th_channel3::T3_TH_CHANNEL3_SPEC>,
-    _reserved31: [u8; 0x10],
+    #[doc = "0xcc..0xdc - ADV_TIMER3 channel 0 threshold configuration register"]
+    pub t3_th_channel: [crate::Reg<self::advanced_timer::t3_th_channel::T3_TH_CHANNEL_SPEC>; 4],
+    _reserved19: [u8; 0x10],
     #[doc = "0xec - ADV_TIMER3 counter register"]
     pub t3_counter: crate::Reg<self::advanced_timer::t3_counter::T3_COUNTER_SPEC>,
-    _reserved32: [u8; 0x10],
+    _reserved20: [u8; 0x10],
     #[doc = "0x100 - ADV_TIMERS events configuration register."]
     pub event_cfg: crate::Reg<self::advanced_timer::event_cfg::EVENT_CFG_SPEC>,
     #[doc = "0x104 - ADV_TIMERS channels clock gating configuration register."]
@@ -275,55 +251,13 @@ pub mod advanced_timer;
 pub struct SOCEVENTGENERATOR {
     #[doc = "0x00 - SoC software events trigger register"]
     pub sw_event: crate::Reg<self::soc_event_generator::sw_event::SW_EVENT_SPEC>,
-    #[doc = "0x04 - Events 0-31 dispatch mask to FC"]
-    pub fc_mask0: crate::Reg<self::soc_event_generator::fc_mask0::FC_MASK0_SPEC>,
-    #[doc = "0x08 - Events 32-63 dispatch mask to FC"]
-    pub fc_mask1: crate::Reg<self::soc_event_generator::fc_mask1::FC_MASK1_SPEC>,
-    #[doc = "0x0c - Events 64-95 dispatch mask to FC"]
-    pub fc_mask2: crate::Reg<self::soc_event_generator::fc_mask2::FC_MASK2_SPEC>,
-    #[doc = "0x10 - Events 96-127 dispatch mask to FC"]
-    pub fc_mask3: crate::Reg<self::soc_event_generator::fc_mask3::FC_MASK3_SPEC>,
-    #[doc = "0x14 - Events 128-159 dispatch mask to FC"]
-    pub fc_mask4: crate::Reg<self::soc_event_generator::fc_mask4::FC_MASK4_SPEC>,
-    #[doc = "0x18 - Events 160-191 dispatch mask to FC"]
-    pub fc_mask5: crate::Reg<self::soc_event_generator::fc_mask5::FC_MASK5_SPEC>,
-    #[doc = "0x1c - Events 191-223 dispatch mask to FC"]
-    pub fc_mask6: crate::Reg<self::soc_event_generator::fc_mask6::FC_MASK6_SPEC>,
-    #[doc = "0x20 - F Events 224-255 dispatch mask to peripherals"]
-    pub fc_mask7: crate::Reg<self::soc_event_generator::fc_mask7::FC_MASK7_SPEC>,
-    _reserved9: [u8; 0x20],
-    #[doc = "0x44 - Events 0-31 dispatch mask to peripherals"]
-    pub pr_mask0: crate::Reg<self::soc_event_generator::pr_mask0::PR_MASK0_SPEC>,
-    #[doc = "0x48 - "]
-    pub pr_mask1: crate::Reg<self::soc_event_generator::pr_mask1::PR_MASK1_SPEC>,
-    #[doc = "0x4c - Events 0-31 dispatch mask to peripheralsEvents 64-95 dispatch mask to peripherals"]
-    pub pr_mask2: crate::Reg<self::soc_event_generator::pr_mask2::PR_MASK2_SPEC>,
-    #[doc = "0x50 - Events 96-127 dispatch mask to peripherals"]
-    pub pr_mask3: crate::Reg<self::soc_event_generator::pr_mask3::PR_MASK3_SPEC>,
-    #[doc = "0x54 - Events 128-159 dispatch mask to peripheral"]
-    pub pr_mask4: crate::Reg<self::soc_event_generator::pr_mask4::PR_MASK4_SPEC>,
-    #[doc = "0x58 - Events 160-191 dispatch mask to peripherals"]
-    pub pr_mask5: crate::Reg<self::soc_event_generator::pr_mask5::PR_MASK5_SPEC>,
-    #[doc = "0x5c - Events 191-223 dispatch mask to peripherals"]
-    pub pr_mask6: crate::Reg<self::soc_event_generator::pr_mask6::PR_MASK6_SPEC>,
-    #[doc = "0x60 - Events 224-255 dispatch mask to peripherals"]
-    pub pr_mask7: crate::Reg<self::soc_event_generator::pr_mask7::PR_MASK7_SPEC>,
-    #[doc = "0x64 - Events 0-31 event queue overflow"]
-    pub err0: crate::Reg<self::soc_event_generator::err0::ERR0_SPEC>,
-    #[doc = "0x68 - Events 32-63 event queue overflow"]
-    pub err1: crate::Reg<self::soc_event_generator::err1::ERR1_SPEC>,
-    #[doc = "0x6c - Events 64-95 event queue overflow"]
-    pub err2: crate::Reg<self::soc_event_generator::err2::ERR2_SPEC>,
-    #[doc = "0x70 - Events 96-127 event queue overflow"]
-    pub err3: crate::Reg<self::soc_event_generator::err3::ERR3_SPEC>,
-    #[doc = "0x74 - Events 128-159 event queue overflow"]
-    pub err4: crate::Reg<self::soc_event_generator::err4::ERR4_SPEC>,
-    #[doc = "0x78 - Events 160-191 event queue overflow"]
-    pub err5: crate::Reg<self::soc_event_generator::err5::ERR5_SPEC>,
-    #[doc = "0x7c - Events 191-223 event queue overflow"]
-    pub err6: crate::Reg<self::soc_event_generator::err6::ERR6_SPEC>,
-    #[doc = "0x80 - Events 224-255 event queue overflow"]
-    pub err7: crate::Reg<self::soc_event_generator::err7::ERR7_SPEC>,
+    #[doc = "0x04..0x24 - Events 0-31 dispatch mask to FC"]
+    pub fc_mask: [crate::Reg<self::soc_event_generator::fc_mask::FC_MASK_SPEC>; 8],
+    _reserved2: [u8; 0x20],
+    #[doc = "0x44..0x64 - Events 0-31 dispatch mask to peripherals"]
+    pub pr_mask: [crate::Reg<self::soc_event_generator::pr_mask::PR_MASK_SPEC>; 8],
+    #[doc = "0x64..0x84 - Events 0-31 event queue overflow"]
+    pub err: [crate::Reg<self::soc_event_generator::err::ERR_SPEC>; 8],
     #[doc = "0x84 - "]
     pub timer_lo: crate::Reg<self::soc_event_generator::timer_lo::TIMER_LO_SPEC>,
     #[doc = "0x88 - Trigger Timer HI of APB Timer with event"]
@@ -437,7 +371,7 @@ pub struct SOCCONTROL {
     pub fcfetch: crate::Reg<self::soc_control::fcfetch::FCFETCH_SPEC>,
     _reserved3: [u8; 0x04],
     #[doc = "0x10 - The content of these registers can be used to multiplex pads when targeting an ASIC. The first register (0x1A10_4010) can be used to set the mux (2 bit select) from pin 0 (bits \\[1:0\\]) to 15 (bits \\[31:30\\])."]
-    pub pad_mux_0: crate::Reg<self::soc_control::pad_mux_0::PAD_MUX_0_SPEC>,
+    pub pad_mux: crate::Reg<self::soc_control::pad_mux::PAD_MUX_SPEC>,
     _reserved4: [u8; 0x0c],
     #[doc = "0x20 - All 10 bit fields have reset value of 10'b10_0011_0100: 0 drive strenght 1 drive strenght 2 trigger 3 trigger 4 rate 5 output en(0) 6 hold 7 pull enable 8 pd(0)/pu(1) 9 input en(1)"]
     pub pad_cfg_0: crate::Reg<self::soc_control::pad_cfg_0::PAD_CFG_0_SPEC>,

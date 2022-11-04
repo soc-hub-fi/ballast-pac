@@ -106,3 +106,7 @@ pub mod core_status_1;
 pub type JTAG_REG = crate::Reg<jtag_reg::JTAG_REG_SPEC>;
 #[doc = "This register contains the value of the input from the JTAG and can be used to write 8bit in the JTAG output register for system-to-JTAG communications."]
 pub mod jtag_reg;
+#[doc = "PERIPH_CLK_DIV register accessor: an alias for `Reg<PERIPH_CLK_DIV_SPEC>`"]
+pub type PERIPH_CLK_DIV = crate::Reg<periph_clk_div::PERIPH_CLK_DIV_SPEC>;
+#[doc = ""]
+pub mod periph_clk_div;

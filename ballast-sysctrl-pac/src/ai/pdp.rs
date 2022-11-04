@@ -12,28 +12,28 @@ pub type D_OP_ENABLE = crate::Reg<d_op_enable::D_OP_ENABLE_SPEC>;
 pub mod d_op_enable;
 #[doc = "D_DATA_CUBE_IN_WIDTH register accessor: an alias for `Reg<D_DATA_CUBE_IN_WIDTH_SPEC>`"]
 pub type D_DATA_CUBE_IN_WIDTH = crate::Reg<d_data_cube_in_width::D_DATA_CUBE_IN_WIDTH_SPEC>;
-#[doc = "Input data cube’s width"]
+#[doc = "Input data cubes width"]
 pub mod d_data_cube_in_width;
 #[doc = "D_DATA_CUBE_IN_HEIGHT register accessor: an alias for `Reg<D_DATA_CUBE_IN_HEIGHT_SPEC>`"]
 pub type D_DATA_CUBE_IN_HEIGHT = crate::Reg<d_data_cube_in_height::D_DATA_CUBE_IN_HEIGHT_SPEC>;
-#[doc = "Input data cube’s height"]
+#[doc = "Input data cubes height"]
 pub mod d_data_cube_in_height;
 #[doc = "D_DATA_CUBE_IN_CHANNEL register accessor: an alias for `Reg<D_DATA_CUBE_IN_CHANNEL_SPEC>`"]
 pub type D_DATA_CUBE_IN_CHANNEL = crate::Reg<d_data_cube_in_channel::D_DATA_CUBE_IN_CHANNEL_SPEC>;
-#[doc = "Input data cube’s channel"]
+#[doc = "Input data cubes channel"]
 pub mod d_data_cube_in_channel;
 #[doc = "D_DATA_CUBE_OUT_WIDTH register accessor: an alias for `Reg<D_DATA_CUBE_OUT_WIDTH_SPEC>`"]
 pub type D_DATA_CUBE_OUT_WIDTH = crate::Reg<d_data_cube_out_width::D_DATA_CUBE_OUT_WIDTH_SPEC>;
-#[doc = "Output data cube’s width"]
+#[doc = "Output data cubes width"]
 pub mod d_data_cube_out_width;
 #[doc = "D_DATA_CUBE_OUT_HEIGHT register accessor: an alias for `Reg<D_DATA_CUBE_OUT_HEIGHT_SPEC>`"]
 pub type D_DATA_CUBE_OUT_HEIGHT = crate::Reg<d_data_cube_out_height::D_DATA_CUBE_OUT_HEIGHT_SPEC>;
-#[doc = "Output data cube’s height"]
+#[doc = "Output data cubes height"]
 pub mod d_data_cube_out_height;
 #[doc = "D_DATA_CUBE_OUT_CHANNEL register accessor: an alias for `Reg<D_DATA_CUBE_OUT_CHANNEL_SPEC>`"]
 pub type D_DATA_CUBE_OUT_CHANNEL =
     crate::Reg<d_data_cube_out_channel::D_DATA_CUBE_OUT_CHANNEL_SPEC>;
-#[doc = "Output data cube’s channel"]
+#[doc = "Output data cubes channel"]
 pub mod d_data_cube_out_channel;
 #[doc = "D_OPERATION_MODE_CFG register accessor: an alias for `Reg<D_OPERATION_MODE_CFG_SPEC>`"]
 pub type D_OPERATION_MODE_CFG = crate::Reg<d_operation_mode_cfg::D_OPERATION_MODE_CFG_SPEC>;

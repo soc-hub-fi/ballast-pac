@@ -10,7 +10,7 @@ pub struct RegisterBlock {
     #[doc = "0x400..0x410 - C2C_remap"]
     pub c2c_remap: C2C_REMAP,
     _reserved3: [u8; 0x01f0],
-    #[doc = "0x600..0x640 - Pad_config"]
+    #[doc = "0x600..0x641 - Pad_config"]
     pub pad_config: PAD_CONFIG,
     _reserved4: [u8; 0x01bf],
     #[doc = "0x800..0x81a - EMA"]

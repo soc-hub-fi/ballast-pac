@@ -282,10 +282,10 @@ impl crate::Readable for C2C_TX_D_SPEC {
 impl crate::Writable for C2C_TX_D_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets c2c_tx_d to value 0x0200"]
+#[doc = "`reset()` method sets c2c_tx_d to value 0x8008"]
 impl crate::Resettable for C2C_TX_D_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0x0200
+        0x8008
     }
 }

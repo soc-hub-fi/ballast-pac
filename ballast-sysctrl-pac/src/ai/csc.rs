@@ -20,11 +20,11 @@ pub type D_DATAIN_FORMAT = crate::Reg<d_datain_format::D_DATAIN_FORMAT_SPEC>;
 pub mod d_datain_format;
 #[doc = "D_DATAIN_SIZE_EXT_0 register accessor: an alias for `Reg<D_DATAIN_SIZE_EXT_0_SPEC>`"]
 pub type D_DATAIN_SIZE_EXT_0 = crate::Reg<d_datain_size_ext_0::D_DATAIN_SIZE_EXT_0_SPEC>;
-#[doc = "Input cube’s width and height after extension"]
+#[doc = "Input cubes width and height after extension"]
 pub mod d_datain_size_ext_0;
 #[doc = "D_DATAIN_SIZE_EXT_1 register accessor: an alias for `Reg<D_DATAIN_SIZE_EXT_1_SPEC>`"]
 pub type D_DATAIN_SIZE_EXT_1 = crate::Reg<d_datain_size_ext_1::D_DATAIN_SIZE_EXT_1_SPEC>;
-#[doc = "Input cube’s channel after extension"]
+#[doc = "Input cubes channel after extension"]
 pub mod d_datain_size_ext_1;
 #[doc = "D_BATCH_NUMBER register accessor: an alias for `Reg<D_BATCH_NUMBER_SPEC>`"]
 pub type D_BATCH_NUMBER = crate::Reg<d_batch_number::D_BATCH_NUMBER_SPEC>;
@@ -44,11 +44,11 @@ pub type D_WEIGHT_FORMAT = crate::Reg<d_weight_format::D_WEIGHT_FORMAT_SPEC>;
 pub mod d_weight_format;
 #[doc = "D_WEIGHT_SIZE_EXT_0 register accessor: an alias for `Reg<D_WEIGHT_SIZE_EXT_0_SPEC>`"]
 pub type D_WEIGHT_SIZE_EXT_0 = crate::Reg<d_weight_size_ext_0::D_WEIGHT_SIZE_EXT_0_SPEC>;
-#[doc = "Weight’s width and height after extension"]
+#[doc = "Weights width and height after extension"]
 pub mod d_weight_size_ext_0;
 #[doc = "D_WEIGHT_SIZE_EXT_1 register accessor: an alias for `Reg<D_WEIGHT_SIZE_EXT_1_SPEC>`"]
 pub type D_WEIGHT_SIZE_EXT_1 = crate::Reg<d_weight_size_ext_1::D_WEIGHT_SIZE_EXT_1_SPEC>;
-#[doc = "Weight’s channel after extension and number of weight kernels"]
+#[doc = "Weights channel after extension and number of weight kernels"]
 pub mod d_weight_size_ext_1;
 #[doc = "D_WEIGHT_BYTES register accessor: an alias for `Reg<D_WEIGHT_BYTES_SPEC>`"]
 pub type D_WEIGHT_BYTES = crate::Reg<d_weight_bytes::D_WEIGHT_BYTES_SPEC>;
@@ -60,11 +60,11 @@ pub type D_WMB_BYTES = crate::Reg<d_wmb_bytes::D_WMB_BYTES_SPEC>;
 pub mod d_wmb_bytes;
 #[doc = "D_DATAOUT_SIZE_0 register accessor: an alias for `Reg<D_DATAOUT_SIZE_0_SPEC>`"]
 pub type D_DATAOUT_SIZE_0 = crate::Reg<d_dataout_size_0::D_DATAOUT_SIZE_0_SPEC>;
-#[doc = "Output cube’s width and height"]
+#[doc = "Output cubes width and height"]
 pub mod d_dataout_size_0;
 #[doc = "D_DATAOUT_SIZE_1 register accessor: an alias for `Reg<D_DATAOUT_SIZE_1_SPEC>`"]
 pub type D_DATAOUT_SIZE_1 = crate::Reg<d_dataout_size_1::D_DATAOUT_SIZE_1_SPEC>;
-#[doc = "Output cube’s channel"]
+#[doc = "Output cubes channel"]
 pub mod d_dataout_size_1;
 #[doc = "D_ATOMICS register accessor: an alias for `Reg<D_ATOMICS_SPEC>`"]
 pub type D_ATOMICS = crate::Reg<d_atomics::D_ATOMICS_SPEC>;

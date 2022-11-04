@@ -90,11 +90,11 @@ pub struct CDMA {
     pub d_misc_cfg: crate::Reg<self::cdma::d_misc_cfg::D_MISC_CFG_SPEC>,
     #[doc = "0x18 - Input data format and pixel format"]
     pub d_datain_format: crate::Reg<self::cdma::d_datain_format::D_DATAIN_FORMAT_SPEC>,
-    #[doc = "0x1c - Input cube’s width and height"]
+    #[doc = "0x1c - Input cubes width and height"]
     pub d_datain_size_0: crate::Reg<self::cdma::d_datain_size_0::D_DATAIN_SIZE_0_SPEC>,
-    #[doc = "0x20 - Input cube’s channel"]
+    #[doc = "0x20 - Input cubes channel"]
     pub d_datain_size_1: crate::Reg<self::cdma::d_datain_size_1::D_DATAIN_SIZE_1_SPEC>,
-    #[doc = "0x24 - Input cube’s width and height after extension"]
+    #[doc = "0x24 - Input cubes width and height after extension"]
     pub d_datain_size_ext_0: crate::Reg<self::cdma::d_datain_size_ext_0::D_DATAIN_SIZE_EXT_0_SPEC>,
     #[doc = "0x28 - For image-in mode, horizontal offset and vertical offset of the 1 st pixel."]
     pub d_pixel_offset: crate::Reg<self::cdma::d_pixel_offset::D_PIXEL_OFFSET_SPEC>,
@@ -110,7 +110,7 @@ pub struct CDMA {
     pub d_dain_addr_low_1: crate::Reg<self::cdma::d_dain_addr_low_1::D_DAIN_ADDR_LOW_1_SPEC>,
     #[doc = "0x40 - Line stride of input cube"]
     pub d_line_stride: crate::Reg<self::cdma::d_line_stride::D_LINE_STRIDE_SPEC>,
-    #[doc = "0x44 - Line stride of input cube’s UV plane"]
+    #[doc = "0x44 - Line stride of input cubes UV plane"]
     pub d_line_uv_stride: crate::Reg<self::cdma::d_line_uv_stride::D_LINE_UV_STRIDE_SPEC>,
     #[doc = "0x48 - Surface stride of input cube"]
     pub d_surf_stride: crate::Reg<self::cdma::d_surf_stride::D_SURF_STRIDE_SPEC>,
@@ -217,9 +217,9 @@ pub struct CSC {
     pub d_misc_cfg: crate::Reg<self::csc::d_misc_cfg::D_MISC_CFG_SPEC>,
     #[doc = "0x10 - Input data format and pixel format"]
     pub d_datain_format: crate::Reg<self::csc::d_datain_format::D_DATAIN_FORMAT_SPEC>,
-    #[doc = "0x14 - Input cube’s width and height after extension"]
+    #[doc = "0x14 - Input cubes width and height after extension"]
     pub d_datain_size_ext_0: crate::Reg<self::csc::d_datain_size_ext_0::D_DATAIN_SIZE_EXT_0_SPEC>,
-    #[doc = "0x18 - Input cube’s channel after extension"]
+    #[doc = "0x18 - Input cubes channel after extension"]
     pub d_datain_size_ext_1: crate::Reg<self::csc::d_datain_size_ext_1::D_DATAIN_SIZE_EXT_1_SPEC>,
     #[doc = "0x1c - Number of batches"]
     pub d_batch_number: crate::Reg<self::csc::d_batch_number::D_BATCH_NUMBER_SPEC>,
@@ -229,17 +229,17 @@ pub struct CSC {
     pub d_entry_per_slice: crate::Reg<self::csc::d_entry_per_slice::D_ENTRY_PER_SLICE_SPEC>,
     #[doc = "0x28 - Whether weight is compressed or not"]
     pub d_weight_format: crate::Reg<self::csc::d_weight_format::D_WEIGHT_FORMAT_SPEC>,
-    #[doc = "0x2c - Weight’s width and height after extension"]
+    #[doc = "0x2c - Weights width and height after extension"]
     pub d_weight_size_ext_0: crate::Reg<self::csc::d_weight_size_ext_0::D_WEIGHT_SIZE_EXT_0_SPEC>,
-    #[doc = "0x30 - Weight’s channel after extension and number of weight kernels"]
+    #[doc = "0x30 - Weights channel after extension and number of weight kernels"]
     pub d_weight_size_ext_1: crate::Reg<self::csc::d_weight_size_ext_1::D_WEIGHT_SIZE_EXT_1_SPEC>,
     #[doc = "0x34 - Total bytes of Weight"]
     pub d_weight_bytes: crate::Reg<self::csc::d_weight_bytes::D_WEIGHT_BYTES_SPEC>,
     #[doc = "0x38 - Total bytes of WMB"]
     pub d_wmb_bytes: crate::Reg<self::csc::d_wmb_bytes::D_WMB_BYTES_SPEC>,
-    #[doc = "0x3c - Output cube’s width and height"]
+    #[doc = "0x3c - Output cubes width and height"]
     pub d_dataout_size_0: crate::Reg<self::csc::d_dataout_size_0::D_DATAOUT_SIZE_0_SPEC>,
-    #[doc = "0x40 - Output cube’s channel"]
+    #[doc = "0x40 - Output cubes channel"]
     pub d_dataout_size_1: crate::Reg<self::csc::d_dataout_size_1::D_DATAOUT_SIZE_1_SPEC>,
     #[doc = "0x44 - Equals to output_data_cube_width * output_data_cube_height - 1"]
     pub d_atomics: crate::Reg<self::csc::d_atomics::D_ATOMICS_SPEC>,
@@ -305,9 +305,9 @@ pub struct CACC {
     pub d_op_enable: crate::Reg<self::cacc::d_op_enable::D_OP_ENABLE_SPEC>,
     #[doc = "0x0c - Configuration of operation: convolution mode, precision, etc."]
     pub d_misc_cfg: crate::Reg<self::cacc::d_misc_cfg::D_MISC_CFG_SPEC>,
-    #[doc = "0x10 - Input cube’s width and height after extension"]
+    #[doc = "0x10 - Input cubes width and height after extension"]
     pub d_dataout_size_0: crate::Reg<self::cacc::d_dataout_size_0::D_DATAOUT_SIZE_0_SPEC>,
-    #[doc = "0x14 - Input cube’s channel after extension"]
+    #[doc = "0x14 - Input cubes channel after extension"]
     pub d_dataout_size_1: crate::Reg<self::cacc::d_dataout_size_1::D_DATAOUT_SIZE_1_SPEC>,
     #[doc = "0x18 - Address of output cube"]
     pub d_dataout_addr: crate::Reg<self::cacc::d_dataout_addr::D_DATAOUT_ADDR_SPEC>,
@@ -437,17 +437,17 @@ pub struct SDP {
     pub s_lut_access_cfg: crate::Reg<self::sdp::s_lut_access_cfg::S_LUT_ACCESS_CFG_SPEC>,
     #[doc = "0x0c - Data register of read or write LUT"]
     pub s_lut_access_data: crate::Reg<self::sdp::s_lut_access_data::S_LUT_ACCESS_DATA_SPEC>,
-    #[doc = "0x10 - LUT’s type: exponent or linear. And the selection between LE and LO tables."]
+    #[doc = "0x10 - LUTs type: exponent or linear. And the selection between LE and LO tables."]
     pub s_lut_cfg: crate::Reg<self::sdp::s_lut_cfg::S_LUT_CFG_SPEC>,
     #[doc = "0x14 - LE and LO LUT index offset and selection"]
     pub s_lut_info: crate::Reg<self::sdp::s_lut_info::S_LUT_INFO_SPEC>,
-    #[doc = "0x18 - Start of LE LUT’s range"]
+    #[doc = "0x18 - Start of LE LUTs range"]
     pub s_lut_le_start: crate::Reg<self::sdp::s_lut_le_start::S_LUT_LE_START_SPEC>,
-    #[doc = "0x1c - End of LE LUT’s range"]
+    #[doc = "0x1c - End of LE LUTs range"]
     pub s_lut_le_end: crate::Reg<self::sdp::s_lut_le_end::S_LUT_LE_END_SPEC>,
-    #[doc = "0x20 - Start of LO LUT’s range"]
+    #[doc = "0x20 - Start of LO LUTs range"]
     pub s_lut_lo_start: crate::Reg<self::sdp::s_lut_lo_start::S_LUT_LO_START_SPEC>,
-    #[doc = "0x24 - End of LO LUT’s range"]
+    #[doc = "0x24 - End of LO LUTs range"]
     pub s_lut_lo_end: crate::Reg<self::sdp::s_lut_lo_end::S_LUT_LO_END_SPEC>,
     #[doc = "0x28 - Slope scale parameter for LE LUT underflow and overflow, signed value"]
     pub s_lut_le_slope_scale:
@@ -463,11 +463,11 @@ pub struct SDP {
         crate::Reg<self::sdp::s_lut_lo_slope_shift::S_LUT_LO_SLOPE_SHIFT_SPEC>,
     #[doc = "0x38 - Set it to 1 to kick off operation for current register group"]
     pub d_op_enable: crate::Reg<self::sdp::d_op_enable::D_OP_ENABLE_SPEC>,
-    #[doc = "0x3c - Input cube’s width"]
+    #[doc = "0x3c - Input cubes width"]
     pub d_data_cube_width: crate::Reg<self::sdp::d_data_cube_width::D_DATA_CUBE_WIDTH_SPEC>,
-    #[doc = "0x40 - Input cube’s height"]
+    #[doc = "0x40 - Input cubes height"]
     pub d_data_cube_height: crate::Reg<self::sdp::d_data_cube_height::D_DATA_CUBE_HEIGHT_SPEC>,
-    #[doc = "0x44 - Input cube’s channel"]
+    #[doc = "0x44 - Input cubes channel"]
     pub d_data_cube_channel: crate::Reg<self::sdp::d_data_cube_channel::D_DATA_CUBE_CHANNEL_SPEC>,
     #[doc = "0x48 - Lower 32bits of output data address"]
     pub d_dst_base_addr_low: crate::Reg<self::sdp::d_dst_base_addr_low::D_DST_BASE_ADDR_LOW_SPEC>,
@@ -648,22 +648,22 @@ pub struct PDP {
     pub s_pointer: crate::Reg<self::pdp::s_pointer::S_POINTER_SPEC>,
     #[doc = "0x08 - Set it to 1 to kick off operation for current register group"]
     pub d_op_enable: crate::Reg<self::pdp::d_op_enable::D_OP_ENABLE_SPEC>,
-    #[doc = "0x0c - Input data cube’s width"]
+    #[doc = "0x0c - Input data cubes width"]
     pub d_data_cube_in_width:
         crate::Reg<self::pdp::d_data_cube_in_width::D_DATA_CUBE_IN_WIDTH_SPEC>,
-    #[doc = "0x10 - Input data cube’s height"]
+    #[doc = "0x10 - Input data cubes height"]
     pub d_data_cube_in_height:
         crate::Reg<self::pdp::d_data_cube_in_height::D_DATA_CUBE_IN_HEIGHT_SPEC>,
-    #[doc = "0x14 - Input data cube’s channel"]
+    #[doc = "0x14 - Input data cubes channel"]
     pub d_data_cube_in_channel:
         crate::Reg<self::pdp::d_data_cube_in_channel::D_DATA_CUBE_IN_CHANNEL_SPEC>,
-    #[doc = "0x18 - Output data cube’s width"]
+    #[doc = "0x18 - Output data cubes width"]
     pub d_data_cube_out_width:
         crate::Reg<self::pdp::d_data_cube_out_width::D_DATA_CUBE_OUT_WIDTH_SPEC>,
-    #[doc = "0x1c - Output data cube’s height"]
+    #[doc = "0x1c - Output data cubes height"]
     pub d_data_cube_out_height:
         crate::Reg<self::pdp::d_data_cube_out_height::D_DATA_CUBE_OUT_HEIGHT_SPEC>,
-    #[doc = "0x20 - Output data cube’s channel"]
+    #[doc = "0x20 - Output data cubes channel"]
     pub d_data_cube_out_channel:
         crate::Reg<self::pdp::d_data_cube_out_channel::D_DATA_CUBE_OUT_CHANNEL_SPEC>,
     #[doc = "0x24 - Split number"]

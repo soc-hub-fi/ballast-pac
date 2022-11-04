@@ -82,8 +82,8 @@ impl W {
     }
 }
 #[doc = "Bit 31 - 0 DIR (R/W) GPIO\\[31:0\\]
-direction configuration bitfield: - bit\\[i\\]=1’b0: Input mode for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: Output mode for GPIO\\[i\\]\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [paddir_00_31](index.html) module"]
+direction configuration bitfield: - bit\\[i\\]=1b0: Input mode for GPIO\\[i\\]
+- bit\\[i\\]=1b1: Output mode for GPIO\\[i\\]\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [paddir_00_31](index.html) module"]
 pub struct PADDIR_00_31_SPEC;
 impl crate::RegisterSpec for PADDIR_00_31_SPEC {
     type Ux = u32;

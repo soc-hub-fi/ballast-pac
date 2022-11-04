@@ -228,10 +228,10 @@ impl crate::Readable for RST_MSTR_SPEC {
 impl crate::Writable for RST_MSTR_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets rst_mstr to value 0x0200"]
+#[doc = "`reset()` method sets rst_mstr to value 0x8008"]
 impl crate::Resettable for RST_MSTR_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0x0200
+        0x8008
     }
 }

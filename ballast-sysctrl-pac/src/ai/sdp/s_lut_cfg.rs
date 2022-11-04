@@ -420,7 +420,7 @@ impl W {
         self
     }
 }
-#[doc = "LUT’s type: exponent or linear. And the selection between LE and LO tables.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [s_lut_cfg](index.html) module"]
+#[doc = "LUTs type: exponent or linear. And the selection between LE and LO tables.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [s_lut_cfg](index.html) module"]
 pub struct S_LUT_CFG_SPEC;
 impl crate::RegisterSpec for S_LUT_CFG_SPEC {
     type Ux = u32;

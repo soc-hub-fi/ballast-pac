@@ -16,7 +16,7 @@ pub type S_LUT_ACCESS_DATA = crate::Reg<s_lut_access_data::S_LUT_ACCESS_DATA_SPE
 pub mod s_lut_access_data;
 #[doc = "S_LUT_CFG register accessor: an alias for `Reg<S_LUT_CFG_SPEC>`"]
 pub type S_LUT_CFG = crate::Reg<s_lut_cfg::S_LUT_CFG_SPEC>;
-#[doc = "LUT’s type: exponent or linear. And the selection between LE and LO tables."]
+#[doc = "LUTs type: exponent or linear. And the selection between LE and LO tables."]
 pub mod s_lut_cfg;
 #[doc = "S_LUT_INFO register accessor: an alias for `Reg<S_LUT_INFO_SPEC>`"]
 pub type S_LUT_INFO = crate::Reg<s_lut_info::S_LUT_INFO_SPEC>;
@@ -24,19 +24,19 @@ pub type S_LUT_INFO = crate::Reg<s_lut_info::S_LUT_INFO_SPEC>;
 pub mod s_lut_info;
 #[doc = "S_LUT_LE_START register accessor: an alias for `Reg<S_LUT_LE_START_SPEC>`"]
 pub type S_LUT_LE_START = crate::Reg<s_lut_le_start::S_LUT_LE_START_SPEC>;
-#[doc = "Start of LE LUT’s range"]
+#[doc = "Start of LE LUTs range"]
 pub mod s_lut_le_start;
 #[doc = "S_LUT_LE_END register accessor: an alias for `Reg<S_LUT_LE_END_SPEC>`"]
 pub type S_LUT_LE_END = crate::Reg<s_lut_le_end::S_LUT_LE_END_SPEC>;
-#[doc = "End of LE LUT’s range"]
+#[doc = "End of LE LUTs range"]
 pub mod s_lut_le_end;
 #[doc = "S_LUT_LO_START register accessor: an alias for `Reg<S_LUT_LO_START_SPEC>`"]
 pub type S_LUT_LO_START = crate::Reg<s_lut_lo_start::S_LUT_LO_START_SPEC>;
-#[doc = "Start of LO LUT’s range"]
+#[doc = "Start of LO LUTs range"]
 pub mod s_lut_lo_start;
 #[doc = "S_LUT_LO_END register accessor: an alias for `Reg<S_LUT_LO_END_SPEC>`"]
 pub type S_LUT_LO_END = crate::Reg<s_lut_lo_end::S_LUT_LO_END_SPEC>;
-#[doc = "End of LO LUT’s range"]
+#[doc = "End of LO LUTs range"]
 pub mod s_lut_lo_end;
 #[doc = "S_LUT_LE_SLOPE_SCALE register accessor: an alias for `Reg<S_LUT_LE_SLOPE_SCALE_SPEC>`"]
 pub type S_LUT_LE_SLOPE_SCALE = crate::Reg<s_lut_le_slope_scale::S_LUT_LE_SLOPE_SCALE_SPEC>;
@@ -60,15 +60,15 @@ pub type D_OP_ENABLE = crate::Reg<d_op_enable::D_OP_ENABLE_SPEC>;
 pub mod d_op_enable;
 #[doc = "D_DATA_CUBE_WIDTH register accessor: an alias for `Reg<D_DATA_CUBE_WIDTH_SPEC>`"]
 pub type D_DATA_CUBE_WIDTH = crate::Reg<d_data_cube_width::D_DATA_CUBE_WIDTH_SPEC>;
-#[doc = "Input cube’s width"]
+#[doc = "Input cubes width"]
 pub mod d_data_cube_width;
 #[doc = "D_DATA_CUBE_HEIGHT register accessor: an alias for `Reg<D_DATA_CUBE_HEIGHT_SPEC>`"]
 pub type D_DATA_CUBE_HEIGHT = crate::Reg<d_data_cube_height::D_DATA_CUBE_HEIGHT_SPEC>;
-#[doc = "Input cube’s height"]
+#[doc = "Input cubes height"]
 pub mod d_data_cube_height;
 #[doc = "D_DATA_CUBE_CHANNEL register accessor: an alias for `Reg<D_DATA_CUBE_CHANNEL_SPEC>`"]
 pub type D_DATA_CUBE_CHANNEL = crate::Reg<d_data_cube_channel::D_DATA_CUBE_CHANNEL_SPEC>;
-#[doc = "Input cube’s channel"]
+#[doc = "Input cubes channel"]
 pub mod d_data_cube_channel;
 #[doc = "D_DST_BASE_ADDR_LOW register accessor: an alias for `Reg<D_DST_BASE_ADDR_LOW_SPEC>`"]
 pub type D_DST_BASE_ADDR_LOW = crate::Reg<d_dst_base_addr_low::D_DST_BASE_ADDR_LOW_SPEC>;

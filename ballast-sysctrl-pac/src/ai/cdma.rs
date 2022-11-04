@@ -28,15 +28,15 @@ pub type D_DATAIN_FORMAT = crate::Reg<d_datain_format::D_DATAIN_FORMAT_SPEC>;
 pub mod d_datain_format;
 #[doc = "D_DATAIN_SIZE_0 register accessor: an alias for `Reg<D_DATAIN_SIZE_0_SPEC>`"]
 pub type D_DATAIN_SIZE_0 = crate::Reg<d_datain_size_0::D_DATAIN_SIZE_0_SPEC>;
-#[doc = "Input cube’s width and height"]
+#[doc = "Input cubes width and height"]
 pub mod d_datain_size_0;
 #[doc = "D_DATAIN_SIZE_1 register accessor: an alias for `Reg<D_DATAIN_SIZE_1_SPEC>`"]
 pub type D_DATAIN_SIZE_1 = crate::Reg<d_datain_size_1::D_DATAIN_SIZE_1_SPEC>;
-#[doc = "Input cube’s channel"]
+#[doc = "Input cubes channel"]
 pub mod d_datain_size_1;
 #[doc = "D_DATAIN_SIZE_EXT_0 register accessor: an alias for `Reg<D_DATAIN_SIZE_EXT_0_SPEC>`"]
 pub type D_DATAIN_SIZE_EXT_0 = crate::Reg<d_datain_size_ext_0::D_DATAIN_SIZE_EXT_0_SPEC>;
-#[doc = "Input cube’s width and height after extension"]
+#[doc = "Input cubes width and height after extension"]
 pub mod d_datain_size_ext_0;
 #[doc = "D_PIXEL_OFFSET register accessor: an alias for `Reg<D_PIXEL_OFFSET_SPEC>`"]
 pub type D_PIXEL_OFFSET = crate::Reg<d_pixel_offset::D_PIXEL_OFFSET_SPEC>;
@@ -68,7 +68,7 @@ pub type D_LINE_STRIDE = crate::Reg<d_line_stride::D_LINE_STRIDE_SPEC>;
 pub mod d_line_stride;
 #[doc = "D_LINE_UV_STRIDE register accessor: an alias for `Reg<D_LINE_UV_STRIDE_SPEC>`"]
 pub type D_LINE_UV_STRIDE = crate::Reg<d_line_uv_stride::D_LINE_UV_STRIDE_SPEC>;
-#[doc = "Line stride of input cube’s UV plane"]
+#[doc = "Line stride of input cubes UV plane"]
 pub mod d_line_uv_stride;
 #[doc = "D_SURF_STRIDE register accessor: an alias for `Reg<D_SURF_STRIDE_SPEC>`"]
 pub type D_SURF_STRIDE = crate::Reg<d_surf_stride::D_SURF_STRIDE_SPEC>;

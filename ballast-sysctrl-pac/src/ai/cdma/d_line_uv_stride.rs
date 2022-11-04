@@ -81,7 +81,7 @@ impl W {
         self
     }
 }
-#[doc = "Line stride of input cube’s UV plane\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [d_line_uv_stride](index.html) module"]
+#[doc = "Line stride of input cubes UV plane\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [d_line_uv_stride](index.html) module"]
 pub struct D_LINE_UV_STRIDE_SPEC;
 impl crate::RegisterSpec for D_LINE_UV_STRIDE_SPEC {
     type Ux = u32;

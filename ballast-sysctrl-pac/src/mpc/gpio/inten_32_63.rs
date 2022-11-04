@@ -82,8 +82,8 @@ impl W {
     }
 }
 #[doc = "Bit 31 - 0 INTEN (R/W) GPIO\\[63:32\\]
-interrupt enable configuration bitfield: - bit\\[i\\]=1’b0: disable interrupt for GPIO\\[i\\]
-- bit\\[i\\]=1’b1: enable interrupt for GPIO\\[i\\]\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [inten_32_63](index.html) module"]
+interrupt enable configuration bitfield: - bit\\[i\\]=1b0: disable interrupt for GPIO\\[i\\]
+- bit\\[i\\]=1b1: enable interrupt for GPIO\\[i\\]\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [inten_32_63](index.html) module"]
 pub struct INTEN_32_63_SPEC;
 impl crate::RegisterSpec for INTEN_32_63_SPEC {
     type Ux = u32;
