@@ -4,3 +4,18 @@ _svd: ../SysCtrl.svd
 
 _include:
   - "../../patches/common.yaml"
+
+"SYSCTRL":
+  "SDIO":
+    _add:
+      MEMMAP:
+        description: "Memory mapped SDIO memory (<64 KiB)"
+        # This might start earlier or go on for longer
+        addressOffset: 0x2000
+        access: read-write
+        fields:
+          SDIO_MEMORY:
+            description: "Memory mapped SDIO memory (<64 KiB)"
+            bitOffset: 0x0
+            #size: 0xDFFF
+            bitWidth: 0xDFFF
