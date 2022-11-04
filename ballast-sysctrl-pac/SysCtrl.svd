@@ -11,7 +11,7 @@
 		<mpuPresent>false</mpuPresent>
 		<fpuPresent>false</fpuPresent>
 		<nvicPrioBits>3</nvicPrioBits>
-		<vendorSystickConfig>false</vendorSystickConfig>
+		<vendorSystickConfig>true</vendorSystickConfig>
 	</cpu>
 	<addressUnitBits>8</addressUnitBits>
 	<width>32</width>
@@ -26,7 +26,7 @@
 		<peripheral>
 			<name>MPC</name>
 			<version>1.0</version>
-			<baseAddress>0x2a000000</baseAddress>
+			<baseAddress>0x2A000000</baseAddress>
 			<addressBlock>
 				<offset>0x00101000</offset>
 				<size>0x1000</size>
@@ -84,8 +84,8 @@
 					<register>
 						<name>PADDIR_00_31</name>
 						<description>Bit 31 - 0 DIR (R/W) GPIO[31:0] direction configuration bitfield:
-- bit[i]=1’b0: Input mode for GPIO[i]
-- bit[i]=1’b1: Output mode for GPIO[i]
+- bit[i]=1b0: Input mode for GPIO[i]
+- bit[i]=1b1: Output mode for GPIO[i]
 </description>
 						<addressOffset>0x0000</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -102,11 +102,11 @@
 					<register>
 						<name>EN_00_31</name>
 						<description>Bit 31 - 0 GPIOEN (R/W) GPIO[31:0] clock enable configuration bitfield:
-- bit[i]=1’b0: disable clock for GPIO[i]
-- bit[i]=1’b1: enable clock for GPIO[i]
+- bit[i]=1b0: disable clock for GPIO[i]
+- bit[i]=1b1: enable clock for GPIO[i]
 GPIOs are gathered by groups of 4. The clock gating of one group is done only if
 all 4 GPIOs are disabled.
-Clock must be enabled for a GPIO if it’s direction is configured in input mode.</description>
+Clock must be enabled for a GPIO if its direction is configured in input mode.</description>
 						<addressOffset>0x0004</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -191,8 +191,8 @@ input data of GPIO[i].</description>
 							<field>
 								<name>INTEN</name>
 								<description>Bit 31 - 0 INTEN (R/W) GPIO[31:0] interrupt enable configuration bitfield:
-- bit[i]=1’b0: disable interrupt for GPIO[i]
-- bit[i]=1’b1: enable interrupt for GPIO[i]
+- bit[i]=1b0: disable interrupt for GPIO[i]
+- bit[i]=1b1: enable interrupt for GPIO[i]
 </description>
 								<bitRange>[31:0]</bitRange>
 							</field>
@@ -201,10 +201,10 @@ input data of GPIO[i].</description>
 					<register>
 						<name>INTTYPE_00_15</name>
 						<description>Bit 31 - 0 INTTYPE0 (R/W) GPIO[15:0] interrupt type configuration bitfield:
-- bit[2*i+1:2*i]=2’b00: interrupt on falling edge for GPIO[i]
-- bit[2*i+1:2*i]=2’b01: interrupt on rising edge for GPIO[i]
-- bit[2*i+1:2*i]=2’b10: interrupt on rising and falling edge for GPIO[i]
-- bit[2*i+1:2*i]=2’b11: RFU
+- bit[2*i+1:2*i]=2b00: interrupt on falling edge for GPIO[i]
+- bit[2*i+1:2*i]=2b01: interrupt on rising edge for GPIO[i]
+- bit[2*i+1:2*i]=2b10: interrupt on rising and falling edge for GPIO[i]
+- bit[2*i+1:2*i]=2b11: RFU
 </description>
 						<addressOffset>0x001C</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -221,10 +221,10 @@ input data of GPIO[i].</description>
 					<register>
 						<name>INTTYPE_16_31</name>
 						<description>Bit 31 - 0 INTTYPE1 (R/W) GPIO[31:16] interrupt type configuration bitfield:
-- bit[2*i+1:2*i]=2’b00: interrupt on falling edge for GPIO[16+i]
-- bit[2*i+1:2*i]=2’b01: interrupt on rising edge for GPIO[16+i]
-- bit[2*i+1:2*i]=2’b10: interrupt on rising and falling edge for GPIO[16+i]
-- bit[2*i+1:2*i]=2’b11: RFU</description>
+- bit[2*i+1:2*i]=2b00: interrupt on falling edge for GPIO[16+i]
+- bit[2*i+1:2*i]=2b01: interrupt on rising edge for GPIO[16+i]
+- bit[2*i+1:2*i]=2b10: interrupt on rising and falling edge for GPIO[16+i]
+- bit[2*i+1:2*i]=2b11: RFU</description>
 						<addressOffset>0x0020</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -357,10 +357,10 @@ interrupt line is also cleared when INTSTATUS register is red.</description>
 					<register>
 						<name>INTTYPE_48_63</name>
 						<description>Bit 31 - 0 INTTYPE1 (R/W) GPIO[63:48] interrupt type configuration bitfield:
-- bit[2*i+1:2*i]=2’b00: interrupt on falling edge for GPIO[16+i]
-- bit[2*i+1:2*i]=2’b01: interrupt on rising edge for GPIO[16+i]
-- bit[2*i+1:2*i]=2’b10: interrupt on rising and falling edge for GPIO[16+i]
-- bit[2*i+1:2*i]=2’b11: RFU</description>
+- bit[2*i+1:2*i]=2b00: interrupt on falling edge for GPIO[16+i]
+- bit[2*i+1:2*i]=2b01: interrupt on rising edge for GPIO[16+i]
+- bit[2*i+1:2*i]=2b10: interrupt on rising and falling edge for GPIO[16+i]
+- bit[2*i+1:2*i]=2b11: RFU</description>
 						<addressOffset>0x0058</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -376,10 +376,10 @@ interrupt line is also cleared when INTSTATUS register is red.</description>
 					<register>
 						<name>INTTYPE_32_47</name>
 						<description>Bit 31 - 0 INTTYPE0 (R/W) GPIO[47:32] interrupt type configuration bitfield:
-- bit[2*i+1:2*i]=2’b00: interrupt on falling edge for GPIO[i]
-- bit[2*i+1:2*i]=2’b01: interrupt on rising edge for GPIO[i]
-- bit[2*i+1:2*i]=2’b10: interrupt on rising and falling edge for GPIO[i]
-- bit[2*i+1:2*i]=2’b11: RFU
+- bit[2*i+1:2*i]=2b00: interrupt on falling edge for GPIO[i]
+- bit[2*i+1:2*i]=2b01: interrupt on rising edge for GPIO[i]
+- bit[2*i+1:2*i]=2b10: interrupt on rising and falling edge for GPIO[i]
+- bit[2*i+1:2*i]=2b11: RFU
 </description>
 						<addressOffset>0x0054</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -396,8 +396,8 @@ interrupt line is also cleared when INTSTATUS register is red.</description>
 					<register>
 						<name>INTEN_32_63</name>
 						<description>Bit 31 - 0 INTEN (R/W) GPIO[63:32] interrupt enable configuration bitfield:
-- bit[i]=1’b0: disable interrupt for GPIO[i]
-- bit[i]=1’b1: enable interrupt for GPIO[i]
+- bit[i]=1b0: disable interrupt for GPIO[i]
+- bit[i]=1b1: enable interrupt for GPIO[i]
 </description>
 						<addressOffset>0x0050</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -474,11 +474,11 @@ input data of GPIO[i].
 					<register>
 						<name>EN_32_63</name>
 						<description>GPIOEN (R/W) GPIO[63:32] clock enable configuration bitfield:
-- bit[i]=1’b0: disable clock for GPIO[i]
-- bit[i]=1’b1: enable clock for GPIO[i]
+- bit[i]=1b0: disable clock for GPIO[i]
+- bit[i]=1b1: enable clock for GPIO[i]
 GPIOs are gathered by groups of 4. The clock gating of one group is done only if
 all 4 GPIOs are disabled.
-Clock must be enabled for a GPIO if it’s direction is configured in input mode.</description>
+Clock must be enabled for a GPIO if its direction is configured in input mode.</description>
 						<addressOffset>0x003C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -494,8 +494,8 @@ Clock must be enabled for a GPIO if it’s direction is configured in input mode
 					<register>
 						<name>PADDIR_32_63</name>
 						<description>Bit 31 - 0 DIR (R/W) GPIO[63:32] direction configuration bitfield:
-- bit[i]=1’b0: Input mode for GPIO[i]
-- bit[i]=1’b1: Output mode for GPIO[i]</description>
+- bit[i]=1b0: Input mode for GPIO[i]
+- bit[i]=1b1: Output mode for GPIO[i]</description>
 						<addressOffset>0x0038</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -1367,6 +1367,20 @@ can be used to write 8bit in the JTAG output register for system-to-JTAG communi
 							</field>
 						</fields>
 					</register>
+					<register>
+						<name>PERIPH_CLK_DIV</name>
+						<addressOffset>0x00A8</addressOffset>
+						<resetValue>0x0000</resetValue>
+						<resetMask>0x0000</resetMask>
+						<size>32</size>
+						<access>read-write</access>
+						<fields>
+							<field>
+								<name>PERIPH_CLK_DIV</name>
+								<bitRange>[9:0]</bitRange>
+							</field>
+						</fields>
+					</register>
 				</cluster>
 				<cluster>
 					<name>EventInterruptUnit</name>
@@ -1554,11 +1568,13 @@ register</description>
 						</fields>
 					</register>
 					<register>
-						<name>FC_MASK0</name>
+						<name>FC_MASK[%s]</name>
 						<description>Events 0-31 dispatch mask
 to FC
 
 </description>
+						<dim>8</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x0004</addressOffset>
 						<resetValue>0xFFFFFFFF</resetValue>
 						<resetMask>0x00000000</resetMask>
@@ -1578,162 +1594,10 @@ Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</des
 						</fields>
 					</register>
 					<register>
-						<name>FC_MASK1</name>
-						<description>Events 32-63 dispatch mask
-to FC</description>
-						<addressOffset>0x0008</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>FC_MASK1</name>
-								<description>Event Mask to enable/disable event dispatch to FC interrupt controller.
-
-Setting bit[i] to 0b1 disables dispatching event to FC interrupt controller.
-
-Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>FC_MASK2</name>
-						<description>Events 64-95 dispatch mask
-to FC</description>
-						<addressOffset>0x000C</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>FC_MASK2</name>
-								<description>Event Mask to enable/disable event dispatch to FC interrupt controller.
-
-Setting bit[i] to 0b1 disables dispatching event to FC interrupt controller.
-
-Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</description>
-								<bitRange>[31:0]</bitRange>
-								<access>read-write</access>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>FC_MASK3</name>
-						<description>Events 96-127 dispatch
-mask to FC</description>
-						<addressOffset>0x0010</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>FC_MASK3</name>
-								<description>Event Mask to enable/disable event dispatch to FC interrupt controller.
-
-Setting bit[i] to 0b1 disables dispatching event to FC interrupt controller.
-
-Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</description>
-								<bitRange>[31:0]</bitRange>
-								<access>read-write</access>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>FC_MASK4</name>
-						<description>Events 128-159 dispatch
-mask to FC</description>
-						<addressOffset>0x0014</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>FC_MASK4</name>
-								<description>Event Mask to enable/disable event dispatch to FC interrupt controller.
-
-Setting bit[i] to 0b1 disables dispatching event to FC interrupt controller.
-
-Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</description>
-								<bitRange>[31:0]</bitRange>
-								<access>read-write</access>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>FC_MASK5</name>
-						<description>Events 160-191 dispatch
-mask to FC</description>
-						<addressOffset>0x0018</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>FC_MASK5</name>
-								<description>Event Mask to enable/disable event dispatch to FC interrupt controller.
-
-Setting bit[i] to 0b1 disables dispatching event to FC interrupt controller.
-
-Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</description>
-								<bitRange>[31:0]</bitRange>
-								<access>read-write</access>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>FC_MASK6</name>
-						<description>Events 191-223 dispatch mask to FC
-</description>
-						<addressOffset>0x001C</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>FC_MASK6</name>
-								<description>Event Mask to enable/disable event dispatch to FC interrupt controller.
-
-Setting bit[i] to 0b1 disables dispatching event to FC interrupt controller.
-
-Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</description>
-								<bitRange>[31:0]</bitRange>
-								<access>read-write</access>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>FC_MASK7</name>
-						<description>F Events 224-255 dispatch
-mask to peripherals
-</description>
-						<addressOffset>0x0020</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>FC_MASK7</name>
-								<description>Event Mask to enable/disable event dispatch to FC interrupt controller.
-
-Setting bit[i] to 0b1 disables dispatching event to FC interrupt controller.
-
-Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</description>
-								<bitRange>[31:0]</bitRange>
-								<access>read-write</access>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>PR_MASK0</name>
+						<name>PR_MASK[%s]</name>
 						<description>Events 0-31 dispatch mask to peripherals</description>
+						<dim>8</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x0044</addressOffset>
 						<resetValue>0xFFFFFFFF</resetValue>
 						<resetMask>0x00000000</resetMask>
@@ -1747,151 +1611,11 @@ Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</des
 						</fields>
 					</register>
 					<register>
-						<name>PR_MASK1</name>
-						<addressOffset>0x0048</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>PR_MASK1</name>
-								<description>Event Mask to enable/disable event dispatch to peripherals.
-
-Setting bit[i] to 0b1 disables dispatching event to peripherals.
-
-Setting bit[i] to 0b0 enables dispatching event to peripherals.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>PR_MASK2</name>
-						<description>Events 0-31 dispatch mask to peripheralsEvents 64-95 dispatch mask to peripherals</description>
-						<addressOffset>0x004C</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>PR_MASK2</name>
-								<description>Event Mask to enable/disable event dispatch to peripherals.
-
-Setting bit[i] to 0b1 disables dispatching event to peripherals.
-
-Setting bit[i] to 0b0 enables dispatching event to peripherals.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>PR_MASK3</name>
-						<description>Events 96-127 dispatch mask to peripherals
-</description>
-						<addressOffset>0x0050</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>PR_MASK3</name>
-								<description>Event Mask to enable/disable event dispatch to peripherals.
-
-Setting bit[i] to 0b1 disables dispatching event to peripherals.
-
-Setting bit[i] to 0b0 enables dispatching event to peripherals.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>PR_MASK4</name>
-						<description>Events 128-159 dispatch mask to peripheral</description>
-						<addressOffset>0x0054</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>PR_MASK4</name>
-								<description>Event Mask to enable/disable event dispatch to peripherals.
-
-Setting bit[i] to 0b1 disables dispatching event to peripherals.
-
-Setting bit[i] to 0b0 enables dispatching event to peripherals.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>PR_MASK5</name>
-						<description>Events 160-191 dispatch
-mask to peripherals</description>
-						<addressOffset>0x0058</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>PR_MASK5</name>
-								<description>Event Mask to enable/disable event dispatch to peripherals.
-
-Setting bit[i] to 0b1 disables dispatching event to peripherals.
-
-Setting bit[i] to 0b0 enables dispatching event to peripherals.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>PR_MASK6</name>
-						<description>Events 191-223 dispatch mask to peripherals</description>
-						<addressOffset>0x005C</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>PR_MASK6</name>
-								<description>Event Mask to enable/disable event dispatch to peripherals.
-
-Setting bit[i] to 0b1 disables dispatching event to peripherals.
-
-Setting bit[i] to 0b0 enables dispatching event to peripherals.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>PR_MASK7</name>
-						<description>Events 224-255 dispatch mask to peripherals
-</description>
-						<addressOffset>0x0060</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>PR_MASK7</name>
-								<description>Event Mask to enable/disable event dispatch to peripherals.
-
-Setting bit[i] to 0b1 disables dispatching event to peripherals.
-
-Setting bit[i] to 0b0 enables dispatching event to peripherals.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR0</name>
+						<name>ERR[%s]</name>
 						<description>Events 0-31 event queue
 overflow</description>
+						<dim>8</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x0064</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -1905,148 +1629,6 @@ overflow</description>
 Reading 0b1 at ERR[i] means the
 event queue of event with id i overflowed.
 </description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR1</name>
-						<description>Events 32-63 event queue
-overflow</description>
-						<addressOffset>0x0068</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-only</access>
-						<fields>
-							<field>
-								<name>ERR1</name>
-								<description>Event queue overflow. Clear after read. 
-
-Reading 0b1 at ERR[i] means the
-event queue of event with id i overflowed.
-</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR2</name>
-						<description>Events 64-95 event queue
-overflow</description>
-						<addressOffset>0x006C</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-only</access>
-						<fields>
-							<field>
-								<name>ERR02</name>
-								<description>Event queue overflow. Clear after read. 
-
-Reading 0b1 at ERR[i] means the
-event queue of event with id i overflowed.
-</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR3</name>
-						<description>Events 96-127 event queue
-overflow</description>
-						<addressOffset>0x0070</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-only</access>
-						<fields>
-							<field>
-								<name>ERR3</name>
-								<description>Event queue overflow. Clear after read. 
-
-Reading 0b1 at ERR[i] means the
-event queue of event with id i overflowed.
-</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR4</name>
-						<description>Events 128-159 event queue
-overflow</description>
-						<addressOffset>0x0074</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-only</access>
-						<fields>
-							<field>
-								<name>ERR4</name>
-								<description>Event queue overflow. Clear after read. 
-
-Reading 0b1 at ERR[i] means the
-event queue of event with id i overflowed.
-</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR5</name>
-						<description>Events 160-191 event queue
-overflow</description>
-						<addressOffset>0x0078</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-only</access>
-						<fields>
-							<field>
-								<name>ERR5</name>
-								<description>Event queue overflow. Clear after read. 
-
-Reading 0b1 at ERR[i] means the
-event queue of event with id i overflowed.
-</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR6</name>
-						<description>Events 191-223 event queue
-overflow</description>
-						<addressOffset>0x007C</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-only</access>
-						<fields>
-							<field>
-								<name>ERR6</name>
-								<description>Event queue overflow. Clear after read. 
-
-Reading 0b1 at ERR[i] means the
-event queue of event with id i overflowed.
-</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR7</name>
-						<description>Events 224-255 event queue overflow
-</description>
-						<addressOffset>0x0080</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-only</access>
-						<fields>
-							<field>
-								<name>ERR7</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
@@ -2466,8 +2048,10 @@ counter value</description>
 						</fields>
 					</register>
 					<register>
-						<name>T0_TH_CHANNEL0</name>
+						<name>T0_TH_CHANNEL[%s]</name>
 						<description>ADV_TIMER0 channel 0 threshold configuration register</description>
+						<dim>4</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x000C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -2519,183 +2103,6 @@ configuration bitfield:
 									<enumeratedValue>
 										<name>TOGGLE</name>
 										<value>3</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T0_TH_CHANNEL1</name>
-						<description>ADV_TIMER0 channel 1 threshold configuration register</description>
-						<addressOffset>0x0010</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER0 channel 1 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER0 channel 1 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T0_TH_CHANNEL2</name>
-						<description>ADV_TIMER0 channel 2 threshold configuration register</description>
-						<addressOffset>0x0014</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER0 channel 2 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER0 channel 2 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T0_TH_CHANNEL3</name>
-						<description>ADV_TIMER0 channel 3 threshold configuration register</description>
-						<addressOffset>0x0018</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER0 channel 3 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER0 channel 3 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
 									</enumeratedValue>
 								</enumeratedValues>
 							</field>
@@ -2835,8 +2242,10 @@ counter value</description>
 						</fields>
 					</register>
 					<register>
-						<name>T1_TH_CHANNEL0</name>
+						<name>T1_TH_CHANNEL[%s]</name>
 						<description>ADV_TIMER1 channel 0 threshold configuration register</description>
+						<dim>4</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x004C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -2851,183 +2260,6 @@ counter value</description>
 							<field>
 								<name>MODE</name>
 								<description>ADV_TIMER1 channel 0 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T1_TH_CHANNEL1</name>
-						<description>ADV_TIMER1 channel 1 threshold configuration register</description>
-						<addressOffset>0x0050</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER1 channel 1 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER1 channel 1 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T1_TH_CHANNEL2</name>
-						<description>ADV_TIMER1 channel 2 threshold configuration register</description>
-						<addressOffset>0x0054</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER2 channel 1 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER2 channel 1 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T1_TH_CHANNEL3</name>
-						<description>ADV_TIMER1 channel 3 threshold configuration register</description>
-						<addressOffset>0x0058</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER1 channel 3 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER1 channel 3 threshold match action on channel output signal
 configuration bitfield:
 - 3'h0: set.
 - 3'h1: toggle then next threshold match action is clear.
@@ -3204,8 +2436,10 @@ counter value</description>
 						</fields>
 					</register>
 					<register>
-						<name>T2_TH_CHANNEL0</name>
+						<name>T2_TH_CHANNEL[%s]</name>
 						<description>ADV_TIMER2 channel 0 threshold configuration register</description>
+						<dim>4</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x008C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -3220,183 +2454,6 @@ counter value</description>
 							<field>
 								<name>MODE</name>
 								<description>ADV_TIMER2 channel 0 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T2_TH_CHANNEL1</name>
-						<description>ADV_TIMER2 channel 1 threshold configuration register</description>
-						<addressOffset>0x0090</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER2 channel 1 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER2 channel 1 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T2_TH_CHANNEL2</name>
-						<description>ADV_TIMER2 channel 2 threshold configuration register</description>
-						<addressOffset>0x0094</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER2 channel 2 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER2 channel 2 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T2_TH_CHANNEL3</name>
-						<description>ADV_TIMER2 channel 3 threshold configuration register</description>
-						<addressOffset>0x0098</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER2 channel 3 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER2 channel 3 threshold match action on channel output signal
 configuration bitfield:
 - 3'h0: set.
 - 3'h1: toggle then next threshold match action is clear.
@@ -3573,8 +2630,10 @@ counter value</description>
 						</fields>
 					</register>
 					<register>
-						<name>T3_TH_CHANNEL0</name>
+						<name>T3_TH_CHANNEL[%s]</name>
 						<description>ADV_TIMER3 channel 0 threshold configuration register</description>
+						<dim>4</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x00CC</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -3589,183 +2648,6 @@ counter value</description>
 							<field>
 								<name>MODE</name>
 								<description>ADV_TIMER3 channel 0 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T3_TH_CHANNEL1</name>
-						<description>ADV_TIMER3 channel 1 threshold configuration register</description>
-						<addressOffset>0x00D0</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER3 channel 1 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER3 channel 1 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T3_TH_CHANNEL2</name>
-						<description>ADV_TIMER3 channel 2 threshold configuration register</description>
-						<addressOffset>0x00D4</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER3 channel 2 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER3 channel 2 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T3_TH_CHANNEL3</name>
-						<description>ADV_TIMER3 channel 3 threshold configuration register</description>
-						<addressOffset>0x00D8</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER3 channel 3 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER3 channel 3 threshold match action on channel output signal
 configuration bitfield:
 - 3'h0: set.
 - 3'h1: toggle then next threshold match action is clear.
@@ -6582,7 +5464,7 @@ count register</description>
 						</fields>
 					</register>
 					<register>
-						<name>STATUS</name>
+						<name>FILT_STATUS</name>
 						<description>FILTER status register</description>
 						<addressOffset>0x0460</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -9215,7 +8097,7 @@ Bit 3: Enable breakpoint 2</description>
 					</register>
 					<register>
 						<name>D_DATAIN_SIZE_0</name>
-						<description>Input cube’s width and height</description>
+						<description>Input cubes width and height</description>
 						<addressOffset>0x001C</addressOffset>
 						<resetValue>0x00000000</resetValue>
 						<resetMask>0xFFF80000</resetMask>
@@ -9236,7 +8118,7 @@ Bit 3: Enable breakpoint 2</description>
 					</register>
 					<register>
 						<name>D_DATAIN_SIZE_1</name>
-						<description>Input cube’s channel</description>
+						<description>Input cubes channel</description>
 						<addressOffset>0x0020</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x1FFF</resetMask>
@@ -9252,7 +8134,7 @@ Bit 3: Enable breakpoint 2</description>
 					</register>
 					<register>
 						<name>D_DATAIN_SIZE_EXT_0</name>
-						<description>Input cube’s width and height after extension</description>
+						<description>Input cubes width and height after extension</description>
 						<addressOffset>0x0024</addressOffset>
 						<resetValue>0x00000000</resetValue>
 						<resetMask>0xFFF80000</resetMask>
@@ -9400,7 +8282,7 @@ Bit 3: Enable breakpoint 2</description>
 					</register>
 					<register>
 						<name>D_LINE_UV_STRIDE</name>
-						<description>Line stride of input cube’s UV plane</description>
+						<description>Line stride of input cubes UV plane</description>
 						<addressOffset>0x0044</addressOffset>
 						<resetValue>0x00000000</resetValue>
 						<resetMask>0xFFFFFFFF</resetMask>
@@ -10427,7 +9309,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_DATAIN_SIZE_EXT_0</name>
-						<description>Input cube’s width and height after extension</description>
+						<description>Input cubes width and height after extension</description>
 						<addressOffset>0x0014</addressOffset>
 						<resetValue>0x00000000</resetValue>
 						<resetMask>0xFFF80000</resetMask>
@@ -10448,7 +9330,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_DATAIN_SIZE_EXT_1</name>
-						<description>Input cube’s channel after extension</description>
+						<description>Input cubes channel after extension</description>
 						<addressOffset>0x0018</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x1FFF</resetMask>
@@ -10538,7 +9420,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_WEIGHT_SIZE_EXT_0</name>
-						<description>Weight’s width and height after extension</description>
+						<description>Weights width and height after extension</description>
 						<addressOffset>0x002C</addressOffset>
 						<resetValue>0x00000000</resetValue>
 						<resetMask>0xF8000000</resetMask>
@@ -10559,7 +9441,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_WEIGHT_SIZE_EXT_1</name>
-						<description>Weight’s channel after extension and number of weight kernels</description>
+						<description>Weights channel after extension and number of weight kernels</description>
 						<addressOffset>0x0030</addressOffset>
 						<resetValue>0x00000000</resetValue>
 						<resetMask>0xFFF80000</resetMask>
@@ -10612,7 +9494,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_DATAOUT_SIZE_0</name>
-						<description>Output cube’s width and height</description>
+						<description>Output cubes width and height</description>
 						<addressOffset>0x003C</addressOffset>
 						<resetValue>0x00000000</resetValue>
 						<resetMask>0xFFF80000</resetMask>
@@ -10633,7 +9515,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_DATAOUT_SIZE_1</name>
-						<description>Output cube’s channel</description>
+						<description>Output cubes channel</description>
 						<addressOffset>0x0040</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x1FFF</resetMask>
@@ -11300,7 +10182,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_DATAOUT_SIZE_0</name>
-						<description>Input cube’s width and height after extension</description>
+						<description>Input cubes width and height after extension</description>
 						<addressOffset>0x0010</addressOffset>
 						<resetValue>0x00000000</resetValue>
 						<resetMask>0xFFF80000</resetMask>
@@ -11321,7 +10203,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_DATAOUT_SIZE_1</name>
-						<description>Input cube’s channel after extension</description>
+						<description>Input cubes channel after extension</description>
 						<addressOffset>0x0014</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x1FFF</resetMask>
@@ -12620,7 +11502,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>S_LUT_CFG</name>
-						<description>LUT’s type: exponent or linear. And the selection between LE and LO tables.</description>
+						<description>LUTs type: exponent or linear. And the selection between LE and LO tables.</description>
 						<addressOffset>0x0010</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0071</resetMask>
@@ -12717,7 +11599,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>S_LUT_LE_START</name>
-						<description>Start of LE LUT’s range</description>
+						<description>Start of LE LUTs range</description>
 						<addressOffset>0x0018</addressOffset>
 						<resetValue>0x00000000</resetValue>
 						<resetMask>0xFFFFFFFF</resetMask>
@@ -12733,7 +11615,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>S_LUT_LE_END</name>
-						<description>End of LE LUT’s range</description>
+						<description>End of LE LUTs range</description>
 						<addressOffset>0x001C</addressOffset>
 						<resetValue>0x00000000</resetValue>
 						<resetMask>0xFFFFFFFF</resetMask>
@@ -12749,7 +11631,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>S_LUT_LO_START</name>
-						<description>Start of LO LUT’s range</description>
+						<description>Start of LO LUTs range</description>
 						<addressOffset>0x0020</addressOffset>
 						<resetValue>0x00000000</resetValue>
 						<resetMask>0xFFFFFFFF</resetMask>
@@ -12765,7 +11647,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>S_LUT_LO_END</name>
-						<description>End of LO LUT’s range</description>
+						<description>End of LO LUTs range</description>
 						<addressOffset>0x0024</addressOffset>
 						<resetValue>0x00000000</resetValue>
 						<resetMask>0xFFFFFFFF</resetMask>
@@ -12891,7 +11773,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_DATA_CUBE_WIDTH</name>
-						<description>Input cube’s width</description>
+						<description>Input cubes width</description>
 						<addressOffset>0x003C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x1FFF</resetMask>
@@ -12907,7 +11789,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_DATA_CUBE_HEIGHT</name>
-						<description>Input cube’s height</description>
+						<description>Input cubes height</description>
 						<addressOffset>0x0040</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x1FFF</resetMask>
@@ -12923,7 +11805,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_DATA_CUBE_CHANNEL</name>
-						<description>Input cube’s channel</description>
+						<description>Input cubes channel</description>
 						<addressOffset>0x0044</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x1FFF</resetMask>
@@ -14783,7 +13665,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_DATA_CUBE_IN_WIDTH</name>
-						<description>Input data cube’s width</description>
+						<description>Input data cubes width</description>
 						<addressOffset>0x000C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x1FFF</resetMask>
@@ -14799,7 +13681,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_DATA_CUBE_IN_HEIGHT</name>
-						<description>Input data cube’s height</description>
+						<description>Input data cubes height</description>
 						<addressOffset>0x0010</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x1FFF</resetMask>
@@ -14815,7 +13697,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_DATA_CUBE_IN_CHANNEL</name>
-						<description>Input data cube’s channel</description>
+						<description>Input data cubes channel</description>
 						<addressOffset>0x0014</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x1FFF</resetMask>
@@ -14831,7 +13713,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_DATA_CUBE_OUT_WIDTH</name>
-						<description>Output data cube’s width</description>
+						<description>Output data cubes width</description>
 						<addressOffset>0x0018</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x1FFF</resetMask>
@@ -14847,7 +13729,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_DATA_CUBE_OUT_HEIGHT</name>
-						<description>Output data cube’s height</description>
+						<description>Output data cubes height</description>
 						<addressOffset>0x001C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x1FFF</resetMask>
@@ -14863,7 +13745,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 					</register>
 					<register>
 						<name>D_DATA_CUBE_OUT_CHANNEL</name>
-						<description>Output data cube’s channel</description>
+						<description>Output data cubes channel</description>
 						<addressOffset>0x0020</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x1FFF</resetMask>
@@ -17726,7 +16608,7 @@ Global mean value for alpha in ARGB/AYUV or X in XRGB</description>
 						<addressOffset>0x0020</addressOffset>
 						<resetValue>0x0200</resetValue>
 						<resetMask>0x0000</resetMask>
-						<size>10</size>
+						<size>16</size>
 						<access>read-write</access>
 						<fields>
 							<field>
@@ -17758,7 +16640,7 @@ Pull up 1</description>
 						<addressOffset>0x0024</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
-						<size>10</size>
+						<size>16</size>
 						<access>read-write</access>
 						<fields>
 							<field>
@@ -17788,9 +16670,9 @@ Pull up 1</description>
 					<register>
 						<name>c2c_tx_d</name>
 						<addressOffset>0x0028</addressOffset>
-						<resetValue>0x0200</resetValue>
+						<resetValue>0x8008</resetValue>
 						<resetMask>0x0000</resetMask>
-						<size>10</size>
+						<size>16</size>
 						<access>read-write</access>
 						<fields>
 							<field>
@@ -17822,7 +16704,7 @@ Pull up 1</description>
 						<addressOffset>0x002C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
-						<size>10</size>
+						<size>16</size>
 						<access>read-write</access>
 						<fields>
 							<field>
@@ -17852,9 +16734,9 @@ Pull up 1</description>
 					<register>
 						<name>c2c_rx_vld</name>
 						<addressOffset>0x0030</addressOffset>
-						<resetValue>0x0200</resetValue>
+						<resetValue>0x8008</resetValue>
 						<resetMask>0x0000</resetMask>
-						<size>10</size>
+						<size>16</size>
 						<access>read-write</access>
 						<fields>
 							<field>
@@ -17886,7 +16768,7 @@ Pull up 1</description>
 						<addressOffset>0x0034</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
-						<size>10</size>
+						<size>16</size>
 						<access>read-write</access>
 						<fields>
 							<field>
@@ -17918,7 +16800,7 @@ Pull up 1</description>
 						<addressOffset>0x0040</addressOffset>
 						<resetValue>0x000F</resetValue>
 						<resetMask>0x0000</resetMask>
-						<size>4</size>
+						<size>8</size>
 						<access>read-write</access>
 						<fields>
 							<field>
@@ -17934,9 +16816,9 @@ Pull up 1</description>
 					<register>
 						<name>rst_mstr</name>
 						<addressOffset>0x0038</addressOffset>
-						<resetValue>0x0200</resetValue>
+						<resetValue>0x8008</resetValue>
 						<resetMask>0x0000</resetMask>
-						<size>10</size>
+						<size>16</size>
 						<access>read-write</access>
 						<fields>
 							<field>
@@ -17968,9 +16850,9 @@ Pull up 1</description>
 					<register>
 						<name>rst_slv</name>
 						<addressOffset>0x003C</addressOffset>
-						<resetValue>0x0200</resetValue>
+						<resetValue>0x8008</resetValue>
 						<resetMask>0x0000</resetMask>
-						<size>10</size>
+						<size>16</size>
 						<access>read-write</access>
 						<fields>
 							<field>
@@ -18168,8 +17050,10 @@ Pull up 1</description>
 						</fields>
 					</register>
 					<register>
-						<name>mtimecmp_0</name>
+						<name>mtimecmp[%s]</name>
 						<description>Machine mode timer compare register for Hart 0</description>
+						<dim>2</dim>
+						<dimIncrement>8</dimIncrement>
 						<addressOffset>0x4000</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -18193,21 +17077,6 @@ Pull up 1</description>
 						<fields>
 							<field>
 								<name>mtime</name>
-								<bitRange>[63:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>mtimecmp_1</name>
-						<description>Machine mode timer compare register for Hart 0</description>
-						<addressOffset>0x4008</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>64</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>mtimecmp</name>
 								<bitRange>[63:0]</bitRange>
 							</field>
 						</fields>
@@ -19322,7 +18191,9 @@ Pull up 1</description>
 					<name>PLIC</name>
 					<addressOffset>0x01000000</addressOffset>
 					<register>
-						<name>timer_0_int_priority_0</name>
+						<name>timer_0_int_priority[%s]</name>
+						<dim>2</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x0004</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -19330,27 +18201,15 @@ Pull up 1</description>
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>timer_0_int_priority_0</name>
+								<name>timer_0_int_priority</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>timer_0_int_priority_1</name>
-						<addressOffset>0x0008</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>timer_0_int_priority_1</name>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>timer_1_int_priority_0</name>
+						<name>timer_1_int_priority[%s]</name>
+						<dim>2</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x000C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -19358,27 +18217,15 @@ Pull up 1</description>
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>timer_1_int_priority_0</name>
+								<name>timer_1_int_priority</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>timer_1_int_priority_1</name>
-						<addressOffset>0x0010</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>timer_1_int_priority_1</name>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>external_0_int_priority_0</name>
+						<name>external_0_int_priority[%s]</name>
+						<dim>2</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x0014</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -19386,27 +18233,15 @@ Pull up 1</description>
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>external_0_int_priority_0</name>
+								<name>external_0_int_priority</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>external_0_int_priority_1</name>
-						<addressOffset>0x0018</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>external_0_int_priority_1</name>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>enable_context_0</name>
+						<name>enable_context[%s]</name>
+						<dim>4</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x2000</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -19440,109 +18275,9 @@ Pull up 1</description>
 						</fields>
 					</register>
 					<register>
-						<name>enable_context_1</name>
-						<addressOffset>0x2080</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>timer0_int0_enable</name>
-								<bitRange>[0:0]</bitRange>
-							</field>
-							<field>
-								<name>timer0_int1_enable</name>
-								<bitRange>[1:1]</bitRange>
-							</field>
-							<field>
-								<name>timer1_int0_enable</name>
-								<bitRange>[2:2]</bitRange>
-							</field>
-							<field>
-								<name>timer1_int1_enable</name>
-								<bitRange>[3:3]</bitRange>
-							</field>
-							<field>
-								<name>external_int0_enable</name>
-								<bitRange>[4:4]</bitRange>
-							</field>
-							<field>
-								<name>external_int1_enable</name>
-								<bitRange>[5:5]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>enable_context_2</name>
-						<addressOffset>0x2100</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>timer0_int0_enable</name>
-								<bitRange>[0:0]</bitRange>
-							</field>
-							<field>
-								<name>timer0_int1_enable</name>
-								<bitRange>[1:1]</bitRange>
-							</field>
-							<field>
-								<name>timer1_int0_enable</name>
-								<bitRange>[2:2]</bitRange>
-							</field>
-							<field>
-								<name>timer1_int1_enable</name>
-								<bitRange>[3:3]</bitRange>
-							</field>
-							<field>
-								<name>external_int0_enable</name>
-								<bitRange>[4:4]</bitRange>
-							</field>
-							<field>
-								<name>external_int1_enable</name>
-								<bitRange>[5:5]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>enable_context_3</name>
-						<addressOffset>0x2180</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>timer0_int0_enable</name>
-								<bitRange>[0:0]</bitRange>
-							</field>
-							<field>
-								<name>timer0_int1_enable</name>
-								<bitRange>[1:1]</bitRange>
-							</field>
-							<field>
-								<name>timer1_int0_enable</name>
-								<bitRange>[2:2]</bitRange>
-							</field>
-							<field>
-								<name>timer1_int1_enable</name>
-								<bitRange>[3:3]</bitRange>
-							</field>
-							<field>
-								<name>external_int0_enable</name>
-								<bitRange>[4:4]</bitRange>
-							</field>
-							<field>
-								<name>external_int1_enable</name>
-								<bitRange>[5:5]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>priority_threshold_context_0</name>
+						<name>priority_threshold_context[%s]</name>
+						<dim>4</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x00200000</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -19550,101 +18285,22 @@ Pull up 1</description>
 						<access>read-write</access>
 						<fields>
 							<field>
-								<name>priority_threshold_context_0</name>
+								<name>priority_threshold_context</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
 					<register>
-						<name>priority_threshold_context_1</name>
-						<addressOffset>0x00201000</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>priority_threshold_context_0</name>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>priority_threshold_context_2</name>
-						<addressOffset>0x00202000</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>priority_threshold_context_0</name>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>priority_threshold_context_3</name>
-						<addressOffset>0x00203000</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>priority_threshold_context_0</name>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>claim_complete_context_0</name>
-						<addressOffset>0x00200004</addressOffset>
+						<name>claim_complete_context[%s]</name>
+						<dim>4</dim>
+						<dimIncrement>4</dimIncrement>
+						<addressOffset>0x00200010</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
 						<size>32</size>
 						<fields>
 							<field>
-								<name>claim_complete_context_0</name>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>claim_complete_context_1</name>
-						<addressOffset>0x00201004</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<fields>
-							<field>
-								<name>claim_complete_context_0</name>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>claim_complete_context_2</name>
-						<addressOffset>0x00202004</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<fields>
-							<field>
-								<name>claim_complete_context_0</name>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>claim_complete_context_3</name>
-						<addressOffset>0x00203004</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<fields>
-							<field>
-								<name>claim_complete_context_0</name>
+								<name>claim_complete_context</name>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
@@ -19753,8 +18409,8 @@ Pull up 1</description>
 					<register>
 						<name>DIR</name>
 						<description>GPIO direction configuration bitfield:
-- bit[i]=1’b0: Input mode for GPIO[i]
-- bit[i]=1’b1: Output mode for GPIO[i]
+- bit[i]=1b0: Input mode for GPIO[i]
+- bit[i]=1b1: Output mode for GPIO[i]
 </description>
 						<addressOffset>0x0000</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -19772,11 +18428,11 @@ Pull up 1</description>
 						<name>EN</name>
 						<description>GPIO clock enable config register.
 Bit 31 - 0 GPIOEN (R/W) GPIO[31:0] clock enable configuration bitfield:
-- bit[i]=1’b0: disable clock for GPIO[i]
-- bit[i]=1’b1: enable clock for GPIO[i]
+- bit[i]=1b0: disable clock for GPIO[i]
+- bit[i]=1b1: enable clock for GPIO[i]
 GPIOs are gathered by groups of 4. The clock gating of one group is done only if
 all 4 GPIOs are disabled.
-Clock must be enabled for a GPIO if it’s direction is configured in input mode.</description>
+Clock must be enabled for a GPIO if its direction is configured in input mode.</description>
 						<addressOffset>0x0004</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -20046,7 +18702,7 @@ register</description>
 - Read: returns value of the buffer pointer until transfer is finished. Else returns 0.
 - Write: sets RX buffer base address
 </description>
-								<bitRange>[15:0]</bitRange>
+								<bitRange>[31:0]</bitRange>
 								<access>read-write</access>
 							</field>
 						</fields>
@@ -21269,7 +19925,7 @@ count register</description>
 						</fields>
 					</register>
 					<register>
-						<name>STATUS</name>
+						<name>FILT_STATUS</name>
 						<description>FILTER status register</description>
 						<addressOffset>0x0460</addressOffset>
 						<resetValue>0x0000</resetValue>
@@ -21517,8 +20173,10 @@ counter value</description>
 						</fields>
 					</register>
 					<register>
-						<name>T0_TH_CHANNEL0</name>
+						<name>T0_TH_CHANNEL[%s]</name>
 						<description>ADV_TIMER0 channel 0 threshold configuration register</description>
+						<dim>4</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x000C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -21570,183 +20228,6 @@ configuration bitfield:
 									<enumeratedValue>
 										<name>CLEAR_SET_NEXT</name>
 										<value>6</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T0_TH_CHANNEL1</name>
-						<description>ADV_TIMER0 channel 1 threshold configuration register</description>
-						<addressOffset>0x0010</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER0 channel 1 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER0 channel 1 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T0_TH_CHANNEL2</name>
-						<description>ADV_TIMER0 channel 2 threshold configuration register</description>
-						<addressOffset>0x0014</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER0 channel 2 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER0 channel 2 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T0_TH_CHANNEL3</name>
-						<description>ADV_TIMER0 channel 3 threshold configuration register</description>
-						<addressOffset>0x0018</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER0 channel 3 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER0 channel 3 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
 									</enumeratedValue>
 								</enumeratedValues>
 							</field>
@@ -21886,8 +20367,10 @@ counter value</description>
 						</fields>
 					</register>
 					<register>
-						<name>T1_TH_CHANNEL0</name>
+						<name>T1_TH_CHANNEL[%s]</name>
 						<description>ADV_TIMER1 channel 0 threshold configuration register</description>
+						<dim>4</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x004C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -21902,183 +20385,6 @@ counter value</description>
 							<field>
 								<name>MODE</name>
 								<description>ADV_TIMER1 channel 0 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T1_TH_CHANNEL1</name>
-						<description>ADV_TIMER1 channel 1 threshold configuration register</description>
-						<addressOffset>0x0050</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER1 channel 1 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER1 channel 1 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T1_TH_CHANNEL2</name>
-						<description>ADV_TIMER1 channel 2 threshold configuration register</description>
-						<addressOffset>0x0054</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER2 channel 1 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER2 channel 1 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T1_TH_CHANNEL3</name>
-						<description>ADV_TIMER1 channel 3 threshold configuration register</description>
-						<addressOffset>0x0058</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER1 channel 3 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER1 channel 3 threshold match action on channel output signal
 configuration bitfield:
 - 3'h0: set.
 - 3'h1: toggle then next threshold match action is clear.
@@ -22255,8 +20561,10 @@ counter value</description>
 						</fields>
 					</register>
 					<register>
-						<name>T2_TH_CHANNEL0</name>
+						<name>T2_TH_CHANNEL[%s]</name>
 						<description>ADV_TIMER2 channel 0 threshold configuration register</description>
+						<dim>4</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x008C</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -22271,183 +20579,6 @@ counter value</description>
 							<field>
 								<name>MODE</name>
 								<description>ADV_TIMER2 channel 0 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T2_TH_CHANNEL1</name>
-						<description>ADV_TIMER2 channel 1 threshold configuration register</description>
-						<addressOffset>0x0090</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER2 channel 1 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER2 channel 1 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T2_TH_CHANNEL2</name>
-						<description>ADV_TIMER2 channel 2 threshold configuration register</description>
-						<addressOffset>0x0094</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER2 channel 2 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER2 channel 2 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T2_TH_CHANNEL3</name>
-						<description>ADV_TIMER2 channel 3 threshold configuration register</description>
-						<addressOffset>0x0098</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER2 channel 3 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER2 channel 3 threshold match action on channel output signal
 configuration bitfield:
 - 3'h0: set.
 - 3'h1: toggle then next threshold match action is clear.
@@ -22624,8 +20755,10 @@ counter value</description>
 						</fields>
 					</register>
 					<register>
-						<name>T3_TH_CHANNEL0</name>
+						<name>T3_TH_CHANNEL[%s]</name>
 						<description>ADV_TIMER3 channel 0 threshold configuration register</description>
+						<dim>4</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x00CC</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -22640,183 +20773,6 @@ counter value</description>
 							<field>
 								<name>MODE</name>
 								<description>ADV_TIMER3 channel 0 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T3_TH_CHANNEL1</name>
-						<description>ADV_TIMER3 channel 1 threshold configuration register</description>
-						<addressOffset>0x00D0</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER3 channel 1 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER3 channel 1 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T3_TH_CHANNEL2</name>
-						<description>ADV_TIMER3 channel 2 threshold configuration register</description>
-						<addressOffset>0x00D4</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER3 channel 2 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER3 channel 2 threshold match action on channel output signal
-configuration bitfield:
-- 3'h0: set.
-- 3'h1: toggle then next threshold match action is clear.
-- 3'h2: set then next threshold match action is clear.
-- 3'h3: toggle.
-- 3'h4: clear.
-- 3'h5: toggle then next threshold match action is set.
-- 3'h6: clear then next threshold match action is set.</description>
-								<bitRange>[18:16]</bitRange>
-								<enumeratedValues>
-									<enumeratedValue>
-										<name>TOGGLE_SET_NEXT</name>
-										<value>5</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE_CLEAR_NEXT</name>
-										<value>1</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>TOGGLE</name>
-										<value>3</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET_CLEAR_NEXT</name>
-										<value>2</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>SET</name>
-										<value>0</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR_SET_NEXT</name>
-										<value>6</value>
-									</enumeratedValue>
-									<enumeratedValue>
-										<name>CLEAR</name>
-										<value>4</value>
-									</enumeratedValue>
-								</enumeratedValues>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>T3_TH_CHANNEL3</name>
-						<description>ADV_TIMER3 channel 3 threshold configuration register</description>
-						<addressOffset>0x00D8</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>TH</name>
-								<description>ADV_TIMER3 channel 3 threshold configuration bitfield</description>
-								<bitRange>[15:0]</bitRange>
-							</field>
-							<field>
-								<name>MODE</name>
-								<description>ADV_TIMER3 channel 3 threshold match action on channel output signal
 configuration bitfield:
 - 3'h0: set.
 - 3'h1: toggle then next threshold match action is clear.
@@ -22932,11 +20888,13 @@ register</description>
 						</fields>
 					</register>
 					<register>
-						<name>FC_MASK0</name>
+						<name>FC_MASK[%s]</name>
 						<description>Events 0-31 dispatch mask
 to FC
 
 </description>
+						<dim>8</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x0004</addressOffset>
 						<resetValue>0xFFFFFFFF</resetValue>
 						<resetMask>0x00000000</resetMask>
@@ -22956,305 +20914,11 @@ Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</des
 						</fields>
 					</register>
 					<register>
-						<name>FC_MASK1</name>
-						<description>Events 32-63 dispatch mask
-to FC</description>
-						<addressOffset>0x0008</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>FC_MASK1</name>
-								<description>Event Mask to enable/disable event dispatch to FC interrupt controller.
-
-Setting bit[i] to 0b1 disables dispatching event to FC interrupt controller.
-
-Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>FC_MASK2</name>
-						<description>Events 64-95 dispatch mask
-to FC</description>
-						<addressOffset>0x000C</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>FC_MASK2</name>
-								<description>Event Mask to enable/disable event dispatch to FC interrupt controller.
-
-Setting bit[i] to 0b1 disables dispatching event to FC interrupt controller.
-
-Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</description>
-								<bitRange>[31:0]</bitRange>
-								<access>read-write</access>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>FC_MASK3</name>
-						<description>Events 96-127 dispatch
-mask to FC</description>
-						<addressOffset>0x0010</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>FC_MASK3</name>
-								<description>Event Mask to enable/disable event dispatch to FC interrupt controller.
-
-Setting bit[i] to 0b1 disables dispatching event to FC interrupt controller.
-
-Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</description>
-								<bitRange>[31:0]</bitRange>
-								<access>read-write</access>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>FC_MASK4</name>
-						<description>Events 128-159 dispatch
-mask to FC</description>
-						<addressOffset>0x0014</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>FC_MASK4</name>
-								<description>Event Mask to enable/disable event dispatch to FC interrupt controller.
-
-Setting bit[i] to 0b1 disables dispatching event to FC interrupt controller.
-
-Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</description>
-								<bitRange>[31:0]</bitRange>
-								<access>read-write</access>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>FC_MASK5</name>
-						<description>Events 160-191 dispatch
-mask to FC</description>
-						<addressOffset>0x0018</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>FC_MASK5</name>
-								<description>Event Mask to enable/disable event dispatch to FC interrupt controller.
-
-Setting bit[i] to 0b1 disables dispatching event to FC interrupt controller.
-
-Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</description>
-								<bitRange>[31:0]</bitRange>
-								<access>read-write</access>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>FC_MASK6</name>
-						<description>Events 191-223 dispatch mask to FC
-</description>
-						<addressOffset>0x001C</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>FC_MASK6</name>
-								<description>Event Mask to enable/disable event dispatch to FC interrupt controller.
-
-Setting bit[i] to 0b1 disables dispatching event to FC interrupt controller.
-
-Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</description>
-								<bitRange>[31:0]</bitRange>
-								<access>read-write</access>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>FC_MASK7</name>
-						<description>F Events 224-255 dispatch
-mask to peripherals
-</description>
-						<addressOffset>0x0020</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>FC_MASK7</name>
-								<description>Event Mask to enable/disable event dispatch to FC interrupt controller.
-
-Setting bit[i] to 0b1 disables dispatching event to FC interrupt controller.
-
-Setting bit[i] to 0b0 enables dispatching event to FC interrupt controller.</description>
-								<bitRange>[31:0]</bitRange>
-								<access>read-write</access>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>PR_MASK1</name>
-						<addressOffset>0x0048</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>PR_MASK1</name>
-								<description>Event Mask to enable/disable event dispatch to peripherals.
-
-Setting bit[i] to 0b1 disables dispatching event to peripherals.
-
-Setting bit[i] to 0b0 enables dispatching event to peripherals.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>PR_MASK2</name>
-						<description>Events 0-31 dispatch mask to peripheralsEvents 64-95 dispatch mask to peripherals</description>
-						<addressOffset>0x004C</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>PR_MASK2</name>
-								<description>Event Mask to enable/disable event dispatch to peripherals.
-
-Setting bit[i] to 0b1 disables dispatching event to peripherals.
-
-Setting bit[i] to 0b0 enables dispatching event to peripherals.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>PR_MASK3</name>
-						<description>Events 96-127 dispatch mask to peripherals
-</description>
-						<addressOffset>0x0050</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>PR_MASK3</name>
-								<description>Event Mask to enable/disable event dispatch to peripherals.
-
-Setting bit[i] to 0b1 disables dispatching event to peripherals.
-
-Setting bit[i] to 0b0 enables dispatching event to peripherals.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>PR_MASK4</name>
-						<description>Events 128-159 dispatch mask to peripheral</description>
-						<addressOffset>0x0054</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>PR_MASK4</name>
-								<description>Event Mask to enable/disable event dispatch to peripherals.
-
-Setting bit[i] to 0b1 disables dispatching event to peripherals.
-
-Setting bit[i] to 0b0 enables dispatching event to peripherals.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>PR_MASK5</name>
-						<description>Events 160-191 dispatch
-mask to peripherals</description>
-						<addressOffset>0x0058</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>PR_MASK5</name>
-								<description>Event Mask to enable/disable event dispatch to peripherals.
-
-Setting bit[i] to 0b1 disables dispatching event to peripherals.
-
-Setting bit[i] to 0b0 enables dispatching event to peripherals.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>PR_MASK6</name>
-						<description>Events 191-223 dispatch mask to peripherals</description>
-						<addressOffset>0x005C</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>PR_MASK6</name>
-								<description>Event Mask to enable/disable event dispatch to peripherals.
-
-Setting bit[i] to 0b1 disables dispatching event to peripherals.
-
-Setting bit[i] to 0b0 enables dispatching event to peripherals.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>PR_MASK7</name>
-						<description>Events 224-255 dispatch mask to peripherals
-</description>
-						<addressOffset>0x0060</addressOffset>
-						<resetValue>0xFFFFFFFF</resetValue>
-						<resetMask>0x00000000</resetMask>
-						<size>32</size>
-						<access>read-write</access>
-						<fields>
-							<field>
-								<name>PR_MASK7</name>
-								<description>Event Mask to enable/disable event dispatch to peripherals.
-
-Setting bit[i] to 0b1 disables dispatching event to peripherals.
-
-Setting bit[i] to 0b0 enables dispatching event to peripherals.</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR0</name>
+						<name>ERR[%s]</name>
 						<description>Events 0-31 event queue
 overflow</description>
+						<dim>8</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x0064</addressOffset>
 						<resetValue>0x0000</resetValue>
 						<resetMask>0x0000</resetMask>
@@ -23273,8 +20937,10 @@ event queue of event with id i overflowed.
 						</fields>
 					</register>
 					<register>
-						<name>PR_MASK0</name>
+						<name>PR_MASK[%s]</name>
 						<description>Events 0-31 dispatch mask to peripherals</description>
+						<dim>8</dim>
+						<dimIncrement>4</dimIncrement>
 						<addressOffset>0x0044</addressOffset>
 						<resetValue>0xFFFFFFFF</resetValue>
 						<resetMask>0x00000000</resetMask>
@@ -23283,132 +20949,6 @@ event queue of event with id i overflowed.
 						<fields>
 							<field>
 								<name>PR_MASK0</name>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR1</name>
-						<description>Events 32-63 event queue
-overflow</description>
-						<addressOffset>0x0068</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-only</access>
-						<fields>
-							<field>
-								<name>ERR1</name>
-								<description>Event queue overflow. Clear after read. 
-
-Reading 0b1 at ERR[i] means the
-event queue of event with id i overflowed.
-</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR2</name>
-						<description>Events 64-95 event queue
-overflow</description>
-						<addressOffset>0x006C</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-only</access>
-						<fields>
-							<field>
-								<name>ERR02</name>
-								<description>Event queue overflow. Clear after read. 
-
-Reading 0b1 at ERR[i] means the
-event queue of event with id i overflowed.
-</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR3</name>
-						<description>Events 96-127 event queue
-overflow</description>
-						<addressOffset>0x0070</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-only</access>
-						<fields>
-							<field>
-								<name>ERR3</name>
-								<description>Event queue overflow. Clear after read. 
-
-Reading 0b1 at ERR[i] means the
-event queue of event with id i overflowed.
-</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR4</name>
-						<description>Events 128-159 event queue
-overflow</description>
-						<addressOffset>0x0074</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-only</access>
-						<fields>
-							<field>
-								<name>ERR4</name>
-								<description>Event queue overflow. Clear after read. 
-
-Reading 0b1 at ERR[i] means the
-event queue of event with id i overflowed.
-</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR5</name>
-						<description>Events 160-191 event queue
-overflow</description>
-						<addressOffset>0x0078</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-only</access>
-						<fields>
-							<field>
-								<name>ERR5</name>
-								<description>Event queue overflow. Clear after read. 
-
-Reading 0b1 at ERR[i] means the
-event queue of event with id i overflowed.
-</description>
-								<bitRange>[31:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR6</name>
-						<description>Events 191-223 event queue
-overflow</description>
-						<addressOffset>0x007C</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-only</access>
-						<fields>
-							<field>
-								<name>ERR6</name>
-								<description>Event queue overflow. Clear after read. 
-
-Reading 0b1 at ERR[i] means the
-event queue of event with id i overflowed.
-</description>
 								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
@@ -23428,22 +20968,6 @@ Timer with event</description>
 that equals TIMER_HI_EVENT
 </description>
 								<bitRange>[7:0]</bitRange>
-							</field>
-						</fields>
-					</register>
-					<register>
-						<name>ERR7</name>
-						<description>Events 224-255 event queue overflow
-</description>
-						<addressOffset>0x0080</addressOffset>
-						<resetValue>0x0000</resetValue>
-						<resetMask>0x0000</resetMask>
-						<size>32</size>
-						<access>read-only</access>
-						<fields>
-							<field>
-								<name>ERR7</name>
-								<bitRange>[31:0]</bitRange>
 							</field>
 						</fields>
 					</register>
@@ -24252,7 +21776,7 @@ cluster.
 						</fields>
 					</register>
 					<register>
-						<name>PAD_MUX_0</name>
+						<name>PAD_MUX</name>
 						<description>The content of these registers can be used to multiplex pads when targeting an ASIC. 
 
 The first register (0x1A10_4010) can be used to set the mux (2 bit
