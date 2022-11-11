@@ -154,7 +154,7 @@ pub struct TLP {
 unsafe impl Send for TLP {}
 impl TLP {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const tlp::RegisterBlock = 0x1000_0000 as *const _;
+    pub const PTR: *const tlp::RegisterBlock = 0x2000_0000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
     pub const fn ptr() -> *const tlp::RegisterBlock {

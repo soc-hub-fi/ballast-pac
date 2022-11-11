@@ -22,3 +22,8 @@ fn sysctrl() {
 fn mpc() {
     verify_ptr(pac::MPC::ptr(), 0x1A00_0000);
 }
+
+#[test]
+fn tlp() {
+    verify_ptr(pac::TLP::ptr(), 0x2000_0000);
+}
