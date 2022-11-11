@@ -1,20 +1,24 @@
+// This warning is incorrect in our case; formatting is not actually fully supported in panic
+#![allow(non_fmt_panics)]
+
 use ballast_hpc_pac as pac;
 
-fn check_address(ptr: *const u64, expected: u64) {
-    let ptr = ptr as u64;
-    assert_eq!(expected, ptr, "expected 0x{:x}, was 0x{:x}", expected, ptr);
+fn verify_ptr<T>(ptr: *const T, expected_addr: usize) {
+    let addr = ptr as usize;
+
+    if addr != expected_addr {
+        panic!(format!(
+            "incorrect address in memory map:\nexpected: 0x{expected_addr:x}\n  actual: 0x{addr:x}"
+        ))
+    }
 }
 
 #[test]
 fn hpc() {
-    let ptr = pac::HPC::ptr() as *const u64;
-
-    check_address(ptr, 0x0000_0000_0000_0000);
+    verify_ptr(pac::HPC::ptr(), 0x0000_0000_0000_0000);
 }
 
 #[test]
 fn mpc() {
-    let ptr = pac::MPC::ptr() as *const u64;
-
-    check_address(ptr, 0x0001_2A00_0000);
+    verify_ptr(pac::MPC::ptr(), 0x0001_2A00_0000);
 }

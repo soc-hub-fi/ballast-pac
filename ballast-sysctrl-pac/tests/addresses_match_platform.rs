@@ -1,25 +1,24 @@
+// This warning is incorrect in our case; formatting is not actually fully supported in panic
+#![allow(non_fmt_panics)]
+
 use ballast_sysctrl_pac as pac;
+
+fn verify_ptr<T>(ptr: *const T, expected_addr: usize) {
+    let addr = ptr as usize;
+
+    if addr != expected_addr {
+        panic!(format!(
+            "incorrect address in memory map:\nexpected: 0x{expected_addr:x}\n  actual: 0x{addr:x}"
+        ))
+    }
+}
 
 #[test]
 fn sysctrl() {
-    let ptr = pac::SYSCTRL::ptr() as *const u32;
-
-    let addr = ptr as u32;
-    assert_eq!(
-        0x1A00_0000, addr,
-        "expected 0x{:x}, was 0x{:x}",
-        0x1A00_0000, addr
-    );
+    verify_ptr(pac::SYSCTRL::ptr(), 0x1A00_0000);
 }
 
 #[test]
 fn mpc() {
-    let ptr = pac::MPC::ptr() as *const u32;
-
-    let addr = ptr as u32;
-    assert_eq!(
-        0x2A00_0000, addr,
-        "expected 0x{:x}, was 0x{:x}",
-        0x2A00_0000, addr
-    );
+    verify_ptr(pac::MPC::ptr(), 0x2A00_0000);
 }
