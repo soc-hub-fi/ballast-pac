@@ -16,20 +16,7 @@ impl From<crate::R<PADIN_32_63_SPEC>> for R {
 #[doc = "Field `DATA_IN` reader - Bit 31 - 0 DATA_IN (R) GPIO\\[63:32\\]
 input data read bitfield. DATA_IN\\[i\\]
 corresponds to input data of GPIO\\[i\\]."]
-pub struct DATA_IN_R(crate::FieldReader<u32>);
-impl DATA_IN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DATA_IN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DATA_IN_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DATA_IN_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Bit 31 - 0 DATA_IN (R) GPIO\\[63:32\\]
 input data read bitfield. DATA_IN\\[i\\]
@@ -50,8 +37,5 @@ impl crate::Readable for PADIN_32_63_SPEC {
 }
 #[doc = "`reset()` method sets PADIN_32_63 to value 0"]
 impl crate::Resettable for PADIN_32_63_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

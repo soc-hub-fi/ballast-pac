@@ -35,32 +35,9 @@ impl From<crate::W<CG_SPEC>> for W {
     }
 }
 #[doc = "Field `ENA` reader - ADV_TIMER clock gating configuration bitfield. - ENA\\[i\\]=0: clock gate ADV_TIMERi. - ENA\\[i\\]=1: enable ADV_TIMERi."]
-pub struct ENA_R(crate::FieldReader<u16>);
-impl ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENA_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ENA` writer - ADV_TIMER clock gating configuration bitfield. - ENA\\[i\\]=0: clock gate ADV_TIMERi. - ENA\\[i\\]=1: enable ADV_TIMERi."]
-pub struct ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type ENA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CG_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15 - ADV_TIMER clock gating configuration bitfield. - ENA\\[i\\]=0: clock gate ADV_TIMERi. - ENA\\[i\\]=1: enable ADV_TIMERi."]
     #[inline(always)]
@@ -71,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - ADV_TIMER clock gating configuration bitfield. - ENA\\[i\\]=0: clock gate ADV_TIMERi. - ENA\\[i\\]=1: enable ADV_TIMERi."]
     #[inline(always)]
-    pub fn ena(&mut self) -> ENA_W {
-        ENA_W { w: self }
+    #[must_use]
+    pub fn ena(&mut self) -> ENA_W<0> {
+        ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +71,10 @@ impl crate::Readable for CG_SPEC {
 #[doc = "`write(|w| ..)` method takes [cg::W](W) writer structure"]
 impl crate::Writable for CG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CG to value 0"]
 impl crate::Resettable for CG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

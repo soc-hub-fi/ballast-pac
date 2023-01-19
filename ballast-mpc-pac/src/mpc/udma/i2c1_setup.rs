@@ -35,42 +35,9 @@ impl From<crate::W<I2C1_SETUP_SPEC>> for W {
     }
 }
 #[doc = "Field `DO_RST` reader - Reset command used to abort the on-going transfer and clear busy and arbitration lost status flags."]
-pub struct DO_RST_R(crate::FieldReader<bool>);
-impl DO_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DO_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DO_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DO_RST_R = crate::BitReader<bool>;
 #[doc = "Field `DO_RST` writer - Reset command used to abort the on-going transfer and clear busy and arbitration lost status flags."]
-pub struct DO_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DO_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type DO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2C1_SETUP_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Reset command used to abort the on-going transfer and clear busy and arbitration lost status flags."]
     #[inline(always)]
@@ -81,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Reset command used to abort the on-going transfer and clear busy and arbitration lost status flags."]
     #[inline(always)]
-    pub fn do_rst(&mut self) -> DO_RST_W {
-        DO_RST_W { w: self }
+    #[must_use]
+    pub fn do_rst(&mut self) -> DO_RST_W<0> {
+        DO_RST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +71,10 @@ impl crate::Readable for I2C1_SETUP_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2c1_setup::W](W) writer structure"]
 impl crate::Writable for I2C1_SETUP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2C1_SETUP to value 0"]
 impl crate::Resettable for I2C1_SETUP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -14,20 +14,7 @@ impl From<crate::R<CPU_RD_GRANT_SPEC>> for R {
     }
 }
 #[doc = "Field `CPU_rd_grant` reader - All statistic counters are stored in a blockram. When you read a counter,you need to write the corresponding address to CPU_rd_addr register and assert CPU_rd_apply signal. When the counter data register CPU_rd_dout is available , the signal CPU_rd_grant will be “1”."]
-pub struct CPU_RD_GRANT_R(crate::FieldReader<bool>);
-impl CPU_RD_GRANT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CPU_RD_GRANT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CPU_RD_GRANT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CPU_RD_GRANT_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - All statistic counters are stored in a blockram. When you read a counter,you need to write the corresponding address to CPU_rd_addr register and assert CPU_rd_apply signal. When the counter data register CPU_rd_dout is available , the signal CPU_rd_grant will be “1”."]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for CPU_RD_GRANT_SPEC {
 }
 #[doc = "`reset()` method sets CPU_rd_grant to value 0"]
 impl crate::Resettable for CPU_RD_GRANT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

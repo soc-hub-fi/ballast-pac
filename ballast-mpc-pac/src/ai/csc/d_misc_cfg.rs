@@ -34,8 +34,10 @@ impl From<crate::W<D_MISC_CFG_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `CONV_MODE` reader - "]
+pub type CONV_MODE_R = crate::BitReader<CONV_MODE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CONV_MODE_A {
     #[doc = "0: `0`"]
     DIRECT = 0,
@@ -48,14 +50,8 @@ impl From<CONV_MODE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `CONV_MODE` reader - "]
-pub struct CONV_MODE_R(crate::FieldReader<bool>);
 impl CONV_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CONV_MODE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CONV_MODE_A {
         match self.bits {
@@ -66,31 +62,17 @@ impl CONV_MODE_R {
     #[doc = "Checks if the value of the field is `DIRECT`"]
     #[inline(always)]
     pub fn is_direct(&self) -> bool {
-        **self == CONV_MODE_A::DIRECT
+        *self == CONV_MODE_A::DIRECT
     }
     #[doc = "Checks if the value of the field is `WINOGRAD`"]
     #[inline(always)]
     pub fn is_winograd(&self) -> bool {
-        **self == CONV_MODE_A::WINOGRAD
-    }
-}
-impl core::ops::Deref for CONV_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CONV_MODE_A::WINOGRAD
     }
 }
 #[doc = "Field `CONV_MODE` writer - "]
-pub struct CONV_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CONV_MODE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CONV_MODE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type CONV_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, D_MISC_CFG_SPEC, CONV_MODE_A, O>;
+impl<'a, const O: u8> CONV_MODE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn direct(self) -> &'a mut W {
@@ -101,25 +83,11 @@ impl<'a> CONV_MODE_W<'a> {
     pub fn winograd(self) -> &'a mut W {
         self.variant(CONV_MODE_A::WINOGRAD)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
 }
+#[doc = "Field `IN_PRECISION` reader - "]
+pub type IN_PRECISION_R = crate::FieldReader<u8, IN_PRECISION_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum IN_PRECISION_A {
     #[doc = "2: `10`"]
@@ -135,14 +103,8 @@ impl From<IN_PRECISION_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `IN_PRECISION` reader - "]
-pub struct IN_PRECISION_R(crate::FieldReader<u8>);
 impl IN_PRECISION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IN_PRECISION_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<IN_PRECISION_A> {
         match self.bits {
@@ -155,36 +117,23 @@ impl IN_PRECISION_R {
     #[doc = "Checks if the value of the field is `FP16`"]
     #[inline(always)]
     pub fn is_fp16(&self) -> bool {
-        **self == IN_PRECISION_A::FP16
+        *self == IN_PRECISION_A::FP16
     }
     #[doc = "Checks if the value of the field is `INT16`"]
     #[inline(always)]
     pub fn is_int16(&self) -> bool {
-        **self == IN_PRECISION_A::INT16
+        *self == IN_PRECISION_A::INT16
     }
     #[doc = "Checks if the value of the field is `INT8`"]
     #[inline(always)]
     pub fn is_int8(&self) -> bool {
-        **self == IN_PRECISION_A::INT8
-    }
-}
-impl core::ops::Deref for IN_PRECISION_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == IN_PRECISION_A::INT8
     }
 }
 #[doc = "Field `IN_PRECISION` writer - "]
-pub struct IN_PRECISION_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IN_PRECISION_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: IN_PRECISION_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type IN_PRECISION_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_MISC_CFG_SPEC, u8, IN_PRECISION_A, 2, O>;
+impl<'a, const O: u8> IN_PRECISION_W<'a, O> {
     #[doc = "`10`"]
     #[inline(always)]
     pub fn fp16(self) -> &'a mut W {
@@ -200,15 +149,11 @@ impl<'a> IN_PRECISION_W<'a> {
     pub fn int8(self) -> &'a mut W {
         self.variant(IN_PRECISION_A::INT8)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
 }
+#[doc = "Field `PROC_PRECISION` reader - "]
+pub type PROC_PRECISION_R = crate::FieldReader<u8, PROC_PRECISION_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum PROC_PRECISION_A {
     #[doc = "2: `10`"]
@@ -224,14 +169,8 @@ impl From<PROC_PRECISION_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `PROC_PRECISION` reader - "]
-pub struct PROC_PRECISION_R(crate::FieldReader<u8>);
 impl PROC_PRECISION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PROC_PRECISION_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<PROC_PRECISION_A> {
         match self.bits {
@@ -244,36 +183,23 @@ impl PROC_PRECISION_R {
     #[doc = "Checks if the value of the field is `FP16`"]
     #[inline(always)]
     pub fn is_fp16(&self) -> bool {
-        **self == PROC_PRECISION_A::FP16
+        *self == PROC_PRECISION_A::FP16
     }
     #[doc = "Checks if the value of the field is `INT16`"]
     #[inline(always)]
     pub fn is_int16(&self) -> bool {
-        **self == PROC_PRECISION_A::INT16
+        *self == PROC_PRECISION_A::INT16
     }
     #[doc = "Checks if the value of the field is `INT8`"]
     #[inline(always)]
     pub fn is_int8(&self) -> bool {
-        **self == PROC_PRECISION_A::INT8
-    }
-}
-impl core::ops::Deref for PROC_PRECISION_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == PROC_PRECISION_A::INT8
     }
 }
 #[doc = "Field `PROC_PRECISION` writer - "]
-pub struct PROC_PRECISION_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PROC_PRECISION_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: PROC_PRECISION_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type PROC_PRECISION_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_MISC_CFG_SPEC, u8, PROC_PRECISION_A, 2, O>;
+impl<'a, const O: u8> PROC_PRECISION_W<'a, O> {
     #[doc = "`10`"]
     #[inline(always)]
     pub fn fp16(self) -> &'a mut W {
@@ -289,15 +215,11 @@ impl<'a> PROC_PRECISION_W<'a> {
     pub fn int8(self) -> &'a mut W {
         self.variant(PROC_PRECISION_A::INT8)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
-        self.w
-    }
 }
+#[doc = "Field `DATA_REUSE` reader - "]
+pub type DATA_REUSE_R = crate::BitReader<DATA_REUSE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DATA_REUSE_A {
     #[doc = "1: `1`"]
     ENABLE = 1,
@@ -310,14 +232,8 @@ impl From<DATA_REUSE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `DATA_REUSE` reader - "]
-pub struct DATA_REUSE_R(crate::FieldReader<bool>);
 impl DATA_REUSE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DATA_REUSE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> DATA_REUSE_A {
         match self.bits {
@@ -328,31 +244,18 @@ impl DATA_REUSE_R {
     #[doc = "Checks if the value of the field is `ENABLE`"]
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
-        **self == DATA_REUSE_A::ENABLE
+        *self == DATA_REUSE_A::ENABLE
     }
     #[doc = "Checks if the value of the field is `DISABLE`"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
-        **self == DATA_REUSE_A::DISABLE
-    }
-}
-impl core::ops::Deref for DATA_REUSE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == DATA_REUSE_A::DISABLE
     }
 }
 #[doc = "Field `DATA_REUSE` writer - "]
-pub struct DATA_REUSE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DATA_REUSE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: DATA_REUSE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type DATA_REUSE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_MISC_CFG_SPEC, DATA_REUSE_A, O>;
+impl<'a, const O: u8> DATA_REUSE_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut W {
@@ -363,25 +266,11 @@ impl<'a> DATA_REUSE_W<'a> {
     pub fn disable(self) -> &'a mut W {
         self.variant(DATA_REUSE_A::DISABLE)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
 }
+#[doc = "Field `WEIGHT_REUSE` reader - "]
+pub type WEIGHT_REUSE_R = crate::BitReader<WEIGHT_REUSE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum WEIGHT_REUSE_A {
     #[doc = "1: `1`"]
     ENABLE = 1,
@@ -394,14 +283,8 @@ impl From<WEIGHT_REUSE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `WEIGHT_REUSE` reader - "]
-pub struct WEIGHT_REUSE_R(crate::FieldReader<bool>);
 impl WEIGHT_REUSE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WEIGHT_REUSE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> WEIGHT_REUSE_A {
         match self.bits {
@@ -412,31 +295,18 @@ impl WEIGHT_REUSE_R {
     #[doc = "Checks if the value of the field is `ENABLE`"]
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
-        **self == WEIGHT_REUSE_A::ENABLE
+        *self == WEIGHT_REUSE_A::ENABLE
     }
     #[doc = "Checks if the value of the field is `DISABLE`"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
-        **self == WEIGHT_REUSE_A::DISABLE
-    }
-}
-impl core::ops::Deref for WEIGHT_REUSE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == WEIGHT_REUSE_A::DISABLE
     }
 }
 #[doc = "Field `WEIGHT_REUSE` writer - "]
-pub struct WEIGHT_REUSE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WEIGHT_REUSE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: WEIGHT_REUSE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type WEIGHT_REUSE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_MISC_CFG_SPEC, WEIGHT_REUSE_A, O>;
+impl<'a, const O: u8> WEIGHT_REUSE_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut W {
@@ -447,25 +317,11 @@ impl<'a> WEIGHT_REUSE_W<'a> {
     pub fn disable(self) -> &'a mut W {
         self.variant(WEIGHT_REUSE_A::DISABLE)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
 }
+#[doc = "Field `SKIP_DATA_RLS` reader - "]
+pub type SKIP_DATA_RLS_R = crate::BitReader<SKIP_DATA_RLS_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SKIP_DATA_RLS_A {
     #[doc = "1: `1`"]
     ENABLE = 1,
@@ -478,14 +334,8 @@ impl From<SKIP_DATA_RLS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `SKIP_DATA_RLS` reader - "]
-pub struct SKIP_DATA_RLS_R(crate::FieldReader<bool>);
 impl SKIP_DATA_RLS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SKIP_DATA_RLS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> SKIP_DATA_RLS_A {
         match self.bits {
@@ -496,31 +346,18 @@ impl SKIP_DATA_RLS_R {
     #[doc = "Checks if the value of the field is `ENABLE`"]
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
-        **self == SKIP_DATA_RLS_A::ENABLE
+        *self == SKIP_DATA_RLS_A::ENABLE
     }
     #[doc = "Checks if the value of the field is `DISABLE`"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
-        **self == SKIP_DATA_RLS_A::DISABLE
-    }
-}
-impl core::ops::Deref for SKIP_DATA_RLS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == SKIP_DATA_RLS_A::DISABLE
     }
 }
 #[doc = "Field `SKIP_DATA_RLS` writer - "]
-pub struct SKIP_DATA_RLS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SKIP_DATA_RLS_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SKIP_DATA_RLS_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type SKIP_DATA_RLS_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_MISC_CFG_SPEC, SKIP_DATA_RLS_A, O>;
+impl<'a, const O: u8> SKIP_DATA_RLS_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut W {
@@ -531,25 +368,11 @@ impl<'a> SKIP_DATA_RLS_W<'a> {
     pub fn disable(self) -> &'a mut W {
         self.variant(SKIP_DATA_RLS_A::DISABLE)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
 }
+#[doc = "Field `SKIP_WEIGHT_RLS` reader - "]
+pub type SKIP_WEIGHT_RLS_R = crate::BitReader<SKIP_WEIGHT_RLS_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SKIP_WEIGHT_RLS_A {
     #[doc = "1: `1`"]
     ENABLE = 1,
@@ -562,14 +385,8 @@ impl From<SKIP_WEIGHT_RLS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `SKIP_WEIGHT_RLS` reader - "]
-pub struct SKIP_WEIGHT_RLS_R(crate::FieldReader<bool>);
 impl SKIP_WEIGHT_RLS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SKIP_WEIGHT_RLS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> SKIP_WEIGHT_RLS_A {
         match self.bits {
@@ -580,31 +397,18 @@ impl SKIP_WEIGHT_RLS_R {
     #[doc = "Checks if the value of the field is `ENABLE`"]
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
-        **self == SKIP_WEIGHT_RLS_A::ENABLE
+        *self == SKIP_WEIGHT_RLS_A::ENABLE
     }
     #[doc = "Checks if the value of the field is `DISABLE`"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
-        **self == SKIP_WEIGHT_RLS_A::DISABLE
-    }
-}
-impl core::ops::Deref for SKIP_WEIGHT_RLS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == SKIP_WEIGHT_RLS_A::DISABLE
     }
 }
 #[doc = "Field `SKIP_WEIGHT_RLS` writer - "]
-pub struct SKIP_WEIGHT_RLS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SKIP_WEIGHT_RLS_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SKIP_WEIGHT_RLS_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type SKIP_WEIGHT_RLS_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_MISC_CFG_SPEC, SKIP_WEIGHT_RLS_A, O>;
+impl<'a, const O: u8> SKIP_WEIGHT_RLS_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut W {
@@ -614,22 +418,6 @@ impl<'a> SKIP_WEIGHT_RLS_W<'a> {
     #[inline(always)]
     pub fn disable(self) -> &'a mut W {
         self.variant(SKIP_WEIGHT_RLS_A::DISABLE)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
     }
 }
 impl R {
@@ -672,38 +460,45 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn conv_mode(&mut self) -> CONV_MODE_W {
-        CONV_MODE_W { w: self }
+    #[must_use]
+    pub fn conv_mode(&mut self) -> CONV_MODE_W<0> {
+        CONV_MODE_W::new(self)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    pub fn in_precision(&mut self) -> IN_PRECISION_W {
-        IN_PRECISION_W { w: self }
+    #[must_use]
+    pub fn in_precision(&mut self) -> IN_PRECISION_W<8> {
+        IN_PRECISION_W::new(self)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
-    pub fn proc_precision(&mut self) -> PROC_PRECISION_W {
-        PROC_PRECISION_W { w: self }
+    #[must_use]
+    pub fn proc_precision(&mut self) -> PROC_PRECISION_W<12> {
+        PROC_PRECISION_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn data_reuse(&mut self) -> DATA_REUSE_W {
-        DATA_REUSE_W { w: self }
+    #[must_use]
+    pub fn data_reuse(&mut self) -> DATA_REUSE_W<16> {
+        DATA_REUSE_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn weight_reuse(&mut self) -> WEIGHT_REUSE_W {
-        WEIGHT_REUSE_W { w: self }
+    #[must_use]
+    pub fn weight_reuse(&mut self) -> WEIGHT_REUSE_W<20> {
+        WEIGHT_REUSE_W::new(self)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn skip_data_rls(&mut self) -> SKIP_DATA_RLS_W {
-        SKIP_DATA_RLS_W { w: self }
+    #[must_use]
+    pub fn skip_data_rls(&mut self) -> SKIP_DATA_RLS_W<24> {
+        SKIP_DATA_RLS_W::new(self)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn skip_weight_rls(&mut self) -> SKIP_WEIGHT_RLS_W {
-        SKIP_WEIGHT_RLS_W { w: self }
+    #[must_use]
+    pub fn skip_weight_rls(&mut self) -> SKIP_WEIGHT_RLS_W<28> {
+        SKIP_WEIGHT_RLS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -724,11 +519,10 @@ impl crate::Readable for D_MISC_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_misc_cfg::W](W) writer structure"]
 impl crate::Writable for D_MISC_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_MISC_CFG to value 0"]
 impl crate::Resettable for D_MISC_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

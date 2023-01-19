@@ -14,20 +14,7 @@ impl From<crate::R<CYCLE_COUNT_HIGH_SPEC>> for R {
     }
 }
 #[doc = "Field `cycle_count_high` reader - Cycle count (high 32 bits)"]
-pub struct CYCLE_COUNT_HIGH_R(crate::FieldReader<u32>);
-impl CYCLE_COUNT_HIGH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CYCLE_COUNT_HIGH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CYCLE_COUNT_HIGH_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CYCLE_COUNT_HIGH_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Cycle count (high 32 bits)"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for CYCLE_COUNT_HIGH_SPEC {
 }
 #[doc = "`reset()` method sets cycle_count_high to value 0"]
 impl crate::Resettable for CYCLE_COUNT_HIGH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

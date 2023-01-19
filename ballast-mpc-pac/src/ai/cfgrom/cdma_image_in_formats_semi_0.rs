@@ -14,20 +14,7 @@ impl From<crate::R<CDMA_IMAGE_IN_FORMATS_SEMI_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CDMA_IMAGE_IN_FORMATS_SEMI` reader - "]
-pub struct CDMA_IMAGE_IN_FORMATS_SEMI_R(crate::FieldReader<u32>);
-impl CDMA_IMAGE_IN_FORMATS_SEMI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CDMA_IMAGE_IN_FORMATS_SEMI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CDMA_IMAGE_IN_FORMATS_SEMI_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CDMA_IMAGE_IN_FORMATS_SEMI_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for CDMA_IMAGE_IN_FORMATS_SEMI_0_SPEC {
 }
 #[doc = "`reset()` method sets CDMA_IMAGE_IN_FORMATS_SEMI_0 to value 0x03"]
 impl crate::Resettable for CDMA_IMAGE_IN_FORMATS_SEMI_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03
-    }
+    const RESET_VALUE: Self::Ux = 0x03;
 }

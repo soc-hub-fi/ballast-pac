@@ -35,65 +35,13 @@ impl From<crate::W<CFG_RD_WEIGHT_1_SPEC>> for W {
     }
 }
 #[doc = "Field `RD_WEIGHT_SDP_B` reader - "]
-pub struct RD_WEIGHT_SDP_B_R(crate::FieldReader<u8>);
-impl RD_WEIGHT_SDP_B_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_WEIGHT_SDP_B_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_WEIGHT_SDP_B_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_WEIGHT_SDP_B_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RD_WEIGHT_SDP_N` reader - "]
-pub struct RD_WEIGHT_SDP_N_R(crate::FieldReader<u8>);
-impl RD_WEIGHT_SDP_N_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_WEIGHT_SDP_N_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_WEIGHT_SDP_N_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_WEIGHT_SDP_N_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RD_WEIGHT_SDP_E` reader - "]
-pub struct RD_WEIGHT_SDP_E_R(crate::FieldReader<u8>);
-impl RD_WEIGHT_SDP_E_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_WEIGHT_SDP_E_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_WEIGHT_SDP_E_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_WEIGHT_SDP_E_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RD_WEIGHT_CDMA_DAT` reader - "]
-pub struct RD_WEIGHT_CDMA_DAT_R(crate::FieldReader<u8>);
-impl RD_WEIGHT_CDMA_DAT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_WEIGHT_CDMA_DAT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_WEIGHT_CDMA_DAT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_WEIGHT_CDMA_DAT_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -136,11 +84,10 @@ impl crate::Readable for CFG_RD_WEIGHT_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [cfg_rd_weight_1::W](W) writer structure"]
 impl crate::Writable for CFG_RD_WEIGHT_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CFG_RD_WEIGHT_1 to value 0x0100_0100"]
 impl crate::Resettable for CFG_RD_WEIGHT_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0100_0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0100_0100;
 }

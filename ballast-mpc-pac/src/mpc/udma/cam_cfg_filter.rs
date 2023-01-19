@@ -35,86 +35,20 @@ impl From<crate::W<CAM_CFG_FILTER_SPEC>> for W {
     }
 }
 #[doc = "Field `B_COEFF` reader - Coefficient that multiplies the B component NOTE: not used if FORMAT == BYPASS"]
-pub struct B_COEFF_R(crate::FieldReader<u8>);
-impl B_COEFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        B_COEFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for B_COEFF_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type B_COEFF_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `B_COEFF` writer - Coefficient that multiplies the B component NOTE: not used if FORMAT == BYPASS"]
-pub struct B_COEFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> B_COEFF_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type B_COEFF_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CAM_CFG_FILTER_SPEC, u8, u8, 8, O>;
 #[doc = "Field `G_COEFF` reader - Coefficient that multiplies the G component NOTE: not used if FORMAT == BYPASS"]
-pub struct G_COEFF_R(crate::FieldReader<u8>);
-impl G_COEFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        G_COEFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for G_COEFF_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type G_COEFF_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `G_COEFF` writer - Coefficient that multiplies the G component NOTE: not used if FORMAT == BYPASS"]
-pub struct G_COEFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> G_COEFF_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type G_COEFF_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CAM_CFG_FILTER_SPEC, u8, u8, 8, O>;
 #[doc = "Field `R_COEFF` reader - Coefficient that multiplies the R component NOTE: not used if FORMAT == BYPASS"]
-pub struct R_COEFF_R(crate::FieldReader<u8>);
-impl R_COEFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        R_COEFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for R_COEFF_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type R_COEFF_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `R_COEFF` writer - Coefficient that multiplies the R component NOTE: not used if FORMAT == BYPASS"]
-pub struct R_COEFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> R_COEFF_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
-        self.w
-    }
-}
+pub type R_COEFF_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CAM_CFG_FILTER_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Coefficient that multiplies the B component NOTE: not used if FORMAT == BYPASS"]
     #[inline(always)]
@@ -135,18 +69,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Coefficient that multiplies the B component NOTE: not used if FORMAT == BYPASS"]
     #[inline(always)]
-    pub fn b_coeff(&mut self) -> B_COEFF_W {
-        B_COEFF_W { w: self }
+    #[must_use]
+    pub fn b_coeff(&mut self) -> B_COEFF_W<0> {
+        B_COEFF_W::new(self)
     }
     #[doc = "Bits 8:15 - Coefficient that multiplies the G component NOTE: not used if FORMAT == BYPASS"]
     #[inline(always)]
-    pub fn g_coeff(&mut self) -> G_COEFF_W {
-        G_COEFF_W { w: self }
+    #[must_use]
+    pub fn g_coeff(&mut self) -> G_COEFF_W<8> {
+        G_COEFF_W::new(self)
     }
     #[doc = "Bits 16:23 - Coefficient that multiplies the R component NOTE: not used if FORMAT == BYPASS"]
     #[inline(always)]
-    pub fn r_coeff(&mut self) -> R_COEFF_W {
-        R_COEFF_W { w: self }
+    #[must_use]
+    pub fn r_coeff(&mut self) -> R_COEFF_W<16> {
+        R_COEFF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -167,11 +104,10 @@ impl crate::Readable for CAM_CFG_FILTER_SPEC {
 #[doc = "`write(|w| ..)` method takes [cam_cfg_filter::W](W) writer structure"]
 impl crate::Writable for CAM_CFG_FILTER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CAM_CFG_FILTER to value 0"]
 impl crate::Resettable for CAM_CFG_FILTER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

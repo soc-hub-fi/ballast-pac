@@ -20,22 +20,14 @@ impl From<crate::W<SOFTWARE_IRQ_SET_SPEC>> for W {
     }
 }
 #[doc = "Field `set` writer - "]
-pub struct SET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SET_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type SET_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u16, SOFTWARE_IRQ_SET_SPEC, u16, u16, 16, O>;
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn set(&mut self) -> SET_W {
-        SET_W { w: self }
+    #[must_use]
+    pub fn set(&mut self) -> SET_W<0> {
+        SET_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -52,11 +44,10 @@ impl crate::RegisterSpec for SOFTWARE_IRQ_SET_SPEC {
 #[doc = "`write(|w| ..)` method takes [software_irq_set::W](W) writer structure"]
 impl crate::Writable for SOFTWARE_IRQ_SET_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets software_irq_set to value 0"]
 impl crate::Resettable for SOFTWARE_IRQ_SET_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

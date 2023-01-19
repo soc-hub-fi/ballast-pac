@@ -14,35 +14,9 @@ impl From<crate::R<INFO_SPEC>> for R {
     }
 }
 #[doc = "Field `cluster_count` reader - Number of Clusters"]
-pub struct CLUSTER_COUNT_R(crate::FieldReader<u16>);
-impl CLUSTER_COUNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CLUSTER_COUNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLUSTER_COUNT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLUSTER_COUNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `core_count` reader - Number of Cores"]
-pub struct CORE_COUNT_R(crate::FieldReader<u16>);
-impl CORE_COUNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CORE_COUNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_COUNT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_COUNT_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Number of Clusters"]
     #[inline(always)]
@@ -66,8 +40,5 @@ impl crate::Readable for INFO_SPEC {
 }
 #[doc = "`reset()` method sets INFO to value 0"]
 impl crate::Resettable for INFO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

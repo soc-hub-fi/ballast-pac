@@ -20,22 +20,14 @@ impl From<crate::W<TX_PKG_LGTH_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_pkg_lgth` writer - "]
-pub struct TX_PKG_LGTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PKG_LGTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type TX_PKG_LGTH_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TX_PKG_LGTH_SPEC, u16, u16, 16, O>;
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn tx_pkg_lgth(&mut self) -> TX_PKG_LGTH_W {
-        TX_PKG_LGTH_W { w: self }
+    #[must_use]
+    pub fn tx_pkg_lgth(&mut self) -> TX_PKG_LGTH_W<0> {
+        TX_PKG_LGTH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -52,11 +44,10 @@ impl crate::RegisterSpec for TX_PKG_LGTH_SPEC {
 #[doc = "`write(|w| ..)` method takes [tx_pkg_lgth::W](W) writer structure"]
 impl crate::Writable for TX_PKG_LGTH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets tx_pkg_lgth to value 0"]
 impl crate::Resettable for TX_PKG_LGTH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -35,65 +35,13 @@ impl From<crate::W<CFG_RD_WEIGHT_2_SPEC>> for W {
     }
 }
 #[doc = "Field `RD_WEIGHT_CDMA_WT` reader - "]
-pub struct RD_WEIGHT_CDMA_WT_R(crate::FieldReader<u8>);
-impl RD_WEIGHT_CDMA_WT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_WEIGHT_CDMA_WT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_WEIGHT_CDMA_WT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_WEIGHT_CDMA_WT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RD_WEIGHT_RBK` reader - "]
-pub struct RD_WEIGHT_RBK_R(crate::FieldReader<u8>);
-impl RD_WEIGHT_RBK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_WEIGHT_RBK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_WEIGHT_RBK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_WEIGHT_RBK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RD_WEIGHT_RSV_1` reader - "]
-pub struct RD_WEIGHT_RSV_1_R(crate::FieldReader<u8>);
-impl RD_WEIGHT_RSV_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_WEIGHT_RSV_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_WEIGHT_RSV_1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_WEIGHT_RSV_1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RD_WEIGHT_RSV_0` reader - "]
-pub struct RD_WEIGHT_RSV_0_R(crate::FieldReader<u8>);
-impl RD_WEIGHT_RSV_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_WEIGHT_RSV_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_WEIGHT_RSV_0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_WEIGHT_RSV_0_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -136,11 +84,10 @@ impl crate::Readable for CFG_RD_WEIGHT_2_SPEC {
 #[doc = "`write(|w| ..)` method takes [cfg_rd_weight_2::W](W) writer structure"]
 impl crate::Writable for CFG_RD_WEIGHT_2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CFG_RD_WEIGHT_2 to value 0x0100_0100"]
 impl crate::Resettable for CFG_RD_WEIGHT_2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0100_0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0100_0100;
 }

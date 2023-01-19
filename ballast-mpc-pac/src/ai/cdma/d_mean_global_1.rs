@@ -35,59 +35,15 @@ impl From<crate::W<D_MEAN_GLOBAL_1_SPEC>> for W {
     }
 }
 #[doc = "Field `MEAN_BV` reader - "]
-pub struct MEAN_BV_R(crate::FieldReader<u16>);
-impl MEAN_BV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        MEAN_BV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEAN_BV_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEAN_BV_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `MEAN_BV` writer - "]
-pub struct MEAN_BV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEAN_BV_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type MEAN_BV_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_MEAN_GLOBAL_1_SPEC, u16, u16, 16, O>;
 #[doc = "Field `MEAN_AX` reader - "]
-pub struct MEAN_AX_R(crate::FieldReader<u16>);
-impl MEAN_AX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        MEAN_AX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEAN_AX_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEAN_AX_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `MEAN_AX` writer - "]
-pub struct MEAN_AX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEAN_AX_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
+pub type MEAN_AX_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_MEAN_GLOBAL_1_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -103,13 +59,15 @@ impl R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn mean_bv(&mut self) -> MEAN_BV_W {
-        MEAN_BV_W { w: self }
+    #[must_use]
+    pub fn mean_bv(&mut self) -> MEAN_BV_W<0> {
+        MEAN_BV_W::new(self)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn mean_ax(&mut self) -> MEAN_AX_W {
-        MEAN_AX_W { w: self }
+    #[must_use]
+    pub fn mean_ax(&mut self) -> MEAN_AX_W<16> {
+        MEAN_AX_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -130,11 +88,10 @@ impl crate::Readable for D_MEAN_GLOBAL_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_mean_global_1::W](W) writer structure"]
 impl crate::Writable for D_MEAN_GLOBAL_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_MEAN_GLOBAL_1 to value 0"]
 impl crate::Resettable for D_MEAN_GLOBAL_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

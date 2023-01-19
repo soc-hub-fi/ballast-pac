@@ -14,20 +14,7 @@ impl From<crate::R<CPU_RD_DOUT_L_SPEC>> for R {
     }
 }
 #[doc = "Field `CPU_rd_dout_l` reader - All statistic counters are stored in a blockram. When you read a counter,you need to write the corresponding address to CPU_rd_addr register and assert CPU_rd_apply signal. When the counter data register CPU_rd_dout is available , the signal CPU_rd_grant will be “1”."]
-pub struct CPU_RD_DOUT_L_R(crate::FieldReader<u16>);
-impl CPU_RD_DOUT_L_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CPU_RD_DOUT_L_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CPU_RD_DOUT_L_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CPU_RD_DOUT_L_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - All statistic counters are stored in a blockram. When you read a counter,you need to write the corresponding address to CPU_rd_addr register and assert CPU_rd_apply signal. When the counter data register CPU_rd_dout is available , the signal CPU_rd_grant will be “1”."]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for CPU_RD_DOUT_L_SPEC {
 }
 #[doc = "`reset()` method sets CPU_rd_dout_l to value 0"]
 impl crate::Resettable for CPU_RD_DOUT_L_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

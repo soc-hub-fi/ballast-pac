@@ -14,65 +14,13 @@ impl From<crate::R<STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `single_stepping_breakpoint` reader - "]
-pub struct SINGLE_STEPPING_BREAKPOINT_R(crate::FieldReader<bool>);
-impl SINGLE_STEPPING_BREAKPOINT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SINGLE_STEPPING_BREAKPOINT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SINGLE_STEPPING_BREAKPOINT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SINGLE_STEPPING_BREAKPOINT_R = crate::BitReader<bool>;
 #[doc = "Field `breakpoint_1` reader - "]
-pub struct BREAKPOINT_1_R(crate::FieldReader<bool>);
-impl BREAKPOINT_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BREAKPOINT_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BREAKPOINT_1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BREAKPOINT_1_R = crate::BitReader<bool>;
 #[doc = "Field `manual_breakpoint` reader - "]
-pub struct MANUAL_BREAKPOINT_R(crate::FieldReader<bool>);
-impl MANUAL_BREAKPOINT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MANUAL_BREAKPOINT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MANUAL_BREAKPOINT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MANUAL_BREAKPOINT_R = crate::BitReader<bool>;
 #[doc = "Field `breakpoint_2` reader - "]
-pub struct BREAKPOINT_2_R(crate::FieldReader<bool>);
-impl BREAKPOINT_2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BREAKPOINT_2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BREAKPOINT_2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BREAKPOINT_2_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -106,8 +54,5 @@ impl crate::Readable for STATUS_SPEC {
 }
 #[doc = "`reset()` method sets status to value 0"]
 impl crate::Resettable for STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -14,20 +14,7 @@ impl From<crate::R<HW_VERSION_0_SPEC>> for R {
     }
 }
 #[doc = "Field `HW_VERSION` reader - "]
-pub struct HW_VERSION_R(crate::FieldReader<u32>);
-impl HW_VERSION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        HW_VERSION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HW_VERSION_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HW_VERSION_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for HW_VERSION_0_SPEC {
 }
 #[doc = "`reset()` method sets HW_VERSION_0 to value 0x0001_0001"]
 impl crate::Resettable for HW_VERSION_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_0001
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_0001;
 }

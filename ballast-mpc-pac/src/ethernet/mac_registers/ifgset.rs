@@ -35,32 +35,9 @@ impl From<crate::W<IFGSET_SPEC>> for W {
     }
 }
 #[doc = "Field `IFGset` reader - RX_IFG_SET is used to set received frame gap. If the gap between two received packets is less than RX_IFG_SET,the second packet will be drop as an invalid frame."]
-pub struct IFGSET_R(crate::FieldReader<u8>);
-impl IFGSET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IFGSET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IFGSET_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IFGSET_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `IFGset` writer - RX_IFG_SET is used to set received frame gap. If the gap between two received packets is less than RX_IFG_SET,the second packet will be drop as an invalid frame."]
-pub struct IFGSET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IFGSET_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type IFGSET_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IFGSET_SPEC, u8, u8, 6, O>;
 impl R {
     #[doc = "Bits 0:5 - RX_IFG_SET is used to set received frame gap. If the gap between two received packets is less than RX_IFG_SET,the second packet will be drop as an invalid frame."]
     #[inline(always)]
@@ -71,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - RX_IFG_SET is used to set received frame gap. If the gap between two received packets is less than RX_IFG_SET,the second packet will be drop as an invalid frame."]
     #[inline(always)]
-    pub fn ifgset(&mut self) -> IFGSET_W {
-        IFGSET_W { w: self }
+    #[must_use]
+    pub fn ifgset(&mut self) -> IFGSET_W<0> {
+        IFGSET_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +71,10 @@ impl crate::Readable for IFGSET_SPEC {
 #[doc = "`write(|w| ..)` method takes [ifgset::W](W) writer structure"]
 impl crate::Writable for IFGSET_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IFGset to value 0x0c"]
 impl crate::Resettable for IFGSET_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0c
-    }
+    const RESET_VALUE: Self::Ux = 0x0c;
 }

@@ -34,8 +34,10 @@ impl From<crate::W<S_POINTER_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `PRODUCER` reader - "]
+pub type PRODUCER_R = crate::BitReader<PRODUCER_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PRODUCER_A {
     #[doc = "0: `0`"]
     GROUP_0 = 0,
@@ -48,14 +50,8 @@ impl From<PRODUCER_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `PRODUCER` reader - "]
-pub struct PRODUCER_R(crate::FieldReader<bool>);
 impl PRODUCER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRODUCER_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> PRODUCER_A {
         match self.bits {
@@ -66,31 +62,17 @@ impl PRODUCER_R {
     #[doc = "Checks if the value of the field is `GROUP_0`"]
     #[inline(always)]
     pub fn is_group_0(&self) -> bool {
-        **self == PRODUCER_A::GROUP_0
+        *self == PRODUCER_A::GROUP_0
     }
     #[doc = "Checks if the value of the field is `GROUP_1`"]
     #[inline(always)]
     pub fn is_group_1(&self) -> bool {
-        **self == PRODUCER_A::GROUP_1
-    }
-}
-impl core::ops::Deref for PRODUCER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == PRODUCER_A::GROUP_1
     }
 }
 #[doc = "Field `PRODUCER` writer - "]
-pub struct PRODUCER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRODUCER_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: PRODUCER_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type PRODUCER_W<'a, const O: u8> = crate::BitWriter<'a, u32, S_POINTER_SPEC, PRODUCER_A, O>;
+impl<'a, const O: u8> PRODUCER_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn group_0(self) -> &'a mut W {
@@ -101,25 +83,11 @@ impl<'a> PRODUCER_W<'a> {
     pub fn group_1(self) -> &'a mut W {
         self.variant(PRODUCER_A::GROUP_1)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
 }
+#[doc = "Field `CONSUMER` reader - "]
+pub type CONSUMER_R = crate::BitReader<CONSUMER_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CONSUMER_A {
     #[doc = "1: `1`"]
     GROUP_1 = 1,
@@ -132,14 +100,8 @@ impl From<CONSUMER_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `CONSUMER` reader - "]
-pub struct CONSUMER_R(crate::FieldReader<bool>);
 impl CONSUMER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CONSUMER_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CONSUMER_A {
         match self.bits {
@@ -150,19 +112,12 @@ impl CONSUMER_R {
     #[doc = "Checks if the value of the field is `GROUP_1`"]
     #[inline(always)]
     pub fn is_group_1(&self) -> bool {
-        **self == CONSUMER_A::GROUP_1
+        *self == CONSUMER_A::GROUP_1
     }
     #[doc = "Checks if the value of the field is `GROUP_0`"]
     #[inline(always)]
     pub fn is_group_0(&self) -> bool {
-        **self == CONSUMER_A::GROUP_0
-    }
-}
-impl core::ops::Deref for CONSUMER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CONSUMER_A::GROUP_0
     }
 }
 impl R {
@@ -180,8 +135,9 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn producer(&mut self) -> PRODUCER_W {
-        PRODUCER_W { w: self }
+    #[must_use]
+    pub fn producer(&mut self) -> PRODUCER_W<0> {
+        PRODUCER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -202,11 +158,10 @@ impl crate::Readable for S_POINTER_SPEC {
 #[doc = "`write(|w| ..)` method takes [s_pointer::W](W) writer structure"]
 impl crate::Writable for S_POINTER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets S_POINTER to value 0"]
 impl crate::Resettable for S_POINTER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
