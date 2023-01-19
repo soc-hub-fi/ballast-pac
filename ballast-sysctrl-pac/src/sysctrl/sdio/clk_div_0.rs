@@ -35,69 +35,13 @@ impl From<crate::W<CLK_DIV_0_SPEC>> for W {
     }
 }
 #[doc = "Field `Div_count` reader - "]
-pub struct DIV_COUNT_R(crate::FieldReader<u8>);
-impl DIV_COUNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DIV_COUNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIV_COUNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIV_COUNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `Div_count` writer - "]
-pub struct DIV_COUNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIV_COUNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type DIV_COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_DIV_0_SPEC, u8, u8, 8, O>;
 #[doc = "Field `Valid` reader - "]
-pub struct VALID_R(crate::FieldReader<bool>);
-impl VALID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VALID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VALID_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VALID_R = crate::BitReader<bool>;
 #[doc = "Field `Valid` writer - "]
-pub struct VALID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VALID_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type VALID_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_DIV_0_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -113,13 +57,15 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn div_count(&mut self) -> DIV_COUNT_W {
-        DIV_COUNT_W { w: self }
+    #[must_use]
+    pub fn div_count(&mut self) -> DIV_COUNT_W<0> {
+        DIV_COUNT_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn valid(&mut self) -> VALID_W {
-        VALID_W { w: self }
+    #[must_use]
+    pub fn valid(&mut self) -> VALID_W<8> {
+        VALID_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -140,11 +86,10 @@ impl crate::Readable for CLK_DIV_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [clk_div_0::W](W) writer structure"]
 impl crate::Writable for CLK_DIV_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLK_DIV_0 to value 0"]
 impl crate::Resettable for CLK_DIV_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -34,8 +34,10 @@ impl From<crate::W<D_DP_BS_MUL_CFG_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `BS_MUL_SRC` reader - "]
+pub type BS_MUL_SRC_R = crate::BitReader<BS_MUL_SRC_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BS_MUL_SRC_A {
     #[doc = "0: `0`"]
     REG = 0,
@@ -48,14 +50,8 @@ impl From<BS_MUL_SRC_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `BS_MUL_SRC` reader - "]
-pub struct BS_MUL_SRC_R(crate::FieldReader<bool>);
 impl BS_MUL_SRC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BS_MUL_SRC_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> BS_MUL_SRC_A {
         match self.bits {
@@ -66,31 +62,18 @@ impl BS_MUL_SRC_R {
     #[doc = "Checks if the value of the field is `REG`"]
     #[inline(always)]
     pub fn is_reg(&self) -> bool {
-        **self == BS_MUL_SRC_A::REG
+        *self == BS_MUL_SRC_A::REG
     }
     #[doc = "Checks if the value of the field is `MEM`"]
     #[inline(always)]
     pub fn is_mem(&self) -> bool {
-        **self == BS_MUL_SRC_A::MEM
-    }
-}
-impl core::ops::Deref for BS_MUL_SRC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == BS_MUL_SRC_A::MEM
     }
 }
 #[doc = "Field `BS_MUL_SRC` writer - "]
-pub struct BS_MUL_SRC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BS_MUL_SRC_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: BS_MUL_SRC_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type BS_MUL_SRC_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_DP_BS_MUL_CFG_SPEC, BS_MUL_SRC_A, O>;
+impl<'a, const O: u8> BS_MUL_SRC_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn reg(self) -> &'a mut W {
@@ -101,50 +84,12 @@ impl<'a> BS_MUL_SRC_W<'a> {
     pub fn mem(self) -> &'a mut W {
         self.variant(BS_MUL_SRC_A::MEM)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
 }
 #[doc = "Field `BS_MUL_SHIFT_VALUE` reader - "]
-pub struct BS_MUL_SHIFT_VALUE_R(crate::FieldReader<u8>);
-impl BS_MUL_SHIFT_VALUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BS_MUL_SHIFT_VALUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BS_MUL_SHIFT_VALUE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BS_MUL_SHIFT_VALUE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BS_MUL_SHIFT_VALUE` writer - "]
-pub struct BS_MUL_SHIFT_VALUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BS_MUL_SHIFT_VALUE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type BS_MUL_SHIFT_VALUE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_DP_BS_MUL_CFG_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -160,13 +105,15 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn bs_mul_src(&mut self) -> BS_MUL_SRC_W {
-        BS_MUL_SRC_W { w: self }
+    #[must_use]
+    pub fn bs_mul_src(&mut self) -> BS_MUL_SRC_W<0> {
+        BS_MUL_SRC_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn bs_mul_shift_value(&mut self) -> BS_MUL_SHIFT_VALUE_W {
-        BS_MUL_SHIFT_VALUE_W { w: self }
+    #[must_use]
+    pub fn bs_mul_shift_value(&mut self) -> BS_MUL_SHIFT_VALUE_W<8> {
+        BS_MUL_SHIFT_VALUE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -187,11 +134,10 @@ impl crate::Readable for D_DP_BS_MUL_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_dp_bs_mul_cfg::W](W) writer structure"]
 impl crate::Writable for D_DP_BS_MUL_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_DP_BS_MUL_CFG to value 0"]
 impl crate::Resettable for D_DP_BS_MUL_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -35,32 +35,10 @@ impl From<crate::W<D_OPERATION_MODE_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `SPLIT_NUM` reader - "]
-pub struct SPLIT_NUM_R(crate::FieldReader<u8>);
-impl SPLIT_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPLIT_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPLIT_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPLIT_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPLIT_NUM` writer - "]
-pub struct SPLIT_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPLIT_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type SPLIT_NUM_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_OPERATION_MODE_CFG_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -71,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn split_num(&mut self) -> SPLIT_NUM_W {
-        SPLIT_NUM_W { w: self }
+    #[must_use]
+    pub fn split_num(&mut self) -> SPLIT_NUM_W<0> {
+        SPLIT_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +72,10 @@ impl crate::Readable for D_OPERATION_MODE_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_operation_mode_cfg::W](W) writer structure"]
 impl crate::Writable for D_OPERATION_MODE_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_OPERATION_MODE_CFG to value 0"]
 impl crate::Resettable for D_OPERATION_MODE_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

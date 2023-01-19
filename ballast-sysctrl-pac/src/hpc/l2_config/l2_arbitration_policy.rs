@@ -35,32 +35,10 @@ impl From<crate::W<L2_ARBITRATION_POLICY_SPEC>> for W {
     }
 }
 #[doc = "Field `l2_arbitration_policy` reader - "]
-pub struct L2_ARBITRATION_POLICY_R(crate::FieldReader<u64>);
-impl L2_ARBITRATION_POLICY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u64) -> Self {
-        L2_ARBITRATION_POLICY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for L2_ARBITRATION_POLICY_R {
-    type Target = crate::FieldReader<u64>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type L2_ARBITRATION_POLICY_R = crate::FieldReader<u64, u64>;
 #[doc = "Field `l2_arbitration_policy` writer - "]
-pub struct L2_ARBITRATION_POLICY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> L2_ARBITRATION_POLICY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u64) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type L2_ARBITRATION_POLICY_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u64, L2_ARBITRATION_POLICY_SPEC, u64, u64, 64, O>;
 impl R {
     #[doc = "Bits 0:63"]
     #[inline(always)]
@@ -71,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:63"]
     #[inline(always)]
-    pub fn l2_arbitration_policy(&mut self) -> L2_ARBITRATION_POLICY_W {
-        L2_ARBITRATION_POLICY_W { w: self }
+    #[must_use]
+    pub fn l2_arbitration_policy(&mut self) -> L2_ARBITRATION_POLICY_W<0> {
+        L2_ARBITRATION_POLICY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +72,10 @@ impl crate::Readable for L2_ARBITRATION_POLICY_SPEC {
 #[doc = "`write(|w| ..)` method takes [l2_arbitration_policy::W](W) writer structure"]
 impl crate::Writable for L2_ARBITRATION_POLICY_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets l2_arbitration_policy to value 0"]
 impl crate::Resettable for L2_ARBITRATION_POLICY_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

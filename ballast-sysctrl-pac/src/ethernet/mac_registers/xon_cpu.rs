@@ -35,42 +35,9 @@ impl From<crate::W<XON_CPU_SPEC>> for W {
     }
 }
 #[doc = "Field `xon_cpu` reader - The rising pulse of xon_cpu signal is used to start transmit one PAUSE frame with quanta value of pause_quanta_set when the transmit in idle state."]
-pub struct XON_CPU_R(crate::FieldReader<bool>);
-impl XON_CPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XON_CPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XON_CPU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XON_CPU_R = crate::BitReader<bool>;
 #[doc = "Field `xon_cpu` writer - The rising pulse of xon_cpu signal is used to start transmit one PAUSE frame with quanta value of pause_quanta_set when the transmit in idle state."]
-pub struct XON_CPU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XON_CPU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type XON_CPU_W<'a, const O: u8> = crate::BitWriter<'a, u32, XON_CPU_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - The rising pulse of xon_cpu signal is used to start transmit one PAUSE frame with quanta value of pause_quanta_set when the transmit in idle state."]
     #[inline(always)]
@@ -81,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The rising pulse of xon_cpu signal is used to start transmit one PAUSE frame with quanta value of pause_quanta_set when the transmit in idle state."]
     #[inline(always)]
-    pub fn xon_cpu(&mut self) -> XON_CPU_W {
-        XON_CPU_W { w: self }
+    #[must_use]
+    pub fn xon_cpu(&mut self) -> XON_CPU_W<0> {
+        XON_CPU_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +71,10 @@ impl crate::Readable for XON_CPU_SPEC {
 #[doc = "`write(|w| ..)` method takes [xon_cpu::W](W) writer structure"]
 impl crate::Writable for XON_CPU_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets xon_cpu to value 0"]
 impl crate::Resettable for XON_CPU_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

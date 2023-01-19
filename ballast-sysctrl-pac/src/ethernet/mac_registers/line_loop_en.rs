@@ -35,42 +35,9 @@ impl From<crate::W<LINE_LOOP_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `Line_loop_en` reader - If Line_loop_en =1 , the packet transmited to Phy will loopback to receive side. This function is used for test purpose."]
-pub struct LINE_LOOP_EN_R(crate::FieldReader<bool>);
-impl LINE_LOOP_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LINE_LOOP_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LINE_LOOP_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LINE_LOOP_EN_R = crate::BitReader<bool>;
 #[doc = "Field `Line_loop_en` writer - If Line_loop_en =1 , the packet transmited to Phy will loopback to receive side. This function is used for test purpose."]
-pub struct LINE_LOOP_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LINE_LOOP_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type LINE_LOOP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LINE_LOOP_EN_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - If Line_loop_en =1 , the packet transmited to Phy will loopback to receive side. This function is used for test purpose."]
     #[inline(always)]
@@ -81,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bit 0 - If Line_loop_en =1 , the packet transmited to Phy will loopback to receive side. This function is used for test purpose."]
     #[inline(always)]
-    pub fn line_loop_en(&mut self) -> LINE_LOOP_EN_W {
-        LINE_LOOP_EN_W { w: self }
+    #[must_use]
+    pub fn line_loop_en(&mut self) -> LINE_LOOP_EN_W<0> {
+        LINE_LOOP_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +71,10 @@ impl crate::Readable for LINE_LOOP_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [line_loop_en::W](W) writer structure"]
 impl crate::Writable for LINE_LOOP_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets Line_loop_en to value 0"]
 impl crate::Resettable for LINE_LOOP_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

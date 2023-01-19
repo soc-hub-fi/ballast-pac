@@ -34,8 +34,10 @@ impl From<crate::W<D_DST_DMA_CFG_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `DST_RAM_TYPE` reader - "]
+pub type DST_RAM_TYPE_R = crate::BitReader<DST_RAM_TYPE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DST_RAM_TYPE_A {
     #[doc = "0: `0`"]
     CV = 0,
@@ -48,14 +50,8 @@ impl From<DST_RAM_TYPE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `DST_RAM_TYPE` reader - "]
-pub struct DST_RAM_TYPE_R(crate::FieldReader<bool>);
 impl DST_RAM_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DST_RAM_TYPE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> DST_RAM_TYPE_A {
         match self.bits {
@@ -66,31 +62,18 @@ impl DST_RAM_TYPE_R {
     #[doc = "Checks if the value of the field is `CV`"]
     #[inline(always)]
     pub fn is_cv(&self) -> bool {
-        **self == DST_RAM_TYPE_A::CV
+        *self == DST_RAM_TYPE_A::CV
     }
     #[doc = "Checks if the value of the field is `MC`"]
     #[inline(always)]
     pub fn is_mc(&self) -> bool {
-        **self == DST_RAM_TYPE_A::MC
-    }
-}
-impl core::ops::Deref for DST_RAM_TYPE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == DST_RAM_TYPE_A::MC
     }
 }
 #[doc = "Field `DST_RAM_TYPE` writer - "]
-pub struct DST_RAM_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DST_RAM_TYPE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: DST_RAM_TYPE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type DST_RAM_TYPE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_DST_DMA_CFG_SPEC, DST_RAM_TYPE_A, O>;
+impl<'a, const O: u8> DST_RAM_TYPE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn cv(self) -> &'a mut W {
@@ -100,22 +83,6 @@ impl<'a> DST_RAM_TYPE_W<'a> {
     #[inline(always)]
     pub fn mc(self) -> &'a mut W {
         self.variant(DST_RAM_TYPE_A::MC)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
     }
 }
 impl R {
@@ -128,8 +95,9 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn dst_ram_type(&mut self) -> DST_RAM_TYPE_W {
-        DST_RAM_TYPE_W { w: self }
+    #[must_use]
+    pub fn dst_ram_type(&mut self) -> DST_RAM_TYPE_W<0> {
+        DST_RAM_TYPE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -150,11 +118,10 @@ impl crate::Readable for D_DST_DMA_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_dst_dma_cfg::W](W) writer structure"]
 impl crate::Writable for D_DST_DMA_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_DST_DMA_CFG to value 0"]
 impl crate::Resettable for D_DST_DMA_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

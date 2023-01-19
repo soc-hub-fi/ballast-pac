@@ -35,65 +35,13 @@ impl From<crate::W<CFG_RD_WEIGHT_0_SPEC>> for W {
     }
 }
 #[doc = "Field `RD_WEIGHT_BDMA` reader - "]
-pub struct RD_WEIGHT_BDMA_R(crate::FieldReader<u8>);
-impl RD_WEIGHT_BDMA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_WEIGHT_BDMA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_WEIGHT_BDMA_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_WEIGHT_BDMA_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RD_WEIGHT_SDP` reader - "]
-pub struct RD_WEIGHT_SDP_R(crate::FieldReader<u8>);
-impl RD_WEIGHT_SDP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_WEIGHT_SDP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_WEIGHT_SDP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_WEIGHT_SDP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RD_WEIGHT_PDP` reader - "]
-pub struct RD_WEIGHT_PDP_R(crate::FieldReader<u8>);
-impl RD_WEIGHT_PDP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_WEIGHT_PDP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_WEIGHT_PDP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_WEIGHT_PDP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RD_WEIGHT_CDP` reader - "]
-pub struct RD_WEIGHT_CDP_R(crate::FieldReader<u8>);
-impl RD_WEIGHT_CDP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_WEIGHT_CDP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_WEIGHT_CDP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_WEIGHT_CDP_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -136,11 +84,10 @@ impl crate::Readable for CFG_RD_WEIGHT_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [cfg_rd_weight_0::W](W) writer structure"]
 impl crate::Writable for CFG_RD_WEIGHT_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CFG_RD_WEIGHT_0 to value 0x0100_0100"]
 impl crate::Resettable for CFG_RD_WEIGHT_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0100_0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0100_0100;
 }

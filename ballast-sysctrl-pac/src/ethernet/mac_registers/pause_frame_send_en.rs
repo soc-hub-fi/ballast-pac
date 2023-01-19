@@ -35,42 +35,10 @@ impl From<crate::W<PAUSE_FRAME_SEND_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `pause_frame_send_en` reader - pause_frame_send_en register is used to enable transmit logic to send PAUSE frame."]
-pub struct PAUSE_FRAME_SEND_EN_R(crate::FieldReader<bool>);
-impl PAUSE_FRAME_SEND_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAUSE_FRAME_SEND_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAUSE_FRAME_SEND_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAUSE_FRAME_SEND_EN_R = crate::BitReader<bool>;
 #[doc = "Field `pause_frame_send_en` writer - pause_frame_send_en register is used to enable transmit logic to send PAUSE frame."]
-pub struct PAUSE_FRAME_SEND_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAUSE_FRAME_SEND_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PAUSE_FRAME_SEND_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, PAUSE_FRAME_SEND_EN_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - pause_frame_send_en register is used to enable transmit logic to send PAUSE frame."]
     #[inline(always)]
@@ -81,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bit 0 - pause_frame_send_en register is used to enable transmit logic to send PAUSE frame."]
     #[inline(always)]
-    pub fn pause_frame_send_en(&mut self) -> PAUSE_FRAME_SEND_EN_W {
-        PAUSE_FRAME_SEND_EN_W { w: self }
+    #[must_use]
+    pub fn pause_frame_send_en(&mut self) -> PAUSE_FRAME_SEND_EN_W<0> {
+        PAUSE_FRAME_SEND_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +72,10 @@ impl crate::Readable for PAUSE_FRAME_SEND_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [pause_frame_send_en::W](W) writer structure"]
 impl crate::Writable for PAUSE_FRAME_SEND_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets pause_frame_send_en to value 0"]
 impl crate::Resettable for PAUSE_FRAME_SEND_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

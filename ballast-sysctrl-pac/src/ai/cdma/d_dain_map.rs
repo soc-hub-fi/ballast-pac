@@ -34,8 +34,10 @@ impl From<crate::W<D_DAIN_MAP_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `LINE_PACKED` reader - "]
+pub type LINE_PACKED_R = crate::BitReader<LINE_PACKED_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum LINE_PACKED_A {
     #[doc = "0: `0`"]
     FALSE = 0,
@@ -48,14 +50,8 @@ impl From<LINE_PACKED_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `LINE_PACKED` reader - "]
-pub struct LINE_PACKED_R(crate::FieldReader<bool>);
 impl LINE_PACKED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LINE_PACKED_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> LINE_PACKED_A {
         match self.bits {
@@ -66,31 +62,18 @@ impl LINE_PACKED_R {
     #[doc = "Checks if the value of the field is `FALSE`"]
     #[inline(always)]
     pub fn is_false(&self) -> bool {
-        **self == LINE_PACKED_A::FALSE
+        *self == LINE_PACKED_A::FALSE
     }
     #[doc = "Checks if the value of the field is `TRUE`"]
     #[inline(always)]
     pub fn is_true(&self) -> bool {
-        **self == LINE_PACKED_A::TRUE
-    }
-}
-impl core::ops::Deref for LINE_PACKED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == LINE_PACKED_A::TRUE
     }
 }
 #[doc = "Field `LINE_PACKED` writer - "]
-pub struct LINE_PACKED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LINE_PACKED_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: LINE_PACKED_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type LINE_PACKED_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_DAIN_MAP_SPEC, LINE_PACKED_A, O>;
+impl<'a, const O: u8> LINE_PACKED_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn false_(self) -> &'a mut W {
@@ -101,25 +84,11 @@ impl<'a> LINE_PACKED_W<'a> {
     pub fn true_(self) -> &'a mut W {
         self.variant(LINE_PACKED_A::TRUE)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
 }
+#[doc = "Field `SURF_PACKED` reader - "]
+pub type SURF_PACKED_R = crate::BitReader<SURF_PACKED_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SURF_PACKED_A {
     #[doc = "1: `1`"]
     TRUE = 1,
@@ -132,14 +101,8 @@ impl From<SURF_PACKED_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `SURF_PACKED` reader - "]
-pub struct SURF_PACKED_R(crate::FieldReader<bool>);
 impl SURF_PACKED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SURF_PACKED_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> SURF_PACKED_A {
         match self.bits {
@@ -150,31 +113,18 @@ impl SURF_PACKED_R {
     #[doc = "Checks if the value of the field is `TRUE`"]
     #[inline(always)]
     pub fn is_true(&self) -> bool {
-        **self == SURF_PACKED_A::TRUE
+        *self == SURF_PACKED_A::TRUE
     }
     #[doc = "Checks if the value of the field is `FALSE`"]
     #[inline(always)]
     pub fn is_false(&self) -> bool {
-        **self == SURF_PACKED_A::FALSE
-    }
-}
-impl core::ops::Deref for SURF_PACKED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == SURF_PACKED_A::FALSE
     }
 }
 #[doc = "Field `SURF_PACKED` writer - "]
-pub struct SURF_PACKED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SURF_PACKED_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SURF_PACKED_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type SURF_PACKED_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_DAIN_MAP_SPEC, SURF_PACKED_A, O>;
+impl<'a, const O: u8> SURF_PACKED_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn true_(self) -> &'a mut W {
@@ -184,22 +134,6 @@ impl<'a> SURF_PACKED_W<'a> {
     #[inline(always)]
     pub fn false_(self) -> &'a mut W {
         self.variant(SURF_PACKED_A::FALSE)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
     }
 }
 impl R {
@@ -217,13 +151,15 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn line_packed(&mut self) -> LINE_PACKED_W {
-        LINE_PACKED_W { w: self }
+    #[must_use]
+    pub fn line_packed(&mut self) -> LINE_PACKED_W<0> {
+        LINE_PACKED_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn surf_packed(&mut self) -> SURF_PACKED_W {
-        SURF_PACKED_W { w: self }
+    #[must_use]
+    pub fn surf_packed(&mut self) -> SURF_PACKED_W<16> {
+        SURF_PACKED_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -244,11 +180,10 @@ impl crate::Readable for D_DAIN_MAP_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_dain_map::W](W) writer structure"]
 impl crate::Writable for D_DAIN_MAP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_DAIN_MAP to value 0"]
 impl crate::Resettable for D_DAIN_MAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -35,79 +35,13 @@ impl From<crate::W<MSIP_SPEC>> for W {
     }
 }
 #[doc = "Field `msip_0` reader - "]
-pub struct MSIP_0_R(crate::FieldReader<bool>);
-impl MSIP_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MSIP_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MSIP_0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MSIP_0_R = crate::BitReader<bool>;
 #[doc = "Field `msip_0` writer - "]
-pub struct MSIP_0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MSIP_0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u64 & 1);
-        self.w
-    }
-}
+pub type MSIP_0_W<'a, const O: u8> = crate::BitWriter<'a, u64, MSIP_SPEC, bool, O>;
 #[doc = "Field `msip_1` reader - "]
-pub struct MSIP_1_R(crate::FieldReader<bool>);
-impl MSIP_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MSIP_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MSIP_1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MSIP_1_R = crate::BitReader<bool>;
 #[doc = "Field `msip_1` writer - "]
-pub struct MSIP_1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MSIP_1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u64 & 1) << 4);
-        self.w
-    }
-}
+pub type MSIP_1_W<'a, const O: u8> = crate::BitWriter<'a, u64, MSIP_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -123,13 +57,15 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn msip_0(&mut self) -> MSIP_0_W {
-        MSIP_0_W { w: self }
+    #[must_use]
+    pub fn msip_0(&mut self) -> MSIP_0_W<0> {
+        MSIP_0_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn msip_1(&mut self) -> MSIP_1_W {
-        MSIP_1_W { w: self }
+    #[must_use]
+    pub fn msip_1(&mut self) -> MSIP_1_W<4> {
+        MSIP_1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -150,11 +86,10 @@ impl crate::Readable for MSIP_SPEC {
 #[doc = "`write(|w| ..)` method takes [msip::W](W) writer structure"]
 impl crate::Writable for MSIP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets msip to value 0"]
 impl crate::Resettable for MSIP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

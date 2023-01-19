@@ -35,32 +35,9 @@ impl From<crate::W<CNT_LO_SPEC>> for W {
     }
 }
 #[doc = "Field `CNT_LO` reader - "]
-pub struct CNT_LO_R(crate::FieldReader<u32>);
-impl CNT_LO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CNT_LO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CNT_LO_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CNT_LO_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CNT_LO` writer - "]
-pub struct CNT_LO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CNT_LO_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type CNT_LO_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CNT_LO_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -71,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn cnt_lo(&mut self) -> CNT_LO_W {
-        CNT_LO_W { w: self }
+    #[must_use]
+    pub fn cnt_lo(&mut self) -> CNT_LO_W<0> {
+        CNT_LO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +71,10 @@ impl crate::Readable for CNT_LO_SPEC {
 #[doc = "`write(|w| ..)` method takes [cnt_lo::W](W) writer structure"]
 impl crate::Writable for CNT_LO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CNT_LO to value 0"]
 impl crate::Resettable for CNT_LO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -37,34 +37,11 @@ impl From<crate::W<INTEN_00_31_SPEC>> for W {
 #[doc = "Field `INTEN` reader - Bit 31 - 0 INTEN (R/W) GPIO\\[31:0\\]
 interrupt enable configuration bitfield: - bit\\[i\\]=1b0: disable interrupt for GPIO\\[i\\]
 - bit\\[i\\]=1b1: enable interrupt for GPIO\\[i\\]"]
-pub struct INTEN_R(crate::FieldReader<u32>);
-impl INTEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        INTEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTEN_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `INTEN` writer - Bit 31 - 0 INTEN (R/W) GPIO\\[31:0\\]
 interrupt enable configuration bitfield: - bit\\[i\\]=1b0: disable interrupt for GPIO\\[i\\]
 - bit\\[i\\]=1b1: enable interrupt for GPIO\\[i\\]"]
-pub struct INTEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type INTEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, INTEN_00_31_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - Bit 31 - 0 INTEN (R/W) GPIO\\[31:0\\]
 interrupt enable configuration bitfield: - bit\\[i\\]=1b0: disable interrupt for GPIO\\[i\\]
@@ -79,8 +56,9 @@ impl W {
 interrupt enable configuration bitfield: - bit\\[i\\]=1b0: disable interrupt for GPIO\\[i\\]
 - bit\\[i\\]=1b1: enable interrupt for GPIO\\[i\\]"]
     #[inline(always)]
-    pub fn inten(&mut self) -> INTEN_W {
-        INTEN_W { w: self }
+    #[must_use]
+    pub fn inten(&mut self) -> INTEN_W<0> {
+        INTEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -101,11 +79,10 @@ impl crate::Readable for INTEN_00_31_SPEC {
 #[doc = "`write(|w| ..)` method takes [inten_00_31::W](W) writer structure"]
 impl crate::Writable for INTEN_00_31_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTEN_00_31 to value 0"]
 impl crate::Resettable for INTEN_00_31_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

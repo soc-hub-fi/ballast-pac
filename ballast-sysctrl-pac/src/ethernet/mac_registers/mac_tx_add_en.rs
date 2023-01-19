@@ -35,42 +35,9 @@ impl From<crate::W<MAC_TX_ADD_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `MAC_tx_add_en` reader - Those registers are used to set mac address which will replace the target mac address of transmit packet. This function will be enable one when register MAC_tx_add_en set to “1”. At the rising edge of signal MAC_tx_add_prom_wr, the value of MAC_tx_add_prom_data will be write to prom address MAC_tx_add_prom_add. You need repeat six times to write six bytes length target mac to prom."]
-pub struct MAC_TX_ADD_EN_R(crate::FieldReader<bool>);
-impl MAC_TX_ADD_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MAC_TX_ADD_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAC_TX_ADD_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAC_TX_ADD_EN_R = crate::BitReader<bool>;
 #[doc = "Field `MAC_tx_add_en` writer - Those registers are used to set mac address which will replace the target mac address of transmit packet. This function will be enable one when register MAC_tx_add_en set to “1”. At the rising edge of signal MAC_tx_add_prom_wr, the value of MAC_tx_add_prom_data will be write to prom address MAC_tx_add_prom_add. You need repeat six times to write six bytes length target mac to prom."]
-pub struct MAC_TX_ADD_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MAC_TX_ADD_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type MAC_TX_ADD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MAC_TX_ADD_EN_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Those registers are used to set mac address which will replace the target mac address of transmit packet. This function will be enable one when register MAC_tx_add_en set to “1”. At the rising edge of signal MAC_tx_add_prom_wr, the value of MAC_tx_add_prom_data will be write to prom address MAC_tx_add_prom_add. You need repeat six times to write six bytes length target mac to prom."]
     #[inline(always)]
@@ -81,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Those registers are used to set mac address which will replace the target mac address of transmit packet. This function will be enable one when register MAC_tx_add_en set to “1”. At the rising edge of signal MAC_tx_add_prom_wr, the value of MAC_tx_add_prom_data will be write to prom address MAC_tx_add_prom_add. You need repeat six times to write six bytes length target mac to prom."]
     #[inline(always)]
-    pub fn mac_tx_add_en(&mut self) -> MAC_TX_ADD_EN_W {
-        MAC_TX_ADD_EN_W { w: self }
+    #[must_use]
+    pub fn mac_tx_add_en(&mut self) -> MAC_TX_ADD_EN_W<0> {
+        MAC_TX_ADD_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +71,10 @@ impl crate::Readable for MAC_TX_ADD_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [mac_tx_add_en::W](W) writer structure"]
 impl crate::Writable for MAC_TX_ADD_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MAC_tx_add_en to value 0"]
 impl crate::Resettable for MAC_TX_ADD_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

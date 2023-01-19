@@ -14,20 +14,7 @@ impl From<crate::R<D_PERF_WT_READ_LATENCY_SPEC>> for R {
     }
 }
 #[doc = "Field `WT_RD_LATENCY` reader - "]
-pub struct WT_RD_LATENCY_R(crate::FieldReader<u32>);
-impl WT_RD_LATENCY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        WT_RD_LATENCY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WT_RD_LATENCY_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WT_RD_LATENCY_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for D_PERF_WT_READ_LATENCY_SPEC {
 }
 #[doc = "`reset()` method sets D_PERF_WT_READ_LATENCY to value 0"]
 impl crate::Resettable for D_PERF_WT_READ_LATENCY_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

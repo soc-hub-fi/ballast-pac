@@ -34,8 +34,10 @@ impl From<crate::W<D_DP_EW_ALU_CFG_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `EW_ALU_SRC` reader - "]
+pub type EW_ALU_SRC_R = crate::BitReader<EW_ALU_SRC_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum EW_ALU_SRC_A {
     #[doc = "0: `0`"]
     REG = 0,
@@ -48,14 +50,8 @@ impl From<EW_ALU_SRC_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `EW_ALU_SRC` reader - "]
-pub struct EW_ALU_SRC_R(crate::FieldReader<bool>);
 impl EW_ALU_SRC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EW_ALU_SRC_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> EW_ALU_SRC_A {
         match self.bits {
@@ -66,31 +62,18 @@ impl EW_ALU_SRC_R {
     #[doc = "Checks if the value of the field is `REG`"]
     #[inline(always)]
     pub fn is_reg(&self) -> bool {
-        **self == EW_ALU_SRC_A::REG
+        *self == EW_ALU_SRC_A::REG
     }
     #[doc = "Checks if the value of the field is `MEM`"]
     #[inline(always)]
     pub fn is_mem(&self) -> bool {
-        **self == EW_ALU_SRC_A::MEM
-    }
-}
-impl core::ops::Deref for EW_ALU_SRC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == EW_ALU_SRC_A::MEM
     }
 }
 #[doc = "Field `EW_ALU_SRC` writer - "]
-pub struct EW_ALU_SRC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EW_ALU_SRC_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: EW_ALU_SRC_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type EW_ALU_SRC_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_DP_EW_ALU_CFG_SPEC, EW_ALU_SRC_A, O>;
+impl<'a, const O: u8> EW_ALU_SRC_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn reg(self) -> &'a mut W {
@@ -101,25 +84,11 @@ impl<'a> EW_ALU_SRC_W<'a> {
     pub fn mem(self) -> &'a mut W {
         self.variant(EW_ALU_SRC_A::MEM)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
 }
+#[doc = "Field `EW_ALU_CVT_BYPASS` reader - "]
+pub type EW_ALU_CVT_BYPASS_R = crate::BitReader<EW_ALU_CVT_BYPASS_A>;
 #[doc = "\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum EW_ALU_CVT_BYPASS_A {
     #[doc = "1: `1`"]
     YES = 1,
@@ -132,14 +101,8 @@ impl From<EW_ALU_CVT_BYPASS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `EW_ALU_CVT_BYPASS` reader - "]
-pub struct EW_ALU_CVT_BYPASS_R(crate::FieldReader<bool>);
 impl EW_ALU_CVT_BYPASS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EW_ALU_CVT_BYPASS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> EW_ALU_CVT_BYPASS_A {
         match self.bits {
@@ -150,31 +113,18 @@ impl EW_ALU_CVT_BYPASS_R {
     #[doc = "Checks if the value of the field is `YES`"]
     #[inline(always)]
     pub fn is_yes(&self) -> bool {
-        **self == EW_ALU_CVT_BYPASS_A::YES
+        *self == EW_ALU_CVT_BYPASS_A::YES
     }
     #[doc = "Checks if the value of the field is `NO`"]
     #[inline(always)]
     pub fn is_no(&self) -> bool {
-        **self == EW_ALU_CVT_BYPASS_A::NO
-    }
-}
-impl core::ops::Deref for EW_ALU_CVT_BYPASS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == EW_ALU_CVT_BYPASS_A::NO
     }
 }
 #[doc = "Field `EW_ALU_CVT_BYPASS` writer - "]
-pub struct EW_ALU_CVT_BYPASS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EW_ALU_CVT_BYPASS_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: EW_ALU_CVT_BYPASS_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type EW_ALU_CVT_BYPASS_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_DP_EW_ALU_CFG_SPEC, EW_ALU_CVT_BYPASS_A, O>;
+impl<'a, const O: u8> EW_ALU_CVT_BYPASS_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn yes(self) -> &'a mut W {
@@ -184,22 +134,6 @@ impl<'a> EW_ALU_CVT_BYPASS_W<'a> {
     #[inline(always)]
     pub fn no(self) -> &'a mut W {
         self.variant(EW_ALU_CVT_BYPASS_A::NO)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
     }
 }
 impl R {
@@ -217,13 +151,15 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn ew_alu_src(&mut self) -> EW_ALU_SRC_W {
-        EW_ALU_SRC_W { w: self }
+    #[must_use]
+    pub fn ew_alu_src(&mut self) -> EW_ALU_SRC_W<0> {
+        EW_ALU_SRC_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn ew_alu_cvt_bypass(&mut self) -> EW_ALU_CVT_BYPASS_W {
-        EW_ALU_CVT_BYPASS_W { w: self }
+    #[must_use]
+    pub fn ew_alu_cvt_bypass(&mut self) -> EW_ALU_CVT_BYPASS_W<1> {
+        EW_ALU_CVT_BYPASS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -244,11 +180,10 @@ impl crate::Readable for D_DP_EW_ALU_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_dp_ew_alu_cfg::W](W) writer structure"]
 impl crate::Writable for D_DP_EW_ALU_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_DP_EW_ALU_CFG to value 0x02"]
 impl crate::Resettable for D_DP_EW_ALU_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x02
-    }
+    const RESET_VALUE: Self::Ux = 0x02;
 }

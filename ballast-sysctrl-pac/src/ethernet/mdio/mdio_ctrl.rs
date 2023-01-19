@@ -35,116 +35,17 @@ impl From<crate::W<MDIO_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `no_preample` reader - Bit 0 - No Preamble: When this bit is unset, read or write operations start with a 32-bit preamble. When it is set, preamble is not used."]
-pub struct NO_PREAMPLE_R(crate::FieldReader<bool>);
-impl NO_PREAMPLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NO_PREAMPLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NO_PREAMPLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NO_PREAMPLE_R = crate::BitReader<bool>;
 #[doc = "Field `no_preample` writer - Bit 0 - No Preamble: When this bit is unset, read or write operations start with a 32-bit preamble. When it is set, preamble is not used."]
-pub struct NO_PREAMPLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NO_PREAMPLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type NO_PREAMPLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MDIO_CTRL_SPEC, bool, O>;
 #[doc = "Field `start_write` reader - Bit 1 - Start Write: When this bit is set, MDIO logic starts a write operation with above write data, PHY and register addresses. This bit is automatically unset when the operation starts."]
-pub struct START_WRITE_R(crate::FieldReader<bool>);
-impl START_WRITE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        START_WRITE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for START_WRITE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type START_WRITE_R = crate::BitReader<bool>;
 #[doc = "Field `start_write` writer - Bit 1 - Start Write: When this bit is set, MDIO logic starts a write operation with above write data, PHY and register addresses. This bit is automatically unset when the operation starts."]
-pub struct START_WRITE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> START_WRITE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type START_WRITE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MDIO_CTRL_SPEC, bool, O>;
 #[doc = "Field `start_read` reader - Bit 2 - Start Read: When this bit is set, MDIO logic starts a read operations with above PHY and register addresses. This bit is automatically unset when the operation starts."]
-pub struct START_READ_R(crate::FieldReader<bool>);
-impl START_READ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        START_READ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for START_READ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type START_READ_R = crate::BitReader<bool>;
 #[doc = "Field `start_read` writer - Bit 2 - Start Read: When this bit is set, MDIO logic starts a read operations with above PHY and register addresses. This bit is automatically unset when the operation starts."]
-pub struct START_READ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> START_READ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type START_READ_W<'a, const O: u8> = crate::BitWriter<'a, u32, MDIO_CTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Bit 0 - No Preamble: When this bit is unset, read or write operations start with a 32-bit preamble. When it is set, preamble is not used."]
     #[inline(always)]
@@ -165,18 +66,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Bit 0 - No Preamble: When this bit is unset, read or write operations start with a 32-bit preamble. When it is set, preamble is not used."]
     #[inline(always)]
-    pub fn no_preample(&mut self) -> NO_PREAMPLE_W {
-        NO_PREAMPLE_W { w: self }
+    #[must_use]
+    pub fn no_preample(&mut self) -> NO_PREAMPLE_W<0> {
+        NO_PREAMPLE_W::new(self)
     }
     #[doc = "Bit 1 - Bit 1 - Start Write: When this bit is set, MDIO logic starts a write operation with above write data, PHY and register addresses. This bit is automatically unset when the operation starts."]
     #[inline(always)]
-    pub fn start_write(&mut self) -> START_WRITE_W {
-        START_WRITE_W { w: self }
+    #[must_use]
+    pub fn start_write(&mut self) -> START_WRITE_W<1> {
+        START_WRITE_W::new(self)
     }
     #[doc = "Bit 2 - Bit 2 - Start Read: When this bit is set, MDIO logic starts a read operations with above PHY and register addresses. This bit is automatically unset when the operation starts."]
     #[inline(always)]
-    pub fn start_read(&mut self) -> START_READ_W {
-        START_READ_W { w: self }
+    #[must_use]
+    pub fn start_read(&mut self) -> START_READ_W<2> {
+        START_READ_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -197,11 +101,10 @@ impl crate::Readable for MDIO_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [mdio_ctrl::W](W) writer structure"]
 impl crate::Writable for MDIO_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MDIO_Ctrl to value 0"]
 impl crate::Resettable for MDIO_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

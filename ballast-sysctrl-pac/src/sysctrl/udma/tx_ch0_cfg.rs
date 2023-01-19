@@ -34,8 +34,10 @@ impl From<crate::W<TX_CH0_CFG_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `SIZE` reader - Data transfer format: - 2'b00: 8-bit - 2'b01:16-bit - 2;b10:32-bit"]
+pub type SIZE_R = crate::FieldReader<u8, SIZE_A>;
 #[doc = "Data transfer format: - 2'b00: 8-bit - 2'b01:16-bit - 2;b10:32-bit\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SIZE_A {
     #[doc = "0: `0`"]
@@ -51,14 +53,8 @@ impl From<SIZE_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `SIZE` reader - Data transfer format: - 2'b00: 8-bit - 2'b01:16-bit - 2;b10:32-bit"]
-pub struct SIZE_R(crate::FieldReader<u8>);
 impl SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SIZE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<SIZE_A> {
         match self.bits {
@@ -71,36 +67,22 @@ impl SIZE_R {
     #[doc = "Checks if the value of the field is `_8BITS`"]
     #[inline(always)]
     pub fn is_8bits(&self) -> bool {
-        **self == SIZE_A::_8BITS
+        *self == SIZE_A::_8BITS
     }
     #[doc = "Checks if the value of the field is `_16BITS`"]
     #[inline(always)]
     pub fn is_16bits(&self) -> bool {
-        **self == SIZE_A::_16BITS
+        *self == SIZE_A::_16BITS
     }
     #[doc = "Checks if the value of the field is `_32BITS`"]
     #[inline(always)]
     pub fn is_32bits(&self) -> bool {
-        **self == SIZE_A::_32BITS
-    }
-}
-impl core::ops::Deref for SIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == SIZE_A::_32BITS
     }
 }
 #[doc = "Field `SIZE` writer - Data transfer format: - 2'b00: 8-bit - 2'b01:16-bit - 2;b10:32-bit"]
-pub struct SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SIZE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SIZE_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TX_CH0_CFG_SPEC, u8, SIZE_A, 2, O>;
+impl<'a, const O: u8> SIZE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn _8bits(self) -> &'a mut W {
@@ -116,15 +98,11 @@ impl<'a> SIZE_W<'a> {
     pub fn _32bits(self) -> &'a mut W {
         self.variant(SIZE_A::_32BITS)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
 }
+#[doc = "Field `MODE` reader - Data transfer mode: - 2'b00: Linear - 2'b01: Sliding - 2;b10:Circular - 2;b11:2D"]
+pub type MODE_R = crate::FieldReader<u8, MODE_A>;
 #[doc = "Data transfer mode: - 2'b00: Linear - 2'b01: Sliding - 2;b10:Circular - 2;b11:2D\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum MODE_A {
     #[doc = "0: `0`"]
@@ -142,14 +120,8 @@ impl From<MODE_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `MODE` reader - Data transfer mode: - 2'b00: Linear - 2'b01: Sliding - 2;b10:Circular - 2;b11:2D"]
-pub struct MODE_R(crate::FieldReader<u8>);
 impl MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MODE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> MODE_A {
         match self.bits {
@@ -163,41 +135,28 @@ impl MODE_R {
     #[doc = "Checks if the value of the field is `LINEAR`"]
     #[inline(always)]
     pub fn is_linear(&self) -> bool {
-        **self == MODE_A::LINEAR
+        *self == MODE_A::LINEAR
     }
     #[doc = "Checks if the value of the field is `SLIDING`"]
     #[inline(always)]
     pub fn is_sliding(&self) -> bool {
-        **self == MODE_A::SLIDING
+        *self == MODE_A::SLIDING
     }
     #[doc = "Checks if the value of the field is `CIRCULAR`"]
     #[inline(always)]
     pub fn is_circular(&self) -> bool {
-        **self == MODE_A::CIRCULAR
+        *self == MODE_A::CIRCULAR
     }
     #[doc = "Checks if the value of the field is `_2D`"]
     #[inline(always)]
     pub fn is_2d(&self) -> bool {
-        **self == MODE_A::_2D
-    }
-}
-impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == MODE_A::_2D
     }
 }
 #[doc = "Field `MODE` writer - Data transfer mode: - 2'b00: Linear - 2'b01: Sliding - 2;b10:Circular - 2;b11:2D"]
-pub struct MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MODE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: MODE_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type MODE_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u32, TX_CH0_CFG_SPEC, u8, MODE_A, 2, O>;
+impl<'a, const O: u8> MODE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn linear(self) -> &'a mut W {
@@ -218,12 +177,6 @@ impl<'a> MODE_W<'a> {
     pub fn _2d(self) -> &'a mut W {
         self.variant(MODE_A::_2D)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bits 0:1 - Data transfer format: - 2'b00: 8-bit - 2'b01:16-bit - 2;b10:32-bit"]
@@ -240,13 +193,15 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Data transfer format: - 2'b00: 8-bit - 2'b01:16-bit - 2;b10:32-bit"]
     #[inline(always)]
-    pub fn size(&mut self) -> SIZE_W {
-        SIZE_W { w: self }
+    #[must_use]
+    pub fn size(&mut self) -> SIZE_W<0> {
+        SIZE_W::new(self)
     }
     #[doc = "Bits 8:9 - Data transfer mode: - 2'b00: Linear - 2'b01: Sliding - 2;b10:Circular - 2;b11:2D"]
     #[inline(always)]
-    pub fn mode(&mut self) -> MODE_W {
-        MODE_W { w: self }
+    #[must_use]
+    pub fn mode(&mut self) -> MODE_W<8> {
+        MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -267,11 +222,10 @@ impl crate::Readable for TX_CH0_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [tx_ch0_cfg::W](W) writer structure"]
 impl crate::Writable for TX_CH0_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TX_CH0_CFG to value 0"]
 impl crate::Resettable for TX_CH0_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

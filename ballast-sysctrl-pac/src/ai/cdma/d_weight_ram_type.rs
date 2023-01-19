@@ -34,8 +34,10 @@ impl From<crate::W<D_WEIGHT_RAM_TYPE_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `WEIGHT_RAM_TYPE` reader - "]
+pub type WEIGHT_RAM_TYPE_R = crate::BitReader<WEIGHT_RAM_TYPE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum WEIGHT_RAM_TYPE_A {
     #[doc = "1: `1`"]
     MCIF = 1,
@@ -48,14 +50,8 @@ impl From<WEIGHT_RAM_TYPE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `WEIGHT_RAM_TYPE` reader - "]
-pub struct WEIGHT_RAM_TYPE_R(crate::FieldReader<bool>);
 impl WEIGHT_RAM_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WEIGHT_RAM_TYPE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> WEIGHT_RAM_TYPE_A {
         match self.bits {
@@ -66,31 +62,18 @@ impl WEIGHT_RAM_TYPE_R {
     #[doc = "Checks if the value of the field is `MCIF`"]
     #[inline(always)]
     pub fn is_mcif(&self) -> bool {
-        **self == WEIGHT_RAM_TYPE_A::MCIF
+        *self == WEIGHT_RAM_TYPE_A::MCIF
     }
     #[doc = "Checks if the value of the field is `CVIF`"]
     #[inline(always)]
     pub fn is_cvif(&self) -> bool {
-        **self == WEIGHT_RAM_TYPE_A::CVIF
-    }
-}
-impl core::ops::Deref for WEIGHT_RAM_TYPE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == WEIGHT_RAM_TYPE_A::CVIF
     }
 }
 #[doc = "Field `WEIGHT_RAM_TYPE` writer - "]
-pub struct WEIGHT_RAM_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WEIGHT_RAM_TYPE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: WEIGHT_RAM_TYPE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type WEIGHT_RAM_TYPE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_WEIGHT_RAM_TYPE_SPEC, WEIGHT_RAM_TYPE_A, O>;
+impl<'a, const O: u8> WEIGHT_RAM_TYPE_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn mcif(self) -> &'a mut W {
@@ -100,22 +83,6 @@ impl<'a> WEIGHT_RAM_TYPE_W<'a> {
     #[inline(always)]
     pub fn cvif(self) -> &'a mut W {
         self.variant(WEIGHT_RAM_TYPE_A::CVIF)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
     }
 }
 impl R {
@@ -128,8 +95,9 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn weight_ram_type(&mut self) -> WEIGHT_RAM_TYPE_W {
-        WEIGHT_RAM_TYPE_W { w: self }
+    #[must_use]
+    pub fn weight_ram_type(&mut self) -> WEIGHT_RAM_TYPE_W<0> {
+        WEIGHT_RAM_TYPE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -150,11 +118,10 @@ impl crate::Readable for D_WEIGHT_RAM_TYPE_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_weight_ram_type::W](W) writer structure"]
 impl crate::Writable for D_WEIGHT_RAM_TYPE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_WEIGHT_RAM_TYPE to value 0"]
 impl crate::Resettable for D_WEIGHT_RAM_TYPE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -14,20 +14,7 @@ impl From<crate::R<D_PERF_BRDMA_READ_STALL_SPEC>> for R {
     }
 }
 #[doc = "Field `BRDMA_STALL` reader - "]
-pub struct BRDMA_STALL_R(crate::FieldReader<u32>);
-impl BRDMA_STALL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        BRDMA_STALL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BRDMA_STALL_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BRDMA_STALL_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for D_PERF_BRDMA_READ_STALL_SPEC {
 }
 #[doc = "`reset()` method sets D_PERF_BRDMA_READ_STALL to value 0"]
 impl crate::Resettable for D_PERF_BRDMA_READ_STALL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

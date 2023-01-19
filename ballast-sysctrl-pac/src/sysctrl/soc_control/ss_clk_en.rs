@@ -35,338 +35,41 @@ impl From<crate::W<SS_CLK_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `pulpissimo` reader - Pulpissimo subsystem clock enable"]
-pub struct PULPISSIMO_R(crate::FieldReader<bool>);
-impl PULPISSIMO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PULPISSIMO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PULPISSIMO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PULPISSIMO_R = crate::BitReader<bool>;
 #[doc = "Field `pulpissimo` writer - Pulpissimo subsystem clock enable"]
-pub struct PULPISSIMO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PULPISSIMO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PULPISSIMO_W<'a, const O: u8> = crate::BitWriter<'a, u32, SS_CLK_EN_SPEC, bool, O>;
 #[doc = "Field `interconnect` reader - interconnect subsystem clock enable"]
-pub struct INTERCONNECT_R(crate::FieldReader<bool>);
-impl INTERCONNECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTERCONNECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERCONNECT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERCONNECT_R = crate::BitReader<bool>;
 #[doc = "Field `interconnect` writer - interconnect subsystem clock enable"]
-pub struct INTERCONNECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTERCONNECT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type INTERCONNECT_W<'a, const O: u8> = crate::BitWriter<'a, u32, SS_CLK_EN_SPEC, bool, O>;
 #[doc = "Field `top_peripheral` reader - Top Peripheral subsystem clock enable"]
-pub struct TOP_PERIPHERAL_R(crate::FieldReader<bool>);
-impl TOP_PERIPHERAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOP_PERIPHERAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOP_PERIPHERAL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOP_PERIPHERAL_R = crate::BitReader<bool>;
 #[doc = "Field `top_peripheral` writer - Top Peripheral subsystem clock enable"]
-pub struct TOP_PERIPHERAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOP_PERIPHERAL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type TOP_PERIPHERAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SS_CLK_EN_SPEC, bool, O>;
 #[doc = "Field `c2c` reader - C2C clock enable"]
-pub struct C2C_R(crate::FieldReader<bool>);
-impl C2C_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        C2C_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for C2C_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type C2C_R = crate::BitReader<bool>;
 #[doc = "Field `c2c` writer - C2C clock enable"]
-pub struct C2C_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> C2C_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type C2C_W<'a, const O: u8> = crate::BitWriter<'a, u32, SS_CLK_EN_SPEC, bool, O>;
 #[doc = "Field `core_hw` reader - coreHW subsystem clock enable"]
-pub struct CORE_HW_R(crate::FieldReader<bool>);
-impl CORE_HW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_HW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_HW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_HW_R = crate::BitReader<bool>;
 #[doc = "Field `core_hw` writer - coreHW subsystem clock enable"]
-pub struct CORE_HW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_HW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type CORE_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, SS_CLK_EN_SPEC, bool, O>;
 #[doc = "Field `TTA` reader - TTA subsystem clock enable"]
-pub struct TTA_R(crate::FieldReader<bool>);
-impl TTA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TTA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TTA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TTA_R = crate::BitReader<bool>;
 #[doc = "Field `TTA` writer - TTA subsystem clock enable"]
-pub struct TTA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TTA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type TTA_W<'a, const O: u8> = crate::BitWriter<'a, u32, SS_CLK_EN_SPEC, bool, O>;
 #[doc = "Field `ethernet` reader - Ethernet subsystem clock enable"]
-pub struct ETHERNET_R(crate::FieldReader<bool>);
-impl ETHERNET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ETHERNET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ETHERNET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ETHERNET_R = crate::BitReader<bool>;
 #[doc = "Field `ethernet` writer - Ethernet subsystem clock enable"]
-pub struct ETHERNET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ETHERNET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type ETHERNET_W<'a, const O: u8> = crate::BitWriter<'a, u32, SS_CLK_EN_SPEC, bool, O>;
 #[doc = "Field `AI` reader - AI subsystem clock enable"]
-pub struct AI_R(crate::FieldReader<bool>);
-impl AI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AI_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AI_R = crate::BitReader<bool>;
 #[doc = "Field `AI` writer - AI subsystem clock enable"]
-pub struct AI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AI_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type AI_W<'a, const O: u8> = crate::BitWriter<'a, u32, SS_CLK_EN_SPEC, bool, O>;
 #[doc = "Field `HPC` reader - HPC subsystem clock enable"]
-pub struct HPC_R(crate::FieldReader<bool>);
-impl HPC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HPC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HPC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HPC_R = crate::BitReader<bool>;
 #[doc = "Field `HPC` writer - HPC subsystem clock enable"]
-pub struct HPC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HPC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type HPC_W<'a, const O: u8> = crate::BitWriter<'a, u32, SS_CLK_EN_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Pulpissimo subsystem clock enable"]
     #[inline(always)]
@@ -417,48 +120,57 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Pulpissimo subsystem clock enable"]
     #[inline(always)]
-    pub fn pulpissimo(&mut self) -> PULPISSIMO_W {
-        PULPISSIMO_W { w: self }
+    #[must_use]
+    pub fn pulpissimo(&mut self) -> PULPISSIMO_W<0> {
+        PULPISSIMO_W::new(self)
     }
     #[doc = "Bit 4 - interconnect subsystem clock enable"]
     #[inline(always)]
-    pub fn interconnect(&mut self) -> INTERCONNECT_W {
-        INTERCONNECT_W { w: self }
+    #[must_use]
+    pub fn interconnect(&mut self) -> INTERCONNECT_W<4> {
+        INTERCONNECT_W::new(self)
     }
     #[doc = "Bit 7 - Top Peripheral subsystem clock enable"]
     #[inline(always)]
-    pub fn top_peripheral(&mut self) -> TOP_PERIPHERAL_W {
-        TOP_PERIPHERAL_W { w: self }
+    #[must_use]
+    pub fn top_peripheral(&mut self) -> TOP_PERIPHERAL_W<7> {
+        TOP_PERIPHERAL_W::new(self)
     }
     #[doc = "Bit 8 - C2C clock enable"]
     #[inline(always)]
-    pub fn c2c(&mut self) -> C2C_W {
-        C2C_W { w: self }
+    #[must_use]
+    pub fn c2c(&mut self) -> C2C_W<8> {
+        C2C_W::new(self)
     }
     #[doc = "Bit 12 - coreHW subsystem clock enable"]
     #[inline(always)]
-    pub fn core_hw(&mut self) -> CORE_HW_W {
-        CORE_HW_W { w: self }
+    #[must_use]
+    pub fn core_hw(&mut self) -> CORE_HW_W<12> {
+        CORE_HW_W::new(self)
     }
     #[doc = "Bit 16 - TTA subsystem clock enable"]
     #[inline(always)]
-    pub fn tta(&mut self) -> TTA_W {
-        TTA_W { w: self }
+    #[must_use]
+    pub fn tta(&mut self) -> TTA_W<16> {
+        TTA_W::new(self)
     }
     #[doc = "Bit 20 - Ethernet subsystem clock enable"]
     #[inline(always)]
-    pub fn ethernet(&mut self) -> ETHERNET_W {
-        ETHERNET_W { w: self }
+    #[must_use]
+    pub fn ethernet(&mut self) -> ETHERNET_W<20> {
+        ETHERNET_W::new(self)
     }
     #[doc = "Bit 24 - AI subsystem clock enable"]
     #[inline(always)]
-    pub fn ai(&mut self) -> AI_W {
-        AI_W { w: self }
+    #[must_use]
+    pub fn ai(&mut self) -> AI_W<24> {
+        AI_W::new(self)
     }
     #[doc = "Bit 28 - HPC subsystem clock enable"]
     #[inline(always)]
-    pub fn hpc(&mut self) -> HPC_W {
-        HPC_W { w: self }
+    #[must_use]
+    pub fn hpc(&mut self) -> HPC_W<28> {
+        HPC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -479,11 +191,10 @@ impl crate::Readable for SS_CLK_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [ss_clk_en::W](W) writer structure"]
 impl crate::Writable for SS_CLK_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SS_CLK_EN to value 0"]
 impl crate::Resettable for SS_CLK_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

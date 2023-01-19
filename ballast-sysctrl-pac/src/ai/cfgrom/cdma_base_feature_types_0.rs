@@ -14,20 +14,7 @@ impl From<crate::R<CDMA_BASE_FEATURE_TYPES_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CDMA_BASE_FEATURE_TYPES` reader - "]
-pub struct CDMA_BASE_FEATURE_TYPES_R(crate::FieldReader<u16>);
-impl CDMA_BASE_FEATURE_TYPES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CDMA_BASE_FEATURE_TYPES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CDMA_BASE_FEATURE_TYPES_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CDMA_BASE_FEATURE_TYPES_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for CDMA_BASE_FEATURE_TYPES_0_SPEC {
 }
 #[doc = "`reset()` method sets CDMA_BASE_FEATURE_TYPES_0 to value 0x10"]
 impl crate::Resettable for CDMA_BASE_FEATURE_TYPES_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x10
-    }
+    const RESET_VALUE: Self::Ux = 0x10;
 }

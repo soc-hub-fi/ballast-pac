@@ -35,42 +35,9 @@ impl From<crate::W<RESET_HI_SPEC>> for W {
     }
 }
 #[doc = "Field `RESET_HI` reader - "]
-pub struct RESET_HI_R(crate::FieldReader<bool>);
-impl RESET_HI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RESET_HI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESET_HI_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESET_HI_R = crate::BitReader<bool>;
 #[doc = "Field `RESET_HI` writer - "]
-pub struct RESET_HI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RESET_HI_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type RESET_HI_W<'a, const O: u8> = crate::BitWriter<'a, u32, RESET_HI_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -81,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn reset_hi(&mut self) -> RESET_HI_W {
-        RESET_HI_W { w: self }
+    #[must_use]
+    pub fn reset_hi(&mut self) -> RESET_HI_W<0> {
+        RESET_HI_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +71,10 @@ impl crate::Readable for RESET_HI_SPEC {
 #[doc = "`write(|w| ..)` method takes [reset_hi::W](W) writer structure"]
 impl crate::Writable for RESET_HI_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RESET_HI to value 0"]
 impl crate::Resettable for RESET_HI_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

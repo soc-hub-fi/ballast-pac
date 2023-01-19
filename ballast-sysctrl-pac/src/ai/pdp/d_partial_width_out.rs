@@ -35,86 +35,20 @@ impl From<crate::W<D_PARTIAL_WIDTH_OUT_SPEC>> for W {
     }
 }
 #[doc = "Field `PARTIAL_WIDTH_OUT_FIRST` reader - "]
-pub struct PARTIAL_WIDTH_OUT_FIRST_R(crate::FieldReader<u16>);
-impl PARTIAL_WIDTH_OUT_FIRST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PARTIAL_WIDTH_OUT_FIRST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PARTIAL_WIDTH_OUT_FIRST_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PARTIAL_WIDTH_OUT_FIRST_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PARTIAL_WIDTH_OUT_FIRST` writer - "]
-pub struct PARTIAL_WIDTH_OUT_FIRST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PARTIAL_WIDTH_OUT_FIRST_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
-        self.w
-    }
-}
+pub type PARTIAL_WIDTH_OUT_FIRST_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_PARTIAL_WIDTH_OUT_SPEC, u16, u16, 10, O>;
 #[doc = "Field `PARTIAL_WIDTH_OUT_LAST` reader - "]
-pub struct PARTIAL_WIDTH_OUT_LAST_R(crate::FieldReader<u16>);
-impl PARTIAL_WIDTH_OUT_LAST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PARTIAL_WIDTH_OUT_LAST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PARTIAL_WIDTH_OUT_LAST_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PARTIAL_WIDTH_OUT_LAST_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PARTIAL_WIDTH_OUT_LAST` writer - "]
-pub struct PARTIAL_WIDTH_OUT_LAST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PARTIAL_WIDTH_OUT_LAST_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 10)) | ((value as u32 & 0x03ff) << 10);
-        self.w
-    }
-}
+pub type PARTIAL_WIDTH_OUT_LAST_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_PARTIAL_WIDTH_OUT_SPEC, u16, u16, 10, O>;
 #[doc = "Field `PARTIAL_WIDTH_OUT_MID` reader - "]
-pub struct PARTIAL_WIDTH_OUT_MID_R(crate::FieldReader<u16>);
-impl PARTIAL_WIDTH_OUT_MID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PARTIAL_WIDTH_OUT_MID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PARTIAL_WIDTH_OUT_MID_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PARTIAL_WIDTH_OUT_MID_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PARTIAL_WIDTH_OUT_MID` writer - "]
-pub struct PARTIAL_WIDTH_OUT_MID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PARTIAL_WIDTH_OUT_MID_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 20)) | ((value as u32 & 0x03ff) << 20);
-        self.w
-    }
-}
+pub type PARTIAL_WIDTH_OUT_MID_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_PARTIAL_WIDTH_OUT_SPEC, u16, u16, 10, O>;
 impl R {
     #[doc = "Bits 0:9"]
     #[inline(always)]
@@ -135,18 +69,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    pub fn partial_width_out_first(&mut self) -> PARTIAL_WIDTH_OUT_FIRST_W {
-        PARTIAL_WIDTH_OUT_FIRST_W { w: self }
+    #[must_use]
+    pub fn partial_width_out_first(&mut self) -> PARTIAL_WIDTH_OUT_FIRST_W<0> {
+        PARTIAL_WIDTH_OUT_FIRST_W::new(self)
     }
     #[doc = "Bits 10:19"]
     #[inline(always)]
-    pub fn partial_width_out_last(&mut self) -> PARTIAL_WIDTH_OUT_LAST_W {
-        PARTIAL_WIDTH_OUT_LAST_W { w: self }
+    #[must_use]
+    pub fn partial_width_out_last(&mut self) -> PARTIAL_WIDTH_OUT_LAST_W<10> {
+        PARTIAL_WIDTH_OUT_LAST_W::new(self)
     }
     #[doc = "Bits 20:29"]
     #[inline(always)]
-    pub fn partial_width_out_mid(&mut self) -> PARTIAL_WIDTH_OUT_MID_W {
-        PARTIAL_WIDTH_OUT_MID_W { w: self }
+    #[must_use]
+    pub fn partial_width_out_mid(&mut self) -> PARTIAL_WIDTH_OUT_MID_W<20> {
+        PARTIAL_WIDTH_OUT_MID_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -167,11 +104,10 @@ impl crate::Readable for D_PARTIAL_WIDTH_OUT_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_partial_width_out::W](W) writer structure"]
 impl crate::Writable for D_PARTIAL_WIDTH_OUT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_PARTIAL_WIDTH_OUT to value 0"]
 impl crate::Resettable for D_PARTIAL_WIDTH_OUT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
