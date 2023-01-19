@@ -35,32 +35,10 @@ impl From<crate::W<TX_CH1_LEN0_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_CH1_ADD` reader - "]
-pub struct TX_CH1_ADD_R(crate::FieldReader<u32>);
-impl TX_CH1_ADD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TX_CH1_ADD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_CH1_ADD_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_CH1_ADD_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TX_CH1_ADD` writer - "]
-pub struct TX_CH1_ADD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_CH1_ADD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type TX_CH1_ADD_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, TX_CH1_LEN0_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -71,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn tx_ch1_add(&mut self) -> TX_CH1_ADD_W {
-        TX_CH1_ADD_W { w: self }
+    #[must_use]
+    pub fn tx_ch1_add(&mut self) -> TX_CH1_ADD_W<0> {
+        TX_CH1_ADD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +72,10 @@ impl crate::Readable for TX_CH1_LEN0_SPEC {
 #[doc = "`write(|w| ..)` method takes [tx_ch1_len0::W](W) writer structure"]
 impl crate::Writable for TX_CH1_LEN0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TX_CH1_LEN0 to value 0"]
 impl crate::Resettable for TX_CH1_LEN0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

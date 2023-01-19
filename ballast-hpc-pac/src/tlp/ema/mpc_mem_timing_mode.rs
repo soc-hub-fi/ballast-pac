@@ -20,22 +20,14 @@ impl From<crate::W<MPC_MEM_TIMING_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `mpc_mem_timing_mode` writer - "]
-pub struct MPC_MEM_TIMING_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MPC_MEM_TIMING_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type MPC_MEM_TIMING_MODE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u16, MPC_MEM_TIMING_MODE_SPEC, u16, u16, 16, O>;
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn mpc_mem_timing_mode(&mut self) -> MPC_MEM_TIMING_MODE_W {
-        MPC_MEM_TIMING_MODE_W { w: self }
+    #[must_use]
+    pub fn mpc_mem_timing_mode(&mut self) -> MPC_MEM_TIMING_MODE_W<0> {
+        MPC_MEM_TIMING_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -52,11 +44,10 @@ impl crate::RegisterSpec for MPC_MEM_TIMING_MODE_SPEC {
 #[doc = "`write(|w| ..)` method takes [mpc_mem_timing_mode::W](W) writer structure"]
 impl crate::Writable for MPC_MEM_TIMING_MODE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets mpc_mem_timing_mode to value 0xffff"]
 impl crate::Resettable for MPC_MEM_TIMING_MODE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff;
 }

@@ -35,32 +35,9 @@ impl From<crate::W<D_CVT_SHIFT_SPEC>> for W {
     }
 }
 #[doc = "Field `CVT_SHIFT` reader - "]
-pub struct CVT_SHIFT_R(crate::FieldReader<u8>);
-impl CVT_SHIFT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CVT_SHIFT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CVT_SHIFT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CVT_SHIFT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CVT_SHIFT` writer - "]
-pub struct CVT_SHIFT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CVT_SHIFT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type CVT_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, D_CVT_SHIFT_SPEC, u8, u8, 6, O>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -71,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn cvt_shift(&mut self) -> CVT_SHIFT_W {
-        CVT_SHIFT_W { w: self }
+    #[must_use]
+    pub fn cvt_shift(&mut self) -> CVT_SHIFT_W<0> {
+        CVT_SHIFT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +71,10 @@ impl crate::Readable for D_CVT_SHIFT_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_cvt_shift::W](W) writer structure"]
 impl crate::Writable for D_CVT_SHIFT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_CVT_SHIFT to value 0"]
 impl crate::Resettable for D_CVT_SHIFT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

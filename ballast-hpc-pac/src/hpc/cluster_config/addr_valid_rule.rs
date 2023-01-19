@@ -35,32 +35,10 @@ impl From<crate::W<ADDR_VALID_RULE_SPEC>> for W {
     }
 }
 #[doc = "Field `addr_valid_rule` reader - "]
-pub struct ADDR_VALID_RULE_R(crate::FieldReader<u64>);
-impl ADDR_VALID_RULE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u64) -> Self {
-        ADDR_VALID_RULE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADDR_VALID_RULE_R {
-    type Target = crate::FieldReader<u64>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADDR_VALID_RULE_R = crate::FieldReader<u64, u64>;
 #[doc = "Field `addr_valid_rule` writer - "]
-pub struct ADDR_VALID_RULE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADDR_VALID_RULE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u64) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type ADDR_VALID_RULE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u64, ADDR_VALID_RULE_SPEC, u64, u64, 64, O>;
 impl R {
     #[doc = "Bits 0:63"]
     #[inline(always)]
@@ -71,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:63"]
     #[inline(always)]
-    pub fn addr_valid_rule(&mut self) -> ADDR_VALID_RULE_W {
-        ADDR_VALID_RULE_W { w: self }
+    #[must_use]
+    pub fn addr_valid_rule(&mut self) -> ADDR_VALID_RULE_W<0> {
+        ADDR_VALID_RULE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +72,10 @@ impl crate::Readable for ADDR_VALID_RULE_SPEC {
 #[doc = "`write(|w| ..)` method takes [addr_valid_rule::W](W) writer structure"]
 impl crate::Writable for ADDR_VALID_RULE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets addr_valid_rule to value 0"]
 impl crate::Resettable for ADDR_VALID_RULE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

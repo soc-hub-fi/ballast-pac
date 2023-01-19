@@ -35,190 +35,29 @@ impl From<crate::W<CLK_CTRL3_SPEC>> for W {
     }
 }
 #[doc = "Field `top_periph_sel_cka` reader - Select CKA"]
-pub struct TOP_PERIPH_SEL_CKA_R(crate::FieldReader<bool>);
-impl TOP_PERIPH_SEL_CKA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOP_PERIPH_SEL_CKA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOP_PERIPH_SEL_CKA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOP_PERIPH_SEL_CKA_R = crate::BitReader<bool>;
 #[doc = "Field `top_periph_sel_cka` writer - Select CKA"]
-pub struct TOP_PERIPH_SEL_CKA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOP_PERIPH_SEL_CKA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TOP_PERIPH_SEL_CKA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CTRL3_SPEC, bool, O>;
 #[doc = "Field `top_periph_force_cka` reader - Force CKA"]
-pub struct TOP_PERIPH_FORCE_CKA_R(crate::FieldReader<bool>);
-impl TOP_PERIPH_FORCE_CKA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOP_PERIPH_FORCE_CKA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOP_PERIPH_FORCE_CKA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOP_PERIPH_FORCE_CKA_R = crate::BitReader<bool>;
 #[doc = "Field `top_periph_force_cka` writer - Force CKA"]
-pub struct TOP_PERIPH_FORCE_CKA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOP_PERIPH_FORCE_CKA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type TOP_PERIPH_FORCE_CKA_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, CLK_CTRL3_SPEC, bool, O>;
 #[doc = "Field `top_periph_force_ckb` reader - Force CKB"]
-pub struct TOP_PERIPH_FORCE_CKB_R(crate::FieldReader<bool>);
-impl TOP_PERIPH_FORCE_CKB_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOP_PERIPH_FORCE_CKB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOP_PERIPH_FORCE_CKB_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOP_PERIPH_FORCE_CKB_R = crate::BitReader<bool>;
 #[doc = "Field `top_periph_force_ckb` writer - Force CKB"]
-pub struct TOP_PERIPH_FORCE_CKB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOP_PERIPH_FORCE_CKB_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type TOP_PERIPH_FORCE_CKB_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, CLK_CTRL3_SPEC, bool, O>;
 #[doc = "Field `top_periph_subsys_clkena` reader - Subsystem clock enable"]
-pub struct TOP_PERIPH_SUBSYS_CLKENA_R(crate::FieldReader<bool>);
-impl TOP_PERIPH_SUBSYS_CLKENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOP_PERIPH_SUBSYS_CLKENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOP_PERIPH_SUBSYS_CLKENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOP_PERIPH_SUBSYS_CLKENA_R = crate::BitReader<bool>;
 #[doc = "Field `top_periph_subsys_clkena` writer - Subsystem clock enable"]
-pub struct TOP_PERIPH_SUBSYS_CLKENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOP_PERIPH_SUBSYS_CLKENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type TOP_PERIPH_SUBSYS_CLKENA_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, CLK_CTRL3_SPEC, bool, O>;
 #[doc = "Field `top_periph_pll_ctrl_valid` reader - PLL Control valid"]
-pub struct TOP_PERIPH_PLL_CTRL_VALID_R(crate::FieldReader<bool>);
-impl TOP_PERIPH_PLL_CTRL_VALID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOP_PERIPH_PLL_CTRL_VALID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOP_PERIPH_PLL_CTRL_VALID_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOP_PERIPH_PLL_CTRL_VALID_R = crate::BitReader<bool>;
 #[doc = "Field `top_periph_pll_ctrl_valid` writer - PLL Control valid"]
-pub struct TOP_PERIPH_PLL_CTRL_VALID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOP_PERIPH_PLL_CTRL_VALID_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type TOP_PERIPH_PLL_CTRL_VALID_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, CLK_CTRL3_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Select CKA"]
     #[inline(always)]
@@ -249,28 +88,33 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Select CKA"]
     #[inline(always)]
-    pub fn top_periph_sel_cka(&mut self) -> TOP_PERIPH_SEL_CKA_W {
-        TOP_PERIPH_SEL_CKA_W { w: self }
+    #[must_use]
+    pub fn top_periph_sel_cka(&mut self) -> TOP_PERIPH_SEL_CKA_W<0> {
+        TOP_PERIPH_SEL_CKA_W::new(self)
     }
     #[doc = "Bit 1 - Force CKA"]
     #[inline(always)]
-    pub fn top_periph_force_cka(&mut self) -> TOP_PERIPH_FORCE_CKA_W {
-        TOP_PERIPH_FORCE_CKA_W { w: self }
+    #[must_use]
+    pub fn top_periph_force_cka(&mut self) -> TOP_PERIPH_FORCE_CKA_W<1> {
+        TOP_PERIPH_FORCE_CKA_W::new(self)
     }
     #[doc = "Bit 2 - Force CKB"]
     #[inline(always)]
-    pub fn top_periph_force_ckb(&mut self) -> TOP_PERIPH_FORCE_CKB_W {
-        TOP_PERIPH_FORCE_CKB_W { w: self }
+    #[must_use]
+    pub fn top_periph_force_ckb(&mut self) -> TOP_PERIPH_FORCE_CKB_W<2> {
+        TOP_PERIPH_FORCE_CKB_W::new(self)
     }
     #[doc = "Bit 3 - Subsystem clock enable"]
     #[inline(always)]
-    pub fn top_periph_subsys_clkena(&mut self) -> TOP_PERIPH_SUBSYS_CLKENA_W {
-        TOP_PERIPH_SUBSYS_CLKENA_W { w: self }
+    #[must_use]
+    pub fn top_periph_subsys_clkena(&mut self) -> TOP_PERIPH_SUBSYS_CLKENA_W<3> {
+        TOP_PERIPH_SUBSYS_CLKENA_W::new(self)
     }
     #[doc = "Bit 7 - PLL Control valid"]
     #[inline(always)]
-    pub fn top_periph_pll_ctrl_valid(&mut self) -> TOP_PERIPH_PLL_CTRL_VALID_W {
-        TOP_PERIPH_PLL_CTRL_VALID_W { w: self }
+    #[must_use]
+    pub fn top_periph_pll_ctrl_valid(&mut self) -> TOP_PERIPH_PLL_CTRL_VALID_W<7> {
+        TOP_PERIPH_PLL_CTRL_VALID_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -292,11 +136,10 @@ impl crate::Readable for CLK_CTRL3_SPEC {
 #[doc = "`write(|w| ..)` method takes [clk_ctrl3::W](W) writer structure"]
 impl crate::Writable for CLK_CTRL3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLK_CTRL3 to value 0"]
 impl crate::Resettable for CLK_CTRL3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

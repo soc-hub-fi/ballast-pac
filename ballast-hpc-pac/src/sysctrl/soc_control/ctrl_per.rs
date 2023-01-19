@@ -35,42 +35,9 @@ impl From<crate::W<CTRL_PER_SPEC>> for W {
     }
 }
 #[doc = "Field `Sel_hyper_axi` reader - "]
-pub struct SEL_HYPER_AXI_R(crate::FieldReader<bool>);
-impl SEL_HYPER_AXI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SEL_HYPER_AXI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEL_HYPER_AXI_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEL_HYPER_AXI_R = crate::BitReader<bool>;
 #[doc = "Field `Sel_hyper_axi` writer - "]
-pub struct SEL_HYPER_AXI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEL_HYPER_AXI_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SEL_HYPER_AXI_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_PER_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -81,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn sel_hyper_axi(&mut self) -> SEL_HYPER_AXI_W {
-        SEL_HYPER_AXI_W { w: self }
+    #[must_use]
+    pub fn sel_hyper_axi(&mut self) -> SEL_HYPER_AXI_W<0> {
+        SEL_HYPER_AXI_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +71,10 @@ impl crate::Readable for CTRL_PER_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl_per::W](W) writer structure"]
 impl crate::Writable for CTRL_PER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL_PER to value 0"]
 impl crate::Resettable for CTRL_PER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

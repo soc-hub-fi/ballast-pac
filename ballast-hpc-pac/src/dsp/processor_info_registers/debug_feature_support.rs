@@ -14,20 +14,7 @@ impl From<crate::R<DEBUG_FEATURE_SUPPORT_SPEC>> for R {
     }
 }
 #[doc = "Field `debug_feature_support` reader - "]
-pub struct DEBUG_FEATURE_SUPPORT_R(crate::FieldReader<u32>);
-impl DEBUG_FEATURE_SUPPORT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DEBUG_FEATURE_SUPPORT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DEBUG_FEATURE_SUPPORT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DEBUG_FEATURE_SUPPORT_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for DEBUG_FEATURE_SUPPORT_SPEC {
 }
 #[doc = "`reset()` method sets debug_feature_support to value 0"]
 impl crate::Resettable for DEBUG_FEATURE_SUPPORT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

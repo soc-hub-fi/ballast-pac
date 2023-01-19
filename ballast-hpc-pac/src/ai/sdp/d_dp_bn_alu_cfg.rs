@@ -34,8 +34,10 @@ impl From<crate::W<D_DP_BN_ALU_CFG_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `BN_ALU_SRC` reader - "]
+pub type BN_ALU_SRC_R = crate::BitReader<BN_ALU_SRC_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BN_ALU_SRC_A {
     #[doc = "0: `0`"]
     REG = 0,
@@ -48,14 +50,8 @@ impl From<BN_ALU_SRC_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `BN_ALU_SRC` reader - "]
-pub struct BN_ALU_SRC_R(crate::FieldReader<bool>);
 impl BN_ALU_SRC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BN_ALU_SRC_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> BN_ALU_SRC_A {
         match self.bits {
@@ -66,31 +62,18 @@ impl BN_ALU_SRC_R {
     #[doc = "Checks if the value of the field is `REG`"]
     #[inline(always)]
     pub fn is_reg(&self) -> bool {
-        **self == BN_ALU_SRC_A::REG
+        *self == BN_ALU_SRC_A::REG
     }
     #[doc = "Checks if the value of the field is `MEM`"]
     #[inline(always)]
     pub fn is_mem(&self) -> bool {
-        **self == BN_ALU_SRC_A::MEM
-    }
-}
-impl core::ops::Deref for BN_ALU_SRC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == BN_ALU_SRC_A::MEM
     }
 }
 #[doc = "Field `BN_ALU_SRC` writer - "]
-pub struct BN_ALU_SRC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BN_ALU_SRC_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: BN_ALU_SRC_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type BN_ALU_SRC_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_DP_BN_ALU_CFG_SPEC, BN_ALU_SRC_A, O>;
+impl<'a, const O: u8> BN_ALU_SRC_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn reg(self) -> &'a mut W {
@@ -101,50 +84,12 @@ impl<'a> BN_ALU_SRC_W<'a> {
     pub fn mem(self) -> &'a mut W {
         self.variant(BN_ALU_SRC_A::MEM)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
 }
 #[doc = "Field `BN_ALU_SHIFT_VALUE` reader - "]
-pub struct BN_ALU_SHIFT_VALUE_R(crate::FieldReader<u8>);
-impl BN_ALU_SHIFT_VALUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BN_ALU_SHIFT_VALUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BN_ALU_SHIFT_VALUE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BN_ALU_SHIFT_VALUE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BN_ALU_SHIFT_VALUE` writer - "]
-pub struct BN_ALU_SHIFT_VALUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BN_ALU_SHIFT_VALUE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 8)) | ((value as u32 & 0x3f) << 8);
-        self.w
-    }
-}
+pub type BN_ALU_SHIFT_VALUE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_DP_BN_ALU_CFG_SPEC, u8, u8, 6, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -160,13 +105,15 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn bn_alu_src(&mut self) -> BN_ALU_SRC_W {
-        BN_ALU_SRC_W { w: self }
+    #[must_use]
+    pub fn bn_alu_src(&mut self) -> BN_ALU_SRC_W<0> {
+        BN_ALU_SRC_W::new(self)
     }
     #[doc = "Bits 8:13"]
     #[inline(always)]
-    pub fn bn_alu_shift_value(&mut self) -> BN_ALU_SHIFT_VALUE_W {
-        BN_ALU_SHIFT_VALUE_W { w: self }
+    #[must_use]
+    pub fn bn_alu_shift_value(&mut self) -> BN_ALU_SHIFT_VALUE_W<8> {
+        BN_ALU_SHIFT_VALUE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -187,11 +134,10 @@ impl crate::Readable for D_DP_BN_ALU_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_dp_bn_alu_cfg::W](W) writer structure"]
 impl crate::Writable for D_DP_BN_ALU_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_DP_BN_ALU_CFG to value 0"]
 impl crate::Resettable for D_DP_BN_ALU_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

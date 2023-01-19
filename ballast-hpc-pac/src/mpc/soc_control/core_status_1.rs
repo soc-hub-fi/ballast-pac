@@ -14,20 +14,7 @@ impl From<crate::R<CORE_STATUS_1_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_STATUS_1` reader - "]
-pub struct CORE_STATUS_1_R(crate::FieldReader<u32>);
-impl CORE_STATUS_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CORE_STATUS_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_STATUS_1_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_STATUS_1_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for CORE_STATUS_1_SPEC {
 }
 #[doc = "`reset()` method sets CORE_STATUS_1 to value 0x01"]
 impl crate::Resettable for CORE_STATUS_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

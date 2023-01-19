@@ -35,42 +35,9 @@ impl From<crate::W<CLUSTER_IRQ_SPEC>> for W {
     }
 }
 #[doc = "Field `Cluster_IRQ` reader - "]
-pub struct CLUSTER_IRQ_R(crate::FieldReader<bool>);
-impl CLUSTER_IRQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLUSTER_IRQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLUSTER_IRQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLUSTER_IRQ_R = crate::BitReader<bool>;
 #[doc = "Field `Cluster_IRQ` writer - "]
-pub struct CLUSTER_IRQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLUSTER_IRQ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CLUSTER_IRQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLUSTER_IRQ_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -81,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn cluster_irq(&mut self) -> CLUSTER_IRQ_W {
-        CLUSTER_IRQ_W { w: self }
+    #[must_use]
+    pub fn cluster_irq(&mut self) -> CLUSTER_IRQ_W<0> {
+        CLUSTER_IRQ_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +71,10 @@ impl crate::Readable for CLUSTER_IRQ_SPEC {
 #[doc = "`write(|w| ..)` method takes [cluster_irq::W](W) writer structure"]
 impl crate::Writable for CLUSTER_IRQ_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLUSTER_IRQ to value 0"]
 impl crate::Resettable for CLUSTER_IRQ_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

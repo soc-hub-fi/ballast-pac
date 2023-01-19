@@ -35,94 +35,15 @@ impl From<crate::W<I2C0_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `BUSY` reader - I2C bus busy status flag: - 1'b0: no transfer on-going - 1'b1: transfer on-going"]
-pub struct BUSY_R(crate::FieldReader<bool>);
-impl BUSY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BUSY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BUSY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BUSY_R = crate::BitReader<bool>;
 #[doc = "Field `BUSY` writer - I2C bus busy status flag: - 1'b0: no transfer on-going - 1'b1: transfer on-going"]
-pub struct BUSY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BUSY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type BUSY_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2C0_STATUS_SPEC, bool, O>;
 #[doc = "Field `ARB_LOST` reader - I2C arbitration lost status flag: - 1'b0: no error - 1'b1: arbitration lost error"]
-pub struct ARB_LOST_R(crate::FieldReader<bool>);
-impl ARB_LOST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ARB_LOST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ARB_LOST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ARB_LOST_R = crate::BitReader<bool>;
 #[doc = "Field `ARB_LOST` writer - I2C arbitration lost status flag: - 1'b0: no error - 1'b1: arbitration lost error"]
-pub struct ARB_LOST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ARB_LOST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type ARB_LOST_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2C0_STATUS_SPEC, bool, O>;
 #[doc = "Field `ACK` reader - I2C ack flag, can be polling for busy: - 1'b0: ACK - 1'b1: NAK"]
-pub struct ACK_R(crate::FieldReader<bool>);
-impl ACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ACK_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - I2C bus busy status flag: - 1'b0: no transfer on-going - 1'b1: transfer on-going"]
     #[inline(always)]
@@ -143,13 +64,15 @@ impl R {
 impl W {
     #[doc = "Bit 0 - I2C bus busy status flag: - 1'b0: no transfer on-going - 1'b1: transfer on-going"]
     #[inline(always)]
-    pub fn busy(&mut self) -> BUSY_W {
-        BUSY_W { w: self }
+    #[must_use]
+    pub fn busy(&mut self) -> BUSY_W<0> {
+        BUSY_W::new(self)
     }
     #[doc = "Bit 1 - I2C arbitration lost status flag: - 1'b0: no error - 1'b1: arbitration lost error"]
     #[inline(always)]
-    pub fn arb_lost(&mut self) -> ARB_LOST_W {
-        ARB_LOST_W { w: self }
+    #[must_use]
+    pub fn arb_lost(&mut self) -> ARB_LOST_W<1> {
+        ARB_LOST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -170,11 +93,10 @@ impl crate::Readable for I2C0_STATUS_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2c0_status::W](W) writer structure"]
 impl crate::Writable for I2C0_STATUS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2C0_STATUS to value 0"]
 impl crate::Resettable for I2C0_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

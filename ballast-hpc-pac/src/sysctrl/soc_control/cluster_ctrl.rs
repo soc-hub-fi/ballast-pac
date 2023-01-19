@@ -35,153 +35,21 @@ impl From<crate::W<CLUSTER_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `bypass` reader - "]
-pub struct BYPASS_R(crate::FieldReader<bool>);
-impl BYPASS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BYPASS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BYPASS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BYPASS_R = crate::BitReader<bool>;
 #[doc = "Field `bypass` writer - "]
-pub struct BYPASS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BYPASS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLUSTER_CTRL_SPEC, bool, O>;
 #[doc = "Field `POW` reader - "]
-pub struct POW_R(crate::FieldReader<bool>);
-impl POW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        POW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for POW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type POW_R = crate::BitReader<bool>;
 #[doc = "Field `POW` writer - "]
-pub struct POW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> POW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type POW_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLUSTER_CTRL_SPEC, bool, O>;
 #[doc = "Field `fetch_enable` reader - "]
-pub struct FETCH_ENABLE_R(crate::FieldReader<bool>);
-impl FETCH_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FETCH_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FETCH_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FETCH_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `fetch_enable` writer - "]
-pub struct FETCH_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FETCH_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type FETCH_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLUSTER_CTRL_SPEC, bool, O>;
 #[doc = "Field `rstn` reader - "]
-pub struct RSTN_R(crate::FieldReader<bool>);
-impl RSTN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RSTN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RSTN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RSTN_R = crate::BitReader<bool>;
 #[doc = "Field `rstn` writer - "]
-pub struct RSTN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RSTN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type RSTN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLUSTER_CTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -207,23 +75,27 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn bypass(&mut self) -> BYPASS_W {
-        BYPASS_W { w: self }
+    #[must_use]
+    pub fn bypass(&mut self) -> BYPASS_W<0> {
+        BYPASS_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn pow(&mut self) -> POW_W {
-        POW_W { w: self }
+    #[must_use]
+    pub fn pow(&mut self) -> POW_W<1> {
+        POW_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn fetch_enable(&mut self) -> FETCH_ENABLE_W {
-        FETCH_ENABLE_W { w: self }
+    #[must_use]
+    pub fn fetch_enable(&mut self) -> FETCH_ENABLE_W<2> {
+        FETCH_ENABLE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn rstn(&mut self) -> RSTN_W {
-        RSTN_W { w: self }
+    #[must_use]
+    pub fn rstn(&mut self) -> RSTN_W<3> {
+        RSTN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -244,11 +116,10 @@ impl crate::Readable for CLUSTER_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [cluster_ctrl::W](W) writer structure"]
 impl crate::Writable for CLUSTER_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLUSTER_CTRL to value 0x09"]
 impl crate::Resettable for CLUSTER_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x09
-    }
+    const RESET_VALUE: Self::Ux = 0x09;
 }

@@ -35,74 +35,18 @@ impl From<crate::W<REFCLK_SPEC>> for W {
     }
 }
 #[doc = "Field `drive_strength` reader - "]
-pub struct DRIVE_STRENGTH_R(crate::FieldReader<u8>);
-impl DRIVE_STRENGTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DRIVE_STRENGTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DRIVE_STRENGTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DRIVE_STRENGTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `drive_strength` writer - "]
-pub struct DRIVE_STRENGTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DRIVE_STRENGTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u8 & 7);
-        self.w
-    }
-}
+pub type DRIVE_STRENGTH_W<'a, const O: u8> = crate::FieldWriter<'a, u8, REFCLK_SPEC, u8, u8, 3, O>;
 #[doc = "Field `enable` reader - "]
-pub struct ENABLE_R(crate::FieldReader<bool>);
-impl ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `enable` writer - "]
-pub struct ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u8 & 1) << 3);
-        self.w
-    }
-}
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u8, REFCLK_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     pub fn drive_strength(&self) -> DRIVE_STRENGTH_R {
-        DRIVE_STRENGTH_R::new((self.bits & 7) as u8)
+        DRIVE_STRENGTH_R::new(self.bits & 7)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
@@ -113,13 +57,15 @@ impl R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    pub fn drive_strength(&mut self) -> DRIVE_STRENGTH_W {
-        DRIVE_STRENGTH_W { w: self }
+    #[must_use]
+    pub fn drive_strength(&mut self) -> DRIVE_STRENGTH_W<0> {
+        DRIVE_STRENGTH_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn enable(&mut self) -> ENABLE_W {
-        ENABLE_W { w: self }
+    #[must_use]
+    pub fn enable(&mut self) -> ENABLE_W<3> {
+        ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -140,11 +86,10 @@ impl crate::Readable for REFCLK_SPEC {
 #[doc = "`write(|w| ..)` method takes [refclk::W](W) writer structure"]
 impl crate::Writable for REFCLK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets refclk to value 0x0f"]
 impl crate::Resettable for REFCLK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0f
-    }
+    const RESET_VALUE: Self::Ux = 0x0f;
 }

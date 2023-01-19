@@ -35,32 +35,9 @@ impl From<crate::W<IRQ_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `irq_mask` reader - "]
-pub struct IRQ_MASK_R(crate::FieldReader<u8>);
-impl IRQ_MASK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IRQ_MASK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IRQ_MASK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IRQ_MASK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `irq_mask` writer - "]
-pub struct IRQ_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IRQ_MASK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type IRQ_MASK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IRQ_MASK_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -71,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn irq_mask(&mut self) -> IRQ_MASK_W {
-        IRQ_MASK_W { w: self }
+    #[must_use]
+    pub fn irq_mask(&mut self) -> IRQ_MASK_W<0> {
+        IRQ_MASK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +71,10 @@ impl crate::Readable for IRQ_MASK_SPEC {
 #[doc = "`write(|w| ..)` method takes [irq_mask::W](W) writer structure"]
 impl crate::Writable for IRQ_MASK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets irq_mask to value 0"]
 impl crate::Resettable for IRQ_MASK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

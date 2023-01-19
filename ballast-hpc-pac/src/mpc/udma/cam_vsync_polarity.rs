@@ -35,42 +35,10 @@ impl From<crate::W<CAM_VSYNC_POLARITY_SPEC>> for W {
     }
 }
 #[doc = "Field `VSYNC_POLARITY` reader - Set vsync polarity of CPI. - 1'b0: Active 0 - 1'b1: Active 1"]
-pub struct VSYNC_POLARITY_R(crate::FieldReader<bool>);
-impl VSYNC_POLARITY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VSYNC_POLARITY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VSYNC_POLARITY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VSYNC_POLARITY_R = crate::BitReader<bool>;
 #[doc = "Field `VSYNC_POLARITY` writer - Set vsync polarity of CPI. - 1'b0: Active 0 - 1'b1: Active 1"]
-pub struct VSYNC_POLARITY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VSYNC_POLARITY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type VSYNC_POLARITY_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, CAM_VSYNC_POLARITY_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Set vsync polarity of CPI. - 1'b0: Active 0 - 1'b1: Active 1"]
     #[inline(always)]
@@ -81,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set vsync polarity of CPI. - 1'b0: Active 0 - 1'b1: Active 1"]
     #[inline(always)]
-    pub fn vsync_polarity(&mut self) -> VSYNC_POLARITY_W {
-        VSYNC_POLARITY_W { w: self }
+    #[must_use]
+    pub fn vsync_polarity(&mut self) -> VSYNC_POLARITY_W<0> {
+        VSYNC_POLARITY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +72,10 @@ impl crate::Readable for CAM_VSYNC_POLARITY_SPEC {
 #[doc = "`write(|w| ..)` method takes [cam_vsync_polarity::W](W) writer structure"]
 impl crate::Writable for CAM_VSYNC_POLARITY_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CAM_VSYNC_POLARITY to value 0"]
 impl crate::Resettable for CAM_VSYNC_POLARITY_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

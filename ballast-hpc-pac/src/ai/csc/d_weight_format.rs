@@ -34,8 +34,10 @@ impl From<crate::W<D_WEIGHT_FORMAT_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `WEIGHT_FORMAT` reader - "]
+pub type WEIGHT_FORMAT_R = crate::BitReader<WEIGHT_FORMAT_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum WEIGHT_FORMAT_A {
     #[doc = "1: `1`"]
     COMPRESSED = 1,
@@ -48,14 +50,8 @@ impl From<WEIGHT_FORMAT_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `WEIGHT_FORMAT` reader - "]
-pub struct WEIGHT_FORMAT_R(crate::FieldReader<bool>);
 impl WEIGHT_FORMAT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WEIGHT_FORMAT_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> WEIGHT_FORMAT_A {
         match self.bits {
@@ -66,31 +62,18 @@ impl WEIGHT_FORMAT_R {
     #[doc = "Checks if the value of the field is `COMPRESSED`"]
     #[inline(always)]
     pub fn is_compressed(&self) -> bool {
-        **self == WEIGHT_FORMAT_A::COMPRESSED
+        *self == WEIGHT_FORMAT_A::COMPRESSED
     }
     #[doc = "Checks if the value of the field is `UNCOMPRESSED`"]
     #[inline(always)]
     pub fn is_uncompressed(&self) -> bool {
-        **self == WEIGHT_FORMAT_A::UNCOMPRESSED
-    }
-}
-impl core::ops::Deref for WEIGHT_FORMAT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == WEIGHT_FORMAT_A::UNCOMPRESSED
     }
 }
 #[doc = "Field `WEIGHT_FORMAT` writer - "]
-pub struct WEIGHT_FORMAT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WEIGHT_FORMAT_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: WEIGHT_FORMAT_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type WEIGHT_FORMAT_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_WEIGHT_FORMAT_SPEC, WEIGHT_FORMAT_A, O>;
+impl<'a, const O: u8> WEIGHT_FORMAT_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn compressed(self) -> &'a mut W {
@@ -100,22 +83,6 @@ impl<'a> WEIGHT_FORMAT_W<'a> {
     #[inline(always)]
     pub fn uncompressed(self) -> &'a mut W {
         self.variant(WEIGHT_FORMAT_A::UNCOMPRESSED)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
     }
 }
 impl R {
@@ -128,8 +95,9 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn weight_format(&mut self) -> WEIGHT_FORMAT_W {
-        WEIGHT_FORMAT_W { w: self }
+    #[must_use]
+    pub fn weight_format(&mut self) -> WEIGHT_FORMAT_W<0> {
+        WEIGHT_FORMAT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -150,11 +118,10 @@ impl crate::Readable for D_WEIGHT_FORMAT_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_weight_format::W](W) writer structure"]
 impl crate::Writable for D_WEIGHT_FORMAT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_WEIGHT_FORMAT to value 0"]
 impl crate::Resettable for D_WEIGHT_FORMAT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

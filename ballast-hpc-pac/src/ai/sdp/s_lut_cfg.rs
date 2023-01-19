@@ -34,8 +34,10 @@ impl From<crate::W<S_LUT_CFG_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `LUT_LE_FUNCTION` reader - "]
+pub type LUT_LE_FUNCTION_R = crate::BitReader<LUT_LE_FUNCTION_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum LUT_LE_FUNCTION_A {
     #[doc = "0: `0`"]
     EXPONENT = 0,
@@ -48,14 +50,8 @@ impl From<LUT_LE_FUNCTION_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `LUT_LE_FUNCTION` reader - "]
-pub struct LUT_LE_FUNCTION_R(crate::FieldReader<bool>);
 impl LUT_LE_FUNCTION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LUT_LE_FUNCTION_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> LUT_LE_FUNCTION_A {
         match self.bits {
@@ -66,31 +62,18 @@ impl LUT_LE_FUNCTION_R {
     #[doc = "Checks if the value of the field is `EXPONENT`"]
     #[inline(always)]
     pub fn is_exponent(&self) -> bool {
-        **self == LUT_LE_FUNCTION_A::EXPONENT
+        *self == LUT_LE_FUNCTION_A::EXPONENT
     }
     #[doc = "Checks if the value of the field is `LINEAR`"]
     #[inline(always)]
     pub fn is_linear(&self) -> bool {
-        **self == LUT_LE_FUNCTION_A::LINEAR
-    }
-}
-impl core::ops::Deref for LUT_LE_FUNCTION_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == LUT_LE_FUNCTION_A::LINEAR
     }
 }
 #[doc = "Field `LUT_LE_FUNCTION` writer - "]
-pub struct LUT_LE_FUNCTION_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LUT_LE_FUNCTION_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: LUT_LE_FUNCTION_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type LUT_LE_FUNCTION_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, S_LUT_CFG_SPEC, LUT_LE_FUNCTION_A, O>;
+impl<'a, const O: u8> LUT_LE_FUNCTION_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn exponent(self) -> &'a mut W {
@@ -101,25 +84,11 @@ impl<'a> LUT_LE_FUNCTION_W<'a> {
     pub fn linear(self) -> &'a mut W {
         self.variant(LUT_LE_FUNCTION_A::LINEAR)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
 }
+#[doc = "Field `LUT_UFLOW_PRIORITY` reader - "]
+pub type LUT_UFLOW_PRIORITY_R = crate::BitReader<LUT_UFLOW_PRIORITY_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum LUT_UFLOW_PRIORITY_A {
     #[doc = "1: `1`"]
     LO = 1,
@@ -132,14 +101,8 @@ impl From<LUT_UFLOW_PRIORITY_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `LUT_UFLOW_PRIORITY` reader - "]
-pub struct LUT_UFLOW_PRIORITY_R(crate::FieldReader<bool>);
 impl LUT_UFLOW_PRIORITY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LUT_UFLOW_PRIORITY_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> LUT_UFLOW_PRIORITY_A {
         match self.bits {
@@ -150,31 +113,18 @@ impl LUT_UFLOW_PRIORITY_R {
     #[doc = "Checks if the value of the field is `LO`"]
     #[inline(always)]
     pub fn is_lo(&self) -> bool {
-        **self == LUT_UFLOW_PRIORITY_A::LO
+        *self == LUT_UFLOW_PRIORITY_A::LO
     }
     #[doc = "Checks if the value of the field is `LE`"]
     #[inline(always)]
     pub fn is_le(&self) -> bool {
-        **self == LUT_UFLOW_PRIORITY_A::LE
-    }
-}
-impl core::ops::Deref for LUT_UFLOW_PRIORITY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == LUT_UFLOW_PRIORITY_A::LE
     }
 }
 #[doc = "Field `LUT_UFLOW_PRIORITY` writer - "]
-pub struct LUT_UFLOW_PRIORITY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LUT_UFLOW_PRIORITY_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: LUT_UFLOW_PRIORITY_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type LUT_UFLOW_PRIORITY_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, S_LUT_CFG_SPEC, LUT_UFLOW_PRIORITY_A, O>;
+impl<'a, const O: u8> LUT_UFLOW_PRIORITY_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn lo(self) -> &'a mut W {
@@ -185,25 +135,11 @@ impl<'a> LUT_UFLOW_PRIORITY_W<'a> {
     pub fn le(self) -> &'a mut W {
         self.variant(LUT_UFLOW_PRIORITY_A::LE)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
 }
+#[doc = "Field `LUT_OFLOW_PRIORITY` reader - "]
+pub type LUT_OFLOW_PRIORITY_R = crate::BitReader<LUT_OFLOW_PRIORITY_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum LUT_OFLOW_PRIORITY_A {
     #[doc = "1: `1`"]
     LO = 1,
@@ -216,14 +152,8 @@ impl From<LUT_OFLOW_PRIORITY_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `LUT_OFLOW_PRIORITY` reader - "]
-pub struct LUT_OFLOW_PRIORITY_R(crate::FieldReader<bool>);
 impl LUT_OFLOW_PRIORITY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LUT_OFLOW_PRIORITY_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> LUT_OFLOW_PRIORITY_A {
         match self.bits {
@@ -234,31 +164,18 @@ impl LUT_OFLOW_PRIORITY_R {
     #[doc = "Checks if the value of the field is `LO`"]
     #[inline(always)]
     pub fn is_lo(&self) -> bool {
-        **self == LUT_OFLOW_PRIORITY_A::LO
+        *self == LUT_OFLOW_PRIORITY_A::LO
     }
     #[doc = "Checks if the value of the field is `LE`"]
     #[inline(always)]
     pub fn is_le(&self) -> bool {
-        **self == LUT_OFLOW_PRIORITY_A::LE
-    }
-}
-impl core::ops::Deref for LUT_OFLOW_PRIORITY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == LUT_OFLOW_PRIORITY_A::LE
     }
 }
 #[doc = "Field `LUT_OFLOW_PRIORITY` writer - "]
-pub struct LUT_OFLOW_PRIORITY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LUT_OFLOW_PRIORITY_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: LUT_OFLOW_PRIORITY_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type LUT_OFLOW_PRIORITY_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, S_LUT_CFG_SPEC, LUT_OFLOW_PRIORITY_A, O>;
+impl<'a, const O: u8> LUT_OFLOW_PRIORITY_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn lo(self) -> &'a mut W {
@@ -269,25 +186,11 @@ impl<'a> LUT_OFLOW_PRIORITY_W<'a> {
     pub fn le(self) -> &'a mut W {
         self.variant(LUT_OFLOW_PRIORITY_A::LE)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
 }
+#[doc = "Field `LUT_HYBRID_PRIORITY` reader - "]
+pub type LUT_HYBRID_PRIORITY_R = crate::BitReader<LUT_HYBRID_PRIORITY_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum LUT_HYBRID_PRIORITY_A {
     #[doc = "1: `1`"]
     LO = 1,
@@ -300,14 +203,8 @@ impl From<LUT_HYBRID_PRIORITY_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `LUT_HYBRID_PRIORITY` reader - "]
-pub struct LUT_HYBRID_PRIORITY_R(crate::FieldReader<bool>);
 impl LUT_HYBRID_PRIORITY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LUT_HYBRID_PRIORITY_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> LUT_HYBRID_PRIORITY_A {
         match self.bits {
@@ -318,31 +215,18 @@ impl LUT_HYBRID_PRIORITY_R {
     #[doc = "Checks if the value of the field is `LO`"]
     #[inline(always)]
     pub fn is_lo(&self) -> bool {
-        **self == LUT_HYBRID_PRIORITY_A::LO
+        *self == LUT_HYBRID_PRIORITY_A::LO
     }
     #[doc = "Checks if the value of the field is `LE`"]
     #[inline(always)]
     pub fn is_le(&self) -> bool {
-        **self == LUT_HYBRID_PRIORITY_A::LE
-    }
-}
-impl core::ops::Deref for LUT_HYBRID_PRIORITY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == LUT_HYBRID_PRIORITY_A::LE
     }
 }
 #[doc = "Field `LUT_HYBRID_PRIORITY` writer - "]
-pub struct LUT_HYBRID_PRIORITY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LUT_HYBRID_PRIORITY_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: LUT_HYBRID_PRIORITY_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type LUT_HYBRID_PRIORITY_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, S_LUT_CFG_SPEC, LUT_HYBRID_PRIORITY_A, O>;
+impl<'a, const O: u8> LUT_HYBRID_PRIORITY_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn lo(self) -> &'a mut W {
@@ -352,22 +236,6 @@ impl<'a> LUT_HYBRID_PRIORITY_W<'a> {
     #[inline(always)]
     pub fn le(self) -> &'a mut W {
         self.variant(LUT_HYBRID_PRIORITY_A::LE)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
     }
 }
 impl R {
@@ -395,23 +263,27 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn lut_le_function(&mut self) -> LUT_LE_FUNCTION_W {
-        LUT_LE_FUNCTION_W { w: self }
+    #[must_use]
+    pub fn lut_le_function(&mut self) -> LUT_LE_FUNCTION_W<0> {
+        LUT_LE_FUNCTION_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn lut_uflow_priority(&mut self) -> LUT_UFLOW_PRIORITY_W {
-        LUT_UFLOW_PRIORITY_W { w: self }
+    #[must_use]
+    pub fn lut_uflow_priority(&mut self) -> LUT_UFLOW_PRIORITY_W<4> {
+        LUT_UFLOW_PRIORITY_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn lut_oflow_priority(&mut self) -> LUT_OFLOW_PRIORITY_W {
-        LUT_OFLOW_PRIORITY_W { w: self }
+    #[must_use]
+    pub fn lut_oflow_priority(&mut self) -> LUT_OFLOW_PRIORITY_W<5> {
+        LUT_OFLOW_PRIORITY_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn lut_hybrid_priority(&mut self) -> LUT_HYBRID_PRIORITY_W {
-        LUT_HYBRID_PRIORITY_W { w: self }
+    #[must_use]
+    pub fn lut_hybrid_priority(&mut self) -> LUT_HYBRID_PRIORITY_W<6> {
+        LUT_HYBRID_PRIORITY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -432,11 +304,10 @@ impl crate::Readable for S_LUT_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [s_lut_cfg::W](W) writer structure"]
 impl crate::Writable for S_LUT_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets S_LUT_CFG to value 0"]
 impl crate::Resettable for S_LUT_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

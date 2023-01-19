@@ -35,32 +35,9 @@ impl From<crate::W<TX_LWMARK_SPEC>> for W {
     }
 }
 #[doc = "Field `Tx_Lwmark` reader - used to set transmit Fifo low water mark"]
-pub struct TX_LWMARK_R(crate::FieldReader<u8>);
-impl TX_LWMARK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_LWMARK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_LWMARK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_LWMARK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `Tx_Lwmark` writer - used to set transmit Fifo low water mark"]
-pub struct TX_LWMARK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_LWMARK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type TX_LWMARK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TX_LWMARK_SPEC, u8, u8, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - used to set transmit Fifo low water mark"]
     #[inline(always)]
@@ -71,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - used to set transmit Fifo low water mark"]
     #[inline(always)]
-    pub fn tx_lwmark(&mut self) -> TX_LWMARK_W {
-        TX_LWMARK_W { w: self }
+    #[must_use]
+    pub fn tx_lwmark(&mut self) -> TX_LWMARK_W<0> {
+        TX_LWMARK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +71,10 @@ impl crate::Readable for TX_LWMARK_SPEC {
 #[doc = "`write(|w| ..)` method takes [tx_lwmark::W](W) writer structure"]
 impl crate::Writable for TX_LWMARK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets Tx_Lwmark to value 0x08"]
 impl crate::Resettable for TX_LWMARK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x08
-    }
+    const RESET_VALUE: Self::Ux = 0x08;
 }

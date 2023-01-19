@@ -14,20 +14,7 @@ impl From<crate::R<FIFO_DATA_SPEC>> for R {
     }
 }
 #[doc = "Field `FIFO_DATA` reader - This is a read-only register that contain the first valid value of the FIFO"]
-pub struct FIFO_DATA_R(crate::FieldReader<u32>);
-impl FIFO_DATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        FIFO_DATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FIFO_DATA_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FIFO_DATA_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This is a read-only register that contain the first valid value of the FIFO"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for FIFO_DATA_SPEC {
 }
 #[doc = "`reset()` method sets FIFO_DATA to value 0"]
 impl crate::Resettable for FIFO_DATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -35,42 +35,9 @@ impl From<crate::W<CPU_RD_APPLY_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_rd_apply` reader - All statistic counters are stored in a blockram. When you read a counter,you need to write the corresponding address to CPU_rd_addr register and assert CPU_rd_apply signal. When the counter data register CPU_rd_dout is available , the signal CPU_rd_grant will be “1”."]
-pub struct CPU_RD_APPLY_R(crate::FieldReader<bool>);
-impl CPU_RD_APPLY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CPU_RD_APPLY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CPU_RD_APPLY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CPU_RD_APPLY_R = crate::BitReader<bool>;
 #[doc = "Field `CPU_rd_apply` writer - All statistic counters are stored in a blockram. When you read a counter,you need to write the corresponding address to CPU_rd_addr register and assert CPU_rd_apply signal. When the counter data register CPU_rd_dout is available , the signal CPU_rd_grant will be “1”."]
-pub struct CPU_RD_APPLY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CPU_RD_APPLY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CPU_RD_APPLY_W<'a, const O: u8> = crate::BitWriter<'a, u32, CPU_RD_APPLY_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - All statistic counters are stored in a blockram. When you read a counter,you need to write the corresponding address to CPU_rd_addr register and assert CPU_rd_apply signal. When the counter data register CPU_rd_dout is available , the signal CPU_rd_grant will be “1”."]
     #[inline(always)]
@@ -81,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bit 0 - All statistic counters are stored in a blockram. When you read a counter,you need to write the corresponding address to CPU_rd_addr register and assert CPU_rd_apply signal. When the counter data register CPU_rd_dout is available , the signal CPU_rd_grant will be “1”."]
     #[inline(always)]
-    pub fn cpu_rd_apply(&mut self) -> CPU_RD_APPLY_W {
-        CPU_RD_APPLY_W { w: self }
+    #[must_use]
+    pub fn cpu_rd_apply(&mut self) -> CPU_RD_APPLY_W<0> {
+        CPU_RD_APPLY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +71,10 @@ impl crate::Readable for CPU_RD_APPLY_SPEC {
 #[doc = "`write(|w| ..)` method takes [cpu_rd_apply::W](W) writer structure"]
 impl crate::Writable for CPU_RD_APPLY_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CPU_rd_apply to value 0"]
 impl crate::Resettable for CPU_RD_APPLY_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

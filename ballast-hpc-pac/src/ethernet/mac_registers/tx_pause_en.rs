@@ -35,42 +35,9 @@ impl From<crate::W<TX_PAUSE_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `tx_pause_en` reader - When this register is “1”, this core will respond to received pause frame.The transmit state machine will enter PAUSE state according to quanta value in received packet . One quanta time is equal to the time of transmit 512bit data."]
-pub struct TX_PAUSE_EN_R(crate::FieldReader<bool>);
-impl TX_PAUSE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_PAUSE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_PAUSE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_PAUSE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `tx_pause_en` writer - When this register is “1”, this core will respond to received pause frame.The transmit state machine will enter PAUSE state according to quanta value in received packet . One quanta time is equal to the time of transmit 512bit data."]
-pub struct TX_PAUSE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PAUSE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TX_PAUSE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_PAUSE_EN_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - When this register is “1”, this core will respond to received pause frame.The transmit state machine will enter PAUSE state according to quanta value in received packet . One quanta time is equal to the time of transmit 512bit data."]
     #[inline(always)]
@@ -81,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bit 0 - When this register is “1”, this core will respond to received pause frame.The transmit state machine will enter PAUSE state according to quanta value in received packet . One quanta time is equal to the time of transmit 512bit data."]
     #[inline(always)]
-    pub fn tx_pause_en(&mut self) -> TX_PAUSE_EN_W {
-        TX_PAUSE_EN_W { w: self }
+    #[must_use]
+    pub fn tx_pause_en(&mut self) -> TX_PAUSE_EN_W<0> {
+        TX_PAUSE_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +71,10 @@ impl crate::Readable for TX_PAUSE_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [tx_pause_en::W](W) writer structure"]
 impl crate::Writable for TX_PAUSE_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets tx_pause_en to value 0"]
 impl crate::Resettable for TX_PAUSE_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

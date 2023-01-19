@@ -9,7 +9,7 @@
 # cargo install form
 # pip3 install --upgrade --user svdtools
 
-SVD2RUST_VER="0.23"
+SVD2RUST_VER="0.28"
 if [ $SVD2RUST_VER != $(svd2rust --version | grep -Po '\d+\.\d+') ];
     then echo "Unexpected svd2rust version. Install $SVD2RUST_VER using \`cargo install svd2rust --version=\"^$SVD2RUST_VER\"\` or run this script with \`FORCE=1 ./update.sh\`"
     [ -z "$FORCE" ] && exit 1
