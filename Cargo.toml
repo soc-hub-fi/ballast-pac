@@ -8,5 +8,6 @@ members = [
 [workspace.dependencies]
 bare-metal = "1.0"
 vcell = "0.1"
+critical-section = "1.1"
 riscv = "0.10"
 riscv-rt = "0.11"
