@@ -4,3 +4,9 @@ members = [
   "ballast-mpc-pac",
   "ballast-hpc-pac",
 ]
+
+[workspace.dependencies]
+bare-metal = "1.0"
+vcell = "0.1"
+riscv = "0.9"
+riscv-rt = "0.9"

@@ -8,13 +8,10 @@ name = "ballast-sysctrl-pac"
 version = "0.2.0"
 
 [dependencies]
-bare-metal = "1.0"
-riscv = "0.9"
-vcell = "0.1"
-
-[dependencies.riscv-rt]
-optional = true
-version = "0.9"
+bare-metal = { workspace = true }
+vcell = { workspace = true }
+riscv = { workspace = true }
+riscv-rt = { workspace = true, optional = true }
 
 [features]
 rt = ["riscv-rt"]
