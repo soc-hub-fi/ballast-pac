@@ -5,7 +5,7 @@ description = "Peripheral access API for System Control CPU subsystem of Ballast
 edition = "2018"
 keywords = ["ballast", "ibex", "register", "peripheral", "generated"]
 name = "ballast-sysctrl-pac"
-version = "0.2.0"
+version = "0.2.1"
 
 [dependencies]
 bare-metal = { workspace = true }

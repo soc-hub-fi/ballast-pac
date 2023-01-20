@@ -5,7 +5,7 @@ description = "Peripheral access API for MPC subsystem of Ballast SoC"
 edition = "2018"
 keywords = ["ballast", "ibex", "register", "peripheral", "generated"]
 name = "ballast-mpc-pac"
-version = "0.1.0"
+version = "0.1.1"
 
 [dependencies]
 bare-metal = { workspace = true }
