@@ -34,8 +34,10 @@ impl From<crate::W<D_PERF_ENABLE_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `DMA_EN` reader - "]
+pub type DMA_EN_R = crate::BitReader<DMA_EN_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DMA_EN_A {
     #[doc = "1: `1`"]
     ENABLE = 1,
@@ -48,14 +50,8 @@ impl From<DMA_EN_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `DMA_EN` reader - "]
-pub struct DMA_EN_R(crate::FieldReader<bool>);
 impl DMA_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_EN_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> DMA_EN_A {
         match self.bits {
@@ -66,31 +62,17 @@ impl DMA_EN_R {
     #[doc = "Checks if the value of the field is `ENABLE`"]
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
-        **self == DMA_EN_A::ENABLE
+        *self == DMA_EN_A::ENABLE
     }
     #[doc = "Checks if the value of the field is `DISABLE`"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
-        **self == DMA_EN_A::DISABLE
-    }
-}
-impl core::ops::Deref for DMA_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == DMA_EN_A::DISABLE
     }
 }
 #[doc = "Field `DMA_EN` writer - "]
-pub struct DMA_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_EN_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: DMA_EN_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type DMA_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, D_PERF_ENABLE_SPEC, DMA_EN_A, O>;
+impl<'a, const O: u8> DMA_EN_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut W {
@@ -100,22 +82,6 @@ impl<'a> DMA_EN_W<'a> {
     #[inline(always)]
     pub fn disable(self) -> &'a mut W {
         self.variant(DMA_EN_A::DISABLE)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
     }
 }
 impl R {
@@ -128,8 +94,9 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn dma_en(&mut self) -> DMA_EN_W {
-        DMA_EN_W { w: self }
+    #[must_use]
+    pub fn dma_en(&mut self) -> DMA_EN_W<0> {
+        DMA_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -150,11 +117,10 @@ impl crate::Readable for D_PERF_ENABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_perf_enable::W](W) writer structure"]
 impl crate::Writable for D_PERF_ENABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_PERF_ENABLE to value 0"]
 impl crate::Resettable for D_PERF_ENABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

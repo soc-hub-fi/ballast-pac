@@ -35,32 +35,10 @@ impl From<crate::W<D_CLIP_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CLIP_TRUNCATE` reader - "]
-pub struct CLIP_TRUNCATE_R(crate::FieldReader<u8>);
-impl CLIP_TRUNCATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CLIP_TRUNCATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLIP_TRUNCATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLIP_TRUNCATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CLIP_TRUNCATE` writer - "]
-pub struct CLIP_TRUNCATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLIP_TRUNCATE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type CLIP_TRUNCATE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_CLIP_CFG_SPEC, u8, u8, 5, O>;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]
@@ -71,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn clip_truncate(&mut self) -> CLIP_TRUNCATE_W {
-        CLIP_TRUNCATE_W { w: self }
+    #[must_use]
+    pub fn clip_truncate(&mut self) -> CLIP_TRUNCATE_W<0> {
+        CLIP_TRUNCATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +72,10 @@ impl crate::Readable for D_CLIP_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_clip_cfg::W](W) writer structure"]
 impl crate::Writable for D_CLIP_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_CLIP_CFG to value 0"]
 impl crate::Resettable for D_CLIP_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

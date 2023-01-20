@@ -35,833 +35,107 @@ impl From<crate::W<PAD_CFG_2_SPEC>> for W {
     }
 }
 #[doc = "Field `PAD_6_drive_strength` reader - "]
-pub struct PAD_6_DRIVE_STRENGTH_R(crate::FieldReader<u8>);
-impl PAD_6_DRIVE_STRENGTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PAD_6_DRIVE_STRENGTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_6_DRIVE_STRENGTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_6_DRIVE_STRENGTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PAD_6_drive_strength` writer - "]
-pub struct PAD_6_DRIVE_STRENGTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_6_DRIVE_STRENGTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type PAD_6_DRIVE_STRENGTH_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PAD_CFG_2_SPEC, u8, u8, 2, O>;
 #[doc = "Field `PAD_6_trigger` reader - "]
-pub struct PAD_6_TRIGGER_R(crate::FieldReader<u8>);
-impl PAD_6_TRIGGER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PAD_6_TRIGGER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_6_TRIGGER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_6_TRIGGER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PAD_6_trigger` writer - "]
-pub struct PAD_6_TRIGGER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_6_TRIGGER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type PAD_6_TRIGGER_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PAD_CFG_2_SPEC, u8, u8, 2, O>;
 #[doc = "Field `PAD_6_rate` reader - "]
-pub struct PAD_6_RATE_R(crate::FieldReader<bool>);
-impl PAD_6_RATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_6_RATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_6_RATE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_6_RATE_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_6_rate` writer - "]
-pub struct PAD_6_RATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_6_RATE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type PAD_6_RATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_6_output_en` reader - 0: Enable"]
-pub struct PAD_6_OUTPUT_EN_R(crate::FieldReader<bool>);
-impl PAD_6_OUTPUT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_6_OUTPUT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_6_OUTPUT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_6_OUTPUT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_6_output_en` writer - 0: Enable"]
-pub struct PAD_6_OUTPUT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_6_OUTPUT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type PAD_6_OUTPUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_6_hold` reader - "]
-pub struct PAD_6_HOLD_R(crate::FieldReader<bool>);
-impl PAD_6_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_6_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_6_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_6_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_6_hold` writer - "]
-pub struct PAD_6_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_6_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type PAD_6_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_6_pull_enable` reader - "]
-pub struct PAD_6_PULL_ENABLE_R(crate::FieldReader<bool>);
-impl PAD_6_PULL_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_6_PULL_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_6_PULL_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_6_PULL_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_6_pull_enable` writer - "]
-pub struct PAD_6_PULL_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_6_PULL_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type PAD_6_PULL_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_6_pd_pu` reader - Pull down or pull up register, default pull down 0: pull down 1: pull up"]
-pub struct PAD_6_PD_PU_R(crate::FieldReader<bool>);
-impl PAD_6_PD_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_6_PD_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_6_PD_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_6_PD_PU_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_6_pd_pu` writer - Pull down or pull up register, default pull down 0: pull down 1: pull up"]
-pub struct PAD_6_PD_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_6_PD_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type PAD_6_PD_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_6_input_en` reader - "]
-pub struct PAD_6_INPUT_EN_R(crate::FieldReader<bool>);
-impl PAD_6_INPUT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_6_INPUT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_6_INPUT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_6_INPUT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_6_input_en` writer - "]
-pub struct PAD_6_INPUT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_6_INPUT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type PAD_6_INPUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_7_drive_strength` reader - "]
-pub struct PAD_7_DRIVE_STRENGTH_R(crate::FieldReader<u8>);
-impl PAD_7_DRIVE_STRENGTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PAD_7_DRIVE_STRENGTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_7_DRIVE_STRENGTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_7_DRIVE_STRENGTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PAD_7_drive_strength` writer - "]
-pub struct PAD_7_DRIVE_STRENGTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_7_DRIVE_STRENGTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
-        self.w
-    }
-}
+pub type PAD_7_DRIVE_STRENGTH_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PAD_CFG_2_SPEC, u8, u8, 2, O>;
 #[doc = "Field `PAD_7_trigger` reader - "]
-pub struct PAD_7_TRIGGER_R(crate::FieldReader<u8>);
-impl PAD_7_TRIGGER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PAD_7_TRIGGER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_7_TRIGGER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_7_TRIGGER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PAD_7_trigger` writer - "]
-pub struct PAD_7_TRIGGER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_7_TRIGGER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
-        self.w
-    }
-}
+pub type PAD_7_TRIGGER_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PAD_CFG_2_SPEC, u8, u8, 2, O>;
 #[doc = "Field `PAD_7_rate` reader - "]
-pub struct PAD_7_RATE_R(crate::FieldReader<bool>);
-impl PAD_7_RATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_7_RATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_7_RATE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_7_RATE_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_7_rate` writer - "]
-pub struct PAD_7_RATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_7_RATE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type PAD_7_RATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_7_output_en` reader - 0: Enable"]
-pub struct PAD_7_OUTPUT_EN_R(crate::FieldReader<bool>);
-impl PAD_7_OUTPUT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_7_OUTPUT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_7_OUTPUT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_7_OUTPUT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_7_output_en` writer - 0: Enable"]
-pub struct PAD_7_OUTPUT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_7_OUTPUT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type PAD_7_OUTPUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_7_hold` reader - "]
-pub struct PAD_7_HOLD_R(crate::FieldReader<bool>);
-impl PAD_7_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_7_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_7_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_7_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_7_hold` writer - "]
-pub struct PAD_7_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_7_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type PAD_7_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_7_pull_enable` reader - "]
-pub struct PAD_7_PULL_ENABLE_R(crate::FieldReader<bool>);
-impl PAD_7_PULL_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_7_PULL_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_7_PULL_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_7_PULL_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_7_pull_enable` writer - "]
-pub struct PAD_7_PULL_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_7_PULL_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type PAD_7_PULL_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_7_pd_pu` reader - Pull down or pull up register, default pull down 0: pull down 1: pull up"]
-pub struct PAD_7_PD_PU_R(crate::FieldReader<bool>);
-impl PAD_7_PD_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_7_PD_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_7_PD_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_7_PD_PU_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_7_pd_pu` writer - Pull down or pull up register, default pull down 0: pull down 1: pull up"]
-pub struct PAD_7_PD_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_7_PD_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type PAD_7_PD_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_7_input_en` reader - "]
-pub struct PAD_7_INPUT_EN_R(crate::FieldReader<bool>);
-impl PAD_7_INPUT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_7_INPUT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_7_INPUT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_7_INPUT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_7_input_en` writer - "]
-pub struct PAD_7_INPUT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_7_INPUT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type PAD_7_INPUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_8_drive_strength` reader - "]
-pub struct PAD_8_DRIVE_STRENGTH_R(crate::FieldReader<u8>);
-impl PAD_8_DRIVE_STRENGTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PAD_8_DRIVE_STRENGTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_8_DRIVE_STRENGTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_8_DRIVE_STRENGTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PAD_8_drive_strength` writer - "]
-pub struct PAD_8_DRIVE_STRENGTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_8_DRIVE_STRENGTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
-        self.w
-    }
-}
+pub type PAD_8_DRIVE_STRENGTH_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PAD_CFG_2_SPEC, u8, u8, 2, O>;
 #[doc = "Field `PAD_8_trigger` reader - "]
-pub struct PAD_8_TRIGGER_R(crate::FieldReader<u8>);
-impl PAD_8_TRIGGER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PAD_8_TRIGGER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_8_TRIGGER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_8_TRIGGER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PAD_8_trigger` writer - "]
-pub struct PAD_8_TRIGGER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_8_TRIGGER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
-        self.w
-    }
-}
+pub type PAD_8_TRIGGER_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PAD_CFG_2_SPEC, u8, u8, 2, O>;
 #[doc = "Field `PAD_8_rate` reader - "]
-pub struct PAD_8_RATE_R(crate::FieldReader<bool>);
-impl PAD_8_RATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_8_RATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_8_RATE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_8_RATE_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_8_rate` writer - "]
-pub struct PAD_8_RATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_8_RATE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type PAD_8_RATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_8_output_en` reader - 0: Enable"]
-pub struct PAD_8_OUTPUT_EN_R(crate::FieldReader<bool>);
-impl PAD_8_OUTPUT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_8_OUTPUT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_8_OUTPUT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_8_OUTPUT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_8_output_en` writer - 0: Enable"]
-pub struct PAD_8_OUTPUT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_8_OUTPUT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type PAD_8_OUTPUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_8_hold` reader - "]
-pub struct PAD_8_HOLD_R(crate::FieldReader<bool>);
-impl PAD_8_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_8_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_8_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_8_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_8_hold` writer - "]
-pub struct PAD_8_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_8_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type PAD_8_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_8_pull_enable` reader - "]
-pub struct PAD_8_PULL_ENABLE_R(crate::FieldReader<bool>);
-impl PAD_8_PULL_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_8_PULL_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_8_PULL_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_8_PULL_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_8_pull_enable` writer - "]
-pub struct PAD_8_PULL_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_8_PULL_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type PAD_8_PULL_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_8_pd_pu` reader - Pull down or pull up register, default pull down 0: pull down 1: pull up"]
-pub struct PAD_8_PD_PU_R(crate::FieldReader<bool>);
-impl PAD_8_PD_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_8_PD_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_8_PD_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_8_PD_PU_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_8_pd_pu` writer - Pull down or pull up register, default pull down 0: pull down 1: pull up"]
-pub struct PAD_8_PD_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_8_PD_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type PAD_8_PD_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 #[doc = "Field `PAD_8_input_en` reader - "]
-pub struct PAD_8_INPUT_EN_R(crate::FieldReader<bool>);
-impl PAD_8_INPUT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PAD_8_INPUT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_8_INPUT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_8_INPUT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PAD_8_input_en` writer - "]
-pub struct PAD_8_INPUT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_8_INPUT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type PAD_8_INPUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_CFG_2_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -987,123 +261,147 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn pad_6_drive_strength(&mut self) -> PAD_6_DRIVE_STRENGTH_W {
-        PAD_6_DRIVE_STRENGTH_W { w: self }
+    #[must_use]
+    pub fn pad_6_drive_strength(&mut self) -> PAD_6_DRIVE_STRENGTH_W<0> {
+        PAD_6_DRIVE_STRENGTH_W::new(self)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
-    pub fn pad_6_trigger(&mut self) -> PAD_6_TRIGGER_W {
-        PAD_6_TRIGGER_W { w: self }
+    #[must_use]
+    pub fn pad_6_trigger(&mut self) -> PAD_6_TRIGGER_W<2> {
+        PAD_6_TRIGGER_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn pad_6_rate(&mut self) -> PAD_6_RATE_W {
-        PAD_6_RATE_W { w: self }
+    #[must_use]
+    pub fn pad_6_rate(&mut self) -> PAD_6_RATE_W<4> {
+        PAD_6_RATE_W::new(self)
     }
     #[doc = "Bit 5 - 0: Enable"]
     #[inline(always)]
-    pub fn pad_6_output_en(&mut self) -> PAD_6_OUTPUT_EN_W {
-        PAD_6_OUTPUT_EN_W { w: self }
+    #[must_use]
+    pub fn pad_6_output_en(&mut self) -> PAD_6_OUTPUT_EN_W<5> {
+        PAD_6_OUTPUT_EN_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn pad_6_hold(&mut self) -> PAD_6_HOLD_W {
-        PAD_6_HOLD_W { w: self }
+    #[must_use]
+    pub fn pad_6_hold(&mut self) -> PAD_6_HOLD_W<6> {
+        PAD_6_HOLD_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn pad_6_pull_enable(&mut self) -> PAD_6_PULL_ENABLE_W {
-        PAD_6_PULL_ENABLE_W { w: self }
+    #[must_use]
+    pub fn pad_6_pull_enable(&mut self) -> PAD_6_PULL_ENABLE_W<7> {
+        PAD_6_PULL_ENABLE_W::new(self)
     }
     #[doc = "Bit 8 - Pull down or pull up register, default pull down 0: pull down 1: pull up"]
     #[inline(always)]
-    pub fn pad_6_pd_pu(&mut self) -> PAD_6_PD_PU_W {
-        PAD_6_PD_PU_W { w: self }
+    #[must_use]
+    pub fn pad_6_pd_pu(&mut self) -> PAD_6_PD_PU_W<8> {
+        PAD_6_PD_PU_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn pad_6_input_en(&mut self) -> PAD_6_INPUT_EN_W {
-        PAD_6_INPUT_EN_W { w: self }
+    #[must_use]
+    pub fn pad_6_input_en(&mut self) -> PAD_6_INPUT_EN_W<9> {
+        PAD_6_INPUT_EN_W::new(self)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
-    pub fn pad_7_drive_strength(&mut self) -> PAD_7_DRIVE_STRENGTH_W {
-        PAD_7_DRIVE_STRENGTH_W { w: self }
+    #[must_use]
+    pub fn pad_7_drive_strength(&mut self) -> PAD_7_DRIVE_STRENGTH_W<10> {
+        PAD_7_DRIVE_STRENGTH_W::new(self)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
-    pub fn pad_7_trigger(&mut self) -> PAD_7_TRIGGER_W {
-        PAD_7_TRIGGER_W { w: self }
+    #[must_use]
+    pub fn pad_7_trigger(&mut self) -> PAD_7_TRIGGER_W<12> {
+        PAD_7_TRIGGER_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn pad_7_rate(&mut self) -> PAD_7_RATE_W {
-        PAD_7_RATE_W { w: self }
+    #[must_use]
+    pub fn pad_7_rate(&mut self) -> PAD_7_RATE_W<14> {
+        PAD_7_RATE_W::new(self)
     }
     #[doc = "Bit 15 - 0: Enable"]
     #[inline(always)]
-    pub fn pad_7_output_en(&mut self) -> PAD_7_OUTPUT_EN_W {
-        PAD_7_OUTPUT_EN_W { w: self }
+    #[must_use]
+    pub fn pad_7_output_en(&mut self) -> PAD_7_OUTPUT_EN_W<15> {
+        PAD_7_OUTPUT_EN_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn pad_7_hold(&mut self) -> PAD_7_HOLD_W {
-        PAD_7_HOLD_W { w: self }
+    #[must_use]
+    pub fn pad_7_hold(&mut self) -> PAD_7_HOLD_W<16> {
+        PAD_7_HOLD_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn pad_7_pull_enable(&mut self) -> PAD_7_PULL_ENABLE_W {
-        PAD_7_PULL_ENABLE_W { w: self }
+    #[must_use]
+    pub fn pad_7_pull_enable(&mut self) -> PAD_7_PULL_ENABLE_W<17> {
+        PAD_7_PULL_ENABLE_W::new(self)
     }
     #[doc = "Bit 18 - Pull down or pull up register, default pull down 0: pull down 1: pull up"]
     #[inline(always)]
-    pub fn pad_7_pd_pu(&mut self) -> PAD_7_PD_PU_W {
-        PAD_7_PD_PU_W { w: self }
+    #[must_use]
+    pub fn pad_7_pd_pu(&mut self) -> PAD_7_PD_PU_W<18> {
+        PAD_7_PD_PU_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    pub fn pad_7_input_en(&mut self) -> PAD_7_INPUT_EN_W {
-        PAD_7_INPUT_EN_W { w: self }
+    #[must_use]
+    pub fn pad_7_input_en(&mut self) -> PAD_7_INPUT_EN_W<19> {
+        PAD_7_INPUT_EN_W::new(self)
     }
     #[doc = "Bits 20:21"]
     #[inline(always)]
-    pub fn pad_8_drive_strength(&mut self) -> PAD_8_DRIVE_STRENGTH_W {
-        PAD_8_DRIVE_STRENGTH_W { w: self }
+    #[must_use]
+    pub fn pad_8_drive_strength(&mut self) -> PAD_8_DRIVE_STRENGTH_W<20> {
+        PAD_8_DRIVE_STRENGTH_W::new(self)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
-    pub fn pad_8_trigger(&mut self) -> PAD_8_TRIGGER_W {
-        PAD_8_TRIGGER_W { w: self }
+    #[must_use]
+    pub fn pad_8_trigger(&mut self) -> PAD_8_TRIGGER_W<22> {
+        PAD_8_TRIGGER_W::new(self)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn pad_8_rate(&mut self) -> PAD_8_RATE_W {
-        PAD_8_RATE_W { w: self }
+    #[must_use]
+    pub fn pad_8_rate(&mut self) -> PAD_8_RATE_W<24> {
+        PAD_8_RATE_W::new(self)
     }
     #[doc = "Bit 25 - 0: Enable"]
     #[inline(always)]
-    pub fn pad_8_output_en(&mut self) -> PAD_8_OUTPUT_EN_W {
-        PAD_8_OUTPUT_EN_W { w: self }
+    #[must_use]
+    pub fn pad_8_output_en(&mut self) -> PAD_8_OUTPUT_EN_W<25> {
+        PAD_8_OUTPUT_EN_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    pub fn pad_8_hold(&mut self) -> PAD_8_HOLD_W {
-        PAD_8_HOLD_W { w: self }
+    #[must_use]
+    pub fn pad_8_hold(&mut self) -> PAD_8_HOLD_W<26> {
+        PAD_8_HOLD_W::new(self)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    pub fn pad_8_pull_enable(&mut self) -> PAD_8_PULL_ENABLE_W {
-        PAD_8_PULL_ENABLE_W { w: self }
+    #[must_use]
+    pub fn pad_8_pull_enable(&mut self) -> PAD_8_PULL_ENABLE_W<27> {
+        PAD_8_PULL_ENABLE_W::new(self)
     }
     #[doc = "Bit 28 - Pull down or pull up register, default pull down 0: pull down 1: pull up"]
     #[inline(always)]
-    pub fn pad_8_pd_pu(&mut self) -> PAD_8_PD_PU_W {
-        PAD_8_PD_PU_W { w: self }
+    #[must_use]
+    pub fn pad_8_pd_pu(&mut self) -> PAD_8_PD_PU_W<28> {
+        PAD_8_PD_PU_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn pad_8_input_en(&mut self) -> PAD_8_INPUT_EN_W {
-        PAD_8_INPUT_EN_W { w: self }
+    #[must_use]
+    pub fn pad_8_input_en(&mut self) -> PAD_8_INPUT_EN_W<29> {
+        PAD_8_INPUT_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -1124,11 +422,10 @@ impl crate::Readable for PAD_CFG_2_SPEC {
 #[doc = "`write(|w| ..)` method takes [pad_cfg_2::W](W) writer structure"]
 impl crate::Writable for PAD_CFG_2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PAD_CFG_2 to value 0x8c01_2003"]
 impl crate::Resettable for PAD_CFG_2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8c01_2003
-    }
+    const RESET_VALUE: Self::Ux = 0x8c01_2003;
 }

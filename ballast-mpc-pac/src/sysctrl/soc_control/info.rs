@@ -35,59 +35,13 @@ impl From<crate::W<INFO_SPEC>> for W {
     }
 }
 #[doc = "Field `cluster_count` reader - Number of Clusters"]
-pub struct CLUSTER_COUNT_R(crate::FieldReader<u16>);
-impl CLUSTER_COUNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CLUSTER_COUNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLUSTER_COUNT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLUSTER_COUNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `cluster_count` writer - Number of Clusters"]
-pub struct CLUSTER_COUNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLUSTER_COUNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type CLUSTER_COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, INFO_SPEC, u16, u16, 16, O>;
 #[doc = "Field `core_count` reader - Number of Cores"]
-pub struct CORE_COUNT_R(crate::FieldReader<u16>);
-impl CORE_COUNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CORE_COUNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_COUNT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_COUNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `core_count` writer - Number of Cores"]
-pub struct CORE_COUNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_COUNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
+pub type CORE_COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, INFO_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15 - Number of Clusters"]
     #[inline(always)]
@@ -103,13 +57,15 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Number of Clusters"]
     #[inline(always)]
-    pub fn cluster_count(&mut self) -> CLUSTER_COUNT_W {
-        CLUSTER_COUNT_W { w: self }
+    #[must_use]
+    pub fn cluster_count(&mut self) -> CLUSTER_COUNT_W<0> {
+        CLUSTER_COUNT_W::new(self)
     }
     #[doc = "Bits 16:31 - Number of Cores"]
     #[inline(always)]
-    pub fn core_count(&mut self) -> CORE_COUNT_W {
-        CORE_COUNT_W { w: self }
+    #[must_use]
+    pub fn core_count(&mut self) -> CORE_COUNT_W<16> {
+        CORE_COUNT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -130,11 +86,10 @@ impl crate::Readable for INFO_SPEC {
 #[doc = "`write(|w| ..)` method takes [info::W](W) writer structure"]
 impl crate::Writable for INFO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INFO to value 0x0004_0000"]
 impl crate::Resettable for INFO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0004_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0004_0000;
 }

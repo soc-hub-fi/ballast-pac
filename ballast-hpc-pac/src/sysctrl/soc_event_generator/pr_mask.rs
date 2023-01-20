@@ -35,32 +35,9 @@ impl From<crate::W<PR_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `PR_MASK0` reader - "]
-pub struct PR_MASK0_R(crate::FieldReader<u32>);
-impl PR_MASK0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PR_MASK0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PR_MASK0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PR_MASK0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PR_MASK0` writer - "]
-pub struct PR_MASK0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PR_MASK0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type PR_MASK0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PR_MASK_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -71,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn pr_mask0(&mut self) -> PR_MASK0_W {
-        PR_MASK0_W { w: self }
+    #[must_use]
+    pub fn pr_mask0(&mut self) -> PR_MASK0_W<0> {
+        PR_MASK0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,12 +71,11 @@ impl crate::Readable for PR_MASK_SPEC {
 #[doc = "`write(|w| ..)` method takes [pr_mask::W](W) writer structure"]
 impl crate::Writable for PR_MASK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PR_MASK[%s]
 to value 0xffff_ffff"]
 impl crate::Resettable for PR_MASK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

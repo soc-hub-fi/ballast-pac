@@ -35,79 +35,13 @@ impl From<crate::W<UART_IRQ_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `RX` reader - Rx interrupt in enable flag: - 1'b0: RX IRQ disable - 1'b1: RX IRQ enable"]
-pub struct RX_R(crate::FieldReader<bool>);
-impl RX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_R = crate::BitReader<bool>;
 #[doc = "Field `RX` writer - Rx interrupt in enable flag: - 1'b0: RX IRQ disable - 1'b1: RX IRQ enable"]
-pub struct RX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type RX_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_IRQ_EN_SPEC, bool, O>;
 #[doc = "Field `ERROR` reader - Error interrupt in enable flag: - 1'b0: Error IRQ disable - 1'b1: Error IRQ enable"]
-pub struct ERROR_R(crate::FieldReader<bool>);
-impl ERROR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ERROR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ERROR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ERROR_R = crate::BitReader<bool>;
 #[doc = "Field `ERROR` writer - Error interrupt in enable flag: - 1'b0: Error IRQ disable - 1'b1: Error IRQ enable"]
-pub struct ERROR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ERROR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type ERROR_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_IRQ_EN_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Rx interrupt in enable flag: - 1'b0: RX IRQ disable - 1'b1: RX IRQ enable"]
     #[inline(always)]
@@ -123,13 +57,15 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Rx interrupt in enable flag: - 1'b0: RX IRQ disable - 1'b1: RX IRQ enable"]
     #[inline(always)]
-    pub fn rx(&mut self) -> RX_W {
-        RX_W { w: self }
+    #[must_use]
+    pub fn rx(&mut self) -> RX_W<0> {
+        RX_W::new(self)
     }
     #[doc = "Bit 1 - Error interrupt in enable flag: - 1'b0: Error IRQ disable - 1'b1: Error IRQ enable"]
     #[inline(always)]
-    pub fn error(&mut self) -> ERROR_W {
-        ERROR_W { w: self }
+    #[must_use]
+    pub fn error(&mut self) -> ERROR_W<1> {
+        ERROR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -150,11 +86,10 @@ impl crate::Readable for UART_IRQ_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [uart_irq_en::W](W) writer structure"]
 impl crate::Writable for UART_IRQ_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets UART_IRQ_EN to value 0"]
 impl crate::Resettable for UART_IRQ_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

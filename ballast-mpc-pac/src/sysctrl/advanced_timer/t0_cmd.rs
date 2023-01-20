@@ -35,190 +35,25 @@ impl From<crate::W<T0_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `START` reader - ADV_TIMER0 start command bitfield"]
-pub struct START_R(crate::FieldReader<bool>);
-impl START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type START_R = crate::BitReader<bool>;
 #[doc = "Field `START` writer - ADV_TIMER0 start command bitfield"]
-pub struct START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type START_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0_CMD_SPEC, bool, O>;
 #[doc = "Field `STOP` reader - ADV_TIMER0 stop command bitfield."]
-pub struct STOP_R(crate::FieldReader<bool>);
-impl STOP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        STOP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STOP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STOP_R = crate::BitReader<bool>;
 #[doc = "Field `STOP` writer - ADV_TIMER0 stop command bitfield."]
-pub struct STOP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STOP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0_CMD_SPEC, bool, O>;
 #[doc = "Field `UPDATE` reader - ADV_TIMER0 update command bitfield."]
-pub struct UPDATE_R(crate::FieldReader<bool>);
-impl UPDATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UPDATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UPDATE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UPDATE_R = crate::BitReader<bool>;
 #[doc = "Field `UPDATE` writer - ADV_TIMER0 update command bitfield."]
-pub struct UPDATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UPDATE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0_CMD_SPEC, bool, O>;
 #[doc = "Field `RESET` reader - ADV_TIMER0 reset command bitfield"]
-pub struct RESET_R(crate::FieldReader<bool>);
-impl RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESET_R = crate::BitReader<bool>;
 #[doc = "Field `RESET` writer - ADV_TIMER0 reset command bitfield"]
-pub struct RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0_CMD_SPEC, bool, O>;
 #[doc = "Field `ARM` reader - ADV_TIMER0 arm command bitfield."]
-pub struct ARM_R(crate::FieldReader<bool>);
-impl ARM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ARM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ARM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ARM_R = crate::BitReader<bool>;
 #[doc = "Field `ARM` writer - ADV_TIMER0 arm command bitfield."]
-pub struct ARM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ARM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type ARM_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0_CMD_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - ADV_TIMER0 start command bitfield"]
     #[inline(always)]
@@ -249,28 +84,33 @@ impl R {
 impl W {
     #[doc = "Bit 0 - ADV_TIMER0 start command bitfield"]
     #[inline(always)]
-    pub fn start(&mut self) -> START_W {
-        START_W { w: self }
+    #[must_use]
+    pub fn start(&mut self) -> START_W<0> {
+        START_W::new(self)
     }
     #[doc = "Bit 1 - ADV_TIMER0 stop command bitfield."]
     #[inline(always)]
-    pub fn stop(&mut self) -> STOP_W {
-        STOP_W { w: self }
+    #[must_use]
+    pub fn stop(&mut self) -> STOP_W<1> {
+        STOP_W::new(self)
     }
     #[doc = "Bit 2 - ADV_TIMER0 update command bitfield."]
     #[inline(always)]
-    pub fn update(&mut self) -> UPDATE_W {
-        UPDATE_W { w: self }
+    #[must_use]
+    pub fn update(&mut self) -> UPDATE_W<2> {
+        UPDATE_W::new(self)
     }
     #[doc = "Bit 3 - ADV_TIMER0 reset command bitfield"]
     #[inline(always)]
-    pub fn reset(&mut self) -> RESET_W {
-        RESET_W { w: self }
+    #[must_use]
+    pub fn reset(&mut self) -> RESET_W<3> {
+        RESET_W::new(self)
     }
     #[doc = "Bit 4 - ADV_TIMER0 arm command bitfield."]
     #[inline(always)]
-    pub fn arm(&mut self) -> ARM_W {
-        ARM_W { w: self }
+    #[must_use]
+    pub fn arm(&mut self) -> ARM_W<4> {
+        ARM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -291,11 +131,10 @@ impl crate::Readable for T0_CMD_SPEC {
 #[doc = "`write(|w| ..)` method takes [t0_cmd::W](W) writer structure"]
 impl crate::Writable for T0_CMD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets T0_CMD to value 0"]
 impl crate::Resettable for T0_CMD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

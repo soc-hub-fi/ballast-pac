@@ -35,59 +35,14 @@ impl From<crate::W<JTAGREG_SPEC>> for W {
     }
 }
 #[doc = "Field `jtag_reg_write` reader - "]
-pub struct JTAG_REG_WRITE_R(crate::FieldReader<u8>);
-impl JTAG_REG_WRITE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        JTAG_REG_WRITE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for JTAG_REG_WRITE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type JTAG_REG_WRITE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `jtag_reg_write` writer - "]
-pub struct JTAG_REG_WRITE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> JTAG_REG_WRITE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type JTAG_REG_WRITE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, JTAGREG_SPEC, u8, u8, 8, O>;
 #[doc = "Field `jtag_reg_read` reader - "]
-pub struct JTAG_REG_READ_R(crate::FieldReader<u8>);
-impl JTAG_REG_READ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        JTAG_REG_READ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for JTAG_REG_READ_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type JTAG_REG_READ_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `jtag_reg_read` writer - "]
-pub struct JTAG_REG_READ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> JTAG_REG_READ_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type JTAG_REG_READ_W<'a, const O: u8> = crate::FieldWriter<'a, u32, JTAGREG_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -103,13 +58,15 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn jtag_reg_write(&mut self) -> JTAG_REG_WRITE_W {
-        JTAG_REG_WRITE_W { w: self }
+    #[must_use]
+    pub fn jtag_reg_write(&mut self) -> JTAG_REG_WRITE_W<0> {
+        JTAG_REG_WRITE_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn jtag_reg_read(&mut self) -> JTAG_REG_READ_W {
-        JTAG_REG_READ_W { w: self }
+    #[must_use]
+    pub fn jtag_reg_read(&mut self) -> JTAG_REG_READ_W<8> {
+        JTAG_REG_READ_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -130,11 +87,10 @@ impl crate::Readable for JTAGREG_SPEC {
 #[doc = "`write(|w| ..)` method takes [jtagreg::W](W) writer structure"]
 impl crate::Writable for JTAGREG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets JTAGREG to value 0"]
 impl crate::Resettable for JTAGREG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

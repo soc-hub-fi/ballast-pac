@@ -14,20 +14,7 @@ impl From<crate::R<MDIO_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `MDIO_Status` reader - "]
-pub struct MDIO_STATUS_R(crate::FieldReader<bool>);
-impl MDIO_STATUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MDIO_STATUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MDIO_STATUS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MDIO_STATUS_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for MDIO_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets MDIO_Status to value 0"]
 impl crate::Resettable for MDIO_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -14,20 +14,7 @@ impl From<crate::R<INTERFACE_VERSION_SPEC>> for R {
     }
 }
 #[doc = "Field `interface_version` reader - "]
-pub struct INTERFACE_VERSION_R(crate::FieldReader<u32>);
-impl INTERFACE_VERSION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        INTERFACE_VERSION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERFACE_VERSION_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERFACE_VERSION_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for INTERFACE_VERSION_SPEC {
 }
 #[doc = "`reset()` method sets interface_version to value 0"]
 impl crate::Resettable for INTERFACE_VERSION_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

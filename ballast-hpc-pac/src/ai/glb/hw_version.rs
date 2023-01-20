@@ -14,35 +14,9 @@ impl From<crate::R<HW_VERSION_SPEC>> for R {
     }
 }
 #[doc = "Field `MAJOR` reader - "]
-pub struct MAJOR_R(crate::FieldReader<u8>);
-impl MAJOR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MAJOR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAJOR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAJOR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MINOR` reader - "]
-pub struct MINOR_R(crate::FieldReader<u16>);
-impl MINOR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        MINOR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MINOR_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MINOR_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -66,8 +40,5 @@ impl crate::Readable for HW_VERSION_SPEC {
 }
 #[doc = "`reset()` method sets HW_VERSION to value 0x3030_0031"]
 impl crate::Resettable for HW_VERSION_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3030_0031
-    }
+    const RESET_VALUE: Self::Ux = 0x3030_0031;
 }

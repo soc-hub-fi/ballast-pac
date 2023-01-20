@@ -35,32 +35,9 @@ impl From<crate::W<FCBOOT_SPEC>> for W {
     }
 }
 #[doc = "Field `FCBOOT` reader - Boot Start address"]
-pub struct FCBOOT_R(crate::FieldReader<u32>);
-impl FCBOOT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        FCBOOT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FCBOOT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FCBOOT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `FCBOOT` writer - Boot Start address"]
-pub struct FCBOOT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FCBOOT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type FCBOOT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FCBOOT_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - Boot Start address"]
     #[inline(always)]
@@ -71,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Boot Start address"]
     #[inline(always)]
-    pub fn fcboot(&mut self) -> FCBOOT_W {
-        FCBOOT_W { w: self }
+    #[must_use]
+    pub fn fcboot(&mut self) -> FCBOOT_W<0> {
+        FCBOOT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +71,10 @@ impl crate::Readable for FCBOOT_SPEC {
 #[doc = "`write(|w| ..)` method takes [fcboot::W](W) writer structure"]
 impl crate::Writable for FCBOOT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FCBOOT to value 0x1a00_0080"]
 impl crate::Resettable for FCBOOT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1a00_0080
-    }
+    const RESET_VALUE: Self::Ux = 0x1a00_0080;
 }

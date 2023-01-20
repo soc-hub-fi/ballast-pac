@@ -13,8 +13,10 @@ impl From<crate::R<S_STATUS_SPEC>> for R {
         R(reader)
     }
 }
+#[doc = "Field `STATUS_0` reader - "]
+pub type STATUS_0_R = crate::FieldReader<u8, STATUS_0_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum STATUS_0_A {
     #[doc = "1: `1`"]
@@ -28,14 +30,8 @@ impl From<STATUS_0_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `STATUS_0` reader - "]
-pub struct STATUS_0_R(crate::FieldReader<u8>);
 impl STATUS_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        STATUS_0_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<STATUS_0_A> {
         match self.bits {
@@ -47,23 +43,18 @@ impl STATUS_0_R {
     #[doc = "Checks if the value of the field is `ENABLE`"]
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
-        **self == STATUS_0_A::ENABLE
+        *self == STATUS_0_A::ENABLE
     }
     #[doc = "Checks if the value of the field is `DISABLE`"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
-        **self == STATUS_0_A::DISABLE
+        *self == STATUS_0_A::DISABLE
     }
 }
-impl core::ops::Deref for STATUS_0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `STATUS_1` reader - "]
+pub type STATUS_1_R = crate::FieldReader<u8, STATUS_1_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum STATUS_1_A {
     #[doc = "1: `1`"]
@@ -77,14 +68,8 @@ impl From<STATUS_1_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `STATUS_1` reader - "]
-pub struct STATUS_1_R(crate::FieldReader<u8>);
 impl STATUS_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        STATUS_1_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<STATUS_1_A> {
         match self.bits {
@@ -96,19 +81,12 @@ impl STATUS_1_R {
     #[doc = "Checks if the value of the field is `ENABLE`"]
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
-        **self == STATUS_1_A::ENABLE
+        *self == STATUS_1_A::ENABLE
     }
     #[doc = "Checks if the value of the field is `DISABLE`"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
-        **self == STATUS_1_A::DISABLE
-    }
-}
-impl core::ops::Deref for STATUS_1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == STATUS_1_A::DISABLE
     }
 }
 impl R {
@@ -134,8 +112,5 @@ impl crate::Readable for S_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets S_STATUS to value 0"]
 impl crate::Resettable for S_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

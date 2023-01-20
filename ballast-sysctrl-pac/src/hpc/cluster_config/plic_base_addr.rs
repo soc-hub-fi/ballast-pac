@@ -35,32 +35,10 @@ impl From<crate::W<PLIC_BASE_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `plic_base_addr` reader - "]
-pub struct PLIC_BASE_ADDR_R(crate::FieldReader<u64>);
-impl PLIC_BASE_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u64) -> Self {
-        PLIC_BASE_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PLIC_BASE_ADDR_R {
-    type Target = crate::FieldReader<u64>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PLIC_BASE_ADDR_R = crate::FieldReader<u64, u64>;
 #[doc = "Field `plic_base_addr` writer - "]
-pub struct PLIC_BASE_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PLIC_BASE_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u64) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type PLIC_BASE_ADDR_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u64, PLIC_BASE_ADDR_SPEC, u64, u64, 64, O>;
 impl R {
     #[doc = "Bits 0:63"]
     #[inline(always)]
@@ -71,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:63"]
     #[inline(always)]
-    pub fn plic_base_addr(&mut self) -> PLIC_BASE_ADDR_W {
-        PLIC_BASE_ADDR_W { w: self }
+    #[must_use]
+    pub fn plic_base_addr(&mut self) -> PLIC_BASE_ADDR_W<0> {
+        PLIC_BASE_ADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +72,10 @@ impl crate::Readable for PLIC_BASE_ADDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [plic_base_addr::W](W) writer structure"]
 impl crate::Writable for PLIC_BASE_ADDR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets plic_base_addr to value 0"]
 impl crate::Resettable for PLIC_BASE_ADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

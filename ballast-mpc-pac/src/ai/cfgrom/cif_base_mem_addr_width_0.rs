@@ -14,25 +14,12 @@ impl From<crate::R<CIF_BASE_MEM_ADDR_WIDTH_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CIF_BASE_MEM_ADDR_WIDTH` reader - "]
-pub struct CIF_BASE_MEM_ADDR_WIDTH_R(crate::FieldReader<u32>);
-impl CIF_BASE_MEM_ADDR_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CIF_BASE_MEM_ADDR_WIDTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CIF_BASE_MEM_ADDR_WIDTH_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CIF_BASE_MEM_ADDR_WIDTH_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 5:31"]
     #[inline(always)]
     pub fn cif_base_mem_addr_width(&self) -> CIF_BASE_MEM_ADDR_WIDTH_R {
-        CIF_BASE_MEM_ADDR_WIDTH_R::new(((self.bits >> 5) & 0x07ff_ffff) as u32)
+        CIF_BASE_MEM_ADDR_WIDTH_R::new((self.bits >> 5) & 0x07ff_ffff)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cif_base_mem_addr_width_0](index.html) module"]
@@ -46,8 +33,5 @@ impl crate::Readable for CIF_BASE_MEM_ADDR_WIDTH_0_SPEC {
 }
 #[doc = "`reset()` method sets CIF_BASE_MEM_ADDR_WIDTH_0 to value 0x0400"]
 impl crate::Resettable for CIF_BASE_MEM_ADDR_WIDTH_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0400
-    }
+    const RESET_VALUE: Self::Ux = 0x0400;
 }

@@ -35,86 +35,20 @@ impl From<crate::W<S_LUT_INFO_SPEC>> for W {
     }
 }
 #[doc = "Field `LUT_LE_INDEX_OFFSET` reader - "]
-pub struct LUT_LE_INDEX_OFFSET_R(crate::FieldReader<u8>);
-impl LUT_LE_INDEX_OFFSET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LUT_LE_INDEX_OFFSET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LUT_LE_INDEX_OFFSET_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LUT_LE_INDEX_OFFSET_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LUT_LE_INDEX_OFFSET` writer - "]
-pub struct LUT_LE_INDEX_OFFSET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LUT_LE_INDEX_OFFSET_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type LUT_LE_INDEX_OFFSET_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, S_LUT_INFO_SPEC, u8, u8, 8, O>;
 #[doc = "Field `LUT_LE_INDEX_SELECT` reader - "]
-pub struct LUT_LE_INDEX_SELECT_R(crate::FieldReader<u8>);
-impl LUT_LE_INDEX_SELECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LUT_LE_INDEX_SELECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LUT_LE_INDEX_SELECT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LUT_LE_INDEX_SELECT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LUT_LE_INDEX_SELECT` writer - "]
-pub struct LUT_LE_INDEX_SELECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LUT_LE_INDEX_SELECT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type LUT_LE_INDEX_SELECT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, S_LUT_INFO_SPEC, u8, u8, 8, O>;
 #[doc = "Field `LUT_LO_INDEX_SELECT` reader - "]
-pub struct LUT_LO_INDEX_SELECT_R(crate::FieldReader<u8>);
-impl LUT_LO_INDEX_SELECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LUT_LO_INDEX_SELECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LUT_LO_INDEX_SELECT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LUT_LO_INDEX_SELECT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LUT_LO_INDEX_SELECT` writer - "]
-pub struct LUT_LO_INDEX_SELECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LUT_LO_INDEX_SELECT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
-        self.w
-    }
-}
+pub type LUT_LO_INDEX_SELECT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, S_LUT_INFO_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -135,18 +69,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn lut_le_index_offset(&mut self) -> LUT_LE_INDEX_OFFSET_W {
-        LUT_LE_INDEX_OFFSET_W { w: self }
+    #[must_use]
+    pub fn lut_le_index_offset(&mut self) -> LUT_LE_INDEX_OFFSET_W<0> {
+        LUT_LE_INDEX_OFFSET_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn lut_le_index_select(&mut self) -> LUT_LE_INDEX_SELECT_W {
-        LUT_LE_INDEX_SELECT_W { w: self }
+    #[must_use]
+    pub fn lut_le_index_select(&mut self) -> LUT_LE_INDEX_SELECT_W<8> {
+        LUT_LE_INDEX_SELECT_W::new(self)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
-    pub fn lut_lo_index_select(&mut self) -> LUT_LO_INDEX_SELECT_W {
-        LUT_LO_INDEX_SELECT_W { w: self }
+    #[must_use]
+    pub fn lut_lo_index_select(&mut self) -> LUT_LO_INDEX_SELECT_W<16> {
+        LUT_LO_INDEX_SELECT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -167,11 +104,10 @@ impl crate::Readable for S_LUT_INFO_SPEC {
 #[doc = "`write(|w| ..)` method takes [s_lut_info::W](W) writer structure"]
 impl crate::Writable for S_LUT_INFO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets S_LUT_INFO to value 0"]
 impl crate::Resettable for S_LUT_INFO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -35,59 +35,15 @@ impl From<crate::W<CAM_CFG_LL_SPEC>> for W {
     }
 }
 #[doc = "Field `FRAMESLICE_LLX` reader - X coordinate of lower left corner of slice"]
-pub struct FRAMESLICE_LLX_R(crate::FieldReader<u16>);
-impl FRAMESLICE_LLX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        FRAMESLICE_LLX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FRAMESLICE_LLX_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FRAMESLICE_LLX_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `FRAMESLICE_LLX` writer - X coordinate of lower left corner of slice"]
-pub struct FRAMESLICE_LLX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FRAMESLICE_LLX_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type FRAMESLICE_LLX_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CAM_CFG_LL_SPEC, u16, u16, 16, O>;
 #[doc = "Field `FRAMESLICE_LLY` reader - Y coordinate of lower left corner of slice"]
-pub struct FRAMESLICE_LLY_R(crate::FieldReader<u16>);
-impl FRAMESLICE_LLY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        FRAMESLICE_LLY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FRAMESLICE_LLY_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FRAMESLICE_LLY_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `FRAMESLICE_LLY` writer - Y coordinate of lower left corner of slice"]
-pub struct FRAMESLICE_LLY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FRAMESLICE_LLY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
+pub type FRAMESLICE_LLY_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CAM_CFG_LL_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15 - X coordinate of lower left corner of slice"]
     #[inline(always)]
@@ -103,13 +59,15 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - X coordinate of lower left corner of slice"]
     #[inline(always)]
-    pub fn frameslice_llx(&mut self) -> FRAMESLICE_LLX_W {
-        FRAMESLICE_LLX_W { w: self }
+    #[must_use]
+    pub fn frameslice_llx(&mut self) -> FRAMESLICE_LLX_W<0> {
+        FRAMESLICE_LLX_W::new(self)
     }
     #[doc = "Bits 16:31 - Y coordinate of lower left corner of slice"]
     #[inline(always)]
-    pub fn frameslice_lly(&mut self) -> FRAMESLICE_LLY_W {
-        FRAMESLICE_LLY_W { w: self }
+    #[must_use]
+    pub fn frameslice_lly(&mut self) -> FRAMESLICE_LLY_W<16> {
+        FRAMESLICE_LLY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -130,11 +88,10 @@ impl crate::Readable for CAM_CFG_LL_SPEC {
 #[doc = "`write(|w| ..)` method takes [cam_cfg_ll::W](W) writer structure"]
 impl crate::Writable for CAM_CFG_LL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CAM_CFG_LL to value 0"]
 impl crate::Resettable for CAM_CFG_LL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

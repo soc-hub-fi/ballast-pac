@@ -35,32 +35,10 @@ impl From<crate::W<PRIORITY_THRESHOLD_CONTEXT_SPEC>> for W {
     }
 }
 #[doc = "Field `priority_threshold_context` reader - "]
-pub struct PRIORITY_THRESHOLD_CONTEXT_R(crate::FieldReader<u32>);
-impl PRIORITY_THRESHOLD_CONTEXT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PRIORITY_THRESHOLD_CONTEXT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRIORITY_THRESHOLD_CONTEXT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRIORITY_THRESHOLD_CONTEXT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `priority_threshold_context` writer - "]
-pub struct PRIORITY_THRESHOLD_CONTEXT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRIORITY_THRESHOLD_CONTEXT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type PRIORITY_THRESHOLD_CONTEXT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PRIORITY_THRESHOLD_CONTEXT_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -71,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn priority_threshold_context(&mut self) -> PRIORITY_THRESHOLD_CONTEXT_W {
-        PRIORITY_THRESHOLD_CONTEXT_W { w: self }
+    #[must_use]
+    pub fn priority_threshold_context(&mut self) -> PRIORITY_THRESHOLD_CONTEXT_W<0> {
+        PRIORITY_THRESHOLD_CONTEXT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,12 +72,11 @@ impl crate::Readable for PRIORITY_THRESHOLD_CONTEXT_SPEC {
 #[doc = "`write(|w| ..)` method takes [priority_threshold_context::W](W) writer structure"]
 impl crate::Writable for PRIORITY_THRESHOLD_CONTEXT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets priority_threshold_context[%s]
 to value 0"]
 impl crate::Resettable for PRIORITY_THRESHOLD_CONTEXT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

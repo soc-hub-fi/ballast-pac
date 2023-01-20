@@ -20,110 +20,46 @@ impl From<crate::W<DATA_SETUP_SPEC>> for W {
     }
 }
 #[doc = "Field `EN` writer - "]
-pub struct EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DATA_SETUP_SPEC, bool, O>;
 #[doc = "Field `RWN` writer - "]
-pub struct RWN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RWN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type RWN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DATA_SETUP_SPEC, bool, O>;
 #[doc = "Field `QUAD` writer - "]
-pub struct QUAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> QUAD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 2)) | ((value as u32 & 0x3f) << 2);
-        self.w
-    }
-}
+pub type QUAD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_SETUP_SPEC, u8, u8, 6, O>;
 #[doc = "Field `Block_Num` writer - "]
-pub struct BLOCK_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BLOCK_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type BLOCK_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_SETUP_SPEC, u8, u8, 8, O>;
 #[doc = "Field `BLOCK_SIZE` writer - "]
-pub struct BLOCK_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BLOCK_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 16)) | ((value as u32 & 0x03ff) << 16);
-        self.w
-    }
-}
+pub type BLOCK_SIZE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, DATA_SETUP_SPEC, u16, u16, 10, O>;
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W {
-        EN_W { w: self }
+    #[must_use]
+    pub fn en(&mut self) -> EN_W<0> {
+        EN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn rwn(&mut self) -> RWN_W {
-        RWN_W { w: self }
+    #[must_use]
+    pub fn rwn(&mut self) -> RWN_W<1> {
+        RWN_W::new(self)
     }
     #[doc = "Bits 2:7"]
     #[inline(always)]
-    pub fn quad(&mut self) -> QUAD_W {
-        QUAD_W { w: self }
+    #[must_use]
+    pub fn quad(&mut self) -> QUAD_W<2> {
+        QUAD_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn block_num(&mut self) -> BLOCK_NUM_W {
-        BLOCK_NUM_W { w: self }
+    #[must_use]
+    pub fn block_num(&mut self) -> BLOCK_NUM_W<8> {
+        BLOCK_NUM_W::new(self)
     }
     #[doc = "Bits 16:25"]
     #[inline(always)]
-    pub fn block_size(&mut self) -> BLOCK_SIZE_W {
-        BLOCK_SIZE_W { w: self }
+    #[must_use]
+    pub fn block_size(&mut self) -> BLOCK_SIZE_W<16> {
+        BLOCK_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -140,11 +76,10 @@ impl crate::RegisterSpec for DATA_SETUP_SPEC {
 #[doc = "`write(|w| ..)` method takes [data_setup::W](W) writer structure"]
 impl crate::Writable for DATA_SETUP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DATA_SETUP to value 0"]
 impl crate::Resettable for DATA_SETUP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -34,8 +34,10 @@ impl From<crate::W<D_BRDMA_CFG_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `BRDMA_DISABLE` reader - "]
+pub type BRDMA_DISABLE_R = crate::BitReader<BRDMA_DISABLE_A>;
 #[doc = "\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BRDMA_DISABLE_A {
     #[doc = "0: `0`"]
     NO = 0,
@@ -48,14 +50,8 @@ impl From<BRDMA_DISABLE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `BRDMA_DISABLE` reader - "]
-pub struct BRDMA_DISABLE_R(crate::FieldReader<bool>);
 impl BRDMA_DISABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BRDMA_DISABLE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> BRDMA_DISABLE_A {
         match self.bits {
@@ -66,31 +62,18 @@ impl BRDMA_DISABLE_R {
     #[doc = "Checks if the value of the field is `NO`"]
     #[inline(always)]
     pub fn is_no(&self) -> bool {
-        **self == BRDMA_DISABLE_A::NO
+        *self == BRDMA_DISABLE_A::NO
     }
     #[doc = "Checks if the value of the field is `YES`"]
     #[inline(always)]
     pub fn is_yes(&self) -> bool {
-        **self == BRDMA_DISABLE_A::YES
-    }
-}
-impl core::ops::Deref for BRDMA_DISABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == BRDMA_DISABLE_A::YES
     }
 }
 #[doc = "Field `BRDMA_DISABLE` writer - "]
-pub struct BRDMA_DISABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BRDMA_DISABLE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: BRDMA_DISABLE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type BRDMA_DISABLE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_BRDMA_CFG_SPEC, BRDMA_DISABLE_A, O>;
+impl<'a, const O: u8> BRDMA_DISABLE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn no(self) -> &'a mut W {
@@ -101,25 +84,11 @@ impl<'a> BRDMA_DISABLE_W<'a> {
     pub fn yes(self) -> &'a mut W {
         self.variant(BRDMA_DISABLE_A::YES)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
 }
+#[doc = "Field `BRDMA_DATA_USE` reader - "]
+pub type BRDMA_DATA_USE_R = crate::FieldReader<u8, BRDMA_DATA_USE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum BRDMA_DATA_USE_A {
     #[doc = "0: `0`"]
@@ -135,14 +104,8 @@ impl From<BRDMA_DATA_USE_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `BRDMA_DATA_USE` reader - "]
-pub struct BRDMA_DATA_USE_R(crate::FieldReader<u8>);
 impl BRDMA_DATA_USE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BRDMA_DATA_USE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<BRDMA_DATA_USE_A> {
         match self.bits {
@@ -155,36 +118,23 @@ impl BRDMA_DATA_USE_R {
     #[doc = "Checks if the value of the field is `MUL`"]
     #[inline(always)]
     pub fn is_mul(&self) -> bool {
-        **self == BRDMA_DATA_USE_A::MUL
+        *self == BRDMA_DATA_USE_A::MUL
     }
     #[doc = "Checks if the value of the field is `ALU`"]
     #[inline(always)]
     pub fn is_alu(&self) -> bool {
-        **self == BRDMA_DATA_USE_A::ALU
+        *self == BRDMA_DATA_USE_A::ALU
     }
     #[doc = "Checks if the value of the field is `BOTH`"]
     #[inline(always)]
     pub fn is_both(&self) -> bool {
-        **self == BRDMA_DATA_USE_A::BOTH
-    }
-}
-impl core::ops::Deref for BRDMA_DATA_USE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == BRDMA_DATA_USE_A::BOTH
     }
 }
 #[doc = "Field `BRDMA_DATA_USE` writer - "]
-pub struct BRDMA_DATA_USE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BRDMA_DATA_USE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: BRDMA_DATA_USE_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type BRDMA_DATA_USE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_BRDMA_CFG_SPEC, u8, BRDMA_DATA_USE_A, 2, O>;
+impl<'a, const O: u8> BRDMA_DATA_USE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn mul(self) -> &'a mut W {
@@ -200,15 +150,11 @@ impl<'a> BRDMA_DATA_USE_W<'a> {
     pub fn both(self) -> &'a mut W {
         self.variant(BRDMA_DATA_USE_A::BOTH)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 1)) | ((value as u32 & 3) << 1);
-        self.w
-    }
 }
+#[doc = "Field `BRDMA_DATA_SIZE` reader - "]
+pub type BRDMA_DATA_SIZE_R = crate::BitReader<BRDMA_DATA_SIZE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BRDMA_DATA_SIZE_A {
     #[doc = "0: `0`"]
     ONE_BYTE = 0,
@@ -221,14 +167,8 @@ impl From<BRDMA_DATA_SIZE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `BRDMA_DATA_SIZE` reader - "]
-pub struct BRDMA_DATA_SIZE_R(crate::FieldReader<bool>);
 impl BRDMA_DATA_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BRDMA_DATA_SIZE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> BRDMA_DATA_SIZE_A {
         match self.bits {
@@ -239,31 +179,18 @@ impl BRDMA_DATA_SIZE_R {
     #[doc = "Checks if the value of the field is `ONE_BYTE`"]
     #[inline(always)]
     pub fn is_one_byte(&self) -> bool {
-        **self == BRDMA_DATA_SIZE_A::ONE_BYTE
+        *self == BRDMA_DATA_SIZE_A::ONE_BYTE
     }
     #[doc = "Checks if the value of the field is `TWO_BYTE`"]
     #[inline(always)]
     pub fn is_two_byte(&self) -> bool {
-        **self == BRDMA_DATA_SIZE_A::TWO_BYTE
-    }
-}
-impl core::ops::Deref for BRDMA_DATA_SIZE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == BRDMA_DATA_SIZE_A::TWO_BYTE
     }
 }
 #[doc = "Field `BRDMA_DATA_SIZE` writer - "]
-pub struct BRDMA_DATA_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BRDMA_DATA_SIZE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: BRDMA_DATA_SIZE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type BRDMA_DATA_SIZE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_BRDMA_CFG_SPEC, BRDMA_DATA_SIZE_A, O>;
+impl<'a, const O: u8> BRDMA_DATA_SIZE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn one_byte(self) -> &'a mut W {
@@ -274,25 +201,11 @@ impl<'a> BRDMA_DATA_SIZE_W<'a> {
     pub fn two_byte(self) -> &'a mut W {
         self.variant(BRDMA_DATA_SIZE_A::TWO_BYTE)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
 }
+#[doc = "Field `BRDMA_DATA_MODE` reader - "]
+pub type BRDMA_DATA_MODE_R = crate::BitReader<BRDMA_DATA_MODE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BRDMA_DATA_MODE_A {
     #[doc = "0: `0`"]
     PER_KERNEL = 0,
@@ -305,14 +218,8 @@ impl From<BRDMA_DATA_MODE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `BRDMA_DATA_MODE` reader - "]
-pub struct BRDMA_DATA_MODE_R(crate::FieldReader<bool>);
 impl BRDMA_DATA_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BRDMA_DATA_MODE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> BRDMA_DATA_MODE_A {
         match self.bits {
@@ -323,31 +230,18 @@ impl BRDMA_DATA_MODE_R {
     #[doc = "Checks if the value of the field is `PER_KERNEL`"]
     #[inline(always)]
     pub fn is_per_kernel(&self) -> bool {
-        **self == BRDMA_DATA_MODE_A::PER_KERNEL
+        *self == BRDMA_DATA_MODE_A::PER_KERNEL
     }
     #[doc = "Checks if the value of the field is `PER_ELEMENT`"]
     #[inline(always)]
     pub fn is_per_element(&self) -> bool {
-        **self == BRDMA_DATA_MODE_A::PER_ELEMENT
-    }
-}
-impl core::ops::Deref for BRDMA_DATA_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == BRDMA_DATA_MODE_A::PER_ELEMENT
     }
 }
 #[doc = "Field `BRDMA_DATA_MODE` writer - "]
-pub struct BRDMA_DATA_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BRDMA_DATA_MODE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: BRDMA_DATA_MODE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type BRDMA_DATA_MODE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_BRDMA_CFG_SPEC, BRDMA_DATA_MODE_A, O>;
+impl<'a, const O: u8> BRDMA_DATA_MODE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn per_kernel(self) -> &'a mut W {
@@ -358,25 +252,11 @@ impl<'a> BRDMA_DATA_MODE_W<'a> {
     pub fn per_element(self) -> &'a mut W {
         self.variant(BRDMA_DATA_MODE_A::PER_ELEMENT)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
 }
+#[doc = "Field `BRDMA_RAM_TYPE` reader - "]
+pub type BRDMA_RAM_TYPE_R = crate::BitReader<BRDMA_RAM_TYPE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BRDMA_RAM_TYPE_A {
     #[doc = "0: `0`"]
     CV = 0,
@@ -389,14 +269,8 @@ impl From<BRDMA_RAM_TYPE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `BRDMA_RAM_TYPE` reader - "]
-pub struct BRDMA_RAM_TYPE_R(crate::FieldReader<bool>);
 impl BRDMA_RAM_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BRDMA_RAM_TYPE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> BRDMA_RAM_TYPE_A {
         match self.bits {
@@ -407,31 +281,18 @@ impl BRDMA_RAM_TYPE_R {
     #[doc = "Checks if the value of the field is `CV`"]
     #[inline(always)]
     pub fn is_cv(&self) -> bool {
-        **self == BRDMA_RAM_TYPE_A::CV
+        *self == BRDMA_RAM_TYPE_A::CV
     }
     #[doc = "Checks if the value of the field is `MC`"]
     #[inline(always)]
     pub fn is_mc(&self) -> bool {
-        **self == BRDMA_RAM_TYPE_A::MC
-    }
-}
-impl core::ops::Deref for BRDMA_RAM_TYPE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == BRDMA_RAM_TYPE_A::MC
     }
 }
 #[doc = "Field `BRDMA_RAM_TYPE` writer - "]
-pub struct BRDMA_RAM_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BRDMA_RAM_TYPE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: BRDMA_RAM_TYPE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type BRDMA_RAM_TYPE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_BRDMA_CFG_SPEC, BRDMA_RAM_TYPE_A, O>;
+impl<'a, const O: u8> BRDMA_RAM_TYPE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn cv(self) -> &'a mut W {
@@ -441,22 +302,6 @@ impl<'a> BRDMA_RAM_TYPE_W<'a> {
     #[inline(always)]
     pub fn mc(self) -> &'a mut W {
         self.variant(BRDMA_RAM_TYPE_A::MC)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
     }
 }
 impl R {
@@ -489,28 +334,33 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn brdma_disable(&mut self) -> BRDMA_DISABLE_W {
-        BRDMA_DISABLE_W { w: self }
+    #[must_use]
+    pub fn brdma_disable(&mut self) -> BRDMA_DISABLE_W<0> {
+        BRDMA_DISABLE_W::new(self)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
-    pub fn brdma_data_use(&mut self) -> BRDMA_DATA_USE_W {
-        BRDMA_DATA_USE_W { w: self }
+    #[must_use]
+    pub fn brdma_data_use(&mut self) -> BRDMA_DATA_USE_W<1> {
+        BRDMA_DATA_USE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn brdma_data_size(&mut self) -> BRDMA_DATA_SIZE_W {
-        BRDMA_DATA_SIZE_W { w: self }
+    #[must_use]
+    pub fn brdma_data_size(&mut self) -> BRDMA_DATA_SIZE_W<3> {
+        BRDMA_DATA_SIZE_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn brdma_data_mode(&mut self) -> BRDMA_DATA_MODE_W {
-        BRDMA_DATA_MODE_W { w: self }
+    #[must_use]
+    pub fn brdma_data_mode(&mut self) -> BRDMA_DATA_MODE_W<4> {
+        BRDMA_DATA_MODE_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn brdma_ram_type(&mut self) -> BRDMA_RAM_TYPE_W {
-        BRDMA_RAM_TYPE_W { w: self }
+    #[must_use]
+    pub fn brdma_ram_type(&mut self) -> BRDMA_RAM_TYPE_W<5> {
+        BRDMA_RAM_TYPE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -531,11 +381,10 @@ impl crate::Readable for D_BRDMA_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_brdma_cfg::W](W) writer structure"]
 impl crate::Writable for D_BRDMA_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_BRDMA_CFG to value 0x01"]
 impl crate::Resettable for D_BRDMA_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

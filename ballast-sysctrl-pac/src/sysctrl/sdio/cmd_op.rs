@@ -20,7 +20,7 @@ impl From<crate::W<CMD_OP_SPEC>> for W {
     }
 }
 #[doc = "Values for RSP_TYPE: 3'b000: RSP_TYPE_NULL 3'b001: RSP_TYPE_48_CRC 3'b010: RSP_TYPE_48_NOCRC 3'b011: RSP_TYPE_136 3'b100: RSP_TYPE_48_BSY\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum RSP_TYPE_AW {
     #[doc = "0: `0`"]
@@ -41,15 +41,9 @@ impl From<RSP_TYPE_AW> for u8 {
     }
 }
 #[doc = "Field `RSP_TYPE` writer - Values for RSP_TYPE: 3'b000: RSP_TYPE_NULL 3'b001: RSP_TYPE_48_CRC 3'b010: RSP_TYPE_48_NOCRC 3'b011: RSP_TYPE_136 3'b100: RSP_TYPE_48_BSY"]
-pub struct RSP_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RSP_TYPE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: RSP_TYPE_AW) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type RSP_TYPE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CMD_OP_SPEC, u8, RSP_TYPE_AW, 3, O>;
+impl<'a, const O: u8> RSP_TYPE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn rsp_type_null(self) -> &'a mut W {
@@ -75,35 +69,21 @@ impl<'a> RSP_TYPE_W<'a> {
     pub fn rsp_type_48_bsy(self) -> &'a mut W {
         self.variant(RSP_TYPE_AW::RSP_TYPE_48_BSY)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
 }
 #[doc = "Field `CMD_OPCODE` writer - "]
-pub struct CMD_OPCODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CMD_OPCODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 8)) | ((value as u32 & 0x3f) << 8);
-        self.w
-    }
-}
+pub type CMD_OPCODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CMD_OP_SPEC, u8, u8, 6, O>;
 impl W {
     #[doc = "Bits 0:2 - Values for RSP_TYPE: 3'b000: RSP_TYPE_NULL 3'b001: RSP_TYPE_48_CRC 3'b010: RSP_TYPE_48_NOCRC 3'b011: RSP_TYPE_136 3'b100: RSP_TYPE_48_BSY"]
     #[inline(always)]
-    pub fn rsp_type(&mut self) -> RSP_TYPE_W {
-        RSP_TYPE_W { w: self }
+    #[must_use]
+    pub fn rsp_type(&mut self) -> RSP_TYPE_W<0> {
+        RSP_TYPE_W::new(self)
     }
     #[doc = "Bits 8:13"]
     #[inline(always)]
-    pub fn cmd_opcode(&mut self) -> CMD_OPCODE_W {
-        CMD_OPCODE_W { w: self }
+    #[must_use]
+    pub fn cmd_opcode(&mut self) -> CMD_OPCODE_W<8> {
+        CMD_OPCODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -120,11 +100,10 @@ impl crate::RegisterSpec for CMD_OP_SPEC {
 #[doc = "`write(|w| ..)` method takes [cmd_op::W](W) writer structure"]
 impl crate::Writable for CMD_OP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CMD_OP to value 0"]
 impl crate::Resettable for CMD_OP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

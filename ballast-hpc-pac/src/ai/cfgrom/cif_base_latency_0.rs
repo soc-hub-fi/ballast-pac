@@ -14,20 +14,7 @@ impl From<crate::R<CIF_BASE_LATENCY_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CIF_BASE_LATENCY` reader - "]
-pub struct CIF_BASE_LATENCY_R(crate::FieldReader<u32>);
-impl CIF_BASE_LATENCY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CIF_BASE_LATENCY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CIF_BASE_LATENCY_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CIF_BASE_LATENCY_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for CIF_BASE_LATENCY_0_SPEC {
 }
 #[doc = "`reset()` method sets CIF_BASE_LATENCY_0 to value 0x32"]
 impl crate::Resettable for CIF_BASE_LATENCY_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x32
-    }
+    const RESET_VALUE: Self::Ux = 0x32;
 }

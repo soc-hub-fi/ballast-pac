@@ -35,328 +35,41 @@ impl From<crate::W<CFG_LO_SPEC>> for W {
     }
 }
 #[doc = "Field `EN` reader - Timer enable (starts couting) bit"]
-pub struct EN_R(crate::FieldReader<bool>);
-impl EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EN_R = crate::BitReader<bool>;
 #[doc = "Field `EN` writer - Timer enable (starts couting) bit"]
-pub struct EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_LO_SPEC, bool, O>;
 #[doc = "Field `RST` reader - Timer low reset, cleared after the reset happened"]
-pub struct RST_R(crate::FieldReader<bool>);
-impl RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RST_R = crate::BitReader<bool>;
 #[doc = "Field `RST` writer - Timer low reset, cleared after the reset happened"]
-pub struct RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_LO_SPEC, bool, O>;
 #[doc = "Field `IRQEN` reader - Timer low interrupt generation on compare match enable"]
-pub struct IRQEN_R(crate::FieldReader<bool>);
-impl IRQEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IRQEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IRQEN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IRQEN_R = crate::BitReader<bool>;
 #[doc = "Field `IRQEN` writer - Timer low interrupt generation on compare match enable"]
-pub struct IRQEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IRQEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type IRQEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_LO_SPEC, bool, O>;
 #[doc = "Field `MODE` reader - Timer low continuous mode configuration 0b0: Continue incrementing timer low counter after a compare match with CMP_LO 0b1: Reset timer to after a compare match with CMP_LO"]
-pub struct MODE_R(crate::FieldReader<bool>);
-impl MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MODE_R = crate::BitReader<bool>;
 #[doc = "Field `MODE` writer - Timer low continuous mode configuration 0b0: Continue incrementing timer low counter after a compare match with CMP_LO 0b1: Reset timer to after a compare match with CMP_LO"]
-pub struct MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_LO_SPEC, bool, O>;
 #[doc = "Field `ONES` reader - Timer low one shot configuration"]
-pub struct ONES_R(crate::FieldReader<bool>);
-impl ONES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ONES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ONES_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ONES_R = crate::BitReader<bool>;
 #[doc = "Field `ONES` writer - Timer low one shot configuration"]
-pub struct ONES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ONES_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type ONES_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_LO_SPEC, bool, O>;
 #[doc = "Field `PEN` reader - Timer low prescaler enable bit"]
-pub struct PEN_R(crate::FieldReader<bool>);
-impl PEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PEN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PEN_R = crate::BitReader<bool>;
 #[doc = "Field `PEN` writer - Timer low prescaler enable bit"]
-pub struct PEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_LO_SPEC, bool, O>;
 #[doc = "Field `CCFG` reader - Timer low clock source configuration 0b0: FLL or FLL plus Prescaler 0b1: 32 kHz reference clock"]
-pub struct CCFG_R(crate::FieldReader<bool>);
-impl CCFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CCFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CCFG_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CCFG_R = crate::BitReader<bool>;
 #[doc = "Field `CCFG` writer - Timer low clock source configuration 0b0: FLL or FLL plus Prescaler 0b1: 32 kHz reference clock"]
-pub struct CCFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CCFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type CCFG_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_LO_SPEC, bool, O>;
 #[doc = "Field `PVAL` reader - Timer low prescaler value. ftimer = fclk/(1 + P V AL)"]
-pub struct PVAL_R(crate::FieldReader<u8>);
-impl PVAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PVAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PVAL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PVAL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PVAL` writer - Timer low prescaler value. ftimer = fclk/(1 + P V AL)"]
-pub struct PVAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PVAL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type PVAL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG_LO_SPEC, u8, u8, 8, O>;
 #[doc = "Field `CASC` reader - Timer low and Timer high 64-bit cascaded mode enable bit"]
-pub struct CASC_R(crate::FieldReader<bool>);
-impl CASC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CASC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CASC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CASC_R = crate::BitReader<bool>;
 #[doc = "Field `CASC` writer - Timer low and Timer high 64-bit cascaded mode enable bit"]
-pub struct CASC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CASC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type CASC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_LO_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Timer enable (starts couting) bit"]
     #[inline(always)]
@@ -407,48 +120,57 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Timer enable (starts couting) bit"]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W {
-        EN_W { w: self }
+    #[must_use]
+    pub fn en(&mut self) -> EN_W<0> {
+        EN_W::new(self)
     }
     #[doc = "Bit 1 - Timer low reset, cleared after the reset happened"]
     #[inline(always)]
-    pub fn rst(&mut self) -> RST_W {
-        RST_W { w: self }
+    #[must_use]
+    pub fn rst(&mut self) -> RST_W<1> {
+        RST_W::new(self)
     }
     #[doc = "Bit 2 - Timer low interrupt generation on compare match enable"]
     #[inline(always)]
-    pub fn irqen(&mut self) -> IRQEN_W {
-        IRQEN_W { w: self }
+    #[must_use]
+    pub fn irqen(&mut self) -> IRQEN_W<2> {
+        IRQEN_W::new(self)
     }
     #[doc = "Bit 4 - Timer low continuous mode configuration 0b0: Continue incrementing timer low counter after a compare match with CMP_LO 0b1: Reset timer to after a compare match with CMP_LO"]
     #[inline(always)]
-    pub fn mode(&mut self) -> MODE_W {
-        MODE_W { w: self }
+    #[must_use]
+    pub fn mode(&mut self) -> MODE_W<4> {
+        MODE_W::new(self)
     }
     #[doc = "Bit 5 - Timer low one shot configuration"]
     #[inline(always)]
-    pub fn ones(&mut self) -> ONES_W {
-        ONES_W { w: self }
+    #[must_use]
+    pub fn ones(&mut self) -> ONES_W<5> {
+        ONES_W::new(self)
     }
     #[doc = "Bit 6 - Timer low prescaler enable bit"]
     #[inline(always)]
-    pub fn pen(&mut self) -> PEN_W {
-        PEN_W { w: self }
+    #[must_use]
+    pub fn pen(&mut self) -> PEN_W<6> {
+        PEN_W::new(self)
     }
     #[doc = "Bit 7 - Timer low clock source configuration 0b0: FLL or FLL plus Prescaler 0b1: 32 kHz reference clock"]
     #[inline(always)]
-    pub fn ccfg(&mut self) -> CCFG_W {
-        CCFG_W { w: self }
+    #[must_use]
+    pub fn ccfg(&mut self) -> CCFG_W<7> {
+        CCFG_W::new(self)
     }
     #[doc = "Bits 8:15 - Timer low prescaler value. ftimer = fclk/(1 + P V AL)"]
     #[inline(always)]
-    pub fn pval(&mut self) -> PVAL_W {
-        PVAL_W { w: self }
+    #[must_use]
+    pub fn pval(&mut self) -> PVAL_W<8> {
+        PVAL_W::new(self)
     }
     #[doc = "Bit 31 - Timer low and Timer high 64-bit cascaded mode enable bit"]
     #[inline(always)]
-    pub fn casc(&mut self) -> CASC_W {
-        CASC_W { w: self }
+    #[must_use]
+    pub fn casc(&mut self) -> CASC_W<31> {
+        CASC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -469,11 +191,10 @@ impl crate::Readable for CFG_LO_SPEC {
 #[doc = "`write(|w| ..)` method takes [cfg_lo::W](W) writer structure"]
 impl crate::Writable for CFG_LO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CFG_LO to value 0"]
 impl crate::Resettable for CFG_LO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

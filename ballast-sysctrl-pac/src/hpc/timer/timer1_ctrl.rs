@@ -35,69 +35,13 @@ impl From<crate::W<TIMER1_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `enable` reader - "]
-pub struct ENABLE_R(crate::FieldReader<bool>);
-impl ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `enable` writer - "]
-pub struct ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER1_CTRL_SPEC, bool, O>;
 #[doc = "Field `prescaler` reader - "]
-pub struct PRESCALER_R(crate::FieldReader<u8>);
-impl PRESCALER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PRESCALER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRESCALER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRESCALER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `prescaler` writer - "]
-pub struct PRESCALER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRESCALER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 3)) | ((value as u32 & 7) << 3);
-        self.w
-    }
-}
+pub type PRESCALER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER1_CTRL_SPEC, u8, u8, 3, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -113,13 +57,15 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn enable(&mut self) -> ENABLE_W {
-        ENABLE_W { w: self }
+    #[must_use]
+    pub fn enable(&mut self) -> ENABLE_W<0> {
+        ENABLE_W::new(self)
     }
     #[doc = "Bits 3:5"]
     #[inline(always)]
-    pub fn prescaler(&mut self) -> PRESCALER_W {
-        PRESCALER_W { w: self }
+    #[must_use]
+    pub fn prescaler(&mut self) -> PRESCALER_W<3> {
+        PRESCALER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -140,11 +86,10 @@ impl crate::Readable for TIMER1_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer1_ctrl::W](W) writer structure"]
 impl crate::Writable for TIMER1_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets timer1_ctrl to value 0"]
 impl crate::Resettable for TIMER1_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -14,20 +14,7 @@ impl From<crate::R<RX_PKG_LGTH_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `rx_pkg_lgth_cnt` reader - "]
-pub struct RX_PKG_LGTH_CNT_R(crate::FieldReader<u8>);
-impl RX_PKG_LGTH_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_PKG_LGTH_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_PKG_LGTH_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_PKG_LGTH_CNT_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for RX_PKG_LGTH_CNT_SPEC {
 }
 #[doc = "`reset()` method sets rx_pkg_lgth_cnt to value 0"]
 impl crate::Resettable for RX_PKG_LGTH_CNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

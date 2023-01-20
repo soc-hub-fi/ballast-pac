@@ -35,44 +35,23 @@ impl From<crate::W<CAM_RX_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_SIZE` reader - Buffer size in bytes. (128kBytes maximum) - Read: buffer size left - Write: set buffer size NOTE: Careful with size in byte. If you use uncompressed pixel data mapped on 16 bits, you have to declare buffer size in bytes even if buffer type is short."]
-pub struct RX_SIZE_R(crate::FieldReader<u32>);
-impl RX_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RX_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_SIZE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_SIZE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RX_SIZE` writer - Buffer size in bytes. (128kBytes maximum) - Read: buffer size left - Write: set buffer size NOTE: Careful with size in byte. If you use uncompressed pixel data mapped on 16 bits, you have to declare buffer size in bytes even if buffer type is short."]
-pub struct RX_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0001_ffff) | (value as u32 & 0x0001_ffff);
-        self.w
-    }
-}
+pub type RX_SIZE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CAM_RX_SIZE_SPEC, u32, u32, 17, O>;
 impl R {
     #[doc = "Bits 0:16 - Buffer size in bytes. (128kBytes maximum) - Read: buffer size left - Write: set buffer size NOTE: Careful with size in byte. If you use uncompressed pixel data mapped on 16 bits, you have to declare buffer size in bytes even if buffer type is short."]
     #[inline(always)]
     pub fn rx_size(&self) -> RX_SIZE_R {
-        RX_SIZE_R::new((self.bits & 0x0001_ffff) as u32)
+        RX_SIZE_R::new(self.bits & 0x0001_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:16 - Buffer size in bytes. (128kBytes maximum) - Read: buffer size left - Write: set buffer size NOTE: Careful with size in byte. If you use uncompressed pixel data mapped on 16 bits, you have to declare buffer size in bytes even if buffer type is short."]
     #[inline(always)]
-    pub fn rx_size(&mut self) -> RX_SIZE_W {
-        RX_SIZE_W { w: self }
+    #[must_use]
+    pub fn rx_size(&mut self) -> RX_SIZE_W<0> {
+        RX_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +72,10 @@ impl crate::Readable for CAM_RX_SIZE_SPEC {
 #[doc = "`write(|w| ..)` method takes [cam_rx_size::W](W) writer structure"]
 impl crate::Writable for CAM_RX_SIZE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CAM_RX_SIZE to value 0"]
 impl crate::Resettable for CAM_RX_SIZE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

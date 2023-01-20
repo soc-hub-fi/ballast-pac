@@ -35,32 +35,10 @@ impl From<crate::W<D_RELEASE_SPEC>> for W {
     }
 }
 #[doc = "Field `RLS_SLICES` reader - "]
-pub struct RLS_SLICES_R(crate::FieldReader<u16>);
-impl RLS_SLICES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RLS_SLICES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RLS_SLICES_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RLS_SLICES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RLS_SLICES` writer - "]
-pub struct RLS_SLICES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RLS_SLICES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
-        self.w
-    }
-}
+pub type RLS_SLICES_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_RELEASE_SPEC, u16, u16, 12, O>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -71,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
-    pub fn rls_slices(&mut self) -> RLS_SLICES_W {
-        RLS_SLICES_W { w: self }
+    #[must_use]
+    pub fn rls_slices(&mut self) -> RLS_SLICES_W<0> {
+        RLS_SLICES_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +72,10 @@ impl crate::Readable for D_RELEASE_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_release::W](W) writer structure"]
 impl crate::Writable for D_RELEASE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_RELEASE to value 0x01"]
 impl crate::Resettable for D_RELEASE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

@@ -35,597 +35,71 @@ impl From<crate::W<INTR_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `SDP_DONE_MASK0` reader - "]
-pub struct SDP_DONE_MASK0_R(crate::FieldReader<bool>);
-impl SDP_DONE_MASK0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDP_DONE_MASK0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDP_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDP_DONE_MASK0_R = crate::BitReader<bool>;
 #[doc = "Field `SDP_DONE_MASK0` writer - "]
-pub struct SDP_DONE_MASK0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDP_DONE_MASK0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SDP_DONE_MASK0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 #[doc = "Field `SDP_DONE_MASK1` reader - "]
-pub struct SDP_DONE_MASK1_R(crate::FieldReader<bool>);
-impl SDP_DONE_MASK1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDP_DONE_MASK1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDP_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDP_DONE_MASK1_R = crate::BitReader<bool>;
 #[doc = "Field `SDP_DONE_MASK1` writer - "]
-pub struct SDP_DONE_MASK1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDP_DONE_MASK1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SDP_DONE_MASK1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 #[doc = "Field `CDP_DONE_MASK0` reader - "]
-pub struct CDP_DONE_MASK0_R(crate::FieldReader<bool>);
-impl CDP_DONE_MASK0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CDP_DONE_MASK0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CDP_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CDP_DONE_MASK0_R = crate::BitReader<bool>;
 #[doc = "Field `CDP_DONE_MASK0` writer - "]
-pub struct CDP_DONE_MASK0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CDP_DONE_MASK0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type CDP_DONE_MASK0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 #[doc = "Field `CDP_DONE_MASK1` reader - "]
-pub struct CDP_DONE_MASK1_R(crate::FieldReader<bool>);
-impl CDP_DONE_MASK1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CDP_DONE_MASK1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CDP_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CDP_DONE_MASK1_R = crate::BitReader<bool>;
 #[doc = "Field `CDP_DONE_MASK1` writer - "]
-pub struct CDP_DONE_MASK1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CDP_DONE_MASK1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type CDP_DONE_MASK1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 #[doc = "Field `PDP_DONE_MASK0` reader - "]
-pub struct PDP_DONE_MASK0_R(crate::FieldReader<bool>);
-impl PDP_DONE_MASK0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PDP_DONE_MASK0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDP_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDP_DONE_MASK0_R = crate::BitReader<bool>;
 #[doc = "Field `PDP_DONE_MASK0` writer - "]
-pub struct PDP_DONE_MASK0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDP_DONE_MASK0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type PDP_DONE_MASK0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 #[doc = "Field `PDP_DONE_MASK1` reader - "]
-pub struct PDP_DONE_MASK1_R(crate::FieldReader<bool>);
-impl PDP_DONE_MASK1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PDP_DONE_MASK1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDP_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDP_DONE_MASK1_R = crate::BitReader<bool>;
 #[doc = "Field `PDP_DONE_MASK1` writer - "]
-pub struct PDP_DONE_MASK1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDP_DONE_MASK1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type PDP_DONE_MASK1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 #[doc = "Field `BDMA_DONE_MASK0` reader - "]
-pub struct BDMA_DONE_MASK0_R(crate::FieldReader<bool>);
-impl BDMA_DONE_MASK0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BDMA_DONE_MASK0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BDMA_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BDMA_DONE_MASK0_R = crate::BitReader<bool>;
 #[doc = "Field `BDMA_DONE_MASK0` writer - "]
-pub struct BDMA_DONE_MASK0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BDMA_DONE_MASK0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type BDMA_DONE_MASK0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 #[doc = "Field `BDMA_DONE_MASK1` reader - "]
-pub struct BDMA_DONE_MASK1_R(crate::FieldReader<bool>);
-impl BDMA_DONE_MASK1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BDMA_DONE_MASK1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BDMA_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BDMA_DONE_MASK1_R = crate::BitReader<bool>;
 #[doc = "Field `BDMA_DONE_MASK1` writer - "]
-pub struct BDMA_DONE_MASK1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BDMA_DONE_MASK1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type BDMA_DONE_MASK1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 #[doc = "Field `RUBIK_DONE_MASK0` reader - "]
-pub struct RUBIK_DONE_MASK0_R(crate::FieldReader<bool>);
-impl RUBIK_DONE_MASK0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RUBIK_DONE_MASK0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RUBIK_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RUBIK_DONE_MASK0_R = crate::BitReader<bool>;
 #[doc = "Field `RUBIK_DONE_MASK0` writer - "]
-pub struct RUBIK_DONE_MASK0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RUBIK_DONE_MASK0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type RUBIK_DONE_MASK0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 #[doc = "Field `RUBIK_DONE_MASK1` reader - "]
-pub struct RUBIK_DONE_MASK1_R(crate::FieldReader<bool>);
-impl RUBIK_DONE_MASK1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RUBIK_DONE_MASK1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RUBIK_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RUBIK_DONE_MASK1_R = crate::BitReader<bool>;
 #[doc = "Field `RUBIK_DONE_MASK1` writer - "]
-pub struct RUBIK_DONE_MASK1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RUBIK_DONE_MASK1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type RUBIK_DONE_MASK1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 #[doc = "Field `CDMA_DAT_DONE_MASK0` reader - "]
-pub struct CDMA_DAT_DONE_MASK0_R(crate::FieldReader<bool>);
-impl CDMA_DAT_DONE_MASK0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CDMA_DAT_DONE_MASK0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CDMA_DAT_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CDMA_DAT_DONE_MASK0_R = crate::BitReader<bool>;
 #[doc = "Field `CDMA_DAT_DONE_MASK0` writer - "]
-pub struct CDMA_DAT_DONE_MASK0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CDMA_DAT_DONE_MASK0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type CDMA_DAT_DONE_MASK0_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 #[doc = "Field `CDMA_DAT_DONE_MASK1` reader - "]
-pub struct CDMA_DAT_DONE_MASK1_R(crate::FieldReader<bool>);
-impl CDMA_DAT_DONE_MASK1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CDMA_DAT_DONE_MASK1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CDMA_DAT_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CDMA_DAT_DONE_MASK1_R = crate::BitReader<bool>;
 #[doc = "Field `CDMA_DAT_DONE_MASK1` writer - "]
-pub struct CDMA_DAT_DONE_MASK1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CDMA_DAT_DONE_MASK1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type CDMA_DAT_DONE_MASK1_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 #[doc = "Field `CDMA_WT_DONE_MASK0` reader - "]
-pub struct CDMA_WT_DONE_MASK0_R(crate::FieldReader<bool>);
-impl CDMA_WT_DONE_MASK0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CDMA_WT_DONE_MASK0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CDMA_WT_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CDMA_WT_DONE_MASK0_R = crate::BitReader<bool>;
 #[doc = "Field `CDMA_WT_DONE_MASK0` writer - "]
-pub struct CDMA_WT_DONE_MASK0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CDMA_WT_DONE_MASK0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type CDMA_WT_DONE_MASK0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 #[doc = "Field `CDMA_WT_DONE_MASK1` reader - "]
-pub struct CDMA_WT_DONE_MASK1_R(crate::FieldReader<bool>);
-impl CDMA_WT_DONE_MASK1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CDMA_WT_DONE_MASK1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CDMA_WT_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CDMA_WT_DONE_MASK1_R = crate::BitReader<bool>;
 #[doc = "Field `CDMA_WT_DONE_MASK1` writer - "]
-pub struct CDMA_WT_DONE_MASK1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CDMA_WT_DONE_MASK1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type CDMA_WT_DONE_MASK1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 #[doc = "Field `CACC_DONE_MASK0` reader - "]
-pub struct CACC_DONE_MASK0_R(crate::FieldReader<bool>);
-impl CACC_DONE_MASK0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CACC_DONE_MASK0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACC_DONE_MASK0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACC_DONE_MASK0_R = crate::BitReader<bool>;
 #[doc = "Field `CACC_DONE_MASK0` writer - "]
-pub struct CACC_DONE_MASK0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACC_DONE_MASK0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type CACC_DONE_MASK0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 #[doc = "Field `CACC_DONE_MASK1` reader - "]
-pub struct CACC_DONE_MASK1_R(crate::FieldReader<bool>);
-impl CACC_DONE_MASK1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CACC_DONE_MASK1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACC_DONE_MASK1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACC_DONE_MASK1_R = crate::BitReader<bool>;
 #[doc = "Field `CACC_DONE_MASK1` writer - "]
-pub struct CACC_DONE_MASK1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACC_DONE_MASK1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type CACC_DONE_MASK1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -711,83 +185,99 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn sdp_done_mask0(&mut self) -> SDP_DONE_MASK0_W {
-        SDP_DONE_MASK0_W { w: self }
+    #[must_use]
+    pub fn sdp_done_mask0(&mut self) -> SDP_DONE_MASK0_W<0> {
+        SDP_DONE_MASK0_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn sdp_done_mask1(&mut self) -> SDP_DONE_MASK1_W {
-        SDP_DONE_MASK1_W { w: self }
+    #[must_use]
+    pub fn sdp_done_mask1(&mut self) -> SDP_DONE_MASK1_W<1> {
+        SDP_DONE_MASK1_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn cdp_done_mask0(&mut self) -> CDP_DONE_MASK0_W {
-        CDP_DONE_MASK0_W { w: self }
+    #[must_use]
+    pub fn cdp_done_mask0(&mut self) -> CDP_DONE_MASK0_W<2> {
+        CDP_DONE_MASK0_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn cdp_done_mask1(&mut self) -> CDP_DONE_MASK1_W {
-        CDP_DONE_MASK1_W { w: self }
+    #[must_use]
+    pub fn cdp_done_mask1(&mut self) -> CDP_DONE_MASK1_W<3> {
+        CDP_DONE_MASK1_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn pdp_done_mask0(&mut self) -> PDP_DONE_MASK0_W {
-        PDP_DONE_MASK0_W { w: self }
+    #[must_use]
+    pub fn pdp_done_mask0(&mut self) -> PDP_DONE_MASK0_W<4> {
+        PDP_DONE_MASK0_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn pdp_done_mask1(&mut self) -> PDP_DONE_MASK1_W {
-        PDP_DONE_MASK1_W { w: self }
+    #[must_use]
+    pub fn pdp_done_mask1(&mut self) -> PDP_DONE_MASK1_W<5> {
+        PDP_DONE_MASK1_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn bdma_done_mask0(&mut self) -> BDMA_DONE_MASK0_W {
-        BDMA_DONE_MASK0_W { w: self }
+    #[must_use]
+    pub fn bdma_done_mask0(&mut self) -> BDMA_DONE_MASK0_W<6> {
+        BDMA_DONE_MASK0_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn bdma_done_mask1(&mut self) -> BDMA_DONE_MASK1_W {
-        BDMA_DONE_MASK1_W { w: self }
+    #[must_use]
+    pub fn bdma_done_mask1(&mut self) -> BDMA_DONE_MASK1_W<7> {
+        BDMA_DONE_MASK1_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn rubik_done_mask0(&mut self) -> RUBIK_DONE_MASK0_W {
-        RUBIK_DONE_MASK0_W { w: self }
+    #[must_use]
+    pub fn rubik_done_mask0(&mut self) -> RUBIK_DONE_MASK0_W<8> {
+        RUBIK_DONE_MASK0_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn rubik_done_mask1(&mut self) -> RUBIK_DONE_MASK1_W {
-        RUBIK_DONE_MASK1_W { w: self }
+    #[must_use]
+    pub fn rubik_done_mask1(&mut self) -> RUBIK_DONE_MASK1_W<9> {
+        RUBIK_DONE_MASK1_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn cdma_dat_done_mask0(&mut self) -> CDMA_DAT_DONE_MASK0_W {
-        CDMA_DAT_DONE_MASK0_W { w: self }
+    #[must_use]
+    pub fn cdma_dat_done_mask0(&mut self) -> CDMA_DAT_DONE_MASK0_W<16> {
+        CDMA_DAT_DONE_MASK0_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn cdma_dat_done_mask1(&mut self) -> CDMA_DAT_DONE_MASK1_W {
-        CDMA_DAT_DONE_MASK1_W { w: self }
+    #[must_use]
+    pub fn cdma_dat_done_mask1(&mut self) -> CDMA_DAT_DONE_MASK1_W<17> {
+        CDMA_DAT_DONE_MASK1_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn cdma_wt_done_mask0(&mut self) -> CDMA_WT_DONE_MASK0_W {
-        CDMA_WT_DONE_MASK0_W { w: self }
+    #[must_use]
+    pub fn cdma_wt_done_mask0(&mut self) -> CDMA_WT_DONE_MASK0_W<18> {
+        CDMA_WT_DONE_MASK0_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    pub fn cdma_wt_done_mask1(&mut self) -> CDMA_WT_DONE_MASK1_W {
-        CDMA_WT_DONE_MASK1_W { w: self }
+    #[must_use]
+    pub fn cdma_wt_done_mask1(&mut self) -> CDMA_WT_DONE_MASK1_W<19> {
+        CDMA_WT_DONE_MASK1_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn cacc_done_mask0(&mut self) -> CACC_DONE_MASK0_W {
-        CACC_DONE_MASK0_W { w: self }
+    #[must_use]
+    pub fn cacc_done_mask0(&mut self) -> CACC_DONE_MASK0_W<20> {
+        CACC_DONE_MASK0_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn cacc_done_mask1(&mut self) -> CACC_DONE_MASK1_W {
-        CACC_DONE_MASK1_W { w: self }
+    #[must_use]
+    pub fn cacc_done_mask1(&mut self) -> CACC_DONE_MASK1_W<21> {
+        CACC_DONE_MASK1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -808,11 +298,10 @@ impl crate::Readable for INTR_MASK_SPEC {
 #[doc = "`write(|w| ..)` method takes [intr_mask::W](W) writer structure"]
 impl crate::Writable for INTR_MASK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTR_MASK to value 0"]
 impl crate::Resettable for INTR_MASK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

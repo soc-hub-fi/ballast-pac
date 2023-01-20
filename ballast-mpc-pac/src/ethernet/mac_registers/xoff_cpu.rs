@@ -35,42 +35,9 @@ impl From<crate::W<XOFF_CPU_SPEC>> for W {
     }
 }
 #[doc = "Field `xoff_cpu` reader - The rising pulse of xoff_cpu signal is used to start transmit one PAUSE frame when the transmit in idle state with quanta zero, asking remote ethernet controller jump out from pause state."]
-pub struct XOFF_CPU_R(crate::FieldReader<bool>);
-impl XOFF_CPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XOFF_CPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XOFF_CPU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XOFF_CPU_R = crate::BitReader<bool>;
 #[doc = "Field `xoff_cpu` writer - The rising pulse of xoff_cpu signal is used to start transmit one PAUSE frame when the transmit in idle state with quanta zero, asking remote ethernet controller jump out from pause state."]
-pub struct XOFF_CPU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XOFF_CPU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type XOFF_CPU_W<'a, const O: u8> = crate::BitWriter<'a, u32, XOFF_CPU_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - The rising pulse of xoff_cpu signal is used to start transmit one PAUSE frame when the transmit in idle state with quanta zero, asking remote ethernet controller jump out from pause state."]
     #[inline(always)]
@@ -81,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The rising pulse of xoff_cpu signal is used to start transmit one PAUSE frame when the transmit in idle state with quanta zero, asking remote ethernet controller jump out from pause state."]
     #[inline(always)]
-    pub fn xoff_cpu(&mut self) -> XOFF_CPU_W {
-        XOFF_CPU_W { w: self }
+    #[must_use]
+    pub fn xoff_cpu(&mut self) -> XOFF_CPU_W<0> {
+        XOFF_CPU_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +71,10 @@ impl crate::Readable for XOFF_CPU_SPEC {
 #[doc = "`write(|w| ..)` method takes [xoff_cpu::W](W) writer structure"]
 impl crate::Writable for XOFF_CPU_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets xoff_cpu to value 0"]
 impl crate::Resettable for XOFF_CPU_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

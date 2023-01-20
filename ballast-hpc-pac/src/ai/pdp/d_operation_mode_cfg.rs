@@ -34,8 +34,10 @@ impl From<crate::W<D_OPERATION_MODE_CFG_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `POOLING_METHOD` reader - "]
+pub type POOLING_METHOD_R = crate::FieldReader<u8, POOLING_METHOD_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum POOLING_METHOD_A {
     #[doc = "0: `0`"]
@@ -51,14 +53,8 @@ impl From<POOLING_METHOD_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `POOLING_METHOD` reader - "]
-pub struct POOLING_METHOD_R(crate::FieldReader<u8>);
 impl POOLING_METHOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        POOLING_METHOD_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<POOLING_METHOD_A> {
         match self.bits {
@@ -71,36 +67,23 @@ impl POOLING_METHOD_R {
     #[doc = "Checks if the value of the field is `AVERAGE`"]
     #[inline(always)]
     pub fn is_average(&self) -> bool {
-        **self == POOLING_METHOD_A::AVERAGE
+        *self == POOLING_METHOD_A::AVERAGE
     }
     #[doc = "Checks if the value of the field is `MAX`"]
     #[inline(always)]
     pub fn is_max(&self) -> bool {
-        **self == POOLING_METHOD_A::MAX
+        *self == POOLING_METHOD_A::MAX
     }
     #[doc = "Checks if the value of the field is `MIN`"]
     #[inline(always)]
     pub fn is_min(&self) -> bool {
-        **self == POOLING_METHOD_A::MIN
-    }
-}
-impl core::ops::Deref for POOLING_METHOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == POOLING_METHOD_A::MIN
     }
 }
 #[doc = "Field `POOLING_METHOD` writer - "]
-pub struct POOLING_METHOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> POOLING_METHOD_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: POOLING_METHOD_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type POOLING_METHOD_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_OPERATION_MODE_CFG_SPEC, u8, POOLING_METHOD_A, 2, O>;
+impl<'a, const O: u8> POOLING_METHOD_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn average(self) -> &'a mut W {
@@ -116,77 +99,17 @@ impl<'a> POOLING_METHOD_W<'a> {
     pub fn min(self) -> &'a mut W {
         self.variant(POOLING_METHOD_A::MIN)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
 }
 #[doc = "Field `FLYING_MODE` reader - "]
-pub struct FLYING_MODE_R(crate::FieldReader<bool>);
-impl FLYING_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLYING_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLYING_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLYING_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `FLYING_MODE` writer - "]
-pub struct FLYING_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLYING_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type FLYING_MODE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_OPERATION_MODE_CFG_SPEC, bool, O>;
 #[doc = "Field `SPLIT_NUM` reader - "]
-pub struct SPLIT_NUM_R(crate::FieldReader<u8>);
-impl SPLIT_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPLIT_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPLIT_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPLIT_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPLIT_NUM` writer - "]
-pub struct SPLIT_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPLIT_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type SPLIT_NUM_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_OPERATION_MODE_CFG_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -207,18 +130,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn pooling_method(&mut self) -> POOLING_METHOD_W {
-        POOLING_METHOD_W { w: self }
+    #[must_use]
+    pub fn pooling_method(&mut self) -> POOLING_METHOD_W<0> {
+        POOLING_METHOD_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn flying_mode(&mut self) -> FLYING_MODE_W {
-        FLYING_MODE_W { w: self }
+    #[must_use]
+    pub fn flying_mode(&mut self) -> FLYING_MODE_W<4> {
+        FLYING_MODE_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn split_num(&mut self) -> SPLIT_NUM_W {
-        SPLIT_NUM_W { w: self }
+    #[must_use]
+    pub fn split_num(&mut self) -> SPLIT_NUM_W<8> {
+        SPLIT_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -239,11 +165,10 @@ impl crate::Readable for D_OPERATION_MODE_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_operation_mode_cfg::W](W) writer structure"]
 impl crate::Writable for D_OPERATION_MODE_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_OPERATION_MODE_CFG to value 0"]
 impl crate::Resettable for D_OPERATION_MODE_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

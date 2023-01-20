@@ -35,44 +35,23 @@ impl From<crate::W<SPIM_CMD_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `CMD_SIZE` reader - Buffer size in bytes. (1MBytes maximum) - Read: buffer size left - Write: set buffer size"]
-pub struct CMD_SIZE_R(crate::FieldReader<u32>);
-impl CMD_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CMD_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CMD_SIZE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CMD_SIZE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CMD_SIZE` writer - Buffer size in bytes. (1MBytes maximum) - Read: buffer size left - Write: set buffer size"]
-pub struct CMD_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CMD_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x000f_ffff) | (value as u32 & 0x000f_ffff);
-        self.w
-    }
-}
+pub type CMD_SIZE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SPIM_CMD_SIZE_SPEC, u32, u32, 20, O>;
 impl R {
     #[doc = "Bits 0:19 - Buffer size in bytes. (1MBytes maximum) - Read: buffer size left - Write: set buffer size"]
     #[inline(always)]
     pub fn cmd_size(&self) -> CMD_SIZE_R {
-        CMD_SIZE_R::new((self.bits & 0x000f_ffff) as u32)
+        CMD_SIZE_R::new(self.bits & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - Buffer size in bytes. (1MBytes maximum) - Read: buffer size left - Write: set buffer size"]
     #[inline(always)]
-    pub fn cmd_size(&mut self) -> CMD_SIZE_W {
-        CMD_SIZE_W { w: self }
+    #[must_use]
+    pub fn cmd_size(&mut self) -> CMD_SIZE_W<0> {
+        CMD_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +72,10 @@ impl crate::Readable for SPIM_CMD_SIZE_SPEC {
 #[doc = "`write(|w| ..)` method takes [spim_cmd_size::W](W) writer structure"]
 impl crate::Writable for SPIM_CMD_SIZE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPIM_CMD_SIZE to value 0"]
 impl crate::Resettable for SPIM_CMD_SIZE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

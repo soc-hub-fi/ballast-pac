@@ -34,8 +34,10 @@ impl From<crate::W<D_NRDMA_CFG_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `NRDMA_DISABLE` reader - "]
+pub type NRDMA_DISABLE_R = crate::BitReader<NRDMA_DISABLE_A>;
 #[doc = "\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum NRDMA_DISABLE_A {
     #[doc = "1: `1`"]
     YES = 1,
@@ -48,14 +50,8 @@ impl From<NRDMA_DISABLE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `NRDMA_DISABLE` reader - "]
-pub struct NRDMA_DISABLE_R(crate::FieldReader<bool>);
 impl NRDMA_DISABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NRDMA_DISABLE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> NRDMA_DISABLE_A {
         match self.bits {
@@ -66,31 +62,18 @@ impl NRDMA_DISABLE_R {
     #[doc = "Checks if the value of the field is `YES`"]
     #[inline(always)]
     pub fn is_yes(&self) -> bool {
-        **self == NRDMA_DISABLE_A::YES
+        *self == NRDMA_DISABLE_A::YES
     }
     #[doc = "Checks if the value of the field is `NO`"]
     #[inline(always)]
     pub fn is_no(&self) -> bool {
-        **self == NRDMA_DISABLE_A::NO
-    }
-}
-impl core::ops::Deref for NRDMA_DISABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == NRDMA_DISABLE_A::NO
     }
 }
 #[doc = "Field `NRDMA_DISABLE` writer - "]
-pub struct NRDMA_DISABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NRDMA_DISABLE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: NRDMA_DISABLE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type NRDMA_DISABLE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_NRDMA_CFG_SPEC, NRDMA_DISABLE_A, O>;
+impl<'a, const O: u8> NRDMA_DISABLE_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn yes(self) -> &'a mut W {
@@ -101,25 +84,11 @@ impl<'a> NRDMA_DISABLE_W<'a> {
     pub fn no(self) -> &'a mut W {
         self.variant(NRDMA_DISABLE_A::NO)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
 }
+#[doc = "Field `NRDMA_DATA_USE` reader - "]
+pub type NRDMA_DATA_USE_R = crate::FieldReader<u8, NRDMA_DATA_USE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum NRDMA_DATA_USE_A {
     #[doc = "0: `0`"]
@@ -135,14 +104,8 @@ impl From<NRDMA_DATA_USE_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `NRDMA_DATA_USE` reader - "]
-pub struct NRDMA_DATA_USE_R(crate::FieldReader<u8>);
 impl NRDMA_DATA_USE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        NRDMA_DATA_USE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<NRDMA_DATA_USE_A> {
         match self.bits {
@@ -155,36 +118,23 @@ impl NRDMA_DATA_USE_R {
     #[doc = "Checks if the value of the field is `MUL`"]
     #[inline(always)]
     pub fn is_mul(&self) -> bool {
-        **self == NRDMA_DATA_USE_A::MUL
+        *self == NRDMA_DATA_USE_A::MUL
     }
     #[doc = "Checks if the value of the field is `BOTH`"]
     #[inline(always)]
     pub fn is_both(&self) -> bool {
-        **self == NRDMA_DATA_USE_A::BOTH
+        *self == NRDMA_DATA_USE_A::BOTH
     }
     #[doc = "Checks if the value of the field is `ALU`"]
     #[inline(always)]
     pub fn is_alu(&self) -> bool {
-        **self == NRDMA_DATA_USE_A::ALU
-    }
-}
-impl core::ops::Deref for NRDMA_DATA_USE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == NRDMA_DATA_USE_A::ALU
     }
 }
 #[doc = "Field `NRDMA_DATA_USE` writer - "]
-pub struct NRDMA_DATA_USE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NRDMA_DATA_USE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: NRDMA_DATA_USE_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type NRDMA_DATA_USE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_NRDMA_CFG_SPEC, u8, NRDMA_DATA_USE_A, 2, O>;
+impl<'a, const O: u8> NRDMA_DATA_USE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn mul(self) -> &'a mut W {
@@ -200,15 +150,11 @@ impl<'a> NRDMA_DATA_USE_W<'a> {
     pub fn alu(self) -> &'a mut W {
         self.variant(NRDMA_DATA_USE_A::ALU)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 1)) | ((value as u32 & 3) << 1);
-        self.w
-    }
 }
+#[doc = "Field `NRDMA_DATA_SIZE` reader - "]
+pub type NRDMA_DATA_SIZE_R = crate::BitReader<NRDMA_DATA_SIZE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum NRDMA_DATA_SIZE_A {
     #[doc = "1: `1`"]
     TWO_BYTE = 1,
@@ -221,14 +167,8 @@ impl From<NRDMA_DATA_SIZE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `NRDMA_DATA_SIZE` reader - "]
-pub struct NRDMA_DATA_SIZE_R(crate::FieldReader<bool>);
 impl NRDMA_DATA_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NRDMA_DATA_SIZE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> NRDMA_DATA_SIZE_A {
         match self.bits {
@@ -239,31 +179,18 @@ impl NRDMA_DATA_SIZE_R {
     #[doc = "Checks if the value of the field is `TWO_BYTE`"]
     #[inline(always)]
     pub fn is_two_byte(&self) -> bool {
-        **self == NRDMA_DATA_SIZE_A::TWO_BYTE
+        *self == NRDMA_DATA_SIZE_A::TWO_BYTE
     }
     #[doc = "Checks if the value of the field is `ONE_BYTE`"]
     #[inline(always)]
     pub fn is_one_byte(&self) -> bool {
-        **self == NRDMA_DATA_SIZE_A::ONE_BYTE
-    }
-}
-impl core::ops::Deref for NRDMA_DATA_SIZE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == NRDMA_DATA_SIZE_A::ONE_BYTE
     }
 }
 #[doc = "Field `NRDMA_DATA_SIZE` writer - "]
-pub struct NRDMA_DATA_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NRDMA_DATA_SIZE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: NRDMA_DATA_SIZE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type NRDMA_DATA_SIZE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_NRDMA_CFG_SPEC, NRDMA_DATA_SIZE_A, O>;
+impl<'a, const O: u8> NRDMA_DATA_SIZE_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn two_byte(self) -> &'a mut W {
@@ -274,25 +201,11 @@ impl<'a> NRDMA_DATA_SIZE_W<'a> {
     pub fn one_byte(self) -> &'a mut W {
         self.variant(NRDMA_DATA_SIZE_A::ONE_BYTE)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
 }
+#[doc = "Field `NRDMA_DATA_MODE` reader - "]
+pub type NRDMA_DATA_MODE_R = crate::BitReader<NRDMA_DATA_MODE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum NRDMA_DATA_MODE_A {
     #[doc = "0: `0`"]
     PER_KERNEL = 0,
@@ -305,14 +218,8 @@ impl From<NRDMA_DATA_MODE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `NRDMA_DATA_MODE` reader - "]
-pub struct NRDMA_DATA_MODE_R(crate::FieldReader<bool>);
 impl NRDMA_DATA_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NRDMA_DATA_MODE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> NRDMA_DATA_MODE_A {
         match self.bits {
@@ -323,31 +230,18 @@ impl NRDMA_DATA_MODE_R {
     #[doc = "Checks if the value of the field is `PER_KERNEL`"]
     #[inline(always)]
     pub fn is_per_kernel(&self) -> bool {
-        **self == NRDMA_DATA_MODE_A::PER_KERNEL
+        *self == NRDMA_DATA_MODE_A::PER_KERNEL
     }
     #[doc = "Checks if the value of the field is `PER_ELEMENT`"]
     #[inline(always)]
     pub fn is_per_element(&self) -> bool {
-        **self == NRDMA_DATA_MODE_A::PER_ELEMENT
-    }
-}
-impl core::ops::Deref for NRDMA_DATA_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == NRDMA_DATA_MODE_A::PER_ELEMENT
     }
 }
 #[doc = "Field `NRDMA_DATA_MODE` writer - "]
-pub struct NRDMA_DATA_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NRDMA_DATA_MODE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: NRDMA_DATA_MODE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type NRDMA_DATA_MODE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_NRDMA_CFG_SPEC, NRDMA_DATA_MODE_A, O>;
+impl<'a, const O: u8> NRDMA_DATA_MODE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn per_kernel(self) -> &'a mut W {
@@ -358,25 +252,11 @@ impl<'a> NRDMA_DATA_MODE_W<'a> {
     pub fn per_element(self) -> &'a mut W {
         self.variant(NRDMA_DATA_MODE_A::PER_ELEMENT)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
 }
+#[doc = "Field `NRDMA_RAM_TYPE` reader - "]
+pub type NRDMA_RAM_TYPE_R = crate::BitReader<NRDMA_RAM_TYPE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum NRDMA_RAM_TYPE_A {
     #[doc = "1: `1`"]
     MC = 1,
@@ -389,14 +269,8 @@ impl From<NRDMA_RAM_TYPE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `NRDMA_RAM_TYPE` reader - "]
-pub struct NRDMA_RAM_TYPE_R(crate::FieldReader<bool>);
 impl NRDMA_RAM_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NRDMA_RAM_TYPE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> NRDMA_RAM_TYPE_A {
         match self.bits {
@@ -407,31 +281,18 @@ impl NRDMA_RAM_TYPE_R {
     #[doc = "Checks if the value of the field is `MC`"]
     #[inline(always)]
     pub fn is_mc(&self) -> bool {
-        **self == NRDMA_RAM_TYPE_A::MC
+        *self == NRDMA_RAM_TYPE_A::MC
     }
     #[doc = "Checks if the value of the field is `CV`"]
     #[inline(always)]
     pub fn is_cv(&self) -> bool {
-        **self == NRDMA_RAM_TYPE_A::CV
-    }
-}
-impl core::ops::Deref for NRDMA_RAM_TYPE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == NRDMA_RAM_TYPE_A::CV
     }
 }
 #[doc = "Field `NRDMA_RAM_TYPE` writer - "]
-pub struct NRDMA_RAM_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NRDMA_RAM_TYPE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: NRDMA_RAM_TYPE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type NRDMA_RAM_TYPE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_NRDMA_CFG_SPEC, NRDMA_RAM_TYPE_A, O>;
+impl<'a, const O: u8> NRDMA_RAM_TYPE_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn mc(self) -> &'a mut W {
@@ -441,22 +302,6 @@ impl<'a> NRDMA_RAM_TYPE_W<'a> {
     #[inline(always)]
     pub fn cv(self) -> &'a mut W {
         self.variant(NRDMA_RAM_TYPE_A::CV)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
     }
 }
 impl R {
@@ -489,28 +334,33 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn nrdma_disable(&mut self) -> NRDMA_DISABLE_W {
-        NRDMA_DISABLE_W { w: self }
+    #[must_use]
+    pub fn nrdma_disable(&mut self) -> NRDMA_DISABLE_W<0> {
+        NRDMA_DISABLE_W::new(self)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
-    pub fn nrdma_data_use(&mut self) -> NRDMA_DATA_USE_W {
-        NRDMA_DATA_USE_W { w: self }
+    #[must_use]
+    pub fn nrdma_data_use(&mut self) -> NRDMA_DATA_USE_W<1> {
+        NRDMA_DATA_USE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn nrdma_data_size(&mut self) -> NRDMA_DATA_SIZE_W {
-        NRDMA_DATA_SIZE_W { w: self }
+    #[must_use]
+    pub fn nrdma_data_size(&mut self) -> NRDMA_DATA_SIZE_W<3> {
+        NRDMA_DATA_SIZE_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn nrdma_data_mode(&mut self) -> NRDMA_DATA_MODE_W {
-        NRDMA_DATA_MODE_W { w: self }
+    #[must_use]
+    pub fn nrdma_data_mode(&mut self) -> NRDMA_DATA_MODE_W<4> {
+        NRDMA_DATA_MODE_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn nrdma_ram_type(&mut self) -> NRDMA_RAM_TYPE_W {
-        NRDMA_RAM_TYPE_W { w: self }
+    #[must_use]
+    pub fn nrdma_ram_type(&mut self) -> NRDMA_RAM_TYPE_W<5> {
+        NRDMA_RAM_TYPE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -531,11 +381,10 @@ impl crate::Readable for D_NRDMA_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_nrdma_cfg::W](W) writer structure"]
 impl crate::Writable for D_NRDMA_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_NRDMA_CFG to value 0x01"]
 impl crate::Resettable for D_NRDMA_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

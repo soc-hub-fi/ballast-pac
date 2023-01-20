@@ -34,8 +34,10 @@ impl From<crate::W<D_DATA_FORMAT_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `PROC_PRECISION` reader - "]
+pub type PROC_PRECISION_R = crate::FieldReader<u8, PROC_PRECISION_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum PROC_PRECISION_A {
     #[doc = "2: `10`"]
@@ -51,14 +53,8 @@ impl From<PROC_PRECISION_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `PROC_PRECISION` reader - "]
-pub struct PROC_PRECISION_R(crate::FieldReader<u8>);
 impl PROC_PRECISION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PROC_PRECISION_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<PROC_PRECISION_A> {
         match self.bits {
@@ -71,36 +67,23 @@ impl PROC_PRECISION_R {
     #[doc = "Checks if the value of the field is `FP16`"]
     #[inline(always)]
     pub fn is_fp16(&self) -> bool {
-        **self == PROC_PRECISION_A::FP16
+        *self == PROC_PRECISION_A::FP16
     }
     #[doc = "Checks if the value of the field is `INT16`"]
     #[inline(always)]
     pub fn is_int16(&self) -> bool {
-        **self == PROC_PRECISION_A::INT16
+        *self == PROC_PRECISION_A::INT16
     }
     #[doc = "Checks if the value of the field is `INT8`"]
     #[inline(always)]
     pub fn is_int8(&self) -> bool {
-        **self == PROC_PRECISION_A::INT8
-    }
-}
-impl core::ops::Deref for PROC_PRECISION_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == PROC_PRECISION_A::INT8
     }
 }
 #[doc = "Field `PROC_PRECISION` writer - "]
-pub struct PROC_PRECISION_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PROC_PRECISION_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: PROC_PRECISION_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type PROC_PRECISION_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_DATA_FORMAT_SPEC, u8, PROC_PRECISION_A, 2, O>;
+impl<'a, const O: u8> PROC_PRECISION_W<'a, O> {
     #[doc = "`10`"]
     #[inline(always)]
     pub fn fp16(self) -> &'a mut W {
@@ -116,15 +99,11 @@ impl<'a> PROC_PRECISION_W<'a> {
     pub fn int8(self) -> &'a mut W {
         self.variant(PROC_PRECISION_A::INT8)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
 }
+#[doc = "Field `OUT_PRECISION` reader - "]
+pub type OUT_PRECISION_R = crate::FieldReader<u8, OUT_PRECISION_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum OUT_PRECISION_A {
     #[doc = "2: `10`"]
@@ -140,14 +119,8 @@ impl From<OUT_PRECISION_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `OUT_PRECISION` reader - "]
-pub struct OUT_PRECISION_R(crate::FieldReader<u8>);
 impl OUT_PRECISION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OUT_PRECISION_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<OUT_PRECISION_A> {
         match self.bits {
@@ -160,36 +133,23 @@ impl OUT_PRECISION_R {
     #[doc = "Checks if the value of the field is `FP16`"]
     #[inline(always)]
     pub fn is_fp16(&self) -> bool {
-        **self == OUT_PRECISION_A::FP16
+        *self == OUT_PRECISION_A::FP16
     }
     #[doc = "Checks if the value of the field is `INT16`"]
     #[inline(always)]
     pub fn is_int16(&self) -> bool {
-        **self == OUT_PRECISION_A::INT16
+        *self == OUT_PRECISION_A::INT16
     }
     #[doc = "Checks if the value of the field is `INT8`"]
     #[inline(always)]
     pub fn is_int8(&self) -> bool {
-        **self == OUT_PRECISION_A::INT8
-    }
-}
-impl core::ops::Deref for OUT_PRECISION_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == OUT_PRECISION_A::INT8
     }
 }
 #[doc = "Field `OUT_PRECISION` writer - "]
-pub struct OUT_PRECISION_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_PRECISION_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: OUT_PRECISION_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type OUT_PRECISION_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_DATA_FORMAT_SPEC, u8, OUT_PRECISION_A, 2, O>;
+impl<'a, const O: u8> OUT_PRECISION_W<'a, O> {
     #[doc = "`10`"]
     #[inline(always)]
     pub fn fp16(self) -> &'a mut W {
@@ -204,12 +164,6 @@ impl<'a> OUT_PRECISION_W<'a> {
     #[inline(always)]
     pub fn int8(self) -> &'a mut W {
         self.variant(OUT_PRECISION_A::INT8)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
     }
 }
 impl R {
@@ -227,13 +181,15 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn proc_precision(&mut self) -> PROC_PRECISION_W {
-        PROC_PRECISION_W { w: self }
+    #[must_use]
+    pub fn proc_precision(&mut self) -> PROC_PRECISION_W<0> {
+        PROC_PRECISION_W::new(self)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
-    pub fn out_precision(&mut self) -> OUT_PRECISION_W {
-        OUT_PRECISION_W { w: self }
+    #[must_use]
+    pub fn out_precision(&mut self) -> OUT_PRECISION_W<2> {
+        OUT_PRECISION_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -254,11 +210,10 @@ impl crate::Readable for D_DATA_FORMAT_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_data_format::W](W) writer structure"]
 impl crate::Writable for D_DATA_FORMAT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_DATA_FORMAT to value 0"]
 impl crate::Resettable for D_DATA_FORMAT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

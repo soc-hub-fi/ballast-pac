@@ -35,44 +35,13 @@ impl From<crate::W<UART_SETUP_SPEC>> for W {
     }
 }
 #[doc = "Field `PARITY_ENA` reader - Parity bit generation and check configuration bitfield: - 1'b0: disabled - 1'b1: enabled"]
-pub struct PARITY_ENA_R(crate::FieldReader<bool>);
-impl PARITY_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PARITY_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PARITY_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PARITY_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `PARITY_ENA` writer - Parity bit generation and check configuration bitfield: - 1'b0: disabled - 1'b1: enabled"]
-pub struct PARITY_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PARITY_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PARITY_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_SETUP_SPEC, bool, O>;
+#[doc = "Field `BIT_LENGTH` reader - Character length bitfield: - 2'b00: 5 bits - 2'b01: 6 bits - 2'b10: 7 bits - 2'b11: 8 bits"]
+pub type BIT_LENGTH_R = crate::FieldReader<u8, BIT_LENGTH_A>;
 #[doc = "Character length bitfield: - 2'b00: 5 bits - 2'b01: 6 bits - 2'b10: 7 bits - 2'b11: 8 bits\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum BIT_LENGTH_A {
     #[doc = "0: `0`"]
@@ -90,14 +59,8 @@ impl From<BIT_LENGTH_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `BIT_LENGTH` reader - Character length bitfield: - 2'b00: 5 bits - 2'b01: 6 bits - 2'b10: 7 bits - 2'b11: 8 bits"]
-pub struct BIT_LENGTH_R(crate::FieldReader<u8>);
 impl BIT_LENGTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BIT_LENGTH_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> BIT_LENGTH_A {
         match self.bits {
@@ -111,41 +74,28 @@ impl BIT_LENGTH_R {
     #[doc = "Checks if the value of the field is `_5BITS`"]
     #[inline(always)]
     pub fn is_5bits(&self) -> bool {
-        **self == BIT_LENGTH_A::_5BITS
+        *self == BIT_LENGTH_A::_5BITS
     }
     #[doc = "Checks if the value of the field is `_6BITS`"]
     #[inline(always)]
     pub fn is_6bits(&self) -> bool {
-        **self == BIT_LENGTH_A::_6BITS
+        *self == BIT_LENGTH_A::_6BITS
     }
     #[doc = "Checks if the value of the field is `_7BITS`"]
     #[inline(always)]
     pub fn is_7bits(&self) -> bool {
-        **self == BIT_LENGTH_A::_7BITS
+        *self == BIT_LENGTH_A::_7BITS
     }
     #[doc = "Checks if the value of the field is `_8BITS`"]
     #[inline(always)]
     pub fn is_8bits(&self) -> bool {
-        **self == BIT_LENGTH_A::_8BITS
-    }
-}
-impl core::ops::Deref for BIT_LENGTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == BIT_LENGTH_A::_8BITS
     }
 }
 #[doc = "Field `BIT_LENGTH` writer - Character length bitfield: - 2'b00: 5 bits - 2'b01: 6 bits - 2'b10: 7 bits - 2'b11: 8 bits"]
-pub struct BIT_LENGTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BIT_LENGTH_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: BIT_LENGTH_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type BIT_LENGTH_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u32, UART_SETUP_SPEC, u8, BIT_LENGTH_A, 2, O>;
+impl<'a, const O: u8> BIT_LENGTH_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn _5bits(self) -> &'a mut W {
@@ -166,225 +116,31 @@ impl<'a> BIT_LENGTH_W<'a> {
     pub fn _8bits(self) -> &'a mut W {
         self.variant(BIT_LENGTH_A::_8BITS)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 1)) | ((value as u32 & 3) << 1);
-        self.w
-    }
 }
 #[doc = "Field `STOP_BITS` reader - Stop bits length bitfield: - 1'b0: 1 stop bit - 1'b1: 2 stop bits"]
-pub struct STOP_BITS_R(crate::FieldReader<bool>);
-impl STOP_BITS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        STOP_BITS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STOP_BITS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STOP_BITS_R = crate::BitReader<bool>;
 #[doc = "Field `STOP_BITS` writer - Stop bits length bitfield: - 1'b0: 1 stop bit - 1'b1: 2 stop bits"]
-pub struct STOP_BITS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STOP_BITS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type STOP_BITS_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_SETUP_SPEC, bool, O>;
 #[doc = "Field `POLLING_EN` reader - When in uart read, use polling method to read the data, read interrupt enable flag will be ignored: - 1'b0: Do not using polling method to read data. - 1'b1: Using polling method to read data. Interrupt enable flag will be ignored."]
-pub struct POLLING_EN_R(crate::FieldReader<bool>);
-impl POLLING_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        POLLING_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for POLLING_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type POLLING_EN_R = crate::BitReader<bool>;
 #[doc = "Field `POLLING_EN` writer - When in uart read, use polling method to read the data, read interrupt enable flag will be ignored: - 1'b0: Do not using polling method to read data. - 1'b1: Using polling method to read data. Interrupt enable flag will be ignored."]
-pub struct POLLING_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> POLLING_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type POLLING_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_SETUP_SPEC, bool, O>;
 #[doc = "Field `CLEAN_FIFO` reader - In all mode clean the RX fifo, set 1 then set 0 to realize a reset fifo: - 1'b0: Stop Clean the RX FIFO. - 1'b1: Clean the RX FIFO."]
-pub struct CLEAN_FIFO_R(crate::FieldReader<bool>);
-impl CLEAN_FIFO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLEAN_FIFO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLEAN_FIFO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLEAN_FIFO_R = crate::BitReader<bool>;
 #[doc = "Field `CLEAN_FIFO` writer - In all mode clean the RX fifo, set 1 then set 0 to realize a reset fifo: - 1'b0: Stop Clean the RX FIFO. - 1'b1: Clean the RX FIFO."]
-pub struct CLEAN_FIFO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLEAN_FIFO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type CLEAN_FIFO_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_SETUP_SPEC, bool, O>;
 #[doc = "Field `TX_ENA` reader - TX transceiver configuration bitfield: - 1'b0: disabled - 1'b1: enabled"]
-pub struct TX_ENA_R(crate::FieldReader<bool>);
-impl TX_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `TX_ENA` writer - TX transceiver configuration bitfield: - 1'b0: disabled - 1'b1: enabled"]
-pub struct TX_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type TX_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_SETUP_SPEC, bool, O>;
 #[doc = "Field `RX_ENA` reader - RX transceiver configuration bitfield: - 1'b0: disabled - 1'b1: enabled"]
-pub struct RX_ENA_R(crate::FieldReader<bool>);
-impl RX_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RX_ENA` writer - RX transceiver configuration bitfield: - 1'b0: disabled - 1'b1: enabled"]
-pub struct RX_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type RX_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_SETUP_SPEC, bool, O>;
 #[doc = "Field `CLKDIV` reader - UART Clock divider configuration bitfield. The baudrate is equal to SOC_FREQ/CLKDIV."]
-pub struct CLKDIV_R(crate::FieldReader<u16>);
-impl CLKDIV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CLKDIV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLKDIV_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLKDIV_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CLKDIV` writer - UART Clock divider configuration bitfield. The baudrate is equal to SOC_FREQ/CLKDIV."]
-pub struct CLKDIV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLKDIV_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
+pub type CLKDIV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, UART_SETUP_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bit 0 - Parity bit generation and check configuration bitfield: - 1'b0: disabled - 1'b1: enabled"]
     #[inline(always)]
@@ -430,43 +186,51 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Parity bit generation and check configuration bitfield: - 1'b0: disabled - 1'b1: enabled"]
     #[inline(always)]
-    pub fn parity_ena(&mut self) -> PARITY_ENA_W {
-        PARITY_ENA_W { w: self }
+    #[must_use]
+    pub fn parity_ena(&mut self) -> PARITY_ENA_W<0> {
+        PARITY_ENA_W::new(self)
     }
     #[doc = "Bits 1:2 - Character length bitfield: - 2'b00: 5 bits - 2'b01: 6 bits - 2'b10: 7 bits - 2'b11: 8 bits"]
     #[inline(always)]
-    pub fn bit_length(&mut self) -> BIT_LENGTH_W {
-        BIT_LENGTH_W { w: self }
+    #[must_use]
+    pub fn bit_length(&mut self) -> BIT_LENGTH_W<1> {
+        BIT_LENGTH_W::new(self)
     }
     #[doc = "Bit 3 - Stop bits length bitfield: - 1'b0: 1 stop bit - 1'b1: 2 stop bits"]
     #[inline(always)]
-    pub fn stop_bits(&mut self) -> STOP_BITS_W {
-        STOP_BITS_W { w: self }
+    #[must_use]
+    pub fn stop_bits(&mut self) -> STOP_BITS_W<3> {
+        STOP_BITS_W::new(self)
     }
     #[doc = "Bit 4 - When in uart read, use polling method to read the data, read interrupt enable flag will be ignored: - 1'b0: Do not using polling method to read data. - 1'b1: Using polling method to read data. Interrupt enable flag will be ignored."]
     #[inline(always)]
-    pub fn polling_en(&mut self) -> POLLING_EN_W {
-        POLLING_EN_W { w: self }
+    #[must_use]
+    pub fn polling_en(&mut self) -> POLLING_EN_W<4> {
+        POLLING_EN_W::new(self)
     }
     #[doc = "Bit 5 - In all mode clean the RX fifo, set 1 then set 0 to realize a reset fifo: - 1'b0: Stop Clean the RX FIFO. - 1'b1: Clean the RX FIFO."]
     #[inline(always)]
-    pub fn clean_fifo(&mut self) -> CLEAN_FIFO_W {
-        CLEAN_FIFO_W { w: self }
+    #[must_use]
+    pub fn clean_fifo(&mut self) -> CLEAN_FIFO_W<5> {
+        CLEAN_FIFO_W::new(self)
     }
     #[doc = "Bit 8 - TX transceiver configuration bitfield: - 1'b0: disabled - 1'b1: enabled"]
     #[inline(always)]
-    pub fn tx_ena(&mut self) -> TX_ENA_W {
-        TX_ENA_W { w: self }
+    #[must_use]
+    pub fn tx_ena(&mut self) -> TX_ENA_W<8> {
+        TX_ENA_W::new(self)
     }
     #[doc = "Bit 9 - RX transceiver configuration bitfield: - 1'b0: disabled - 1'b1: enabled"]
     #[inline(always)]
-    pub fn rx_ena(&mut self) -> RX_ENA_W {
-        RX_ENA_W { w: self }
+    #[must_use]
+    pub fn rx_ena(&mut self) -> RX_ENA_W<9> {
+        RX_ENA_W::new(self)
     }
     #[doc = "Bits 16:31 - UART Clock divider configuration bitfield. The baudrate is equal to SOC_FREQ/CLKDIV."]
     #[inline(always)]
-    pub fn clkdiv(&mut self) -> CLKDIV_W {
-        CLKDIV_W { w: self }
+    #[must_use]
+    pub fn clkdiv(&mut self) -> CLKDIV_W<16> {
+        CLKDIV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -487,11 +251,10 @@ impl crate::Readable for UART_SETUP_SPEC {
 #[doc = "`write(|w| ..)` method takes [uart_setup::W](W) writer structure"]
 impl crate::Writable for UART_SETUP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets UART_SETUP to value 0"]
 impl crate::Resettable for UART_SETUP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

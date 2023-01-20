@@ -34,8 +34,10 @@ impl From<crate::W<D_MEAN_FORMAT_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `MEAN_FORMAT` reader - "]
+pub type MEAN_FORMAT_R = crate::BitReader<MEAN_FORMAT_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MEAN_FORMAT_A {
     #[doc = "1: `1`"]
     ENABLE = 1,
@@ -48,14 +50,8 @@ impl From<MEAN_FORMAT_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `MEAN_FORMAT` reader - "]
-pub struct MEAN_FORMAT_R(crate::FieldReader<bool>);
 impl MEAN_FORMAT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEAN_FORMAT_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> MEAN_FORMAT_A {
         match self.bits {
@@ -66,31 +62,18 @@ impl MEAN_FORMAT_R {
     #[doc = "Checks if the value of the field is `ENABLE`"]
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
-        **self == MEAN_FORMAT_A::ENABLE
+        *self == MEAN_FORMAT_A::ENABLE
     }
     #[doc = "Checks if the value of the field is `DISABLE`"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
-        **self == MEAN_FORMAT_A::DISABLE
-    }
-}
-impl core::ops::Deref for MEAN_FORMAT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == MEAN_FORMAT_A::DISABLE
     }
 }
 #[doc = "Field `MEAN_FORMAT` writer - "]
-pub struct MEAN_FORMAT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEAN_FORMAT_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: MEAN_FORMAT_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type MEAN_FORMAT_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_MEAN_FORMAT_SPEC, MEAN_FORMAT_A, O>;
+impl<'a, const O: u8> MEAN_FORMAT_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut W {
@@ -100,22 +83,6 @@ impl<'a> MEAN_FORMAT_W<'a> {
     #[inline(always)]
     pub fn disable(self) -> &'a mut W {
         self.variant(MEAN_FORMAT_A::DISABLE)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
     }
 }
 impl R {
@@ -128,8 +95,9 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn mean_format(&mut self) -> MEAN_FORMAT_W {
-        MEAN_FORMAT_W { w: self }
+    #[must_use]
+    pub fn mean_format(&mut self) -> MEAN_FORMAT_W<0> {
+        MEAN_FORMAT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -150,11 +118,10 @@ impl crate::Readable for D_MEAN_FORMAT_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_mean_format::W](W) writer structure"]
 impl crate::Writable for D_MEAN_FORMAT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_MEAN_FORMAT to value 0"]
 impl crate::Resettable for D_MEAN_FORMAT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

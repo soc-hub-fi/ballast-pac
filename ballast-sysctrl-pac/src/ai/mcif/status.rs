@@ -13,8 +13,10 @@ impl From<crate::R<STATUS_SPEC>> for R {
         R(reader)
     }
 }
+#[doc = "Field `IDLE` reader - "]
+pub type IDLE_R = crate::BitReader<IDLE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum IDLE_A {
     #[doc = "0: `0`"]
     NO = 0,
@@ -27,14 +29,8 @@ impl From<IDLE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `IDLE` reader - "]
-pub struct IDLE_R(crate::FieldReader<bool>);
 impl IDLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IDLE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> IDLE_A {
         match self.bits {
@@ -45,19 +41,12 @@ impl IDLE_R {
     #[doc = "Checks if the value of the field is `NO`"]
     #[inline(always)]
     pub fn is_no(&self) -> bool {
-        **self == IDLE_A::NO
+        *self == IDLE_A::NO
     }
     #[doc = "Checks if the value of the field is `YES`"]
     #[inline(always)]
     pub fn is_yes(&self) -> bool {
-        **self == IDLE_A::YES
-    }
-}
-impl core::ops::Deref for IDLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == IDLE_A::YES
     }
 }
 impl R {
@@ -78,8 +67,5 @@ impl crate::Readable for STATUS_SPEC {
 }
 #[doc = "`reset()` method sets STATUS to value 0x0001_0000"]
 impl crate::Resettable for STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_0000;
 }

@@ -14,20 +14,7 @@ impl From<crate::R<INSTR_MEM_SIZE_SPEC>> for R {
     }
 }
 #[doc = "Field `instr_mem_size` reader - "]
-pub struct INSTR_MEM_SIZE_R(crate::FieldReader<u32>);
-impl INSTR_MEM_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        INSTR_MEM_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INSTR_MEM_SIZE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INSTR_MEM_SIZE_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for INSTR_MEM_SIZE_SPEC {
 }
 #[doc = "`reset()` method sets instr_mem_size to value 0"]
 impl crate::Resettable for INSTR_MEM_SIZE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -35,301 +35,37 @@ impl From<crate::W<CTRL_CFG_CG_SPEC>> for W {
     }
 }
 #[doc = "Field `CG_UART` reader - "]
-pub struct CG_UART_R(crate::FieldReader<bool>);
-impl CG_UART_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CG_UART_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CG_UART_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CG_UART_R = crate::BitReader<bool>;
 #[doc = "Field `CG_UART` writer - "]
-pub struct CG_UART_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CG_UART_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CG_UART_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_CFG_CG_SPEC, bool, O>;
 #[doc = "Field `CG_SPIM` reader - "]
-pub struct CG_SPIM_R(crate::FieldReader<bool>);
-impl CG_SPIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CG_SPIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CG_SPIM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CG_SPIM_R = crate::BitReader<bool>;
 #[doc = "Field `CG_SPIM` writer - "]
-pub struct CG_SPIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CG_SPIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CG_SPIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_CFG_CG_SPEC, bool, O>;
 #[doc = "Field `CG_I2C0` reader - "]
-pub struct CG_I2C0_R(crate::FieldReader<bool>);
-impl CG_I2C0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CG_I2C0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CG_I2C0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CG_I2C0_R = crate::BitReader<bool>;
 #[doc = "Field `CG_I2C0` writer - "]
-pub struct CG_I2C0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CG_I2C0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type CG_I2C0_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_CFG_CG_SPEC, bool, O>;
 #[doc = "Field `CG_I2C1` reader - "]
-pub struct CG_I2C1_R(crate::FieldReader<bool>);
-impl CG_I2C1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CG_I2C1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CG_I2C1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CG_I2C1_R = crate::BitReader<bool>;
 #[doc = "Field `CG_I2C1` writer - "]
-pub struct CG_I2C1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CG_I2C1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type CG_I2C1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_CFG_CG_SPEC, bool, O>;
 #[doc = "Field `CG_SDIO` reader - "]
-pub struct CG_SDIO_R(crate::FieldReader<bool>);
-impl CG_SDIO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CG_SDIO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CG_SDIO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CG_SDIO_R = crate::BitReader<bool>;
 #[doc = "Field `CG_SDIO` writer - "]
-pub struct CG_SDIO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CG_SDIO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type CG_SDIO_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_CFG_CG_SPEC, bool, O>;
 #[doc = "Field `CG_I2S` reader - "]
-pub struct CG_I2S_R(crate::FieldReader<bool>);
-impl CG_I2S_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CG_I2S_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CG_I2S_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CG_I2S_R = crate::BitReader<bool>;
 #[doc = "Field `CG_I2S` writer - "]
-pub struct CG_I2S_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CG_I2S_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type CG_I2S_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_CFG_CG_SPEC, bool, O>;
 #[doc = "Field `CG_CAM` reader - "]
-pub struct CG_CAM_R(crate::FieldReader<bool>);
-impl CG_CAM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CG_CAM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CG_CAM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CG_CAM_R = crate::BitReader<bool>;
 #[doc = "Field `CG_CAM` writer - "]
-pub struct CG_CAM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CG_CAM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type CG_CAM_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_CFG_CG_SPEC, bool, O>;
 #[doc = "Field `CG_FILTER` reader - "]
-pub struct CG_FILTER_R(crate::FieldReader<bool>);
-impl CG_FILTER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CG_FILTER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CG_FILTER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CG_FILTER_R = crate::BitReader<bool>;
 #[doc = "Field `CG_FILTER` writer - "]
-pub struct CG_FILTER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CG_FILTER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type CG_FILTER_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_CFG_CG_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -375,43 +111,51 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn cg_uart(&mut self) -> CG_UART_W {
-        CG_UART_W { w: self }
+    #[must_use]
+    pub fn cg_uart(&mut self) -> CG_UART_W<0> {
+        CG_UART_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn cg_spim(&mut self) -> CG_SPIM_W {
-        CG_SPIM_W { w: self }
+    #[must_use]
+    pub fn cg_spim(&mut self) -> CG_SPIM_W<1> {
+        CG_SPIM_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn cg_i2c0(&mut self) -> CG_I2C0_W {
-        CG_I2C0_W { w: self }
+    #[must_use]
+    pub fn cg_i2c0(&mut self) -> CG_I2C0_W<2> {
+        CG_I2C0_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn cg_i2c1(&mut self) -> CG_I2C1_W {
-        CG_I2C1_W { w: self }
+    #[must_use]
+    pub fn cg_i2c1(&mut self) -> CG_I2C1_W<3> {
+        CG_I2C1_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn cg_sdio(&mut self) -> CG_SDIO_W {
-        CG_SDIO_W { w: self }
+    #[must_use]
+    pub fn cg_sdio(&mut self) -> CG_SDIO_W<4> {
+        CG_SDIO_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn cg_i2s(&mut self) -> CG_I2S_W {
-        CG_I2S_W { w: self }
+    #[must_use]
+    pub fn cg_i2s(&mut self) -> CG_I2S_W<5> {
+        CG_I2S_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn cg_cam(&mut self) -> CG_CAM_W {
-        CG_CAM_W { w: self }
+    #[must_use]
+    pub fn cg_cam(&mut self) -> CG_CAM_W<6> {
+        CG_CAM_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn cg_filter(&mut self) -> CG_FILTER_W {
-        CG_FILTER_W { w: self }
+    #[must_use]
+    pub fn cg_filter(&mut self) -> CG_FILTER_W<7> {
+        CG_FILTER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -432,11 +176,10 @@ impl crate::Readable for CTRL_CFG_CG_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl_cfg_cg::W](W) writer structure"]
 impl crate::Writable for CTRL_CFG_CG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL_CFG_CG to value 0"]
 impl crate::Resettable for CTRL_CFG_CG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

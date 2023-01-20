@@ -34,8 +34,10 @@ impl From<crate::W<D_NAN_FLUSH_TO_ZERO_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `NAN_TO_ZERO` reader - "]
+pub type NAN_TO_ZERO_R = crate::BitReader<NAN_TO_ZERO_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum NAN_TO_ZERO_A {
     #[doc = "1: `1`"]
     ENABLE = 1,
@@ -48,14 +50,8 @@ impl From<NAN_TO_ZERO_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `NAN_TO_ZERO` reader - "]
-pub struct NAN_TO_ZERO_R(crate::FieldReader<bool>);
 impl NAN_TO_ZERO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NAN_TO_ZERO_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> NAN_TO_ZERO_A {
         match self.bits {
@@ -66,31 +62,18 @@ impl NAN_TO_ZERO_R {
     #[doc = "Checks if the value of the field is `ENABLE`"]
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
-        **self == NAN_TO_ZERO_A::ENABLE
+        *self == NAN_TO_ZERO_A::ENABLE
     }
     #[doc = "Checks if the value of the field is `DISABLE`"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
-        **self == NAN_TO_ZERO_A::DISABLE
-    }
-}
-impl core::ops::Deref for NAN_TO_ZERO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == NAN_TO_ZERO_A::DISABLE
     }
 }
 #[doc = "Field `NAN_TO_ZERO` writer - "]
-pub struct NAN_TO_ZERO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NAN_TO_ZERO_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: NAN_TO_ZERO_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type NAN_TO_ZERO_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_NAN_FLUSH_TO_ZERO_SPEC, NAN_TO_ZERO_A, O>;
+impl<'a, const O: u8> NAN_TO_ZERO_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut W {
@@ -100,22 +83,6 @@ impl<'a> NAN_TO_ZERO_W<'a> {
     #[inline(always)]
     pub fn disable(self) -> &'a mut W {
         self.variant(NAN_TO_ZERO_A::DISABLE)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
     }
 }
 impl R {
@@ -128,8 +95,9 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn nan_to_zero(&mut self) -> NAN_TO_ZERO_W {
-        NAN_TO_ZERO_W { w: self }
+    #[must_use]
+    pub fn nan_to_zero(&mut self) -> NAN_TO_ZERO_W<0> {
+        NAN_TO_ZERO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -150,11 +118,10 @@ impl crate::Readable for D_NAN_FLUSH_TO_ZERO_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_nan_flush_to_zero::W](W) writer structure"]
 impl crate::Writable for D_NAN_FLUSH_TO_ZERO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_NAN_FLUSH_TO_ZERO to value 0"]
 impl crate::Resettable for D_NAN_FLUSH_TO_ZERO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

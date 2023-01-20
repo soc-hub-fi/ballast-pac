@@ -35,59 +35,13 @@ impl From<crate::W<S_ARBITER_SPEC>> for W {
     }
 }
 #[doc = "Field `ARB_WEIGHT` reader - "]
-pub struct ARB_WEIGHT_R(crate::FieldReader<u8>);
-impl ARB_WEIGHT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ARB_WEIGHT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ARB_WEIGHT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ARB_WEIGHT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ARB_WEIGHT` writer - "]
-pub struct ARB_WEIGHT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ARB_WEIGHT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type ARB_WEIGHT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, S_ARBITER_SPEC, u8, u8, 4, O>;
 #[doc = "Field `ARB_WMB` reader - "]
-pub struct ARB_WMB_R(crate::FieldReader<u8>);
-impl ARB_WMB_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ARB_WMB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ARB_WMB_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ARB_WMB_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ARB_WMB` writer - "]
-pub struct ARB_WMB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ARB_WMB_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | ((value as u32 & 0x0f) << 16);
-        self.w
-    }
-}
+pub type ARB_WMB_W<'a, const O: u8> = crate::FieldWriter<'a, u32, S_ARBITER_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
@@ -103,13 +57,15 @@ impl R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    pub fn arb_weight(&mut self) -> ARB_WEIGHT_W {
-        ARB_WEIGHT_W { w: self }
+    #[must_use]
+    pub fn arb_weight(&mut self) -> ARB_WEIGHT_W<0> {
+        ARB_WEIGHT_W::new(self)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
-    pub fn arb_wmb(&mut self) -> ARB_WMB_W {
-        ARB_WMB_W { w: self }
+    #[must_use]
+    pub fn arb_wmb(&mut self) -> ARB_WMB_W<16> {
+        ARB_WMB_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -130,11 +86,10 @@ impl crate::Readable for S_ARBITER_SPEC {
 #[doc = "`write(|w| ..)` method takes [s_arbiter::W](W) writer structure"]
 impl crate::Writable for S_ARBITER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets S_ARBITER to value 0x3000_0000"]
 impl crate::Resettable for S_ARBITER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x3000_0000;
 }

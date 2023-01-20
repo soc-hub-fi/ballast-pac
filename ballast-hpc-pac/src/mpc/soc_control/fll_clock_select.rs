@@ -14,20 +14,7 @@ impl From<crate::R<FLL_CLOCK_SELECT_SPEC>> for R {
     }
 }
 #[doc = "Field `S` reader - "]
-pub struct S_R(crate::FieldReader<bool>);
-impl S_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        S_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for S_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type S_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for FLL_CLOCK_SELECT_SPEC {
 }
 #[doc = "`reset()` method sets FLL_CLOCK_SELECT to value 0"]
 impl crate::Resettable for FLL_CLOCK_SELECT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

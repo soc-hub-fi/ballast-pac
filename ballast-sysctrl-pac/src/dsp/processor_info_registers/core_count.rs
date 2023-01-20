@@ -14,20 +14,7 @@ impl From<crate::R<CORE_COUNT_SPEC>> for R {
     }
 }
 #[doc = "Field `core_count` reader - "]
-pub struct CORE_COUNT_R(crate::FieldReader<u32>);
-impl CORE_COUNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CORE_COUNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_COUNT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_COUNT_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for CORE_COUNT_SPEC {
 }
 #[doc = "`reset()` method sets core_count to value 0"]
 impl crate::Resettable for CORE_COUNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

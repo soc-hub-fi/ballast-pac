@@ -14,20 +14,7 @@ impl From<crate::R<CMAC_B_DESC_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CMAC_B_DESC` reader - "]
-pub struct CMAC_B_DESC_R(crate::FieldReader<u32>);
-impl CMAC_B_DESC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CMAC_B_DESC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CMAC_B_DESC_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CMAC_B_DESC_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for CMAC_B_DESC_0_SPEC {
 }
 #[doc = "`reset()` method sets CMAC_B_DESC_0 to value 0x001c_0006"]
 impl crate::Resettable for CMAC_B_DESC_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x001c_0006
-    }
+    const RESET_VALUE: Self::Ux = 0x001c_0006;
 }

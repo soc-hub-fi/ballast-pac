@@ -35,116 +35,20 @@ impl From<crate::W<BREAKPOINT_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `single_step_breakpoint_enable` reader - "]
-pub struct SINGLE_STEP_BREAKPOINT_ENABLE_R(crate::FieldReader<bool>);
-impl SINGLE_STEP_BREAKPOINT_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SINGLE_STEP_BREAKPOINT_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SINGLE_STEP_BREAKPOINT_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SINGLE_STEP_BREAKPOINT_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `single_step_breakpoint_enable` writer - "]
-pub struct SINGLE_STEP_BREAKPOINT_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SINGLE_STEP_BREAKPOINT_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type SINGLE_STEP_BREAKPOINT_ENABLE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, BREAKPOINT_ENABLE_SPEC, bool, O>;
 #[doc = "Field `enable_breakpoint_1` reader - "]
-pub struct ENABLE_BREAKPOINT_1_R(crate::FieldReader<bool>);
-impl ENABLE_BREAKPOINT_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_BREAKPOINT_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_BREAKPOINT_1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENABLE_BREAKPOINT_1_R = crate::BitReader<bool>;
 #[doc = "Field `enable_breakpoint_1` writer - "]
-pub struct ENABLE_BREAKPOINT_1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_BREAKPOINT_1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type ENABLE_BREAKPOINT_1_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, BREAKPOINT_ENABLE_SPEC, bool, O>;
 #[doc = "Field `enable_breakpoint_2` reader - "]
-pub struct ENABLE_BREAKPOINT_2_R(crate::FieldReader<bool>);
-impl ENABLE_BREAKPOINT_2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_BREAKPOINT_2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_BREAKPOINT_2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENABLE_BREAKPOINT_2_R = crate::BitReader<bool>;
 #[doc = "Field `enable_breakpoint_2` writer - "]
-pub struct ENABLE_BREAKPOINT_2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_BREAKPOINT_2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type ENABLE_BREAKPOINT_2_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, BREAKPOINT_ENABLE_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 2"]
     #[inline(always)]
@@ -165,18 +69,21 @@ impl R {
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn single_step_breakpoint_enable(&mut self) -> SINGLE_STEP_BREAKPOINT_ENABLE_W {
-        SINGLE_STEP_BREAKPOINT_ENABLE_W { w: self }
+    #[must_use]
+    pub fn single_step_breakpoint_enable(&mut self) -> SINGLE_STEP_BREAKPOINT_ENABLE_W<2> {
+        SINGLE_STEP_BREAKPOINT_ENABLE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn enable_breakpoint_1(&mut self) -> ENABLE_BREAKPOINT_1_W {
-        ENABLE_BREAKPOINT_1_W { w: self }
+    #[must_use]
+    pub fn enable_breakpoint_1(&mut self) -> ENABLE_BREAKPOINT_1_W<3> {
+        ENABLE_BREAKPOINT_1_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn enable_breakpoint_2(&mut self) -> ENABLE_BREAKPOINT_2_W {
-        ENABLE_BREAKPOINT_2_W { w: self }
+    #[must_use]
+    pub fn enable_breakpoint_2(&mut self) -> ENABLE_BREAKPOINT_2_W<4> {
+        ENABLE_BREAKPOINT_2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -197,11 +104,10 @@ impl crate::Readable for BREAKPOINT_ENABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [breakpoint_enable::W](W) writer structure"]
 impl crate::Writable for BREAKPOINT_ENABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets breakpoint_enable to value 0"]
 impl crate::Resettable for BREAKPOINT_ENABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

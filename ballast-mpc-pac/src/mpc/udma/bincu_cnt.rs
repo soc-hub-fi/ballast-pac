@@ -35,74 +35,18 @@ impl From<crate::W<BINCU_CNT_SPEC>> for W {
     }
 }
 #[doc = "Field `COUNT` reader - Binarization and counting unit count value set."]
-pub struct COUNT_R(crate::FieldReader<u32>);
-impl COUNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        COUNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COUNT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COUNT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `COUNT` writer - Binarization and counting unit count value set."]
-pub struct COUNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COUNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x000f_ffff) | (value as u32 & 0x000f_ffff);
-        self.w
-    }
-}
+pub type COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BINCU_CNT_SPEC, u32, u32, 20, O>;
 #[doc = "Field `EN` reader - Binarization and counting unit enable: -1'b0: not enable -1'b1: enable"]
-pub struct EN_R(crate::FieldReader<bool>);
-impl EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EN_R = crate::BitReader<bool>;
 #[doc = "Field `EN` writer - Binarization and counting unit enable: -1'b0: not enable -1'b1: enable"]
-pub struct EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, BINCU_CNT_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:19 - Binarization and counting unit count value set."]
     #[inline(always)]
     pub fn count(&self) -> COUNT_R {
-        COUNT_R::new((self.bits & 0x000f_ffff) as u32)
+        COUNT_R::new(self.bits & 0x000f_ffff)
     }
     #[doc = "Bit 31 - Binarization and counting unit enable: -1'b0: not enable -1'b1: enable"]
     #[inline(always)]
@@ -113,13 +57,15 @@ impl R {
 impl W {
     #[doc = "Bits 0:19 - Binarization and counting unit count value set."]
     #[inline(always)]
-    pub fn count(&mut self) -> COUNT_W {
-        COUNT_W { w: self }
+    #[must_use]
+    pub fn count(&mut self) -> COUNT_W<0> {
+        COUNT_W::new(self)
     }
     #[doc = "Bit 31 - Binarization and counting unit enable: -1'b0: not enable -1'b1: enable"]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W {
-        EN_W { w: self }
+    #[must_use]
+    pub fn en(&mut self) -> EN_W<31> {
+        EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -140,11 +86,10 @@ impl crate::Readable for BINCU_CNT_SPEC {
 #[doc = "`write(|w| ..)` method takes [bincu_cnt::W](W) writer structure"]
 impl crate::Writable for BINCU_CNT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BINCU_CNT to value 0"]
 impl crate::Resettable for BINCU_CNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

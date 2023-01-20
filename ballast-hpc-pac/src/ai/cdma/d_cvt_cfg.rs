@@ -34,8 +34,10 @@ impl From<crate::W<D_CVT_CFG_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `CVT_EN` reader - "]
+pub type CVT_EN_R = crate::BitReader<CVT_EN_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CVT_EN_A {
     #[doc = "1: `1`"]
     ENABLE = 1,
@@ -48,14 +50,8 @@ impl From<CVT_EN_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `CVT_EN` reader - "]
-pub struct CVT_EN_R(crate::FieldReader<bool>);
 impl CVT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CVT_EN_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CVT_EN_A {
         match self.bits {
@@ -66,31 +62,17 @@ impl CVT_EN_R {
     #[doc = "Checks if the value of the field is `ENABLE`"]
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
-        **self == CVT_EN_A::ENABLE
+        *self == CVT_EN_A::ENABLE
     }
     #[doc = "Checks if the value of the field is `DISABLE`"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
-        **self == CVT_EN_A::DISABLE
-    }
-}
-impl core::ops::Deref for CVT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CVT_EN_A::DISABLE
     }
 }
 #[doc = "Field `CVT_EN` writer - "]
-pub struct CVT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CVT_EN_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CVT_EN_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type CVT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, D_CVT_CFG_SPEC, CVT_EN_A, O>;
+impl<'a, const O: u8> CVT_EN_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut W {
@@ -101,50 +83,12 @@ impl<'a> CVT_EN_W<'a> {
     pub fn disable(self) -> &'a mut W {
         self.variant(CVT_EN_A::DISABLE)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
 }
 #[doc = "Field `CVT_TRUNCATE` reader - "]
-pub struct CVT_TRUNCATE_R(crate::FieldReader<u8>);
-impl CVT_TRUNCATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CVT_TRUNCATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CVT_TRUNCATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CVT_TRUNCATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CVT_TRUNCATE` writer - "]
-pub struct CVT_TRUNCATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CVT_TRUNCATE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 4)) | ((value as u32 & 0x3f) << 4);
-        self.w
-    }
-}
+pub type CVT_TRUNCATE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_CVT_CFG_SPEC, u8, u8, 6, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -160,13 +104,15 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn cvt_en(&mut self) -> CVT_EN_W {
-        CVT_EN_W { w: self }
+    #[must_use]
+    pub fn cvt_en(&mut self) -> CVT_EN_W<0> {
+        CVT_EN_W::new(self)
     }
     #[doc = "Bits 4:9"]
     #[inline(always)]
-    pub fn cvt_truncate(&mut self) -> CVT_TRUNCATE_W {
-        CVT_TRUNCATE_W { w: self }
+    #[must_use]
+    pub fn cvt_truncate(&mut self) -> CVT_TRUNCATE_W<4> {
+        CVT_TRUNCATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -187,11 +133,10 @@ impl crate::Readable for D_CVT_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_cvt_cfg::W](W) writer structure"]
 impl crate::Writable for D_CVT_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_CVT_CFG to value 0"]
 impl crate::Resettable for D_CVT_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

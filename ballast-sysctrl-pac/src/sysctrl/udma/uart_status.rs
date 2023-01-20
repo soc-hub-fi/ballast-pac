@@ -14,35 +14,9 @@ impl From<crate::R<UART_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `TX_BUSY` reader - TX busy status flag: - 1'b0: no TX transfer on-going - 1'b1: TX transfer on-going"]
-pub struct TX_BUSY_R(crate::FieldReader<bool>);
-impl TX_BUSY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_BUSY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_BUSY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_BUSY_R = crate::BitReader<bool>;
 #[doc = "Field `RX_BUSY` reader - RX busy status flag: - 1'b0: no RX transfer on-going - 1'b1: RX transfer on-going"]
-pub struct RX_BUSY_R(crate::FieldReader<bool>);
-impl RX_BUSY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_BUSY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_BUSY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_BUSY_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - TX busy status flag: - 1'b0: no TX transfer on-going - 1'b1: TX transfer on-going"]
     #[inline(always)]
@@ -66,8 +40,5 @@ impl crate::Readable for UART_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets UART_STATUS to value 0"]
 impl crate::Resettable for UART_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

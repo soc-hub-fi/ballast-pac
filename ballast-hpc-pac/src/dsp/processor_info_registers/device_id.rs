@@ -14,20 +14,7 @@ impl From<crate::R<DEVICE_ID_SPEC>> for R {
     }
 }
 #[doc = "Field `device_id` reader - device id"]
-pub struct DEVICE_ID_R(crate::FieldReader<u32>);
-impl DEVICE_ID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DEVICE_ID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DEVICE_ID_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DEVICE_ID_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - device id"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for DEVICE_ID_SPEC {
 }
 #[doc = "`reset()` method sets device_id to value 0"]
 impl crate::Resettable for DEVICE_ID_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

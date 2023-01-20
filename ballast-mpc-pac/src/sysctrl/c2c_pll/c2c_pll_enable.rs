@@ -35,32 +35,10 @@ impl From<crate::W<C2C_PLL_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `spare_ctrl` reader - "]
-pub struct SPARE_CTRL_R(crate::FieldReader<u32>);
-impl SPARE_CTRL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SPARE_CTRL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPARE_CTRL_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPARE_CTRL_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `spare_ctrl` writer - "]
-pub struct SPARE_CTRL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPARE_CTRL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type SPARE_CTRL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, C2C_PLL_ENABLE_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -71,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn spare_ctrl(&mut self) -> SPARE_CTRL_W {
-        SPARE_CTRL_W { w: self }
+    #[must_use]
+    pub fn spare_ctrl(&mut self) -> SPARE_CTRL_W<0> {
+        SPARE_CTRL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +72,10 @@ impl crate::Readable for C2C_PLL_ENABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [c2c_pll_enable::W](W) writer structure"]
 impl crate::Writable for C2C_PLL_ENABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets C2C_PLL_ENABLE to value 0"]
 impl crate::Resettable for C2C_PLL_ENABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

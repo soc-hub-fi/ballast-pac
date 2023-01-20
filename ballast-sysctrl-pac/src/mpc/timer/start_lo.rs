@@ -35,42 +35,9 @@ impl From<crate::W<START_LO_SPEC>> for W {
     }
 }
 #[doc = "Field `START_LO` reader - Timer high start command (sets EN in CFG_LO)"]
-pub struct START_LO_R(crate::FieldReader<bool>);
-impl START_LO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        START_LO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for START_LO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type START_LO_R = crate::BitReader<bool>;
 #[doc = "Field `START_LO` writer - Timer high start command (sets EN in CFG_LO)"]
-pub struct START_LO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> START_LO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type START_LO_W<'a, const O: u8> = crate::BitWriter<'a, u32, START_LO_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Timer high start command (sets EN in CFG_LO)"]
     #[inline(always)]
@@ -81,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Timer high start command (sets EN in CFG_LO)"]
     #[inline(always)]
-    pub fn start_lo(&mut self) -> START_LO_W {
-        START_LO_W { w: self }
+    #[must_use]
+    pub fn start_lo(&mut self) -> START_LO_W<0> {
+        START_LO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +71,10 @@ impl crate::Readable for START_LO_SPEC {
 #[doc = "`write(|w| ..)` method takes [start_lo::W](W) writer structure"]
 impl crate::Writable for START_LO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets START_LO to value 0"]
 impl crate::Resettable for START_LO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

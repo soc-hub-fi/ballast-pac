@@ -35,32 +35,9 @@ impl From<crate::W<PADDIR_32_63_SPEC>> for W {
     }
 }
 #[doc = "Field `DIR` reader - "]
-pub struct DIR_R(crate::FieldReader<u32>);
-impl DIR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DIR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DIR` writer - "]
-pub struct DIR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type DIR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PADDIR_32_63_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -71,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn dir(&mut self) -> DIR_W {
-        DIR_W { w: self }
+    #[must_use]
+    pub fn dir(&mut self) -> DIR_W<0> {
+        DIR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -95,11 +73,10 @@ impl crate::Readable for PADDIR_32_63_SPEC {
 #[doc = "`write(|w| ..)` method takes [paddir_32_63::W](W) writer structure"]
 impl crate::Writable for PADDIR_32_63_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PADDIR_32_63 to value 0"]
 impl crate::Resettable for PADDIR_32_63_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

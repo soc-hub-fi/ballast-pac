@@ -35,32 +35,9 @@ impl From<crate::W<RTC_CFG2_SPEC>> for W {
     }
 }
 #[doc = "Field `rtc_cfg2` reader - "]
-pub struct RTC_CFG2_R(crate::FieldReader<u64>);
-impl RTC_CFG2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u64) -> Self {
-        RTC_CFG2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_CFG2_R {
-    type Target = crate::FieldReader<u64>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_CFG2_R = crate::FieldReader<u64, u64>;
 #[doc = "Field `rtc_cfg2` writer - "]
-pub struct RTC_CFG2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_CFG2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u64) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type RTC_CFG2_W<'a, const O: u8> = crate::FieldWriter<'a, u64, RTC_CFG2_SPEC, u64, u64, 64, O>;
 impl R {
     #[doc = "Bits 0:63"]
     #[inline(always)]
@@ -71,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:63"]
     #[inline(always)]
-    pub fn rtc_cfg2(&mut self) -> RTC_CFG2_W {
-        RTC_CFG2_W { w: self }
+    #[must_use]
+    pub fn rtc_cfg2(&mut self) -> RTC_CFG2_W<0> {
+        RTC_CFG2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +71,10 @@ impl crate::Readable for RTC_CFG2_SPEC {
 #[doc = "`write(|w| ..)` method takes [rtc_cfg2::W](W) writer structure"]
 impl crate::Writable for RTC_CFG2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets rtc_cfg2 to value 0"]
 impl crate::Resettable for RTC_CFG2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -35,86 +35,17 @@ impl From<crate::W<PAD_CFG_13_SPEC>> for W {
     }
 }
 #[doc = "Field `PAD_39` reader - "]
-pub struct PAD_39_R(crate::FieldReader<u16>);
-impl PAD_39_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PAD_39_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_39_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_39_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PAD_39` writer - "]
-pub struct PAD_39_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_39_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
-        self.w
-    }
-}
+pub type PAD_39_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PAD_CFG_13_SPEC, u16, u16, 10, O>;
 #[doc = "Field `PAD_40` reader - "]
-pub struct PAD_40_R(crate::FieldReader<u16>);
-impl PAD_40_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PAD_40_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_40_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_40_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PAD_40` writer - "]
-pub struct PAD_40_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_40_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 10)) | ((value as u32 & 0x03ff) << 10);
-        self.w
-    }
-}
+pub type PAD_40_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PAD_CFG_13_SPEC, u16, u16, 10, O>;
 #[doc = "Field `PAD_41` reader - "]
-pub struct PAD_41_R(crate::FieldReader<u16>);
-impl PAD_41_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PAD_41_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PAD_41_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PAD_41_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PAD_41` writer - "]
-pub struct PAD_41_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PAD_41_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 20)) | ((value as u32 & 0x03ff) << 20);
-        self.w
-    }
-}
+pub type PAD_41_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PAD_CFG_13_SPEC, u16, u16, 10, O>;
 impl R {
     #[doc = "Bits 0:9"]
     #[inline(always)]
@@ -135,18 +66,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    pub fn pad_39(&mut self) -> PAD_39_W {
-        PAD_39_W { w: self }
+    #[must_use]
+    pub fn pad_39(&mut self) -> PAD_39_W<0> {
+        PAD_39_W::new(self)
     }
     #[doc = "Bits 10:19"]
     #[inline(always)]
-    pub fn pad_40(&mut self) -> PAD_40_W {
-        PAD_40_W { w: self }
+    #[must_use]
+    pub fn pad_40(&mut self) -> PAD_40_W<10> {
+        PAD_40_W::new(self)
     }
     #[doc = "Bits 20:29"]
     #[inline(always)]
-    pub fn pad_41(&mut self) -> PAD_41_W {
-        PAD_41_W { w: self }
+    #[must_use]
+    pub fn pad_41(&mut self) -> PAD_41_W<20> {
+        PAD_41_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -167,11 +101,10 @@ impl crate::Readable for PAD_CFG_13_SPEC {
 #[doc = "`write(|w| ..)` method takes [pad_cfg_13::W](W) writer structure"]
 impl crate::Writable for PAD_CFG_13_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PAD_CFG_13 to value 0"]
 impl crate::Resettable for PAD_CFG_13_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

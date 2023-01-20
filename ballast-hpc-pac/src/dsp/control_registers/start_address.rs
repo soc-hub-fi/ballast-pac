@@ -35,32 +35,10 @@ impl From<crate::W<START_ADDRESS_SPEC>> for W {
     }
 }
 #[doc = "Field `start_address` reader - star"]
-pub struct START_ADDRESS_R(crate::FieldReader<u32>);
-impl START_ADDRESS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        START_ADDRESS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for START_ADDRESS_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type START_ADDRESS_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `start_address` writer - star"]
-pub struct START_ADDRESS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> START_ADDRESS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type START_ADDRESS_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, START_ADDRESS_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - star"]
     #[inline(always)]
@@ -71,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - star"]
     #[inline(always)]
-    pub fn start_address(&mut self) -> START_ADDRESS_W {
-        START_ADDRESS_W { w: self }
+    #[must_use]
+    pub fn start_address(&mut self) -> START_ADDRESS_W<0> {
+        START_ADDRESS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +72,10 @@ impl crate::Readable for START_ADDRESS_SPEC {
 #[doc = "`write(|w| ..)` method takes [start_address::W](W) writer structure"]
 impl crate::Writable for START_ADDRESS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets start_address to value 0"]
 impl crate::Resettable for START_ADDRESS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

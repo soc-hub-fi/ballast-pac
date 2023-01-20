@@ -14,20 +14,7 @@ impl From<crate::R<CLKSEL_SPEC>> for R {
     }
 }
 #[doc = "Field `CLKSEL` reader - Irrelevant. Select FLL clock. Sysctrl does not have FLL"]
-pub struct CLKSEL_R(crate::FieldReader<u32>);
-impl CLKSEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CLKSEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLKSEL_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLKSEL_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Irrelevant. Select FLL clock. Sysctrl does not have FLL"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for CLKSEL_SPEC {
 }
 #[doc = "`reset()` method sets CLKSEL to value 0"]
 impl crate::Resettable for CLKSEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

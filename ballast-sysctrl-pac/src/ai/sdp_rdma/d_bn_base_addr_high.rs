@@ -35,32 +35,10 @@ impl From<crate::W<D_BN_BASE_ADDR_HIGH_SPEC>> for W {
     }
 }
 #[doc = "Field `BN_BASE_ADDR_HIGH` reader - "]
-pub struct BN_BASE_ADDR_HIGH_R(crate::FieldReader<u32>);
-impl BN_BASE_ADDR_HIGH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        BN_BASE_ADDR_HIGH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BN_BASE_ADDR_HIGH_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BN_BASE_ADDR_HIGH_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BN_BASE_ADDR_HIGH` writer - "]
-pub struct BN_BASE_ADDR_HIGH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BN_BASE_ADDR_HIGH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type BN_BASE_ADDR_HIGH_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_BN_BASE_ADDR_HIGH_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -71,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn bn_base_addr_high(&mut self) -> BN_BASE_ADDR_HIGH_W {
-        BN_BASE_ADDR_HIGH_W { w: self }
+    #[must_use]
+    pub fn bn_base_addr_high(&mut self) -> BN_BASE_ADDR_HIGH_W<0> {
+        BN_BASE_ADDR_HIGH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +72,10 @@ impl crate::Readable for D_BN_BASE_ADDR_HIGH_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_bn_base_addr_high::W](W) writer structure"]
 impl crate::Writable for D_BN_BASE_ADDR_HIGH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_BN_BASE_ADDR_HIGH to value 0"]
 impl crate::Resettable for D_BN_BASE_ADDR_HIGH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

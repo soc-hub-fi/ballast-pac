@@ -20,437 +20,133 @@ impl From<crate::W<INTR_SET_SPEC>> for W {
     }
 }
 #[doc = "Field `SDP_DONE_SET0` writer - "]
-pub struct SDP_DONE_SET0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDP_DONE_SET0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SDP_DONE_SET0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 #[doc = "Field `SDP_DONE_SET1` writer - "]
-pub struct SDP_DONE_SET1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDP_DONE_SET1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SDP_DONE_SET1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 #[doc = "Field `CDP_DONE_SET0` writer - "]
-pub struct CDP_DONE_SET0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CDP_DONE_SET0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type CDP_DONE_SET0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 #[doc = "Field `CDP_DONE_SET1` writer - "]
-pub struct CDP_DONE_SET1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CDP_DONE_SET1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type CDP_DONE_SET1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 #[doc = "Field `PDP_DONE_SET0` writer - "]
-pub struct PDP_DONE_SET0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDP_DONE_SET0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type PDP_DONE_SET0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 #[doc = "Field `PDP_DONE_SET1` writer - "]
-pub struct PDP_DONE_SET1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDP_DONE_SET1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type PDP_DONE_SET1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 #[doc = "Field `BDMA_DONE_SET0` writer - "]
-pub struct BDMA_DONE_SET0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BDMA_DONE_SET0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type BDMA_DONE_SET0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 #[doc = "Field `BDMA_DONE_SET1` writer - "]
-pub struct BDMA_DONE_SET1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BDMA_DONE_SET1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type BDMA_DONE_SET1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 #[doc = "Field `RUBIK_DONE_SET0` writer - "]
-pub struct RUBIK_DONE_SET0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RUBIK_DONE_SET0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type RUBIK_DONE_SET0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 #[doc = "Field `RUBIK_DONE_SET1` writer - "]
-pub struct RUBIK_DONE_SET1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RUBIK_DONE_SET1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type RUBIK_DONE_SET1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 #[doc = "Field `CDMA_DAT_DONE_SET0` writer - "]
-pub struct CDMA_DAT_DONE_SET0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CDMA_DAT_DONE_SET0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type CDMA_DAT_DONE_SET0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 #[doc = "Field `CDMA_DAT_DONE_SET1` writer - "]
-pub struct CDMA_DAT_DONE_SET1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CDMA_DAT_DONE_SET1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type CDMA_DAT_DONE_SET1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 #[doc = "Field `CDMA_WT_DONE_SET0` writer - "]
-pub struct CDMA_WT_DONE_SET0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CDMA_WT_DONE_SET0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type CDMA_WT_DONE_SET0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 #[doc = "Field `CDMA_WT_DONE_SET1` writer - "]
-pub struct CDMA_WT_DONE_SET1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CDMA_WT_DONE_SET1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type CDMA_WT_DONE_SET1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 #[doc = "Field `CACC_DONE_SET0` writer - "]
-pub struct CACC_DONE_SET0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACC_DONE_SET0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type CACC_DONE_SET0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 #[doc = "Field `CACC_DONE_SET1` writer - "]
-pub struct CACC_DONE_SET1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACC_DONE_SET1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type CACC_DONE_SET1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_SET_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn sdp_done_set0(&mut self) -> SDP_DONE_SET0_W {
-        SDP_DONE_SET0_W { w: self }
+    #[must_use]
+    pub fn sdp_done_set0(&mut self) -> SDP_DONE_SET0_W<0> {
+        SDP_DONE_SET0_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn sdp_done_set1(&mut self) -> SDP_DONE_SET1_W {
-        SDP_DONE_SET1_W { w: self }
+    #[must_use]
+    pub fn sdp_done_set1(&mut self) -> SDP_DONE_SET1_W<1> {
+        SDP_DONE_SET1_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn cdp_done_set0(&mut self) -> CDP_DONE_SET0_W {
-        CDP_DONE_SET0_W { w: self }
+    #[must_use]
+    pub fn cdp_done_set0(&mut self) -> CDP_DONE_SET0_W<2> {
+        CDP_DONE_SET0_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn cdp_done_set1(&mut self) -> CDP_DONE_SET1_W {
-        CDP_DONE_SET1_W { w: self }
+    #[must_use]
+    pub fn cdp_done_set1(&mut self) -> CDP_DONE_SET1_W<3> {
+        CDP_DONE_SET1_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn pdp_done_set0(&mut self) -> PDP_DONE_SET0_W {
-        PDP_DONE_SET0_W { w: self }
+    #[must_use]
+    pub fn pdp_done_set0(&mut self) -> PDP_DONE_SET0_W<4> {
+        PDP_DONE_SET0_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn pdp_done_set1(&mut self) -> PDP_DONE_SET1_W {
-        PDP_DONE_SET1_W { w: self }
+    #[must_use]
+    pub fn pdp_done_set1(&mut self) -> PDP_DONE_SET1_W<5> {
+        PDP_DONE_SET1_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn bdma_done_set0(&mut self) -> BDMA_DONE_SET0_W {
-        BDMA_DONE_SET0_W { w: self }
+    #[must_use]
+    pub fn bdma_done_set0(&mut self) -> BDMA_DONE_SET0_W<6> {
+        BDMA_DONE_SET0_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn bdma_done_set1(&mut self) -> BDMA_DONE_SET1_W {
-        BDMA_DONE_SET1_W { w: self }
+    #[must_use]
+    pub fn bdma_done_set1(&mut self) -> BDMA_DONE_SET1_W<7> {
+        BDMA_DONE_SET1_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn rubik_done_set0(&mut self) -> RUBIK_DONE_SET0_W {
-        RUBIK_DONE_SET0_W { w: self }
+    #[must_use]
+    pub fn rubik_done_set0(&mut self) -> RUBIK_DONE_SET0_W<8> {
+        RUBIK_DONE_SET0_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn rubik_done_set1(&mut self) -> RUBIK_DONE_SET1_W {
-        RUBIK_DONE_SET1_W { w: self }
+    #[must_use]
+    pub fn rubik_done_set1(&mut self) -> RUBIK_DONE_SET1_W<9> {
+        RUBIK_DONE_SET1_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn cdma_dat_done_set0(&mut self) -> CDMA_DAT_DONE_SET0_W {
-        CDMA_DAT_DONE_SET0_W { w: self }
+    #[must_use]
+    pub fn cdma_dat_done_set0(&mut self) -> CDMA_DAT_DONE_SET0_W<16> {
+        CDMA_DAT_DONE_SET0_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn cdma_dat_done_set1(&mut self) -> CDMA_DAT_DONE_SET1_W {
-        CDMA_DAT_DONE_SET1_W { w: self }
+    #[must_use]
+    pub fn cdma_dat_done_set1(&mut self) -> CDMA_DAT_DONE_SET1_W<17> {
+        CDMA_DAT_DONE_SET1_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn cdma_wt_done_set0(&mut self) -> CDMA_WT_DONE_SET0_W {
-        CDMA_WT_DONE_SET0_W { w: self }
+    #[must_use]
+    pub fn cdma_wt_done_set0(&mut self) -> CDMA_WT_DONE_SET0_W<18> {
+        CDMA_WT_DONE_SET0_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    pub fn cdma_wt_done_set1(&mut self) -> CDMA_WT_DONE_SET1_W {
-        CDMA_WT_DONE_SET1_W { w: self }
+    #[must_use]
+    pub fn cdma_wt_done_set1(&mut self) -> CDMA_WT_DONE_SET1_W<19> {
+        CDMA_WT_DONE_SET1_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn cacc_done_set0(&mut self) -> CACC_DONE_SET0_W {
-        CACC_DONE_SET0_W { w: self }
+    #[must_use]
+    pub fn cacc_done_set0(&mut self) -> CACC_DONE_SET0_W<20> {
+        CACC_DONE_SET0_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn cacc_done_set1(&mut self) -> CACC_DONE_SET1_W {
-        CACC_DONE_SET1_W { w: self }
+    #[must_use]
+    pub fn cacc_done_set1(&mut self) -> CACC_DONE_SET1_W<21> {
+        CACC_DONE_SET1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -467,11 +163,10 @@ impl crate::RegisterSpec for INTR_SET_SPEC {
 #[doc = "`write(|w| ..)` method takes [intr_set::W](W) writer structure"]
 impl crate::Writable for INTR_SET_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTR_SET to value 0"]
 impl crate::Resettable for INTR_SET_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

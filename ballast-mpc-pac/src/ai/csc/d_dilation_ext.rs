@@ -35,59 +35,15 @@ impl From<crate::W<D_DILATION_EXT_SPEC>> for W {
     }
 }
 #[doc = "Field `X_DILATION_EXT` reader - "]
-pub struct X_DILATION_EXT_R(crate::FieldReader<u8>);
-impl X_DILATION_EXT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        X_DILATION_EXT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for X_DILATION_EXT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type X_DILATION_EXT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `X_DILATION_EXT` writer - "]
-pub struct X_DILATION_EXT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> X_DILATION_EXT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type X_DILATION_EXT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_DILATION_EXT_SPEC, u8, u8, 5, O>;
 #[doc = "Field `Y_DILATION_EXT` reader - "]
-pub struct Y_DILATION_EXT_R(crate::FieldReader<u8>);
-impl Y_DILATION_EXT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        Y_DILATION_EXT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for Y_DILATION_EXT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type Y_DILATION_EXT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `Y_DILATION_EXT` writer - "]
-pub struct Y_DILATION_EXT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> Y_DILATION_EXT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 16)) | ((value as u32 & 0x1f) << 16);
-        self.w
-    }
-}
+pub type Y_DILATION_EXT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_DILATION_EXT_SPEC, u8, u8, 5, O>;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]
@@ -103,13 +59,15 @@ impl R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn x_dilation_ext(&mut self) -> X_DILATION_EXT_W {
-        X_DILATION_EXT_W { w: self }
+    #[must_use]
+    pub fn x_dilation_ext(&mut self) -> X_DILATION_EXT_W<0> {
+        X_DILATION_EXT_W::new(self)
     }
     #[doc = "Bits 16:20"]
     #[inline(always)]
-    pub fn y_dilation_ext(&mut self) -> Y_DILATION_EXT_W {
-        Y_DILATION_EXT_W { w: self }
+    #[must_use]
+    pub fn y_dilation_ext(&mut self) -> Y_DILATION_EXT_W<16> {
+        Y_DILATION_EXT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -130,11 +88,10 @@ impl crate::Readable for D_DILATION_EXT_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_dilation_ext::W](W) writer structure"]
 impl crate::Writable for D_DILATION_EXT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_DILATION_EXT to value 0"]
 impl crate::Resettable for D_DILATION_EXT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

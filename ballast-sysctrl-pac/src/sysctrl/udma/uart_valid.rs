@@ -14,20 +14,7 @@ impl From<crate::R<UART_VALID_SPEC>> for R {
     }
 }
 #[doc = "Field `READY` reader - Used only in RX polling method to indicate data is ready for read: - 1'b0: Data is not ready to read - 1'b1: Data is ready to read"]
-pub struct READY_R(crate::FieldReader<bool>);
-impl READY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        READY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for READY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type READY_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Used only in RX polling method to indicate data is ready for read: - 1'b0: Data is not ready to read - 1'b1: Data is ready to read"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for UART_VALID_SPEC {
 }
 #[doc = "`reset()` method sets UART_VALID to value 0"]
 impl crate::Resettable for UART_VALID_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

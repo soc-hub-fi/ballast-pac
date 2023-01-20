@@ -35,160 +35,25 @@ impl From<crate::W<STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `EOT` reader - "]
-pub struct EOT_R(crate::FieldReader<bool>);
-impl EOT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EOT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EOT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EOT_R = crate::BitReader<bool>;
 #[doc = "Field `EOT` writer - "]
-pub struct EOT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EOT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type EOT_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATUS_SPEC, bool, O>;
 #[doc = "Field `ERR` reader - "]
-pub struct ERR_R(crate::FieldReader<bool>);
-impl ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ERR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ERR_R = crate::BitReader<bool>;
 #[doc = "Field `ERR` writer - "]
-pub struct ERR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ERR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATUS_SPEC, bool, O>;
 #[doc = "Field `CARD_ERR` reader - "]
-pub struct CARD_ERR_R(crate::FieldReader<u16>);
-impl CARD_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CARD_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARD_ERR_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARD_ERR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CARD_ERR` writer - "]
-pub struct CARD_ERR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARD_ERR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 2)) | ((value as u32 & 0x03ff) << 2);
-        self.w
-    }
-}
+pub type CARD_ERR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, STATUS_SPEC, u16, u16, 10, O>;
 #[doc = "Field `VHS` reader - Note: Is reset value correct?"]
-pub struct VHS_R(crate::FieldReader<u8>);
-impl VHS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        VHS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VHS_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VHS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VHS` writer - Note: Is reset value correct?"]
-pub struct VHS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VHS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 12)) | ((value as u32 & 0x0f) << 12);
-        self.w
-    }
-}
+pub type VHS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, STATUS_SPEC, u8, u8, 4, O>;
 #[doc = "Field `Status` reader - "]
-pub struct STATUS_R(crate::FieldReader<u16>);
-impl STATUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        STATUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STATUS_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STATUS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `Status` writer - "]
-pub struct STATUS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STATUS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
+pub type STATUS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, STATUS_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -219,28 +84,33 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn eot(&mut self) -> EOT_W {
-        EOT_W { w: self }
+    #[must_use]
+    pub fn eot(&mut self) -> EOT_W<0> {
+        EOT_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn err(&mut self) -> ERR_W {
-        ERR_W { w: self }
+    #[must_use]
+    pub fn err(&mut self) -> ERR_W<1> {
+        ERR_W::new(self)
     }
     #[doc = "Bits 2:11"]
     #[inline(always)]
-    pub fn card_err(&mut self) -> CARD_ERR_W {
-        CARD_ERR_W { w: self }
+    #[must_use]
+    pub fn card_err(&mut self) -> CARD_ERR_W<2> {
+        CARD_ERR_W::new(self)
     }
     #[doc = "Bits 12:15 - Note: Is reset value correct?"]
     #[inline(always)]
-    pub fn vhs(&mut self) -> VHS_W {
-        VHS_W { w: self }
+    #[must_use]
+    pub fn vhs(&mut self) -> VHS_W<12> {
+        VHS_W::new(self)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn status(&mut self) -> STATUS_W {
-        STATUS_W { w: self }
+    #[must_use]
+    pub fn status(&mut self) -> STATUS_W<16> {
+        STATUS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -261,11 +131,10 @@ impl crate::Readable for STATUS_SPEC {
 #[doc = "`write(|w| ..)` method takes [status::W](W) writer structure"]
 impl crate::Writable for STATUS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STATUS to value 0x10"]
 impl crate::Resettable for STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x10
-    }
+    const RESET_VALUE: Self::Ux = 0x10;
 }

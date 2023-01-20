@@ -14,20 +14,7 @@ impl From<crate::R<CID3_SPEC>> for R {
     }
 }
 #[doc = "Field `card_id_word3` reader - "]
-pub struct CARD_ID_WORD3_R(crate::FieldReader<u32>);
-impl CARD_ID_WORD3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CARD_ID_WORD3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARD_ID_WORD3_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARD_ID_WORD3_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for CID3_SPEC {
 }
 #[doc = "`reset()` method sets CID3 to value 0"]
 impl crate::Resettable for CID3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

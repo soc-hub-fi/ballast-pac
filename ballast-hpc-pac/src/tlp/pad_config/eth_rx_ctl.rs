@@ -35,180 +35,26 @@ impl From<crate::W<ETH_RX_CTL_SPEC>> for W {
     }
 }
 #[doc = "Field `pull_down` reader - "]
-pub struct PULL_DOWN_R(crate::FieldReader<bool>);
-impl PULL_DOWN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PULL_DOWN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PULL_DOWN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PULL_DOWN_R = crate::BitReader<bool>;
 #[doc = "Field `pull_down` writer - "]
-pub struct PULL_DOWN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PULL_DOWN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u8 & 1);
-        self.w
-    }
-}
+pub type PULL_DOWN_W<'a, const O: u8> = crate::BitWriter<'a, u8, ETH_RX_CTL_SPEC, bool, O>;
 #[doc = "Field `pull_up` reader - "]
-pub struct PULL_UP_R(crate::FieldReader<bool>);
-impl PULL_UP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PULL_UP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PULL_UP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PULL_UP_R = crate::BitReader<bool>;
 #[doc = "Field `pull_up` writer - "]
-pub struct PULL_UP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PULL_UP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u8 & 1) << 1);
-        self.w
-    }
-}
+pub type PULL_UP_W<'a, const O: u8> = crate::BitWriter<'a, u8, ETH_RX_CTL_SPEC, bool, O>;
 #[doc = "Field `drive_strength` reader - "]
-pub struct DRIVE_STRENGTH_R(crate::FieldReader<u8>);
-impl DRIVE_STRENGTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DRIVE_STRENGTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DRIVE_STRENGTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DRIVE_STRENGTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `drive_strength` writer - "]
-pub struct DRIVE_STRENGTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DRIVE_STRENGTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 2)) | ((value as u8 & 7) << 2);
-        self.w
-    }
-}
+pub type DRIVE_STRENGTH_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u8, ETH_RX_CTL_SPEC, u8, u8, 3, O>;
 #[doc = "Field `output_enable` reader - "]
-pub struct OUTPUT_ENABLE_R(crate::FieldReader<bool>);
-impl OUTPUT_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTPUT_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTPUT_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTPUT_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `output_enable` writer - "]
-pub struct OUTPUT_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTPUT_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u8 & 1) << 5);
-        self.w
-    }
-}
+pub type OUTPUT_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u8, ETH_RX_CTL_SPEC, bool, O>;
 #[doc = "Field `input_enable` reader - "]
-pub struct INPUT_ENABLE_R(crate::FieldReader<bool>);
-impl INPUT_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INPUT_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INPUT_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INPUT_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `input_enable` writer - "]
-pub struct INPUT_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INPUT_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u8 & 1) << 7);
-        self.w
-    }
-}
+pub type INPUT_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u8, ETH_RX_CTL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -223,7 +69,7 @@ impl R {
     #[doc = "Bits 2:4"]
     #[inline(always)]
     pub fn drive_strength(&self) -> DRIVE_STRENGTH_R {
-        DRIVE_STRENGTH_R::new(((self.bits >> 2) & 7) as u8)
+        DRIVE_STRENGTH_R::new((self.bits >> 2) & 7)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
@@ -239,28 +85,33 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn pull_down(&mut self) -> PULL_DOWN_W {
-        PULL_DOWN_W { w: self }
+    #[must_use]
+    pub fn pull_down(&mut self) -> PULL_DOWN_W<0> {
+        PULL_DOWN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn pull_up(&mut self) -> PULL_UP_W {
-        PULL_UP_W { w: self }
+    #[must_use]
+    pub fn pull_up(&mut self) -> PULL_UP_W<1> {
+        PULL_UP_W::new(self)
     }
     #[doc = "Bits 2:4"]
     #[inline(always)]
-    pub fn drive_strength(&mut self) -> DRIVE_STRENGTH_W {
-        DRIVE_STRENGTH_W { w: self }
+    #[must_use]
+    pub fn drive_strength(&mut self) -> DRIVE_STRENGTH_W<2> {
+        DRIVE_STRENGTH_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn output_enable(&mut self) -> OUTPUT_ENABLE_W {
-        OUTPUT_ENABLE_W { w: self }
+    #[must_use]
+    pub fn output_enable(&mut self) -> OUTPUT_ENABLE_W<5> {
+        OUTPUT_ENABLE_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn input_enable(&mut self) -> INPUT_ENABLE_W {
-        INPUT_ENABLE_W { w: self }
+    #[must_use]
+    pub fn input_enable(&mut self) -> INPUT_ENABLE_W<7> {
+        INPUT_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -281,11 +132,10 @@ impl crate::Readable for ETH_RX_CTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [eth_rx_ctl::W](W) writer structure"]
 impl crate::Writable for ETH_RX_CTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets eth_rx_ctl to value 0xa0"]
 impl crate::Resettable for ETH_RX_CTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xa0
-    }
+    const RESET_VALUE: Self::Ux = 0xa0;
 }

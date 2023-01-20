@@ -35,59 +35,15 @@ impl From<crate::W<D_CONV_STRIDE_EXT_SPEC>> for W {
     }
 }
 #[doc = "Field `CONV_X_STRIDE_EXT` reader - "]
-pub struct CONV_X_STRIDE_EXT_R(crate::FieldReader<u8>);
-impl CONV_X_STRIDE_EXT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CONV_X_STRIDE_EXT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CONV_X_STRIDE_EXT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CONV_X_STRIDE_EXT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CONV_X_STRIDE_EXT` writer - "]
-pub struct CONV_X_STRIDE_EXT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CONV_X_STRIDE_EXT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type CONV_X_STRIDE_EXT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_CONV_STRIDE_EXT_SPEC, u8, u8, 3, O>;
 #[doc = "Field `CONV_Y_STRIDE_EXT` reader - "]
-pub struct CONV_Y_STRIDE_EXT_R(crate::FieldReader<u8>);
-impl CONV_Y_STRIDE_EXT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CONV_Y_STRIDE_EXT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CONV_Y_STRIDE_EXT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CONV_Y_STRIDE_EXT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CONV_Y_STRIDE_EXT` writer - "]
-pub struct CONV_Y_STRIDE_EXT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CONV_Y_STRIDE_EXT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 16)) | ((value as u32 & 7) << 16);
-        self.w
-    }
-}
+pub type CONV_Y_STRIDE_EXT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_CONV_STRIDE_EXT_SPEC, u8, u8, 3, O>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -103,13 +59,15 @@ impl R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    pub fn conv_x_stride_ext(&mut self) -> CONV_X_STRIDE_EXT_W {
-        CONV_X_STRIDE_EXT_W { w: self }
+    #[must_use]
+    pub fn conv_x_stride_ext(&mut self) -> CONV_X_STRIDE_EXT_W<0> {
+        CONV_X_STRIDE_EXT_W::new(self)
     }
     #[doc = "Bits 16:18"]
     #[inline(always)]
-    pub fn conv_y_stride_ext(&mut self) -> CONV_Y_STRIDE_EXT_W {
-        CONV_Y_STRIDE_EXT_W { w: self }
+    #[must_use]
+    pub fn conv_y_stride_ext(&mut self) -> CONV_Y_STRIDE_EXT_W<16> {
+        CONV_Y_STRIDE_EXT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -130,11 +88,10 @@ impl crate::Readable for D_CONV_STRIDE_EXT_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_conv_stride_ext::W](W) writer structure"]
 impl crate::Writable for D_CONV_STRIDE_EXT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_CONV_STRIDE_EXT to value 0"]
 impl crate::Resettable for D_CONV_STRIDE_EXT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

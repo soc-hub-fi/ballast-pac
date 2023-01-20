@@ -14,20 +14,7 @@ impl From<crate::R<D_INF_INPUT_DATA_NUM_SPEC>> for R {
     }
 }
 #[doc = "Field `INF_DATA_NUM` reader - "]
-pub struct INF_DATA_NUM_R(crate::FieldReader<u32>);
-impl INF_DATA_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        INF_DATA_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INF_DATA_NUM_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INF_DATA_NUM_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for D_INF_INPUT_DATA_NUM_SPEC {
 }
 #[doc = "`reset()` method sets D_INF_INPUT_DATA_NUM to value 0"]
 impl crate::Resettable for D_INF_INPUT_DATA_NUM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

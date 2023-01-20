@@ -35,745 +35,92 @@ impl From<crate::W<CLK_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `mpc_sel_cka` reader - Select CKA"]
-pub struct MPC_SEL_CKA_R(crate::FieldReader<bool>);
-impl MPC_SEL_CKA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MPC_SEL_CKA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MPC_SEL_CKA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MPC_SEL_CKA_R = crate::BitReader<bool>;
 #[doc = "Field `mpc_sel_cka` writer - Select CKA"]
-pub struct MPC_SEL_CKA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MPC_SEL_CKA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type MPC_SEL_CKA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `mpc_force_cka` reader - Force CKA"]
-pub struct MPC_FORCE_CKA_R(crate::FieldReader<bool>);
-impl MPC_FORCE_CKA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MPC_FORCE_CKA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MPC_FORCE_CKA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MPC_FORCE_CKA_R = crate::BitReader<bool>;
 #[doc = "Field `mpc_force_cka` writer - Force CKA"]
-pub struct MPC_FORCE_CKA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MPC_FORCE_CKA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type MPC_FORCE_CKA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `mpc_force_ckb` reader - Force CKB"]
-pub struct MPC_FORCE_CKB_R(crate::FieldReader<bool>);
-impl MPC_FORCE_CKB_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MPC_FORCE_CKB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MPC_FORCE_CKB_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MPC_FORCE_CKB_R = crate::BitReader<bool>;
 #[doc = "Field `mpc_force_ckb` writer - Force CKB"]
-pub struct MPC_FORCE_CKB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MPC_FORCE_CKB_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type MPC_FORCE_CKB_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `mpc_subsys_clkena` reader - Subsystem clock enable"]
-pub struct MPC_SUBSYS_CLKENA_R(crate::FieldReader<bool>);
-impl MPC_SUBSYS_CLKENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MPC_SUBSYS_CLKENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MPC_SUBSYS_CLKENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MPC_SUBSYS_CLKENA_R = crate::BitReader<bool>;
 #[doc = "Field `mpc_subsys_clkena` writer - Subsystem clock enable"]
-pub struct MPC_SUBSYS_CLKENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MPC_SUBSYS_CLKENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type MPC_SUBSYS_CLKENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `mpc_pll_ctrl_valid` reader - PLL Control valid"]
-pub struct MPC_PLL_CTRL_VALID_R(crate::FieldReader<bool>);
-impl MPC_PLL_CTRL_VALID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MPC_PLL_CTRL_VALID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MPC_PLL_CTRL_VALID_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MPC_PLL_CTRL_VALID_R = crate::BitReader<bool>;
 #[doc = "Field `mpc_pll_ctrl_valid` writer - PLL Control valid"]
-pub struct MPC_PLL_CTRL_VALID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MPC_PLL_CTRL_VALID_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type MPC_PLL_CTRL_VALID_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `interconnect_sel_cka` reader - Select CKA"]
-pub struct INTERCONNECT_SEL_CKA_R(crate::FieldReader<bool>);
-impl INTERCONNECT_SEL_CKA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTERCONNECT_SEL_CKA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERCONNECT_SEL_CKA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERCONNECT_SEL_CKA_R = crate::BitReader<bool>;
 #[doc = "Field `interconnect_sel_cka` writer - Select CKA"]
-pub struct INTERCONNECT_SEL_CKA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTERCONNECT_SEL_CKA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type INTERCONNECT_SEL_CKA_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `interconnect_force_cka` reader - Force CKA"]
-pub struct INTERCONNECT_FORCE_CKA_R(crate::FieldReader<bool>);
-impl INTERCONNECT_FORCE_CKA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTERCONNECT_FORCE_CKA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERCONNECT_FORCE_CKA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERCONNECT_FORCE_CKA_R = crate::BitReader<bool>;
 #[doc = "Field `interconnect_force_cka` writer - Force CKA"]
-pub struct INTERCONNECT_FORCE_CKA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTERCONNECT_FORCE_CKA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type INTERCONNECT_FORCE_CKA_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `interconnect_force_ckb` reader - Force CKB"]
-pub struct INTERCONNECT_FORCE_CKB_R(crate::FieldReader<bool>);
-impl INTERCONNECT_FORCE_CKB_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTERCONNECT_FORCE_CKB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERCONNECT_FORCE_CKB_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERCONNECT_FORCE_CKB_R = crate::BitReader<bool>;
 #[doc = "Field `interconnect_force_ckb` writer - Force CKB"]
-pub struct INTERCONNECT_FORCE_CKB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTERCONNECT_FORCE_CKB_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type INTERCONNECT_FORCE_CKB_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `interconnect_subsys_clkena` reader - Subsystem clock enable"]
-pub struct INTERCONNECT_SUBSYS_CLKENA_R(crate::FieldReader<bool>);
-impl INTERCONNECT_SUBSYS_CLKENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTERCONNECT_SUBSYS_CLKENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERCONNECT_SUBSYS_CLKENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERCONNECT_SUBSYS_CLKENA_R = crate::BitReader<bool>;
 #[doc = "Field `interconnect_subsys_clkena` writer - Subsystem clock enable"]
-pub struct INTERCONNECT_SUBSYS_CLKENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTERCONNECT_SUBSYS_CLKENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type INTERCONNECT_SUBSYS_CLKENA_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `interconnect_pll_ctrl_valid` reader - PLL Control valid"]
-pub struct INTERCONNECT_PLL_CTRL_VALID_R(crate::FieldReader<bool>);
-impl INTERCONNECT_PLL_CTRL_VALID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTERCONNECT_PLL_CTRL_VALID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERCONNECT_PLL_CTRL_VALID_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERCONNECT_PLL_CTRL_VALID_R = crate::BitReader<bool>;
 #[doc = "Field `interconnect_pll_ctrl_valid` writer - PLL Control valid"]
-pub struct INTERCONNECT_PLL_CTRL_VALID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTERCONNECT_PLL_CTRL_VALID_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type INTERCONNECT_PLL_CTRL_VALID_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `c2c_sel_cka` reader - Select CKA"]
-pub struct C2C_SEL_CKA_R(crate::FieldReader<bool>);
-impl C2C_SEL_CKA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        C2C_SEL_CKA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for C2C_SEL_CKA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type C2C_SEL_CKA_R = crate::BitReader<bool>;
 #[doc = "Field `c2c_sel_cka` writer - Select CKA"]
-pub struct C2C_SEL_CKA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> C2C_SEL_CKA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type C2C_SEL_CKA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `c2c_force_cka` reader - Force CKA"]
-pub struct C2C_FORCE_CKA_R(crate::FieldReader<bool>);
-impl C2C_FORCE_CKA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        C2C_FORCE_CKA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for C2C_FORCE_CKA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type C2C_FORCE_CKA_R = crate::BitReader<bool>;
 #[doc = "Field `c2c_force_cka` writer - Force CKA"]
-pub struct C2C_FORCE_CKA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> C2C_FORCE_CKA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type C2C_FORCE_CKA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `c2c_force_ckb` reader - Force CKB"]
-pub struct C2C_FORCE_CKB_R(crate::FieldReader<bool>);
-impl C2C_FORCE_CKB_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        C2C_FORCE_CKB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for C2C_FORCE_CKB_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type C2C_FORCE_CKB_R = crate::BitReader<bool>;
 #[doc = "Field `c2c_force_ckb` writer - Force CKB"]
-pub struct C2C_FORCE_CKB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> C2C_FORCE_CKB_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type C2C_FORCE_CKB_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `c2c_subsys_clkena` reader - Subsystem clock enable"]
-pub struct C2C_SUBSYS_CLKENA_R(crate::FieldReader<bool>);
-impl C2C_SUBSYS_CLKENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        C2C_SUBSYS_CLKENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for C2C_SUBSYS_CLKENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type C2C_SUBSYS_CLKENA_R = crate::BitReader<bool>;
 #[doc = "Field `c2c_subsys_clkena` writer - Subsystem clock enable"]
-pub struct C2C_SUBSYS_CLKENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> C2C_SUBSYS_CLKENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type C2C_SUBSYS_CLKENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `c2c_pll_ctrl_valid` reader - PLL Control valid"]
-pub struct C2C_PLL_CTRL_VALID_R(crate::FieldReader<bool>);
-impl C2C_PLL_CTRL_VALID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        C2C_PLL_CTRL_VALID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for C2C_PLL_CTRL_VALID_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type C2C_PLL_CTRL_VALID_R = crate::BitReader<bool>;
 #[doc = "Field `c2c_pll_ctrl_valid` writer - PLL Control valid"]
-pub struct C2C_PLL_CTRL_VALID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> C2C_PLL_CTRL_VALID_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type C2C_PLL_CTRL_VALID_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `corehw_sel_cka` reader - Select CKA"]
-pub struct COREHW_SEL_CKA_R(crate::FieldReader<bool>);
-impl COREHW_SEL_CKA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COREHW_SEL_CKA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COREHW_SEL_CKA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COREHW_SEL_CKA_R = crate::BitReader<bool>;
 #[doc = "Field `corehw_sel_cka` writer - Select CKA"]
-pub struct COREHW_SEL_CKA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COREHW_SEL_CKA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type COREHW_SEL_CKA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `corehw_force_cka` reader - Force CKA"]
-pub struct COREHW_FORCE_CKA_R(crate::FieldReader<bool>);
-impl COREHW_FORCE_CKA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COREHW_FORCE_CKA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COREHW_FORCE_CKA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COREHW_FORCE_CKA_R = crate::BitReader<bool>;
 #[doc = "Field `corehw_force_cka` writer - Force CKA"]
-pub struct COREHW_FORCE_CKA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COREHW_FORCE_CKA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type COREHW_FORCE_CKA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `corehw_force_ckb` reader - Force CKB"]
-pub struct COREHW_FORCE_CKB_R(crate::FieldReader<bool>);
-impl COREHW_FORCE_CKB_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COREHW_FORCE_CKB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COREHW_FORCE_CKB_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COREHW_FORCE_CKB_R = crate::BitReader<bool>;
 #[doc = "Field `corehw_force_ckb` writer - Force CKB"]
-pub struct COREHW_FORCE_CKB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COREHW_FORCE_CKB_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type COREHW_FORCE_CKB_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `corehw_subsys_clkena` reader - Subsystem clock enable"]
-pub struct COREHW_SUBSYS_CLKENA_R(crate::FieldReader<bool>);
-impl COREHW_SUBSYS_CLKENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COREHW_SUBSYS_CLKENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COREHW_SUBSYS_CLKENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COREHW_SUBSYS_CLKENA_R = crate::BitReader<bool>;
 #[doc = "Field `corehw_subsys_clkena` writer - Subsystem clock enable"]
-pub struct COREHW_SUBSYS_CLKENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COREHW_SUBSYS_CLKENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type COREHW_SUBSYS_CLKENA_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 #[doc = "Field `corehw_pll_ctrl_valid` reader - PLL Control valid"]
-pub struct COREHW_PLL_CTRL_VALID_R(crate::FieldReader<bool>);
-impl COREHW_PLL_CTRL_VALID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COREHW_PLL_CTRL_VALID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COREHW_PLL_CTRL_VALID_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COREHW_PLL_CTRL_VALID_R = crate::BitReader<bool>;
 #[doc = "Field `corehw_pll_ctrl_valid` writer - PLL Control valid"]
-pub struct COREHW_PLL_CTRL_VALID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COREHW_PLL_CTRL_VALID_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type COREHW_PLL_CTRL_VALID_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, CLK_CTRL2_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Select CKA"]
     #[inline(always)]
@@ -879,103 +226,123 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Select CKA"]
     #[inline(always)]
-    pub fn mpc_sel_cka(&mut self) -> MPC_SEL_CKA_W {
-        MPC_SEL_CKA_W { w: self }
+    #[must_use]
+    pub fn mpc_sel_cka(&mut self) -> MPC_SEL_CKA_W<0> {
+        MPC_SEL_CKA_W::new(self)
     }
     #[doc = "Bit 1 - Force CKA"]
     #[inline(always)]
-    pub fn mpc_force_cka(&mut self) -> MPC_FORCE_CKA_W {
-        MPC_FORCE_CKA_W { w: self }
+    #[must_use]
+    pub fn mpc_force_cka(&mut self) -> MPC_FORCE_CKA_W<1> {
+        MPC_FORCE_CKA_W::new(self)
     }
     #[doc = "Bit 2 - Force CKB"]
     #[inline(always)]
-    pub fn mpc_force_ckb(&mut self) -> MPC_FORCE_CKB_W {
-        MPC_FORCE_CKB_W { w: self }
+    #[must_use]
+    pub fn mpc_force_ckb(&mut self) -> MPC_FORCE_CKB_W<2> {
+        MPC_FORCE_CKB_W::new(self)
     }
     #[doc = "Bit 3 - Subsystem clock enable"]
     #[inline(always)]
-    pub fn mpc_subsys_clkena(&mut self) -> MPC_SUBSYS_CLKENA_W {
-        MPC_SUBSYS_CLKENA_W { w: self }
+    #[must_use]
+    pub fn mpc_subsys_clkena(&mut self) -> MPC_SUBSYS_CLKENA_W<3> {
+        MPC_SUBSYS_CLKENA_W::new(self)
     }
     #[doc = "Bit 7 - PLL Control valid"]
     #[inline(always)]
-    pub fn mpc_pll_ctrl_valid(&mut self) -> MPC_PLL_CTRL_VALID_W {
-        MPC_PLL_CTRL_VALID_W { w: self }
+    #[must_use]
+    pub fn mpc_pll_ctrl_valid(&mut self) -> MPC_PLL_CTRL_VALID_W<7> {
+        MPC_PLL_CTRL_VALID_W::new(self)
     }
     #[doc = "Bit 8 - Select CKA"]
     #[inline(always)]
-    pub fn interconnect_sel_cka(&mut self) -> INTERCONNECT_SEL_CKA_W {
-        INTERCONNECT_SEL_CKA_W { w: self }
+    #[must_use]
+    pub fn interconnect_sel_cka(&mut self) -> INTERCONNECT_SEL_CKA_W<8> {
+        INTERCONNECT_SEL_CKA_W::new(self)
     }
     #[doc = "Bit 9 - Force CKA"]
     #[inline(always)]
-    pub fn interconnect_force_cka(&mut self) -> INTERCONNECT_FORCE_CKA_W {
-        INTERCONNECT_FORCE_CKA_W { w: self }
+    #[must_use]
+    pub fn interconnect_force_cka(&mut self) -> INTERCONNECT_FORCE_CKA_W<9> {
+        INTERCONNECT_FORCE_CKA_W::new(self)
     }
     #[doc = "Bit 10 - Force CKB"]
     #[inline(always)]
-    pub fn interconnect_force_ckb(&mut self) -> INTERCONNECT_FORCE_CKB_W {
-        INTERCONNECT_FORCE_CKB_W { w: self }
+    #[must_use]
+    pub fn interconnect_force_ckb(&mut self) -> INTERCONNECT_FORCE_CKB_W<10> {
+        INTERCONNECT_FORCE_CKB_W::new(self)
     }
     #[doc = "Bit 11 - Subsystem clock enable"]
     #[inline(always)]
-    pub fn interconnect_subsys_clkena(&mut self) -> INTERCONNECT_SUBSYS_CLKENA_W {
-        INTERCONNECT_SUBSYS_CLKENA_W { w: self }
+    #[must_use]
+    pub fn interconnect_subsys_clkena(&mut self) -> INTERCONNECT_SUBSYS_CLKENA_W<11> {
+        INTERCONNECT_SUBSYS_CLKENA_W::new(self)
     }
     #[doc = "Bit 15 - PLL Control valid"]
     #[inline(always)]
-    pub fn interconnect_pll_ctrl_valid(&mut self) -> INTERCONNECT_PLL_CTRL_VALID_W {
-        INTERCONNECT_PLL_CTRL_VALID_W { w: self }
+    #[must_use]
+    pub fn interconnect_pll_ctrl_valid(&mut self) -> INTERCONNECT_PLL_CTRL_VALID_W<15> {
+        INTERCONNECT_PLL_CTRL_VALID_W::new(self)
     }
     #[doc = "Bit 16 - Select CKA"]
     #[inline(always)]
-    pub fn c2c_sel_cka(&mut self) -> C2C_SEL_CKA_W {
-        C2C_SEL_CKA_W { w: self }
+    #[must_use]
+    pub fn c2c_sel_cka(&mut self) -> C2C_SEL_CKA_W<16> {
+        C2C_SEL_CKA_W::new(self)
     }
     #[doc = "Bit 17 - Force CKA"]
     #[inline(always)]
-    pub fn c2c_force_cka(&mut self) -> C2C_FORCE_CKA_W {
-        C2C_FORCE_CKA_W { w: self }
+    #[must_use]
+    pub fn c2c_force_cka(&mut self) -> C2C_FORCE_CKA_W<17> {
+        C2C_FORCE_CKA_W::new(self)
     }
     #[doc = "Bit 18 - Force CKB"]
     #[inline(always)]
-    pub fn c2c_force_ckb(&mut self) -> C2C_FORCE_CKB_W {
-        C2C_FORCE_CKB_W { w: self }
+    #[must_use]
+    pub fn c2c_force_ckb(&mut self) -> C2C_FORCE_CKB_W<18> {
+        C2C_FORCE_CKB_W::new(self)
     }
     #[doc = "Bit 19 - Subsystem clock enable"]
     #[inline(always)]
-    pub fn c2c_subsys_clkena(&mut self) -> C2C_SUBSYS_CLKENA_W {
-        C2C_SUBSYS_CLKENA_W { w: self }
+    #[must_use]
+    pub fn c2c_subsys_clkena(&mut self) -> C2C_SUBSYS_CLKENA_W<19> {
+        C2C_SUBSYS_CLKENA_W::new(self)
     }
     #[doc = "Bit 23 - PLL Control valid"]
     #[inline(always)]
-    pub fn c2c_pll_ctrl_valid(&mut self) -> C2C_PLL_CTRL_VALID_W {
-        C2C_PLL_CTRL_VALID_W { w: self }
+    #[must_use]
+    pub fn c2c_pll_ctrl_valid(&mut self) -> C2C_PLL_CTRL_VALID_W<23> {
+        C2C_PLL_CTRL_VALID_W::new(self)
     }
     #[doc = "Bit 24 - Select CKA"]
     #[inline(always)]
-    pub fn corehw_sel_cka(&mut self) -> COREHW_SEL_CKA_W {
-        COREHW_SEL_CKA_W { w: self }
+    #[must_use]
+    pub fn corehw_sel_cka(&mut self) -> COREHW_SEL_CKA_W<24> {
+        COREHW_SEL_CKA_W::new(self)
     }
     #[doc = "Bit 25 - Force CKA"]
     #[inline(always)]
-    pub fn corehw_force_cka(&mut self) -> COREHW_FORCE_CKA_W {
-        COREHW_FORCE_CKA_W { w: self }
+    #[must_use]
+    pub fn corehw_force_cka(&mut self) -> COREHW_FORCE_CKA_W<25> {
+        COREHW_FORCE_CKA_W::new(self)
     }
     #[doc = "Bit 26 - Force CKB"]
     #[inline(always)]
-    pub fn corehw_force_ckb(&mut self) -> COREHW_FORCE_CKB_W {
-        COREHW_FORCE_CKB_W { w: self }
+    #[must_use]
+    pub fn corehw_force_ckb(&mut self) -> COREHW_FORCE_CKB_W<26> {
+        COREHW_FORCE_CKB_W::new(self)
     }
     #[doc = "Bit 27 - Subsystem clock enable"]
     #[inline(always)]
-    pub fn corehw_subsys_clkena(&mut self) -> COREHW_SUBSYS_CLKENA_W {
-        COREHW_SUBSYS_CLKENA_W { w: self }
+    #[must_use]
+    pub fn corehw_subsys_clkena(&mut self) -> COREHW_SUBSYS_CLKENA_W<27> {
+        COREHW_SUBSYS_CLKENA_W::new(self)
     }
     #[doc = "Bit 31 - PLL Control valid"]
     #[inline(always)]
-    pub fn corehw_pll_ctrl_valid(&mut self) -> COREHW_PLL_CTRL_VALID_W {
-        COREHW_PLL_CTRL_VALID_W { w: self }
+    #[must_use]
+    pub fn corehw_pll_ctrl_valid(&mut self) -> COREHW_PLL_CTRL_VALID_W<31> {
+        COREHW_PLL_CTRL_VALID_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -997,11 +364,10 @@ impl crate::Readable for CLK_CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [clk_ctrl2::W](W) writer structure"]
 impl crate::Writable for CLK_CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLK_CTRL2 to value 0"]
 impl crate::Resettable for CLK_CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

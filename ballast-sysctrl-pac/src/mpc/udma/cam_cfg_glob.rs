@@ -35,108 +35,22 @@ impl From<crate::W<CAM_CFG_GLOB_SPEC>> for W {
     }
 }
 #[doc = "Field `FRAMEDROP_EN` reader - Frame dropping:"]
-pub struct FRAMEDROP_EN_R(crate::FieldReader<bool>);
-impl FRAMEDROP_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FRAMEDROP_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FRAMEDROP_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FRAMEDROP_EN_R = crate::BitReader<bool>;
 #[doc = "Field `FRAMEDROP_EN` writer - Frame dropping:"]
-pub struct FRAMEDROP_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FRAMEDROP_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type FRAMEDROP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAM_CFG_GLOB_SPEC, bool, O>;
 #[doc = "Field `FRAMEDROP_VAL` reader - ) Sets how many frames should be dropped after each received"]
-pub struct FRAMEDROP_VAL_R(crate::FieldReader<u8>);
-impl FRAMEDROP_VAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FRAMEDROP_VAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FRAMEDROP_VAL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FRAMEDROP_VAL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FRAMEDROP_VAL` writer - ) Sets how many frames should be dropped after each received"]
-pub struct FRAMEDROP_VAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FRAMEDROP_VAL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 1)) | ((value as u32 & 0x3f) << 1);
-        self.w
-    }
-}
+pub type FRAMEDROP_VAL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CAM_CFG_GLOB_SPEC, u8, u8, 6, O>;
 #[doc = "Field `FRAMESLICE_EN` reader - nput frame slicing: - 1'b0: disable - 1'b1: enabl"]
-pub struct FRAMESLICE_EN_R(crate::FieldReader<bool>);
-impl FRAMESLICE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FRAMESLICE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FRAMESLICE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FRAMESLICE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `FRAMESLICE_EN` writer - nput frame slicing: - 1'b0: disable - 1'b1: enabl"]
-pub struct FRAMESLICE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FRAMESLICE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type FRAMESLICE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAM_CFG_GLOB_SPEC, bool, O>;
+#[doc = "Field `FORMAT` reader - Input frame format: - 3'b000: RGB565 - 3'b001: RGB555 - 3'b010: RGB444 - 3'b100: BYPASS_LITEND - 3'b101: BYPASS_BIGEND"]
+pub type FORMAT_R = crate::FieldReader<u8, FORMAT_A>;
 #[doc = "Input frame format: - 3'b000: RGB565 - 3'b001: RGB555 - 3'b010: RGB444 - 3'b100: BYPASS_LITEND - 3'b101: BYPASS_BIGEND\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum FORMAT_A {
     #[doc = "0: `0`"]
@@ -156,14 +70,8 @@ impl From<FORMAT_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `FORMAT` reader - Input frame format: - 3'b000: RGB565 - 3'b001: RGB555 - 3'b010: RGB444 - 3'b100: BYPASS_LITEND - 3'b101: BYPASS_BIGEND"]
-pub struct FORMAT_R(crate::FieldReader<u8>);
 impl FORMAT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FORMAT_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<FORMAT_A> {
         match self.bits {
@@ -178,46 +86,33 @@ impl FORMAT_R {
     #[doc = "Checks if the value of the field is `RGB565`"]
     #[inline(always)]
     pub fn is_rgb565(&self) -> bool {
-        **self == FORMAT_A::RGB565
+        *self == FORMAT_A::RGB565
     }
     #[doc = "Checks if the value of the field is `RGB555`"]
     #[inline(always)]
     pub fn is_rgb555(&self) -> bool {
-        **self == FORMAT_A::RGB555
+        *self == FORMAT_A::RGB555
     }
     #[doc = "Checks if the value of the field is `RGB444`"]
     #[inline(always)]
     pub fn is_rgb444(&self) -> bool {
-        **self == FORMAT_A::RGB444
+        *self == FORMAT_A::RGB444
     }
     #[doc = "Checks if the value of the field is `BYPASS_LITEND`"]
     #[inline(always)]
     pub fn is_bypass_litend(&self) -> bool {
-        **self == FORMAT_A::BYPASS_LITEND
+        *self == FORMAT_A::BYPASS_LITEND
     }
     #[doc = "Checks if the value of the field is `BYPASS_BIGEND`"]
     #[inline(always)]
     pub fn is_bypass_bigend(&self) -> bool {
-        **self == FORMAT_A::BYPASS_BIGEND
-    }
-}
-impl core::ops::Deref for FORMAT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == FORMAT_A::BYPASS_BIGEND
     }
 }
 #[doc = "Field `FORMAT` writer - Input frame format: - 3'b000: RGB565 - 3'b001: RGB555 - 3'b010: RGB444 - 3'b100: BYPASS_LITEND - 3'b101: BYPASS_BIGEND"]
-pub struct FORMAT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORMAT_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: FORMAT_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type FORMAT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CAM_CFG_GLOB_SPEC, u8, FORMAT_A, 3, O>;
+impl<'a, const O: u8> FORMAT_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn rgb565(self) -> &'a mut W {
@@ -243,77 +138,15 @@ impl<'a> FORMAT_W<'a> {
     pub fn bypass_bigend(self) -> &'a mut W {
         self.variant(FORMAT_A::BYPASS_BIGEND)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 8)) | ((value as u32 & 7) << 8);
-        self.w
-    }
 }
 #[doc = "Field `SHIFT` reader - Right shift of final pixel value (DivFactor) NOTE: not used if FORMAT == BYPASS"]
-pub struct SHIFT_R(crate::FieldReader<u8>);
-impl SHIFT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SHIFT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SHIFT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SHIFT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SHIFT` writer - Right shift of final pixel value (DivFactor) NOTE: not used if FORMAT == BYPASS"]
-pub struct SHIFT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SHIFT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 11)) | ((value as u32 & 0x0f) << 11);
-        self.w
-    }
-}
+pub type SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CAM_CFG_GLOB_SPEC, u8, u8, 4, O>;
 #[doc = "Field `EN` reader - Enable data rx from camera interface. The enable/disable happens only at the start of a frame. - 1'b0: disable - 1'b1: enable"]
-pub struct EN_R(crate::FieldReader<bool>);
-impl EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EN_R = crate::BitReader<bool>;
 #[doc = "Field `EN` writer - Enable data rx from camera interface. The enable/disable happens only at the start of a frame. - 1'b0: disable - 1'b1: enable"]
-pub struct EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAM_CFG_GLOB_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Frame dropping:"]
     #[inline(always)]
@@ -349,33 +182,39 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Frame dropping:"]
     #[inline(always)]
-    pub fn framedrop_en(&mut self) -> FRAMEDROP_EN_W {
-        FRAMEDROP_EN_W { w: self }
+    #[must_use]
+    pub fn framedrop_en(&mut self) -> FRAMEDROP_EN_W<0> {
+        FRAMEDROP_EN_W::new(self)
     }
     #[doc = "Bits 1:6 - ) Sets how many frames should be dropped after each received"]
     #[inline(always)]
-    pub fn framedrop_val(&mut self) -> FRAMEDROP_VAL_W {
-        FRAMEDROP_VAL_W { w: self }
+    #[must_use]
+    pub fn framedrop_val(&mut self) -> FRAMEDROP_VAL_W<1> {
+        FRAMEDROP_VAL_W::new(self)
     }
     #[doc = "Bit 7 - nput frame slicing: - 1'b0: disable - 1'b1: enabl"]
     #[inline(always)]
-    pub fn frameslice_en(&mut self) -> FRAMESLICE_EN_W {
-        FRAMESLICE_EN_W { w: self }
+    #[must_use]
+    pub fn frameslice_en(&mut self) -> FRAMESLICE_EN_W<7> {
+        FRAMESLICE_EN_W::new(self)
     }
     #[doc = "Bits 8:10 - Input frame format: - 3'b000: RGB565 - 3'b001: RGB555 - 3'b010: RGB444 - 3'b100: BYPASS_LITEND - 3'b101: BYPASS_BIGEND"]
     #[inline(always)]
-    pub fn format(&mut self) -> FORMAT_W {
-        FORMAT_W { w: self }
+    #[must_use]
+    pub fn format(&mut self) -> FORMAT_W<8> {
+        FORMAT_W::new(self)
     }
     #[doc = "Bits 11:14 - Right shift of final pixel value (DivFactor) NOTE: not used if FORMAT == BYPASS"]
     #[inline(always)]
-    pub fn shift(&mut self) -> SHIFT_W {
-        SHIFT_W { w: self }
+    #[must_use]
+    pub fn shift(&mut self) -> SHIFT_W<11> {
+        SHIFT_W::new(self)
     }
     #[doc = "Bit 31 - Enable data rx from camera interface. The enable/disable happens only at the start of a frame. - 1'b0: disable - 1'b1: enable"]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W {
-        EN_W { w: self }
+    #[must_use]
+    pub fn en(&mut self) -> EN_W<31> {
+        EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -396,11 +235,10 @@ impl crate::Readable for CAM_CFG_GLOB_SPEC {
 #[doc = "`write(|w| ..)` method takes [cam_cfg_glob::W](W) writer structure"]
 impl crate::Writable for CAM_CFG_GLOB_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CAM_CFG_GLOB to value 0"]
 impl crate::Resettable for CAM_CFG_GLOB_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

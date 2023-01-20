@@ -35,44 +35,13 @@ impl From<crate::W<SPIM_RX_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CONTINOUS` reader - Channel continuous mode: -1'b0: disable -1'b1: enable At the end of the buffer the uDMA reloads the address and size and starts a new transfer."]
-pub struct CONTINOUS_R(crate::FieldReader<bool>);
-impl CONTINOUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CONTINOUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CONTINOUS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CONTINOUS_R = crate::BitReader<bool>;
 #[doc = "Field `CONTINOUS` writer - Channel continuous mode: -1'b0: disable -1'b1: enable At the end of the buffer the uDMA reloads the address and size and starts a new transfer."]
-pub struct CONTINOUS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CONTINOUS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CONTINOUS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPIM_RX_CFG_SPEC, bool, O>;
+#[doc = "Field `DATASIZE` reader - Channel transfer size used to increment uDMA buffer address pointer: - 2'b00: +1 (8 bits) - 2'b01: +2 (16 bits) - 2'b10: +4 ("]
+pub type DATASIZE_R = crate::FieldReader<u8, DATASIZE_A>;
 #[doc = "Channel transfer size used to increment uDMA buffer address pointer: - 2'b00: +1 (8 bits) - 2'b01: +2 (16 bits) - 2'b10: +4 (\n\nValue on reset: 2"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DATASIZE_A {
     #[doc = "0: `0`"]
@@ -88,14 +57,8 @@ impl From<DATASIZE_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `DATASIZE` reader - Channel transfer size used to increment uDMA buffer address pointer: - 2'b00: +1 (8 bits) - 2'b01: +2 (16 bits) - 2'b10: +4 ("]
-pub struct DATASIZE_R(crate::FieldReader<u8>);
 impl DATASIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DATASIZE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<DATASIZE_A> {
         match self.bits {
@@ -108,36 +71,23 @@ impl DATASIZE_R {
     #[doc = "Checks if the value of the field is `_8BITS`"]
     #[inline(always)]
     pub fn is_8bits(&self) -> bool {
-        **self == DATASIZE_A::_8BITS
+        *self == DATASIZE_A::_8BITS
     }
     #[doc = "Checks if the value of the field is `_16BITS`"]
     #[inline(always)]
     pub fn is_16bits(&self) -> bool {
-        **self == DATASIZE_A::_16BITS
+        *self == DATASIZE_A::_16BITS
     }
     #[doc = "Checks if the value of the field is `_32BITS`"]
     #[inline(always)]
     pub fn is_32bits(&self) -> bool {
-        **self == DATASIZE_A::_32BITS
-    }
-}
-impl core::ops::Deref for DATASIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == DATASIZE_A::_32BITS
     }
 }
 #[doc = "Field `DATASIZE` writer - Channel transfer size used to increment uDMA buffer address pointer: - 2'b00: +1 (8 bits) - 2'b01: +2 (16 bits) - 2'b10: +4 ("]
-pub struct DATASIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DATASIZE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: DATASIZE_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type DATASIZE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SPIM_RX_CFG_SPEC, u8, DATASIZE_A, 2, O>;
+impl<'a, const O: u8> DATASIZE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn _8bits(self) -> &'a mut W {
@@ -153,87 +103,15 @@ impl<'a> DATASIZE_W<'a> {
     pub fn _32bits(self) -> &'a mut W {
         self.variant(DATASIZE_A::_32BITS)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 1)) | ((value as u32 & 3) << 1);
-        self.w
-    }
 }
 #[doc = "Field `EN` reader - Channel enable and start transfer: -1'b0: disable -1'b1: enable This signal is used also to queue a transfer if one is already ongoing"]
-pub struct EN_R(crate::FieldReader<bool>);
-impl EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EN_R = crate::BitReader<bool>;
 #[doc = "Field `EN` writer - Channel enable and start transfer: -1'b0: disable -1'b1: enable This signal is used also to queue a transfer if one is already ongoing"]
-pub struct EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPIM_RX_CFG_SPEC, bool, O>;
 #[doc = "Field `PENDING` reader - Transfer pending in queue status flag: -1'b0: free -1'b1: pending"]
-pub struct PENDING_R(crate::FieldReader<bool>);
-impl PENDING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PENDING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PENDING_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PENDING_R = crate::BitReader<bool>;
 #[doc = "Field `CLR` writer - Channel clear and stop transfer: -1'b0: disable -1'b1: enable"]
-pub struct CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPIM_RX_CFG_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Channel continuous mode: -1'b0: disable -1'b1: enable At the end of the buffer the uDMA reloads the address and size and starts a new transfer."]
     #[inline(always)]
@@ -259,23 +137,27 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Channel continuous mode: -1'b0: disable -1'b1: enable At the end of the buffer the uDMA reloads the address and size and starts a new transfer."]
     #[inline(always)]
-    pub fn continous(&mut self) -> CONTINOUS_W {
-        CONTINOUS_W { w: self }
+    #[must_use]
+    pub fn continous(&mut self) -> CONTINOUS_W<0> {
+        CONTINOUS_W::new(self)
     }
     #[doc = "Bits 1:2 - Channel transfer size used to increment uDMA buffer address pointer: - 2'b00: +1 (8 bits) - 2'b01: +2 (16 bits) - 2'b10: +4 ("]
     #[inline(always)]
-    pub fn datasize(&mut self) -> DATASIZE_W {
-        DATASIZE_W { w: self }
+    #[must_use]
+    pub fn datasize(&mut self) -> DATASIZE_W<1> {
+        DATASIZE_W::new(self)
     }
     #[doc = "Bit 4 - Channel enable and start transfer: -1'b0: disable -1'b1: enable This signal is used also to queue a transfer if one is already ongoing"]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W {
-        EN_W { w: self }
+    #[must_use]
+    pub fn en(&mut self) -> EN_W<4> {
+        EN_W::new(self)
     }
     #[doc = "Bit 6 - Channel clear and stop transfer: -1'b0: disable -1'b1: enable"]
     #[inline(always)]
-    pub fn clr(&mut self) -> CLR_W {
-        CLR_W { w: self }
+    #[must_use]
+    pub fn clr(&mut self) -> CLR_W<6> {
+        CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -296,11 +178,10 @@ impl crate::Readable for SPIM_RX_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [spim_rx_cfg::W](W) writer structure"]
 impl crate::Writable for SPIM_RX_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPIM_RX_CFG to value 0x04"]
 impl crate::Resettable for SPIM_RX_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x04
-    }
+    const RESET_VALUE: Self::Ux = 0x04;
 }

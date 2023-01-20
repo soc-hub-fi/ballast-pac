@@ -35,170 +35,27 @@ impl From<crate::W<I2S_MST_SETUP_SPEC>> for W {
     }
 }
 #[doc = "Field `MASTER_WORDS` reader - Sets how many words for each I2S phase"]
-pub struct MASTER_WORDS_R(crate::FieldReader<u8>);
-impl MASTER_WORDS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MASTER_WORDS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASTER_WORDS_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASTER_WORDS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MASTER_WORDS` writer - Sets how many words for each I2S phase"]
-pub struct MASTER_WORDS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASTER_WORDS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type MASTER_WORDS_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, I2S_MST_SETUP_SPEC, u8, u8, 3, O>;
 #[doc = "Field `MASTER_BITS` reader - Sets how many bits per word"]
-pub struct MASTER_BITS_R(crate::FieldReader<u8>);
-impl MASTER_BITS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MASTER_BITS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASTER_BITS_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASTER_BITS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MASTER_BITS` writer - Sets how many bits per word"]
-pub struct MASTER_BITS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASTER_BITS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 8)) | ((value as u32 & 0x1f) << 8);
-        self.w
-    }
-}
+pub type MASTER_BITS_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, I2S_MST_SETUP_SPEC, u8, u8, 5, O>;
 #[doc = "Field `MASTER_LSB` reader - Enables LSB shifting"]
-pub struct MASTER_LSB_R(crate::FieldReader<bool>);
-impl MASTER_LSB_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MASTER_LSB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASTER_LSB_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASTER_LSB_R = crate::BitReader<bool>;
 #[doc = "Field `MASTER_LSB` writer - Enables LSB shifting"]
-pub struct MASTER_LSB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASTER_LSB_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type MASTER_LSB_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2S_MST_SETUP_SPEC, bool, O>;
 #[doc = "Field `MASTER_2CH` reader - Enables both channels"]
-pub struct MASTER_2CH_R(crate::FieldReader<bool>);
-impl MASTER_2CH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MASTER_2CH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASTER_2CH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASTER_2CH_R = crate::BitReader<bool>;
 #[doc = "Field `MASTER_2CH` writer - Enables both channels"]
-pub struct MASTER_2CH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASTER_2CH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type MASTER_2CH_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2S_MST_SETUP_SPEC, bool, O>;
 #[doc = "Field `MASTER_EN` reader - Enables the Master"]
-pub struct MASTER_EN_R(crate::FieldReader<bool>);
-impl MASTER_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MASTER_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASTER_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASTER_EN_R = crate::BitReader<bool>;
 #[doc = "Field `MASTER_EN` writer - Enables the Master"]
-pub struct MASTER_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASTER_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type MASTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2S_MST_SETUP_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:2 - Sets how many words for each I2S phase"]
     #[inline(always)]
@@ -229,28 +86,33 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Sets how many words for each I2S phase"]
     #[inline(always)]
-    pub fn master_words(&mut self) -> MASTER_WORDS_W {
-        MASTER_WORDS_W { w: self }
+    #[must_use]
+    pub fn master_words(&mut self) -> MASTER_WORDS_W<0> {
+        MASTER_WORDS_W::new(self)
     }
     #[doc = "Bits 8:12 - Sets how many bits per word"]
     #[inline(always)]
-    pub fn master_bits(&mut self) -> MASTER_BITS_W {
-        MASTER_BITS_W { w: self }
+    #[must_use]
+    pub fn master_bits(&mut self) -> MASTER_BITS_W<8> {
+        MASTER_BITS_W::new(self)
     }
     #[doc = "Bit 16 - Enables LSB shifting"]
     #[inline(always)]
-    pub fn master_lsb(&mut self) -> MASTER_LSB_W {
-        MASTER_LSB_W { w: self }
+    #[must_use]
+    pub fn master_lsb(&mut self) -> MASTER_LSB_W<16> {
+        MASTER_LSB_W::new(self)
     }
     #[doc = "Bit 17 - Enables both channels"]
     #[inline(always)]
-    pub fn master_2ch(&mut self) -> MASTER_2CH_W {
-        MASTER_2CH_W { w: self }
+    #[must_use]
+    pub fn master_2ch(&mut self) -> MASTER_2CH_W<17> {
+        MASTER_2CH_W::new(self)
     }
     #[doc = "Bit 31 - Enables the Master"]
     #[inline(always)]
-    pub fn master_en(&mut self) -> MASTER_EN_W {
-        MASTER_EN_W { w: self }
+    #[must_use]
+    pub fn master_en(&mut self) -> MASTER_EN_W<31> {
+        MASTER_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -271,11 +133,10 @@ impl crate::Readable for I2S_MST_SETUP_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2s_mst_setup::W](W) writer structure"]
 impl crate::Writable for I2S_MST_SETUP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2S_MST_SETUP to value 0"]
 impl crate::Resettable for I2S_MST_SETUP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -34,8 +34,10 @@ impl From<crate::W<D_POOLING_KERNEL_CFG_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `KERNEL_WIDTH` reader - "]
+pub type KERNEL_WIDTH_R = crate::FieldReader<u8, KERNEL_WIDTH_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum KERNEL_WIDTH_A {
     #[doc = "0: `0`"]
@@ -61,14 +63,8 @@ impl From<KERNEL_WIDTH_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `KERNEL_WIDTH` reader - "]
-pub struct KERNEL_WIDTH_R(crate::FieldReader<u8>);
 impl KERNEL_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        KERNEL_WIDTH_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<KERNEL_WIDTH_A> {
         match self.bits {
@@ -86,61 +82,48 @@ impl KERNEL_WIDTH_R {
     #[doc = "Checks if the value of the field is `WIDTH_1`"]
     #[inline(always)]
     pub fn is_width_1(&self) -> bool {
-        **self == KERNEL_WIDTH_A::WIDTH_1
+        *self == KERNEL_WIDTH_A::WIDTH_1
     }
     #[doc = "Checks if the value of the field is `WIDTH_2`"]
     #[inline(always)]
     pub fn is_width_2(&self) -> bool {
-        **self == KERNEL_WIDTH_A::WIDTH_2
+        *self == KERNEL_WIDTH_A::WIDTH_2
     }
     #[doc = "Checks if the value of the field is `WIDTH_3`"]
     #[inline(always)]
     pub fn is_width_3(&self) -> bool {
-        **self == KERNEL_WIDTH_A::WIDTH_3
+        *self == KERNEL_WIDTH_A::WIDTH_3
     }
     #[doc = "Checks if the value of the field is `WIDTH_4`"]
     #[inline(always)]
     pub fn is_width_4(&self) -> bool {
-        **self == KERNEL_WIDTH_A::WIDTH_4
+        *self == KERNEL_WIDTH_A::WIDTH_4
     }
     #[doc = "Checks if the value of the field is `WIDTH_5`"]
     #[inline(always)]
     pub fn is_width_5(&self) -> bool {
-        **self == KERNEL_WIDTH_A::WIDTH_5
+        *self == KERNEL_WIDTH_A::WIDTH_5
     }
     #[doc = "Checks if the value of the field is `WIDTH_6`"]
     #[inline(always)]
     pub fn is_width_6(&self) -> bool {
-        **self == KERNEL_WIDTH_A::WIDTH_6
+        *self == KERNEL_WIDTH_A::WIDTH_6
     }
     #[doc = "Checks if the value of the field is `WIDTH_7`"]
     #[inline(always)]
     pub fn is_width_7(&self) -> bool {
-        **self == KERNEL_WIDTH_A::WIDTH_7
+        *self == KERNEL_WIDTH_A::WIDTH_7
     }
     #[doc = "Checks if the value of the field is `WIDTH_8`"]
     #[inline(always)]
     pub fn is_width_8(&self) -> bool {
-        **self == KERNEL_WIDTH_A::WIDTH_8
-    }
-}
-impl core::ops::Deref for KERNEL_WIDTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == KERNEL_WIDTH_A::WIDTH_8
     }
 }
 #[doc = "Field `KERNEL_WIDTH` writer - "]
-pub struct KERNEL_WIDTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> KERNEL_WIDTH_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: KERNEL_WIDTH_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type KERNEL_WIDTH_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_POOLING_KERNEL_CFG_SPEC, u8, KERNEL_WIDTH_A, 4, O>;
+impl<'a, const O: u8> KERNEL_WIDTH_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn width_1(self) -> &'a mut W {
@@ -181,40 +164,12 @@ impl<'a> KERNEL_WIDTH_W<'a> {
     pub fn width_8(self) -> &'a mut W {
         self.variant(KERNEL_WIDTH_A::WIDTH_8)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
 }
 #[doc = "Field `KERNEL_STRIDE_WIDTH` reader - "]
-pub struct KERNEL_STRIDE_WIDTH_R(crate::FieldReader<u8>);
-impl KERNEL_STRIDE_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        KERNEL_STRIDE_WIDTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KERNEL_STRIDE_WIDTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KERNEL_STRIDE_WIDTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `KERNEL_STRIDE_WIDTH` writer - "]
-pub struct KERNEL_STRIDE_WIDTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> KERNEL_STRIDE_WIDTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
-}
+pub type KERNEL_STRIDE_WIDTH_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_POOLING_KERNEL_CFG_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
@@ -230,13 +185,15 @@ impl R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    pub fn kernel_width(&mut self) -> KERNEL_WIDTH_W {
-        KERNEL_WIDTH_W { w: self }
+    #[must_use]
+    pub fn kernel_width(&mut self) -> KERNEL_WIDTH_W<0> {
+        KERNEL_WIDTH_W::new(self)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
-    pub fn kernel_stride_width(&mut self) -> KERNEL_STRIDE_WIDTH_W {
-        KERNEL_STRIDE_WIDTH_W { w: self }
+    #[must_use]
+    pub fn kernel_stride_width(&mut self) -> KERNEL_STRIDE_WIDTH_W<4> {
+        KERNEL_STRIDE_WIDTH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -257,11 +214,10 @@ impl crate::Readable for D_POOLING_KERNEL_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_pooling_kernel_cfg::W](W) writer structure"]
 impl crate::Writable for D_POOLING_KERNEL_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_POOLING_KERNEL_CFG to value 0"]
 impl crate::Resettable for D_POOLING_KERNEL_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

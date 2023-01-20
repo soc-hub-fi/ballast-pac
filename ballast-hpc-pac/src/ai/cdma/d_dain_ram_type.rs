@@ -34,8 +34,10 @@ impl From<crate::W<D_DAIN_RAM_TYPE_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `DATAIN_RAM_TYPE` reader - "]
+pub type DATAIN_RAM_TYPE_R = crate::BitReader<DATAIN_RAM_TYPE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DATAIN_RAM_TYPE_A {
     #[doc = "0: `0`"]
     CVIF = 0,
@@ -48,14 +50,8 @@ impl From<DATAIN_RAM_TYPE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `DATAIN_RAM_TYPE` reader - "]
-pub struct DATAIN_RAM_TYPE_R(crate::FieldReader<bool>);
 impl DATAIN_RAM_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DATAIN_RAM_TYPE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> DATAIN_RAM_TYPE_A {
         match self.bits {
@@ -66,31 +62,18 @@ impl DATAIN_RAM_TYPE_R {
     #[doc = "Checks if the value of the field is `CVIF`"]
     #[inline(always)]
     pub fn is_cvif(&self) -> bool {
-        **self == DATAIN_RAM_TYPE_A::CVIF
+        *self == DATAIN_RAM_TYPE_A::CVIF
     }
     #[doc = "Checks if the value of the field is `MCIF`"]
     #[inline(always)]
     pub fn is_mcif(&self) -> bool {
-        **self == DATAIN_RAM_TYPE_A::MCIF
-    }
-}
-impl core::ops::Deref for DATAIN_RAM_TYPE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == DATAIN_RAM_TYPE_A::MCIF
     }
 }
 #[doc = "Field `DATAIN_RAM_TYPE` writer - "]
-pub struct DATAIN_RAM_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DATAIN_RAM_TYPE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: DATAIN_RAM_TYPE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type DATAIN_RAM_TYPE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_DAIN_RAM_TYPE_SPEC, DATAIN_RAM_TYPE_A, O>;
+impl<'a, const O: u8> DATAIN_RAM_TYPE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn cvif(self) -> &'a mut W {
@@ -100,22 +83,6 @@ impl<'a> DATAIN_RAM_TYPE_W<'a> {
     #[inline(always)]
     pub fn mcif(self) -> &'a mut W {
         self.variant(DATAIN_RAM_TYPE_A::MCIF)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
     }
 }
 impl R {
@@ -128,8 +95,9 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn datain_ram_type(&mut self) -> DATAIN_RAM_TYPE_W {
-        DATAIN_RAM_TYPE_W { w: self }
+    #[must_use]
+    pub fn datain_ram_type(&mut self) -> DATAIN_RAM_TYPE_W<0> {
+        DATAIN_RAM_TYPE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -150,11 +118,10 @@ impl crate::Readable for D_DAIN_RAM_TYPE_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_dain_ram_type::W](W) writer structure"]
 impl crate::Writable for D_DAIN_RAM_TYPE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_DAIN_RAM_TYPE to value 0"]
 impl crate::Resettable for D_DAIN_RAM_TYPE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

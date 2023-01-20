@@ -35,32 +35,10 @@ impl From<crate::W<BOOT_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `BOOT_STATUS` reader - "]
-pub struct BOOT_STATUS_R(crate::FieldReader<u32>);
-impl BOOT_STATUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        BOOT_STATUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BOOT_STATUS_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BOOT_STATUS_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BOOT_STATUS` writer - "]
-pub struct BOOT_STATUS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BOOT_STATUS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type BOOT_STATUS_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, BOOT_STATUS_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -71,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn boot_status(&mut self) -> BOOT_STATUS_W {
-        BOOT_STATUS_W { w: self }
+    #[must_use]
+    pub fn boot_status(&mut self) -> BOOT_STATUS_W<0> {
+        BOOT_STATUS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +72,10 @@ impl crate::Readable for BOOT_STATUS_SPEC {
 #[doc = "`write(|w| ..)` method takes [boot_status::W](W) writer structure"]
 impl crate::Writable for BOOT_STATUS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BOOT_STATUS to value 0"]
 impl crate::Resettable for BOOT_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

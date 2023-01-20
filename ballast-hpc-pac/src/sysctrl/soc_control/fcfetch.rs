@@ -20,32 +20,13 @@ impl From<crate::W<FCFETCH_SPEC>> for W {
     }
 }
 #[doc = "Field `FCFETCH` writer - Enable Fetch, 1 to enable core execution"]
-pub struct FCFETCH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FCFETCH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type FCFETCH_W<'a, const O: u8> = crate::BitWriter<'a, u32, FCFETCH_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - Enable Fetch, 1 to enable core execution"]
     #[inline(always)]
-    pub fn fcfetch(&mut self) -> FCFETCH_W {
-        FCFETCH_W { w: self }
+    #[must_use]
+    pub fn fcfetch(&mut self) -> FCFETCH_W<0> {
+        FCFETCH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -62,11 +43,10 @@ impl crate::RegisterSpec for FCFETCH_SPEC {
 #[doc = "`write(|w| ..)` method takes [fcfetch::W](W) writer structure"]
 impl crate::Writable for FCFETCH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FCFETCH to value 0x01"]
 impl crate::Resettable for FCFETCH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

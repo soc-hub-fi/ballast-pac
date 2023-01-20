@@ -35,34 +35,13 @@ impl From<crate::W<T0_TH_CHANNEL_SPEC>> for W {
     }
 }
 #[doc = "Field `TH` reader - ADV_TIMER0 channel 0 threshold configuration bitfield"]
-pub struct TH_R(crate::FieldReader<u16>);
-impl TH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TH_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TH` writer - ADV_TIMER0 channel 0 threshold configuration bitfield"]
-pub struct TH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type TH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, T0_TH_CHANNEL_SPEC, u16, u16, 16, O>;
+#[doc = "Field `MODE` reader - ADV_TIMER0 channel 0 threshold match action on channel output signal configuration bitfield: - 3'h0: set. - 3'h1: toggle then next threshold match action is clear. - 3'h2: set then next threshold match action is clear. - 3'h3: toggle. - 3'h4: clear. - 3'h5: toggle then next threshold match action is set. - 3'h6: clear then next threshold match action is set."]
+pub type MODE_R = crate::FieldReader<u8, MODE_A>;
 #[doc = "ADV_TIMER0 channel 0 threshold match action on channel output signal configuration bitfield: - 3'h0: set. - 3'h1: toggle then next threshold match action is clear. - 3'h2: set then next threshold match action is clear. - 3'h3: toggle. - 3'h4: clear. - 3'h5: toggle then next threshold match action is set. - 3'h6: clear then next threshold match action is set.\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum MODE_A {
     #[doc = "0: `0`"]
@@ -86,14 +65,8 @@ impl From<MODE_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `MODE` reader - ADV_TIMER0 channel 0 threshold match action on channel output signal configuration bitfield: - 3'h0: set. - 3'h1: toggle then next threshold match action is clear. - 3'h2: set then next threshold match action is clear. - 3'h3: toggle. - 3'h4: clear. - 3'h5: toggle then next threshold match action is set. - 3'h6: clear then next threshold match action is set."]
-pub struct MODE_R(crate::FieldReader<u8>);
 impl MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MODE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<MODE_A> {
         match self.bits {
@@ -110,56 +83,43 @@ impl MODE_R {
     #[doc = "Checks if the value of the field is `SET`"]
     #[inline(always)]
     pub fn is_set(&self) -> bool {
-        **self == MODE_A::SET
+        *self == MODE_A::SET
     }
     #[doc = "Checks if the value of the field is `TOGGLE_CLEAR_NEXT`"]
     #[inline(always)]
     pub fn is_toggle_clear_next(&self) -> bool {
-        **self == MODE_A::TOGGLE_CLEAR_NEXT
+        *self == MODE_A::TOGGLE_CLEAR_NEXT
     }
     #[doc = "Checks if the value of the field is `SET_CLEAR_NEXT`"]
     #[inline(always)]
     pub fn is_set_clear_next(&self) -> bool {
-        **self == MODE_A::SET_CLEAR_NEXT
+        *self == MODE_A::SET_CLEAR_NEXT
     }
     #[doc = "Checks if the value of the field is `TOGGLE`"]
     #[inline(always)]
     pub fn is_toggle(&self) -> bool {
-        **self == MODE_A::TOGGLE
+        *self == MODE_A::TOGGLE
     }
     #[doc = "Checks if the value of the field is `CLEAR`"]
     #[inline(always)]
     pub fn is_clear(&self) -> bool {
-        **self == MODE_A::CLEAR
+        *self == MODE_A::CLEAR
     }
     #[doc = "Checks if the value of the field is `TOGGLE_SET_NEXT`"]
     #[inline(always)]
     pub fn is_toggle_set_next(&self) -> bool {
-        **self == MODE_A::TOGGLE_SET_NEXT
+        *self == MODE_A::TOGGLE_SET_NEXT
     }
     #[doc = "Checks if the value of the field is `CLEAR_SET_NEXT`"]
     #[inline(always)]
     pub fn is_clear_set_next(&self) -> bool {
-        **self == MODE_A::CLEAR_SET_NEXT
-    }
-}
-impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == MODE_A::CLEAR_SET_NEXT
     }
 }
 #[doc = "Field `MODE` writer - ADV_TIMER0 channel 0 threshold match action on channel output signal configuration bitfield: - 3'h0: set. - 3'h1: toggle then next threshold match action is clear. - 3'h2: set then next threshold match action is clear. - 3'h3: toggle. - 3'h4: clear. - 3'h5: toggle then next threshold match action is set. - 3'h6: clear then next threshold match action is set."]
-pub struct MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MODE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: MODE_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type MODE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, T0_TH_CHANNEL_SPEC, u8, MODE_A, 3, O>;
+impl<'a, const O: u8> MODE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn set(self) -> &'a mut W {
@@ -195,12 +155,6 @@ impl<'a> MODE_W<'a> {
     pub fn clear_set_next(self) -> &'a mut W {
         self.variant(MODE_A::CLEAR_SET_NEXT)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 16)) | ((value as u32 & 7) << 16);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bits 0:15 - ADV_TIMER0 channel 0 threshold configuration bitfield"]
@@ -217,13 +171,15 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - ADV_TIMER0 channel 0 threshold configuration bitfield"]
     #[inline(always)]
-    pub fn th(&mut self) -> TH_W {
-        TH_W { w: self }
+    #[must_use]
+    pub fn th(&mut self) -> TH_W<0> {
+        TH_W::new(self)
     }
     #[doc = "Bits 16:18 - ADV_TIMER0 channel 0 threshold match action on channel output signal configuration bitfield: - 3'h0: set. - 3'h1: toggle then next threshold match action is clear. - 3'h2: set then next threshold match action is clear. - 3'h3: toggle. - 3'h4: clear. - 3'h5: toggle then next threshold match action is set. - 3'h6: clear then next threshold match action is set."]
     #[inline(always)]
-    pub fn mode(&mut self) -> MODE_W {
-        MODE_W { w: self }
+    #[must_use]
+    pub fn mode(&mut self) -> MODE_W<16> {
+        MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -244,12 +200,11 @@ impl crate::Readable for T0_TH_CHANNEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [t0_th_channel::W](W) writer structure"]
 impl crate::Writable for T0_TH_CHANNEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets T0_TH_CHANNEL[%s]
 to value 0"]
 impl crate::Resettable for T0_TH_CHANNEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

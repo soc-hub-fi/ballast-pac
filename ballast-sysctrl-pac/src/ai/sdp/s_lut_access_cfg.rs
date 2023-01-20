@@ -35,34 +35,14 @@ impl From<crate::W<S_LUT_ACCESS_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `LUT_ADDR` reader - "]
-pub struct LUT_ADDR_R(crate::FieldReader<u16>);
-impl LUT_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        LUT_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LUT_ADDR_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LUT_ADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LUT_ADDR` writer - "]
-pub struct LUT_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LUT_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
-        self.w
-    }
-}
+pub type LUT_ADDR_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, S_LUT_ACCESS_CFG_SPEC, u16, u16, 10, O>;
+#[doc = "Field `LUT_TABLE_ID` reader - "]
+pub type LUT_TABLE_ID_R = crate::BitReader<LUT_TABLE_ID_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum LUT_TABLE_ID_A {
     #[doc = "0: `0`"]
     LE = 0,
@@ -75,14 +55,8 @@ impl From<LUT_TABLE_ID_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `LUT_TABLE_ID` reader - "]
-pub struct LUT_TABLE_ID_R(crate::FieldReader<bool>);
 impl LUT_TABLE_ID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LUT_TABLE_ID_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> LUT_TABLE_ID_A {
         match self.bits {
@@ -93,31 +67,18 @@ impl LUT_TABLE_ID_R {
     #[doc = "Checks if the value of the field is `LE`"]
     #[inline(always)]
     pub fn is_le(&self) -> bool {
-        **self == LUT_TABLE_ID_A::LE
+        *self == LUT_TABLE_ID_A::LE
     }
     #[doc = "Checks if the value of the field is `LO`"]
     #[inline(always)]
     pub fn is_lo(&self) -> bool {
-        **self == LUT_TABLE_ID_A::LO
-    }
-}
-impl core::ops::Deref for LUT_TABLE_ID_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == LUT_TABLE_ID_A::LO
     }
 }
 #[doc = "Field `LUT_TABLE_ID` writer - "]
-pub struct LUT_TABLE_ID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LUT_TABLE_ID_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: LUT_TABLE_ID_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type LUT_TABLE_ID_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, S_LUT_ACCESS_CFG_SPEC, LUT_TABLE_ID_A, O>;
+impl<'a, const O: u8> LUT_TABLE_ID_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn le(self) -> &'a mut W {
@@ -128,25 +89,11 @@ impl<'a> LUT_TABLE_ID_W<'a> {
     pub fn lo(self) -> &'a mut W {
         self.variant(LUT_TABLE_ID_A::LO)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
 }
+#[doc = "Field `LUT_ACCESS_TYPE` reader - "]
+pub type LUT_ACCESS_TYPE_R = crate::BitReader<LUT_ACCESS_TYPE_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum LUT_ACCESS_TYPE_A {
     #[doc = "0: `0`"]
     READ = 0,
@@ -159,14 +106,8 @@ impl From<LUT_ACCESS_TYPE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `LUT_ACCESS_TYPE` reader - "]
-pub struct LUT_ACCESS_TYPE_R(crate::FieldReader<bool>);
 impl LUT_ACCESS_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LUT_ACCESS_TYPE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> LUT_ACCESS_TYPE_A {
         match self.bits {
@@ -177,31 +118,18 @@ impl LUT_ACCESS_TYPE_R {
     #[doc = "Checks if the value of the field is `READ`"]
     #[inline(always)]
     pub fn is_read(&self) -> bool {
-        **self == LUT_ACCESS_TYPE_A::READ
+        *self == LUT_ACCESS_TYPE_A::READ
     }
     #[doc = "Checks if the value of the field is `WRITE`"]
     #[inline(always)]
     pub fn is_write(&self) -> bool {
-        **self == LUT_ACCESS_TYPE_A::WRITE
-    }
-}
-impl core::ops::Deref for LUT_ACCESS_TYPE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == LUT_ACCESS_TYPE_A::WRITE
     }
 }
 #[doc = "Field `LUT_ACCESS_TYPE` writer - "]
-pub struct LUT_ACCESS_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LUT_ACCESS_TYPE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: LUT_ACCESS_TYPE_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type LUT_ACCESS_TYPE_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, S_LUT_ACCESS_CFG_SPEC, LUT_ACCESS_TYPE_A, O>;
+impl<'a, const O: u8> LUT_ACCESS_TYPE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn read(self) -> &'a mut W {
@@ -211,22 +139,6 @@ impl<'a> LUT_ACCESS_TYPE_W<'a> {
     #[inline(always)]
     pub fn write(self) -> &'a mut W {
         self.variant(LUT_ACCESS_TYPE_A::WRITE)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
     }
 }
 impl R {
@@ -249,18 +161,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    pub fn lut_addr(&mut self) -> LUT_ADDR_W {
-        LUT_ADDR_W { w: self }
+    #[must_use]
+    pub fn lut_addr(&mut self) -> LUT_ADDR_W<0> {
+        LUT_ADDR_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn lut_table_id(&mut self) -> LUT_TABLE_ID_W {
-        LUT_TABLE_ID_W { w: self }
+    #[must_use]
+    pub fn lut_table_id(&mut self) -> LUT_TABLE_ID_W<16> {
+        LUT_TABLE_ID_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn lut_access_type(&mut self) -> LUT_ACCESS_TYPE_W {
-        LUT_ACCESS_TYPE_W { w: self }
+    #[must_use]
+    pub fn lut_access_type(&mut self) -> LUT_ACCESS_TYPE_W<17> {
+        LUT_ACCESS_TYPE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -281,11 +196,10 @@ impl crate::Readable for S_LUT_ACCESS_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [s_lut_access_cfg::W](W) writer structure"]
 impl crate::Writable for S_LUT_ACCESS_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets S_LUT_ACCESS_CFG to value 0"]
 impl crate::Resettable for S_LUT_ACCESS_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

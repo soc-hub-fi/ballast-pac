@@ -35,32 +35,10 @@ impl From<crate::W<PADCFG_48_55_SPEC>> for W {
     }
 }
 #[doc = "Field `PADCFG_48_55` reader - "]
-pub struct PADCFG_48_55_R(crate::FieldReader<u32>);
-impl PADCFG_48_55_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PADCFG_48_55_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PADCFG_48_55_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PADCFG_48_55_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PADCFG_48_55` writer - "]
-pub struct PADCFG_48_55_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PADCFG_48_55_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type PADCFG_48_55_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PADCFG_48_55_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -71,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn padcfg_48_55(&mut self) -> PADCFG_48_55_W {
-        PADCFG_48_55_W { w: self }
+    #[must_use]
+    pub fn padcfg_48_55(&mut self) -> PADCFG_48_55_W<0> {
+        PADCFG_48_55_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -93,11 +72,10 @@ impl crate::Readable for PADCFG_48_55_SPEC {
 #[doc = "`write(|w| ..)` method takes [padcfg_48_55::W](W) writer structure"]
 impl crate::Writable for PADCFG_48_55_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PADCFG_48_55 to value 0"]
 impl crate::Resettable for PADCFG_48_55_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

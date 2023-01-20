@@ -14,20 +14,7 @@ impl From<crate::R<CBUF_BASE_CBUF_BANK_WIDTH_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CBUF_BASE_CBUF_BANK_WIDTH` reader - "]
-pub struct CBUF_BASE_CBUF_BANK_WIDTH_R(crate::FieldReader<u32>);
-impl CBUF_BASE_CBUF_BANK_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CBUF_BASE_CBUF_BANK_WIDTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CBUF_BASE_CBUF_BANK_WIDTH_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CBUF_BASE_CBUF_BANK_WIDTH_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for CBUF_BASE_CBUF_BANK_WIDTH_0_SPEC {
 }
 #[doc = "`reset()` method sets CBUF_BASE_CBUF_BANK_WIDTH_0 to value 0x08"]
 impl crate::Resettable for CBUF_BASE_CBUF_BANK_WIDTH_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x08
-    }
+    const RESET_VALUE: Self::Ux = 0x08;
 }

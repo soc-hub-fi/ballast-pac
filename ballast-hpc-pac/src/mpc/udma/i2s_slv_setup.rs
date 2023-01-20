@@ -35,170 +35,27 @@ impl From<crate::W<I2S_SLV_SETUP_SPEC>> for W {
     }
 }
 #[doc = "Field `SLAVE_WORDS` reader - Sets how many words for each I2S phase"]
-pub struct SLAVE_WORDS_R(crate::FieldReader<u8>);
-impl SLAVE_WORDS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SLAVE_WORDS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_WORDS_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_WORDS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SLAVE_WORDS` writer - Sets how many words for each I2S phase"]
-pub struct SLAVE_WORDS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLAVE_WORDS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type SLAVE_WORDS_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, I2S_SLV_SETUP_SPEC, u8, u8, 3, O>;
 #[doc = "Field `SLAVE_BITS` reader - Sets how many bits per word"]
-pub struct SLAVE_BITS_R(crate::FieldReader<u8>);
-impl SLAVE_BITS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SLAVE_BITS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_BITS_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_BITS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SLAVE_BITS` writer - Sets how many bits per word"]
-pub struct SLAVE_BITS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLAVE_BITS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 8)) | ((value as u32 & 0x1f) << 8);
-        self.w
-    }
-}
+pub type SLAVE_BITS_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, I2S_SLV_SETUP_SPEC, u8, u8, 5, O>;
 #[doc = "Field `SLAVE_LSB` reader - Enables LSB shifting"]
-pub struct SLAVE_LSB_R(crate::FieldReader<bool>);
-impl SLAVE_LSB_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLAVE_LSB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_LSB_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_LSB_R = crate::BitReader<bool>;
 #[doc = "Field `SLAVE_LSB` writer - Enables LSB shifting"]
-pub struct SLAVE_LSB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLAVE_LSB_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type SLAVE_LSB_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2S_SLV_SETUP_SPEC, bool, O>;
 #[doc = "Field `SLAVE_2CH` reader - Enables both channels"]
-pub struct SLAVE_2CH_R(crate::FieldReader<bool>);
-impl SLAVE_2CH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLAVE_2CH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_2CH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_2CH_R = crate::BitReader<bool>;
 #[doc = "Field `SLAVE_2CH` writer - Enables both channels"]
-pub struct SLAVE_2CH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLAVE_2CH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type SLAVE_2CH_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2S_SLV_SETUP_SPEC, bool, O>;
 #[doc = "Field `SLAVE_EN` reader - Enables the Slave"]
-pub struct SLAVE_EN_R(crate::FieldReader<bool>);
-impl SLAVE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLAVE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLAVE_EN` writer - Enables the Slave"]
-pub struct SLAVE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLAVE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type SLAVE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2S_SLV_SETUP_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:2 - Sets how many words for each I2S phase"]
     #[inline(always)]
@@ -229,28 +86,33 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Sets how many words for each I2S phase"]
     #[inline(always)]
-    pub fn slave_words(&mut self) -> SLAVE_WORDS_W {
-        SLAVE_WORDS_W { w: self }
+    #[must_use]
+    pub fn slave_words(&mut self) -> SLAVE_WORDS_W<0> {
+        SLAVE_WORDS_W::new(self)
     }
     #[doc = "Bits 8:12 - Sets how many bits per word"]
     #[inline(always)]
-    pub fn slave_bits(&mut self) -> SLAVE_BITS_W {
-        SLAVE_BITS_W { w: self }
+    #[must_use]
+    pub fn slave_bits(&mut self) -> SLAVE_BITS_W<8> {
+        SLAVE_BITS_W::new(self)
     }
     #[doc = "Bit 16 - Enables LSB shifting"]
     #[inline(always)]
-    pub fn slave_lsb(&mut self) -> SLAVE_LSB_W {
-        SLAVE_LSB_W { w: self }
+    #[must_use]
+    pub fn slave_lsb(&mut self) -> SLAVE_LSB_W<16> {
+        SLAVE_LSB_W::new(self)
     }
     #[doc = "Bit 17 - Enables both channels"]
     #[inline(always)]
-    pub fn slave_2ch(&mut self) -> SLAVE_2CH_W {
-        SLAVE_2CH_W { w: self }
+    #[must_use]
+    pub fn slave_2ch(&mut self) -> SLAVE_2CH_W<17> {
+        SLAVE_2CH_W::new(self)
     }
     #[doc = "Bit 31 - Enables the Slave"]
     #[inline(always)]
-    pub fn slave_en(&mut self) -> SLAVE_EN_W {
-        SLAVE_EN_W { w: self }
+    #[must_use]
+    pub fn slave_en(&mut self) -> SLAVE_EN_W<31> {
+        SLAVE_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -271,11 +133,10 @@ impl crate::Readable for I2S_SLV_SETUP_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2s_slv_setup::W](W) writer structure"]
 impl crate::Writable for I2S_SLV_SETUP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2S_SLV_SETUP to value 0"]
 impl crate::Resettable for I2S_SLV_SETUP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

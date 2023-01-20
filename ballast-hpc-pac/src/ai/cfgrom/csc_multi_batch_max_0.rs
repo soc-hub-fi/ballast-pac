@@ -14,20 +14,7 @@ impl From<crate::R<CSC_MULTI_BATCH_MAX_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CSC_MULTI_BATCH_MAX` reader - "]
-pub struct CSC_MULTI_BATCH_MAX_R(crate::FieldReader<u32>);
-impl CSC_MULTI_BATCH_MAX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CSC_MULTI_BATCH_MAX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CSC_MULTI_BATCH_MAX_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CSC_MULTI_BATCH_MAX_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -46,8 +33,5 @@ impl crate::Readable for CSC_MULTI_BATCH_MAX_0_SPEC {
 }
 #[doc = "`reset()` method sets CSC_MULTI_BATCH_MAX_0 to value 0"]
 impl crate::Resettable for CSC_MULTI_BATCH_MAX_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

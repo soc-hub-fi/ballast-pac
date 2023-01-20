@@ -35,42 +35,10 @@ impl From<crate::W<MAC_RX_ADD_PROM_WR_SPEC>> for W {
     }
 }
 #[doc = "Field `MAC_rx_add_prom_wr` reader - "]
-pub struct MAC_RX_ADD_PROM_WR_R(crate::FieldReader<bool>);
-impl MAC_RX_ADD_PROM_WR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MAC_RX_ADD_PROM_WR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAC_RX_ADD_PROM_WR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAC_RX_ADD_PROM_WR_R = crate::BitReader<bool>;
 #[doc = "Field `MAC_rx_add_prom_wr` writer - "]
-pub struct MAC_RX_ADD_PROM_WR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MAC_RX_ADD_PROM_WR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type MAC_RX_ADD_PROM_WR_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, MAC_RX_ADD_PROM_WR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -81,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn mac_rx_add_prom_wr(&mut self) -> MAC_RX_ADD_PROM_WR_W {
-        MAC_RX_ADD_PROM_WR_W { w: self }
+    #[must_use]
+    pub fn mac_rx_add_prom_wr(&mut self) -> MAC_RX_ADD_PROM_WR_W<0> {
+        MAC_RX_ADD_PROM_WR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +72,10 @@ impl crate::Readable for MAC_RX_ADD_PROM_WR_SPEC {
 #[doc = "`write(|w| ..)` method takes [mac_rx_add_prom_wr::W](W) writer structure"]
 impl crate::Writable for MAC_RX_ADD_PROM_WR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MAC_rx_add_prom_wr to value 0"]
 impl crate::Resettable for MAC_RX_ADD_PROM_WR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

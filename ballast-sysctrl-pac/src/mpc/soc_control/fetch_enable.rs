@@ -35,42 +35,9 @@ impl From<crate::W<FETCH_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `E` reader - Enable Fetch"]
-pub struct E_R(crate::FieldReader<bool>);
-impl E_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        E_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for E_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type E_R = crate::BitReader<bool>;
 #[doc = "Field `E` writer - Enable Fetch"]
-pub struct E_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> E_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type E_W<'a, const O: u8> = crate::BitWriter<'a, u32, FETCH_ENABLE_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Enable Fetch"]
     #[inline(always)]
@@ -81,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable Fetch"]
     #[inline(always)]
-    pub fn e(&mut self) -> E_W {
-        E_W { w: self }
+    #[must_use]
+    pub fn e(&mut self) -> E_W<0> {
+        E_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +71,10 @@ impl crate::Readable for FETCH_ENABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [fetch_enable::W](W) writer structure"]
 impl crate::Writable for FETCH_ENABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FETCH_ENABLE to value 0x01"]
 impl crate::Resettable for FETCH_ENABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

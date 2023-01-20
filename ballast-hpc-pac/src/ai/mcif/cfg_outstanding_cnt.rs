@@ -35,35 +35,9 @@ impl From<crate::W<CFG_OUTSTANDING_CNT_SPEC>> for W {
     }
 }
 #[doc = "Field `RD_OS_CNT` reader - "]
-pub struct RD_OS_CNT_R(crate::FieldReader<u8>);
-impl RD_OS_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_OS_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_OS_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_OS_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `WR_OS_CNT` reader - "]
-pub struct WR_OS_CNT_R(crate::FieldReader<u8>);
-impl WR_OS_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WR_OS_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WR_OS_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WR_OS_CNT_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -96,11 +70,10 @@ impl crate::Readable for CFG_OUTSTANDING_CNT_SPEC {
 #[doc = "`write(|w| ..)` method takes [cfg_outstanding_cnt::W](W) writer structure"]
 impl crate::Writable for CFG_OUTSTANDING_CNT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CFG_OUTSTANDING_CNT to value 0x00ff_00ff"]
 impl crate::Resettable for CFG_OUTSTANDING_CNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x00ff_00ff
-    }
+    const RESET_VALUE: Self::Ux = 0x00ff_00ff;
 }

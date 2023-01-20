@@ -35,42 +35,9 @@ impl From<crate::W<RX_APPEND_CRC_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_APPEND_CRC` reader - In some condition, the user application need MAC to retain FCS of ethernet frame. When RX_APPEND_CRC signal is equal “1” , the FCS of ethernet frame will transmit to user application."]
-pub struct RX_APPEND_CRC_R(crate::FieldReader<bool>);
-impl RX_APPEND_CRC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_APPEND_CRC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_APPEND_CRC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_APPEND_CRC_R = crate::BitReader<bool>;
 #[doc = "Field `RX_APPEND_CRC` writer - In some condition, the user application need MAC to retain FCS of ethernet frame. When RX_APPEND_CRC signal is equal “1” , the FCS of ethernet frame will transmit to user application."]
-pub struct RX_APPEND_CRC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_APPEND_CRC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type RX_APPEND_CRC_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_APPEND_CRC_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - In some condition, the user application need MAC to retain FCS of ethernet frame. When RX_APPEND_CRC signal is equal “1” , the FCS of ethernet frame will transmit to user application."]
     #[inline(always)]
@@ -81,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bit 0 - In some condition, the user application need MAC to retain FCS of ethernet frame. When RX_APPEND_CRC signal is equal “1” , the FCS of ethernet frame will transmit to user application."]
     #[inline(always)]
-    pub fn rx_append_crc(&mut self) -> RX_APPEND_CRC_W {
-        RX_APPEND_CRC_W { w: self }
+    #[must_use]
+    pub fn rx_append_crc(&mut self) -> RX_APPEND_CRC_W<0> {
+        RX_APPEND_CRC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -103,11 +71,10 @@ impl crate::Readable for RX_APPEND_CRC_SPEC {
 #[doc = "`write(|w| ..)` method takes [rx_append_crc::W](W) writer structure"]
 impl crate::Writable for RX_APPEND_CRC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RX_APPEND_CRC to value 0"]
 impl crate::Resettable for RX_APPEND_CRC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -34,8 +34,10 @@ impl From<crate::W<D_DP_EW_CFG_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `EW_BYPASS` reader - "]
+pub type EW_BYPASS_R = crate::BitReader<EW_BYPASS_A>;
 #[doc = "\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum EW_BYPASS_A {
     #[doc = "1: `1`"]
     YES = 1,
@@ -48,14 +50,8 @@ impl From<EW_BYPASS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `EW_BYPASS` reader - "]
-pub struct EW_BYPASS_R(crate::FieldReader<bool>);
 impl EW_BYPASS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EW_BYPASS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> EW_BYPASS_A {
         match self.bits {
@@ -66,31 +62,17 @@ impl EW_BYPASS_R {
     #[doc = "Checks if the value of the field is `YES`"]
     #[inline(always)]
     pub fn is_yes(&self) -> bool {
-        **self == EW_BYPASS_A::YES
+        *self == EW_BYPASS_A::YES
     }
     #[doc = "Checks if the value of the field is `NO`"]
     #[inline(always)]
     pub fn is_no(&self) -> bool {
-        **self == EW_BYPASS_A::NO
-    }
-}
-impl core::ops::Deref for EW_BYPASS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == EW_BYPASS_A::NO
     }
 }
 #[doc = "Field `EW_BYPASS` writer - "]
-pub struct EW_BYPASS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EW_BYPASS_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: EW_BYPASS_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type EW_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, D_DP_EW_CFG_SPEC, EW_BYPASS_A, O>;
+impl<'a, const O: u8> EW_BYPASS_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn yes(self) -> &'a mut W {
@@ -101,25 +83,11 @@ impl<'a> EW_BYPASS_W<'a> {
     pub fn no(self) -> &'a mut W {
         self.variant(EW_BYPASS_A::NO)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
 }
+#[doc = "Field `EW_ALU_BYPASS` reader - "]
+pub type EW_ALU_BYPASS_R = crate::BitReader<EW_ALU_BYPASS_A>;
 #[doc = "\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum EW_ALU_BYPASS_A {
     #[doc = "1: `1`"]
     YES = 1,
@@ -132,14 +100,8 @@ impl From<EW_ALU_BYPASS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `EW_ALU_BYPASS` reader - "]
-pub struct EW_ALU_BYPASS_R(crate::FieldReader<bool>);
 impl EW_ALU_BYPASS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EW_ALU_BYPASS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> EW_ALU_BYPASS_A {
         match self.bits {
@@ -150,31 +112,18 @@ impl EW_ALU_BYPASS_R {
     #[doc = "Checks if the value of the field is `YES`"]
     #[inline(always)]
     pub fn is_yes(&self) -> bool {
-        **self == EW_ALU_BYPASS_A::YES
+        *self == EW_ALU_BYPASS_A::YES
     }
     #[doc = "Checks if the value of the field is `NO`"]
     #[inline(always)]
     pub fn is_no(&self) -> bool {
-        **self == EW_ALU_BYPASS_A::NO
-    }
-}
-impl core::ops::Deref for EW_ALU_BYPASS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == EW_ALU_BYPASS_A::NO
     }
 }
 #[doc = "Field `EW_ALU_BYPASS` writer - "]
-pub struct EW_ALU_BYPASS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EW_ALU_BYPASS_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: EW_ALU_BYPASS_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type EW_ALU_BYPASS_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_DP_EW_CFG_SPEC, EW_ALU_BYPASS_A, O>;
+impl<'a, const O: u8> EW_ALU_BYPASS_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn yes(self) -> &'a mut W {
@@ -185,25 +134,11 @@ impl<'a> EW_ALU_BYPASS_W<'a> {
     pub fn no(self) -> &'a mut W {
         self.variant(EW_ALU_BYPASS_A::NO)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
 }
+#[doc = "Field `EW_ALU_ALGO` reader - "]
+pub type EW_ALU_ALGO_R = crate::FieldReader<u8, EW_ALU_ALGO_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum EW_ALU_ALGO_A {
     #[doc = "2: `10`"]
@@ -219,14 +154,8 @@ impl From<EW_ALU_ALGO_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `EW_ALU_ALGO` reader - "]
-pub struct EW_ALU_ALGO_R(crate::FieldReader<u8>);
 impl EW_ALU_ALGO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        EW_ALU_ALGO_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<EW_ALU_ALGO_A> {
         match self.bits {
@@ -239,36 +168,23 @@ impl EW_ALU_ALGO_R {
     #[doc = "Checks if the value of the field is `SUM`"]
     #[inline(always)]
     pub fn is_sum(&self) -> bool {
-        **self == EW_ALU_ALGO_A::SUM
+        *self == EW_ALU_ALGO_A::SUM
     }
     #[doc = "Checks if the value of the field is `MIN`"]
     #[inline(always)]
     pub fn is_min(&self) -> bool {
-        **self == EW_ALU_ALGO_A::MIN
+        *self == EW_ALU_ALGO_A::MIN
     }
     #[doc = "Checks if the value of the field is `MAX`"]
     #[inline(always)]
     pub fn is_max(&self) -> bool {
-        **self == EW_ALU_ALGO_A::MAX
-    }
-}
-impl core::ops::Deref for EW_ALU_ALGO_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == EW_ALU_ALGO_A::MAX
     }
 }
 #[doc = "Field `EW_ALU_ALGO` writer - "]
-pub struct EW_ALU_ALGO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EW_ALU_ALGO_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: EW_ALU_ALGO_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type EW_ALU_ALGO_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, D_DP_EW_CFG_SPEC, u8, EW_ALU_ALGO_A, 2, O>;
+impl<'a, const O: u8> EW_ALU_ALGO_W<'a, O> {
     #[doc = "`10`"]
     #[inline(always)]
     pub fn sum(self) -> &'a mut W {
@@ -284,15 +200,11 @@ impl<'a> EW_ALU_ALGO_W<'a> {
     pub fn max(self) -> &'a mut W {
         self.variant(EW_ALU_ALGO_A::MAX)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
 }
+#[doc = "Field `EW_MUL_BYPASS` reader - "]
+pub type EW_MUL_BYPASS_R = crate::BitReader<EW_MUL_BYPASS_A>;
 #[doc = "\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum EW_MUL_BYPASS_A {
     #[doc = "1: `1`"]
     YES = 1,
@@ -305,14 +217,8 @@ impl From<EW_MUL_BYPASS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `EW_MUL_BYPASS` reader - "]
-pub struct EW_MUL_BYPASS_R(crate::FieldReader<bool>);
 impl EW_MUL_BYPASS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EW_MUL_BYPASS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> EW_MUL_BYPASS_A {
         match self.bits {
@@ -323,31 +229,18 @@ impl EW_MUL_BYPASS_R {
     #[doc = "Checks if the value of the field is `YES`"]
     #[inline(always)]
     pub fn is_yes(&self) -> bool {
-        **self == EW_MUL_BYPASS_A::YES
+        *self == EW_MUL_BYPASS_A::YES
     }
     #[doc = "Checks if the value of the field is `NO`"]
     #[inline(always)]
     pub fn is_no(&self) -> bool {
-        **self == EW_MUL_BYPASS_A::NO
-    }
-}
-impl core::ops::Deref for EW_MUL_BYPASS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == EW_MUL_BYPASS_A::NO
     }
 }
 #[doc = "Field `EW_MUL_BYPASS` writer - "]
-pub struct EW_MUL_BYPASS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EW_MUL_BYPASS_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: EW_MUL_BYPASS_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type EW_MUL_BYPASS_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_DP_EW_CFG_SPEC, EW_MUL_BYPASS_A, O>;
+impl<'a, const O: u8> EW_MUL_BYPASS_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn yes(self) -> &'a mut W {
@@ -358,25 +251,11 @@ impl<'a> EW_MUL_BYPASS_W<'a> {
     pub fn no(self) -> &'a mut W {
         self.variant(EW_MUL_BYPASS_A::NO)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
 }
+#[doc = "Field `EW_MUL_PRELU` reader - "]
+pub type EW_MUL_PRELU_R = crate::BitReader<EW_MUL_PRELU_A>;
 #[doc = "\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum EW_MUL_PRELU_A {
     #[doc = "1: `1`"]
     YES = 1,
@@ -389,14 +268,8 @@ impl From<EW_MUL_PRELU_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `EW_MUL_PRELU` reader - "]
-pub struct EW_MUL_PRELU_R(crate::FieldReader<bool>);
 impl EW_MUL_PRELU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EW_MUL_PRELU_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> EW_MUL_PRELU_A {
         match self.bits {
@@ -407,31 +280,18 @@ impl EW_MUL_PRELU_R {
     #[doc = "Checks if the value of the field is `YES`"]
     #[inline(always)]
     pub fn is_yes(&self) -> bool {
-        **self == EW_MUL_PRELU_A::YES
+        *self == EW_MUL_PRELU_A::YES
     }
     #[doc = "Checks if the value of the field is `NO`"]
     #[inline(always)]
     pub fn is_no(&self) -> bool {
-        **self == EW_MUL_PRELU_A::NO
-    }
-}
-impl core::ops::Deref for EW_MUL_PRELU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == EW_MUL_PRELU_A::NO
     }
 }
 #[doc = "Field `EW_MUL_PRELU` writer - "]
-pub struct EW_MUL_PRELU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EW_MUL_PRELU_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: EW_MUL_PRELU_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type EW_MUL_PRELU_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_DP_EW_CFG_SPEC, EW_MUL_PRELU_A, O>;
+impl<'a, const O: u8> EW_MUL_PRELU_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn yes(self) -> &'a mut W {
@@ -442,25 +302,11 @@ impl<'a> EW_MUL_PRELU_W<'a> {
     pub fn no(self) -> &'a mut W {
         self.variant(EW_MUL_PRELU_A::NO)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
 }
+#[doc = "Field `EW_LUT_BYPASS` reader - "]
+pub type EW_LUT_BYPASS_R = crate::BitReader<EW_LUT_BYPASS_A>;
 #[doc = "\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum EW_LUT_BYPASS_A {
     #[doc = "1: `1`"]
     YES = 1,
@@ -473,14 +319,8 @@ impl From<EW_LUT_BYPASS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `EW_LUT_BYPASS` reader - "]
-pub struct EW_LUT_BYPASS_R(crate::FieldReader<bool>);
 impl EW_LUT_BYPASS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EW_LUT_BYPASS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> EW_LUT_BYPASS_A {
         match self.bits {
@@ -491,31 +331,18 @@ impl EW_LUT_BYPASS_R {
     #[doc = "Checks if the value of the field is `YES`"]
     #[inline(always)]
     pub fn is_yes(&self) -> bool {
-        **self == EW_LUT_BYPASS_A::YES
+        *self == EW_LUT_BYPASS_A::YES
     }
     #[doc = "Checks if the value of the field is `NO`"]
     #[inline(always)]
     pub fn is_no(&self) -> bool {
-        **self == EW_LUT_BYPASS_A::NO
-    }
-}
-impl core::ops::Deref for EW_LUT_BYPASS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == EW_LUT_BYPASS_A::NO
     }
 }
 #[doc = "Field `EW_LUT_BYPASS` writer - "]
-pub struct EW_LUT_BYPASS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EW_LUT_BYPASS_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: EW_LUT_BYPASS_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type EW_LUT_BYPASS_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, D_DP_EW_CFG_SPEC, EW_LUT_BYPASS_A, O>;
+impl<'a, const O: u8> EW_LUT_BYPASS_W<'a, O> {
     #[doc = "`1`"]
     #[inline(always)]
     pub fn yes(self) -> &'a mut W {
@@ -525,22 +352,6 @@ impl<'a> EW_LUT_BYPASS_W<'a> {
     #[inline(always)]
     pub fn no(self) -> &'a mut W {
         self.variant(EW_LUT_BYPASS_A::NO)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
     }
 }
 impl R {
@@ -578,33 +389,39 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn ew_bypass(&mut self) -> EW_BYPASS_W {
-        EW_BYPASS_W { w: self }
+    #[must_use]
+    pub fn ew_bypass(&mut self) -> EW_BYPASS_W<0> {
+        EW_BYPASS_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn ew_alu_bypass(&mut self) -> EW_ALU_BYPASS_W {
-        EW_ALU_BYPASS_W { w: self }
+    #[must_use]
+    pub fn ew_alu_bypass(&mut self) -> EW_ALU_BYPASS_W<1> {
+        EW_ALU_BYPASS_W::new(self)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
-    pub fn ew_alu_algo(&mut self) -> EW_ALU_ALGO_W {
-        EW_ALU_ALGO_W { w: self }
+    #[must_use]
+    pub fn ew_alu_algo(&mut self) -> EW_ALU_ALGO_W<2> {
+        EW_ALU_ALGO_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn ew_mul_bypass(&mut self) -> EW_MUL_BYPASS_W {
-        EW_MUL_BYPASS_W { w: self }
+    #[must_use]
+    pub fn ew_mul_bypass(&mut self) -> EW_MUL_BYPASS_W<4> {
+        EW_MUL_BYPASS_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn ew_mul_prelu(&mut self) -> EW_MUL_PRELU_W {
-        EW_MUL_PRELU_W { w: self }
+    #[must_use]
+    pub fn ew_mul_prelu(&mut self) -> EW_MUL_PRELU_W<5> {
+        EW_MUL_PRELU_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn ew_lut_bypass(&mut self) -> EW_LUT_BYPASS_W {
-        EW_LUT_BYPASS_W { w: self }
+    #[must_use]
+    pub fn ew_lut_bypass(&mut self) -> EW_LUT_BYPASS_W<6> {
+        EW_LUT_BYPASS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -625,11 +442,10 @@ impl crate::Readable for D_DP_EW_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [d_dp_ew_cfg::W](W) writer structure"]
 impl crate::Writable for D_DP_EW_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets D_DP_EW_CFG to value 0x53"]
 impl crate::Resettable for D_DP_EW_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x53
-    }
+    const RESET_VALUE: Self::Ux = 0x53;
 }
