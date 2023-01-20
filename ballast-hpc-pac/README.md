@@ -32,7 +32,7 @@ for instructions on how to use the peripheral APIs.
 
 ### Pre-requirements
 
-- `cargo install svd2rust --version="^0.23"`
+- `cargo install svd2rust --version="^0.28"`
 - `cargo install form --version="^0.8"`
 - `pip3 install --upgrade --user svdtools`
 
