@@ -5,6 +5,12 @@ _svd: ../MPC.svd
 _include:
   - "../../patches/common.yaml"
 
+"HPC":
+  _modify:
+    # Rename for consistency with other similar elements
+    execute_region_addrbase0:
+      name: execute_region_addr_base0
+
 _modify:
   TLP:
     # Correct TLP address from 0x1000_0000 to 0x2000_0000

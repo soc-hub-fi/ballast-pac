@@ -5,6 +5,12 @@ _svd: ../HPC.svd
 _include:
   - "../../patches/common.yaml"
 
+"HPC":
+  _modify:
+    # Rename for consistency with other similar elements
+    execute_region_addrbase0:
+      name: execute_region_addr_base0
+
 _modify:
   HPC:
     baseAddress: 0x0000_0000_0000_0000

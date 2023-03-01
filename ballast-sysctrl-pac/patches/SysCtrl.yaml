@@ -4,3 +4,9 @@ _svd: ../SysCtrl.svd
 
 _include:
   - "../../patches/common.yaml"
+
+"HPC":
+  _modify:
+    # Rename for consistency with other similar elements
+    execute_region_addrbase0:
+      name: execute_region_addr_base0
