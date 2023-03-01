@@ -56,7 +56,7 @@ pub struct CLUSTER_CONFIG {
     #[doc = "0xd0..0xd8 - Number of execute regions"]
     pub nr_execute_region_rules: NR_EXECUTE_REGION_RULES,
     #[doc = "0xd8..0xe0 - Execution region base address"]
-    pub execute_region_addrbase0: EXECUTE_REGION_ADDRBASE0,
+    pub execute_region_addr_base0: EXECUTE_REGION_ADDR_BASE0,
     #[doc = "0xe0..0xe8 - Execution region address space length"]
     pub execute_region_length0: EXECUTE_REGION_LENGTH0,
     #[doc = "0xe8..0xf0 - "]
@@ -281,11 +281,11 @@ pub type EXECUTE_REGION_ADDR_BASE1 =
     crate::Reg<execute_region_addr_base1::EXECUTE_REGION_ADDR_BASE1_SPEC>;
 #[doc = ""]
 pub mod execute_region_addr_base1;
-#[doc = "execute_region_addrbase0 (rw) register accessor: an alias for `Reg<EXECUTE_REGION_ADDRBASE0_SPEC>`"]
-pub type EXECUTE_REGION_ADDRBASE0 =
-    crate::Reg<execute_region_addrbase0::EXECUTE_REGION_ADDRBASE0_SPEC>;
+#[doc = "execute_region_addr_base0 (rw) register accessor: an alias for `Reg<EXECUTE_REGION_ADDR_BASE0_SPEC>`"]
+pub type EXECUTE_REGION_ADDR_BASE0 =
+    crate::Reg<execute_region_addr_base0::EXECUTE_REGION_ADDR_BASE0_SPEC>;
 #[doc = "Execution region base address"]
-pub mod execute_region_addrbase0;
+pub mod execute_region_addr_base0;
 #[doc = "execute_region_length2 (rw) register accessor: an alias for `Reg<EXECUTE_REGION_LENGTH2_SPEC>`"]
 pub type EXECUTE_REGION_LENGTH2 = crate::Reg<execute_region_length2::EXECUTE_REGION_LENGTH2_SPEC>;
 #[doc = ""]
