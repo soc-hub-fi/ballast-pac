@@ -9,10 +9,10 @@ _modify:
   "*":
     _strip:
       # Remove redundant REG_ prefix
-      - "REG_*"
+      - "REG_"
 
 "MPC":
   "*":
     _strip:
       # Remove redundant REG_ prefix
-      - "REG_*"
+      - "REG_"
