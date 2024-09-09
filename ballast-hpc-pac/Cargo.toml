@@ -15,6 +15,9 @@ vcell = { workspace = true }
 critical-section  = { workspace = true, optional = true }
 riscv = { workspace = true }
 riscv-rt = { workspace = true, optional = true }
+riscv-peripheral = { git = "https://github.com/romancardenas/riscv-peripheral.git" }
+embedded-hal = "1.0.0-rc.1"
+riscv-slic = { version = "0.1.1", features = ["clint-backend"] }
 
 [features]
 rt = ["riscv-rt"]
