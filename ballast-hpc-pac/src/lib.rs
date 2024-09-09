@@ -202,6 +202,18 @@ impl core::fmt::Debug for HPC {
 }
 #[doc = "HPC"]
 pub mod hpc;
+//expose hpc modules
+pub use hpc::clint::HartId;
+pub use hpc::*;
+#[doc = "interpt enum for testing"]
+pub enum Interrupt {
+    #[doc = "software 1"]
+    Soft1,
+    #[doc = "software 2"]
+    Soft2,
+    #[doc = "software 3"]
+    Soft3,
+}
 #[doc = "SYSCTRL"]
 pub struct SYSCTRL {
     _marker: PhantomData<*const ()>,
