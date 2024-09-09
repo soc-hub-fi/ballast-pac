@@ -1,45 +1,110 @@
-#[doc = r"Register block"]
-#[repr(C)]
-pub struct PLIC {
-    _reserved0: [u8; 0x04],
-    #[doc = "0x04..0x0c - "]
-    pub timer_0_int_priority: [TIMER_0_INT_PRIORITY; 2],
-    #[doc = "0x0c..0x14 - "]
-    pub timer_1_int_priority: [TIMER_1_INT_PRIORITY; 2],
-    #[doc = "0x14..0x1c - "]
-    pub external_0_int_priority: [EXTERNAL_0_INT_PRIORITY; 2],
-    _reserved3: [u8; 0x1fe4],
-    #[doc = "0x2000..0x2010 - "]
-    pub enable_context: [ENABLE_CONTEXT; 4],
-    _reserved4: [u8; 0x001f_dff0],
-    #[doc = "0x200000..0x200010 - "]
-    pub priority_threshold_context: [PRIORITY_THRESHOLD_CONTEXT; 4],
-    #[doc = "0x200010..0x200020 - "]
-    pub claim_complete_context: [CLAIM_COMPLETE_CONTEXT; 4],
+pub use riscv_peripheral::{
+    aclint::HartIdNumber,
+    plic::{ContextNumber, InterruptNumber, Plic, PriorityNumber},
+};
+
+#[doc = r"Enumeration of HPC external interrupts."]
+#[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#[repr(u16)]
+pub enum PlicInterrupt {
+    #[doc = "1 - TIMER0"]
+    TIMER0 = 1,
+    #[doc = "2 - TIMER1"]
+    TIMER1 = 2,
+    #[doc = "3 - EXTERNAL"]
+    EXTERNAL = 3,
 }
-#[doc = "timer_0_int_priority (rw) register accessor: an alias for `Reg<TIMER_0_INT_PRIORITY_SPEC>`"]
-pub type TIMER_0_INT_PRIORITY = crate::Reg<timer_0_int_priority::TIMER_0_INT_PRIORITY_SPEC>;
-#[doc = ""]
-pub mod timer_0_int_priority;
-#[doc = "timer_1_int_priority (rw) register accessor: an alias for `Reg<TIMER_1_INT_PRIORITY_SPEC>`"]
-pub type TIMER_1_INT_PRIORITY = crate::Reg<timer_1_int_priority::TIMER_1_INT_PRIORITY_SPEC>;
-#[doc = ""]
-pub mod timer_1_int_priority;
-#[doc = "external_0_int_priority (rw) register accessor: an alias for `Reg<EXTERNAL_0_INT_PRIORITY_SPEC>`"]
-pub type EXTERNAL_0_INT_PRIORITY =
-    crate::Reg<external_0_int_priority::EXTERNAL_0_INT_PRIORITY_SPEC>;
-#[doc = ""]
-pub mod external_0_int_priority;
-#[doc = "enable_context (rw) register accessor: an alias for `Reg<ENABLE_CONTEXT_SPEC>`"]
-pub type ENABLE_CONTEXT = crate::Reg<enable_context::ENABLE_CONTEXT_SPEC>;
-#[doc = ""]
-pub mod enable_context;
-#[doc = "priority_threshold_context (rw) register accessor: an alias for `Reg<PRIORITY_THRESHOLD_CONTEXT_SPEC>`"]
-pub type PRIORITY_THRESHOLD_CONTEXT =
-    crate::Reg<priority_threshold_context::PRIORITY_THRESHOLD_CONTEXT_SPEC>;
-#[doc = ""]
-pub mod priority_threshold_context;
-#[doc = "claim_complete_context (rw) register accessor: an alias for `Reg<CLAIM_COMPLETE_CONTEXT_SPEC>`"]
-pub type CLAIM_COMPLETE_CONTEXT = crate::Reg<claim_complete_context::CLAIM_COMPLETE_CONTEXT_SPEC>;
-#[doc = ""]
-pub mod claim_complete_context;
+#[doc = "\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
+pub enum Priority {
+    #[doc = "0: Priority 0 (never interrupt)"]
+    P0 = 0,
+    #[doc = "1: Priority 1"]
+    P1 = 1,
+    #[doc = "2: Priority 2"]
+    P2 = 2,
+    #[doc = "3: Priority 3"]
+    P3 = 3,
+    #[doc = "4: Priority 4"]
+    P4 = 4,
+    #[doc = "5: Priority 5"]
+    P5 = 5,
+    #[doc = "6: Priority 6"]
+    P6 = 6,
+    #[doc = "7: Priority 7"]
+    P7 = 7,
+}
+
+/// PLIC context of the target
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u16)]
+pub enum Context {
+    #[doc = "0: Context 0"]
+    C0 = 0,
+    #[doc = "1: Context 1"]
+    C1 = 1,
+    #[doc = "2: Context 2"]
+    C2 = 2,
+    #[doc = "3: Context 3"]
+    C3 = 3,
+}
+
+unsafe impl ContextNumber for Context {
+    const MAX_CONTEXT_NUMBER: u16 = 3;
+
+    #[inline]
+    fn number(self) -> u16 {
+        self as _
+    }
+
+    #[inline]
+    fn from_number(number: u16) -> Result<Self, u16> {
+        if number > Self::MAX_CONTEXT_NUMBER {
+            Err(number)
+        } else {
+            // SAFETY: valid context number
+            Ok(unsafe { core::mem::transmute(number) })
+        }
+    }
+}
+
+unsafe impl InterruptNumber for PlicInterrupt {
+    // TODO: check this value for HPC
+    const MAX_INTERRUPT_NUMBER: u16 = 3;
+
+    #[inline]
+    fn number(self) -> u16 {
+        self as _
+    }
+
+    #[inline]
+    fn from_number(number: u16) -> Result<Self, u16> {
+        if number == 0 || number > Self::MAX_INTERRUPT_NUMBER {
+            Err(number)
+        } else {
+            // SAFETY: valid interrupt number
+            Ok(unsafe { core::mem::transmute(number) })
+        }
+    }
+}
+
+unsafe impl PriorityNumber for Priority {
+    const MAX_PRIORITY_NUMBER: u8 = 7;
+
+    #[inline]
+    fn number(self) -> u8 {
+        self as _
+    }
+
+    #[inline]
+    fn from_number(number: u8) -> Result<Self, u8> {
+        if number > Self::MAX_PRIORITY_NUMBER {
+            Err(number)
+        } else {
+            // SAFETY: valid priority number
+            Ok(unsafe { core::mem::transmute(number) })
+        }
+    }
+}
+riscv_peripheral::plic_codegen!(base 0x100_0000, ctxs [ctx0 = (Context::C0, "`C0`"), ctx1 = (Context::C1, "`C1`"), ctx2 = (Context::C2, "`C2`"),  ctx3 = (Context::C3, "`C3`")],);
