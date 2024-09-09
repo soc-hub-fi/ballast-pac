@@ -1,24 +1,33 @@
-#[doc = r"Register block"]
-#[repr(C)]
-pub struct CLINT {
-    #[doc = "0x00..0x08 - Machine mode software interrupt (IPI)"]
-    pub msip: MSIP,
-    _reserved1: [u8; 0x3ff8],
-    #[doc = "0x4000..0x4010 - Machine mode timer compare register for Hart 0"]
-    pub mtimecmp: [MTIMECMP; 2],
-    _reserved2: [u8; 0x7fe8],
-    #[doc = "0xbff8..0xc000 - Timer register"]
-    pub mtime: MTIME,
+pub use riscv_peripheral::{
+    aclint::{Clint, HartIdNumber},
+    clint_codegen,
+};
+
+/// CLINT HART IDs of the target
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u16)]
+pub enum HartId {
+    #[doc = "0: HART 0"]
+    HART0 = 0,
+    #[doc = "1: HART 1"]
+    HART1 = 1,
 }
-#[doc = "msip (rw) register accessor: an alias for `Reg<MSIP_SPEC>`"]
-pub type MSIP = crate::Reg<msip::MSIP_SPEC>;
-#[doc = "Machine mode software interrupt (IPI)"]
-pub mod msip;
-#[doc = "mtimecmp (rw) register accessor: an alias for `Reg<MTIMECMP_SPEC>`"]
-pub type MTIMECMP = crate::Reg<mtimecmp::MTIMECMP_SPEC>;
-#[doc = "Machine mode timer compare register for Hart 0"]
-pub mod mtimecmp;
-#[doc = "mtime (rw) register accessor: an alias for `Reg<MTIME_SPEC>`"]
-pub type MTIME = crate::Reg<mtime::MTIME_SPEC>;
-#[doc = "Timer register"]
-pub mod mtime;
+
+unsafe impl riscv_peripheral::aclint::HartIdNumber for HartId {
+    const MAX_HART_ID_NUMBER: u16 = Self::HART0 as _;
+
+    #[inline]
+    fn number(self) -> u16 {
+        self as _
+    }
+
+    #[inline]
+    fn from_number(number: u16) -> Result<Self, u16> {
+        match number {
+            0 => Ok(Self::HART0),
+            _ => Err(number),
+        }
+    }
+}
+
+clint_codegen!(base 0x20_0000 , freq 30_000_000,mtimecmps [mtimecmp0=(HartId::HART0,"0"),mtimecmp1=(HartId::HART1,"1")],); // Double check - ballast soc frequency
